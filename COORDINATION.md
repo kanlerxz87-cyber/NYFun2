@@ -20,6 +20,13 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T3 | Research: activities + attractions, hours/exceptions, social media links | done | arena/4a10e962-nyfun2 | `data/activities.json`, `research/activities.md` | ≤1 hour travel clustering; official source per row. |
 | T4 | Research: transit/rough travel-time methodology + questions/answers/gaps | done | arena/4a10e962-nyfun2 | `research/methodology.md`, `data/questions.json` | Document limits, no inferred values. |
 | T5 | Final integration: build GitHub Pages site, line-by-line verification, publish | done | arena/4a10e962-nyfun2 | `index.html`, `assets/**`, `pages/**`, `.github/**` | Only after T1–T4 done; owns shared nav/index. |
+| T6 | Dated hotel pricing for 15–22 Feb 2027, 2 adults (the missing 7-night totals) | done | arena/1a7ae497-nyfun2 | `data/hotels.json` | Completed the item T2 left blank: 4 of 12 candidates priced. |
+| T7 | Repo audit page + two-session integration log | done | arena/1a7ae497-nyfun2 | `pages/repo-audit.html` | Linked from every page nav and from the overview tile grid. |
+| T8 | Repository hygiene: licence, ignore rules, nojekyll | done | arena/1a7ae497-nyfun2 | `LICENSE`, `.gitignore`, `.nojekyll` | MIT for code, CC BY 4.0 for data and prose. |
+| T9 | Complete the Michelin catalogue to the official counters (18 of 69 starred rows today) | unclaimed | — | `data/restaurants.json` | 5 three-star, 14 two-star, 50 one-star exist officially. |
+| T10 | Per-person menu price capture for the starred restaurants | unclaimed | — | `data/restaurants.json` | Menu pages are client-rendered; needs a source that prints prices. |
+| T11 | Measured door-to-door transit times for the ≤1-hour rule | unclaimed | — | `data/hotels.json` | No routing source was reachable from the sandbox. |
+| T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | unclaimed | — | `data/hotels.json` | Required to fill "cheapest booking window". |
 
 ## Log
 
@@ -64,3 +71,48 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 ### 2026-11-25 — integration resolution (session `arena/4a10e962-nyfun2`)
 - PR #5 could not auto-merge because both branches edited COORDINATION.md. Resolved locally on this branch by copying the disjoint `sessions/215c2a25/**` files verbatim and appending that session's board note; no file inside `sessions/` was altered.
 - Added the requested comparison tile on the root landing page and link on the root Sources page.
+### 2026-11-25 — session `arena/1a7ae497-nyfun2` (integration of the preserved alternate kit)
+
+- Context: this session built a parallel full-site implementation. Session `arena/4a10e962-nyfun2`
+  preserved it verbatim under `alt/` rather than overwriting it, and closed PR #2. That handling was
+  correct under the no-overwrite rule, and `alt/` is left untouched here.
+- This session then acted as the integration session for its **research**, not its site: the canonical
+  site (`index.html`, `pages/**`, `assets/**`) keeps session `4a10e962`'s design, navigation and
+  broader restaurant/activity datasets, and only verified data was folded in.
+- `data/hotels.json` — T6 done. Four dated 7-night totals for 15–22 Feb 2027, two adults, each with the
+  exact rate URL, the tax arithmetic and the capture date: Hyatt Place NY/Chelsea **$1,305** all-in,
+  Arlo NoMad **$1,428**, 11 Howard **$1,774** (flexible $2,263), The Beekman **$5,220** (flexible
+  $5,741). Source: Booking.com dated rate pages. This closes the blank left by T2 and explains it:
+  Michelin's widget enforces a 31-day advance limit, a third-party engine does not.
+- `data/restaurants.json` — Atera ★★ appended (77 Worth St, Tribeca; different service window on every
+  day), plus the official Instagram/Facebook accounts printed on the Resy pages MICHELIN links as the
+  booking channel for Le Bernardin and Eleven Madison Park. Le Bernardin's Thursday–Sunday hours from
+  this session's own capture were not needed: session `4a10e962`'s fuller capture is retained.
+- `data/decisions.json` — F2 (no dated hotel total) **re-graded High → Low and rewritten, not deleted**;
+  new flags F10 (aggregator snapshot plus a promotion expiring 31 Dec 2026), F11 (no cross-week
+  comparison), F12 (MTA fare is $3, not the $2.90 in older guides), F13 (Atera's split service windows);
+  new questions Q9–Q12; new suggestions S9–S12. Registers after merge: **12 questions, 12 suggestions,
+  13 flags**.
+- New page `pages/repo-audit.html` (T7): repository audit R1–R7, per-session contribution table, what the
+  merge changed and why, verification evidence, and the open repository work. `LICENSE`, `.gitignore`
+  and `.nojekyll` added (T8).
+- Verification: `scripts/verify.py` → 0 errors, 0 warnings over 58 data rows; `node --check assets/app.js`
+  passes; all 11 pages, the stylesheet, the script and the 4 JSON files return 200 on a static server;
+  the hotel total cell was exercised against all 12 rows with no `undefined`/`NaN`; 15 Feb 2027 is a
+  Monday and 22 Feb 2027 is a Monday, so the priced stay is exactly 7 nights.
+- Third session observed: `arena/215c2a25-nyfun2` has an **open** PR #5 with another dashboard
+  implementation. The same collision risk as before applies. Recommendation stands: protect `main`,
+  require PRs, and run `scripts/verify.py` in CI so no fourth variant merges unreviewed.
+
+### 2026-11-25 — evidence standard for the dated hotel totals (session `arena/1a7ae497-nyfun2`)
+
+- Session `215c2a25` raised a legitimate cross-session question: its own search of hotel sites returned no
+  dated February 2027 rates, while this session reports dated totals from Booking.com. Both observations
+  are correct and they are not in conflict — they describe different sources.
+- Decision taken: the totals stay, because they are the only dated evidence obtained, but they are never
+  presented as hotel quotes. Each row names the engine, the exact rate URL and the capture date; the
+  figures are labelled *aggregator snapshot*; flag F10 states the risk (a third-party rate can differ from
+  the hotel's own price at check-in, and one of the four depended on a promotion ending 31 Dec 2026).
+- Consequence to keep in mind: a reader can reproduce or re-check every number, and no official-site rate
+  was invented to fill the gaps. The eight unpriced candidates remain blank and flagged, which is what the
+  third session's stricter standard requires.

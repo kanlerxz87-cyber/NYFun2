@@ -2,8 +2,9 @@
   "meta": {
     "checkedOn": "2026-11-25",
     "targetWindow": "15–22 Feb 2027 (7 nights, Mon–Mon). Preferred short window 15–18 Feb 2027 is only 3 nights.",
-    "bookingReality": "Michelin's hotel booking widget states 'You cannot book more than 31 days' ahead, and the hotel booking pages checked did not publish dated rates for February 2027. Therefore seven-night totals and a cheapest-booking window are blank and flagged, not guessed.",
-    "rankingPolicy": "Ranking uses only verified attributes (published Michelin Keys/guest score, address/area, published room features). No unverified travel-time score is presented as fact."
+    "bookingReality": "Correction to the earlier note (2026-11-25, second session): dated rates for 15-22 Feb 2027 ARE obtainable from third-party booking engines. Michelin's own hotel widget enforces a 31-day advance limit, but Booking.com returned live 7-night totals for the exact dates, recorded below with the capture date and exact rate URL. No hotel's own booking engine was read directly, so these are dated aggregator snapshots, not hotel quotes.",
+    "rankingPolicy": "Ranking uses only verified attributes (published Michelin Keys/guest score, address/area, published room features). No unverified travel-time score is presented as fact.",
+    "ratePolicy": "publishedRate = undated 'from' rate on an official page. sevenNightTotal = live total for 2027-02-15 to 2027-02-22, 2 adults, captured 2026-11-25, pre-tax as quoted; tax lines and the all-in arithmetic are in taxBasis and allInSevenNights. Never mix the two columns."
   },
   "items": [
     {
@@ -20,23 +21,37 @@
       "officialUrl": "https://www.citizenm.com/hotels/america/new-york/times-square-hotel",
       "sourceUrl": "https://www.marriott.com/brands/citizenm.mi",
       "rateSourceUrl": "https://www.citizenm.com/es/hoteles/america/nueva-york/times-square-hotel",
-      "flags": ["7-night total and cheapest window unverified for 2027 dates", "Published rate is an undated starting rate, not a quoted rate for the trip"]
+      "flags": [
+        "7-night total and cheapest window unverified for 2027 dates",
+        "Published rate is an undated starting rate, not a quoted rate for the trip"
+      ]
     },
     {
       "name": "11 Howard",
       "area": "SoHo",
       "address": "11 Howard Street, New York, NY",
-      "room": "",
-      "privateBathroom": "",
+      "room": "Queen Room (1 queen bed)",
+      "privateBathroom": "Private bathroom",
       "keyStatus": "",
       "guestScore": "18.1 / 20 (Michelin guest score on the restaurant page; 18 on the hotel page)",
       "publishedRate": "",
-      "sevenNightTotal": "",
+      "sevenNightTotal": "$1,522 pre-tax for 7 nights, non-refundable ($182 room + $35 resort fee per night)",
       "cheapestWindow": "",
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/11-howard-8129",
-      "rateSourceUrl": "",
-      "flags": ["Room/bath configuration not verified", "Hotel page and restaurant page showed different guest scores", "7-night total unverified", "On-site one-star restaurant Le Coucou (https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-coucou)"]
+      "rateSourceUrl": "https://www.booking.com/hotel/us/11-howard.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1",
+      "flags": [
+        "7-night total unverified",
+        "Cheapest rate is non-refundable; the refundable rate costs $426 more for the same week",
+        "Hotel page and restaurant page showed different guest scores",
+        "On-site one-star restaurant Le Coucou (https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-coucou)",
+        "Only shortlisted hotel sharing a ZIP code (10013) with a verified starred restaurant - Atera, 77 Worth St",
+        "Room/bath configuration not verified",
+        "Same-ZIP star count is a floor, not a travel-time ranking (see the one-hour flag)"
+      ],
+      "allInSevenNights": "$1,774",
+      "taxBasis": "Resort fee inside the pre-tax total; add 14.74% tax + $4 city tax per night. 1,522 x 1.1474 + 28 = $1,774. Flexible rate $1,948 -> about $2,263 all-in.",
+      "rateCapturedOn": "2026-11-25"
     },
     {
       "name": "The Fifth Avenue Hotel",
@@ -52,7 +67,11 @@
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-fifth-avenue-hotel-13538",
       "rateSourceUrl": "",
-      "flags": ["Address, room and bath not verified", "7-night total unverified", "On-site Guide restaurant Café Carmellini"]
+      "flags": [
+        "Address, room and bath not verified",
+        "7-night total unverified",
+        "On-site Guide restaurant Café Carmellini"
+      ]
     },
     {
       "name": "The Maritime Hotel",
@@ -68,7 +87,9 @@
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-maritime-hotel-32",
       "rateSourceUrl": "",
-      "flags": ["Address, room, bath and rate not verified"]
+      "flags": [
+        "Address, room, bath and rate not verified"
+      ]
     },
     {
       "name": "MADE Hotel",
@@ -84,7 +105,10 @@
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/made-hotel-8712",
       "rateSourceUrl": "",
-      "flags": ["Address, room, bath and rate not verified", "Area label needs official confirmation"]
+      "flags": [
+        "Address, room, bath and rate not verified",
+        "Area label needs official confirmation"
+      ]
     },
     {
       "name": "The Marlton Hotel",
@@ -100,7 +124,9 @@
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-marlton-hotel-7089",
       "rateSourceUrl": "",
-      "flags": ["Address, room, bath and rate not verified"]
+      "flags": [
+        "Address, room, bath and rate not verified"
+      ]
     },
     {
       "name": "Soho Grand Hotel",
@@ -116,7 +142,9 @@
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/soho-grand-hotel-3461",
       "rateSourceUrl": "",
-      "flags": ["Address, room, bath and rate not verified"]
+      "flags": [
+        "Address, room, bath and rate not verified"
+      ]
     },
     {
       "name": "Arlo Soho",
@@ -132,23 +160,32 @@
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/arlo-soho-8260",
       "rateSourceUrl": "",
-      "flags": ["Address, room, bath and rate not verified"]
+      "flags": [
+        "Address, room, bath and rate not verified"
+      ]
     },
     {
       "name": "The Beekman, a Thompson Hotel",
       "area": "Financial District",
-      "address": "",
-      "room": "",
-      "privateBathroom": "",
+      "address": "123 Nassau Street, New York, NY 10038",
+      "room": "King Room, 300 sq ft (also sells Queen Rooms)",
+      "privateBathroom": "Private bathroom with shower, bathrobes, slippers",
       "keyStatus": "1 MICHELIN Key (Michelin FiDi travel guide)",
       "guestScore": "",
       "publishedRate": "",
-      "sevenNightTotal": "",
+      "sevenNightTotal": "$4,488 pre-tax for 7 nights, non-refundable ($584 room + $57 resort fee per night)",
       "cheapestWindow": "",
-      "officialUrl": "",
+      "officialUrl": "https://www.hyatt.com/thompson-hotels/en-US/nycth-the-beekman-a-thompson-hotel/overview",
       "sourceUrl": "https://guide.michelin.com/en/article/travel/guide-financial-district-new-york",
-      "rateSourceUrl": "",
-      "flags": ["Address, room, bath and rate not verified"]
+      "rateSourceUrl": "https://www.booking.com/hotel/us/the-beekman-a-thompson-hotel.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1",
+      "flags": [
+        "Address, room, bath and rate not verified",
+        "Only shortlisted hotel with a destination tax on top of city tax",
+        "Roughly 4x the cheapest compliant quote for identical dates - splurge reference only"
+      ],
+      "allInSevenNights": "$5,220",
+      "taxBasis": "Resort fee inside the pre-tax total; add 14.75% city tax + $6 destination tax + $2 tax + $2 tourism fee per night. 4,488 x 1.1475 + (7 x 10) = $5,220. Flexible rate $4,942 -> about $5,741 all-in.",
+      "rateCapturedOn": "2026-11-25"
     },
     {
       "name": "The Wall Street Hotel",
@@ -164,7 +201,55 @@
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/article/travel/guide-financial-district-new-york",
       "rateSourceUrl": "",
-      "flags": ["Address, room, bath and rate not verified"]
+      "flags": [
+        "Address, room, bath and rate not verified"
+      ]
+    },
+    {
+      "name": "Hyatt Place New York / Chelsea",
+      "area": "Chelsea (Flatiron border)",
+      "address": "140 West 24th Street, New York, NY 10011",
+      "room": "King Room, 180 sq ft (1 king bed)",
+      "privateBathroom": "Attached (private) bathroom",
+      "keyStatus": "",
+      "guestScore": "",
+      "publishedRate": "",
+      "sevenNightTotal": "$1,113 pre-tax for 7 nights ($159/night average)",
+      "allInSevenNights": "$1,305",
+      "taxBasis": "Quote is pre-tax; add 14.75% tax + $4 city tax per night. 1,113 x 1.1475 + (7 x 4) = $1,305.",
+      "cheapestWindow": "",
+      "officialUrl": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/hotel-info",
+      "sourceUrl": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/hotel-info",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/hyatt-place-new-york-chelsea.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1",
+      "rateCapturedOn": "2026-11-25",
+      "flags": [
+        "Rate is a Booking.com snapshot captured 2026-11-25, not the hotel's own engine",
+        "Quoted total excludes taxes and the $4/night city tax; see taxBasis",
+        "Cheapest compliant hotel of the four priced; buffet breakfast included, free cancellation before 13 Feb 2027"
+      ]
+    },
+    {
+      "name": "Arlo NoMad",
+      "area": "NoMad / Flatiron",
+      "address": "",
+      "room": "Queen Room, 150 sq ft (1 queen bed)",
+      "privateBathroom": "Sold as private; bathroom type not stated on the rate line",
+      "keyStatus": "",
+      "guestScore": "",
+      "publishedRate": "",
+      "sevenNightTotal": "$1,213.96 pre-tax for 7 nights ($136 room + $37 resort fee per night)",
+      "allInSevenNights": "$1,428",
+      "taxBasis": "Resort fee already inside the pre-tax total; add 14.75% tax + $4 city tax + $1 tourism fee per night. 1,213.96 x 1.1475 + 28 + 7 = $1,428.",
+      "cheapestWindow": "",
+      "officialUrl": "https://arlohotels.com/nomad/rooms/",
+      "sourceUrl": "https://arlohotels.com/nomad/rooms/",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/arlo-nomad.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1",
+      "rateCapturedOn": "2026-11-25",
+      "flags": [
+        "Street address and ZIP not printed on either official page - deliberately blank",
+        "Rate depends on a 'Black Friday Deal' (39% off) valid on stays 19 Nov 2026 to 31 Dec 2027; it will expire",
+        "Room types confirmed on the hotel's own page: Queen, King, Bunk"
+      ]
     }
   ]
 }

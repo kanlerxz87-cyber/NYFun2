@@ -5,7 +5,8 @@
     "starListSource": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred",
     "starCounts": "5 three-star, 14 two-star, 50 one-star in the NYC all-starred list (checked 2026-11-25)",
     "importantTiming": "Michelin's 2026 Northeast Cities ceremony is scheduled for 2026-12-14 (https://michelinmedia.com/pages/blog/detail/article/c/a1479/), after this research date and before the proposed trip. Distinctions may change.",
-    "priceNote": "Michelin publishes only a $ symbol band, not a dollar amount. Couple totals are left blank unless an official menu price was verified."
+    "priceNote": "Michelin publishes only a $ symbol band, not a dollar amount. Couple totals are left blank unless an official menu price was verified.",
+    "hoursCrossCheck": "Le Bernardin, Eleven Madison Park, Per Se and Atera were read independently by two sessions against the same MICHELIN records on 2026-11-25 and agree. The fuller capture (which includes Le Bernardin Thursday to Sunday and 'Sunday closed') is retained. Independent agreement is the strongest verification available without a second source."
   },
   "items": [
     {
@@ -15,12 +16,22 @@
       "address": "11 Madison Ave., New York, NY 10010",
       "area": "Flatiron / Madison Square (address-based grouping)",
       "hours": "Mon–Thu 17:30–22:00; Fri–Sun 12:00–13:00 and 17:30–23:00",
-      "exceptions": "None published on the Michelin page checked",
+      "exceptions": "No dress code (stated on the MICHELIN record). The tasting menu offers a vegan path as well as animal-protein courses.",
       "guidePriceBand": "$$$$",
       "priceTwoAdults": "",
       "officialUrl": "https://www.elevenmadisonpark.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/eleven-madison-park",
       "social": [
+        {
+          "platform": "Instagram (official)",
+          "url": "https://instagram.com/elevenmadisonpark",
+          "note": "Handle printed on the Resy venue page that MICHELIN links as this restaurant's booking channel"
+        },
+        {
+          "platform": "Facebook (official)",
+          "url": "https://facebook.com/jalexandersrestaurantscollection",
+          "note": "Printed on the same Resy venue page"
+        },
         {
           "platform": "YouTube (third-party review)",
           "url": "https://www.youtube.com/watch?v=UOP_zc6VguM",
@@ -61,12 +72,22 @@
       "address": "155 W. 51st St., New York, NY 10019",
       "area": "Midtown West (address-based grouping)",
       "hours": "Mon–Thu 12:00–14:30 and 17:00–22:30; Fri 12:00–14:30 and 17:00–23:00; Sat 17:00–23:00; Sunday closed",
-      "exceptions": "None published on the Michelin page checked",
+      "exceptions": "Business casual dress code: jackets recommended, not required; shorts, t-shirts, short sleeves, flip-flops, sweatshirts, sweatpants and sneakers not permitted. Reservations required for the main dining room; lounge is walk-in. Card required at booking; 48-hour cancellation window at $150 per person.",
       "guidePriceBand": "$$$$",
       "priceTwoAdults": "",
       "officialUrl": "https://www.le-bernardin.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-bernardin",
       "social": [
+        {
+          "platform": "Instagram (official)",
+          "url": "https://instagram.com/lebernardinny",
+          "note": "Handle printed on the Resy venue page that MICHELIN links as this restaurant's booking channel"
+        },
+        {
+          "platform": "Facebook (official)",
+          "url": "https://facebook.com/LeBernardin",
+          "note": "Printed on the same Resy venue page"
+        },
         {
           "platform": "YouTube (third-party review)",
           "url": "https://www.youtube.com/watch?v=rQgmx4GYjvc",
@@ -79,7 +100,8 @@
         }
       ],
       "flags": [
-        "Couple price unverified: official menu price not confirmed"
+        "Couple price unverified: official menu price not confirmed",
+        "Dress code and cancellation policy recorded from the Resy venue page"
       ]
     },
     {
@@ -422,6 +444,25 @@
       "flags": [
         "Added to Guide July 2026; no star as of 2026-11-25 check",
         "Address/hours/price/social not verified"
+      ]
+    },
+    {
+      "name": "Atera",
+      "distinction": "2 MICHELIN Stars",
+      "cuisine": "Contemporary (counter tasting menu)",
+      "address": "77 Worth St., New York, NY 10013",
+      "area": "Tribeca (address-based grouping)",
+      "hours": "Mon 19:00-22:00; Tue-Fri 17:00-22:00; Sat 13:30-22:00; Sun 17:00-22:00",
+      "exceptions": "Counter seating only, at a U-shaped counter facing the open kitchen. Reservations via Tock, the booking channel MICHELIN links.",
+      "guidePriceBand": "$$$$",
+      "priceTwoAdults": "",
+      "officialUrl": "https://ateranyc.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atera",
+      "social": [],
+      "flags": [
+        "Couple price unverified: official menu price not confirmed",
+        "Added by the second session - this two-star restaurant was missing from the first catalogue",
+        "Saturday is the only afternoon service"
       ]
     }
   ]

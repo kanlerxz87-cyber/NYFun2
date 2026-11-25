@@ -54,7 +54,9 @@
         `${val(h.room)}${h.privateBathroom ? `<span class="sub">Bath: ${esc(h.privateBathroom)}</span>` : ''}`,
         `${val(h.keyStatus)}${h.guestScore ? `<span class="sub">${esc(h.guestScore)}</span>` : ''}`,
         val(h.publishedRate),
-        val(h.sevenNightTotal),
+        (h.sevenNightTotal
+          ? `${esc(h.sevenNightTotal)}${h.allInSevenNights ? `<span class="sub"><strong>All-in: ${esc(h.allInSevenNights)}</strong></span>` : ''}${h.taxBasis ? `<span class="sub">${esc(h.taxBasis)}</span>` : ''}${h.rateCapturedOn ? `<span class="sub">Captured ${esc(h.rateCapturedOn)}</span>` : ''}`
+          : val(h.sevenNightTotal)),
         val(h.cheapestWindow),
         `${link(h.officialUrl, 'Official site')}${h.rateSourceUrl ? `<br>${link(h.rateSourceUrl, 'Rate source')}` : ''}`,
         `<a class="src" href="${esc(h.sourceUrl)}" target="_blank" rel="noopener noreferrer">Verify source ↗</a>`,

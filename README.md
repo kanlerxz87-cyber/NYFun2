@@ -1,41 +1,90 @@
-# NYFun2 — New York trip planning dashboard
+# NYFun2 — New York City trip plan, February 2027
 
-A source-checked, mobile-friendly GitHub Pages dashboard for a two-adult New York City trip in February 2027. It collects Michelin distinctions, restaurants, activities, hotel candidates, social-review links, opening hours, open decisions and review flags.
+A static, source-audited planning dashboard for two adults in New York City, built around
+MICHELIN-starred dining and hotels that meet a private-bathroom / queen-or-larger-bed requirement.
 
 **Live site:** https://kanlerxz87-cyber.github.io/NYFun2/
 
-## What is in here
+**Travel window:** preferred 15–18 Feb 2027; priced case 15–22 Feb 2027 (Monday → Monday, 7 nights).
 
-- `index.html` — landing page / overview.
-- `pages/` — subpages by category: executive summary, Michelin restaurants, hotels, activities, itinerary logic, questions, suggestions, flagged items, sources.
-- `data/` — source-linked JSON used by the tables.
-- `assets/styles.css`, `assets/app.js` — mobile-first layout and table rendering (search, route origin selection).
-- `scripts/verify.py` — offline link/row verification.
-- `COORDINATION.md` — shared task board for parallel sessions.
+---
 
-## Verification policy
+## The rule this project runs on
 
-Every table row carries a link to an official/primary source: Michelin Guide, a government site (NPS, NYC DOT, NYC Parks), or the venue's own site. If an official source did not state a value, the cell is blank and an explanation appears on the *Flagged for review* page. Third-party YouTube links are explicitly labelled and are never used as evidence for hours, prices or account ownership.
+> Every table row carries an official source. Values that cannot be confirmed are left blank and
+> flagged — never estimated.
 
-Research was checked on **25 November 2026**. Two material limits are recorded prominently on the site:
+Where the site performs arithmetic itself (adding a published tax rate to a published pre-tax total),
+the formula is printed next to the result. A review video is labelled third-party; it is never presented
+as an official endorsement.
 
-1. Michelin's 2026 Northeast Cities ceremony is scheduled for 14 December 2026, after the research date; star levels may change before travel.
-2. No official booking source published dated February 2027 hotel rates, so seven-night totals and a cheapest booking window are blank rather than estimated.
+## What is here
 
-## Run locally
+| Path | Purpose |
+|---|---|
+| `index.html` | Dashboard / overview |
+| `pages/executive-summary.html` | Decision-ready summary |
+| `pages/michelin-restaurants.html` | 21 restaurant rows — star level, hours, guide band, review links, source |
+| `pages/hotels.html` | 12 hotel candidates, 4 with dated 7-night totals |
+| `pages/activities.html` | 12 activities with official hours, exceptions and couple costs |
+| `pages/itinerary.html` | Day plan and how the ≤1-hour travel goal is handled |
+| `pages/questions.html` | 12 open questions: known / missing / how to discover |
+| `pages/suggestions.html` | 12 improvement options, none implemented |
+| `pages/flagged.html` | 13 flags: every unverified value and irregularity |
+| `pages/sources.html` | Primary-source register and verification rules |
+| `pages/repo-audit.html` | Repository audit and the two-session integration log |
+| `data/restaurants.json` | Restaurant dataset |
+| `data/hotels.json` | Hotel dataset |
+| `data/activities.json` | Activities dataset |
+| `data/decisions.json` | Questions, suggestions and flags |
+| `assets/styles.css` · `assets/app.js` | Styling and table rendering (no dependencies) |
+| `scripts/verify.py` | Pre-push verification |
+| `COORDINATION.md` | Shared task board and session log |
+| `alt/` | The parallel session's independent kit, preserved verbatim for comparison (not linked from the main nav) |
+| `LICENSE` | MIT for code, CC BY 4.0 for data and prose |
+
+## Headline findings
+
+- **MICHELIN counts (official filter panel, 25 Nov 2026):** 5 three-star, 14 two-star, 50 one-star,
+  76 Bib Gourmand, 224 guide-listed with no star.
+- **Dated hotel totals now exist** for 15–22 Feb 2027, all-in for two adults:
+  **Hyatt Place NY/Chelsea $1,305** · Arlo NoMad $1,428 · 11 Howard $1,774 · The Beekman $5,220.
+  A 4× spread for identical dates. They are dated aggregator snapshots, not hotel quotes (flag F10).
+- **11 Howard** is the only shortlisted hotel sharing a ZIP code (10013) with a verified starred
+  restaurant — Atera ★★, 77 Worth St.
+- **MTA fare is $3** per subway / local-bus ride ($7.25 express), not the $2.90 still quoted in older guides.
+- **Michelin's 2026 Northeast Cities ceremony is scheduled for 14 Dec 2026** — after this research,
+  before the trip. Star levels may change (flag F1).
+
+## Deliberately blank
+
+No measured transit times (no routing source was reachable, so only same-ZIP proximity is claimed and
+each pair links a live directions query), no per-person restaurant prices (client-rendered menu pages),
+no airfare, no theatre tickets. Every gap is on `pages/flagged.html` with its cause and its remedy.
+
+## Verify locally
 
 ```bash
-python3 -m http.server 8000
-# open http://localhost:8000
+python3 scripts/verify.py     # local links, JSON validity, source-per-row, blank-implies-flag
+node --check assets/app.js    # JS syntax
+python3 -m http.server 8000   # then open http://localhost:8000/
 ```
 
-## Verify
+No build step and no third-party dependencies: the site is HTML, one stylesheet, one script and JSON.
 
-```bash
-python3 scripts/verify.py
-node --check assets/app.js
-```
+## Publishing
 
-## Coordination
+GitHub Pages is configured to serve `main` at the repository root, so a merge to `main` deploys.
+`.nojekyll` is present so Jekyll does not process the folder.
 
-See `COORDINATION.md` for task claims, file scopes, source records and irregularities. Work on this repository's active session branch only.
+## Sessions and coordination
+
+Two agent sessions worked this repository on 2026-11-25 on separate branches and were merged rather
+than overwritten. See `COORDINATION.md` for the task board and `pages/repo-audit.html` for the
+integration log: what each session contributed, which flag was resolved (F2), and which new risk the
+merged data introduced (F10).
+
+## Licence
+
+Code: MIT. Data and prose: CC BY 4.0. Third-party marks, quotations and source pages remain the
+property of their owners. See `LICENSE`.

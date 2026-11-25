@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repo audit &amp; integration log — NYC 2027</title>
+<meta name="description" content="Audit of the repository as it arrived, the two-session integration log, and the verification evidence for the combined dataset.">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="layout">
+<aside class="sidebar">
+  <a class="brand" href="../index.html"><span class="mark">NY</span><span>NYC 2027<small>Trip dashboard</small></span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="../index.html">Overview</a>
+    <a href="executive-summary.html">Summary</a>
+    <a href="michelin-restaurants.html">Michelin</a>
+    <a href="hotels.html">Hotels</a>
+    <a href="activities.html">Activities</a>
+    <a href="itinerary.html">Itinerary</a>
+    <a href="questions.html">Questions</a>
+    <a href="suggestions.html">Suggestions</a>
+    <a href="flagged.html">Flagged</a>
+    <a href="sources.html">Sources</a>
+    <a class="active" href="repo-audit.html">Repo audit</a>
+  </nav>
+  <div class="side-note">Verified against official sources · checked <span data-checked>—</span></div>
+</aside>
+<main class="content" id="main">
+
+  <p class="eyebrow">Audit · repository &amp; integration</p>
+  <h1>What was in the repo, and how two sessions were reconciled</h1>
+  <p class="lede">Two agent sessions worked this repository on the same day on different branches. Neither
+  overwrote the other. This page records what the repository contained when each session started, what each
+  session produced, how the overlap was resolved, and the evidence that the combined dataset is internally
+  consistent.</p>
+
+  <h2>1 · State as found</h2>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Check</th><th>Command</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Files present</strong></td><td><code>ls -la</code></td><td><code>README.md</code>, 8 bytes. Nothing else but <code>.git</code>.</td></tr>
+          <tr><td><strong>README body</strong></td><td><code>cat README.md</code></td><td><code># NYFun2---</code> — a heading followed by three literal hyphens.</td></tr>
+          <tr><td><strong>History</strong></td><td><code>git log --oneline</code></td><td><code>a3a2848 Initial commit</code> — one commit.</td></tr>
+          <tr><td><strong>Pages</strong></td><td><code>gh api repos/…/pages</code></td><td><code>status built</code> · <code>legacy</code> build · source <code>main /</code> · <code>https_enforced true</code> · URL <code>kanlerxz87-cyber.github.io/NYFun2/</code></td></tr>
+          <tr><td><strong>Coordination board</strong></td><td><code>cat COORDINATION.md</code></td><td>Did not exist at the start of session 1. Created twice, independently, by both sessions.</td></tr>
+          <tr><td><strong>Licence / ignore / CI</strong></td><td><code>ls LICENSE .gitignore .github</code></td><td>None of the three.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2>2 · Findings</h2>
+  <div class="notice danger"><strong>R1 — the repository was effectively empty.</strong> A public repo whose
+  only content is an 8-byte README gives a reader nothing and gives a crawler nothing. Everything on this site
+  is new work; nothing existed to reconcile.</div>
+  <div class="card">
+    <ul>
+      <li><strong>R2 · No licence.</strong> A public repository with no licence grants no reuse rights and leaves the provenance of compiled data ambiguous. Fixed: <code>LICENSE</code> — MIT for code, CC BY 4.0 for data and prose, with third-party marks explicitly excluded.</li>
+      <li><strong>R3 · No <code>.gitignore</code>.</strong> Nothing stopped editor folders, OS files or local caches from being committed. Fixed.</li>
+      <li><strong>R4 · No CI.</strong> Pages publishes whatever reaches <code>main</code>, so a typo in a JSON file or a broken relative link ships silently. Mitigated: <code>scripts/verify.py</code> checks local links, JSON validity, and that every row carries a source URL.</li>
+      <li><strong>R5 · Pages serves <code>main</code> at the repository root.</strong> A site placed in <code>/docs</code> would not be served without reconfiguring Pages, so the site lives at the root. A <code>.nojekyll</code> file prevents Jekyll from processing the folder.</li>
+      <li><strong>R6 · No branch protection.</strong> Two sessions pushed to the same repository the same day. Coordination therefore relied entirely on the board and on merge discipline, not on the platform.</li>
+      <li><strong>R7 · Both sessions created <code>COORDINATION.md</code> independently.</strong> Neither saw the other's claim. This is the structural weakness the board is meant to prevent, and it happened because both sessions started from the same empty commit.</li>
+    </ul>
+  </div>
+
+  <h2>3 · Integration log</h2>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Contribution</th><th>Session A<br><small>arena/4a10e962</small></th><th>Session B<br><small>arena/1a7ae497</small></th><th>Kept</th></tr></thead>
+        <tbody>
+          <tr><td>Site shell &amp; design system</td><td>Built: sidebar dashboard, <code>assets/styles.css</code>, <code>assets/app.js</code>, 9 sub-pages</td><td>Built a parallel shell</td><td><strong>Session A</strong> — already published and indexed</td></tr>
+          <tr><td>Restaurant catalogue</td><td>20 rows, incl. YouTube review links and bookable hours for six of seven days</td><td>11 rows, incl. four full MICHELIN records</td><td><strong>Session A</strong>, plus Session B's additions (below)</td></tr>
+          <tr><td>Activities</td><td>12 rows from NPS, NYC Parks, MoMA, AMNH, the High Line, Whitney, Guggenheim, ESB, Staten Island Ferry, NYPL</td><td>4 rows</td><td><strong>Session A</strong></td></tr>
+          <tr><td>Dated hotel prices</td><td>Blank — Michelin's widget enforces a 31-day advance limit, so no dated rate was found</td><td><strong>Four live 7-night totals for 15–22 Feb 2027</strong> from Booking.com rate pages, with tax arithmetic and capture dates</td><td><strong>Session B's data</strong>, merged into Session A's hotel rows</td></tr>
+          <tr><td>Questions / suggestions / flags</td><td>8 / 8 / 9</td><td>12 / 10 / 15</td><td><strong>Union</strong> — 12 / 12 / 13 after duplicates were dropped and one flag resolved</td></tr>
+          <tr><td>Repo audit</td><td>Recorded in the board log</td><td>Dedicated page</td><td><strong>This page</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2>4 · What the merge changed, and why it is an improvement</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Flag F2 was resolved, not deleted.</strong> Session A marked "no verified 7-night hotel total" as High severity. Session B produced four such totals. The flag was re-graded to Low and rewritten to say what is now known, what remains open (eight of twelve candidates unpriced, no cross-week comparison), and where the evidence is.</li>
+      <li><strong>A new flag was raised against the new data: F10.</strong> The totals are aggregator snapshots and one depends on a promotion expiring 31 Dec 2026. Adding data created a new way to be wrong, so it was flagged on arrival.</li>
+      <li><strong>Independent hours agreement was recorded, not hidden.</strong> Le Bernardin, Eleven Madison Park, Per Se and Atera were read separately by both sessions against the same MICHELIN records and agree. That is the strongest verification obtainable without a second source, so it is stated in <code>data/restaurants.json</code>.</li>
+      <li><strong>The Le Bernardin gap closed.</strong> Session B could not capture Thursday–Sunday hours; Session A had them, including "Sunday closed". Session A's fuller capture is retained.</li>
+      <li><strong>A two-star restaurant was added.</strong> Atera ★★ was missing from Session A's 20-row catalogue despite being on the official two-star list. Session B's verified record (77 Worth St, Tribeca; different service window every day) was appended.</li>
+      <li><strong>Two official Instagram/Facebook accounts were added.</strong> Both were printed on the Resy venue pages that MICHELIN links as those restaurants' booking channel, upgrading those rows from third-party video only to verified official accounts.</li>
+      <li><strong>The MTA fare was corrected to $3.</strong> Cached guides still quote $2.90; the official fares page read 2026-11-25 says $3 for subway and local bus, $7.25 for express. Raised as F12.</li>
+      <li><strong>No prose was discarded silently.</strong> Where Session B's wording was kept (the hotel price notice, the executive-summary bullet on hotels), the file still carries Session A's structure and navigation.</li>
+    </ul>
+  </div>
+
+  <h2>5 · Verification evidence</h2>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Check</th><th>Command</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>Local links, JSON validity, source-per-row</td><td><code>python3 scripts/verify.py</code></td><td>0 errors, 0 warnings over 58 data rows</td></tr>
+          <tr><td>JS syntax</td><td><code>node --check assets/app.js</code></td><td>passes</td></tr>
+          <tr><td>Static serve</td><td><code>python3 -m http.server</code> then request each page</td><td>all pages and assets return 200</td></tr>
+          <tr><td>Calendar arithmetic</td><td>Python <code>datetime</code></td><td>15 Feb 2027 is a Monday, 22 Feb 2027 is a Monday, exactly 7 nights</td></tr>
+          <tr><td>Hotel tax arithmetic</td><td>Pre-tax total × (1 + tax rate) + fixed nightly charges</td><td>$1,113 → $1,305 · $1,213.96 → $1,428 · $1,522 → $1,774 · $4,488 → $5,220</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="font-size:13px;margin:10px 0 0">Reproduce any check from a clone. Nothing on this site requires network access to render.</p>
+  </div>
+
+  <h2>6 · Open repository work</h2>
+  <div class="card">
+    <ul>
+      <li>Protect <code>main</code> and route future work through pull requests, so parallel sessions cannot force-push over each other.</li>
+      <li>Add a CI workflow that runs <code>scripts/verify.py</code> on every push and blocks the merge on failure.</li>
+      <li>Move the generated pages into <code>/docs</code> only if the Pages source is switched at the same time; today the root is the served path.</li>
+      <li>Add a weekly re-capture job for hotel rates so no price on the site is older than seven days without a visible warning (suggestion S11).</li>
+    </ul>
+  </div>
+
+  <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> · Coordination board: <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a></p>
+
+</main>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>
