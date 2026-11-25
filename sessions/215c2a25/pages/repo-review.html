@@ -23,9 +23,9 @@
   <h2>Irregularities flagged</h2>
   <div class="card"><ol>
     <li><strong>Branch-name deviation:</strong> the requested <code>session-&lt;id&gt;/&lt;task&gt;</code> convention conflicts with the platform rule pinning this session to <code>arena/215c2a25-nyfun2</code>. Work stayed on the pinned branch with disjoint file scopes logged in COORDINATION.md.</li>
-    <li><strong>No competing claims existed:</strong> only <code>main</code> and this branch were present in <code>git branch -a</code>; all tasks were claimed by this session.</li>
-    <li><strong>Pages source:</strong> GitHub Pages was already enabled from <code>main</code>. Publishing from the working branch requires a Pages-source API change; no push to <code>main</code> was performed.</li>
-    <li><strong>Verification limits:</strong> official booking engines did not return dated February 2027 rates; official menu pages were not retrievable. Those cells are blank.</li>
+    <li><strong>Parallel sessions appeared later:</strong> open PRs from two other arena sessions were found after the initial claim. No other session's files were overwritten; this kit now lives only under <code>sessions/215c2a25/</code>.</li>
+    <li><strong>Pages source:</strong> Pages is enabled from <code>main</code>, and deployments are restricted to <code>main</code>. The Pages-source API returned HTTP 403 and the Actions deployment route was blocked, so this kit is published alongside the existing root site via PR #5. A root-navigation link has been requested in the shared board, not edited here.</li>
+    <li><strong>Verification limits:</strong> official booking engines did not return dated February 2027 rates; official menu pages were not retrievable. Those cells are blank. An OTA price reported in another PR is logged for manual review.</li>
   </ol></div>
 
   <h2>Verification method</h2>
