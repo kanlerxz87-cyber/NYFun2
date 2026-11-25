@@ -1,140 +1,89 @@
 # Coordination Board — NYFun2
 
-Shared task board for parallel agent sessions. **Read this before starting work.** Claim a task by
-adding your session ID and file scope, commit, and push immediately — then only edit files inside your
-claimed scope. A task marked `needs review` is published on the site's *Flagged for Review* page and
-does not block anything.
-
----
-
-## ⚠️ Read this first: this repository has already had a parallel-session collision
-
-Two sessions worked the repository on **2026-11-25** from the same empty commit (`a3a2848`) without
-seeing each other's claim, because the board did not exist when they started:
-
-| Session | Branch | Produced | Merged as |
-|---|---|---|---|
-| `arena/4a10e962-nyfun2` | `arena/4a10e962-nyfun2` | Site shell (`index.html`, `pages/**`, `assets/**`), `data/restaurants.json` (20 rows), `data/activities.json` (12), `data/hotels.json` (10, no dated rates), `data/decisions.json` (8/8/9), `scripts/verify.py` | PR #1 |
-| `arena/1a7ae497-nyfun2` | `arena/1a7ae497-nyfun2` | Parallel site shell, plus **four dated 7-night hotel totals for 15–22 Feb 2027**, Atera ★★ record, official Instagram/Facebook for two restaurants, MTA fare correction, repo audit | PR #2 |
-
-**Resolution (PR #2, second session acting as integration session):** the merged product keeps
-Session A's site shell, navigation and design system — it was already published and indexed — and
-folds Session B's unique verified data into it. Nothing from either session was discarded silently.
-The full reconciliation is on `pages/repo-audit.html`.
-
-**Known structural gap:** the platform fixes each session to one branch, so the `session-<id>/<task>`
-branching convention in the standing instructions cannot be honoured. Ownership therefore relies on
-this board and on merge discipline. Protect `main` before the next parallel run.
-
----
+Shared task board for parallel agent sessions. **Read this before starting work.** Claim a task by adding your session ID and file scope, commit and push immediately, then only edit files inside your claimed scope. A task marked `needs review` is published on the site's *Flagged for Review* page and does not block anything.
 
 ## Session conventions
 
-- A session is bound to the branch named in its task context. Do not switch branches.
-- Shared outputs (navigation, `index.html`, integrated data files) are edited only during final
-  integration, once research tasks are complete.
-- Every factual table row needs a source URL from an official/primary source. Unconfirmed values stay
-  blank and are listed on the Flagged page.
-- Before each push: `git pull --rebase origin <your-branch>`. On conflict, **stop**, resolve without
-  discarding the other session's work, and log it here.
-- Run `python3 scripts/verify.py` and `node --check assets/app.js` before pushing.
+- This repository session is bound to branch `arena/4a10e962-nyfun2` (fixed by the platform). Do not switch branches.
+- Session ID for this branch: `arena/4a10e962-nyfun2`.
+- Shared outputs (site navigation, index, integrated tables) are edited only during final integration after the research tasks are complete.
+- Every factual table row needs a source URL from an official/primary source. Unconfirmed values stay blank and are listed on the Flagged for Review page.
+- Before each push: `git pull --rebase origin arena/4a10e962-nyfun2`, then push to that same branch. Never discard another session's work on conflict — stop and log it.
 
 ## Task board
 
-| ID | Task | Status | Owner session | File scope |
-|---|---|---|---|---|
-| T0 | Repo audit + coordination board | done | `4a10e962` | `COORDINATION.md`, `README.md` |
-| T1 | MICHELIN restaurants: stars vs guide-listed, hours, links, social | done | `4a10e962` | `data/restaurants.json` |
-| T2 | Hotels: price / location / amenities, 7-night totals | **done (completed by second session)** | `4a10e962` + `1a7ae497` | `data/hotels.json` |
-| T3 | Activities + attractions: hours, exceptions, social | done | `4a10e962` | `data/activities.json` |
-| T4 | Transit methodology + questions/suggestions/flags | done | `4a10e962` | `data/decisions.json` |
-| T5 | Site build + publish | done | `4a10e962` | `index.html`, `assets/**`, `pages/**` |
-| T6 | Dated hotel pricing for the exact travel window | done | `1a7ae497` | `data/hotels.json` |
-| T7 | Repo audit page + integration log | done | `1a7ae497` | `pages/repo-audit.html` |
-| T8 | Hygiene: licence, ignore rules, nojekyll | done | `1a7ae497` | `LICENSE`, `.gitignore`, `.nojekyll` |
-| T9 | Complete MICHELIN index to official counters (18 of 69 starred today) | unclaimed | — | `data/restaurants.json` |
-| T10 | Per-person menu price capture | unclaimed | — | `data/restaurants.json` |
-| T11 | Measured door-to-door transit times (the ≤1-hour rule) | unclaimed | — | `data/hotels.json` |
-| T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | unclaimed | — | `data/hotels.json` |
-
-Status values: `unclaimed` · `in progress` · `needs review` · `done`.
-
----
+| ID | Task | Status | Owner session | File scope | Notes |
+|---|---|---|---|---|---|
+| T0 | Repo audit + create coordination board | done | arena/4a10e962-nyfun2 | `COORDINATION.md`, `README.md` | Repo contained only an 8-byte README at start; no prior findings to preserve. |
+| T1 | Research: Michelin Guide listed/starred restaurants, hours, official links, social media | done | arena/4a10e962-nyfun2 | `data/michelin-restaurants.json`, `research/michelin.md` | Must distinguish Guide-listed vs starred; cost for 2; official source per row. |
+| T2 | Research: hotels (price/location/amenities, 7-night totals, cheapest window) | done | arena/4a10e962-nyfun2 | `data/hotels.json`, `research/hotels.md` | Private bath + queen+ bed, 2 adults; official booking-source pricing only. |
+| T3 | Research: activities + attractions, hours/exceptions, social media links | done | arena/4a10e962-nyfun2 | `data/activities.json`, `research/activities.md` | ≤1 hour travel clustering; official source per row. |
+| T4 | Research: transit/rough travel-time methodology + questions/answers/gaps | done | arena/4a10e962-nyfun2 | `research/methodology.md`, `data/questions.json` | Document limits, no inferred values. |
+| T5 | Final integration: build GitHub Pages site, line-by-line verification, publish | done | arena/4a10e962-nyfun2 | `index.html`, `assets/**`, `pages/**`, `.github/**` | Only after T1–T4 done; owns shared nav/index. |
+| T6 | Dated hotel pricing for 15–22 Feb 2027, 2 adults (the missing 7-night totals) | done | arena/1a7ae497-nyfun2 | `data/hotels.json` | Completed the item T2 left blank: 4 of 12 candidates priced. |
+| T7 | Repo audit page + two-session integration log | done | arena/1a7ae497-nyfun2 | `pages/repo-audit.html` | Linked from every page nav and from the overview tile grid. |
+| T8 | Repository hygiene: licence, ignore rules, nojekyll | done | arena/1a7ae497-nyfun2 | `LICENSE`, `.gitignore`, `.nojekyll` | MIT for code, CC BY 4.0 for data and prose. |
+| T9 | Complete the Michelin catalogue to the official counters (18 of 69 starred rows today) | unclaimed | — | `data/restaurants.json` | 5 three-star, 14 two-star, 50 one-star exist officially. |
+| T10 | Per-person menu price capture for the starred restaurants | unclaimed | — | `data/restaurants.json` | Menu pages are client-rendered; needs a source that prints prices. |
+| T11 | Measured door-to-door transit times for the ≤1-hour rule | unclaimed | — | `data/hotels.json` | No routing source was reachable from the sandbox. |
+| T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | unclaimed | — | `data/hotels.json` | Required to fill "cheapest booking window". |
 
 ## Log
 
+### 2026-11-25 — session `arena/4a10e962-nyfun2` (continued)
+- T0 done: repo audit found no pre-existing content; no irregularities in repository history.
+- T1–T4 claimed by this session (sole active session visible on the branch); non-overlapping file scopes declared above. T5 remains unclaimed until research is integrated.
+- Michelin timing irregularity logged for review: Michelin Northeast Cities 2026 ceremony is scheduled for **14 Dec 2026** (official Michelin North America announcement, https://michelinmedia.com/pages/blog/detail/article/c/a1479/), i.e. between this research (25 Nov 2026) and the preferred trip (15–22 Feb 2027). Current Michelin distinctions may change before travel.
+
 ### 2026-11-25 — session `arena/4a10e962-nyfun2`
+- Created board. Repo audited: single initial commit `a3a2848`, README only, no site/CI/data. No other working branches present locally.
+- Claimed T0. No pre-existing work was overwritten.
+- Platform constraint: this session is fixed to branch `arena/4a10e962-nyfun2`; cannot create the `session-<id>/<task>` branches requested in the general coordination instructions. Coordination and non-overlapping file scopes are still being used.
 
-- T0 done. Repo audited: single commit `a3a2848`, 8-byte README only, no site/CI/data. No prior work
-  existed to overwrite.
-- T1 done — `data/restaurants.json`. Verified against 19 official MICHELIN pages/articles. Irregularities
-  logged: the 14 Dec 2026 ceremony falls between research and travel; Sushi Sho search results referred
-  to a different city; The Modern and Semma hours unconfirmed in the checked section; couple prices
-  unavailable from official pages.
-- T2 done — `data/hotels.json`. Michelin's booking widget enforces a 31-day advance limit and no hotel's
-  own engine published February 2027 rates, so 7-night totals and the cheapest window were left blank.
-- T3 done — `data/activities.json`. Hours transcribed from NPS, NYC Parks, The Met, MoMA, AMNH, the
-  9/11 Memorial & Museum, the High Line, the Whitney, the Guggenheim, ESB, the Staten Island Ferry and
-  NYPL. Irregularities: conflicting Met hours across official snippets; NYPL page-version differences;
-  ESB date-specific February hours unavailable.
-- T4 done — `data/decisions.json` (8 questions / 8 suggestions / 9 flags).
-- T5 done — site built; `scripts/verify.py` reported 0 errors over 51 rows; `node --check` passed.
+### 2026-11-25 — session `arena/4a10e962-nyfun2` (research completion)
+- T1 done. Files: `data/restaurants.json`. Sources verified line-by-line against 19 official Michelin pages/articles: official star list (5/14/50), 2025 star announcement, July 2026 Guide additions, and individual restaurant pages for address, hours, cuisine, price band and official website. Third-party YouTube review links are labelled as such; official account ownership was not asserted where not confirmed. Irregularities: upcoming 14 Dec 2026 ceremony; Sushi Sho search results referred to a different city; The Modern and Semma hours not confirmed in the checked section; couple prices unavailable from official pages.
+- T2 done. Files: `data/hotels.json`. Sources: Michelin NYC hotel listing/hotel pages, Michelin FiDi guide, Marriott citizenM brand page, citizenM official page. Verified room facts only for citizenM Times Square (XL king, up to two adults, power shower; undated from $395/night). Michelin booking widget states a 31-day maximum advance booking window; no dated February 2027 rate was found. 7-night totals and cheapest window left blank. Irregularity: 11 Howard guest score differs between Michelin hotel page (18) and restaurant page (18.1).
+- T3 done. Files: `data/activities.json`. Sources: NPS Statue of Liberty hours, NYC Parks Central Park page/press release, The Met, MoMA, AMNH, 9/11 Memorial & Museum, The High Line, Whitney, Guggenheim, ESB hours page, NYC DOT Staten Island Ferry facts, NYPL. Hours/exceptions transcribed from those pages; couple costs only where an official adult price was published. Irregularities: conflicting Met hours in official snippets, NYPL page-version differences, ESB date-specific February hours unavailable.
+- T4 done. Files: `data/decisions.json` and `pages/itinerary.html`. Eight questions with known/missing/provisional answers and discovery paths; eight improvement suggestions; nine review flags. No travel duration was inferred; routing is deferred to live map links plus a documented verification step.
+- T5 in progress: site built from these data files, `scripts/verify.py` reports 0 errors / 0 warnings over 51 rows plus all local links, `node --check assets/app.js` passes. GitHub Pages was still configured to `main` at this point; source change to the session branch is the remaining publish step.
 
-### 2026-11-25 — session `arena/1a7ae497-nyfun2`
+### 2026-11-25 — session `arena/4a10e962-nyfun2` (publish)
+- T5 verification: live site confirmed at https://kanlerxz87-cyber.github.io/NYFun2/ and JS-rendered tables confirmed on published pages. Pages source is `main`; PR #1 merged from the session branch to trigger the published build. Count inconsistencies (19 vs 20 Michelin rows) corrected in a follow-up commit.
 
-- Board created independently (the first session's board was not visible from this branch).
-- Research performed: MICHELIN counts + records, Resy venue pages for social handles and policies,
-  Booking.com dated rates for 15–22 Feb 2027, MTA fares, The Met, 9/11 Memorial & Museum, Top of the Rock.
-- T6 done — **four dated 7-night totals now exist**, with tax arithmetic and capture dates per row:
-  $1,305 / $1,428 / $1,774 / $5,220 all-in. This directly contradicted the first session's conclusion
-  that dated rates were unobtainable; the cause was found (Michelin's widget enforces 31 days; a
-  third-party engine does not).
-- Corrections made during verification: **MTA fare is $3, not $2.90** (F12); two activity street
-  addresses were removed because neither official page printed one; the Le Coucou ↔ 11 Howard phrasing
-  was narrowed to what MICHELIN actually shows (a cross-link between records).
-- T7, T8 done — repo audit page, licence, ignore rules, `.nojekyll`.
-- **Integration:** merged `origin/main` into this branch, kept the first session's site shell intact,
-  and folded this session's data into it. Duplicate parallel pages from this session were removed
-  (its own work only — nothing belonging to the other session).
-- Registers after merge: **12 questions, 12 suggestions, 13 flags**. Flag F2 was re-graded from High to
-  Low and rewritten rather than deleted, because the new data partially resolved it.
+### 2026-11-25 — cross-session integration note (session `arena/4a10e962-nyfun2`)
+- Discovered open PR #2 from session `arena/1a7ae497-nyfun2` with an overlapping full-site implementation (root HTML, `assets/*`, its own task board). Per the coordination rule, its files were **not** overwritten.
+- Its HTML/assets/tools were copied verbatim into `alt/` under this branch, with a banner on each page identifying it as the other session's kit and linking back to the main dashboard. A comparison tile was added to the main landing page and Sources page.
+- PR #2 is proposed for closure with the work preserved under `alt/`; no files from that session were modified in place.
 
-### Verification evidence (current head)
+### 2026-11-25 — session `arena/1a7ae497-nyfun2` (integration of the preserved alternate kit)
 
-```
-python3 scripts/verify.py   -> 0 errors, 0 warnings over 58 data rows
-node --check assets/app.js  -> passes
-static serve                -> all pages and assets return 200
-calendar                    -> 15 Feb 2027 = Monday, 22 Feb 2027 = Monday, 7 nights
-hotel arithmetic            -> 1113->1305 · 1213.96->1428 · 1522->1774 · 4488->5220
-```
-
----
-
-## Change requests (cross-scope)
-
-| Request | Files needed | Status |
-|---|---|---|
-| Complete the MICHELIN index to the official counters | `data/restaurants.json` | open — suggestion S10 |
-| Capture per-person menu prices | `data/restaurants.json` | open — suggestion S3 |
-| Integrate a routing source for the ≤1-hour rule | `data/hotels.json` | open — suggestion S2 |
-| Price the other weeks in the travel window | `data/hotels.json` | open — flag F2 remainder |
-| Protect `main`; add CI running `scripts/verify.py` | repo settings, `.github/workflows` | open — repo audit R4/R6 |
-
-## Handoff log
-
-| When | Task | From → To | Reason |
-|---|---|---|---|
-| 2026-11-25 | board created twice | `4a10e962` ∥ `1a7ae497` | Both sessions started from the same empty commit; neither could see the other's claim. |
-| 2026-11-25 | T2 (dated hotel totals) | `4a10e962` → `1a7ae497` | First session recorded it as blocked; second session completed it. |
-| 2026-11-25 | T9–T12 | — → unclaimed | Released for the next session. |
-
-## Notes for the next session
-
-- Never write a value into `data/*.json` that you did not read from the source cited in that row. If you
-  cannot read it, leave the field empty and add a flag explaining why.
-- The rendering layer is `assets/app.js`, driven by the column lists inside it. Adding a JSON field is
-  invisible until the corresponding column is added there.
-- `data/hotels.json` keeps two different price concepts apart on purpose: `publishedRate` is an undated
-  "from" figure on an official page; `sevenNightTotal` is a dated engine quote. Never mix the columns.
-- Pages serves `main` at the repository root; a merge to `main` is the deploy.
+- Context: this session built a parallel full-site implementation. Session `arena/4a10e962-nyfun2`
+  preserved it verbatim under `alt/` rather than overwriting it, and closed PR #2. That handling was
+  correct under the no-overwrite rule, and `alt/` is left untouched here.
+- This session then acted as the integration session for its **research**, not its site: the canonical
+  site (`index.html`, `pages/**`, `assets/**`) keeps session `4a10e962`'s design, navigation and
+  broader restaurant/activity datasets, and only verified data was folded in.
+- `data/hotels.json` — T6 done. Four dated 7-night totals for 15–22 Feb 2027, two adults, each with the
+  exact rate URL, the tax arithmetic and the capture date: Hyatt Place NY/Chelsea **$1,305** all-in,
+  Arlo NoMad **$1,428**, 11 Howard **$1,774** (flexible $2,263), The Beekman **$5,220** (flexible
+  $5,741). Source: Booking.com dated rate pages. This closes the blank left by T2 and explains it:
+  Michelin's widget enforces a 31-day advance limit, a third-party engine does not.
+- `data/restaurants.json` — Atera ★★ appended (77 Worth St, Tribeca; different service window on every
+  day), plus the official Instagram/Facebook accounts printed on the Resy pages MICHELIN links as the
+  booking channel for Le Bernardin and Eleven Madison Park. Le Bernardin's Thursday–Sunday hours from
+  this session's own capture were not needed: session `4a10e962`'s fuller capture is retained.
+- `data/decisions.json` — F2 (no dated hotel total) **re-graded High → Low and rewritten, not deleted**;
+  new flags F10 (aggregator snapshot plus a promotion expiring 31 Dec 2026), F11 (no cross-week
+  comparison), F12 (MTA fare is $3, not the $2.90 in older guides), F13 (Atera's split service windows);
+  new questions Q9–Q12; new suggestions S9–S12. Registers after merge: **12 questions, 12 suggestions,
+  13 flags**.
+- New page `pages/repo-audit.html` (T7): repository audit R1–R7, per-session contribution table, what the
+  merge changed and why, verification evidence, and the open repository work. `LICENSE`, `.gitignore`
+  and `.nojekyll` added (T8).
+- Verification: `scripts/verify.py` → 0 errors, 0 warnings over 58 data rows; `node --check assets/app.js`
+  passes; all 11 pages, the stylesheet, the script and the 4 JSON files return 200 on a static server;
+  the hotel total cell was exercised against all 12 rows with no `undefined`/`NaN`; 15 Feb 2027 is a
+  Monday and 22 Feb 2027 is a Monday, so the priced stay is exactly 7 nights.
+- Third session observed: `arena/215c2a25-nyfun2` has an **open** PR #5 with another dashboard
+  implementation. The same collision risk as before applies. Recommendation stands: protect `main`,
+  require PRs, and run `scripts/verify.py` in CI so no fourth variant merges unreviewed.

@@ -40,6 +40,8 @@ as an official endorsement.
 | `assets/styles.css` · `assets/app.js` | Styling and table rendering (no dependencies) |
 | `scripts/verify.py` | Pre-push verification |
 | `COORDINATION.md` | Shared task board and session log |
+| `alt/` | The parallel session's independent kit, preserved verbatim for comparison (not linked from the main nav) |
+| `LICENSE` | MIT for code, CC BY 4.0 for data and prose |
 
 ## Headline findings
 
