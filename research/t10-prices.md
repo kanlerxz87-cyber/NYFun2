@@ -14,7 +14,7 @@ Michelin's `$`–`$$$$` band is a separate, non-dollar indicator (`guidePriceBan
 | Eleven Madison Park | 3★ | Full Tasting | $385 | **$770** | elevenmadisonpark.com/faq | 2026-11-25 |
 | Eleven Madison Park | 3★ | Bar Tasting | $255 | **$510** | elevenmadisonpark.com/faq | 2026-11-25 |
 | Le Bernardin | 3★ | Chef's Tasting | $350 | **$700** | le-bernardin.com/accessible/menus/dining-room/chef-s-tasting/ | 2026-11-25 |
-| Le Bernardin | 3★ | Dinner prix fixe (4-course) | $225 | **$450** | le-bernardin.com/accessible/menus/dinner/ | 2026-11-25 |
+| Le Bernardin | 3★ | Dinner prix fixe (4-course) | $218 | **$436** | le-bernardin.com/content/pdfs/dinner-1.2.pdf | 2026-11-25 |
 | Le Bernardin | 3★ | Lunch prix fixe (3-course) | $142 | **$284** | le-bernardin.com/accessible/menus/lunch/ | 2026-11-25 |
 | Jungsik New York | 3★ | Signature Menu | $335 | **$670** | jungsik.com/menu/ | 2026-11-25 |
 | Masa | 2★ | Lunch Omakase (from) | $495 | **$990** | masanyc.com/menus | 2026-11-25 |
@@ -36,6 +36,18 @@ Michelin's `$`–`$$$$` band is a separate, non-dollar indicator (`guidePriceBan
 | Jua | 1★ | Seven-course tasting | $150 | **$300** | juanyc.com/menu | 2026-11-25 |
 | Gramercy Tavern | 1★ | Dining Room Seasonal Menu | $178 | **$356** | gramercytavern.com/dining-room-menu/ | 2026-11-25 |
 | Gramercy Tavern | 1★ | Tavern 3-course (à la carte) | $78 | **$156** | gramercytavern.com/dining-room-menu/ | 2026-11-25 |
+| Aquavit | 2★ | Dinner tasting | $195 | **$390** | aquavit.org/s/DR-112026.pdf (DR 11.20.26) | 2026-11-25 |
+| odo | 2★ | Lunch Kaiseki (6-course) | $150 | **$300** | odo.nyc/menu | 2026-11-25 |
+| odo | 2★ | Dinner Kaiseki (8–9 course) | $270 | **$540** | odo.nyc/menu | 2026-11-25 |
+| Le Coucou | 1★ | A Very Coucou Dinner | $220 | **$440** | lecoucou.com/#menus | 2026-11-25 |
+
+**Reconciliation with session `arena/6f217cce-nyfun2` (PR #13, merged to main):** that session
+independently captured Aquavit ($390), odo ($300/$540) and Le Coucou ($440), which this session had
+left blank; those official sources were re-opened and re-verified here on 2026-11-25 and adopted.
+It also read Le Bernardin's dinner prix fixe as **$218** from the official PDF `dinner-1.2.pdf`;
+this session's earlier accessible-page capture of $225 was superseded by the PDF ($436 for two).
+All other overlapping totals (EMP, Jungsik, Gabriel Kreuther, The Modern, Masa, Gramercy Tavern)
+agree between the two sessions. No verified figure from either session was discarded.
 
 ### Wine / beverage pairings (per person, official pages)
 EMP from $125 · Le Bernardin $180 (tasting $530 w/ pairing) · Gabriel Kreuther Classic $255 /
@@ -65,9 +77,10 @@ Source: guide.michelin.com/en/best-of/least-expensive-one-michelin-star-restaura
   (Main Dining Room) and $150/person deposit (Salon), not the menu price. A **$425** figure
   appears only in a search snippet and is **not used**. Confirm by phone / at booking.
 - **Sushi Sho (3★)** — no official website listed by Michelin (phone only); no price published.
-- **Aquavit, Atera, Atomix, Jean-Georges, César, Joo Ok, odo, Saga, Sushi Noz (2★)** — official
-  menu price not reachable/published. Atera & Atomix third-party reports **conflict**
-  (Atera $195/$235/$298; Atomix $295/$375) and were **not used**.
+- **Atera, Atomix, Jean-Georges, César, Joo Ok, Saga, Sushi Noz (2★)** — official menu price not
+  reachable/published. Atera's own page content conflicts ($325 visible menu text vs $298 embedded
+  structured data, per session 6f217cce; third-party reports also vary $195/$235/$298) and Atomix
+  third-party reports conflict ($295/$375); none were used.
 - **Dirt Candy, Sushi Nakazawa, Sixty Three Clinton, and most other 1★** — à la carte or menu
   not reachable; no fixed couple total published.
 

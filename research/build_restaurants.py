@@ -84,9 +84,9 @@ R["Eleven Madison Park"]['flags'].append("Corrected 2026-11-25: canonical data l
 setp("Jungsik New York","$670 (Signature Menu, 2 x $335)",
      "Official menu page: SIGNATURE MENU 335; wine pairings 225/600, mixed 175, NA 145. Entire table must participate.",
      "https://www.jungsik.com/menu/")
-setp("Le Bernardin","$700 (Chef's Tasting, 2 x $350); $450 (Dinner prix fixe, 2 x $225); $284 (Lunch prix fixe, 2 x $142)",
-     "Official accessible menus: Chef's Tasting $350 ($530 w/ wine pairing); Dinner 4-course $225; Lunch 3-course $142. Supplements extra (e.g. caviar $145/oz).",
-     "https://www.le-bernardin.com/accessible/menus/dining-room/chef-s-tasting/")
+setp("Le Bernardin","$700 (Chef's Tasting, 2 x $350); $436 (Dinner prix fixe, 2 x $218); $284 (Lunch prix fixe, 2 x $142)",
+     "Official dinner menu PDF (dinner-1.2.pdf): dinner 4-course $218/person. Chef's Tasting $350 ($530 w/ wine pairing); Lunch 3-course $142. Supplements extra (caviar $145/oz). Reconciled with session 6f217cce: an earlier accessible-page capture showed $225 dinner, but the current official PDF states $218 and is used.",
+     "https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf")
 # Per Se: price NOT confirmed on any reachable official page -> blank + flag
 R["Per Se"]['priceNote']="Official Tock channel shows a $200/person deposit (Main Dining Room) and $150/person deposit (Salon); the tasting-menu price itself is not printed on the reachable Tock/Thomas Keller pages. A $425 figure appears only in a search snippet and is NOT used."
 R["Per Se"]['flags'].append("Couple price unverified: official pages show only the $200/person deposit, not the menu price; $425 search-snippet figure not used. Confirm by phone or at booking.")
@@ -138,8 +138,11 @@ R["Masa"]['exceptions']="Casually elegant attire encouraged; no strong fragrance
 
 detail("Odo", address="17 W. 20th St., New York, NY 10011", area="Flatiron (address-based grouping)",
   hours="Mon closed; Tue-Sun 12:00-13:45 and 18:00-20:30", officialUrl="https://www.odo.nyc/",
-  sourceUrl="https://guide.michelin.com/en/new-york-state/new-york/restaurant/odo")
-R["Odo"]['flags'].append("Couple price unverified")
+  sourceUrl="https://guide.michelin.com/en/new-york-state/new-york/restaurant/odo",
+  exceptions="Cannot accommodate vegan/vegetarian/gluten-free or guests who cannot consume seafood/seaweed; contact the restaurant directly.")
+setp("Odo","$300 (Lunch Kaiseki, 2 x $150); $540 (Dinner Kaiseki, 2 x $270)",
+     "Official menu page (odo.nyc/menu): Lunch 6-course 150/guest (seatings 12:00/13:45); Dinner 8-9 course 270/guest (seatings 18:00/20:30). Re-verified 2026-11-25; corroborates session 6f217cce's capture.",
+     "https://www.odo.nyc/menu")
 
 detail("Saga", address="70 Pine St., New York, NY 10005", area="Financial District (address-based grouping)",
   hours="Daily 17:00-21:30", officialUrl="https://www.saga-nyc.com/",
@@ -161,7 +164,9 @@ setp("The Modern","$230 (Lunch prix fixe, 2 x $115); $510 (Lunch Tasting, 2 x $2
 R["The Modern"]['flags']=[f for f in R["The Modern"]['flags'] if 'Hours unverified' not in f]
 
 R["Aquavit"]['officialUrl']="https://www.aquavit.org/"
-R["Aquavit"]['flags'].append("Couple price unverified: official menu shown as images only; menu subpages unreachable this session")
+setp("Aquavit","$390 (dinner tasting, 2 x $195)",
+     "Official dinner menu PDF (DR 11.20.26, linked from aquavit.org): tasting 195/person; wine pairing 145, reserve 295, NA 75. Re-verified 2026-11-25; corroborates session 6f217cce's capture.",
+     "https://www.aquavit.org/s/DR-112026.pdf")
 R["Atera"]['flags'].append("Couple price unverified: official site unreachable; third-party reports conflict ($195/$235/$298) - not used")
 R["Atomix"]['officialUrl']="https://www.atomixnyc.com/"
 R["Atomix"]['flags'].append("Couple price unverified: third-party reports conflict ($295/$375) - not used; official menu page client-rendered")
@@ -236,6 +241,11 @@ for n,addr,band in [("Casa Mono","52 Irving Pl., New York, NY 10003","$$$"),
     R[n]['priceNote']="MICHELIN best-of guide (updated 27 Jul 2026) lists this restaurant among five starred spots at roughly $75/person (~$150 for two) - an indicative Guide estimate, not a menu quote. A la carte; exact couple total not published."
     R[n]['priceSourceUrl']=BESTOF
     R[n]['flags'].append("Exact couple price unverified (a la carte); MICHELIN estimates ~$75/person in its least-expensive starred list")
+
+detail("Le Coucou", officialUrl="https://lecoucou.com/")
+setp("Le Coucou","$440 (A Very Coucou Dinner, 2 x $220)",
+     "Official menu (lecoucou.com/#menus): A Very Coucou Dinner 220/person; wine accompaniment 145/345, NA pairing 115; tax & gratuity not included. Lunch 2-course 81 / 3-course 125 / A Very Coucou Lunch 150. Re-verified 2026-11-25; corroborates session 6f217cce's capture.",
+     "https://lecoucou.com/#menus")
 
 # ---------------- verified Michelin price bands (detail pages captured this session) ----------------
 BANDS = {n:"$$$$" for n in ["Cote","Aska","César","Chef's Table at Brooklyn Fare","Joo Ok","Masa","Odo","Saga","Sushi Noz","The Modern","Jua","Mari","Dirt Candy","Sushi Nakazawa New York","Sixty Three Clinton"]}

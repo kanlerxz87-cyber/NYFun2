@@ -24,7 +24,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T7 | Repo audit page + two-session integration log | done | arena/1a7ae497-nyfun2 | `pages/repo-audit.html` | Linked from every page nav and from the overview tile grid. |
 | T8 | Repository hygiene: licence, ignore rules, nojekyll | done | arena/1a7ae497-nyfun2 | `LICENSE`, `.gitignore`, `.nojekyll` | MIT for code, CC BY 4.0 for data and prose. |
 | T9 | Complete the Michelin catalogue to the official counters (18 of 69 starred rows today) | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/restaurants.json` | All 72 rows present (5/14/50 starred + Bib + Selected) in the namespaced kit; canonical `data/restaurants.json` still at 20 rows — merging the two is a separate decision. |
-| T10 | Per-person menu price capture for the starred restaurants | done | arena/fc6d5f66-nyfun2 | `data/restaurants.json`, `research/t10-prices.md` | 12 restaurants priced from official menu/FAQ/booking pages (couple totals $156–$1,900, food only). Per Se blank (official pages show only a $200 deposit); Atomix/Atera third-party conflicts rejected. See `research/t10-prices.md`. |
+| T10 | Per-person menu price capture for the starred restaurants | done (reconciled) | arena/6f217cce-nyfun2 + arena/fc6d5f66-nyfun2 | `data/restaurants.json`, `research/t10-prices.md` | 15 restaurants priced from official menu/FAQ/booking pages (couple totals $156–$1,900, food only). Sessions 6f217cce (PR #13) and fc6d5f66 reconciled: Aquavit/odo/Le Coucou from 6f217cce re-verified and adopted; Le Bernardin dinner uses the official PDF ($218). Per Se blank (official pages show only a $200 deposit); Atomix/Atera conflicts rejected. See `research/t10-prices.md`. |
 | T13 | Complete canonical starred roster to the official 69 + official social links per restaurant row | done | arena/fc6d5f66-nyfun2 | `data/restaurants.json`, `research/t13-roster-socials.md` | Canonical roster now 69 starred (5/14/50) + 3 Guide-listed = 72 rows. 3 kit-only names excluded/flagged. Official socials added for Per Se, Aska (EMP/Le Bernardin retained). |
 | T14 | Refresh decisions register + executive summary for session fc6d5f66 findings | done | arena/fc6d5f66-nyfun2 | `data/decisions.json`, `pages/executive-summary.html`, `pages/michelin-restaurants.html` | Q6/Q8 updated; F11 resolved, F13 partial; new flags F14–F17; S3/S10 status updated. Exec summary + Michelin page refreshed with a verified-price table. |
 | T15 | Final verification + publish of the fc6d5f66 scope; log PR #12 conflict | done | arena/fc6d5f66-nyfun2 | `scripts/verify.py`, `COORDINATION.md` | `scripts/verify.py` → 0 errors / 0 warnings (113 rows); `node --check assets/app.js` passes. PR #12 stale-base conflict logged below; publish = merge to main (integration owner). |
@@ -208,15 +208,26 @@ Leonard Street, La Bastide by Andrea Calstier**) are not in the live all-starred
 excluded/flagged. "Sixty Three Clinton" ↔ kit "63 Clinton" normalized. Every row keeps an official
 source link; blanks are flagged, never inferred.
 
-**T10 — 12 official-menu couple totals captured** (food only, pre-tax/tip/beverages; menus Nov 2026):
-EMP $770/$510 · Le Bernardin $700/$450/$284 · Jungsik $670 · Masa $990/$1,500/$1,900 · Gabriel
-Kreuther $650/$400/$470 · The Modern $230/$510/$370/$570 · Chef's Table BF $770 · Cote $168/$450 ·
-Kochi $290 · Mari $290 · Jua $300 · Gramercy Tavern $356/$156. Full source table in
-`research/t10-prices.md` and on the Michelin page. **Left blank + flagged:** Per Se (official pages
-print only a $200/person deposit; the $425 search-snippet figure was NOT used), Sushi Sho, Aquavit,
-Atera, Atomix, Jean-Georges, César, Joo Ok, odo, Saga, Sushi Noz and most à-la-carte one-stars.
-Atomix/Atera third-party price reports conflict and were rejected. Michelin's own least-expensive
-list groups Casa Mono, Crown Shy, Jeju Noodle Bar, Semma, Tuome at ~$75/person (indicative, not a quote).
+**T10 — 15 official-menu couple totals captured** (food only, pre-tax/tip/beverages; menus Nov 2026):
+EMP $770/$510 · Le Bernardin $700/$436/$284 · Jungsik $670 · Masa $990/$1,500/$1,900 · Gabriel
+Kreuther $650/$400/$470 · The Modern $230/$510/$370/$570 · Chef's Table BF $770 · Aquavit $390 ·
+odo $300/$540 · Cote $168/$450 · Kochi $290 · Mari $290 · Jua $300 · Gramercy Tavern $356/$156 ·
+Le Coucou $440. Full source table in `research/t10-prices.md` and on the Michelin page.
+**Left blank + flagged:** Per Se (official pages print only a $200/person deposit; the $425
+search-snippet figure was NOT used), Sushi Sho, Atera, Atomix, Jean-Georges, César, Joo Ok, Saga,
+Sushi Noz and most à-la-carte one-stars. Atomix/Atera price reports conflict and were rejected.
+Michelin's own least-expensive list groups Casa Mono, Crown Shy, Jeju Noodle Bar, Semma, Tuome at
+~$75/person (indicative, not a quote).
+
+**Cross-session reconciliation (PR #13, session `arena/6f217cce-nyfun2`, merged to main mid-task):**
+that session independently completed T10 on the 21-row canonical table and merged first. On
+discovering `main` had advanced, this session did **not** discard its work: it re-opened and
+re-verified the three official sources behind 6f217cce's unique captures — **Aquavit** ($195,
+DR-11.20.26 PDF), **odo** ($150/$270, odo.nyc/menu) and **Le Coucou** ($220, lecoucou.com/#menus) —
+and adopted them into the 72-row roster. It also corrected **Le Bernardin's dinner prix fixe to
+$218** (official `dinner-1.2.pdf`), superseding this session's earlier $225 accessible-page capture.
+All other overlapping totals agree between the two sessions. The merge keeps the full 69-star roster
+(this session) **and** every verified price from both sessions; the board's T10 row now credits both.
 
 **Hours/address detail added** from official MICHELIN detail pages + restaurant sites: Aska (full
 week), odo (full week), Jua, Mari, Dirt Candy, Sushi Nakazawa, Semma, Sixty Three Clinton, Chef's
