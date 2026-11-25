@@ -187,3 +187,6 @@ per page; no absolute claims of the form "every value is verified" remain (check
   cross-session discrepancies above — pre-tax vs all-in hotel basis, row-level queen+private-bath
   filtering in the canonical hotel set, the MICHELIN band-vs-dollar question, and the 72-vs-20 roster
   size. None was resolved unilaterally.
+
+### 2026-11-25 — session `arena/a72ce843-nyfun2` claim
+- Claim T13: independent official-source audit of couple menu pricing and the existing site's evidence gaps. Status: in progress. Scope: `sessions/a72ce843/**` and this coordination log only. T10's canonical dataset is left to an integration owner. The platform fixes this session to `arena/a72ce843-nyfun2`; no separate session branch can be created.
