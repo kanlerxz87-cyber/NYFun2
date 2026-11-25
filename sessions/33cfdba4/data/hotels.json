@@ -1,0 +1,103 @@
+{
+  "as_of": "2026-11-25",
+  "requirements": {"party": "2 adults", "bed": "Queen or larger", "bath": "Private bathroom", "nights": 7, "window": "2027-02-15 → 2027-02-22"},
+  "method": "Booking.com property pages with explicit dates 2027-02-15 → 2027-02-22, 2 adults, 1 room, USD. Room type, bed, bathroom and displayed stay total captured verbatim. Taxes excluded unless stated; Booking.com shows 'Excluded: 14.75% TAX, $4 City tax per night' on many rates.",
+  "rows": [
+    {
+      "id": "eurostars-wall",
+      "name": "Eurostars Wall Street",
+      "area": "Financial District, Lower Manhattan",
+      "rating": 8.0, "reviews": 956, "couples_location": 9.0,
+      "room": "Queen Room",
+      "bed": "1 queen bed", "bath": "Private bath (room listed with 'Bath')",
+      "size_sqft": 172,
+      "total_7n_usd": 848, "per_night_usd": 121, "tax_note": "Excludes 14.75% tax + $4/night city tax (US$149.66 tax for the stay, as displayed)",
+      "rate_terms": "Partner Offer, non-refundable, pay in advance, breakfast $21/person extra",
+      "amenities": ["Free WiFi", "Air conditioning", "Non-smoking rooms", "24-hour front desk", "Elevator", "Daily housekeeping", "Coffee/tea maker"],
+      "nearest_subway": "Wall St (2/3) — hotel is in the Financial District",
+      "booking_url": "https://www.booking.com/hotel/us/exchange-manhattan.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "source": "https://www.booking.com/hotel/us/exchange-manhattan.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "verified": "v",
+      "notes": "Cheapest verified queen-bed option in the preferred week. Non-refundable at this rate; a refundable 'Black Friday' rate was displayed at $1,025 pre-tax for the same room."
+    },
+    {
+      "id": "doubletree-chelsea",
+      "name": "DoubleTree by Hilton Hotel New York City - Chelsea",
+      "area": "Chelsea, Manhattan",
+      "rating": 7.8, "reviews": 3971, "couples_location": 9.2,
+      "room": "King Room - Non-Smoking",
+      "bed": "1 king bed", "bath": "Private bathroom (property description)",
+      "size_sqft": 210,
+      "total_7n_usd": 943, "per_night_usd": 135, "tax_note": "Excludes 14.75% tax + $4/night city tax. Displayed total before taxes: $942.91",
+      "rate_terms": "Free cancellation before 2027-02-13, no prepayment (Black Friday Deal, 30% off). Breakfast not included at this rate; breakfast rate $1,139 total.",
+      "amenities": ["Fitness centre", "Room service", "Parking", "Pet friendly", "Air conditioning", "Non-smoking rooms", "Laundry", "Daily housekeeping"],
+      "nearest_subway": "28th Street station — 1,056 ft per property description",
+      "booking_url": "https://www.booking.com/hotel/us/doubletree-new-york-city-chelsea.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "source": "https://www.booking.com/hotel/us/doubletree-new-york-city-chelsea.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "verified": "v",
+      "notes": "Best combination of a cancellable rate, king bed and midtown-ish location at < $1,000 pre-tax for 7 nights."
+    },
+    {
+      "id": "frederick-tribeca",
+      "name": "The Frederick Hotel Tribeca, a Small Luxury Hotel",
+      "area": "Tribeca, Lower Manhattan",
+      "rating": 8.3, "reviews": 2216, "couples_location": 9.4,
+      "room": "Studio 1 Queen Bed",
+      "bed": "1 queen bed", "bath": "Private bathroom (property description: guest rooms with private facilities)",
+      "size_sqft": 200,
+      "total_7n_usd": 1747, "per_night_usd": 212, "tax_note": "Excludes 14.75% tax + $4/night city tax. $38/night resort fee included in displayed rate.",
+      "rate_terms": "Free cancellation before 2027-02-13, pay nothing until 2027-02-11. American breakfast included.",
+      "amenities": ["Breakfast included", "Fitness centre", "Valet parking", "Room service", "Pet friendly", "Soundproof rooms", "Free WiFi"],
+      "nearest_subway": "Chambers St / City Hall area (Lower Manhattan)",
+      "booking_url": "https://www.booking.com/hotel/us/new-york-95-west-broadway.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "source": "https://www.booking.com/hotel/us/new-york-95-west-broadway.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "verified": "v",
+      "notes": "Cheapest room is a full bed (fails the queen requirement); the queen 'Studio' is the qualifying rate shown here."
+    },
+    {
+      "id": "evelyn-nomad",
+      "name": "The Evelyn NoMad",
+      "area": "NoMad, Manhattan",
+      "rating": 8.4, "reviews": 2008, "couples_location": 9.5,
+      "room": "Superior Queen Room",
+      "bed": "1 queen bed", "bath": "Attached bathroom with walk-in shower",
+      "size_sqft": 180,
+      "total_7n_usd": 1653, "per_night_usd": 198, "tax_note": "Excludes 14.75% tax + $4/night city tax. $38/night resort fee included in displayed rate; $198/night is the room-only average.",
+      "rate_terms": "Free cancellation before 2027-02-13, pay nothing until 2027-02-11. Breakfast included.",
+      "amenities": ["Breakfast included", "Private parking", "Fitness centre", "Soundproof rooms", "Pet friendly", "Daily housekeeping"],
+      "nearest_subway": "28th Street station — 4-minute walk per property description",
+      "booking_url": "https://www.booking.com/hotel/us/gershwin.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "source": "https://www.booking.com/hotel/us/gershwin.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "verified": "v",
+      "notes": "Highest couples location score of the shortlist (9.5) and best central position for Michelin clusters."
+    },
+    {
+      "id": "benjamin-midtown",
+      "name": "The Benjamin Royal Sonesta New York",
+      "area": "Midtown East, Manhattan",
+      "rating": 8.3, "reviews": 976, "couples_location": null,
+      "room": "Queen Room",
+      "bed": "1 queen bed", "bath": "Not verified on the captured page",
+      "size_sqft": null,
+      "total_7n_usd": 1535, "per_night_usd": 174, "tax_note": "Tax treatment not captured — flag F-04",
+      "rate_terms": "Not captured",
+      "amenities": ["Valet parking", "Terrace", "Fitness centre", "Room service"],
+      "nearest_subway": null,
+      "booking_url": "https://www.booking.com/hotel/us/the-benjamin-royal-sonesta-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "source": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D5",
+      "verified": "u",
+      "notes": "5-star tier cheapest seen. Displayed '$174 per night' does not reconcile with the $1,535 7-night total (=$219/night); treated as unverified detail."
+    }
+  ],
+  "excluded": [
+    {"name": "Paramount Times Square - A Generator Hotel", "reason": "Cheapest Queen was a disability-access room at $975; 7.0 rating; 4-star. Kept out of the shortlist for quality, not price.", "source": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5%3Bhotelfacility%3D2"},
+    {"name": "Duane Street Hotel Tribeca (formerly Sonder)", "reason": "5.8 review score — below the quality bar.", "source": "https://www.booking.com/hotel/us/duane-street.html?checkin=2027-03-08&checkout=2027-03-15&group_adults=2&no_rooms=1&selected_currency=USD"},
+    {"name": "Hotel Edmond Times Square", "reason": "Review score not captured; no verified queen room rate in the captured window.", "source": "https://www.booking.com/hotel/us/edison-triumph-group.html"}
+  ],
+  "flags": [
+    "H-01: Booking.com '1 week, 2 adults' totals generally EXCLUDE taxes (14.75% + $4/night city tax) — real totals are ~16–18% higher.",
+    "H-02: Some displayed rates are 'Partner Offer' (non-refundable, third-party) or include mandatory resort fees ($38/night at Evelyn and Frederick).",
+    "H-03: No hotel page explicitly states 'private bathroom' as a filterable attribute in the captured text except through room descriptions; Booking.com does offer a 'Private bathroom' filter (554 properties in NYC at capture). Each shortlisted room lists 'Bath'/'Attached bathroom'/'Private bathroom' — cited per row.",
+    "H-04: Displayed per-night figures sometimes exclude mandatory fees and therefore do not multiply to the stay total (Benjamin; Evelyn). Totals are the authoritative displayed number."
+  ]
+}

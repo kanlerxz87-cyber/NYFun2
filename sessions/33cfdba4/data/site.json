@@ -1,0 +1,27 @@
+{
+  "repo": "kanlerxz87-cyber/NYFun2",
+  "site_url": "https://kanlerxz87-cyber.github.io/NYFun2/",
+  "research_date": "2026-11-25",
+  "trip": {
+    "party": "2 adults (couple)",
+    "date_range": "2027-02-15 to 2027-03-23",
+    "preferred_window": "2027-02-15 to 2027-02-18",
+    "core_length_nights": 7,
+    "extended_lengths": ["14 nights (2 weeks)", "21–28 nights (3–4 weeks)"],
+    "requirements": [
+      "Private bathroom",
+      "Queen bed or larger",
+      "Transit (subway/bus) ≤ 1 hour to planned activities",
+      "Rank hotels by Michelin-starred restaurants reachable within 1 hour"
+    ]
+  },
+  "sources": {
+    "michelin_selection": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred",
+    "michelin_2025_article": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
+    "michelin_bib": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/bib-gourmand",
+    "michelin_ceremony_2025": "https://michelinmedia.com/pages/blog/detail/article/c/a1442/",
+    "booking_search_nyc": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+    "osm_nominatim": "https://nominatim.openstreetmap.org/",
+    "google_maps_transit": "https://www.google.com/maps/dir/?api=1&travelmode=transit"
+  }
+}

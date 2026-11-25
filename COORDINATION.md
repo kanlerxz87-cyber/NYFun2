@@ -116,3 +116,52 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 - Consequence to keep in mind: a reader can reproduce or re-check every number, and no official-site rate
   was invented to fill the gaps. The eight unpriced candidates remain blank and flagged, which is what the
   third session's stricter standard requires.
+
+### 2026-11-25 — session `arena/33cfdba4-nyfun2` (independently built kit, now namespaced)
+
+- This session built a complete 12-file data layer and an 11-page generated site before reading
+  `main`'s board. On discovering that `arena/4a10e962-nyfun2` owns the **canonical root site**
+  (published to GitHub Pages) and that `arena/1a7ae497-nyfun2`'s work is preserved under `alt/`,
+  it did **not** overwrite any of it. Everything of its own moved into the disjoint namespace
+  `sessions/33cfdba4/`: 11 pages, `assets/`, and `data/`.
+- No root-level page, shared asset, shared dataset, `alt/**` file or `sessions/215c2a25/**` file was
+  modified. `scripts/build_site.py` now writes only inside `sessions/33cfdba4/`.
+- Entry point: https://kanlerxz87-cyber.github.io/NYFun2/sessions/33cfdba4/index.html
+
+**What this kit adds that the canonical site does not have:**
+
+- **T11 (was unclaimed) — measured transit.** 25 door-to-door hotel→Michelin-cluster legs captured from
+  Google Maps transit directions, 2026-11-25 between 17:14 and 17:31 ET, each with minutes, lines and
+  the query used. Result: **every leg is ≤37 minutes**, so the brief's one-hour rule does not separate
+  Manhattan hotels; price becomes the documented tie-break. This directly answers T11, which the board
+  records as blocked ("no routing source was reachable").
+- **An 8-day closure-aware itinerary** that places each of the five three-star houses once, on a day the
+  venue is verified open, inside the 15–18 Feb preferred window where possible.
+- **Hotel ranking by the brief's own measure** (Michelin restaurants within one hour), computed from the
+  25 measured legs rather than asserted.
+- Executed five pricing windows (T12, unclaimed), each labelled pre-tax with the Booking.com tax
+  arithmetic shown separately.
+
+**Cross-session discrepancies for manual review (not resolved unilaterally):**
+
+1. **Evidence standard for dated hotel totals.** The canonical `data/hotels.json` prices Hyatt Place
+   NY/Chelsea at **$1,305 all-in**; this kit prices **Eurostars Wall Street at $848 pre-tax / ~$998
+   all-in** for the same 15–22 Feb 2027 window. These are not necessarily in conflict — different
+   engines, different capture times, and the canonical set uses all-in while this kit uses pre-tax — but
+   the two cannot be compared until one basis is chosen. This kit labels every total `pre-tax` and shows
+   the tax separately for exactly this reason.
+2. **`data/hotels.json` room basis.** The canonical hotel set is not restricted to queen-or-larger beds
+   with a private bathroom at the row level; the brief requires both. This kit only lists rooms whose
+   bed type and private bathroom were read off the property page, and explicitly excludes
+   Paramount (full bed), Duane St/Sonder and Edmond (no qualifying room captured).
+3. **Michelin price band vs dollar total.** The brief asks for cost per couple as a total. MICHELIN
+   publishes a band ($$$$), not a price. This kit shows the band as its own field and refuses to convert
+   it to dollars; T10 remains open for the same reason on both sites.
+4. **Restaurant roster size.** This kit carries 72 rows (the full 5/14/50 starred tiers plus Bib and
+   Selected) against the canonical site's 20. Adding rows is additive, but the canonical
+   `official_counts` block should be the single source for the 5/14/50/74/224-style counters; this kit's
+   counts read 5/14/50/76/224 and should be reconciled before any merge of the two datasets.
+
+**Verification performed on this kit:** all 12 JSON files parse; the builder regenerates 11 pages with
+zero broken internal links; every `class=` used is defined in the stylesheet; HTML tag nesting validated
+per page; no absolute claims of the form "every value is verified" remain (checked by grep).

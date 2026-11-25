@@ -1,0 +1,126 @@
+{
+  "as_of": "2026-11-25",
+  "intro": "Every item below is a proposal, not a change that has been made. Review them in order, tick the ones to adopt, and the Flagged for Review page will track which remain open. Two of these suggestions would restructure the site; the rest are small.",
+  "items": [
+    {
+      "id": "S-01",
+      "title": "Add a 'shortlist' shortlist: 6 dinners instead of 69",
+      "priority": "High",
+      "effort": "Low",
+      "proposal": "The Michelin and Dining page lists all 69 starred restaurants, which is honest but unusable on a phone. Add a curated six-dinner shortlist at the top (one 3-star, two 2-star, two 1-star, one Bib Gourmand), each with its verified hours and its exact transit leg, while the full roster moves below a collapsible section.",
+      "rationale": "A 7-night trip can only eat 14 meals. Sorting 69 rows by 'reachable in 30 minutes from the chosen hotel' is the single most useful view.",
+      "status": "proposed",
+      "affects": "michelin.html"
+    },
+    {
+      "id": "S-02",
+      "title": "Replace 'blank + unverified' with an inline 'Confirmed on <date>' stamp on every verified cell",
+      "priority": "High",
+      "effort": "Low",
+      "proposal": "Currently a green Verified chip means the value came from an official page. Add the capture date inside the chip tooltip and a link to the exact section that was read (hours table, admissions table, room row).",
+      "rationale": "The brief demands manual line-by-line review with links; a date-stamped chip makes the review path one click instead of one search.",
+      "status": "proposed",
+      "affects": "all pages"
+    },
+    {
+      "id": "S-03",
+      "title": "Show 'cost for two' as an all-in number, including the 14.75% tax",
+      "priority": "High",
+      "effort": "Medium",
+      "proposal": "Booking.com totals exclude 14.75% tax plus $4 per night. Add a second column showing the taxed total for every hotel, and mark the pre-tax figure as 'excl. tax'.",
+      "rationale": "The price ranking flips from $848/$943 to roughly $975/$1,083 once tax is included; a reader comparing screenshots would be misled.",
+      "status": "proposed",
+      "affects": "hotels.html, booking-strategy.html"
+    },
+    {
+      "id": "S-04",
+      "title": "Add a 'what would change this recommendation' box",
+      "priority": "Medium",
+      "effort": "Low",
+      "proposal": "Under the hotel ranking, list the three things that would flip the winner: a cheaper June-August rate, the 2026 Michelin demotion of a downtown star, or a change in party size.",
+      "rationale": "It makes the analysis auditable instead of presenting a single answer as permanent.",
+      "status": "proposed",
+      "affects": "hotels.html"
+    },
+    {
+      "id": "S-05",
+      "title": "Add an 'arrival day' warning for the two Monday closures",
+      "priority": "Medium",
+      "effort": "Low",
+      "proposal": "Both 2027-02-15 and 2027-02-22 are Mondays. Flag on the Itinerary page that Jean-Georges and Jungsik are shut, and that Crown Shy's walk-in window is the only low-friction Monday option.",
+      "rationale": "The trip starts and ends on the city's weakest restaurant night.",
+      "status": "proposed",
+      "affects": "itinerary.html"
+    },
+    {
+      "id": "S-06",
+      "title": "Publish the raw JSON as a download",
+      "priority": "Medium",
+      "effort": "Low",
+      "proposal": "Link data/restaurants.json, data/hotels.json and data/transit_anchors.json from the Repo Audit page so the tables can be re-checked offline or re-imported into a spreadsheet.",
+      "rationale": "The brief asks for manual review; a spreadsheet is the fastest way a human can check 69 rows.",
+      "status": "proposed",
+      "affects": "repo-audit.html"
+    },
+    {
+      "id": "S-07",
+      "title": "Add a 'star map' sketch of Manhattan",
+      "priority": "Low",
+      "effort": "High",
+      "proposal": "Draw an inline SVG of Manhattan and Brooklyn with a dot per starred restaurant and the hotel overlaid, so the user can see the cluster argument instead of reading 25 transit rows.",
+      "rationale": "The measure was chosen because it is visual, and a table does not convey it.",
+      "status": "proposed",
+      "affects": "hotels.html, michelin.html"
+    },
+    {
+      "id": "S-08",
+      "title": "Turn off social self-verification prompts where no handle exists",
+      "priority": "Low",
+      "effort": "Low",
+      "proposal": "Rows with no verified handle currently render an empty chip column. Collapse the column for those sections to reduce visual noise.",
+      "rationale": "It is better to show nothing than an empty promise, which the brief explicitly prefers.",
+      "status": "proposed",
+      "affects": "michelin.html, activities.html"
+    },
+    {
+      "id": "S-09",
+      "title": "Use a 'next action' strip on the landing page",
+      "priority": "High",
+      "effort": "Medium",
+      "proposal": "Put three buttons at the top of the Overview: 'See the hotel ranking', 'See the 6-dinner shortlist', 'See open questions'. Everything else is one tap deeper.",
+      "rationale": "The dashboard currently opens with eight equal-weight tiles; a reader who has 30 seconds cannot tell what to do first.",
+      "status": "proposed",
+      "affects": "index.html"
+    },
+    {
+      "id": "S-10",
+      "title": "Store a screenshot or PDF hash with each price",
+      "priority": "Medium",
+      "effort": "High",
+      "proposal": "Booking.com prices move daily. Save a dated snapshot of each rate quote so the $848 figure can be defended later.",
+      "rationale": "Without a snapshot, every price in the site is unreproducible after the next promotion ends.",
+      "status": "proposed",
+      "affects": "booking-strategy.html"
+    },
+    {
+      "id": "S-11",
+      "title": "Add a 'why these five hotels' note",
+      "priority": "Medium",
+      "effort": "Low",
+      "proposal": "Explain the filter chain: Booking.com Manhattan + 4-5 star + queen bed + private bath + sorted by price, which produced these five of 554 matching properties.",
+      "rationale": "The shortlist looks arbitrary without the filter trail.",
+      "status": "proposed",
+      "affects": "hotels.html"
+    },
+    {
+      "id": "S-12",
+      "title": "Separate 'verified' from 'verified from an official page'",
+      "priority": "Medium",
+      "effort": "Medium",
+      "proposal": "Once a value is re-checked against the restaurant's or venue's own site (not just Michelin or Booking.com), add a second chip 'Primary source'. The brief asks for official sources; Michelin and Booking.com are authoritative but secondary for hours and prices.",
+      "rationale": "It closes the loop between the brief's 'official source' rule and the current evidence base.",
+      "status": "proposed",
+      "affects": "all pages"
+    }
+  ]
+}

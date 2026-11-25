@@ -1,0 +1,133 @@
+{
+  "as_of": "2026-11-25",
+  "intro": "These are the decisions that cannot be made from public data alone. Each question lists what is already known, what is still missing, and exactly how to discover it. Nothing here blocks the site: the site is complete, and these are the gaps a human must close before money moves.",
+  "groups": [
+    {
+      "id": "Q-BUDGET",
+      "title": "Budget ceiling for the week",
+      "why": "It decides whether the plan can include two or three 3-star dinners. The five verified 3-stars alone would consume most of a mid-range food budget.",
+      "known": "Michelin detail pages often omit tasting-menu prices; only the tier and the cuisine are published.",
+      "missing": "A dinner budget for the couple, and whether tasting menus or a la carte is preferred.",
+      "how_to_find": "Ask each restaurant for its current menu price when the reservation window opens (Resy/Tock/OpenTable show deposits and cancellation terms).",
+      "decision_impact": "High",
+      "status": "open"
+    },
+    {
+      "id": "Q-STARS",
+      "title": "Which star tier matters most",
+      "why": "A 3-star dinner is typically 3-4 hours and one seating; a 1-star dinner can be a 90-minute walk-in.",
+      "known": "The roster distinguishes 5 x 3-star, 14 x 2-star, 50 x 1-star and 76 Bib Gourmand.",
+      "missing": "Whether the couple wants maximum stars or maximum variety.",
+      "how_to_find": "Filter the Michelin and Dining table by tier and compare the cost-per-couple columns.",
+      "decision_impact": "High",
+      "status": "open"
+    },
+    {
+      "id": "Q-NIGHTS",
+      "title": "7 nights, or the 2-4 week extension",
+      "why": "The brief allows 1-2 weeks. The hotel price research was done for 7 nights; a 14-night stay changes the cheapest window.",
+      "known": "7 nights 2027-02-15 to 02-22 is the cheapest 7-night window tested; the 02-22 to 03-01 window's cheapest room was a twin (fails the queen rule).",
+      "missing": "The intended length.",
+      "how_to_find": "Run a Booking.com search for each candidate start date; the Booking Strategy page already tabulates the five windows tested.",
+      "decision_impact": "High",
+      "status": "open"
+    },
+    {
+      "id": "Q-BATH",
+      "title": "Is a walk-in shower required, or is a tub acceptable?",
+      "why": "The brief requires a private bathroom; it does not specify the fixture. The Evelyn lists a walk-in shower.",
+      "known": "All five shortlisted rooms list a private or attached bathroom.",
+      "missing": "Fixture preference and any mobility needs.",
+      "how_to_find": "Booking.com room descriptions list walk-in shower vs bath per room type; the property can confirm by email.",
+      "decision_impact": "Medium",
+      "status": "open"
+    },
+    {
+      "id": "Q-MOBILITY",
+      "title": "Walking tolerance and late-night comfort",
+      "why": "The transit matrix uses door-to-door times including walking transfers. Eurostars to Crown Shy is a 3-minute walk; Eurostars to Le Bernardin needs a 2/3 to 1 transfer.",
+      "known": "All 25 hotel-to-cluster legs are 37 minutes or less.",
+      "missing": "Whether 10-15 minute walks at 22:30 are acceptable.",
+      "how_to_find": "Review the Hotels transit matrix; re-run the specific night-time route on Google Maps after 22:00.",
+      "decision_impact": "Medium",
+      "status": "open"
+    },
+    {
+      "id": "Q-MUSEUM",
+      "title": "How many museums, and on which day?",
+      "why": "The 9/11 Museum is closed most Tuesdays, the Met's public hours are unverified, and the High Line closes at 20:00 in winter.",
+      "known": "MoMA is daily (Friday until 20:30). AMNH is daily 10:00-17:30. The High Line is 07:00-20:00 in February.",
+      "missing": "Which single museum matters most, and whether the Met is essential.",
+      "how_to_find": "The Activities page lists each venue's verified hours and exceptions.",
+      "decision_impact": "Medium",
+      "status": "open"
+    },
+    {
+      "id": "Q-SOCIAL",
+      "title": "Which social platforms do you actually use?",
+      "why": "The brief asks for YouTube/TikTok/Instagram review links for every row. Verifying that a handle belongs to the venue is slow, and fake handles exist (see flag S-01).",
+      "known": "Instagram was verified for a handful of restaurants and one activity; the rest are blank rather than guessed.",
+      "missing": "Which platforms are worth the verification effort.",
+      "how_to_find": "Name the platforms; the Flagged for Review page lists the rows still needing handles.",
+      "decision_impact": "Medium",
+      "status": "open"
+    },
+    {
+      "id": "Q-FLIGHT",
+      "title": "Arrival and departure times",
+      "why": "The arrival-day plan assumes an afternoon check-in and a dinner at 17:30-18:00. A late flight would break day 1.",
+      "known": "Check-in time is not published on the captured Booking.com page text.",
+      "missing": "Flight numbers, arrival time, and whether a late check-in is needed.",
+      "how_to_find": "Booking.com property page under 'House rules' lists check-in from / check-out by; the hotel can hold bags.",
+      "decision_impact": "Medium",
+      "status": "open"
+    },
+    {
+      "id": "Q-REFUND",
+      "title": "Is a refundable rate worth roughly $177 extra?",
+      "why": "The cheapest Eurostars rate is a non-refundable Partner Offer at $848; the refundable Black Friday rate was $1,024.92 for the same room.",
+      "known": "Both rates were displayed for 2027-02-15 to 02-22 at capture.",
+      "missing": "How likely the dates are to change.",
+      "how_to_find": "Compare the two rates on the property page; the difference is ~$177 pre-tax.",
+      "decision_impact": "Medium",
+      "status": "open"
+    },
+    {
+      "id": "Q-DIET",
+      "title": "Dietary restrictions",
+      "why": "Eleven Madison Park is fully vegan; several tasting menus are seafood-heavy; Katz's is a deli.",
+      "known": "Cuisine is recorded per restaurant from Michelin.",
+      "missing": "Allergies, aversions, and whether vegan menus are acceptable.",
+      "how_to_find": "Restaurant booking forms collect dietary notes; Michelin cuisine tags are on the Michelin and Dining page.",
+      "decision_impact": "Medium",
+      "status": "open"
+    },
+    {
+      "id": "Q-DRESS",
+      "title": "Dress code tolerance",
+      "why": "Several 3-star rooms enforce a jacket or smart-casual dress code; the brief does not mention packing constraints.",
+      "known": "Not yet captured from the official pages.",
+      "missing": "Whether jackets are acceptable.",
+      "how_to_find": "Each restaurant's own FAQ (linked from the Michelin page) states the dress code.",
+      "decision_impact": "Low",
+      "status": "open"
+    },
+    {
+      "id": "Q-2026",
+      "title": "What happens when the 2026 stars are announced (~2026-12-14)?",
+      "why": "The site uses the 2025 selection. A December 2026 ceremony could promote or demote restaurants before the February 2027 trip.",
+      "known": "The 2025 selection is verified (5 / 14 / 50 live; the article says 5 / 15 / 52).",
+      "missing": "The 2026 results.",
+      "how_to_find": "Re-check guide.michelin.com after 2026-12-14 and update data/restaurants.json; the site is generated from that file.",
+      "decision_impact": "High",
+      "status": "open"
+    }
+  ],
+  "discovery_playbook": [
+    "Call or email the hotel directly for check-in time, bed dimensions, and bathroom fixtures — Booking.com does not publish check-in time in the captured text.",
+    "Watch Resy/Tock/OpenTable for a specific 3-star: tables usually release 30-60 days before, and the cancellation policy is shown at checkout.",
+    "Re-run every Google Maps leg the week before travel: 2026-11-25 service was used, and weekend maintenance changes routes.",
+    "Re-check Michelin after the December 2026 ceremony — one demotion can change the whole hotel ranking.",
+    "Use the official venue page for hours, not aggregator sites; the Met, Katz's and NYPL all failed to publish hours in a form that could be verified."
+  ]
+}
