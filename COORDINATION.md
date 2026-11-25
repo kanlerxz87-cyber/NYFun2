@@ -27,7 +27,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T10 | Per-person menu price capture for the starred restaurants | unclaimed | — | `data/restaurants.json` | Menu pages are client-rendered; needs a source that prints prices. |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
-| T13 | Repo audit, gap-fill, verification pass, and canonical-site quality improvements (no overwrite of alt/sessions kits) | in progress | arena/cffe022b-nyfun2 | `COORDINATION.md`, `README.md`, `data/restaurants.json`, `data/hotels.json`, `data/activities.json`, `data/decisions.json`, `pages/*.html`, `index.html`, `scripts/verify.py` (only if needed) | Session started 2026-11-25. Will audit line-by-line, fill verifiable gaps (social links/hours/sources), flag irregularities, keep unverified values blank, and not merge namespaced kits unilaterally. |
+| T13 | Repo audit, gap-fill, verification pass, and canonical-site quality improvements (no overwrite of alt/sessions kits) | done | arena/cffe022b-nyfun2 | `COORDINATION.md`, `README.md`, `data/restaurants.json`, `data/hotels.json`, `data/activities.json`, `data/decisions.json`, `pages/*.html`, `index.html`, `scripts/verify.py` (only if needed) | Audited repo/data/site. Verified and updated 7 restaurant rows against live official sources (Michelin pages + cynthianyc.com): Masa, odo, Sushi Noz, César, The Modern, Semma, Sushi Sho, Cynthia. Added/corrected hours, addresses, official URLs, source URLs, and third-party/official social links where confirmed. Did not fabricate prices, travel times, or official confirmations; unverified fields remain blank and flagged. `python3 scripts/verify.py` passes (0 errors, 0 warnings, 58 data rows). Did not modify `alt/**` or `sessions/**`. |
 
 ## Log
 
@@ -194,3 +194,18 @@ per page; no absolute claims of the form "every value is verified" remain (check
 - Claimed **T13** (in progress). Scope: canonical data files, pages, README, coordination log; no edits to `alt/**`, `sessions/**`, or other sessions' namespaced work.
 - Intent: audit the repo against the user request, verify existing rows against official sources where possible, fill verifiable gaps (social/review links, hours/addresses where official sources confirm them), flag irregularities, keep unverified values blank, and update summary/questions/suggestions/flags accordingly. Will not fabricate prices, travel times, or official-source confirmations.
 - No files outside claimed scope will be modified.
+
+### 2026-11-25 — session `arena/cffe022b-nyfun2` (T13 done)
+
+- **Audit performed:** reviewed repo structure, COORDINATION board, data files, pages, app.js, verify.py, and README. Confirmed canonical site is static (HTML/CSS/JS/JSON) with `scripts/verify.py` passing before and after edits.
+- **Verified improvements (official sources):**
+  - `Masa` (2★, Michelin page): filled address 10 Columbus Circle Ste. 401, hours Tue–Sat 12:00–14:30 & 17:30–22:00 (Sun/Mon closed), official site masanyc.com, source URL updated to Michelin restaurant page; added third-party YouTube review links with clear labels.
+  - `odo` (2★, Michelin page): filled address 17 W 20th St, hours Mon closed; Tue–Sun 12:00–13:45 & 18:00–20:30, official site odo.nyc; flagged unreconciled hours difference vs odo.nyc contact page.
+  - `Sushi Noz` (2★, Michelin page): filled address 181 E 78th St, hours Mon–Sat 17:45–23:00 (Sun closed), official site sushinoz.com; added third-party YouTube review link.
+  - `César` (2★, Michelin page): filled address 333 Hudson St, hours Mon–Fri 18:00–23:00; Sat–Sun 17:30–23:00, official site cesar.restaurant; added third-party YouTube review link.
+  - `The Modern` (2★, Michelin page): filled previously unverified hours Mon–Thu 12:00–14:30 & 17:00–21:00; Fri 12:00–14:30 & 17:00–21:30; Sat 12:00–14:30 & 17:00–21:30; Sun 12:00–14:30 & 17:00–21:00.
+  - `Semma` (1★, Michelin page): filled previously unverified hours Mon–Sat 17:00–22:00; Sunday closed.
+  - `Sushi Sho` (3★, Michelin page): confirmed 3-star distinction/hours/address; kept officialUrl blank (no website listed on Michelin page); noted Tock reservations linked from Michelin.
+  - `Cynthia` (Guide-listed, Michelin article + official site): filled address 32 Jones St, hours Tue–Sat 17:00–23:00 (Sun/Mon closed) from cynthianyc.com, added official website and official Instagram handle printed on official site.
+- **Not done / still unverified (flagged, not fabricated):** per-person/couple restaurant menu prices (T10 remains open); complete 69-starred catalogue (T9 exists in 33cfdba4 namespace, not merged); measured door-to-door transit for all pairs (T11 exists in 33cfdba4 namespace); dated hotel totals for remaining 8 hotels and other weeks; Odo East Village/Len Len detail pages not fully verified; no inferred values added.
+- **Verification:** `python3 scripts/verify.py` → 0 errors, 0 warnings, 58 data rows. No `alt/**` or `sessions/**` files modified.

@@ -6,7 +6,8 @@
     "starCounts": "5 three-star, 14 two-star, 50 one-star in the NYC all-starred list (checked 2026-11-25)",
     "importantTiming": "Michelin's 2026 Northeast Cities ceremony is scheduled for 2026-12-14 (https://michelinmedia.com/pages/blog/detail/article/c/a1479/), after this research date and before the proposed trip. Distinctions may change.",
     "priceNote": "Michelin publishes only a $ symbol band, not a dollar amount. Couple totals are left blank unless an official menu price was verified.",
-    "hoursCrossCheck": "Le Bernardin, Eleven Madison Park, Per Se and Atera were read independently by two sessions against the same MICHELIN records on 2026-11-25 and agree. The fuller capture (which includes Le Bernardin Thursday to Sunday and 'Sunday closed') is retained. Independent agreement is the strongest verification available without a second source."
+    "hoursCrossCheck": "Le Bernardin, Eleven Madison Park, Per Se and Atera were read independently by two sessions against the same MICHELIN records on 2026-11-25 and agree. The fuller capture (which includes Le Bernardin Thursday to Sunday and 'Sunday closed') is retained. Independent agreement is the strongest verification available without a second source.",
+    "auditNote": "Session arena/cffe022b-nyfun2 (2026-11-25) verified Masa, odo, Sushi Noz, César, The Modern, Semma details against live Michelin restaurant pages and updated hours/address/official links. Unverified fields remain blank and flagged."
   },
   "items": [
     {
@@ -132,18 +133,18 @@
       "distinction": "3 MICHELIN Stars",
       "cuisine": "Japanese, Sushi",
       "address": "3 E. 41st St., New York, NY 10017",
-      "area": "Murray Hill (address-based grouping)",
+      "area": "Midtown East (address-based grouping)",
       "hours": "Tue–Sun 17:00–22:00; Monday closed",
-      "exceptions": "None published on the Michelin page checked",
+      "exceptions": "Reservations required via Tock (booking channel linked from Michelin page).",
       "guidePriceBand": "$$$$",
       "priceTwoAdults": "",
       "officialUrl": "",
-      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/sushi-sho-1213976",
+      "sourceUrl": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/sushi-sho-1213976",
       "social": [],
       "flags": [
-        "Official website not listed by Michelin (phone only)",
-        "Couple price unverified",
-        "No verified NYC social/review link found; similar-name YouTube results refer to a different city"
+        "Official website not listed on Michelin page; reservations via Tock linked from Michelin page",
+        "Couple price unverified: official menu price not confirmed",
+        "No verified NYC social/review link confirmed from an official source"
       ]
     },
     {
@@ -212,15 +213,14 @@
       "cuisine": "Contemporary",
       "address": "9 W. 53rd St., New York, NY 10019",
       "area": "Midtown / MoMA (address-based grouping)",
-      "hours": "Not confirmed on the Michelin page section checked",
-      "exceptions": "Not confirmed",
+      "hours": "Mon–Thu 12:00–14:30 and 17:00–21:00; Fri 12:00–14:30 and 17:00–21:30; Sat 12:00–14:30 and 17:00–21:30; Sun 12:00–14:30 and 17:00–21:00",
+      "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
       "priceTwoAdults": "",
       "officialUrl": "https://www.themodernnyc.com/the-modern/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/the-modern",
       "social": [],
       "flags": [
-        "Hours unverified in checked section",
         "Couple price unverified",
         "No social link verified from an official source"
       ]
@@ -228,70 +228,97 @@
     {
       "name": "Masa",
       "distinction": "2 MICHELIN Stars",
-      "cuisine": "Japanese (per Michelin 2025 star list)",
-      "address": "",
-      "area": "",
-      "hours": "",
-      "exceptions": "",
-      "guidePriceBand": "",
+      "cuisine": "Japanese, Sushi",
+      "address": "10 Columbus Circle, Ste. 401, New York, NY 10019",
+      "area": "Columbus Circle (address-based grouping)",
+      "hours": "Tue–Sat 12:00–14:30 and 17:30–22:00; Sunday and Monday closed",
+      "exceptions": "None published on the Michelin page checked",
+      "guidePriceBand": "$$$$",
       "priceTwoAdults": "",
-      "officialUrl": "",
-      "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
-      "social": [],
+      "officialUrl": "https://www.masanyc.com/",
+      "sourceUrl": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/masa",
+      "social": [
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=pIfe-K8TPqE",
+          "note": "Review video; not an official restaurant post. Title references former 3-star status; verify current distinction on Michelin page."
+        },
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=fnYmB-4xEzk",
+          "note": "Review video; not an official restaurant post"
+        }
+      ],
       "flags": [
-        "Detail page not yet checked: address, hours, price and social link left blank"
+        "Couple price unverified: official menu price not confirmed",
+        "Social links are third-party; no official account link confirmed from an official source"
       ]
     },
     {
       "name": "odo",
       "distinction": "2 MICHELIN Stars",
-      "cuisine": "Japanese (per Michelin 2025 star list)",
-      "address": "",
-      "area": "",
-      "hours": "",
-      "exceptions": "",
-      "guidePriceBand": "",
+      "cuisine": "Japanese, Contemporary",
+      "address": "17 W. 20th St., New York, NY 10011",
+      "area": "Flatiron (address-based grouping)",
+      "hours": "Mon closed; Tue–Sun 12:00–13:45 and 18:00–20:30",
+      "exceptions": "None published on the Michelin page checked",
+      "guidePriceBand": "$$$$",
       "priceTwoAdults": "",
-      "officialUrl": "",
-      "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
+      "officialUrl": "https://www.odo.nyc/",
+      "sourceUrl": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/odo",
       "social": [],
       "flags": [
-        "Detail page not yet checked: address, hours, price and social link left blank",
-        "Distinct from 'Odo East Village' below"
+        "Couple price unverified: official menu price not confirmed",
+        "No social link verified from an official source",
+        "Hours recorded from Michelin page; odo.nyc contact page lists different service windows (unreconciled)"
       ]
     },
     {
       "name": "Sushi Noz",
       "distinction": "2 MICHELIN Stars",
-      "cuisine": "Japanese (per Michelin 2025 star list)",
-      "address": "",
-      "area": "",
-      "hours": "",
-      "exceptions": "",
-      "guidePriceBand": "",
+      "cuisine": "Japanese, Sushi",
+      "address": "181 E. 78th St., New York, NY 10075",
+      "area": "Upper East Side (address-based grouping)",
+      "hours": "Mon–Sat 17:45–23:00; Sunday closed",
+      "exceptions": "None published on the Michelin page checked",
+      "guidePriceBand": "$$$$",
       "priceTwoAdults": "",
-      "officialUrl": "",
-      "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
-      "social": [],
+      "officialUrl": "https://www.sushinoz.com/",
+      "sourceUrl": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/sushi-noz",
+      "social": [
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=N3R3_9nS3Z0",
+          "note": "Behind-the-scenes/review video; not an official restaurant post"
+        }
+      ],
       "flags": [
-        "Detail page not yet checked: address, hours, price and social link left blank"
+        "Couple price unverified: official menu price not confirmed",
+        "Social link is third-party; no official account link confirmed from an official source"
       ]
     },
     {
       "name": "César",
       "distinction": "2 MICHELIN Stars",
-      "cuisine": "Contemporary (per Michelin 2025 star list)",
-      "address": "",
-      "area": "",
-      "hours": "",
-      "exceptions": "",
-      "guidePriceBand": "",
+      "cuisine": "Contemporary, Seafood",
+      "address": "333 Hudson St., New York, NY 10013",
+      "area": "Hudson Square (address-based grouping)",
+      "hours": "Mon–Fri 18:00–23:00; Sat–Sun 17:30–23:00",
+      "exceptions": "None published on the Michelin page checked",
+      "guidePriceBand": "$$$$",
       "priceTwoAdults": "",
-      "officialUrl": "",
-      "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
-      "social": [],
+      "officialUrl": "https://www.cesar.restaurant/",
+      "sourceUrl": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/cesar",
+      "social": [
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=p3BXxWaIC5Q",
+          "note": "Review video; not an official restaurant post"
+        }
+      ],
       "flags": [
-        "Detail page not yet checked: address, hours, price and social link left blank"
+        "Couple price unverified: official menu price not confirmed",
+        "Social link is third-party; no official account link confirmed from an official source"
       ]
     },
     {
@@ -373,8 +400,8 @@
       "cuisine": "Indian, Regional",
       "address": "60 Greenwich Ave., New York, NY 10011",
       "area": "West Village (address-based grouping)",
-      "hours": "Not confirmed on the Michelin page section checked",
-      "exceptions": "Not confirmed",
+      "hours": "Mon–Sat 17:00–22:00; Sunday closed",
+      "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$",
       "priceTwoAdults": "",
       "officialUrl": "https://www.semma.nyc/",
@@ -387,7 +414,6 @@
         }
       ],
       "flags": [
-        "Hours unverified in checked section",
         "Couple price unverified",
         "Social link is third-party; no official account link confirmed"
       ]
@@ -413,19 +439,26 @@
     {
       "name": "Cynthia",
       "distinction": "MICHELIN Guide-listed (no star shown)",
-      "cuisine": "French / Asian / Latin influences (per Michelin article)",
-      "address": "",
-      "area": "West Village (per Michelin article)",
-      "hours": "",
-      "exceptions": "",
+      "cuisine": "Seasonal tasting menu; French, Asian, and Latin influences (per Michelin article / official site)",
+      "address": "32 Jones Street, New York, NY 10014",
+      "area": "West Village (address-based grouping)",
+      "hours": "Tue–Sat 17:00–23:00; Sunday and Monday closed",
+      "exceptions": "Seasonal tasting menu; reservations via Resy (linked from official site).",
       "guidePriceBand": "",
       "priceTwoAdults": "",
-      "officialUrl": "",
+      "officialUrl": "https://cynthianyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/article/travel/new-restaurants-new-york",
-      "social": [],
+      "social": [
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/cynthianewyork/",
+          "note": "Handle printed on official website (cynthianyc.com)"
+        }
+      ],
       "flags": [
-        "Added to Guide July 2026; no star as of 2026-11-25 check",
-        "Address/hours/price/social not verified"
+        "Added to Guide July 2026; no star shown as of 2026-11-25 check",
+        "Guide price band and couple price unverified",
+        "Hours recorded from official website; verify before visiting"
       ]
     },
     {
