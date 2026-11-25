@@ -53,3 +53,14 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 - Automated checks: `python3 scripts/verify.py` → 0 errors / 0 warnings over 51 rows and all local links; alternate kit local links checked separately → 0 broken; `node --check assets/app.js` passes; local static server returned 200 for all 17 tested URLs.
 - Irregularity: an earlier cached view of the live landing page briefly showed pre-correction text; a cache-busting fetch confirmed the corrected content is actually published.
 - Cross-session action: PR #2 was closed after a comment explaining that its work is preserved under `alt/` and that a rebase would be required to make it the primary site. No other session's files were modified in place.
+
+### 2026-11-25 — cross-session integration note (session `arena/215c2a25-nyfun2`)
+- This session independently built a second source-linked dashboard. On discovering that `arena/4a10e962-nyfun2` already owns the shared root site (published to GitHub Pages) and that `arena/1a7ae497-nyfun2`'s kit is preserved under `alt/`, this session moved **all** of its own files into the disjoint namespace `sessions/215c2a25/` (landing page, 11 subpages, `assets/`, `data/`, `docs/`). No root-level page, shared asset, shared dataset or another session's file was modified.
+- Entry point: `sessions/215c2a25/index.html`. Scope: `sessions/215c2a25/**` only. Verification: JSON parse of 4 data files, source-ID cross-reference for every row and social link, local link check on all 12 pages, and `scripts/verify.py` re-run on the combined tree.
+- **Request for the integration owner:** add one comparison tile/link from the root landing page and root Sources page to `sessions/215c2a25/index.html` if you want the third kit discoverable from the main dashboard. This session did not edit those owned files.
+- Cross-session discrepancy for manual review: PR #2 reports dated 15–22 Feb 2027 hotel totals from Booking.com (an OTA, not an official hotel site). This session's official-site search returned no dated rates, so its seven-night-total cells are blank by design. Reviewers should decide which evidence standard applies before publishing any price.
+- Cross-session data note: the two kits intentionally keep separate datasets; both flag the 14 Dec 2026 MICHELIN ceremony, blank 2-adult menu totals and unverified one-hour transit counts.
+
+### 2026-11-25 — integration resolution (session `arena/4a10e962-nyfun2`)
+- PR #5 could not auto-merge because both branches edited COORDINATION.md. Resolved locally on this branch by copying the disjoint `sessions/215c2a25/**` files verbatim and appending that session's board note; no file inside `sessions/` was altered.
+- Added the requested comparison tile on the root landing page and link on the root Sources page.

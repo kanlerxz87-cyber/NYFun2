@@ -1,0 +1,83 @@
+{
+  "asOf": "2026-11-25",
+  "note": "Hours are copied from the named official operator/government page. Blank fields were not confirmed. 'Feb 2027' applicability must be re-checked closer to travel.",
+  "rows": [
+    {
+      "id": "statue-of-liberty", "name": "Statue of Liberty National Monument & Ellis Island", "area": "New York Harbor", "address": "Liberty Island / Ellis Island; ferry from The Battery (NYC)",
+      "days": "Daily", "hours": "8:30 AM–5 PM (winter season; summer hours extended)", "exceptions": "Closed Thanksgiving Day and Christmas Day; last NYC ferry 3:30 PM; severe-weather changes possible; ferry only",
+      "link": "https://www.nps.gov/stli/planyourvisit/hours.htm", "extraLink": "https://www.nps.gov/stli/planyourvisit/safety.htm",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=_29amLE9u6s", "label": "Tour guide: how to visit, tips and tricks", "source": "yt-statue"}],
+      "sources": ["nps-stli-hours", "nps-stli-faq", "nps-stli-security"], "verification": "verified", "flags": ["winter-2027-hours-to-reconfirm"]
+    },
+    {
+      "id": "the-met", "name": "The Metropolitan Museum of Art (The Met Fifth Avenue)", "area": "Upper East Side", "address": "",
+      "days": "Sun–Tue and Thu; Fri–Sat; closed Wed", "hours": "Sun–Tue & Thu 10 AM–5 PM; Fri–Sat 10 AM–9 PM", "exceptions": "Closed Wednesday, Thanksgiving Day, Dec 25, Jan 1 and first Monday in May",
+      "link": "https://www.metmuseum.org/index.html", "extraLink": "",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=788Zi2S6XSQ", "label": "Is The Met worth visiting?", "source": "yt-met"}],
+      "sources": ["met-home"], "verification": "partial", "flags": ["street-address-not-captured", "winter-2027-hours-to-reconfirm"]
+    },
+    {
+      "id": "moma", "name": "The Museum of Modern Art (MoMA)", "area": "Midtown", "address": "",
+      "days": "Daily", "hours": "Daily 10:30 AM–5:30 PM; Friday until 8:30 PM", "exceptions": "Sat/Sun 9:30–10:30 AM select galleries reserved for members",
+      "link": "https://www.moma.org/", "extraLink": "https://www.moma.org/visit/tips",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=iKhkApixPYA", "label": "Is MoMA worth it? Museum tour", "source": "yt-moma"}],
+      "sources": ["moma-home", "moma-faq"], "verification": "partial", "flags": ["street-address-not-captured", "winter-2027-hours-to-reconfirm"]
+    },
+    {
+      "id": "911-memorial", "name": "9/11 Memorial & Museum", "area": "Lower Manhattan", "address": "180 Greenwich Street, New York, NY 10007",
+      "days": "Memorial daily; Museum Wed–Mon plus select Tuesdays", "hours": "Memorial daily 8 AM–8 PM; Museum 9 AM–7 PM (last entry 5:30 PM)", "exceptions": "Museum usually closed Tuesdays except select dates; free Monday tickets released at 7 AM ET",
+      "link": "https://www.911memorial.org/visit/visit-museum-1", "extraLink": "https://www.911memorial.org/visit/about/getting-here",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=p1hu2Lpt2xU", "label": "Museum visit: artifacts and stories", "source": "yt-911"}],
+      "sources": ["911-visit", "911-getting-here"], "verification": "verified", "flags": ["select-tuesday-dates-for-2027-not-published"]
+    },
+    {
+      "id": "central-park", "name": "Central Park", "area": "Manhattan", "address": "59th–110th St, between Fifth Ave and Central Park West",
+      "days": "Daily, 365 days", "hours": "6 AM–1 AM", "exceptions": "Park is officially closed 1 AM–6 AM",
+      "link": "https://www.centralparknyc.org/what-to-know-before-you-go", "extraLink": "https://assets.centralparknyc.org/pdfs/maps/Official+Central+Park+Map.pdf",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=khHQiZ7j6yc", "label": "Central Park walking guide", "source": "yt-central-park"}],
+      "sources": ["central-park"], "verification": "verified", "flags": []
+    },
+    {
+      "id": "high-line", "name": "The High Line", "area": "West Side", "address": "",
+      "days": "Daily", "hours": "Dec 1–Mar 31: 7 AM–8 PM (Feb 2027 falls in this season)", "exceptions": "Rail Yard Preserve between 30th and 34th St closes at dusk; Interim Walkway at Western Rail Yards temporarily closed (official FAQ)",
+      "link": "https://www.thehighline.org/visit/", "extraLink": "https://thehighline.org/faq/?amp=&amp=&amp=",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=RyvFc_Aht8Y", "label": "Ultimate guide and walking tour", "source": "yt-high-line"}],
+      "sources": ["high-line"], "verification": "verified", "flags": ["street-address-not-captured", "walkway-status-to-reconfirm"]
+    },
+    {
+      "id": "top-of-rock", "name": "Top of the Rock Observation Deck", "area": "Midtown", "address": "30 Rockefeller Plaza, New York, NY 10112 (enter on 50th St)",
+      "days": "Daily, 365 days", "hours": "8 AM–midnight", "exceptions": "Last entry 11:10 PM; open in bad weather",
+      "link": "https://topoftherocknyc.com/special-offers/vip-access", "extraLink": "",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=PLEB6Oxm8Fs", "label": "Top of the Rock: is it a must-do?", "source": "yt-top-rock"}],
+      "sources": ["top-of-rock"], "verification": "verified", "flags": []
+    },
+    {
+      "id": "amnh", "name": "American Museum of Natural History", "area": "Upper West Side", "address": "200 Central Park West, New York, NY 10024",
+      "days": "Daily", "hours": "10 AM–5:30 PM", "exceptions": "Closed Thanksgiving Day and Christmas Day; temporary hall closures listed on official page; timed entry must be reserved online",
+      "link": "https://www.amnh.org/plan-your-visit/hours", "extraLink": "",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=UphcGvF-bsc", "label": "AMNH tour and review", "source": "yt-amnh"}],
+      "sources": ["amnh-hours"], "verification": "verified", "flags": ["hall-closures-to-reconfirm"]
+    },
+    {
+      "id": "broadway", "name": "Broadway (a show at a Broadway theatre)", "area": "Theatre District", "address": "41st–54th St, between 6th and 8th Ave (Vivian Beaumont is further north)",
+      "days": "Show dependent", "hours": "", "exceptions": "Feb 2027 performance schedule and titles not published on the official listing at time of research",
+      "link": "https://www.broadway.org/broadway-theatres", "extraLink": "https://www.broadway.org/info/list-of-broadway-shows-in-new-york",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=at7QzKGAhJM", "label": "Hamilton musical review (example show)", "source": "yt-broadway"}],
+      "sources": ["broadway-theatres", "broadway-info"], "verification": "partial", "flags": ["show-schedule-not-published", "hours-blank-unverified"]
+    },
+    {
+      "id": "brooklyn-bridge", "name": "Brooklyn Bridge pedestrian walkway", "area": "Lower Manhattan / Brooklyn", "address": "Manhattan entrance near Brooklyn Bridge–City Hall (4/5/6); Brooklyn entrances at Tillary/Adams and Cadman Plaza",
+      "days": "Daily", "hours": "Open 24 hours (official NYC DOT document)", "exceptions": "Pedestrian path normally stays open during bridge lane closures; recheck for construction notices",
+      "link": "https://www.nyc.gov/html/dycd/downloads/pdf/2012/SummerFun2012_Brooklyn_Ongoing.pdf", "extraLink": "https://www.nyc.gov/html/dot/html/pr2013/pr13-052.shtml",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=7dfpryACUV4", "label": "Walking across the Brooklyn Bridge", "source": "yt-brooklyn-bridge"}],
+      "sources": ["nyc-dot-brooklyn"], "verification": "partial", "flags": ["source-dated-2012", "hours-to-reconfirm"]
+    },
+    {
+      "id": "times-square", "name": "Times Square pedestrian plazas", "area": "Midtown", "address": "Broadway, 41st St to 53rd St",
+      "days": "Public space (no operating hours posted by NYC DOT)", "hours": "", "exceptions": "Plaza rules apply (NYC Rules Title 34, Chapter 4)",
+      "link": "https://www.nyc.gov/html/dot/html/pedestrians/nyc-plaza-program.shtml", "extraLink": "",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=XB-HNOldCgs", "label": "Night walking tour of Times Square", "source": "yt-times-square"}],
+      "sources": ["nyc-dot-plazas"], "verification": "partial", "flags": ["hours-blank-unverified"]
+    }
+  ]
+}
