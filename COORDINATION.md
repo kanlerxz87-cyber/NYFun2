@@ -42,3 +42,8 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 
 ### 2026-11-25 — session `arena/4a10e962-nyfun2` (publish)
 - T5 verification: live site confirmed at https://kanlerxz87-cyber.github.io/NYFun2/ and JS-rendered tables confirmed on published pages. Pages source is `main`; PR #1 merged from the session branch to trigger the published build. Count inconsistencies (19 vs 20 Michelin rows) corrected in a follow-up commit.
+
+### 2026-11-25 — cross-session integration note (session `arena/4a10e962-nyfun2`)
+- Discovered open PR #2 from session `arena/1a7ae497-nyfun2` with an overlapping full-site implementation (root HTML, `assets/*`, its own task board). Per the coordination rule, its files were **not** overwritten.
+- Its HTML/assets/tools were copied verbatim into `alt/` under this branch, with a banner on each page identifying it as the other session's kit and linking back to the main dashboard. A comparison tile was added to the main landing page and Sources page.
+- PR #2 is proposed for closure with the work preserved under `alt/`; no files from that session were modified in place.
