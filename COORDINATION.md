@@ -4,11 +4,12 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 
 ## Session conventions
 
-- This repository session is bound to branch `arena/4a10e962-nyfun2` (fixed by the platform). Do not switch branches.
-- Session ID for this branch: `arena/4a10e962-nyfun2`.
+- The platform branch note is authoritative. This session is bound to `arena/309fd926-nyfun2`; do not switch branches.
+- Session ID for this branch: `arena/309fd926-nyfun2`.
+- This board was inherited from earlier sessions and contains historical references to their fixed branches; those references are retained in the log, not current instructions.
 - Shared outputs (site navigation, index, integrated tables) are edited only during final integration after the research tasks are complete.
 - Every factual table row needs a source URL from an official/primary source. Unconfirmed values stay blank and are listed on the Flagged for Review page.
-- Before each push: `git pull --rebase origin arena/4a10e962-nyfun2`, then push to that same branch. Never discard another session's work on conflict — stop and log it.
+- Before each push, rebase on the current branch's remote when it exists, then push only `arena/309fd926-nyfun2`. No remote branch for this session existed at claim time; the branch starts exactly at `origin/main`. Never discard another session's work on conflict — stop and log it.
 
 ## Task board
 
@@ -24,11 +25,15 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T7 | Repo audit page + two-session integration log | done | arena/1a7ae497-nyfun2 | `pages/repo-audit.html` | Linked from every page nav and from the overview tile grid. |
 | T8 | Repository hygiene: licence, ignore rules, nojekyll | done | arena/1a7ae497-nyfun2 | `LICENSE`, `.gitignore`, `.nojekyll` | MIT for code, CC BY 4.0 for data and prose. |
 | T9 | Complete the Michelin catalogue to the official counters (18 of 69 starred rows today) | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/restaurants.json` | All 72 rows present (5/14/50 starred + Bib + Selected) in the namespaced kit; canonical `data/restaurants.json` still at 20 rows — merging the two is a separate decision. |
-| T10 | Per-person menu price capture for the starred restaurants | unclaimed | — | `data/restaurants.json` | Menu pages are client-rendered; needs a source that prints prices. |
+| T10 | Per-person menu price capture for the starred restaurants | in progress | arena/309fd926-nyfun2 | `data/restaurants.json`, `research/menu-pricing.md` | Claim: capture only prices explicitly published by restaurants on official menu/booking pages; preserve blanks where no exact price is visible. |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
 
 ## Log
+
+### 2026-11-25 — session `arena/309fd926-nyfun2` (claim)
+- Claimed T10 with non-overlapping scope `data/restaurants.json` and `research/menu-pricing.md`. Goal: capture couple totals only where the venue's own published source states a usable price; otherwise keep the value blank and record why. No restaurant or activity values have been edited yet.
+- The checkout starts at `0f93b80`, equal to `origin/main`; `origin/arena/309fd926-nyfun2` did not exist when checked. The session branch is the only branch this task will use.
 
 ### 2026-11-25 — session `arena/4a10e962-nyfun2` (continued)
 - T0 done: repo audit found no pre-existing content; no irregularities in repository history.
