@@ -197,6 +197,26 @@ per page; no absolute claims of the form "every value is verified" remain (check
 - Claimed T10 (unclaimed), T13, T14, T15 with scopes disjoint from PR #12's file set: this session edits only `data/restaurants.json`, `data/decisions.json`, `pages/**` (canonical subpages), `scripts/verify.py`, `research/**` and this board. It does **not** edit `index.html`, `assets/**`, `data/hotels.json`, `data/activities.json`, `README.md`, `.nojekyll`, `alt/**` or `sessions/**` — those are either claimed by the parallel session or preserved prior work.
 - Known irregularity to fix inside claimed scope: `data/restaurants.json` lists Eleven Madison Park's Facebook as `facebook.com/jalexandersrestaurantscollection` (a different restaurant group). Will re-verify against an official page and correct or blank+flag.
 
+### 2026-11-25 — session `arena/6f217cce-nyfun2` (claim)
+- Claimed T10, the only unclaimed research task, with scope limited to `data/restaurants.json` and this board. Will verify any price only from restaurant-owned official menu/booking pages; otherwise retain blank and log the gap. No root site/navigation files are in scope.
+
+### 2026-11-25 — session `arena/6f217cce-nyfun2` (T10 complete)
+- Completed the claimed T10 scope (`data/restaurants.json`, this board). Checked all 18 starred entries in the canonical table. Ten totals are arithmetic from current per-person menu prices on directly opened restaurant-owned pages/PDFs; no guide price band was converted into dollars and no à-la-carte sample bill was invented. Their official price pages are linked in each row's `officialUrl`:
+  - Eleven Madison Park: https://www.elevenmadisonpark.com/faq — $385/guest full tasting, $770 for two.
+  - Jungsik: https://www.jungsik.com/menu/ — $335/guest signature menu, $670 for two.
+  - Le Bernardin: https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf — $218/guest dinner four-course, $436 for two.
+  - Aquavit: https://www.aquavit.org/s/DR-112026.pdf — $195/guest dinner tasting, $390 for two; linked from its official dining-room page, PDF dated 20 Nov 2026.
+  - Gabriel Kreuther: https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf — $325/guest chef's tasting, $650 for two; restaurant-linked PDF dated 17 Nov 2026.
+  - The Modern: https://www.themodernnyc.com/the-modern/ — dinner menus $185 or $285/guest, $370–$570 for two.
+  - Masa: https://www.masanyc.com/menus — lunch starts at $495/guest; dinner table $750/guest or Hinoki counter $950/guest; totals $990+ lunch / $1,500 or $1,900 dinner for two.
+  - odo: https://www.odo.nyc/menu — lunch $150/guest or dinner $270/guest; $300 / $540 for two.
+  - Le Coucou: https://lecoucou.com/#menus — A Very Coucou dinner $220/guest, $440 for two; official page says tax and gratuity are not included.
+  - Gramercy Tavern: https://www.gramercytavern.com/menu/the-dining-room/ — seasonal dinner $178/guest, $356 for two.
+- Eight starred rows remain blank: Per Se, Sushi Sho, Atomix, Sushi Noz, César, Casa Mono, Semma and Atera. Seven lacked a suitable fixed-price total on the official pages checked; Atera's own page content conflicts ($325 in visible menu text vs $298 in embedded structured data), so its total is deliberately blank and flagged. À-la-carte menus at Casa Mono/Semma were not turned into invented meal estimates. For Sushi Noz and César, official venue links are included but no fixed price was found on the checked official site.
+- All listed amounts are current snapshots checked 25 Nov 2026, not February 2027 quotes. Seasonal/menu changes are flagged; no future prices, tax or service totals were inferred. The only explicit charge treatment carried through is what the venue itself states (EMP discretionary gratuity; Le Coucou tax/gratuity excluded; Masa beverages/tax/optional gratuity excluded).
+- Verification: manually matched each of the 10 totals to its linked official menu source and checked the multiplication for two; JSON parses; `python3 scripts/verify.py` passes with 0 errors / 0 warnings over 58 site data rows. No site navigation or renderer files changed; existing `priceTwoAdults` and official-menu link columns render these values.
+- Remaining irregularities are transparently flagged in the rows: blank address/hours for Masa, odo, Sushi Noz and César are still not researched under T10; restaurant prices are not guaranteed to remain current for the travel dates.
+
 ### 2026-11-25 — session `arena/fc6d5f66-nyfun2` (completion: T10 / T13 / T14 / T15)
 
 **T13 — roster reconciled to the live census.** `data/restaurants.json` now holds the full live
