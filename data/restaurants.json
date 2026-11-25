@@ -458,7 +458,18 @@
       "priceTwoAdults": "",
       "officialUrl": "https://ateranyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atera",
-      "social": [],
+      "social": [
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/ateranyc/",
+          "note": "Listed on Culinary Agents entity page (culinaryagents.com/entities/80474-Atera)"
+        },
+        {
+          "platform": "Twitter (official)",
+          "url": "https://twitter.com/Ateranyc",
+          "note": "Listed in TV Foodies features (tvfoodies.com/locations/5065/atera)"
+        }
+      ],
       "flags": [
         "Couple price unverified: official menu price not confirmed",
         "Added by the second session - this two-star restaurant was missing from the first catalogue",
