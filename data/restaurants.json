@@ -21,9 +21,15 @@
       "officialUrl": "https://www.elevenmadisonpark.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/eleven-madison-park",
       "social": [
-        {"platform": "YouTube (third-party review)", "url": "https://www.youtube.com/watch?v=UOP_zc6VguM", "note": "CNN/Richard Quest tasting-menu segment; not an official restaurant post"}
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=UOP_zc6VguM",
+          "note": "CNN/Richard Quest tasting-menu segment; not an official restaurant post"
+        }
       ],
-      "flags": ["Couple price unverified: official menu price not confirmed"]
+      "flags": [
+        "Couple price unverified: official menu price not confirmed"
+      ]
     },
     {
       "name": "Jungsik New York",
@@ -38,9 +44,15 @@
       "officialUrl": "https://www.jungsik.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/jungsik-new-york",
       "social": [
-        {"platform": "YouTube (third-party review)", "url": "https://www.youtube.com/watch?v=-tvjMUPEXGk", "note": "Review video; not an official restaurant post"}
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=-tvjMUPEXGk",
+          "note": "Review video; not an official restaurant post"
+        }
       ],
-      "flags": ["Couple price unverified: official menu price not confirmed"]
+      "flags": [
+        "Couple price unverified: official menu price not confirmed"
+      ]
     },
     {
       "name": "Le Bernardin",
@@ -55,10 +67,20 @@
       "officialUrl": "https://www.le-bernardin.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-bernardin",
       "social": [
-        {"platform": "YouTube (third-party review)", "url": "https://www.youtube.com/watch?v=rQgmx4GYjvc", "note": "Review video; not an official restaurant post"},
-        {"platform": "YouTube (third-party review)", "url": "https://www.youtube.com/watch?v=m_1jgzwF1Jk", "note": "Review video; not an official restaurant post"}
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=rQgmx4GYjvc",
+          "note": "Review video; not an official restaurant post"
+        },
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=m_1jgzwF1Jk",
+          "note": "Review video; not an official restaurant post"
+        }
       ],
-      "flags": ["Couple price unverified: official menu price not confirmed"]
+      "flags": [
+        "Couple price unverified: official menu price not confirmed"
+      ]
     },
     {
       "name": "Per Se",
@@ -73,9 +95,15 @@
       "officialUrl": "https://www.thomaskeller.com/perseny",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/per-se",
       "social": [
-        {"platform": "YouTube (third-party review)", "url": "https://www.youtube.com/watch?v=OmsC0Thm3Kg", "note": "Dinner review video; not an official restaurant post"}
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=OmsC0Thm3Kg",
+          "note": "Dinner review video; not an official restaurant post"
+        }
       ],
-      "flags": ["Couple price unverified: official menu price not confirmed"]
+      "flags": [
+        "Couple price unverified: official menu price not confirmed"
+      ]
     },
     {
       "name": "Sushi Sho",
@@ -108,8 +136,17 @@
       "priceTwoAdults": "",
       "officialUrl": "https://www.aquavit.org/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/aquavit",
-      "social": [],
-      "flags": ["Couple price unverified", "No social link verified from an official source"]
+      "social": [
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=hVvV2QTmK_0",
+          "note": "Review video; not an official restaurant post"
+        }
+      ],
+      "flags": [
+        "Couple price unverified",
+        "Social link is third-party; no official account link confirmed"
+      ]
     },
     {
       "name": "Atomix",
@@ -124,7 +161,10 @@
       "officialUrl": "https://www.atomixnyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atomix",
       "social": [],
-      "flags": ["Couple price unverified", "No social link verified from an official source"]
+      "flags": [
+        "Couple price unverified",
+        "No social link verified from an official source"
+      ]
     },
     {
       "name": "Gabriel Kreuther",
@@ -139,7 +179,10 @@
       "officialUrl": "https://www.gknyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/gabriel-kreuther",
       "social": [],
-      "flags": ["Couple price unverified", "No social link verified from an official source"]
+      "flags": [
+        "Couple price unverified",
+        "No social link verified from an official source"
+      ]
     },
     {
       "name": "The Modern",
@@ -154,7 +197,11 @@
       "officialUrl": "https://www.themodernnyc.com/the-modern/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/the-modern",
       "social": [],
-      "flags": ["Hours unverified in checked section", "Couple price unverified", "No social link verified from an official source"]
+      "flags": [
+        "Hours unverified in checked section",
+        "Couple price unverified",
+        "No social link verified from an official source"
+      ]
     },
     {
       "name": "Masa",
@@ -169,7 +216,9 @@
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
       "social": [],
-      "flags": ["Detail page not yet checked: address, hours, price and social link left blank"]
+      "flags": [
+        "Detail page not yet checked: address, hours, price and social link left blank"
+      ]
     },
     {
       "name": "odo",
@@ -184,7 +233,10 @@
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
       "social": [],
-      "flags": ["Detail page not yet checked: address, hours, price and social link left blank", "Distinct from 'Odo East Village' below"]
+      "flags": [
+        "Detail page not yet checked: address, hours, price and social link left blank",
+        "Distinct from 'Odo East Village' below"
+      ]
     },
     {
       "name": "Sushi Noz",
@@ -199,7 +251,9 @@
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
       "social": [],
-      "flags": ["Detail page not yet checked: address, hours, price and social link left blank"]
+      "flags": [
+        "Detail page not yet checked: address, hours, price and social link left blank"
+      ]
     },
     {
       "name": "César",
@@ -214,7 +268,9 @@
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
       "social": [],
-      "flags": ["Detail page not yet checked: address, hours, price and social link left blank"]
+      "flags": [
+        "Detail page not yet checked: address, hours, price and social link left blank"
+      ]
     },
     {
       "name": "Le Coucou",
@@ -228,8 +284,18 @@
       "priceTwoAdults": "",
       "officialUrl": "https://lecoucou.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-coucou",
-      "social": [],
-      "flags": ["Couple price unverified", "No social link verified from an official source", "Located inside 11 Howard hotel"]
+      "social": [
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=C_8S5mCOAIk",
+          "note": "Review video; not an official restaurant post"
+        }
+      ],
+      "flags": [
+        "Couple price unverified",
+        "Located inside 11 Howard hotel",
+        "Social link is third-party; no official account link confirmed"
+      ]
     },
     {
       "name": "Gramercy Tavern",
@@ -243,8 +309,17 @@
       "priceTwoAdults": "",
       "officialUrl": "https://www.gramercytavern.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/gramercy-tavern",
-      "social": [],
-      "flags": ["Couple price unverified", "No social link verified from an official source"]
+      "social": [
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=gLunwbHmtTw",
+          "note": "Review video; not an official restaurant post"
+        }
+      ],
+      "flags": [
+        "Couple price unverified",
+        "Social link is third-party; no official account link confirmed"
+      ]
     },
     {
       "name": "Casa Mono",
@@ -258,8 +333,17 @@
       "priceTwoAdults": "",
       "officialUrl": "https://casamononyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/casa-mono",
-      "social": [],
-      "flags": ["Couple price unverified", "No social link verified from an official source"]
+      "social": [
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=aEandBHkwt8",
+          "note": "Review video; not an official restaurant post"
+        }
+      ],
+      "flags": [
+        "Couple price unverified",
+        "Social link is third-party; no official account link confirmed"
+      ]
     },
     {
       "name": "Semma",
@@ -273,8 +357,18 @@
       "priceTwoAdults": "",
       "officialUrl": "https://www.semma.nyc/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/semma",
-      "social": [],
-      "flags": ["Hours unverified in checked section", "Couple price unverified", "No social link verified from an official source"]
+      "social": [
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=TDf5NQ6s1DI",
+          "note": "Review video; not an official restaurant post"
+        }
+      ],
+      "flags": [
+        "Hours unverified in checked section",
+        "Couple price unverified",
+        "Social link is third-party; no official account link confirmed"
+      ]
     },
     {
       "name": "Odo East Village",
@@ -289,7 +383,10 @@
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/article/travel/new-restaurants-new-york",
       "social": [],
-      "flags": ["Added to Guide July 2026; no star as of 2026-11-25 check", "Address/hours/price/social not verified"]
+      "flags": [
+        "Added to Guide July 2026; no star as of 2026-11-25 check",
+        "Address/hours/price/social not verified"
+      ]
     },
     {
       "name": "Cynthia",
@@ -304,7 +401,10 @@
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/article/travel/new-restaurants-new-york",
       "social": [],
-      "flags": ["Added to Guide July 2026; no star as of 2026-11-25 check", "Address/hours/price/social not verified"]
+      "flags": [
+        "Added to Guide July 2026; no star as of 2026-11-25 check",
+        "Address/hours/price/social not verified"
+      ]
     },
     {
       "name": "Len Len",
@@ -319,7 +419,10 @@
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/article/travel/new-restaurants-new-york",
       "social": [],
-      "flags": ["Added to Guide July 2026; no star as of 2026-11-25 check", "Address/hours/price/social not verified"]
+      "flags": [
+        "Added to Guide July 2026; no star as of 2026-11-25 check",
+        "Address/hours/price/social not verified"
+      ]
     }
   ]
 }
