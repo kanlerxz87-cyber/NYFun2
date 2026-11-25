@@ -27,6 +27,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T10 | Per-person menu price capture for the starred restaurants | unclaimed | — | `data/restaurants.json` | Menu pages are client-rendered; needs a source that prints prices. |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
+| T13 | Repo audit, gap-fill, verification pass, and canonical-site quality improvements (no overwrite of alt/sessions kits) | in progress | arena/cffe022b-nyfun2 | `COORDINATION.md`, `README.md`, `data/restaurants.json`, `data/hotels.json`, `data/activities.json`, `data/decisions.json`, `pages/*.html`, `index.html`, `scripts/verify.py` (only if needed) | Session started 2026-11-25. Will audit line-by-line, fill verifiable gaps (social links/hours/sources), flag irregularities, keep unverified values blank, and not merge namespaced kits unilaterally. |
 
 ## Log
 
@@ -187,3 +188,9 @@ per page; no absolute claims of the form "every value is verified" remain (check
   cross-session discrepancies above — pre-tax vs all-in hotel basis, row-level queen+private-bath
   filtering in the canonical hotel set, the MICHELIN band-vs-dollar question, and the 72-vs-20 roster
   size. None was resolved unilaterally.
+
+### 2026-11-25 — session `arena/cffe022b-nyfun2` (claimed)
+
+- Claimed **T13** (in progress). Scope: canonical data files, pages, README, coordination log; no edits to `alt/**`, `sessions/**`, or other sessions' namespaced work.
+- Intent: audit the repo against the user request, verify existing rows against official sources where possible, fill verifiable gaps (social/review links, hours/addresses where official sources confirm them), flag irregularities, keep unverified values blank, and update summary/questions/suggestions/flags accordingly. Will not fabricate prices, travel times, or official-source confirmations.
+- No files outside claimed scope will be modified.
