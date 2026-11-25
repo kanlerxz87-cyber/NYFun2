@@ -28,8 +28,13 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T10 | Per-person menu price capture for the starred restaurants | done | arena/309fd926-nyfun2 | `data/restaurants.json`, `research/menu-pricing.md` | 13 of 18 starred rows now have official published menu/booking prices transformed to totals for 2; remaining starred blanks are preserved and flagged. Three Guide-listed/no-star rows are explicitly documented. |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
+| T13 | Final integration: expose T10 menu-price evidence and reconcile visible summaries | claimed | arena/309fd926-nyfun2 | `assets/app.js`, `index.html`, `pages/executive-summary.html`, `pages/michelin-restaurants.html`, `pages/sources.html`, `pages/questions.html`, `pages/flagged.html`, `pages/suggestions.html` | Make direct menu source URLs/capture dates visible on priced rows and show the partial capture status throughout the canonical site. Do not edit T4-owned `data/decisions.json`. |
 
 ## Log
+
+### 2026-11-25 — session `arena/309fd926-nyfun2` (T13 claim)
+- Claimed final integration scope `assets/app.js`, the overview/summary/Michelin/sources/questions/flagged/suggestions pages, and this board. The scope is to expose T10's direct menu-price evidence and capture dates in the canonical table and correct visible summary copy; `data/decisions.json` remains untouched because it is T4-owned.
+- T10 and all research tasks are complete, so this limited canonical-site integration is now in the final-integration phase.
 
 ### 2026-11-25 — session `arena/309fd926-nyfun2` (T10 completion)
 - Captured 13 of 18 starred-restaurant menu totals for two from official venue menus or venue-linked booking pages, with per-person arithmetic, capture date and source URL in `data/restaurants.json`; added a row-by-row evidence register at `research/menu-pricing.md`.
