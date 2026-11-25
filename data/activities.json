@@ -22,6 +22,21 @@
           "note": "Official National Park Service page listing park accounts"
         },
         {
+          "platform": "Facebook (official NPS)",
+          "url": "https://www.facebook.com/StatueLibrtyNPS",
+          "note": "Username given by NPS FAQ (\"Does the Statue of Liberty have a Facebook page? Yes! Our Facebook username is StatueLibrtyNPS\") — nps.gov/stli/faqs.htm"
+        },
+        {
+          "platform": "X (official NPS)",
+          "url": "https://twitter.com/StatueEllisNPS",
+          "note": "NPS FAQ: \"Is Liberty Island on X? Yes! Visit us on X by following @StatueEllisNPS\" — nps.gov/stli/faqs.htm"
+        },
+        {
+          "platform": "Instagram (official NPS)",
+          "url": "https://www.instagram.com/StatueEllisNPS",
+          "note": "NPS FAQ: \"Is Liberty Island on Instagram? Yes! Visit us on Instagram by following @StatueEllisNPS\" — nps.gov/stli/faqs.htm"
+        },
+        {
           "platform": "YouTube (third-party guide)",
           "url": "https://www.youtube.com/watch?v=0SrIPtUt7Vo",
           "note": "Visitor guide; not an NPS post"
@@ -95,6 +110,16 @@
       "officialUrl": "https://www.moma.org/visit/",
       "sourceUrl": "https://www.moma.org/visit/",
       "social": [
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/themuseumofmodernart/",
+          "note": "MoMA Privacy Policy page lists 'Instagram at instagram.com/themuseumofmodernart' — moma.org/about/about-this-site"
+        },
+        {
+          "platform": "Facebook (official)",
+          "url": "https://www.facebook.com/MuseumofModernArt",
+          "note": "MoMA Privacy Policy page lists 'Facebook at facebook.com/MuseumofModernArt' — moma.org/about/about-this-site"
+        },
         {
           "platform": "YouTube (third-party review)",
           "url": "https://www.youtube.com/watch?v=iKhkApixPYA",
@@ -213,11 +238,16 @@
       "area": "Midtown / Herald Square",
       "address": "20 W 34th Street, New York, NY 10118",
       "hours": "",
-      "exceptions": "Official site says the building is open every day including holidays but hours change by date; date-specific hours must be checked on the official hours page.",
+      "exceptions": "Official site says the building is open every day including holidays but hours change by date; date-specific hours must be checked on the official hours page. Feb-2027 hours not published (verified 2026-11-25 on https://www.esbnyc.com/visit/hours-of-operation: \"Open today 10 AM - 10 PM\").",
       "costTwoAdults": "",
       "officialUrl": "https://www.esbnyc.com/visit/hours-of-operation",
       "sourceUrl": "https://www.esbnyc.com/visit/hours-of-operation",
       "social": [
+        {
+          "platform": "YouTube (official ESB)",
+          "url": "https://www.youtube.com/@theempirestatebldg",
+          "note": "Official ESB YouTube channel (@theempirestatebldg) — canonical YouTube URL on ESB structured-data page (esbnyc.com)"
+        },
         {
           "platform": "YouTube (third-party comparison)",
           "url": "https://www.youtube.com/watch?v=jr6MHzeFo2c",
@@ -258,7 +288,23 @@
       "costTwoAdults": "",
       "officialUrl": "https://www.nypl.org/locations/schwarzman",
       "sourceUrl": "https://www.nypl.org/locations/schwarzman/research",
-      "social": [],
+      "social": [
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/nypl/",
+          "note": "Library-wide official Instagram (@nypl); cited in the press release for the Insta Novels program at nypl.org/press (search result id 2, 25 Aug 2025)"
+        },
+        {
+          "platform": "Facebook (official)",
+          "url": "https://www.facebook.com/nypl/",
+          "note": "Listed as NYPL The New York Public Library's official Facebook on nypl.org content (live-nypl General Information listing, web.nypl.org/events/live-nypl/about)"
+        },
+        {
+          "platform": "YouTube (official playlist)",
+          "url": "https://www.youtube.com/playlist?list=PLL6gs3aZKBap8fArHk2EdhwoEPZoWKPAt",
+          "note": "\"LIVE from NYPL\" playlist by The New York Public Library (@nypl) — official library account; seen at www.youtube.com/@nypl"
+        }
+      ],
       "flags": [
         "Different NYPL official pages displayed different weeks' hours; re-check before visit",
         "No social link verified"
