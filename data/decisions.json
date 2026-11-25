@@ -351,6 +351,13 @@
       "title": "Airfare, theatre and per-person menu prices remain unpriced",
       "detail": "No flight pricing, no theatre tickets and no restaurant menu price was captured by either session. Restaurant bills are the largest unpriced line in the plan, and every starred row sits in the $$$$ band. The budget therefore shows verified line items only and no grand total.",
       "source": "https://guide.michelin.com/en/new-york-state/new-york/restaurants/3-stars-michelin"
+    },
+    {
+      "id": "F14",
+      "severity": "Medium",
+      "title": "Social media ownership not fully verified for every row",
+      "detail": "User request requires YouTube/TikTok/Instagram links for every restaurant/activity. Many rows have third-party review links; some have no social link; only a subset are confirmed official (e.g., NPS/NYC Parks official pages, Gabriel Kreuther sameAs on gknyc.com). Session arena/eea68c1e-nyfun2 added/labelled a few links with verification notes but did not confirm ownership on every venue's official site. Rows without a confirmed official account should be treated as unverified until checked on the venue's own website/footer.",
+      "source": "https://github.com/kanlerxz87-cyber/NYFun2/blob/main/COORDINATION.md"
     }
   ]
 }

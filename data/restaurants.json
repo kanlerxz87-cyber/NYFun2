@@ -182,7 +182,13 @@
       "priceTwoAdults": "",
       "officialUrl": "https://www.atomixnyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atomix",
-      "social": [],
+      "social": [
+        {
+          "platform": "Instagram (official account)",
+          "url": "https://www.instagram.com/atomixnyc/",
+          "note": "Account bio references Atomix NYC chefs; confirm ownership via atomixnyc.com."
+        }
+      ],
       "flags": [
         "Couple price unverified",
         "No social link verified from an official source"
@@ -200,7 +206,18 @@
       "priceTwoAdults": "",
       "officialUrl": "https://www.gknyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/gabriel-kreuther",
-      "social": [],
+      "social": [
+        {
+          "platform": "Instagram (official, confirmed on gknyc.com)",
+          "url": "https://www.instagram.com/gabrielkreuther/",
+          "note": "Confirmed via gknyc.com structured data sameAs (checked 2026-11-25)."
+        },
+        {
+          "platform": "Facebook (official, confirmed on gknyc.com)",
+          "url": "https://www.facebook.com/gabrielkreuther/",
+          "note": "Confirmed via gknyc.com structured data sameAs (checked 2026-11-25)."
+        }
+      ],
       "flags": [
         "Couple price unverified",
         "No social link verified from an official source"
@@ -218,7 +235,13 @@
       "priceTwoAdults": "",
       "officialUrl": "https://www.themodernnyc.com/the-modern/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/the-modern",
-      "social": [],
+      "social": [
+        {
+          "platform": "Instagram (official account)",
+          "url": "https://www.instagram.com/themodernnyc/",
+          "note": "Account name matches restaurant; confirm ownership via themodernnyc.com footer when JS renders."
+        }
+      ],
       "flags": [
         "Hours unverified in checked section",
         "Couple price unverified",

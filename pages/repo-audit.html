@@ -126,6 +126,20 @@
       <li>Add a CI workflow that runs <code>scripts/verify.py</code> on every push and blocks the merge on failure.</li>
       <li>Move the generated pages into <code>/docs</code> only if the Pages source is switched at the same time; today the root is the served path.</li>
       <li>Add a weekly re-capture job for hotel rates so no price on the site is older than seven days without a visible warning (suggestion S11).</li>
+      <li>Integrate session 33cfdba4 verified transit measurements into the canonical hotel ranking with explicit hotel-set reconciliation (different hotel rosters / price basis).</li>
+      <li>Complete social-media ownership verification by checking each venue's official website footer/about page; upgrade labels from "third-party/review" to "official" only with a confirming source.</li>
+    </ul>
+  </div>
+
+  <h2>7 · Session 4 audit pass (arena/eea68c1e-nyfun2, 2026-11-25)</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Scope claimed:</strong> T13 in <code>COORDINATION.md</code>; shared canonical files only (data, pages, assets, scripts, README, coordination). Did not modify <code>alt/**</code> or <code>sessions/**</code> namespaces.</li>
+      <li><strong>Repo audit performed:</strong> inspected git history, branch state, file tree, data schemas, rendering code, verification script, and existing coordination log. Confirmed published site structure is static HTML/CSS/JS with JSON data and <code>scripts/verify.py</code>.</li>
+      <li><strong>Verified improvements made:</strong> added Gabriel Kreuther Instagram/Facebook links with note citing gknyc.com structured-data sameAs observed in search results (checked 2026-11-25); added The Modern and Atomix Instagram links labeled with verification notes (ownership to be confirmed on official rendered site). No unverified ownership was asserted.</li>
+      <li><strong>Attributed integration:</strong> surfaced session 33cfdba4's measured transit finding (25 legs, all ≤37 min, captured 2026-11-25 17:14–17:31 ET) and five 7-night pricing windows on the canonical Hotels page, with direct links to their data/pages. Did not merge their hotel roster into canonical hotels.json due to unresolved cross-session discrepancies already logged in COORDINATION.md (pre-tax vs all-in basis, room/bath eligibility, roster differences).</li>
+      <li><strong>Gaps still open / flagged:</strong> full 69-star Michelin catalogue not completed in canonical data (21 detailed rows present); per-couple menu totals mostly unverified; official social ownership not confirmed for many venues; canonical hotel 1-hour Michelin count not computed for canonical hotel set; cheapest booking date cannot be guaranteed from official sources.</li>
+      <li><strong>Verification:</strong> <code>python3 scripts/verify.py</code> and <code>node --check assets/app.js</code> run after edits (see command output in session log / commit).</li>
     </ul>
   </div>
 
