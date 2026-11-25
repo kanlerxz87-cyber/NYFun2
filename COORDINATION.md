@@ -29,12 +29,16 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
 | T13 | Final integration: expose T10 menu-price evidence and reconcile visible summaries | done | arena/309fd926-nyfun2 | `assets/app.js`, `index.html`, `pages/executive-summary.html`, `pages/michelin-restaurants.html`, `pages/sources.html`, `pages/questions.html`, `pages/flagged.html`, `pages/suggestions.html` | Direct menu-source URLs and capture dates are visible on priced rows; updated 21-row, 13/18 price-capture copy and surfaced the legacy-register caveat. T4-owned `data/decisions.json` was not edited. |
-| T14 | QA correction: surface Eleven Madison Park's conflicting Bar Tasting prices | claimed | arena/309fd926-nyfun2 | `data/restaurants.json`, `research/menu-pricing.md`, `COORDINATION.md` | The official FAQ gives both $255/guest for Bar Tasting and “reservations begin at $225/guest”; publish the discrepancy explicitly instead of leaving the higher figure unqualified. |
+| T14 | QA correction: surface Eleven Madison Park's conflicting Bar Tasting prices | done | arena/309fd926-nyfun2 | `data/restaurants.json`, `research/menu-pricing.md`, `COORDINATION.md` | The official FAQ's $255/guest listed Bar Tasting and $225/guest “reservations begin at” statements are both recorded; the couple amounts are conditional and the row is flagged for venue confirmation. |
 
 ## Log
 
+### 2026-11-25 — session `arena/309fd926-nyfun2` (T14 completion)
+- Corrected Eleven Madison Park's couple-price field to show both possible Bar Tasting subtotals ($450 or $510) and the Full Tasting subtotal ($770); added a row flag and matching research-note explanation. The official FAQ source remains linked. The count remains 13 populated rows because both conflicting amounts are explicit official statements, not an estimate.
+- Verification: JSON parse, `scripts/verify.py` (0 errors / 0 warnings over 58 rows), `node --check assets/app.js`, `git diff --check`, and targeted assertions on the price count/conflict flag/evidence note pass.
+
 ### 2026-11-25 — session `arena/309fd926-nyfun2` (T14 claim)
-- Claimed a targeted QA correction in T10-owned `data/restaurants.json` and `research/menu-pricing.md`: the Eleven Madison Park official FAQ contains two Bar Tasting price statements ($255/guest and “reservations begin at $225/guest”). The current row must disclose the conflict and use a conditional range, not present $255 as unambiguous.
+- Claimed a targeted QA correction in T10-owned `data/restaurants.json` and `research/menu-pricing.md`: the Eleven Madison Park official FAQ contains two Bar Tasting price statements ($255/guest and “reservations begin at” $225/guest). The current row must disclose the conflict and use a conditional range, not present $255 as unambiguous.
 
 ### 2026-11-25 — session `arena/309fd926-nyfun2` (T13 completion)
 - Exposed official price-source links and `priceCheckedOn` dates below each populated menu-price cell. Renamed the column to “Published menu price for 2” to avoid implying a final taxed/tipped bill.

@@ -5,7 +5,7 @@
     "starListSource": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred",
     "starCounts": "5 three-star, 14 two-star, 50 one-star in the NYC all-starred list (checked 2026-11-25)",
     "importantTiming": "Michelin's 2026 Northeast Cities ceremony is scheduled for 2026-12-14 (https://michelinmedia.com/pages/blog/detail/article/c/a1479/), after this research date and before the proposed trip. Distinctions may change.",
-    "priceNote": "Menu totals for two are simple 2× calculations from a venue-published per-person menu price (or a published table price). They are current snapshots checked 2026-11-25, not February 2027 quotes; blanks are retained where an official source was unavailable or contradictory. Michelin $–$$$$ bands are not dollar amounts.",
+    "priceNote": "Menu totals for two are simple 2× calculations from a venue-published per-person menu price (or a published table price). They are current snapshots checked 2026-11-25, not February 2027 quotes; values are left blank where no defensible amount is available, and conflicting published figures are shown together with a review flag. Michelin $–$$$$ bands are not dollar amounts.",
     "hoursCrossCheck": "Le Bernardin, Eleven Madison Park, Per Se and Atera were read independently by two sessions against the same MICHELIN records on 2026-11-25 and agree. The fuller capture (which includes Le Bernardin Thursday to Sunday and 'Sunday closed') is retained. Independent agreement is the strongest verification available without a second source."
   },
   "items": [
@@ -18,7 +18,7 @@
       "hours": "Mon–Thu 17:30–22:00; Fri–Sun 12:00–13:00 and 17:30–23:00",
       "exceptions": "No dress code (stated on the MICHELIN record). The tasting menu offers a vegan path as well as animal-protein courses.",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "$510–$770 menu subtotal for two: Bar Tasting $255/person or Full Tasting $385/person. Gratuity not included; wine pairings extra.",
+      "priceTwoAdults": "$450 or $510 for two for the Bar Tasting, depending on which official FAQ statement applies ($225/person 'reservations begin at' vs. $255/person listed for Bar Tasting); $770 for the Full Tasting ($385/person). Confirm the Bar price; gratuity not included, wine pairings extra.",
       "officialUrl": "https://www.elevenmadisonpark.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/eleven-madison-park",
       "social": [
@@ -38,7 +38,9 @@
           "note": "CNN/Richard Quest tasting-menu segment; not an official restaurant post"
         }
       ],
-      "flags": [],
+      "flags": [
+        "Official FAQ is internally inconsistent for Bar Tasting: it lists $255/person but also says reservations begin at $225/person. Both two-person calculations are shown; confirm the current Bar Tasting price with the venue."
+      ],
       "priceSources": [
         {
           "label": "Official FAQ / menu prices",

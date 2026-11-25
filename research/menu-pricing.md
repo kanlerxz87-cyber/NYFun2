@@ -14,9 +14,9 @@
 
 ## Row-by-row evidence
 
-| Restaurant | Menu total for two (USD) | Basis and review note | Primary price / review source |
+| Restaurant | Published menu subtotal for two (USD) | Basis and review note | Primary price / review source |
 |---|---:|---|---|
-| Eleven Madison Park | $510–$770 | Official FAQ lists Bar Tasting at $255/guest and Full Tasting at $385/guest; `2 ×` each. The FAQ says gratuity is not included; wine pairings are extra. | [Official FAQ](https://www.elevenmadisonpark.com/faq) |
+| Eleven Madison Park | $450 or $510 Bar Tasting / $770 Full Tasting | The official FAQ conflicts: one section lists Bar Tasting at $255/guest, while another says Bar Tasting reservations “begin at” $225/guest. `2 ×` gives $510 or $450 respectively; the Full Tasting is listed at $385/guest (`2 × $385 = $770`). Confirm the Bar price with the venue. FAQ says gratuity is not included; wine pairings are extra. | [Official FAQ](https://www.elevenmadisonpark.com/faq) |
 | Jungsik New York | $670 | Official menu lists the Signature Menu at $335; `2 × $335`. The menu asks for full-table participation; supplements and beverage pairings are separate choices. | [Official menu](https://www.jungsik.com/menu/) |
 | Le Bernardin | $274 lunch / $436 dinner | Official lunch PDF lists the three-course prix fixe at $137/guest; dinner PDF lists the four-course prix fixe at $218/guest. Each total is `2 ×` the published per-person price; supplements may apply. | [Official lunch menu PDF](https://www.le-bernardin.com/content/pdfs/lunch-2.191.pdf) · [official dinner menu PDF](https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf) |
 | Per Se | $370–$850 | Official Tock venue pages publish the Salon four-course menu at $185/guest and Main Dining Room tasting menus at $425/guest; `2 ×` each. Tock says the $200/guest booking deposit is applied to the bill. The February 2027 menu is not yet a date-specific quote. | [Main Dining Room on Tock](https://www.exploretock.com/perse/experience/288603/main-dining-room-tasting-menu) · [Salon on Tock](https://www.exploretock.com/perse/experience/7768/salon-lounge-seating-four-course-tasting-menu) |
