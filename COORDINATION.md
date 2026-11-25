@@ -4,11 +4,12 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 
 ## Session conventions
 
-- This repository session is bound to branch `arena/4a10e962-nyfun2` (fixed by the platform). Do not switch branches.
-- Session ID for this branch: `arena/4a10e962-nyfun2`.
-- Shared outputs (site navigation, index, integrated tables) are edited only during final integration after the research tasks are complete.
+- The original integration run used `arena/4a10e962-nyfun2`; this checkout is a later, separate Arena session, fixed by the platform to branch `arena/13dd1c45-nyfun2`. Do not switch branches or create/push another branch.
+- Current session ID for this checkout: `arena/13dd1c45-nyfun2`.
+- The original research and site-integration tasks are complete. This session has claimed only the unclaimed menu-price audit (T10) and a final compliance/consistency audit (T13); no other session owns those scopes on this branch.
+- Shared outputs (site navigation, index, integrated tables) are edited only by the final integration owner after research tasks are complete. All previous tasks are marked done; this session is the final integration owner for its claimed scope.
 - Every factual table row needs a source URL from an official/primary source. Unconfirmed values stay blank and are listed on the Flagged for Review page.
-- Before each push: `git pull --rebase origin arena/4a10e962-nyfun2`, then push to that same branch. Never discard another session's work on conflict — stop and log it.
+- Before each push, rebase on the current remote state. This branch has no remote tracking ref before its first push, so use `git pull --rebase origin main` for the initial synchronization; after it exists, pull/rebase the current session branch. Never discard another session's work on conflict — stop and log it.
 
 ## Task board
 
@@ -24,7 +25,8 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T7 | Repo audit page + two-session integration log | done | arena/1a7ae497-nyfun2 | `pages/repo-audit.html` | Linked from every page nav and from the overview tile grid. |
 | T8 | Repository hygiene: licence, ignore rules, nojekyll | done | arena/1a7ae497-nyfun2 | `LICENSE`, `.gitignore`, `.nojekyll` | MIT for code, CC BY 4.0 for data and prose. |
 | T9 | Complete the Michelin catalogue to the official counters (18 of 69 starred rows today) | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/restaurants.json` | All 72 rows present (5/14/50 starred + Bib + Selected) in the namespaced kit; canonical `data/restaurants.json` still at 20 rows — merging the two is a separate decision. |
-| T10 | Per-person menu price capture for the starred restaurants | unclaimed | — | `data/restaurants.json` | Menu pages are client-rendered; needs a source that prints prices. |
+| T10 | Per-person menu price capture for the starred restaurants | in progress | arena/13dd1c45-nyfun2 | `data/restaurants.json`, `research/menu-prices.md` | Verify official menu sources only; preserve blanks and flag any price that cannot be confirmed for the relevant menu/date. |
+| T13 | Final canonical-site compliance and consistency audit | in progress | arena/13dd1c45-nyfun2 | `COORDINATION.md`, `README.md`, `index.html`, `data/hotels.json`, `data/activities.json`, `data/decisions.json`, `pages/**`, `assets/**`, `scripts/verify.py`, `research/site-audit.md` | Resolve stale/conflicting claims, enforce the official-source rule, and report any request that cannot be verified without fabricating data. T10 separately owns `data/restaurants.json`. |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
 
@@ -187,3 +189,17 @@ per page; no absolute claims of the form "every value is verified" remain (check
   cross-session discrepancies above — pre-tax vs all-in hotel basis, row-level queen+private-bath
   filtering in the canonical hotel set, the MICHELIN band-vs-dollar question, and the 72-vs-20 roster
   size. None was resolved unilaterally.
+
+### 2026-11-25 — session `arena/13dd1c45-nyfun2` (claim)
+
+- Read the board before work. The checkout is fixed to `arena/13dd1c45-nyfun2`; the requested
+  `session-<id>/<task>` branches cannot be created without violating the platform's branch constraint.
+- Claimed T10 (`data/restaurants.json`, `research/menu-prices.md`) to test whether official restaurant
+  menus publish a defensible two-adult total; any unconfirmed value will remain blank.
+- Claimed T13 (`README.md`, `index.html`, `data/hotels.json`, `data/activities.json`,
+  `data/decisions.json`, `pages/**`, `assets/**`, `scripts/verify.py`, `research/site-audit.md`) for
+  final canonical-site consistency and strict official-source compliance. T10 alone owns
+  `data/restaurants.json`, so the scopes do not overlap.
+- Initial audit already found contradictory public copy: the landing page reports both 20 and 21
+  Michelin rows, both 10 and 12 hotels, and mutually exclusive dated-rate conclusions. These are
+  tracked for correction in T13; no research values have been changed yet.
