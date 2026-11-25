@@ -9,13 +9,22 @@
   const val = (v) => v ? esc(v) : '<span class="blank">blank — unverified</span>';
   const flags = (arr) => (arr && arr.length) ? `<ul class="flag-list">${arr.map(f => `<li>${esc(f)}</li>`).join('')}</ul>` : '<span class="pill green">none</span>';
   const socials = (arr) => (arr && arr.length) ? `<div class="socials">${arr.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" title="${esc(s.note || '')}">${esc(s.platform)} ↗</a>`).join('')}</div>` : '<span class="blank">—</span>';
+  const priceEvidence = (r) => {
+    if (!r.priceTwoAdults) return val(r.priceTwoAdults);
+    const sources = (r.priceSources || []).filter(s => s && s.url);
+    const checked = r.priceCheckedOn ? `<span class="sub">Price checked ${esc(r.priceCheckedOn)}</span>` : '';
+    const links = sources.length
+      ? `<span class="sub">Price evidence: ${sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label || 'Official price source')} ↗</a>`).join(' · ')}</span>`
+      : '';
+    return `${esc(r.priceTwoAdults)}${checked}${links}`;
+  };
   const origin = () => { try { return localStorage.getItem(storeKey) || DEFAULT_ORIGIN; } catch (e) { return DEFAULT_ORIGIN; } };
   const route = (dest) => `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(dest)}`;
   const routeLink = (dest) => `<a href="${esc(route(dest))}" target="_blank" rel="noopener noreferrer">Route ↗</a>`;
 
   const config = {
     restaurants: {
-      cols: ['Name','Guide status','Cuisine','Address / area','Days & hours','Exceptions','Total for 2','Guide band','Links','Social / review','Official source','Flags / review'],
+      cols: ['Name','Guide status','Cuisine','Address / area','Days & hours','Exceptions','Published menu price for 2','Guide band','Links','Social / review','Official source','Flags / review'],
       row: (r) => [
         `<strong>${esc(r.name)}</strong><span class="sub">${routeLink(r.address || r.name)}</span>`,
         `<span class="pill ${r.distinction.includes('3') ? 'green' : r.distinction.includes('2') ? '' : r.distinction.includes('1') ? '' : 'gray'}">${esc(r.distinction)}</span>`,
@@ -23,7 +32,7 @@
         `${val(r.address)}${r.area ? `<span class="sub">${esc(r.area)}</span>` : ''}`,
         val(r.hours),
         val(r.exceptions),
-        val(r.priceTwoAdults),
+        priceEvidence(r),
         val(r.guidePriceBand),
         `${link(r.officialUrl, 'Official site')}${r.officialUrl && r.sourceUrl ? '<br>' : ''}${link(r.sourceUrl, 'MICHELIN page')}`,
         socials(r.social),
