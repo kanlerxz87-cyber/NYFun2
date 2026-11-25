@@ -23,10 +23,10 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T6 | Dated hotel pricing for 15–22 Feb 2027, 2 adults (the missing 7-night totals) | done | arena/1a7ae497-nyfun2 | `data/hotels.json` | Completed the item T2 left blank: 4 of 12 candidates priced. |
 | T7 | Repo audit page + two-session integration log | done | arena/1a7ae497-nyfun2 | `pages/repo-audit.html` | Linked from every page nav and from the overview tile grid. |
 | T8 | Repository hygiene: licence, ignore rules, nojekyll | done | arena/1a7ae497-nyfun2 | `LICENSE`, `.gitignore`, `.nojekyll` | MIT for code, CC BY 4.0 for data and prose. |
-| T9 | Complete the Michelin catalogue to the official counters (18 of 69 starred rows today) | unclaimed | — | `data/restaurants.json` | 5 three-star, 14 two-star, 50 one-star exist officially. |
+| T9 | Complete the Michelin catalogue to the official counters (18 of 69 starred rows today) | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/restaurants.json` | All 72 rows present (5/14/50 starred + Bib + Selected) in the namespaced kit; canonical `data/restaurants.json` still at 20 rows — merging the two is a separate decision. |
 | T10 | Per-person menu price capture for the starred restaurants | unclaimed | — | `data/restaurants.json` | Menu pages are client-rendered; needs a source that prints prices. |
-| T11 | Measured door-to-door transit times for the ≤1-hour rule | unclaimed | — | `data/hotels.json` | No routing source was reachable from the sandbox. |
-| T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | unclaimed | — | `data/hotels.json` | Required to fill "cheapest booking window". |
+| T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
+| T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
 
 ## Log
 
@@ -165,3 +165,25 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 **Verification performed on this kit:** all 12 JSON files parse; the builder regenerates 11 pages with
 zero broken internal links; every `class=` used is defined in the stylesheet; HTML tag nesting validated
 per page; no absolute claims of the form "every value is verified" remain (checked by grep).
+
+### 2026-11-25 — session `arena/33cfdba4-nyfun2` (published)
+
+- Merged to `main` as **PR #10** (merge commit `ff0ebc0`). GitHub Pages built `ff0ebc0`
+  successfully; all 26 files of `sessions/33cfdba4/**` are on `main`.
+- Live entry point: https://kanlerxz87-cyber.github.io/NYFun2/sessions/33cfdba4/index.html
+- The canonical root dashboard, `data/**`, `alt/**` and `sessions/215c2a25/**` are byte-identical to
+  what they were before this merge. The branch diff against `main` was 26 additions + 1 modification
+  (this board), **zero deletions**.
+- **T9 / T11 / T12 are now closed in the namespaced kit** and marked accordingly in the board above.
+  T10 remains genuinely open on both sites: MICHELIN publishes a price band, never a menu price for two.
+- **Incident logged:** twice during this session a `git pull --rebase` began replaying `main`'s own
+  commits onto this branch (once triggering a 12-command interactive rebase that would have duplicated
+  main's history). Both times it was caught before completion and `git rebase --abort` restored the
+  branch to exactly the pushed remote commit. Nothing was lost, no force-push was used, and the final
+  branch state was verified against `git diff origin/main..HEAD` before merging. Note for future
+  sessions on this repo: the earlier `git checkout --ours data/` resolution is what made a mid-rebase
+  branch look conflicted; aborting and re-merging is the safe recovery.
+- **Still open for the integration owner** (unchanged from this session's merge note): the four
+  cross-session discrepancies above — pre-tax vs all-in hotel basis, row-level queen+private-bath
+  filtering in the canonical hotel set, the MICHELIN band-vs-dollar question, and the 72-vs-20 roster
+  size. None was resolved unilaterally.
