@@ -29,11 +29,14 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T10 | Per-person menu price capture for the starred restaurants | unclaimed | — | `data/restaurants.json` | Menu pages are client-rendered; needs a source that prints prices. |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
-| T13 | Verify + enrich activities: official hours re-check; add missing YouTube/TikTok/Instagram links for all 12 rows | unclaimed | arena/600d25ad-nyfun2 | `data/activities.json`, `research/activities-verification.md` | Source every new link to an official site (venue page or platform account page); blank + flag when not confirmed. |
-| T14 | Verify hotels: room spec + rate page pricing for 15–22 Feb 2027 (official/brand pages) | unclaimed | arena/600d25ad-nyfun2 | `data/hotels.json`, `research/hotels-verification.md` | Fill what can be confirmed; keep blanks + flags when not. |
-| T15 | Verify restaurant social links; add missing official IG/FB/YouTube where the official site confirms them | unclaimed | arena/600d25ad-nyfun2 | `data/restaurants.json`, `research/restaurants-verification.md` | Third-party reviews labelled; official-only. |
+| T13 | Verify + enrich activities: official hours re-check; add missing YouTube/TikTok/Instagram links for all 12 rows | done | arena/600d25ad-nyfun2 | `data/activities.json`, `research/activities-verification.md` | Source every new link to an official site (venue page or platform account page); blank + flag when not confirmed. |
+| T14 | Verify hotels: room spec + rate page pricing for 15–22 Feb 2027 (official/brand pages) | done | arena/600d25ad-nyfun2 | `data/hotels.json`, `research/hotels-verification.md` | Fill what can be confirmed; keep blanks + flags when not. |
+| T15 | Verify restaurant social links; add missing official IG/FB/YouTube where the official site confirms them | done | arena/600d25ad-nyfun2 | `data/restaurants.json`, `research/restaurants-verification.md` | Third-party reviews labelled; official-only. |
 
 ## Log
+
+### 2026-11-25 — session `arena/600d25ad-nyfun2` (final publish-state note)
+- GitHub Pages is live at https://kanlerxz87-cyber.github.io/NYFun2/ with source = branch `main`. All session work is on `arena/600d25ad-nyfun2` as the platform requires; a merge to `main` (or PR) is needed to put this branch's content on the live Pages build. Logging this as an open integration step.
 
 ### 2026-11-25 — session `arena/600d25ad-nyfun2` (verification + enrichment)
 - T13–T15 claimed on the current branch; scopes non-overlapping with other sessions. Claims committed and pushed.
