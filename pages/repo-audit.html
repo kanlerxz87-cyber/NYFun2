@@ -31,10 +31,12 @@
 
   <p class="eyebrow">Audit · repository &amp; integration</p>
   <h1>What was in the repo, and how two sessions were reconciled</h1>
-  <p class="lede">Two agent sessions worked this repository on the same day on different branches. Neither
-  overwrote the other. This page records what the repository contained when each session started, what each
+  <p class="lede">Three agent sessions worked this repository on the same day, on separate branches. None
+  overwrote another. This page records what the repository contained when each session started, what each
   session produced, how the overlap was resolved, and the evidence that the combined dataset is internally
-  consistent.</p>
+  consistent. The third session is the clean case: on finding the site already published, it moved
+  everything it had written into its own namespace (<code>sessions/215c2a25/</code>) and touched no shared
+  file — the behaviour the board is supposed to produce.</p>
 
   <h2>1 · State as found</h2>
   <div class="card">
@@ -80,6 +82,7 @@
           <tr><td>Dated hotel prices</td><td>Blank — Michelin's widget enforces a 31-day advance limit, so no dated rate was found</td><td><strong>Four live 7-night totals for 15–22 Feb 2027</strong> from Booking.com rate pages, with tax arithmetic and capture dates</td><td><strong>Session B's data</strong>, merged into Session A's hotel rows</td></tr>
           <tr><td>Questions / suggestions / flags</td><td>8 / 8 / 9</td><td>12 / 10 / 15</td><td><strong>Union</strong> — 12 / 12 / 13 after duplicates were dropped and one flag resolved</td></tr>
           <tr><td>Repo audit</td><td>Recorded in the board log</td><td>Dedicated page</td><td><strong>This page</strong></td></tr>
+          <tr><td>Third kit <small>(session 215c2a25)</small></td><td>—</td><td>—</td><td>Kept whole under <code>sessions/215c2a25/</code>, linked from the landing page; no shared file touched</td></tr>
         </tbody>
       </table>
     </div>
@@ -126,7 +129,7 @@
     </ul>
   </div>
 
-  <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> · Coordination board: <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a></p>
+  <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> · Coordination board: <a href="https://github.com/kanlerxz87-cyber/NYFun2/blob/main/COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a></p>
 
 </main>
 </div>
