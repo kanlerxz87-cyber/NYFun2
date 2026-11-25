@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verification &amp; Flags | NYFun2</title><link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="header-inner">
+  <h1>Verification &amp; Flagged Review</h1><p>Line-by-line verification status, irregularities, and items requiring manual review.</p>
+  <div class="meta-bar"><span>Last updated: 2026-11-25 (UTC)</span><span>Policy: official sources only; no inferred values</span></div>
+</div></header>
+<nav class="nav" aria-label="Primary"><div class="nav-inner"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="michelin.html">Michelin Restaurants</a><a href="hotels.html">Hotels &amp; Pricing</a><a href="activities.html">Activities &amp; Social</a><a href="itinerary.html">Itinerary</a><a href="decision-questions.html">Decision Questions</a><a href="suggestions.html">Suggestions</a><a class="active" href="verification.html">Verification &amp; Flags</a></div></nav>
+<main id="main" class="page">
+<section class="section">
+  <div class="notice ok"><strong>Verification policy applied:</strong> Rows include official/primary source links where available. Values not confirmed from official sources are left blank or marked <span class="badge unverified">Unverified</span>. No values were inferred to fill gaps.</div>
+  <h2>Verification Log</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Item</th><th>What was checked</th><th>Official source</th><th>Result</th><th>Irregularity / note</th></tr></thead>
+    <tbody>
+      <tr><td>MICHELIN NYC 2025 starred list</td><td>Restaurant names, star tiers, cuisines, Michelin URLs from ceremony article</td><td><a href="https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025" target="_blank" rel="noopener">MICHELIN Guide ceremony article</a></td><td><span class="badge verified">Verified</span></td><td>Edition is 2025; recheck before travel.</td></tr>
+      <tr><td>MICHELIN starred listing page</td><td>Listing/count context</td><td><a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred" target="_blank" rel="noopener">MICHELIN Guide all-starred listing</a></td><td><span class="badge partial">Partially verified</span></td><td>Dynamic/paginated; not fully extracted line-by-line in this pass.</td></tr>
+      <tr><td>Hotel live pricing (Feb-Mar 2027)</td><td>7-night totals, taxes/fees, cheapest booking window</td><td>Official hotel/booking pages</td><td><span class="badge unverified">Unverified</span></td><td>No live 2027 price capture completed; intentionally blank.</td></tr>
+      <tr><td>Hotel room requirements</td><td>Private bathroom and queen+ bed for 2 adults</td><td>Official hotel room pages</td><td><span class="badge unverified">Unverified</span></td><td>Must confirm per room type/date.</td></tr>
+      <tr><td>Restaurant social media links</td><td>YouTube/TikTok/Instagram per listed restaurant/activity</td><td>Official venue accounts/platform pages</td><td><span class="badge unverified">Unverified</span></td><td>Not verified in bulk; left flagged.</td></tr>
+      <tr><td>Restaurant/activity hours & exceptions</td><td>Days open, hours, holiday exceptions</td><td>Official venue websites</td><td><span class="badge unverified">Unverified</span></td><td>Hours change frequently; verify close to travel.</td></tr>
+      <tr><td>Restaurant cost for 2 adults</td><td>Tasting/menu total for 2 adults</td><td>Official menus/reservation pages</td><td><span class="badge unverified">Unverified</span></td><td>No menu prices captured; left flagged.</td></tr>
+      <tr><td>≤1 hour transit constraint</td><td>Hotel-to-venue subway/bus travel time</td><td><a href="https://www.mta.info/" target="_blank" rel="noopener">MTA</a></td><td><span class="badge unverified">Unverified</span></td><td>Route-level validation not completed.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+<section class="section">
+  <h2>Flagged for Review</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Flag</th><th>Severity</th><th>Details</th><th>Required action</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Live hotel pricing missing</td><td>High</td><td>User requested real verified 7-night pricing and cheapest booking window; none captured.</td><td>Capture live prices with timestamps from official sources.</td><td><span class="badge bad">Open</span></td></tr>
+      <tr><td>Social/hours/cost fields unverified</td><td>High</td><td>Required columns exist but most values unverified.</td><td>Verify per venue from official sources; populate or keep flagged.</td><td><span class="badge bad">Open</span></td></tr>
+      <tr><td>Michelin edition currency</td><td>Medium</td><td>Based on 2025 NYC ceremony article; 2026+ may change.</td><td>Recheck official Michelin site before booking.</td><td><span class="badge partial">Open</span></td></tr>
+      <tr><td>Outside-NYC restaurants included</td><td>Medium</td><td>Blue Hill at Stone Barns and La Bastide by Andrea Calstier may violate 1-hour constraint.</td><td>Confirm day-trip intent or exclude.</td><td><span class="badge partial">Open</span></td></tr>
+      <tr><td>Transit matrix not computed</td><td>High</td><td>1-hour constraint not validated per hotel-venue pair.</td><td>Build route matrix using MTA/Maps with timestamps.</td><td><span class="badge bad">Open</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+</main>
+<footer class="footer"><div class="footer-inner"><div><strong>NYFun2</strong> — Verification &amp; Flags. Unverified values intentionally blank/flagged.</div></div></footer>
+</body></html>

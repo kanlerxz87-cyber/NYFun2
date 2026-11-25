@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotels &amp; Pricing | NYFun2</title><link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="header-inner">
+  <h1>Hotels &amp; Pricing</h1><p>Shortlist and verification framework for 2 adults, private bathroom, queen+ bed, near Michelin clusters.</p>
+  <div class="meta-bar"><span>Last updated: 2026-11-25 (UTC)</span><span>Policy: official sources only; no inferred values</span></div>
+</div></header>
+<nav class="nav" aria-label="Primary"><div class="nav-inner"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="michelin.html">Michelin Restaurants</a><a class="active" href="hotels.html">Hotels &amp; Pricing</a><a href="activities.html">Activities &amp; Social</a><a href="itinerary.html">Itinerary</a><a href="decision-questions.html">Decision Questions</a><a href="suggestions.html">Suggestions</a><a href="verification.html">Verification &amp; Flags</a></div></nav>
+<main id="main" class="page">
+<section class="section">
+  <div class="notice warn"><strong>Pricing integrity warning:</strong> The user requested "real verified pricing", "actual dates", and "cheapest upcoming time to book". Live hotel rates for Feb–Mar 2027 are dynamic and change by inventory, taxes/fees, cancellation terms, and capture time. This page does <strong>not</strong> fabricate prices. Any price not captured from an official booking source with timestamp is marked <span class="badge unverified">Unverified</span>. Before booking, capture live prices for the same room type (2 adults, private bathroom, queen/king) on the official hotel site or a reputable booking engine and record the timestamp.</div>
+  <div class="notice bad"><strong>No manual input constraint:</strong> This session could not complete a live authenticated booking-engine capture with guaranteed 2027 inventory for every candidate. The table below provides a verification-ready shortlist and explicit capture instructions. Do not treat blank prices as $0 or availability.</div>
+</section>
+<section class="section">
+  <h2>Hotel Selection Criteria (User Requirements)</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Requirement</th><th>Rule</th><th>Verification method</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Party</td><td>2 adults</td><td>Booking search must be set to 2 adults, 1 room</td><td><span class="badge verified">Input</span></td></tr>
+      <tr><td>Bathroom</td><td>Private bathroom required</td><td>Confirm on official room listing/amenities; do not assume for hostels/shared rooms</td><td><span class="badge verified">Input</span></td></tr>
+      <tr><td>Bed</td><td>Queen bed or equivalent or bigger</td><td>Confirm room name/bed details on official listing</td><td><span class="badge verified">Input</span></td></tr>
+      <tr><td>Location</td><td>≤ 1 hour subway/bus to planned activities/Michelin targets</td><td>Validate door-to-door route on <a href="https://www.mta.info/" target="_blank" rel="noopener">MTA</a> / Google Maps at intended travel time</td><td><span class="badge partial">Needs validation</span></td></tr>
+      <tr><td>Michelin proximity</td><td>Prefer hotels near Michelin-star clusters</td><td>Count starred restaurants within 1-hour transit; use Michelin official pages for addresses</td><td><span class="badge partial">Method defined</span></td></tr>
+      <tr><td>Price</td><td>Total price for 7-night stay; cheapest upcoming time to book</td><td>Capture live total (incl. taxes/fees) for identical room/dates; record timestamp and source URL</td><td><span class="badge unverified">Unverified</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+<section class="section">
+  <h2>Candidate Hotels (Verification-Ready Shortlist)</h2>
+  <p class="small muted">Candidates are common Midtown/Manhattan options near Michelin clusters. Inclusion is not a recommendation or price claim. Every row requires live verification for target dates.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Hotel</th><th>Area / Cluster</th><th>Private bath / Queen+ bed (verify)</th><th>7-night total (2 adults) - actual dates</th><th>Cheapest upcoming booking window (verify)</th><th>Michelin access (≤1h transit)</th><th>Official / Booking Source</th><th>Verification</th></tr></thead>
+    <tbody>
+      <tr><td><strong>The Knickerbocker</strong></td><td>Times Square / Midtown West</td><td><span class="badge unverified">Unverified</span><div class="small">Confirm room type has private bathroom and queen/king bed on official site.</div></td><td><span class="badge unverified">Unverified</span></td><td><span class="badge unverified">Unverified</span></td><td><span class="badge partial">Likely high</span><div class="small">Near Midtown starred cluster; validate routes.</div></td><td><a href="https://theknickerbocker.com/" target="_blank" rel="noopener">theknickerbocker.com</a></td><td><span class="badge unverified">Unverified pricing</span></td></tr>
+      <tr><td><strong>Park Central Hotel New York</strong></td><td>Midtown / near Carnegie Hall</td><td><span class="badge unverified">Unverified</span></td><td><span class="badge unverified">Unverified</span></td><td><span class="badge unverified">Unverified</span></td><td><span class="badge partial">Likely high</span><div class="small">Close to Columbus Circle/Midtown cluster.</div></td><td><a href="https://www.parkcentralny.com/" target="_blank" rel="noopener">parkcentralny.com</a></td><td><span class="badge unverified">Unverified pricing</span></td></tr>
+      <tr><td><strong>Hyatt Grand Central New York</strong></td><td>Midtown East / Grand Central</td><td><span class="badge unverified">Unverified</span></td><td><span class="badge unverified">Unverified</span></td><td><span class="badge unverified">Unverified</span></td><td><span class="badge partial">Likely high</span><div class="small">Grand Central access supports broad transit.</div></td><td><a href="https://www.hyatt.com/hyatt-hotels/en-US/nycgh-hyatt-grand-central-new-york" target="_blank" rel="noopener">Official Hyatt page</a></td><td><span class="badge unverified">Unverified pricing</span></td></tr>
+      <tr><td><strong>Arlo NoMad</strong></td><td>NoMad / Flatiron border</td><td><span class="badge unverified">Unverified</span><div class="small">Confirm private bathroom and queen/king bed; some micro rooms vary.</div></td><td><span class="badge unverified">Unverified</span></td><td><span class="badge unverified">Unverified</span></td><td><span class="badge partial">Likely high</span><div class="small">Good for Flatiron/NoMad cluster.</div></td><td><a href="https://arlohotels.com/nomad/" target="_blank" rel="noopener">arlohotels.com/nomad</a></td><td><span class="badge unverified">Unverified pricing</span></td></tr>
+      <tr><td><strong>Hotel Edison Times Square</strong></td><td>Times Square / Midtown West</td><td><span class="badge unverified">Unverified</span></td><td><span class="badge unverified">Unverified</span></td><td><span class="badge unverified">Unverified</span></td><td><span class="badge partial">Likely high</span></td><td><a href="https://www.edisonhotelnyc.com/" target="_blank" rel="noopener">edisonhotelnyc.com</a></td><td><span class="badge unverified">Unverified pricing</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+<section class="section">
+  <h2>How to Capture "Real Verified Pricing" (Required)</h2>
+  <ol>
+    <li>Choose exact dates (e.g., check-in 2027-02-15, check-out 2027-02-22 for 7 nights; also test adjacent windows in Feb 15–Mar 23, 2027).</li>
+    <li>On the official hotel site, set 2 adults, 1 room, same room type category (private bath, queen/king or larger).</li>
+    <li>Record: total price for stay, nightly average, taxes/fees included or not, currency, cancellation policy, room name, bed type, private bathroom confirmation, capture timestamp, and URL/screenshot.</li>
+    <li>Repeat for at least 3 candidate date windows to identify cheapest upcoming booking window.</li>
+    <li>Cross-check against a major booking engine only as secondary; prefer official hotel source for final verification.</li>
+  </ol>
+</section>
+</main>
+<footer class="footer"><div class="footer-inner"><div><strong>NYFun2</strong> — Hotels &amp; Pricing. Unverified values intentionally blank/flagged.</div></div></footer>
+</body></html>

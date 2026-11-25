@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NYFun2 | NYC Trip Planning Dashboard</title>
+  <meta name="description" content="Verified, source-linked NYC trip planning dashboard focused on Michelin restaurants, hotels, activities, and decision support.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <h1>NYC Trip Planning Dashboard</h1>
+    <p>Source-linked planning workspace for a 1–2 week couple’s trip (2 adults), with preferred dates Feb 15–18, 2027 and flexible window Feb 15–Mar 23, 2027. Built for verification, not guesswork.</p>
+    <div class="meta-bar">
+      <span>Branch: <code>arena/096f8cf2-nyfun2</code></span>
+      <span>Last updated: 2026-11-25 (UTC)</span>
+      <span>Verification policy: official sources only; unverified = flagged</span>
+    </div>
+  </div>
+</header>
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="active" href="index.html">Dashboard</a>
+    <a href="executive-summary.html">Executive Summary</a>
+    <a href="michelin.html">Michelin Restaurants</a>
+    <a href="hotels.html">Hotels &amp; Pricing</a>
+    <a href="activities.html">Activities &amp; Social</a>
+    <a href="itinerary.html">Itinerary</a>
+    <a href="decision-questions.html">Decision Questions</a>
+    <a href="suggestions.html">Suggestions</a>
+    <a href="verification.html">Verification &amp; Flags</a>
+  </div>
+</nav>
+<main id="main" class="page">
+  <section class="section">
+    <h2>Project Goal</h2>
+    <p class="lead">Collect, organize, and analyze NYC trip options using verified sources. Every table row should include an official source link; where a value cannot be confirmed from an official source, it is left blank/marked unverified and flagged for review. No values are inferred or fabricated.</p>
+    <div class="notice warn"><strong>Data integrity notice:</strong> This dashboard distinguishes <span class="badge verified">Verified</span>, <span class="badge partial">Partially verified</span>, and <span class="badge unverified">Unverified</span> information. Live prices, hours, and availability change frequently; always confirm on the linked official source before booking.</div>
+  </section>
+
+  <section class="grid cards" aria-label="Key facts">
+    <div class="card"><div class="label">Trip party</div><div class="kpi">2 adults</div><div class="small">Couple; private bathroom; queen bed or larger required for hotel shortlist.</div></div>
+    <div class="card"><div class="label">Preferred dates</div><div class="kpi">Feb 15–18, 2027</div><div class="small">Flexible window: Feb 15–Mar 23, 2027; trip length 1–2 weeks, possibly 2–4 weeks.</div></div>
+    <div class="card"><div class="label">Michelin source edition</div><div class="kpi">NYC 2025</div><div class="small">Official MICHELIN Guide NYC 2025 ceremony article (18 Nov 2025). 2026/2027 updates must be rechecked before booking.</div></div>
+    <div class="card"><div class="label">Travel constraint</div><div class="kpi">≤ 1 hour</div><div class="small">Target hotel-to-activity/restaurant travel by subway or bus, where feasible.</div></div>
+  </section>
+
+  <section class="section">
+    <h2>What’s Included</h2>
+    <div class="grid cards">
+      <div class="card">
+        <h3><a href="michelin.html">Michelin Restaurants</a></h3>
+        <p>Starred NYC restaurants from the official 2025 MICHELIN Guide list, with star status, cuisine, Michelin page source, official website/social placeholders marked where unverified, and cost notes.</p>
+      </div>
+      <div class="card">
+        <h3><a href="hotels.html">Hotels &amp; Pricing</a></h3>
+        <p>Hotel shortlist criteria, Michelin-cluster proximity analysis framework, and pricing table. Live 2027 rates are flagged unverified unless confirmed on an official booking page at capture time.</p>
+      </div>
+      <div class="card">
+        <h3><a href="activities.html">Activities &amp; Social</a></h3>
+        <p>Curated activities/restaurants with official links, social media review links, hours/open-days fields, and verification status. No invented hours or URLs.</p>
+      </div>
+      <div class="card">
+        <h3><a href="decision-questions.html">Decision Questions</a></h3>
+        <p>Clear questions, knowns, unknowns, and missing-information discovery steps needed before final decisions.</p>
+      </div>
+      <div class="card">
+        <h3><a href="suggestions.html">Suggestions</a></h3>
+        <p>Non-destructive improvement suggestions for decision-making, data quality, and site usability. Review before implementation.</p>
+      </div>
+      <div class="card">
+        <h3><a href="verification.html">Verification &amp; Flags</a></h3>
+        <p>Line-by-line verification log, irregularities, source audit, and flagged items requiring manual review.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Primary Official Sources Used</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Source</th><th>Use</th><th>Link</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>MICHELIN Guide - NYC 2025 Stars</td><td>Official starred restaurant list, distinctions, ceremony date</td><td><a href="https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025" target="_blank" rel="noopener">guide.michelin.com/.../all-the-stars-in-the-michelin-guide-to-new-york-city-2025</a></td><td><span class="badge verified">Verified</span></td></tr>
+          <tr><td>MICHELIN Guide - NYC Starred Restaurants Listing</td><td>Current starred restaurant listing/navigation; cross-check count/categories</td><td><a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred" target="_blank" rel="noopener">guide.michelin.com/.../restaurants/all-starred</a></td><td><span class="badge verified">Verified</span></td></tr>
+          <tr><td>MTA</td><td>Transit planning baseline for 1-hour subway/bus constraint</td><td><a href="https://www.mta.info/" target="_blank" rel="noopener">mta.info</a></td><td><span class="badge partial">Reference</span></td></tr>
+          <tr><td>NYC Tourism / Official NYC</td><td>Official visitor/activity context</td><td><a href="https://www.nyctourism.com/" target="_blank" rel="noopener">nyctourism.com</a></td><td><span class="badge partial">Reference</span></td></tr>
+          <tr><td>Hotel official/booking pages</td><td>Room type, private bathroom, bed type, and live pricing verification</td><td>Per-hotel links in <a href="hotels.html">Hotels</a></td><td><span class="badge partial">Per-row</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Coordination &amp; Scope</h2>
+    <p>This repo follows the coordination protocol in <code>COORDINATION.md</code>. The current session claimed the initial research/build tasks on <code>arena/096f8cf2-nyfun2</code>. Shared outputs should only be finalized by an integration session after all claimed tasks are complete and re-verified.</p>
+  </section>
+</main>
+<footer class="footer"><div class="footer-inner">
+  <div><strong>NYFun2</strong> — NYC trip planning dashboard. Built with a verification-first policy. Unverified values are intentionally left blank/flagged.</div>
+  <div class="small">Generated/maintained in repo; review <a href="verification.html">Verification &amp; Flags</a> before making decisions.</div>
+</div></footer>
+</body>
+</html>
