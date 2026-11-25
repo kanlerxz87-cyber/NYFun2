@@ -1,0 +1,135 @@
+{
+  "asOf": "2026-11-25",
+  "note": "Stars/prices/addresses/hours are transcribed from the named MICHELIN Guide pages. '$' bands are the Guide's own price symbols, not dollar amounts. Blank fields were not confirmed and are flagged; nothing is estimated.",
+  "rows": [
+    {
+      "id": "le-bernardin", "name": "Le Bernardin", "tier": "3 stars", "distinction": "Three MICHELIN Stars (2025 Guide)", "cuisine": "Seafood", "address": "155 W. 51st St., New York, NY 10019", "cluster": "Midtown",
+      "days": "Mon–Sat (Sun closed)", "hours": "Mon–Thu 12–2:30 PM, 5–10:30 PM; Fri 12–2:30 PM, 5–11 PM; Sat 5–11 PM", "exceptions": "Sunday closed (MICHELIN listing)", "priceBand": "$$$$", "costFor2": "",
+      "official": "https://www.le-bernardin.com/", "costNote": "No official price for two found on the restaurant's or Guide's page; Guide shows $$$$ band only.",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=oFU8s8Nb6UY", "label": "3-star lobster roll review", "source": "yt-le-bernardin"}],
+      "sources": ["michelin-3star", "michelin-le-bernardin"], "verification": "verified", "flags": []
+    },
+    {
+      "id": "per-se", "name": "Per Se", "tier": "3 stars", "distinction": "Three MICHELIN Stars (2025 Guide)", "cuisine": "Contemporary, French", "address": "10 Columbus Circle, New York, NY 10019", "cluster": "Midtown / Columbus Circle",
+      "days": "Daily (seven daily service entries listed)", "hours": "4:30–9 PM daily", "exceptions": "", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$$ band only.",
+      "socials": [
+        {"platform": "YouTube", "url": "https://www.youtube.com/watch?v=YOaJo5a-MCw", "label": "9-course tasting review", "source": "yt-per-se"},
+        {"platform": "TikTok", "url": "https://www.tiktok.com/@avavescovi/video/7384864392833273118", "label": "Dinner at Per Se review", "source": "tt-per-se"}
+      ],
+      "sources": ["michelin-3star", "michelin-per-se"], "verification": "partial", "flags": ["official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "eleven-madison-park", "name": "Eleven Madison Park", "tier": "3 stars", "distinction": "Three MICHELIN Stars (2025 Guide)", "cuisine": "Contemporary, Vegan", "address": "11 Madison Ave., New York, NY 10010", "cluster": "Flatiron / NoMad",
+      "days": "Mon and Tue captured; remaining days not captured", "hours": "Mon 5–10 PM; Tue 5–10 PM", "exceptions": "", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "Official menu page could not be retrieved; no official total for two. Guide shows $$$$ band only.",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=aSE3P9REZVc", "label": "Full tasting menu review", "source": "yt-emp"}],
+      "sources": ["michelin-3star", "michelin-emp"], "verification": "partial", "flags": ["hours-partial", "official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "jungsik", "name": "Jungsik New York", "tier": "3 stars", "distinction": "Three MICHELIN Stars (2025 Guide)", "cuisine": "Korean, Contemporary", "address": "2 Harrison St., New York, NY 10013", "cluster": "Tribeca",
+      "days": "Tue–Sun (Mon closed)", "hours": "Tue–Sun 5–9:30 PM", "exceptions": "Monday closed (MICHELIN listing)", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$$ band only.",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=_Q56V0ISF5o", "label": "3-star Korean tasting review", "source": "yt-jungsik"}],
+      "sources": ["michelin-3star", "michelin-jungsik"], "verification": "partial", "flags": ["official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "sushi-sho", "name": "Sushi Sho", "tier": "3 stars", "distinction": "Three MICHELIN Stars (2025 Guide)", "cuisine": "Japanese, Sushi", "address": "3 E. 41st St., New York, NY 10017", "cluster": "Midtown",
+      "days": "Tue captured; Mon closed; remaining days not captured", "hours": "Tue 5–10 PM", "exceptions": "Monday closed (MICHELIN listing)", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$$ band only.",
+      "socials": [],
+      "sources": ["michelin-3star", "michelin-sushi-sho"], "verification": "partial", "flags": ["hours-partial", "social-not-found", "official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "masa", "name": "Masa", "tier": "2 stars", "distinction": "Two MICHELIN Stars (2025 Guide; previously 3)", "cuisine": "Japanese, Sushi", "address": "10 Columbus Circle, Ste. 401, New York, NY 10019", "cluster": "Midtown / Columbus Circle",
+      "days": "Mon closed; Tue captured; remaining days not captured", "hours": "Tue 12–2 PM, 5–9:30 PM", "exceptions": "Monday closed (MICHELIN listing)", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$$ band only.",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=fnYmB-4xEzk", "label": "Masa NYC behind-the-curtain review", "source": "yt-masa"}],
+      "sources": ["michelin-2star", "michelin-masa", "michelin-stars-2025"], "verification": "partial", "flags": ["hours-partial", "official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "atera", "name": "Atera", "tier": "2 stars", "distinction": "Two MICHELIN Stars (2025 Guide)", "cuisine": "Contemporary", "address": "77 Worth St., New York, NY 10013", "cluster": "Tribeca",
+      "days": "Mon and Tue captured; remaining days not captured", "hours": "Mon 7–10 PM; Tue 5–10 PM", "exceptions": "", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$$ band only.",
+      "socials": [],
+      "sources": ["michelin-2star", "michelin-atera"], "verification": "partial", "flags": ["hours-partial", "social-not-found", "official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "atomix", "name": "Atomix", "tier": "2 stars", "distinction": "Two MICHELIN Stars (2025 Guide)", "cuisine": "Korean, Contemporary", "address": "104 E. 30th St., New York, NY 10016", "cluster": "NoMad",
+      "days": "Mon and Tue captured; remaining days not captured", "hours": "Mon 5:30–11 PM; Tue 5:30–11 PM", "exceptions": "", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$$ band only.",
+      "socials": [],
+      "sources": ["michelin-2star", "michelin-atomix"], "verification": "partial", "flags": ["hours-partial", "social-not-found", "official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "jean-georges", "name": "Jean-Georges", "tier": "2 stars", "distinction": "Two MICHELIN Stars (2025 Guide)", "cuisine": "Contemporary, French Contemporary", "address": "Trump International Hotel & Tower, 1 Central Park West, New York, NY 10023", "cluster": "Upper West Side / Columbus Circle",
+      "days": "Monday closed; other day labels not captured", "hours": "12–2 PM, 5–9:30 PM (day labels not captured)", "exceptions": "Monday closed (MICHELIN listing)", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$$ band only.",
+      "socials": [],
+      "sources": ["michelin-2star", "michelin-jean-georges"], "verification": "partial", "flags": ["hours-partial", "social-not-found", "official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "the-modern", "name": "The Modern", "tier": "2 stars", "distinction": "Two MICHELIN Stars (2025 Guide)", "cuisine": "Contemporary", "address": "9 W. 53rd St., New York, NY 10019", "cluster": "Midtown",
+      "days": "Mon, Fri, Sat, Sun captured; Tue–Thu not captured", "hours": "Mon 12–2:30 PM, 5–9 PM; Fri/Sat 12–2:30 PM, 5–9:30 PM; Sun 12–2:30 PM, 5–9 PM", "exceptions": "", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$$ band only.",
+      "socials": [],
+      "sources": ["michelin-2star", "michelin-modern"], "verification": "partial", "flags": ["hours-partial", "social-not-found", "official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "le-coucou", "name": "Le Coucou", "tier": "1 star", "distinction": "One MICHELIN Star (2025 Guide)", "cuisine": "French", "address": "11 Howard Hotel, 138 Lafayette St., New York, NY 10013", "cluster": "SoHo",
+      "days": "Mon–Sun (labels for Wed/Thu not captured individually)", "hours": "Mon–Thu 11:30 AM–2 PM, 5–10 PM; Fri 11:30 AM–2 PM, 5–11 PM; Sat 11:30 AM–2:30 PM, 5–11 PM; Sun 11:30 AM–2:30 PM, 5–10 PM", "exceptions": "", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$$ band only.",
+      "socials": [],
+      "sources": ["michelin-1star", "michelin-le-coucou"], "verification": "partial", "flags": ["hours-partial", "social-not-found", "official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "cote", "name": "Cote", "tier": "1 star", "distinction": "One MICHELIN Star (2025 Guide)", "cuisine": "Korean, Steakhouse", "address": "16 W. 22nd St., New York, NY 10010", "cluster": "Flatiron",
+      "days": "Daily", "hours": "Sun–Wed 5–11 PM; Thu–Sat 5 PM–12 AM", "exceptions": "", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$$ band only.",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=nKCDLN01UOg", "label": "Cote Korean steakhouse review", "source": "yt-cote"}],
+      "sources": ["michelin-1star", "michelin-cote"], "verification": "partial", "flags": ["official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "sushi-nakazawa", "name": "Sushi Nakazawa New York", "tier": "1 star", "distinction": "One MICHELIN Star (2025 Guide)", "cuisine": "Japanese, Sushi", "address": "23 Commerce St., New York, NY 10014", "cluster": "West Village",
+      "days": "Daily (as displayed)", "hours": "11:30 AM–2 PM daily (displayed)", "exceptions": "", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$$ band only.",
+      "socials": [],
+      "sources": ["michelin-1star", "michelin-sushi-nakazawa"], "verification": "partial", "flags": ["hours-possibly-incomplete", "social-not-found", "official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "gramercy-tavern", "name": "Gramercy Tavern", "tier": "1 star", "distinction": "One MICHELIN Star (2025 Guide)", "cuisine": "Contemporary, American", "address": "42 E. 20th St., New York, NY 10003", "cluster": "Gramercy",
+      "days": "Daily", "hours": "11:30 AM–11 PM daily", "exceptions": "", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$$ band only.",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=gLunwbHmtTw", "label": "Gramercy Tavern review", "source": "yt-gramercy"}],
+      "sources": ["michelin-1star", "michelin-gramercy"], "verification": "partial", "flags": ["official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "daniel", "name": "Daniel", "tier": "1 star", "distinction": "One MICHELIN Star (2025 Guide)", "cuisine": "French", "address": "60 E. 65th St., New York, NY 10065", "cluster": "Upper East Side",
+      "days": "Tue–Sun (Mon closed)", "hours": "Tue–Sun 5–9:30 PM", "exceptions": "Monday closed (MICHELIN listing)", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$$ band only.",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=thLoDbneJ4E", "label": "Daniel restaurant review", "source": "yt-daniel"}],
+      "sources": ["michelin-1star", "michelin-daniel"], "verification": "partial", "flags": ["official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "tuome", "name": "Tuome", "tier": "1 star", "distinction": "One MICHELIN Star (2025 Guide)", "cuisine": "Fusion, Asian Contemporary", "address": "536 E. 5th St., New York, NY 10009", "cluster": "East Village",
+      "days": "Tue–Sat; Sunday closure shown at end of listing", "hours": "Tue–Thu 6–9 PM; Fri–Sat 5–9:30 PM", "exceptions": "Mon closed; Sunday 'closed' shown in MICHELIN listing (day label not captured)", "priceBand": "$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$ band only.",
+      "socials": [{"platform": "YouTube", "url": "https://www.youtube.com/watch?v=eif6g9YwKTM", "label": "Tuome Michelin-star review", "source": "yt-tuome"}],
+      "sources": ["michelin-1star", "michelin-tuome"], "verification": "partial", "flags": ["hours-day-label-unclear", "official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "cafe-carmellini", "name": "Café Carmellini", "tier": "Guide-listed (no star shown)", "distinction": "MICHELIN Guide-selected; no star shown on its Guide page", "cuisine": "Italian, American", "address": "The Fifth Avenue Hotel, 250 Fifth Ave., New York, NY 10001", "cluster": "NoMad / Flatiron",
+      "days": "Days listed partially captured", "hours": "7–10:45 AM, 11:45 AM–2 PM, 5–10 PM (day labels partially captured)", "exceptions": "", "priceBand": "$$$", "costFor2": "",
+      "official": "", "costNote": "No official total for two found; Guide shows $$$ band only.",
+      "socials": [],
+      "sources": ["michelin-cafe-carmellini", "michelin-hotel-fifth-ave"], "verification": "partial", "flags": ["hours-partial", "social-not-found", "official-website-not-captured", "cost-unverified"]
+    },
+    {
+      "id": "cynthia", "name": "Cynthia", "tier": "Guide-listed (no star shown)", "distinction": "New July 2026 addition to the Guide; no star shown on its Guide page", "cuisine": "Contemporary", "address": "32 Jones St., New York, NY 10014", "cluster": "West Village",
+      "days": "", "hours": "", "exceptions": "", "priceBand": "$$$$", "costFor2": "",
+      "official": "", "costNote": "No official price information retrieved beyond the Guide's $$$$ band.",
+      "socials": [],
+      "sources": ["michelin-cynthia", "michelin-additions-2026"], "verification": "partial", "flags": ["hours-not-captured", "social-not-found", "official-website-not-captured", "cost-unverified"]
+    }
+  ]
+}
