@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Itinerary — NYC 2027</title>
+<meta name="description" content="Itinerary: source-checked NYC trip planning for February 2027.">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="layout">
+<aside class="sidebar">
+  <a class="brand" href="../index.html"><span class="mark">NY</span><span>NYC 2027<small>Trip dashboard</small></span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="../index.html">Overview</a>
+    <a href="executive-summary.html">Summary</a>
+    <a href="michelin-restaurants.html">Michelin</a>
+    <a href="hotels.html">Hotels</a>
+    <a href="activities.html">Activities</a>
+    <a class="active" href="itinerary.html">Itinerary</a>
+    <a href="questions.html">Questions</a>
+    <a href="suggestions.html">Suggestions</a>
+    <a href="flagged.html">Flagged</a>
+    <a href="sources.html">Sources</a>
+    <a href="repo-audit.html">Repo audit</a>
+  </nav>
+  <div class="side-note">Verified against official sources · checked <span data-checked>—</span></div>
+</aside>
+<main class="content" id="main">
+  <p class="eyebrow">Planning logic</p>
+  <h1>Itinerary & the one-hour travel goal</h1>
+  <p class="lede">The request asks to keep activities within one hour of the hotel by subway or bus. Rather than invent door-to-door times, this page shows the verified inputs and the exact step needed to turn them into a route-checked timetable.</p>
+  <h2>What is verified</h2>
+  <div class="card">
+    <ul>
+      <li>Official addresses for 13 starred restaurants (four further starred rows are name-only and flagged) and 12 attractions; see their tables.</li>
+      <li>Published opening days and hours for the majority of those rows.</li>
+      <li>The <a href="https://www.mta.info/maps" target="_blank" rel="noopener noreferrer">MTA's official subway and bus maps ↗</a>, which identify the lines serving each area.</li>
+      <li>Live Google Maps directions links embedded in every restaurant and activity row, using the hotel you select as origin.</li>
+    </ul>
+  </div>
+  <h2>What is not verified</h2>
+  <div class="notice danger">No official source published a door-to-door travel time from a chosen hotel to every activity for the actual February 2027 dates and times. No such times are asserted here. Consequently hotel ranking by "count of Michelin restaurants within one hour" is marked as a decision blocker (Q5), not presented as a finished score.</div>
+  <h2>Suggested structure (not a confirmed timetable)</h2>
+  <div class="card">
+    <ol class="timeline">
+      <li><b>Morning block</b><span>A museum or outdoor landmark with published morning hours — e.g. Central Park, The Met (opens 10:00), MoMA (opens 10:30).</span></li>
+      <li><b>Lunch / early afternoon</b><span>Use a venue near the morning block. The High Line (07:00–20:00 in winter) and Whitney (10:30–18:00 except Tuesday) pair naturally.</span></li>
+      <li><b>Evening block</b><span>Starred restaurants with published dinner service. Check the exact day: several close Monday or Tuesday.</span></li>
+      <li><b>Buffer</b><span>Add transfer time from a real routing result before committing to a reservation.</span></li>
+    </ol>
+  </div>
+  <h2>How to finish this page properly</h2>
+  <div class="card">
+    <p>For each shortlisted hotel, route to each shortlisted restaurant and attraction at the intended departure time, record the minutes and the URL, then keep only pairs at 60 minutes or less. That dataset — not an estimate — is what should drive the hotel ranking and the final day-by-day plan.</p>
+  </div>
+
+  <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">NYFun2 ↗</a> · <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">Coordination board ↗</a> · Research date <span data-checked>—</span>.</p>
+</main>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

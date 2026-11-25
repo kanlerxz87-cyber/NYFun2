@@ -1,9 +1,6 @@
-# OS / editor noise
+node_modules/
 .DS_Store
 Thumbs.db
-*.swp
-# Python
+*.log
 __pycache__/
-*.pyc
-# Local build output (site is committed at repo root for GitHub Pages)
-_build/
+.venv/

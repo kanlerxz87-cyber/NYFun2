@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources — NYC 2027</title>
+<meta name="description" content="Sources: source-checked NYC trip planning for February 2027.">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="layout">
+<aside class="sidebar">
+  <a class="brand" href="../index.html"><span class="mark">NY</span><span>NYC 2027<small>Trip dashboard</small></span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="../index.html">Overview</a>
+    <a href="executive-summary.html">Summary</a>
+    <a href="michelin-restaurants.html">Michelin</a>
+    <a href="hotels.html">Hotels</a>
+    <a href="activities.html">Activities</a>
+    <a href="itinerary.html">Itinerary</a>
+    <a href="questions.html">Questions</a>
+    <a href="suggestions.html">Suggestions</a>
+    <a href="flagged.html">Flagged</a>
+    <a class="active" href="sources.html">Sources</a>
+    <a href="repo-audit.html">Repo audit</a>
+  </nav>
+  <div class="side-note">Verified against official sources · checked <span data-checked>—</span></div>
+</aside>
+<main class="content" id="main">
+  <p class="eyebrow">Method & provenance</p>
+  <h1>Sources and verification rules</h1>
+  <div class="card">
+    <h3>Verification rules used</h3>
+    <ul>
+      <li>Every table row links to an official or primary source: Michelin Guide, a government site (NPS, NYC DOT, NYC Parks) or the venue's own website.</li>
+      <li>A value is recorded only when that source states it. Arithmetic on a published adult price is labelled as such.</li>
+      <li>If a value cannot be confirmed, the cell is blank and an explanation is added to the Flags page.</li>
+      <li>Review videos are labelled third-party; they are not used to establish hours, prices or ownership.</li>
+      <li>Neighbourhood labels are derived from the published street address and marked "address-based grouping".</li>
+      <li>No travel duration is claimed without a stored routing result.</li>
+    </ul>
+  </div>
+  <h2>Primary sources used</h2>
+  <div class="card">
+    <ul>
+      <li><a href="https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred" target="_blank" rel="noopener noreferrer">Michelin Guide — NYC all starred restaurants ↗</a></li>
+      <li><a href="https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025" target="_blank" rel="noopener noreferrer">Michelin — 2025 NYC star announcement ↗</a></li>
+      <li><a href="https://guide.michelin.com/en/article/travel/new-restaurants-new-york" target="_blank" rel="noopener noreferrer">Michelin — July 2026 NYC additions ↗</a></li>
+      <li><a href="https://michelinmedia.com/pages/blog/detail/article/c/a1479/" target="_blank" rel="noopener noreferrer">Michelin North America — 2026 ceremony date ↗</a></li>
+      <li><a href="https://guide.michelin.com/en/hotels-stays/nyc" target="_blank" rel="noopener noreferrer">Michelin Guide — NYC hotels ↗</a></li>
+      <li><a href="https://www.marriott.com/brands/citizenm.mi" target="_blank" rel="noopener noreferrer">Marriott — citizenM room specification ↗</a></li>
+      <li><a href="https://www.nps.gov/stli/planyourvisit/hours.htm" target="_blank" rel="noopener noreferrer">U.S. National Park Service — Statue of Liberty hours ↗</a></li>
+      <li><a href="https://www.nycgovparks.org/parks/central-park" target="_blank" rel="noopener noreferrer">NYC Parks — Central Park ↗</a></li>
+      <li><a href="https://www.metmuseum.org/plan-your-visit" target="_blank" rel="noopener noreferrer">The Met ↗</a> · <a href="https://www.moma.org/visit/" target="_blank" rel="noopener noreferrer">MoMA ↗</a> · <a href="https://www.amnh.org/plan-your-visit/hours" target="_blank" rel="noopener noreferrer">AMNH hours ↗</a></li>
+      <li><a href="https://www.911memorial.org/visit" target="_blank" rel="noopener noreferrer">9/11 Memorial & Museum ↗</a> · <a href="https://www.thehighline.org/visit/" target="_blank" rel="noopener noreferrer">The High Line ↗</a> · <a href="https://whitney.org/visit" target="_blank" rel="noopener noreferrer">Whitney ↗</a> · <a href="https://www.guggenheim.org/plan-your-visit" target="_blank" rel="noopener noreferrer">Guggenheim ↗</a></li>
+      <li><a href="https://www.esbnyc.com/visit/hours-of-operation" target="_blank" rel="noopener noreferrer">Empire State Building hours ↗</a> · <a href="https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml" target="_blank" rel="noopener noreferrer">NYC DOT Staten Island Ferry ↗</a> · <a href="https://www.nypl.org/locations/schwarzman/research" target="_blank" rel="noopener noreferrer">NYPL Schwarzman Building ↗</a></li>
+      <li><a href="https://www.mta.info/maps" target="_blank" rel="noopener noreferrer">MTA official subway/bus maps ↗</a></li>
+    </ul>
+  </div>
+  <h2>Repository & coordination</h2>
+  <div class="card">
+    <p>Work was performed on branch <code>arena/4a10e962-nyfun2</code>. The shared task board is <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a>; it records task ownership, file scopes, sources verified and irregularities. The initial repository contained only an 8-byte README, so no earlier work was overwritten.</p>
+    <p>Platform constraint: the session is bound to one branch, so the requested per-session branch naming could not be used; non-overlapping file scopes and immediate claim commits were used instead.</p>
+    <p>A third session (<code>arena/215c2a25</code>) produced another independent kit, preserved at <a href="../sessions/215c2a25/index.html">sessions/215c2a25/index.html ↗</a> with its own data and source register.</p>
+    <p>A parallel session (<code>arena/1a7ae497</code>) produced an independent site. Its work is preserved unchanged under <a href="../alt/index.html">alt/ ↗</a> rather than overwritten; its hotel-rate and budget findings can be compared with the blank/flagged values on this site.</p>
+  </div>
+
+  <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">NYFun2 ↗</a> · <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">Coordination board ↗</a> · Research date <span data-checked>—</span>.</p>
+</main>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

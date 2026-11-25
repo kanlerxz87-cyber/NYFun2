@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYFun2 — New York trip research dashboard</title>
+<meta name="description" content="Sourced, mobile-friendly research dashboard for a New York trip: Michelin restaurants, hotels, activities, verified hours, social review links and open questions.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="./">NY<span>Fun2</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="./">Home</a>
+      <a href="pages/executive-summary.html">Summary</a>
+      <a href="pages/hotels.html">Hotels</a>
+      <a href="pages/restaurants.html">Michelin</a>
+      <a href="pages/activities.html">Activities</a>
+      <a href="pages/itinerary.html">Itinerary</a>
+      <a href="pages/questions.html">Questions</a>
+      <a href="pages/suggestions.html">Suggestions</a>
+      <a href="pages/flagged.html">Flagged</a>
+      <a href="pages/sources.html">Sources</a>
+      <a href="pages/repo-review.html">Repo review</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h1>New York trip research dashboard</h1>
+  <p class="lede">A conservative, source-linked planning workspace for two adults. Every table value is tied to an official source; values that could not be confirmed are blank and listed under Flagged for Review.</p>
+
+  <div class="banner">
+    <strong>Read this first.</strong> The 2026 MICHELIN Northeast Cities ceremony is scheduled for 14 Dec 2026 — after the 25 Nov 2026 research date and before the trip. Star status may change. No dated 7-night hotel price for Feb 2027 could be confirmed from an official booking site, so price totals are blank rather than estimated. <a href="pages/executive-summary.html">Full summary →</a>
+  </div>
+
+  <div class="grid">
+    <div class="kpi"><div class="num" data-kpi="restaurants">18</div><div class="lbl">Guide restaurants in the main table (with source links)</div></div>
+    <div class="kpi"><div class="num" data-kpi="activities">11</div><div class="lbl">Activities with official hours links</div></div>
+    <div class="kpi"><div class="num" data-kpi="hotels">6</div><div class="lbl">Hotels checked for bed, bath and amenities</div></div>
+    <div class="kpi"><div class="num" data-kpi="socials">—</div><div class="lbl">Verified YouTube / TikTok review links</div></div>
+    <div class="kpi"><div class="num" data-kpi="sources">—</div><div class="lbl">Sources in the registry</div></div>
+    <div class="kpi"><div class="num">15–22 Feb 2027</div><div class="lbl">Working 7-night window (not yet priced)</div></div>
+  </div>
+
+  <h2>Start here</h2>
+  <div class="grid">
+    <div class="card"><h3>Executive summary</h3><p>What the sources establish, and what they do not. The honest picture in one page.</p><a href="pages/executive-summary.html">Open summary →</a></div>
+    <div class="card"><h3>Michelin table</h3><p>18 Guide entries: 5 three-star, 5 two-star, 6 one-star, 2 listed without a star. Days, hours, price band, social reviews, sources.</p><a href="pages/restaurants.html">Open Michelin table →</a></div>
+    <div class="card"><h3>Hotel ranking</h3><p>Official bed/bath/amenity details and an explicitly-labelled address-cluster proxy. Seven-night prices are blank pending dated quotes.</p><a href="pages/hotels.html">Open hotels →</a></div>
+    <div class="card"><h3>Activities & social reviews</h3><p>11 activities with official hours/exceptions and third-party review videos where found.</p><a href="pages/activities.html">Open activities →</a></div>
+    <div class="card"><h3>Questions & decisions</h3><p>What must be answered before a booking decision, with a concrete discovery path for each gap.</p><a href="pages/questions.html">Open questions →</a></div>
+    <div class="card"><h3>Flagged for review</h3><p>Every blank or partial value, grouped by entry, with its primary source. Manual review queue.</p><a href="pages/flagged.html">Open flags →</a></div>
+  </div>
+
+  <h2>Trip frame</h2>
+  <div class="card">
+    <ul class="tight">
+      <li><strong>Preferred short trip:</strong> Mon 15 Feb 2027 → Thu 18 Feb 2027 (3 nights; 15 Feb is Presidents' Day in NYC).</li>
+      <li><strong>Working 7-night plan:</strong> Mon 15 Feb → Mon 22 Feb 2027, inside the requested 15 Feb–23 Mar window.</li>
+      <li><strong>Longer options:</strong> 14 nights to 1 Mar 2027, or 28 nights to 15 Mar 2027 (calendar calculations from the stated window).</li>
+      <li><strong>Transit aim:</strong> one hour or less from the hotel by subway/bus. That criterion is <em>not</em> verified in this pass; see the proxy and flags.</li>
+    </ul>
+    <p class="note">Sources: <a href="https://www.cityclerk.nyc.gov/content/legal-holidays" target="_blank" rel="noopener noreferrer">NYC City Clerk ↗</a>, <a href="https://www.nyc.gov/site/dca/about/holidays-closings.page" target="_blank" rel="noopener noreferrer">NYC DCWP ↗</a>, <a href="https://www.mta.info/map/36946" target="_blank" rel="noopener noreferrer">MTA subway map ↗</a>.</p>
+  </div>
+</main>
+<footer class="footer">Research as of 25 Nov 2026 · Sourced values only · Blank = unverified · <a href="pages/sources.html">Source registry</a></footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

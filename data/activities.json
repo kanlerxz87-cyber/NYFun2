@@ -1,222 +1,268 @@
 {
-  "as_of": "2026-11-25",
-  "method": "Hours, prices, closures and booking rules read from each venue's own official page on 2026-11-25. Values not printed on the official page are left null and flagged U-xx rather than guessed. Social handles are only included when the account was opened and visibly confirmed to belong to the venue (see flag S-01 for the trap this avoids).",
-  "rows": [
+  "meta": {
+    "checkedOn": "2026-11-25",
+    "travelTimePolicy": "No door-to-door minutes are stated. Each row links to a live map-directions URL so the user can verify travel from the chosen hotel on the travel date.",
+    "costPolicy": "Only prices printed on the venue's own official page are used. A couple total is shown only as a simple multiplication of a published adult price; otherwise it is blank and flagged."
+  },
+  "items": [
     {
-      "id": "met",
-      "name": "The Metropolitan Museum of Art (The Met Fifth Avenue)",
-      "category": "Museum · Art",
+      "name": "Statue of Liberty National Monument + Ellis Island",
+      "category": "Historic site / ferry",
+      "area": "Liberty Island / Ellis Island (ferry access)",
+      "address": "Liberty Island and Ellis Island; access by Statue City Cruises ferry only",
+      "hours": "Park and Liberty Island Information Center: daily 09:00–16:30",
+      "exceptions": "Last entry into the statue 15:30. Closed Thanksgiving Day (26 Nov 2026) and Christmas Day (25 Dec 2026). Ferry times published separately by Statue City Cruises.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.nps.gov/stli/index.htm",
+      "sourceUrl": "https://www.nps.gov/stli/planyourvisit/hours.htm",
+      "social": [
+        {
+          "platform": "NPS official social-media page",
+          "url": "https://www.nps.gov/stli/learn/photosmultimedia/socialmedia.htm",
+          "note": "Official National Park Service page listing park accounts"
+        },
+        {
+          "platform": "YouTube (third-party guide)",
+          "url": "https://www.youtube.com/watch?v=0SrIPtUt7Vo",
+          "note": "Visitor guide; not an NPS post"
+        }
+      ],
+      "flags": [
+        "Ferry fare and 2027 schedule not confirmed on the NPS hours page; blank"
+      ]
+    },
+    {
+      "name": "Central Park",
+      "category": "Park / walking",
+      "area": "Manhattan, 59th–110th Streets",
+      "address": "5 Av to Central Park W, 59 St to 110 St",
+      "hours": "06:00–01:00 (NYC Parks statement on Central Park hours)",
+      "exceptions": "NYC Parks says park hours may vary and signs at entrances govern; general NYC Parks hours are 06:00–22:00 or 06:00–01:00 depending on park.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.nycgovparks.org/parks/central-park",
+      "sourceUrl": "https://www.nycgovparks.org/news/press-releases?id=21596",
+      "social": [
+        {
+          "platform": "Instagram (official NYC Parks)",
+          "url": "https://www.instagram.com/nycparks",
+          "note": "Linked from NYC Parks official site"
+        },
+        {
+          "platform": "YouTube (official NYC Parks)",
+          "url": "https://youtube.com/@nycparks",
+          "note": "Linked from NYC Parks official site"
+        },
+        {
+          "platform": "YouTube (third-party walk)",
+          "url": "https://www.youtube.com/watch?v=0AU9_H47w7k",
+          "note": "Walking tour; not official"
+        }
+      ],
+      "flags": [
+        "Park hours can change seasonally; confirm at entrance"
+      ]
+    },
+    {
+      "name": "The Met Fifth Avenue",
+      "category": "Museum",
       "area": "Upper East Side",
       "address": "1000 Fifth Avenue, New York, NY 10028",
-      "website": "https://www.metmuseum.org/plan-your-visit",
-      "source": "https://www.metmuseum.org/plan-your-visit",
-      "days": null,
-      "hours": null,
-      "exceptions": "New York State residents and NY/NJ/CT students pay what they wish (min $0.01).",
-      "price": "Adults $30 · Seniors 65+ $22 · Students $17 · Children 12 and under free · Members free",
-      "price_for_two": 60,
-      "price_note": "Two adult general-admission tickets = $60 before tax.",
-      "booking": "Tickets sold online via engage.metmuseum.org or at the door.",
-      "metro_minutes": 39,
-      "metro_from": "eurostars-wall",
-      "instagram": null, "tiktok": null, "youtube": null,
-      "verified": "f",
-      "notes": "Admission table and address verified. Public gallery hours are NOT printed anywhere on the captured page (only garage hours, which are a different thing) — left blank deliberately instead of copying typical hours from memory. Flagged A-01."
+      "hours": "Sun–Tue and Thu 10:00–17:00; Fri–Sat 10:00–21:00; Wednesday closed",
+      "exceptions": "Closed Thanksgiving Day, 25 Dec, 1 Jan and the first Monday in May.",
+      "costTwoAdults": "$60 (2 × $30 general admission published by The Met)",
+      "officialUrl": "https://www.metmuseum.org/plan-your-visit",
+      "sourceUrl": "https://www.metmuseum.org/visit/met-fifth-avenue",
+      "social": [
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=788Zi2S6XSQ",
+          "note": "Visitor review; not a Met post"
+        }
+      ],
+      "flags": [
+        "Official Met pages showed conflicting Wednesday/Thursday hours in different snippets; re-check before booking",
+        "Admission excludes ticketed exhibitions"
+      ]
     },
     {
-      "id": "moma",
-      "name": "The Museum of Modern Art (MoMA)",
-      "category": "Museum · Modern art",
+      "name": "MoMA (Museum of Modern Art)",
+      "category": "Museum",
       "area": "Midtown",
       "address": "11 West 53 Street, New York, NY 10019",
-      "website": "https://www.moma.org/visit/",
-      "source": "https://www.moma.org/visit/",
-      "days": "Monday–Sunday",
-      "hours": {"mon": "10:30–17:30", "tue": "10:30–17:30", "wed": "10:30–17:30", "thu": "10:30–17:30", "fri": "10:30–20:30", "sat": "10:30–17:30", "sun": "10:30–17:30"},
-      "exceptions": "Open every day except Thanksgiving and Christmas. Galleries close ~15 min before the museum. UNIQLO Friday Nights: free for New York State residents 17:30–20:30, ticket must be reserved in advance. MoMA PS1 (22-25 Jackson Ave, Queens) is free for everyone.",
-      "price": "Adults $30 · Seniors 65+ $22 · Students $17 (full-time, incl. international) · 16 and under free · Members free",
-      "price_for_two": 60,
-      "price_note": "Two adult tickets = $60; includes all galleries and special exhibitions.",
-      "booking": "Timed tickets at visit.moma.org; CityPASS C3 accepted.",
-      "metro_minutes": 32,
-      "metro_from": "eurostars-wall",
-      "instagram": null, "tiktok": null, "youtube": null,
-      "verified": "v",
-      "notes": "Full weekly hours, both closures and all ticket tiers read directly from moma.org/visit."
+      "hours": "Daily 10:30–17:30; Friday 10:30–20:30",
+      "exceptions": "Open every day except Thanksgiving and Christmas. Galleries close ~15 minutes before museum closing.",
+      "costTwoAdults": "$60 (2 × $30 adult admission published by MoMA)",
+      "officialUrl": "https://www.moma.org/visit/",
+      "sourceUrl": "https://www.moma.org/visit/",
+      "social": [
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=iKhkApixPYA",
+          "note": "Visitor review; not a MoMA post"
+        }
+      ],
+      "flags": []
     },
     {
-      "id": "amnh",
       "name": "American Museum of Natural History",
-      "category": "Museum · Natural history",
+      "category": "Museum",
       "area": "Upper West Side",
-      "address": "200 Central Park West, New York, NY 10024",
-      "website": "https://www.amnh.org/plan-your-visit/hours",
-      "source": "https://www.amnh.org/plan-your-visit/hours",
-      "days": "Open daily",
-      "hours": {"mon": "10:00–17:30", "tue": "10:00–17:30", "wed": "10:00–17:30", "thu": "10:00–17:30", "fri": "10:00–17:30", "sat": "10:00–17:30", "sun": "10:00–17:30"},
-      "exceptions": "Closed Thanksgiving Day and Christmas Day. Extended hours on select dates (published as a dated list, e.g. Saturdays to 20:00). Before 10:00 or after 17:00 use the Central Park West / 81st St (Rose Center) entrances. Temporary hall closures are published weekly.",
-      "price": null,
-      "price_for_two": null,
-      "price_note": "Admission prices were not captured on the hours page — see A-02.",
-      "booking": "tickets.amnh.org",
-      "metro_minutes": 34,
-      "metro_from": "eurostars-wall",
-      "instagram": null, "tiktok": null, "youtube": null,
-      "verified": "f",
-      "notes": "Hours, closures and entrance rules verified. Ticket price intentionally left blank rather than assumed."
+      "address": "Central Park West at 79th Street, New York, NY 10024",
+      "hours": "Daily 10:00–17:30",
+      "exceptions": "Closed Thanksgiving Day and Christmas Day. Extended holiday hours on select dates in Nov/Jan; temporary hall closures listed weekly.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.amnh.org/plan-your-visit",
+      "sourceUrl": "https://www.amnh.org/plan-your-visit/hours",
+      "social": [
+        {
+          "platform": "YouTube (third-party tour/review)",
+          "url": "https://www.youtube.com/watch?v=UphcGvF-bsc",
+          "note": "Visitor tour; not an AMNH post"
+        }
+      ],
+      "flags": [
+        "Ticket prices not confirmed on the checked official hours page",
+        "Address from official museum site but not repeated on the hours page"
+      ]
     },
     {
-      "id": "sol",
-      "name": "Statue of Liberty & Ellis Island National Monuments",
-      "category": "Landmark · National monument",
-      "area": "New York Harbor",
-      "address": "Liberty Island / Ellis Island (ferry from Battery Park, Manhattan)",
-      "website": "https://www.nps.gov/stli/planyourvisit/hours.htm",
-      "source": "https://www.nps.gov/stli/planyourvisit/hours.htm",
-      "days": "Every day",
-      "hours": {"mon": "09:00–16:30", "tue": "09:00–16:30", "wed": "09:00–16:30", "thu": "09:00–16:30", "fri": "09:00–16:30", "sat": "09:00–16:30", "sun": "09:00–16:30"},
-      "exceptions": "Closed Thanksgiving Day (Nov 26, 2026) and Christmas Day (Dec 25, 2026). Last entrance into the statue itself is 15:30. Liberty Island Information Center 09:30–16:30 daily. Access is by Statue City Cruises ferry only.",
-      "price": null,
-      "price_for_two": null,
-      "price_note": "NPS does not price the ferry; Statue City Cruises sells it. Grounds are free, ferry and crown/museum tickets are not — see A-03.",
-      "booking": "statuecitycruises.com / 1-877-LADY-TIX",
-      "metro_minutes": null,
-      "metro_from": "eurostars-wall",
-      "instagram": null, "tiktok": null, "youtube": null,
-      "verified": "f",
-      "notes": "Hours and both holiday closures verified from nps.gov (page last updated 2026-04-06). Ferry pricing is a third-party product, left blank."
+      "name": "9/11 Memorial (outdoor) and Museum",
+      "category": "Memorial / museum",
+      "area": "Lower Manhattan / World Trade Center",
+      "address": "World Trade Center, New York, NY",
+      "hours": "Memorial: daily 08:00–20:00. Museum: Wed–Mon and select Tuesdays 09:00–19:00 (last entry 17:30).",
+      "exceptions": "Museum requires advance ticket purchase. Memorial is free and open seven days a week.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.911memorial.org/visit",
+      "sourceUrl": "https://www.911memorial.org/visit",
+      "social": [
+        {
+          "platform": "YouTube (third-party visit)",
+          "url": "https://www.youtube.com/watch?v=XGwkNtDcbVc",
+          "note": "Visitor video; not an official museum post"
+        }
+      ],
+      "flags": [
+        "Museum ticket prices and February 2027 select-Tuesday dates not confirmed"
+      ]
     },
     {
-      "id": "911",
-      "name": "National September 11 Memorial & Museum",
-      "category": "Memorial · Museum",
-      "area": "Financial District",
-      "address": "180 Greenwich Street, New York, NY 10007",
-      "website": "https://www.911memorial.org/visit",
-      "source": "https://www.911memorial.org/visit",
-      "days": "Wednesday–Monday plus select Tuesdays",
-      "hours": {"mon": "09:00–19:00", "tue": "select Tuesdays only", "wed": "09:00–19:00", "thu": "09:00–19:00", "fri": "09:00–19:00", "sat": "09:00–19:00", "sun": "09:00–19:00"},
-      "exceptions": "Museum closed Tuesdays except select Tuesdays — check the special-hours page for the exact February 2027 dates. Last museum entry 17:30. Advance ticket purchase is required. The Memorial itself is free and open daily 08:00–20:00, seven days a week.",
-      "price": null,
-      "price_for_two": null,
-      "price_note": "Museum ticket price not printed on the visit page — see A-04.",
-      "booking": "911memorial.org/visit/visit-museum-1",
-      "metro_minutes": null,
-      "metro_from": "eurostars-wall",
-      "instagram": null, "tiktok": null, "youtube": null,
-      "verified": "f",
-      "notes": "Six-day opening pattern, hours, last entry, advance-ticket rule and the free Memorial hours verified. Tuesday exceptions are date-specific and must be re-checked for the trip week."
-    },
-    {
-      "id": "central-park",
-      "name": "Central Park",
-      "category": "Park · Outdoors",
-      "area": "Manhattan, 59th–110th St",
-      "address": "Central Park, New York, NY",
-      "website": "https://www.centralparknyc.org/visit",
-      "source": "https://www.centralparknyc.org/visit",
-      "days": "365 days a year",
-      "hours": {"mon": "06:00–01:00", "tue": "06:00–01:00", "wed": "06:00–01:00", "thu": "06:00–01:00", "fri": "06:00–01:00", "sat": "06:00–01:00", "sun": "06:00–01:00"},
-      "exceptions": "Opens 06:00, closes 01:00, every day of the year. The Central Park Zoo restroom requires a zoo ticket; all other Conservancy restrooms are free.",
-      "price": "Free",
-      "price_for_two": 0,
-      "price_note": "Public park, no admission.",
-      "booking": "None needed; some tours and the Davis Center ice rink are ticketed separately.",
-      "metro_minutes": null,
-      "metro_from": "eurostars-wall",
-      "instagram": null, "tiktok": null, "youtube": null,
-      "verified": "v",
-      "notes": "Hours verified on centralparknyc.org. Getting-here guidance is published by the Conservancy (M1/M2/M3 up Madison; 19-min walk from Grand Central)."
-    },
-    {
-      "id": "highline",
       "name": "The High Line",
-      "category": "Park · Elevated linear park",
-      "area": "Chelsea / West Side",
-      "address": "Gansevoort St to 34th St, west of 10th Ave",
-      "website": "https://www.thehighline.org/visit/",
-      "source": "https://www.thehighline.org/visit/",
-      "days": "Daily (seasonal hours)",
-      "hours": {"mon": "07:00–20:00 (Dec 1–Mar 31)", "tue": "07:00–20:00 (Dec 1–Mar 31)", "wed": "07:00–20:00 (Dec 1–Mar 31)", "thu": "07:00–20:00 (Dec 1–Mar 31)", "fri": "07:00–20:00 (Dec 1–Mar 31)", "sat": "07:00–20:00 (Dec 1–Mar 31)", "sun": "07:00–20:00 (Dec 1–Mar 31)"},
-      "exceptions": "Seasonal: 1 April–30 November 07:00–22:00; 1 December–31 March 07:00–20:00 — the February trip falls in the SHORT winter window. The Rail Yard Preserve (30th–34th St) closes at dusk. No dogs, bikes, scooters or alcohol; wheelchair loan needs one business day's notice.",
-      "price": "Free",
-      "price_for_two": 0,
-      "price_note": "Public park, no admission; free docent-led tours on select days.",
-      "booking": "None for entry; tours via the schedule page.",
-      "metro_minutes": null,
-      "metro_from": "eurostars-wall",
-      "instagram": null, "tiktok": null, "youtube": null,
-      "verified": "v",
-      "notes": "Winter closing at 20:00 is the key planning constraint for a February visit — captured verbatim from the visitor page."
+      "category": "Park / walking",
+      "area": "Chelsea / Meatpacking",
+      "address": "West Side Manhattan elevated park (Gansevoort St north to 34th St)",
+      "hours": "Dec 1–Mar 31: 07:00–20:00 (this seasonal window covers the proposed February trip)",
+      "exceptions": "Rail Yard Preserve between 30th and 34th Streets closes at dusk.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.thehighline.org/visit/",
+      "sourceUrl": "https://www.thehighline.org/visit/",
+      "social": [
+        {
+          "platform": "YouTube (third-party walk)",
+          "url": "https://www.youtube.com/watch?v=s1c4oQB2u8w",
+          "note": "Walking video; not an official High Line post"
+        }
+      ],
+      "flags": [
+        "Admission cost not stated on the checked official page; left blank"
+      ]
     },
     {
-      "id": "top-of-the-rock",
-      "name": "Top of the Rock Observation Deck",
-      "category": "Observation deck · Views",
-      "area": "Midtown",
-      "address": "30 Rockefeller Plaza, New York, NY 10112",
-      "website": "https://www.rockefellercenter.com/tickets/top-of-the-rock-observation-deck/",
-      "source": "https://www.rockefellercenter.com/tickets/top-of-the-rock-observation-deck/",
-      "days": "Daily",
-      "hours": {"mon": "08:00–24:00", "tue": "08:00–24:00", "wed": "08:00–24:00", "thu": "08:00–24:00", "fri": "08:00–24:00", "sat": "08:00–24:00", "sun": "08:00–24:00"},
-      "exceptions": "Timed admission — you choose a date and entry time. Weather can close the outdoor terraces.",
-      "price": "From $42 timed admission · All-Inclusive Pass (deck + The Beam + SKYLIFT) from $82",
-      "price_for_two": 84,
-      "price_note": "Two timed-admission tickets from $84; 'from' pricing, date-dependent.",
-      "booking": "rockefellercenter.com/buy-tickets/timed-admission",
-      "metro_minutes": null,
-      "metro_from": "eurostars-wall",
-      "instagram": null, "tiktok": null, "youtube": null,
-      "verified": "v",
-      "notes": "Opening hours and both published ticket tiers captured. Sunset slots sell out — book the timed entry early."
+      "name": "Whitney Museum of American Art",
+      "category": "Museum",
+      "area": "Meatpacking District",
+      "address": "99 Gansevoort Street, New York, NY 10014",
+      "hours": "Mon 10:30–18:00; Tue closed; Wed–Thu 10:30–18:00; Fri 10:30–22:00; Sat–Sun 10:30–18:00",
+      "exceptions": "Free Friday nights and second Sundays. Listed holiday hours apply to Nov/Dec 2026; no February 2027 exception published.",
+      "costTwoAdults": "$60 (2 × $30 adult admission published by the Whitney)",
+      "officialUrl": "https://whitney.org/visit",
+      "sourceUrl": "https://whitney.org/visit",
+      "social": [
+        {
+          "platform": "YouTube (third-party visit)",
+          "url": "https://www.youtube.com/watch?v=EcGGHbBBWEQ",
+          "note": "Visitor video; not an official Whitney post"
+        }
+      ],
+      "flags": []
     },
     {
-      "id": "nypl",
-      "name": "NYPL Stephen A. Schwarzman Building (Rose Main Reading Room)",
-      "category": "Landmark · Library",
-      "area": "Midtown (42nd & Fifth)",
-      "address": "476 Fifth Avenue, New York, NY 10018",
-      "website": "https://www.nypl.org/locations/schwarzman",
-      "source": "https://www.nypl.org/locations/schwarzman",
-      "days": null,
-      "hours": null,
-      "exceptions": "Last entry to the building is 15 minutes before closure. Rose Main Reading Room 'visiting hour' is 10:00–11:00 Monday–Saturday (final entry 10:50); outside that hour you need a free tour booking or a research reason. The Polonsky Treasures exhibition is on site. Midtown renovation work is ongoing — expect noise.",
-      "price": "Free",
-      "price_for_two": 0,
-      "price_note": "Free entry; the Treasures exhibition is free.",
-      "booking": "Free daily tours via nypl.org/events/tours/schwarzman",
-      "metro_minutes": null,
-      "metro_from": "eurostars-wall",
-      "instagram": null, "tiktok": null, "youtube": null,
-      "verified": "f",
-      "notes": "Visiting-hour rule and last-entry rule verified. The page says 'see building hours above' but the hours widget did not render in the captured text, so the daily open/close times are deliberately blank — flag A-05."
+      "name": "Solomon R. Guggenheim Museum",
+      "category": "Museum",
+      "area": "Upper East Side",
+      "address": "1071 Fifth Avenue, New York, NY 10128",
+      "hours": "Every day 10:30–17:30",
+      "exceptions": "Pay What You Wish Tue and Sun 16:00–17:30. Listed holiday hours apply Nov/Dec 2026.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.guggenheim.org/plan-your-visit",
+      "sourceUrl": "https://www.guggenheim.org/plan-your-visit",
+      "social": [
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=KZ7qvNnW7no",
+          "note": "Visitor review; not an official Guggenheim post"
+        }
+      ],
+      "flags": [
+        "Adult admission not confirmed in the checked official page section"
+      ]
     },
     {
-      "id": "katzs",
-      "name": "Katz's Delicatessen",
-      "category": "Food · Historic deli",
-      "area": "Lower East Side",
-      "address": "205 East Houston Street, New York, NY 10002",
-      "website": "https://katzsdelicatessen.com/store-menu",
-      "source": "https://katzsdelicatessen.com/store-menu",
-      "days": null,
-      "hours": null,
-      "exceptions": "Breakfast specials served until 11:30. No free refills. Cash-and-card accepted; ticket system at the counter.",
-      "price": "Pastrami sandwich $30.95 · Reuben $31.95 · Matzo ball soup $10.95 · Latkes $17.45 · Dinner Platter $38.95",
-      "price_for_two": 62,
-      "price_note": "Two pastrami sandwiches = $61.90 before drinks; a couple realistically spends $70–90 with sides and drinks.",
-      "booking": "Walk-in; delivery/pickup via order.online",
-      "metro_minutes": 22,
-      "metro_from": "eurostars-wall",
-      "instagram": null, "tiktok": null, "youtube": null,
-      "verified": "f",
-      "notes": "Menu prices verified line by line from the official in-store menu. Opening hours are not printed on the menu page — blank + flag A-06. (Do not confuse the shipping-store prices on the homepage with in-store prices.)"
+      "name": "Empire State Building Observatory",
+      "category": "Observation deck",
+      "area": "Midtown / Herald Square",
+      "address": "20 W 34th Street, New York, NY 10118",
+      "hours": "",
+      "exceptions": "Official site says the building is open every day including holidays but hours change by date; date-specific hours must be checked on the official hours page.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.esbnyc.com/visit/hours-of-operation",
+      "sourceUrl": "https://www.esbnyc.com/visit/hours-of-operation",
+      "social": [
+        {
+          "platform": "YouTube (third-party comparison)",
+          "url": "https://www.youtube.com/watch?v=jr6MHzeFo2c",
+          "note": "Observation-deck comparison; not an ESB post"
+        }
+      ],
+      "flags": [
+        "February 2027 hours not published; hours left blank",
+        "Ticket prices not confirmed"
+      ]
+    },
+    {
+      "name": "Staten Island Ferry",
+      "category": "Ferry / skyline views",
+      "area": "Lower Manhattan ⇄ Staten Island",
+      "address": "Whitehall Terminal, Manhattan ⇄ St. George Terminal, Staten Island",
+      "hours": "24 hours a day, 365 days a year",
+      "exceptions": "Weekend schedule applies on listed holidays (none inside the proposed 15–18 Feb 2027 window).",
+      "costTwoAdults": "$0 (free service per NYC DOT)",
+      "officialUrl": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
+      "sourceUrl": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
+      "social": [
+        {
+          "platform": "YouTube (third-party ride)",
+          "url": "https://www.youtube.com/watch?v=bxgMWN-KXXo",
+          "note": "Ferry ride video; not an NYC DOT post"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "name": "New York Public Library, Stephen A. Schwarzman Building",
+      "category": "Architecture / reading rooms",
+      "area": "Midtown / Bryant Park",
+      "address": "Fifth Avenue and 42nd Street, New York, NY 10018",
+      "hours": "Mon 10:00–18:00; Tue 10:00–20:00; Wed 10:00–20:00; Thu 10:00–18:00; Fri 10:00–18:00; Sat 10:00–18:00; Sun 13:00–17:00",
+      "exceptions": "Division hours may vary. Rose Main Reading Room visiting hour 10:00–11:00 Mon–Sat; last entry 10:50. Closed on listed holidays.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.nypl.org/locations/schwarzman",
+      "sourceUrl": "https://www.nypl.org/locations/schwarzman/research",
+      "social": [],
+      "flags": [
+        "Different NYPL official pages displayed different weeks' hours; re-check before visit",
+        "No social link verified"
+      ]
     }
-  ],
-  "flags": [
-    "A-01 … A-06: items where the venue's own page does not state the value (Met public hours, AMNH ticket price, Statue of Liberty ferry price, 9/11 museum price, NYPL daily hours, Katz's opening hours). These are shown as blank with an 'unverified' chip rather than copied from secondary sources.",
-    "The High Line's winter hours (07:00–20:00, 1 Dec–31 Mar) shorten February sightseeing days; plan outdoor walks before 20:00.",
-    "The 9/11 Museum is closed most Tuesdays — if the trip lands on a Tuesday, swap in MoMA (open daily) or the Met.",
-    "Social-media handles for ACTIVITIES remain unverified. Rather than guess a handle (see the @crownshy trap in flag S-01), the social columns are blank pending review."
   ]
 }
