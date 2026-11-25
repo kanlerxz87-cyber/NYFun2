@@ -1,0 +1,737 @@
+{
+  "note": "Roster transcribed from the MICHELIN Guide official New York 'all starred' selection (filter counts 5 / 14 / 50 = 69) and the official 2025 ceremony article. Names/URLs/cuisine as published by MICHELIN Guide. Per-restaurant hours, website and social links are filled ONLY where verified; blank = unverified.",
+  "retrieved": "2026-11-25",
+  "official_counts": {
+    "three_star": 5,
+    "two_star": 14,
+    "one_star": 50,
+    "starred_total": 69,
+    "bib_gourmand": 76,
+    "selected": 224
+  },
+  "rows": [
+    {
+      "name": "Eleven Madison Park",
+      "stars": 3,
+      "cuisine": "Contemporary, Vegan",
+      "area": "Flatiron",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/eleven-madison-park",
+      "address": "11 Madison Ave., New York, NY, 10010",
+      "website": "https://www.elevenmadisonpark.com/",
+      "instagram": "https://www.instagram.com/elevenmadisonpark/",
+      "phone": "+1 212-889-0905",
+      "hours": {
+        "mon": "17:30–22:00",
+        "tue": "17:30–22:00",
+        "wed": "17:30–22:00",
+        "thu": "17:30–22:00",
+        "fri": "12:00–13:00, 17:30–23:00",
+        "sat": "12:00–13:00, 17:30–23:00",
+        "sun": "12:00–13:00, 17:30–23:00"
+      },
+      "hours_source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/eleven-madison-park",
+      "price_note": "Tasting menu only; MICHELIN lists the price band $$$$ but not the menu price.",
+      "verified": "v",
+      "lat": 40.7415,
+      "lon": -73.9872,
+      "price_band": "$$$$"
+    },
+    {
+      "name": "Jungsik New York",
+      "stars": 3,
+      "cuisine": "Korean, Contemporary",
+      "area": "Tribeca",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/jungsik-new-york",
+      "address": "2 Harrison St., New York, NY, 10013",
+      "website": "https://www.jungsik.com/",
+      "phone": "+1 212-219-0900",
+      "hours": {
+        "mon": "closed",
+        "tue": "17:00–21:30",
+        "wed": "17:00–21:30",
+        "thu": "17:00–21:30",
+        "fri": "17:00–21:30",
+        "sat": "17:00–21:30",
+        "sun": "17:00–21:30"
+      },
+      "hours_source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/jungsik-new-york",
+      "price_note": "Tasting menu; price not published on Michelin page",
+      "verified": "v",
+      "lat": 40.7187,
+      "lon": -74.0084,
+      "price_band": "$$$$"
+    },
+    {
+      "name": "Le Bernardin",
+      "stars": 3,
+      "cuisine": "Seafood",
+      "area": "Midtown",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-bernardin",
+      "address": "155 W. 51st St., New York, NY, 10019",
+      "website": "https://www.le-bernardin.com/",
+      "phone": "+1 212-554-1515",
+      "hours": {
+        "mon": "12:00–14:30, 17:00–22:30",
+        "tue": "12:00–14:30, 17:00–22:30",
+        "wed": "12:00–14:30, 17:00–22:30",
+        "thu": "12:00–14:30, 17:00–22:30",
+        "fri": "12:00–14:30, 17:00–23:00",
+        "sat": "17:00–23:00",
+        "sun": "closed"
+      },
+      "hours_source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-bernardin",
+      "price_note": "À la carte + tasting menus; menu prices not listed on Michelin page",
+      "verified": "v",
+      "lat": 40.7614,
+      "lon": -73.9817,
+      "price_band": "$$$$"
+    },
+    {
+      "name": "Per Se",
+      "stars": 3,
+      "cuisine": "Contemporary, French",
+      "area": "Columbus Circle",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/per-se",
+      "address": "10 Columbus Circle, New York, NY, 10019",
+      "website": "https://www.thomaskeller.com/perseny",
+      "phone": "+1 212-823-9335",
+      "hours": {
+        "mon": "16:30–21:00",
+        "tue": "16:30–21:00",
+        "wed": "16:30–21:00",
+        "thu": "16:30–21:00",
+        "fri": "16:30–21:00",
+        "sat": "16:30–21:00",
+        "sun": "16:30–21:00"
+      },
+      "hours_source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/per-se",
+      "price_note": "Tasting menu; price not published on Michelin page",
+      "verified": "v",
+      "lat": 40.7683,
+      "lon": -73.9829,
+      "price_band": "$$$$"
+    },
+    {
+      "name": "Sushi Sho",
+      "stars": 3,
+      "cuisine": "Japanese, Sushi",
+      "area": "Midtown East",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/sushi-sho-1213976",
+      "address": "3 E. 41st St., New York, NY, 10017",
+      "phone": "+1 646-863-2023",
+      "hours": {
+        "mon": "closed",
+        "tue": "17:00–22:00",
+        "wed": "17:00–22:00",
+        "thu": "17:00–22:00",
+        "fri": "17:00–22:00",
+        "sat": "17:00–22:00",
+        "sun": "17:00–22:00"
+      },
+      "hours_source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/sushi-sho-1213976",
+      "price_note": "Omakase; price not published on Michelin page",
+      "verified": "v",
+      "lat": 40.7527,
+      "lon": -73.9808,
+      "price_band": "$$$$"
+    },
+    {
+      "name": "Aquavit",
+      "stars": 2,
+      "cuisine": "Scandinavian, Contemporary",
+      "area": "Midtown East",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/aquavit",
+      "verified": "v",
+      "address": "65 E. 55th St., New York, NY, 10022",
+      "price_band": "$$$$",
+      "website": "https://www.aquavit.org/",
+      "phone": "+1 212-307-7311",
+      "booking": "Tock (exploretock.com/aquavit)",
+      "hours_source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/aquavit",
+      "hours": {
+        "mon": "12:00–14:00, 17:30–21:00",
+        "tue": "12:00–14:00, 17:30–21:00",
+        "wed": "12:00–14:00, 17:30–21:00",
+        "thu": "12:00–14:00, 17:30–21:00",
+        "fri": "12:00–14:00, 17:30–21:30",
+        "sat": "17:00–21:30",
+        "sun": "closed"
+      },
+      "price_note": "Lunch and dinner tasting menus; MICHELIN lists the price band $$$$ but not the menu price."
+    },
+    {
+      "name": "Aska",
+      "stars": 2,
+      "cuisine": "Scandinavian, Contemporary",
+      "area": "Williamsburg, Brooklyn",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/brooklyn/restaurant/aska",
+      "verified": "f",
+      "address": "47 S. 5th St., Brooklyn, NY, 11249",
+      "price_band": "$$$$",
+      "website": "https://askanyc.com/",
+      "phone": "+1 929-337-6792",
+      "booking": "Restaurant manages its own bookings — contact directly (MICHELIN states no booking partner)",
+      "note": "Address, price band, website, phone and booking route verified. Weekly hours were not captured."
+    },
+    {
+      "name": "Atera",
+      "stars": 2,
+      "cuisine": "Contemporary",
+      "area": "Tribeca",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atera",
+      "verified": "f",
+      "address": "77 Worth St., New York, NY, 10013",
+      "price_band": "$$$$",
+      "website": "https://ateranyc.com/",
+      "phone": "+1 212-226-1444",
+      "booking": "Tock (exploretock.com/atera)",
+      "note": "Address, price band, website, phone and booking route verified. Weekly hours were not captured."
+    },
+    {
+      "name": "Atomix",
+      "stars": 2,
+      "cuisine": "Korean",
+      "area": "Koreatown/NoMad",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atomix",
+      "verified": "u",
+      "price_band": "$$$$"
+    },
+    {
+      "name": "Blue Hill at Stone Barns",
+      "stars": 2,
+      "cuisine": "American",
+      "area": "Tarrytown, NY (outside NYC)",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/tarrytown/restaurant/blue-hill-at-stone-barns",
+      "note": "Not in the five boroughs — cannot meet a ≤1 h subway/bus rule; excluded from hotel proximity scoring.",
+      "verified": "v",
+      "excluded_transit": true
+    },
+    {
+      "name": "César",
+      "stars": 2,
+      "cuisine": "Contemporary",
+      "area": "West Village",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/cesar",
+      "verified": "u"
+    },
+    {
+      "name": "Chef's Table at Brooklyn Fare",
+      "stars": 2,
+      "cuisine": "Contemporary",
+      "area": "Manhattan (relocated)",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/chef-s-table-at-brooklyn-fare",
+      "verified": "u"
+    },
+    {
+      "name": "Gabriel Kreuther",
+      "stars": 2,
+      "cuisine": "French",
+      "area": "Midtown",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/gabriel-kreuther",
+      "verified": "u"
+    },
+    {
+      "name": "Jean-Georges",
+      "stars": 2,
+      "cuisine": "Contemporary, French Contemporary",
+      "area": "Columbus Circle",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/jean-georges",
+      "address": "Trump International Hotel & Tower, 1 Central Park West, New York, NY, 10023",
+      "website": "https://www.jean-georgesrestaurant.com/",
+      "phone": "+1 212-299-3900",
+      "hours": {
+        "mon": "closed",
+        "tue": "12:00–14:00, 17:00–21:30",
+        "wed": "12:00–14:00, 17:00–21:30",
+        "thu": "12:00–14:00, 17:00–21:30",
+        "fri": "12:00–14:00, 17:00–21:30",
+        "sat": "12:00–14:00, 17:00–21:30",
+        "sun": "closed"
+      },
+      "hours_source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/jean-georges",
+      "verified": "v",
+      "lat": 40.769,
+      "lon": -73.9818,
+      "price_band": "$$$$"
+    },
+    {
+      "name": "Joo Ok",
+      "stars": 2,
+      "cuisine": "Korean",
+      "area": "Koreatown",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/joo-ok-1214822",
+      "verified": "u"
+    },
+    {
+      "name": "Masa",
+      "stars": 2,
+      "cuisine": "Japanese",
+      "area": "Columbus Circle",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/masa",
+      "note": "Demoted from three to two stars in the 2025 selection.",
+      "verified": "u"
+    },
+    {
+      "name": "odo",
+      "stars": 2,
+      "cuisine": "Japanese",
+      "area": "Flatiron",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/odo",
+      "verified": "u"
+    },
+    {
+      "name": "Saga",
+      "stars": 2,
+      "cuisine": "Contemporary",
+      "area": "Financial District",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/saga",
+      "verified": "u"
+    },
+    {
+      "name": "Sushi Noz",
+      "stars": 2,
+      "cuisine": "Japanese",
+      "area": "Upper East Side",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/sushi-noz",
+      "verified": "u"
+    },
+    {
+      "name": "The Modern",
+      "stars": 2,
+      "cuisine": "Contemporary",
+      "area": "Midtown (MoMA)",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/the-modern",
+      "verified": "u",
+      "price_band": "$$$$"
+    },
+    {
+      "name": "63 Clinton",
+      "stars": 1,
+      "cuisine": "Contemporary",
+      "area": "Lower East Side",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/63-clinton",
+      "verified": "u"
+    },
+    {
+      "name": "Bar Miller",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "East Village",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/bar-miller",
+      "verified": "u"
+    },
+    {
+      "name": "bōm",
+      "stars": 1,
+      "cuisine": "Korean",
+      "area": "Chelsea",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/bom",
+      "verified": "u"
+    },
+    {
+      "name": "Bridges",
+      "stars": 1,
+      "cuisine": "Contemporary",
+      "area": "Chinatown",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/bridges-1216261",
+      "note": "New star in 2025.",
+      "verified": "u"
+    },
+    {
+      "name": "Café Boulud at Maison Barnes",
+      "stars": 1,
+      "cuisine": "French",
+      "area": "Upper East Side",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/cafe-boulud",
+      "verified": "u"
+    },
+    {
+      "name": "Casa Mono",
+      "stars": 1,
+      "cuisine": "Spanish",
+      "area": "Gramercy",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/casa-mono",
+      "verified": "u"
+    },
+    {
+      "name": "Corima",
+      "stars": 1,
+      "cuisine": "Mexican",
+      "area": "SoHo/Nolita",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/corima",
+      "verified": "u"
+    },
+    {
+      "name": "Cote",
+      "stars": 1,
+      "cuisine": "Korean",
+      "area": "Flatiron",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/cote",
+      "verified": "u"
+    },
+    {
+      "name": "Crown Shy",
+      "stars": 1,
+      "cuisine": "Contemporary",
+      "area": "Financial District",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/crown-shy",
+      "verified": "u"
+    },
+    {
+      "name": "Daniel",
+      "stars": 1,
+      "cuisine": "French",
+      "area": "Upper East Side",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/daniel",
+      "verified": "u"
+    },
+    {
+      "name": "Dirt Candy",
+      "stars": 1,
+      "cuisine": "Vegetarian",
+      "area": "Lower East Side",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/dirt-candy",
+      "green_star": true,
+      "verified": "u"
+    },
+    {
+      "name": "Essential by Christophe",
+      "stars": 1,
+      "cuisine": "French Contemporary",
+      "area": "Upper West Side",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/essential-by-christophe",
+      "verified": "u"
+    },
+    {
+      "name": "Estela",
+      "stars": 1,
+      "cuisine": "Contemporary",
+      "area": "Nolita",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/estela",
+      "verified": "u"
+    },
+    {
+      "name": "Family Meal at Blue Hill",
+      "stars": 1,
+      "cuisine": "American",
+      "area": "West Village",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/blue-hill",
+      "green_star": true,
+      "verified": "u"
+    },
+    {
+      "name": "Francie",
+      "stars": 1,
+      "cuisine": "Contemporary",
+      "area": "Williamsburg, Brooklyn",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/brooklyn/restaurant/francie",
+      "verified": "u"
+    },
+    {
+      "name": "Frevo",
+      "stars": 1,
+      "cuisine": "Contemporary",
+      "area": "Greenwich Village",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/frevo",
+      "verified": "u"
+    },
+    {
+      "name": "Gramercy Tavern",
+      "stars": 1,
+      "cuisine": "Contemporary",
+      "area": "Gramercy",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/gramercy-tavern",
+      "verified": "u"
+    },
+    {
+      "name": "Huso",
+      "stars": 1,
+      "cuisine": "Contemporary",
+      "area": "Tribeca",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/huso-1218089",
+      "note": "New star in 2025.",
+      "verified": "u"
+    },
+    {
+      "name": "Icca",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "Tribeca",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/icca",
+      "verified": "u"
+    },
+    {
+      "name": "Jeju Noodle Bar",
+      "stars": 1,
+      "cuisine": "Korean",
+      "area": "West Village",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/jeju-noodle-bar",
+      "verified": "u"
+    },
+    {
+      "name": "Jōji",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "Midtown (Grand Central)",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/joji",
+      "verified": "u"
+    },
+    {
+      "name": "Jua",
+      "stars": 1,
+      "cuisine": "Korean",
+      "area": "Flatiron",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/jua",
+      "verified": "u"
+    },
+    {
+      "name": "Kochi",
+      "stars": 1,
+      "cuisine": "Korean",
+      "area": "Hell's Kitchen",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/kochi",
+      "verified": "u"
+    },
+    {
+      "name": "Kosaka",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "Chelsea",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/kosaka",
+      "verified": "u"
+    },
+    {
+      "name": "L'Abeille",
+      "stars": 1,
+      "cuisine": "French",
+      "area": "Tribeca",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/l%E2%80%99abeille",
+      "verified": "u"
+    },
+    {
+      "name": "Le Coucou",
+      "stars": 1,
+      "cuisine": "French",
+      "area": "SoHo",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-coucou",
+      "verified": "u"
+    },
+    {
+      "name": "Le Pavillon",
+      "stars": 1,
+      "cuisine": "French",
+      "area": "Midtown East",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-pavillon-1192744",
+      "verified": "u"
+    },
+    {
+      "name": "Mari",
+      "stars": 1,
+      "cuisine": "Korean",
+      "area": "Midtown West",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/mari",
+      "verified": "u"
+    },
+    {
+      "name": "Meju",
+      "stars": 1,
+      "cuisine": "Korean",
+      "area": "Long Island City, Queens",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/queens/restaurant/meju",
+      "verified": "u"
+    },
+    {
+      "name": "Muku",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "Tribeca",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/muku",
+      "note": "New star in 2025.",
+      "verified": "u"
+    },
+    {
+      "name": "Noda",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "Flatiron",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/noda",
+      "verified": "u"
+    },
+    {
+      "name": "Nōksu",
+      "stars": 1,
+      "cuisine": "Contemporary",
+      "area": "Herald Square",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/noksu",
+      "verified": "u"
+    },
+    {
+      "name": "Noz 17",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "Chelsea",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/noz17",
+      "verified": "u"
+    },
+    {
+      "name": "Oiji Mi",
+      "stars": 1,
+      "cuisine": "Korean",
+      "area": "Flatiron",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/oiji-mi",
+      "verified": "u"
+    },
+    {
+      "name": "Oxomoco",
+      "stars": 1,
+      "cuisine": "Mexican",
+      "area": "Greenpoint, Brooklyn",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/brooklyn/restaurant/oxomoco",
+      "verified": "u"
+    },
+    {
+      "name": "Restaurant Yuu",
+      "stars": 1,
+      "cuisine": "French Contemporary",
+      "area": "Brooklyn",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/brooklyn/restaurant/restaurant-yuu",
+      "verified": "u"
+    },
+    {
+      "name": "Rezdôra",
+      "stars": 1,
+      "cuisine": "Italian",
+      "area": "Flatiron",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/rezdora-osteria-emiliana",
+      "verified": "u"
+    },
+    {
+      "name": "Semma",
+      "stars": 1,
+      "cuisine": "Indian",
+      "area": "West Village",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/semma",
+      "verified": "u"
+    },
+    {
+      "name": "Shion 69 Leonard Street",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "Tribeca",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/shoji-at-69-leonard",
+      "verified": "u"
+    },
+    {
+      "name": "Shmoné",
+      "stars": 1,
+      "cuisine": "Israeli",
+      "area": "Greenwich Village",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/shmone",
+      "verified": "u"
+    },
+    {
+      "name": "Shota Omakase",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "Williamsburg, Brooklyn",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/brooklyn/restaurant/shota-omakase",
+      "verified": "u"
+    },
+    {
+      "name": "Sushi Nakazawa New York",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "West Village",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/sushi-nakazawa",
+      "verified": "u"
+    },
+    {
+      "name": "Tempura Matsui",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "Midtown East",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/tempura-matsui",
+      "verified": "u"
+    },
+    {
+      "name": "The Four Horsemen",
+      "stars": 1,
+      "cuisine": "American",
+      "area": "Williamsburg, Brooklyn",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/brooklyn/restaurant/the-four-horsemen",
+      "verified": "u"
+    },
+    {
+      "name": "Torien",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "NoHo",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/torien",
+      "verified": "u"
+    },
+    {
+      "name": "Torrisi",
+      "stars": 1,
+      "cuisine": "Contemporary",
+      "area": "Nolita",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/torrisi",
+      "verified": "u"
+    },
+    {
+      "name": "Tsukimi",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "East Village",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/tsukimi",
+      "verified": "u"
+    },
+    {
+      "name": "Tuome",
+      "stars": 1,
+      "cuisine": "Fusion",
+      "area": "East Village",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/tuome",
+      "verified": "u"
+    },
+    {
+      "name": "Yamada",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "Chinatown",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/yamada",
+      "note": "New star in 2025.",
+      "verified": "u"
+    },
+    {
+      "name": "YingTao",
+      "stars": 1,
+      "cuisine": "Contemporary",
+      "area": "NoMad",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/yingtao",
+      "verified": "u"
+    },
+    {
+      "name": "Yoshino",
+      "stars": 1,
+      "cuisine": "Japanese",
+      "area": "NoMad",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/yoshino-1185037",
+      "verified": "u"
+    },
+    {
+      "name": "La Bastide by Andrea Calstier",
+      "stars": 1,
+      "cuisine": "French",
+      "area": "North Salem, NY (outside NYC)",
+      "michelin_url": "https://guide.michelin.com/en/new-york-state/north-salem/restaurant/la-bastide-by-andrea-calstier",
+      "note": "In the NYC Guide but ~35 mi north of Manhattan — outside the ≤1 h subway/bus rule; excluded from proximity scoring.",
+      "verified": "v",
+      "excluded_transit": true
+    }
+  ],
+  "roster_flags": [
+    "Michelin's live 'all starred' filter reports 69 starred (5 / 14 / 50) and 76 Bib Gourmand, but the official 18 Nov 2025 ceremony article lists 5 / 15 / 52. The difference appears in the two-star tier (article has 15; filter 14) and one-star tier (article 52; filter 50). Rows above follow the live filter/starred pages (the current public selection). See Flagged for Review item F-01.",
+    "Aska / Francie / Oxomoco / Restaurant Yuu / Shota Omakase / The Four Horsemen are in Brooklyn; Meju is in Queens. They are stars in the same NYC selection but travel time from Manhattan hotels may exceed 1 h by subway/bus — must be checked per hotel, not assumed."
+  ],
+  "price_band_note": "MICHELIN publishes a four-step price indicator ($$$$ most expensive) rather than a menu price. The band is an official MICHELIN field and is shown in its own column; it is NOT a dollar amount and must not be read as one."
+}

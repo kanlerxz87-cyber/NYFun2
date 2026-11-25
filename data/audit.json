@@ -1,0 +1,251 @@
+{
+  "as_of": "2026-11-25",
+  "intro": "A line-by-line review of what this project claims, what it can support, and what it cannot. Every finding has a status and a next action. This page exists so a reviewer does not have to trust the site — they can check it.",
+  "headline": {
+    "rows_in_roster": 72,
+    "rows_fully_verified": 9,
+    "rows_verified_with_gaps": 2,
+    "hotels_shortlisted": 5,
+    "hotels_with_every_room_detail": 4,
+    "transit_legs_measured": 25,
+    "activities_tabled": 9,
+    "activities_fully_verified": 5,
+    "open_flags": 14,
+    "open_questions": 12
+  },
+  "findings": [
+    {
+      "id": "R-01",
+      "area": "Michelin roster",
+      "claim": "There are 69 starred restaurants in New York (5 x 3-star, 14 x 2-star, 50 x 1-star).",
+      "evidence": "guide.michelin.com all-starred listing, two pages, counted row by row on 2026-11-25.",
+      "status": "verified",
+      "caveat": "The official 2025 ceremony article lists 5/15/52. See F-01.",
+      "link": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred"
+    },
+    {
+      "id": "R-02",
+      "area": "Michelin roster",
+      "claim": "There are 76 Bib Gourmand restaurants in New York.",
+      "evidence": "guide.michelin.com Bib Gourmand listing, two pages, counted 2026-11-25.",
+      "status": "verified",
+      "caveat": "Counted, not named row by row in this build (F-13).",
+      "link": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/bib-gourmand"
+    },
+    {
+      "id": "R-03",
+      "area": "Michelin roster",
+      "claim": "There are 224 'Selected' (Guide-listed, no distinction) restaurants in New York.",
+      "evidence": "Live filter count on the Michelin site, 2026-11-25.",
+      "status": "verified",
+      "caveat": "A count only; no individual rows were tabled.",
+      "link": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants"
+    },
+    {
+      "id": "R-04",
+      "area": "Restaurant detail",
+      "claim": "Nine restaurants have captured detail (address, cuisine, price band, website, phone, booking route); seven of those also have full weekly hours.",
+      "evidence": "MICHELIN detail pages for Eleven Madison Park, Jungsik, Le Bernardin, Per Se, Sushi Sho, Jean-Georges, Atomix, Aquavit (hours + all fields), and Aska / Atera (all fields except hours).",
+      "status": "verified",
+      "caveat": "MICHELIN is authoritative for stars, price band and hours, but is a secondary source for a restaurant's own phone and booking partner (see S-12).",
+      "link": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-bernardin"
+    },
+    {
+      "id": "R-05",
+      "area": "Restaurant detail",
+      "claim": "The remaining 60 starred rows have a name, star tier, cuisine and area, and a MICHELIN link, but no hours.",
+      "evidence": "The roster pages supply name/tier/cuisine/location; hours require a per-restaurant page fetch.",
+      "status": "partial",
+      "caveat": "Hours require one page fetch per restaurant. 9 of 69 are done; each further row is a single fetch, so the gap is mechanical rather than blocked.",
+      "link": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred"
+    },
+    {
+      "id": "R-06",
+      "area": "Hotels",
+      "claim": "Five Manhattan hotels satisfy queen-or-larger bed and a private bathroom for 2027-02-15 to 02-22.",
+      "evidence": "Each property page's room table was opened with the exact dates; bed type, room size and bathroom wording captured per room.",
+      "status": "verified",
+      "caveat": "The Benjamin's bath wording was not captured (F-04).",
+      "link": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
+    },
+    {
+      "id": "R-07",
+      "area": "Hotels",
+      "claim": "Eurostars Wall Street is the cheapest verified queen-bed option at $848 for 7 nights.",
+      "evidence": "Property page, Queen Room row, displayed stay total $848, tax $149.66 shown separately.",
+      "status": "verified",
+      "caveat": "Pre-tax, non-refundable Partner Offer (F-03, Q-REFUND).",
+      "link": "https://www.booking.com/hotel/us/exchange-manhattan.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
+    },
+    {
+      "id": "R-08",
+      "area": "Transit",
+      "claim": "Every one of the five hotels reaches every sampled Michelin cluster within 37 minutes.",
+      "evidence": "25 door-to-door Google Maps transit queries, 2026-11-25 17:14-17:31 ET.",
+      "status": "verified",
+      "caveat": "One weekday-evening sample; re-run before travel (F-11).",
+      "link": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Aska+Brooklyn&travelmode=transit"
+    },
+    {
+      "id": "R-09",
+      "area": "Transit",
+      "claim": "Brooklyn stars are reachable in under an hour from every shortlisted hotel.",
+      "evidence": "Aska (Williamsburg) legs: 30-37 min from all five hotels; the fastest downtown route is the NYC Ferry, not the L train.",
+      "status": "verified",
+      "caveat": "Only Aska was used as the Brooklyn anchor; Francie, Shota and The Four Horsemen were not timed individually.",
+      "link": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Aska+Brooklyn&travelmode=transit"
+    },
+    {
+      "id": "R-10",
+      "area": "Activities",
+      "claim": "MoMA, Central Park, the High Line and Top of the Rock have fully verified hours and prices.",
+      "evidence": "moma.org/visit, centralparknyc.org/visit, thehighline.org/visit, rockefellercenter.com ticket page.",
+      "status": "verified",
+      "caveat": "The High Line's winter window (until 20:00) applies to a February trip.",
+      "link": "https://www.thehighline.org/visit/"
+    },
+    {
+      "id": "R-11",
+      "area": "Activities",
+      "claim": "The Statue of Liberty is open every day 09:00-16:30 and closes only on Thanksgiving and Christmas.",
+      "evidence": "nps.gov/stli/planyourvisit/hours.htm, last updated 2026-04-06.",
+      "status": "verified",
+      "caveat": "Neither closure falls in the trip window; the ferry is a separate third-party purchase.",
+      "link": "https://www.nps.gov/stli/planyourvisit/hours.htm"
+    },
+    {
+      "id": "R-12",
+      "area": "Activities",
+      "claim": "Four venues' hours or prices could not be verified from their own pages.",
+      "evidence": "The Met (public hours), AMNH (ticket price), NYPL (daily hours), Katz's (opening hours).",
+      "status": "blocked",
+      "caveat": "Left blank on purpose rather than copied from a secondary source (F-07).",
+      "link": "https://www.metmuseum.org/plan-your-visit"
+    },
+    {
+      "id": "R-13",
+      "area": "Pricing strategy",
+      "claim": "2027-02-15 to 02-22 is the cheapest of the five 7-night windows tested.",
+      "evidence": "Booking.com searches for five consecutive windows, cheapest qualifying row captured for each.",
+      "status": "verified",
+      "caveat": "Windows were compared on displayed pre-tax totals and several carried a dated promotion (F-12).",
+      "link": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
+    },
+    {
+      "id": "R-14",
+      "area": "Social media",
+      "claim": "Instagram handles were verified for a small subset and rejected for two restaurants.",
+      "evidence": "@crownshy resolves to an unrelated 4-follower account; @jungsik is a personal account.",
+      "status": "partial",
+      "caveat": "Blank rather than wrong (F-06).",
+      "link": "https://www.instagram.com/crownshy/"
+    },
+    {
+      "id": "R-15",
+      "area": "Method",
+      "claim": "No value on this site was estimated, interpolated or remembered.",
+      "evidence": "Every table cell is either a captured value with a link to the page it came from, or blank with an unverified chip. MICHELIN's price band is displayed as its own field and is never converted into a dollar estimate.",
+      "status": "verified",
+      "caveat": "MICHELIN and Booking.com are authoritative but secondary for a restaurant's own phone number and a hotel's own facilities; the suggestions list proposes adding a 'primary source' chip to close that gap (S-12).",
+      "link": "https://github.com/kanlerxz87-cyber/NYFun2/blob/main/data/restaurants.json"
+    }
+  ],
+  "sources_registry": [
+    {
+      "name": "MICHELIN Guide - all starred",
+      "url": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred",
+      "used_for": "star roster, tiers, cuisine, location"
+    },
+    {
+      "name": "MICHELIN Guide - Bib Gourmand",
+      "url": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/bib-gourmand",
+      "used_for": "Bib count"
+    },
+    {
+      "name": "MICHELIN Guide - 2025 ceremony article",
+      "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
+      "used_for": "named 2025 list and the 5/15/52 discrepancy"
+    },
+    {
+      "name": "MICHELIN Guide - restaurant detail pages",
+      "url": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/",
+      "used_for": "address, phone, website, booking partner, weekly hours"
+    },
+    {
+      "name": "Booking.com - Manhattan search",
+      "url": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York",
+      "used_for": "hotel discovery and price ranking"
+    },
+    {
+      "name": "Booking.com - property pages",
+      "url": "https://www.booking.com/hotel/us/",
+      "used_for": "room-level bed, size, bathroom, rate terms"
+    },
+    {
+      "name": "Google Maps - transit directions",
+      "url": "https://www.google.com/maps/dir/?api=1&travelmode=transit",
+      "used_for": "every transit time on the site"
+    },
+    {
+      "name": "NPS - Statue of Liberty",
+      "url": "https://www.nps.gov/stli/planyourvisit/hours.htm",
+      "used_for": "hours and holiday closures"
+    },
+    {
+      "name": "MoMA",
+      "url": "https://www.moma.org/visit/",
+      "used_for": "hours, prices, closures"
+    },
+    {
+      "name": "Central Park Conservancy",
+      "url": "https://www.centralparknyc.org/visit",
+      "used_for": "park hours"
+    },
+    {
+      "name": "The High Line",
+      "url": "https://www.thehighline.org/visit/",
+      "used_for": "seasonal hours, park rules"
+    },
+    {
+      "name": "Rockefeller Center",
+      "url": "https://www.rockefellercenter.com/tickets/top-of-the-rock-observation-deck/",
+      "used_for": "observation deck hours and ticket tiers"
+    },
+    {
+      "name": "AMNH",
+      "url": "https://www.amnh.org/plan-your-visit/hours",
+      "used_for": "hours, closures, extended dates"
+    },
+    {
+      "name": "The Met",
+      "url": "https://www.metmuseum.org/plan-your-visit",
+      "used_for": "admissions, address (hours unresolved)"
+    },
+    {
+      "name": "9/11 Memorial & Museum",
+      "url": "https://www.911memorial.org/visit",
+      "used_for": "hours, closures, advance ticket rule"
+    },
+    {
+      "name": "NYPL Schwarzman Building",
+      "url": "https://www.nypl.org/locations/schwarzman",
+      "used_for": "visiting-hour rule, renovation note"
+    },
+    {
+      "name": "Katz's Delicatessen",
+      "url": "https://katzsdelicatessen.com/store-menu",
+      "used_for": "menu prices"
+    },
+    {
+      "name": "Nominatim / OpenStreetMap",
+      "url": "https://nominatim.openstreetmap.org/",
+      "used_for": "coordinates"
+    }
+  ],
+  "method_notes": [
+    "Counts come from paginated listings: the all-starred page truncates at 48 rows, so page 2 was counted separately.",
+    "Booking.com room tables were read at room level; a hotel's cheapest advertised room is frequently a twin or full bed and therefore fails the queen requirement.",
+    "Transit times are the fastest itinerary Google returned at capture, not the default selected option.",
+    "Where a venue's own page omitted a value, the cell is blank. Secondary sources were deliberately not used to fill it."
+  ]
+}

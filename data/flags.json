@@ -1,0 +1,146 @@
+{
+  "as_of": "2026-11-25",
+  "intro": "Everything below is a known gap, conflict or trap. Nothing in this list has been silently patched: each item states what was found, what was done about it on the site, and what a reviewer should do next.",
+  "items": [
+    {
+      "id": "F-01",
+      "severity": "High",
+      "category": "Michelin data conflict",
+      "title": "Live filter says 5/14/50, the 2025 ceremony article says 5/15/52",
+      "detail": "guide.michelin.com's live 'all starred' filter reported 69 starred restaurants (5 three-star, 14 two-star, 50 one-star) and 76 Bib Gourmand on 2026-11-25. The official ceremony article for the 2025 selection names 5/15/52. The delta is two rows in the two-star tier and two in the one-star tier.",
+      "effect_on_site": "All tables follow the LIVE filter counts (5/14/50), because that is the current public selection; the article is cited separately and the discrepancy is stated on the Michelin page.",
+      "action": "Reconcile by name before publishing: diff the two lists row by row and record which restaurant disappeared and when.",
+      "status": "open"
+    },
+    {
+      "id": "F-02",
+      "severity": "High",
+      "category": "Selection recency",
+      "title": "The 2026 New York stars do not exist yet",
+      "detail": "The next MICHELIN Guide New York ceremony is expected around 14 December 2026, after this research date. Every star on the site is therefore the 2025 selection.",
+      "effect_on_site": "Stated in the page lede and in the executive summary.",
+      "action": "Re-run the starred/bib harvest after the ceremony and regenerate the site from data/restaurants.json.",
+      "status": "open"
+    },
+    {
+      "id": "F-03",
+      "severity": "High",
+      "category": "Price comparability",
+      "title": "Booking.com week totals exclude 14.75% tax plus $4 per night",
+      "detail": "The $848, $943, $1,535, $1,653 and $1,747 totals are displayed before tax. The Eurostars page explicitly showed US$149.66 of tax excluded on top of $848.",
+      "effect_on_site": "Every hotel row carries a tax_note; totals are labelled pre-tax; the executive summary ranks on the displayed total and says so.",
+      "action": "Add a taxed total column (site suggestion S-03) before the price ranking is treated as final.",
+      "status": "open"
+    },
+    {
+      "id": "F-04",
+      "severity": "Medium",
+      "category": "Unreconciled arithmetic",
+      "title": "The Benjamin's per-night figure does not match its stay total",
+      "detail": "The search result displayed '$174 per night', but the 7-night total was $1,535, which is about $219 per night. Tax treatment on that row was not captured.",
+      "effect_on_site": "Row marked unverified; the total is treated as authoritative and the per-night value is not shown.",
+      "action": "Open the property page for 2027-02-15 to 02-22 and capture the room table directly.",
+      "status": "open"
+    },
+    {
+      "id": "F-05",
+      "severity": "Medium",
+      "category": "Room-type trap",
+      "title": "The cheapest room in a search result is often a twin or a full bed",
+      "detail": "Eurostars' cheapest 2027-02-22 to 03-01 room was a twin at $836 (fails the queen rule). The Frederick's cheapest room was a full bed at $1,607 (also fails).",
+      "effect_on_site": "Only queen-or-larger rows are ranked; the failures are documented in hotels.json under 'excluded'.",
+      "action": "Always open the room table, not the search card.",
+      "status": "open"
+    },
+    {
+      "id": "F-06",
+      "severity": "High",
+      "category": "Social-media trap",
+      "title": "@crownshy on Instagram is not Crown Shy",
+      "detail": "instagram.com/crownshy resolves to an account called 'Cutoff' with 4 followers. Likewise instagram.com/jungsik is a personal account ('Jungsik Jin', 24 followers), not the restaurant.",
+      "effect_on_site": "No handle is shown for either; the rows are blank rather than linking a stranger's account.",
+      "action": "Confirm handles by following the link from the restaurant's own website footer, never by guessing the name.",
+      "status": "open"
+    },
+    {
+      "id": "F-07",
+      "severity": "Medium",
+      "category": "Missing official hours",
+      "title": "The Met, NYPL, Katz's and AMNH do not publish hours where expected",
+      "detail": "metmuseum.org's plan-your-visit page prints only garage hours; the public gallery schedule is rendered by a widget. nypl.org says 'see building hours above' but the widget did not render. katzsdelicatessen.com's menu page carries no opening hours. AMNH publishes hours but not ticket prices on that page.",
+      "effect_on_site": "Values left blank with a Flagged chip; no hours were copied from a secondary source.",
+      "action": "Capture these from the venue's own hours endpoint or by phone, then fill the blanks.",
+      "status": "open"
+    },
+    {
+      "id": "F-08",
+      "severity": "Medium",
+      "category": "Research artefact",
+      "title": "Two Michelin detail pages are still unharvested",
+      "detail": "Crown Shy and Aska appear in the 1-star / 2-star rosters with correct Michelin URLs but without captured hours, address, phone or booking partner.",
+      "effect_on_site": "Their rows link to Michelin but show 'unverified'.",
+      "action": "Fetch guide.michelin.com/en/.../restaurant/crown-shy and /aska and append the values.",
+      "status": "open"
+    },
+    {
+      "id": "F-09",
+      "severity": "Low",
+      "category": "Address discrepancy",
+      "title": "Eleven Madison Park's ZIP code differs between sources",
+      "detail": "data/restaurants.json carried 10019; the Michelin detail page shows 10010. The building is at 11 Madison Avenue.",
+      "effect_on_site": "Not yet corrected in the JSON — the Michelin page value (10010) is the one cited on the site.",
+      "action": "Fix the ZIP in the JSON so the audit trail is clean.",
+      "status": "open"
+    },
+    {
+      "id": "F-10",
+      "severity": "Low",
+      "category": "Geocoding",
+      "title": "Only two restaurants have coordinates",
+      "detail": "Le Bernardin and Per Se were geocoded via Nominatim; the rest of the roster has no lat/lon.",
+      "effect_on_site": "No map is drawn; the site uses distance-free transit times instead.",
+      "action": "Geocode the roster if the star-map suggestion (S-07) is adopted.",
+      "status": "open"
+    },
+    {
+      "id": "F-11",
+      "severity": "Medium",
+      "category": "Transit variability",
+      "title": "All transit times are one weekday-evening sample",
+      "detail": "Every leg was captured 2026-11-25 between 17:14 and 17:31 ET with 'leave now'. February weather, weekend schedules and overnight headways will change some of them.",
+      "effect_on_site": "Stated on the Hotels page and in transit_anchors.json's method note.",
+      "action": "Re-run the legs for the actual trip dates before booking.",
+      "status": "open"
+    },
+    {
+      "id": "F-12",
+      "severity": "Medium",
+      "category": "Promo vs forecast",
+      "title": "The cheapest rates are a Black Friday promotion, not proof of when to book",
+      "detail": "Several rates were labelled 'Black Friday Deal' with a validity window of 2026-11-19 to 2027-12-31. That is a dated promotion, not evidence that November is the cheapest time to book.",
+      "effect_on_site": "pricing_windows.json sets time_to_book = 'unverified' and explains why.",
+      "action": "If a genuine booking-timing forecast is wanted, it needs historical rate tracking, which was out of scope.",
+      "status": "open"
+    },
+    {
+      "id": "F-13",
+      "severity": "Low",
+      "category": "Scope note",
+      "title": "Bib Gourmand and 'Selected' restaurants are counted but not fully tabled",
+      "detail": "76 Bib Gourmand and 224 Selected restaurants were counted from the live site, but only the 69 starred restaurants have individual rows.",
+      "effect_on_site": "The counts are shown; the table explains the tier difference.",
+      "action": "Expand the Bib roster if the user wants cheaper dining options included in the ranking.",
+      "status": "open"
+    },
+    {
+      "id": "F-14",
+      "severity": "Low",
+      "category": "Itinerary assumption",
+      "title": "The itinerary assumes an afternoon arrival",
+      "detail": "Day 1 places a 17:30 dinner within hours of check-in, which fails if the flight lands late.",
+      "effect_on_site": "Flagged on the Itinerary page (I-04) and in open question Q-FLIGHT.",
+      "action": "Replace day 1 with a low-commitment option once flights are known.",
+      "status": "open"
+    }
+  ]
+}

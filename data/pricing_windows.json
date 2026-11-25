@@ -1,0 +1,27 @@
+{
+  "as_of": "2026-11-25",
+  "method": "Booking.com public search, Manhattan, 2 adults, 1 room, USD, 4–5 star filter, sorted price (lowest first). Each figure is the cheapest qualifying room's displayed stay total for that exact date window, captured on 2026-11-25. Displayed totals exclude taxes/fees unless the line says 'before taxes'. Re-verify before booking.",
+  "search_url_template": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin={checkin}&checkout={checkout}&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5",
+  "windows": [
+    {"label": "W1", "checkin": "2027-02-15", "checkout": "2027-02-22", "nights": 7, "cheapest_hotel": "Eurostars Wall Street", "cheapest_room": "Queen Room", "total_usd": 848, "per_night_usd": 121, "bronze": "2026-11-25", "source": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5", "verified": "v"},
+    {"label": "W2", "checkin": "2027-02-22", "checkout": "2027-03-01", "nights": 7, "cheapest_hotel": "Eurostars Wall Street", "cheapest_room": "Double Room (twin)", "total_usd": 836, "per_night_usd": 119, "note": "Cheapest room is a twin — fails the queen-bed requirement; next queen room must be re-checked.", "retrieved": "2026-11-25", "source": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-22&checkout=2027-03-01&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5", "verified": "v"},
+    {"label": "W3", "checkin": "2027-03-01", "checkout": "2027-03-08", "nights": 7, "cheapest_hotel": "DoubleTree by Hilton New York Downtown", "cheapest_room": "King Room", "total_usd": 1087, "per_night_usd": 155, "retrieved": "2026-11-25", "source": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5", "verified": "v"},
+    {"label": "W4", "checkin": "2027-03-08", "checkout": "2027-03-15", "nights": 7, "cheapest_hotel": "Eurostars Wall Street", "cheapest_room": "Queen Room", "total_usd": 1106, "per_night_usd": 158, "retrieved": "2026-11-25", "source": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-03-08&checkout=2027-03-15&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5", "verified": "v"},
+    {"label": "W5", "checkin": "2027-03-15", "checkout": "2027-03-22", "nights": 7, "cheapest_hotel": "Eurostars Wall Street", "cheapest_room": "Queen Room", "total_usd": 1260, "per_night_usd": 180, "retrieved": "2026-11-25", "source": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-03-15&checkout=2027-03-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5", "verified": "v"}
+  ],
+  "hotel_week_prices": {
+    "note": "Per-hotel 7-night totals for the preferred window (2027-02-15 → 2027-02-22), 2 adults, as displayed on Booking.com room tables on 2026-11-25. 'before_tax' = room total before 14.75% tax + $4/night city tax.",
+    "DoubleTree by Hilton Hotel New York City - Chelsea": {"2027-02-15": {"room": "King Room - Non-Smoking", "before_tax_usd": 942.91, "shown_total_usd": 943, "per_night_usd": 135, "note": "Black Friday Deal, 30% off, free cancellation before 2027-02-13, no prepayment. Tax excluded: 14.75% + $4/night city tax.", "source": "https://www.booking.com/hotel/us/doubletree-new-york-city-chelsea.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD", "verified": "v"}}
+  },
+  "time_to_book": {
+    "status": "unverified",
+    "finding": "Booking.com currently applies a property-declared 'Black Friday Deal' (valid on select stays 2026-11-19 → 2027-12-31) at several hotels. That is a dated promotional discount, not a forecast. No official source states the cheapest future booking date for these specific hotels; therefore no 'best time to book' date is asserted.",
+    "what_we_can_say": "For the preferred window, today's displayed 7-night total (e.g., $943 pre-tax king room at DoubleTree Chelsea) reflects a live 30% promotion. Booking.com's own price-comparison/free-cancellation terms allow holding a cancellable rate now and re-checking later.",
+    "how_to_verify": "Re-run the same saved Booking.com search weekly and log the total; the site's Booking Strategy page lists the exact saved URLs."
+  },
+  "flags": [
+    "P-01: Displayed '1 week, 2 adults' totals exclude taxes (14.75% + $4/night city tax) — true cost is higher. Booking room tables state this explicitly.",
+    "P-02: Some cheapest rooms in a window are twin/full beds (fail the queen-bed requirement) and are labelled as such.",
+    "P-03: '79% of places to stay are unavailable' banner on Booking.com for some windows indicates limited inventory in the 4–5 star band; treat all totals as volatile."
+  ]
+}
