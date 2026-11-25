@@ -24,7 +24,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T7 | Repo audit page + two-session integration log | done | arena/1a7ae497-nyfun2 | `pages/repo-audit.html` | Linked from every page nav and from the overview tile grid. |
 | T8 | Repository hygiene: licence, ignore rules, nojekyll | done | arena/1a7ae497-nyfun2 | `LICENSE`, `.gitignore`, `.nojekyll` | MIT for code, CC BY 4.0 for data and prose. |
 | T9 | Complete the Michelin catalogue to the official counters (18 of 69 starred rows today) | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/restaurants.json` | All 72 rows present (5/14/50 starred + Bib + Selected) in the namespaced kit; canonical `data/restaurants.json` still at 20 rows — merging the two is a separate decision. |
-| T10 | Per-person menu price capture for the starred restaurants | unclaimed | — | `data/restaurants.json` | Menu pages are client-rendered; needs a source that prints prices. |
+| T10 | Per-person menu price capture for the starred restaurants | in progress | arena/6f217cce-nyfun2 | `data/restaurants.json`, `COORDINATION.md` | Official menu-price verification only; leave unavailable totals blank and document gaps. |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
 
@@ -187,3 +187,6 @@ per page; no absolute claims of the form "every value is verified" remain (check
   cross-session discrepancies above — pre-tax vs all-in hotel basis, row-level queen+private-bath
   filtering in the canonical hotel set, the MICHELIN band-vs-dollar question, and the 72-vs-20 roster
   size. None was resolved unilaterally.
+
+### 2026-11-25 — session `arena/6f217cce-nyfun2` (claim)
+- Claimed T10, the only unclaimed research task, with scope limited to `data/restaurants.json` and this board. Will verify any price only from restaurant-owned official menu/booking pages; otherwise retain blank and log the gap. No root site/navigation files are in scope.
