@@ -24,7 +24,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T7 | Repo audit page + two-session integration log | done | arena/1a7ae497-nyfun2 | `pages/repo-audit.html` | Linked from every page nav and from the overview tile grid. |
 | T8 | Repository hygiene: licence, ignore rules, nojekyll | done | arena/1a7ae497-nyfun2 | `LICENSE`, `.gitignore`, `.nojekyll` | MIT for code, CC BY 4.0 for data and prose. |
 | T9 | Complete the Michelin catalogue to the official counters (18 of 69 starred rows today) | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/restaurants.json` | All 72 rows present (5/14/50 starred + Bib + Selected) in the namespaced kit; canonical `data/restaurants.json` still at 20 rows — merging the two is a separate decision. |
-| T10 | Per-person menu price capture for the starred restaurants | in progress | arena/6f217cce-nyfun2 | `data/restaurants.json`, `COORDINATION.md` | Official menu-price verification only; leave unavailable totals blank and document gaps. |
+| T10 | Per-person menu price capture for the starred restaurants | done | arena/6f217cce-nyfun2 | `data/restaurants.json`, `COORDINATION.md` | 10 current menu totals for two captured from restaurant-owned pages; 8 remaining starred venues blank and individually flagged (7 no official fixed total found; Atera price conflict). |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
 
@@ -190,3 +190,20 @@ per page; no absolute claims of the form "every value is verified" remain (check
 
 ### 2026-11-25 — session `arena/6f217cce-nyfun2` (claim)
 - Claimed T10, the only unclaimed research task, with scope limited to `data/restaurants.json` and this board. Will verify any price only from restaurant-owned official menu/booking pages; otherwise retain blank and log the gap. No root site/navigation files are in scope.
+
+### 2026-11-25 — session `arena/6f217cce-nyfun2` (T10 complete)
+- Completed the claimed T10 scope (`data/restaurants.json`, this board). Checked all 18 starred entries in the canonical table. Ten totals are arithmetic from current per-person menu prices on directly opened restaurant-owned pages/PDFs; no guide price band was converted into dollars and no à-la-carte sample bill was invented. Their official price pages are linked in each row's `officialUrl`:
+  - Eleven Madison Park: https://www.elevenmadisonpark.com/faq — $385/guest full tasting, $770 for two.
+  - Jungsik: https://www.jungsik.com/menu/ — $335/guest signature menu, $670 for two.
+  - Le Bernardin: https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf — $218/guest dinner four-course, $436 for two.
+  - Aquavit: https://www.aquavit.org/s/DR-112026.pdf — $195/guest dinner tasting, $390 for two; linked from its official dining-room page, PDF dated 20 Nov 2026.
+  - Gabriel Kreuther: https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf — $325/guest chef's tasting, $650 for two; restaurant-linked PDF dated 17 Nov 2026.
+  - The Modern: https://www.themodernnyc.com/the-modern/ — dinner menus $185 or $285/guest, $370–$570 for two.
+  - Masa: https://www.masanyc.com/menus — lunch starts at $495/guest; dinner table $750/guest or Hinoki counter $950/guest; totals $990+ lunch / $1,500 or $1,900 dinner for two.
+  - odo: https://www.odo.nyc/menu — lunch $150/guest or dinner $270/guest; $300 / $540 for two.
+  - Le Coucou: https://lecoucou.com/#menus — A Very Coucou dinner $220/guest, $440 for two; official page says tax and gratuity are not included.
+  - Gramercy Tavern: https://www.gramercytavern.com/menu/the-dining-room/ — seasonal dinner $178/guest, $356 for two.
+- Eight starred rows remain blank: Per Se, Sushi Sho, Atomix, Sushi Noz, César, Casa Mono, Semma and Atera. Seven lacked a suitable fixed-price total on the official pages checked; Atera's own page content conflicts ($325 in visible menu text vs $298 in embedded structured data), so its total is deliberately blank and flagged. À-la-carte menus at Casa Mono/Semma were not turned into invented meal estimates. For Sushi Noz and César, official venue links are included but no fixed price was found on the checked official site.
+- All listed amounts are current snapshots checked 25 Nov 2026, not February 2027 quotes. Seasonal/menu changes are flagged; no future prices, tax or service totals were inferred. The only explicit charge treatment carried through is what the venue itself states (EMP discretionary gratuity; Le Coucou tax/gratuity excluded; Masa beverages/tax/optional gratuity excluded).
+- Verification: manually matched each of the 10 totals to its linked official menu source and checked the multiplication for two; JSON parses; `python3 scripts/verify.py` passes with 0 errors / 0 warnings over 58 site data rows. No site navigation or renderer files changed; existing `priceTwoAdults` and official-menu link columns render these values.
+- Remaining irregularities are transparently flagged in the rows: blank address/hours for Masa, odo, Sushi Noz and César are still not researched under T10; restaurant prices are not guaranteed to remain current for the travel dates.
