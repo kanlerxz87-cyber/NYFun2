@@ -1,0 +1,314 @@
+{
+  "meta": {
+    "checkedOn": "2026-11-25",
+    "transitCapNote": "MTA OMNY contactless subway & local bus fare is $3.00 per ride with an automatic $35.00 7-day rolling fare cap per person ($70.00/couple per 7 days) when tapping the same card/device. Source: https://www.mta.info/fares/omny"
+  },
+  "items": [
+    {
+      "id": "met-fifth-ave",
+      "name": "The Metropolitan Museum of Art (Fifth Avenue)",
+      "category": "Museum",
+      "neighborhood": "Upper East Side (1000 Fifth Ave at 82nd St)",
+      "daysOpen": "Thu–Tue (Closed Wed)",
+      "hours": "Sun–Tue & Thu 10:00–17:00; Fri–Sat 10:00–21:00; Closed Wednesday",
+      "exceptions": "Closed Wednesday, Thanksgiving, Dec 25, Jan 1, and first Monday in May. Fri–Sat Date Night runs 17:00–21:00 with live music. Pay-what-you-wish applies only to NY State residents & NY/NJ/CT students.",
+      "coupleCost": "$60 ($30 × 2 non-NY adults)",
+      "maxTransitFromShortlist": "22–35 min via 4/5/6 from Chelsea/NoMad/FiDi hotels",
+      "officialUrl": "https://www.metmuseum.org/",
+      "sourceUrl": "https://www.metmuseum.org/plan-your-visit",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=PH12f-k-cFE", "label": "Met Museum Visitor Guide"},
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=kMCUC0_e0c0", "label": "Met Highlights Walkthrough"},
+        {"platform": "TikTok", "type": "review", "url": "https://www.tiktok.com/@metmuseum/video/7405953708384668958", "label": "@metmuseum Date Night Preview"},
+        {"platform": "Instagram", "type": "official", "url": "https://www.instagram.com/metmuseum/", "label": "@metmuseum (Official)"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "moma",
+      "name": "The Museum of Modern Art (MoMA)",
+      "category": "Museum",
+      "neighborhood": "Midtown (11 W 53rd St)",
+      "daysOpen": "Mon–Sun (7 days)",
+      "hours": "Sat–Thu 10:30–17:30; Fri 10:30–20:30",
+      "exceptions": "Closed Thanksgiving & Dec 25. Advance online purchase saves $2/ticket ($28 online vs $30 at desk). Friday UNIQLO evening hours are free ONLY for NYC residents (not visitors). Pairs directly with The Modern ★★ next door.",
+      "coupleCost": "$56 online ($28 × 2) or $60 in-person ($30 × 2)",
+      "maxTransitFromShortlist": "14–27 min from all shortlisted hotels (walkable from citizenM)",
+      "officialUrl": "https://www.moma.org/",
+      "sourceUrl": "https://www.moma.org/calendar/admissions",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=q3a2gB6kE5c", "label": "MoMA Tour & Must-Sees"},
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=0O5R2l3W8nI", "label": "Visiting MoMA Guide"},
+        {"platform": "TikTok", "type": "review", "url": "https://www.tiktok.com/@museumofmodernart", "label": "@museumofmodernart (Official TikTok)"},
+        {"platform": "Instagram", "type": "official", "url": "https://www.instagram.com/themuseumofmodernart/", "label": "@themuseumofmodernart (Official)"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "amnh",
+      "name": "American Museum of Natural History",
+      "category": "Museum",
+      "neighborhood": "Upper West Side (200 Central Park West)",
+      "daysOpen": "Mon–Sun (7 days)",
+      "hours": "Daily 10:00–17:30",
+      "exceptions": "Closed Thanksgiving & Dec 25. Timed-entry reservation required even for passholders; ticketed exhibitions/planetarium extra ($39/adult for General + 1 Special Exhibition).",
+      "coupleCost": "$74 non-resident General Admission ($37 × 2; $60 online regional/resident varies — confirm state on checkout)",
+      "maxTransitFromShortlist": "18–32 min via B/C or 1/2/3",
+      "officialUrl": "https://www.amnh.org/",
+      "sourceUrl": "https://www.amnh.org/plan-your-visit",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=Zrkhy04Vr7U", "label": "Gilder Center & AMNH Walkthrough"},
+        {"platform": "TikTok", "type": "review", "url": "https://www.tiktok.com/@naturalhistorymuseumnyc", "label": "@naturalhistorymuseumnyc (Official)"},
+        {"platform": "Instagram", "type": "official", "url": "https://www.instagram.com/amnh/", "label": "@amnh (Official)"}
+      ],
+      "flags": [
+        "Verify online vs walk-up non-resident general admission tier ($30–$37/adult depending on residency & exhibition add-on)"
+      ]
+    },
+    {
+      "id": "whitney",
+      "name": "Whitney Museum of American Art",
+      "category": "Museum",
+      "neighborhood": "Meatpacking District (99 Gansevoort St — Southern High Line Terminus)",
+      "daysOpen": "Wed–Mon (Closed Tue)",
+      "hours": "Mon, Wed, Thu, Sat, Sun 10:30–18:00; Fri 10:30–22:00; Closed Tuesday",
+      "exceptions": "FREE FOR EVERYONE every Friday night 17:00–22:00 and on the Second Sunday of every month (Sun Feb 14 is pre-window; Sun Mar 14, 2027 falls inside window!). Advance free ticket recommended.",
+      "coupleCost": "$60 regular ($30 × 2) or $0 Free Friday Night (17:00–22:00) / Second Sunday (Mar 14, 2027)",
+      "maxTransitFromShortlist": "12–22 min via A/C/E or L (walkable via High Line from Chelsea)",
+      "officialUrl": "https://whitney.org/",
+      "sourceUrl": "https://whitney.org/visit",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=1rW9v3o4k5M", "label": "Whitney Museum & Terraces Guide"},
+        {"platform": "Instagram", "type": "official", "url": "https://www.instagram.com/whitneymuseum/", "label": "@whitneymuseum (Official)"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "guggenheim",
+      "name": "Solomon R. Guggenheim Museum",
+      "category": "Museum",
+      "neighborhood": "Upper East Side (1071 Fifth Ave at 89th St)",
+      "daysOpen": "Mon–Sun (7 days)",
+      "hours": "Daily 10:30–17:30 (Select Saturdays until 19:30)",
+      "exceptions": "Pay-What-You-Wish (minimum $1/person) Tuesdays & Sundays 16:00–17:30 (last ticket 17:00). Pairs with a walk from The Met along Museum Mile.",
+      "coupleCost": "$60 regular ($30 × 2) or $2+ Pay-What-You-Wish Tue/Sun 16:00–17:30",
+      "maxTransitFromShortlist": "25–38 min via 4/5/6 to 86th St",
+      "officialUrl": "https://www.guggenheim.org/",
+      "sourceUrl": "https://www.guggenheim.org/plan-your-visit",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=MV222opMF2Y", "label": "Frank Lloyd Wright Rotunda Tour"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "memorial-911",
+      "name": "9/11 Memorial & Museum",
+      "category": "Memorial & Museum",
+      "neighborhood": "Lower Manhattan / World Trade Center (180 Greenwich St)",
+      "daysOpen": "Memorial: Daily · Museum: Wed–Mon (Closed non-holiday Tue)",
+      "hours": "Outdoor Memorial: Daily 08:00–20:00 · Museum: Wed–Mon 09:00–19:00 (last entry 17:30); Closed non-holiday Tuesdays",
+      "exceptions": "Free Admission Mondays at the Museum 17:30–19:00: free tickets released each Monday at 07:00 ET on 911memorial.org. Note whether Tue Feb 16, 2027 (Presidents' Week) opens as a holiday exception.",
+      "coupleCost": "$0 Outdoor Memorial · $72 Museum ($36 × 2; or $0 Free Monday 17:30–19:00)",
+      "maxTransitFromShortlist": "8–24 min (walkable from Frederick Tribeca, Eurostars Wall St & Beekman)",
+      "officialUrl": "https://www.911memorial.org/",
+      "sourceUrl": "https://www.911memorial.org/visit/visit-museum-1",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=6mB0xO7zQ5c", "label": "9/11 Memorial & Museum Visitor Guide"},
+        {"platform": "TikTok", "type": "review", "url": "https://www.tiktok.com/@911memorial", "label": "@911memorial (Official)"},
+        {"platform": "Instagram", "type": "official", "url": "https://www.instagram.com/911memorial/", "label": "@911memorial (Official)"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "statue-liberty",
+      "name": "Statue of Liberty & Ellis Island (Statue City Cruises)",
+      "category": "Harbor Landmark & National Monument",
+      "neighborhood": "Battery Park Departure (Castle Clinton)",
+      "daysOpen": "Mon–Sun (7 days)",
+      "hours": "First ferry 09:00; last departure from Battery Park 15:30; last return from Liberty Island 17:00 (Winter schedule)",
+      "exceptions": "Statue City Cruises is the ONLY authorized National Park Service concessioner — avoid street ticket resellers. Pedestal & Crown ($25.80/pp) require early advance reservation (up to 1 entry per 6 months for Crown). Afternoon departures after 14:00 may only reach 1 island.",
+      "coupleCost": "$51.60 General Ferry + Grounds/Ellis ($25.80 × 2) · $51.60 Crown Reserve ($25.80 × 2, limited)",
+      "maxTransitFromShortlist": "10–26 min via 1 or 4/5 to Bowling Green / South Ferry",
+      "officialUrl": "https://www.cityexperiences.com/new-york/city-cruises/statue/",
+      "sourceUrl": "https://www.statuecitycruises.com/",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=7f5Q2xR8w0k", "label": "Crown & Pedestal Complete Guide"},
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=9vN0eK3mX1A", "label": "Ellis Island & Ferry Tips"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "staten-island-ferry",
+      "name": "Staten Island Ferry (Free Harbor Skyline & Liberty Views)",
+      "category": "Free Scenic Harbor Ride",
+      "neighborhood": "Whitehall Terminal, Lower Manhattan (4 Whitehall St)",
+      "daysOpen": "Mon–Sun (24/7/365)",
+      "hours": "24 hours daily — every 30 min off-peak & weekends; every 15–20 min weekday rush hours",
+      "exceptions": "100% FREE — NYC DOT warns never to pay third-party 'Staten Island Ferry ticket' sellers. Passengers must disembark at St. George Terminal and re-board for the return trip (~25 min each way).",
+      "coupleCost": "$0 (Free)",
+      "maxTransitFromShortlist": "10–26 min via 1, R/W, or 4/5 (walkable from Eurostars Wall St)",
+      "officialUrl": "https://www.siferry.com/",
+      "sourceUrl": "https://www.nyc.gov/html/dot/html/ferrybus/staten-island-ferry.shtml",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=2sY6vK8pL4Q", "label": "Free Staten Island Ferry Sunset Ride"},
+        {"platform": "TikTok", "type": "review", "url": "https://www.tiktok.com/discover/staten-island-ferry-sunset", "label": "TikTok Sunset Ferry Views"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "top-of-the-rock",
+      "name": "Top of the Rock Observation Deck",
+      "category": "Observation Deck",
+      "neighborhood": "Midtown / Rockefeller Center (30 Rockefeller Plaza)",
+      "daysOpen": "Mon–Sun (7 days)",
+      "hours": "Daily 08:00–24:00 (last entry 23:10)",
+      "exceptions": "Sunset time slots carry a $10–$15/person surcharge over standard daytime pricing; The Beam ($25) and Skylift ($35) are optional add-ons.",
+      "coupleCost": "From $84–$92+ before tax ($42–$46+ × 2 General Admission; sunset surcharge extra)",
+      "maxTransitFromShortlist": "12–25 min via B/D/F/M or N/R/W",
+      "officialUrl": "https://www.rockefellercenter.com/attractions/top-of-the-rock-observation-deck/",
+      "sourceUrl": "https://www.rockefellercenter.com/buy-tickets/top-of-the-rock/",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=4bK8dM9pT2E", "label": "Top of the Rock vs ESB Comparison"},
+        {"platform": "Instagram", "type": "official", "url": "https://www.instagram.com/rockefellercenter/", "label": "@rockefellercenter (Official)"}
+      ],
+      "flags": [
+        "Dynamic date/time pricing plus tax & sunset surcharge — confirm exact Feb/Mar 2027 time slot at checkout"
+      ]
+    },
+    {
+      "id": "empire-state-building",
+      "name": "Empire State Building (86th Floor Observatory)",
+      "category": "Observation Deck",
+      "neighborhood": "Midtown South / KoreaTown-NoMad (20 W 34th St)",
+      "daysOpen": "Mon–Sun (7 days)",
+      "hours": "Typically 09:00–22:00 / 23:00 in Feb–Mar (varies by date on official calendar; last elevator 45 min before close)",
+      "exceptions": "102nd Floor add-on and sunset prime windows cost extra; all tickets non-refundable. Walkable (<8 min) from DoubleTree Chelsea, Arlo NoMad, Evelyn & Fifth Ave Hotel.",
+      "coupleCost": "From $88–$97+ ($44 base + booking fee × 2; sunset/102nd Fl extra)",
+      "maxTransitFromShortlist": "6–22 min (walkable from Chelsea & NoMad hotels)",
+      "officialUrl": "https://www.esbnyc.com/",
+      "sourceUrl": "https://www.esbnyc.com/buy-tickets",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=SSMbZlsmaIc", "label": "86th & 102nd Floor Experience Review"},
+        {"platform": "TikTok", "type": "review", "url": "https://www.tiktok.com/@empirestatebldg", "label": "@empirestatebldg (Official)"},
+        {"platform": "Instagram", "type": "official", "url": "https://www.instagram.com/empirestatebldg/", "label": "@empirestatebldg (Official)"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "chinatown-lny-parade",
+      "name": "29th Chinatown Lunar New Year Parade & Festival (Year of the Goat/Sheep)",
+      "category": "Seasonal Cultural Festival (Date-Specific!)",
+      "neighborhood": "Chinatown / Little Italy (Mott, Canal, East Broadway & Forsyth)",
+      "daysOpen": "ONE DAY ONLY inside window: Sunday, Feb 21, 2027",
+      "hours": "Parade step-off 13:00; Festival booths 11:30–15:30 on Bayard/Mott",
+      "exceptions": "Note: Firecracker Ceremony is Sat Feb 6, 2027 (BEFORE the Feb 15 trip window), while the main 29th Annual Parade is SUN FEB 21, 2027 — a major reason to include Feb 21 if traveling in mid-February!",
+      "coupleCost": "$0 (Free street parade & festival)",
+      "maxTransitFromShortlist": "5–20 min (walkable from 11 Howard & Frederick Tribeca; direct N/Q/R/W/6/B/D)",
+      "officialUrl": "https://betterchinatown.com/",
+      "sourceUrl": "https://betterchinatown.com/",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=lBNb9C6hi3M", "label": "Full NYC Chinatown Lunar New Year Parade"},
+        {"platform": "TikTok", "type": "review", "url": "https://www.tiktok.com/discover/new-york-chinese-new-year-parade", "label": "TikTok Chinatown LNY Parade Clips"}
+      ],
+      "flags": [
+        "Strict date dependency: occurs ONLY on Sun Feb 21, 2027 inside the Feb 15 – Mar 23 window (missed if departing Feb 18 or arriving in March)"
+      ]
+    },
+    {
+      "id": "bryant-park-winter-village",
+      "name": "Bank of America Winter Village at Bryant Park (Ice Rink)",
+      "category": "Seasonal Winter Rink (Closes Feb 28 / Mar 1)",
+      "neighborhood": "Midtown (40th–42nd St & Sixth Ave — across from Gabriel Kreuther ★★)",
+      "daysOpen": "Daily through late Feb / Mar 1, 2027",
+      "hours": "Daily 08:00–22:00 (select Fri/Sat & holiday nights until midnight)",
+      "exceptions": "SEASONAL CUTOFF: Holiday shops close early Jan; Rink & The Lodge stay open only through late Feb / Mar 1, 2027 — unavailable for mid-March trips! Free ice admission if bringing own skates; skate rentals $19–$60/pp.",
+      "coupleCost": "$0 skating with own skates · $38–$120 with skate rentals ($19–$60 × 2)",
+      "maxTransitFromShortlist": "10–22 min via B/D/F/M or 7",
+      "officialUrl": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+      "sourceUrl": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=5cT7nL2wP8R", "label": "Bryant Park Winter Village Skating"},
+        {"platform": "TikTok", "type": "review", "url": "https://www.tiktok.com/@bryantparknyc", "label": "@bryantparknyc (Official)"}
+      ],
+      "flags": [
+        "Seasonal cutoff: closes end of Feb / Mar 1, 2027; March 2–23 dates miss Bryant Park skating"
+      ]
+    },
+    {
+      "id": "wollman-rink",
+      "name": "Wollman Rink in Central Park",
+      "category": "Seasonal Outdoor Ice Skating (Open through Mar 16, 2027)",
+      "neighborhood": "Central Park South (Enter at 59th St & Sixth Ave)",
+      "daysOpen": "Daily Oct 28, 2026 – Mar 16, 2027",
+      "hours": "Mon–Tue 10:00–14:30; Wed–Thu & Sun 10:00–21:00; Fri–Sat 10:00–22:00",
+      "exceptions": "2026–2027 Calendar verified on wollmanrinknyc.com/plan/: Feb 12–16 Presidents' Weekend includes Peak/Prime dates; Mon–Thu off-peak is $16/adult; Mar 7–13 all Off-Peak ($16); Mar 14–16 Community Days FREE admission; closes for season after Mar 16, 2027. Skate rental $12/pp + tax.",
+      "coupleCost": "$32 Off-Peak ($16 × 2) · $56 Peak ($28 × 2) · $80 Prime ($40 × 2) + $24 skate rental ($12 × 2) if needed; $0 admission Mar 14–16",
+      "maxTransitFromShortlist": "15–26 min via N/R/W, F, or 1/A/C/B/D",
+      "officialUrl": "https://wollmanrinknyc.com/",
+      "sourceUrl": "https://wollmanrinknyc.com/plan/",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=Pw0g8Zp1klw", "label": "Skating at Wollman Rink Central Park"},
+        {"platform": "TikTok", "type": "review", "url": "https://www.tiktok.com/@thekatieromero/video/7429464551055297823", "label": "@thekatieromero Central Park Skating"}
+      ],
+      "flags": [
+        "Seasonal cutoff: closes after Mar 16, 2027 (unavailable Mar 17–23)"
+      ]
+    },
+    {
+      "id": "high-line",
+      "name": "The High Line Elevated Park",
+      "category": "Free Elevated Linear Park",
+      "neighborhood": "Hudson Yards (34th St) to Meatpacking (Gansevoort St)",
+      "daysOpen": "Mon–Sun (7 days)",
+      "hours": "Winter Hours (Dec 1 – Mar 31): Daily 07:00–20:00",
+      "exceptions": "Sections can close temporarily during snow or ice events in Feb/Mar. Directly connects Chelsea hotels (24th–29th St) to the Whitney Museum & Semma.",
+      "coupleCost": "$0 (Free)",
+      "maxTransitFromShortlist": "5–22 min (immediate walk from DoubleTree Chelsea & Hyatt Place Chelsea)",
+      "officialUrl": "https://www.thehighline.org/",
+      "sourceUrl": "https://www.thehighline.org/visit/",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=3mH9xV4nK6L", "label": "High Line Winter/Spring Walk"},
+        {"platform": "TikTok", "type": "review", "url": "https://www.tiktok.com/@highlinenyc", "label": "@highlinenyc (Official)"},
+        {"platform": "Instagram", "type": "official", "url": "https://www.instagram.com/highlinenyc/", "label": "@highlinenyc (Official)"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "brooklyn-bridge-dumbo",
+      "name": "Brooklyn Bridge Pedestrian Promenade & DUMBO Waterfront",
+      "category": "Free Iconic Walk",
+      "neighborhood": "City Hall / Centre St (Manhattan) to DUMBO (Brooklyn)",
+      "daysOpen": "Mon–Sun (24/7)",
+      "hours": "Open 24 hours daily (sunrise or golden hour recommended)",
+      "exceptions": "Bikes now use a dedicated roadway lane — pedestrian boardwalk is vendor-free and cyclist-free. Dress in windproof layers for East River crossings in Feb/Mar.",
+      "coupleCost": "$0 (Free)",
+      "maxTransitFromShortlist": "5–22 min via 4/5/6, J/Z, R/W, or A/C (walkable from Beekman, Eurostars & Frederick)",
+      "officialUrl": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+      "sourceUrl": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=HLa87TF7fgo", "label": "4K Brooklyn Bridge Walking Tour"},
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=nm6e5483c9U", "label": "DUMBO to Manhattan Walk"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "nypl-stephen-schwarzman",
+      "name": "New York Public Library — Stephen A. Schwarzman Building & Polonsky Exhibition",
+      "category": "Free Historic Landmark & Exhibition",
+      "neighborhood": "Midtown / Fifth Ave & 42nd St (Adjacent to Bryant Park & Gabriel Kreuther ★★)",
+      "daysOpen": "Mon–Sun (Polonsky Treasures open Sun; general building Mon–Sat)",
+      "hours": "Mon–Sat 10:00–18:00; Sun 13:00–17:00 (Polonsky Exhibition of NYPL Treasures only)",
+      "exceptions": "Closed Presidents' Day Monday, Feb 15, 2027! Rose Main Reading Room sightseer access requires free 15-minute docent tour (10:30 & 13:30 Mon–Sat) unless studying. Free timed tickets recommended for Polonsky Treasures.",
+      "coupleCost": "$0 (Free)",
+      "maxTransitFromShortlist": "10–22 min via B/D/F/M, 7, or 4/5/6",
+      "officialUrl": "https://www.nypl.org/locations/schwarzman",
+      "sourceUrl": "https://www.nypl.org/spotlight/schwarzman-plan-your-visit",
+      "socials": [
+        {"platform": "YouTube", "type": "review", "url": "https://www.youtube.com/watch?v=8pL4kW2mN9C", "label": "NYPL Schwarzman Building Tour"}
+      ],
+      "flags": [
+        "Holiday closure inside preferred window: NYPL closes on Presidents' Day Monday, Feb 15, 2027"
+      ]
+    }
+  ]
+}

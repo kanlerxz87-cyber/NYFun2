@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activities, Seasonal Dates &amp; Social Reviews — NYC 2027 Couple Planner</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">NYC 2027 Couple Planner <span>Verified Nov 25, 2026</span></a>
+      <nav class="nav" aria-label="Category pages">
+        <a href="../index.html">Executive Summary</a>
+        <a href="hotels.html">Hotels &amp; 7-Night Windows</a>
+        <a href="michelin.html">Michelin Clusters &amp; Dining</a>
+        <a class="active" href="activities.html">Activities &amp; Socials</a>
+        <a href="itinerary.html">7-Night Itinerary</a>
+        <a href="questions-suggestions.html">Questions &amp; Suggestions</a>
+        <a href="repo-audit.html">Line-by-Line Repo Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="activities-app" data-base="..">
+    <section class="hero">
+      <p class="eyebrow">Activities &amp; Attractions · All &le;38 Min From Shortlisted Hotels · Multi-Platform Social Reviews</p>
+      <h1>NYC Couple Activities — Official Hours, Seasonal Cutoffs &amp; Review Links</h1>
+      <p>Includes 16 verified museums, observation decks, harbor ferries, linear parks, winter ice rinks, and the <strong>Feb 21, 2027 Chinatown Lunar New Year Parade</strong>. All transit legs are covered by MTA's <strong>$3.00 OMNY fare / $35.00 7-day rolling cap per adult</strong> (<a href="https://www.mta.info/fares/omny" target="_blank" rel="noopener" style="color:#fca5a5;text-decoration:underline">mta.info</a>).</p>
+    </section>
+
+    <div class="callout warn">
+      <strong>Feb–Mar 2027 Seasonal &amp; Holiday Exceptions to Watch:</strong><br>
+      &bull; <strong>Mon Feb 15, 2027 (Presidents' Day):</strong> NYPL Schwarzman Building is <strong>CLOSED</strong>; 9/11 Museum runs Free Admission Monday 17:30–19:00 (book 07:00 ET).<br>
+      &bull; <strong>Sun Feb 21, 2027 (13:00):</strong> 29th Chinatown Lunar New Year Parade &amp; Festival (one day only inside window!).<br>
+      &bull; <strong>Feb 28 / Mar 1, 2027:</strong> Bryant Park Winter Village Ice Rink closes for the season.<br>
+      &bull; <strong>Mar 14–16, 2027:</strong> Wollman Rink Central Park hosts <strong>FREE Community Days</strong> before closing for the season after Mar 16 (and Sun Mar 14 is also Free Second Sunday at the Whitney!).
+    </div>
+
+    <section class="card">
+      <h2>Verified Activities Table (2-Adult Cost, Open Hours/Exceptions &amp; YouTube/TikTok/IG Links)</h2>
+      <div class="toolbar">
+        <input id="act-search" type="search" placeholder="Search museum, observation deck, skating, free window, day closed...">
+        <select id="act-cat" aria-label="Filter activities">
+          <option value="all">All 16 Verified Activities</option>
+          <option value="free">Free or Has $0 Free Couple Window (10)</option>
+          <option value="seasonal">Date-Critical Seasonal Events &amp; Rinks (3)</option>
+          <option value="museum">Museums Only (6)</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Activity &amp; Official Link</th>
+              <th>2-Adult Total Cost</th>
+              <th>Open Days, Hours &amp; Holiday/Seasonal Exceptions</th>
+              <th>Subway / Bus Reach</th>
+              <th>YouTube / TikTok / Instagram Links</th>
+              <th>Official Source</th>
+            </tr>
+          </thead>
+          <tbody id="act-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>MTA Fare Source: <a href="https://www.mta.info/fares/omny" target="_blank" rel="noopener">mta.info/fares/omny ($3.00 / $35 7-day cap)</a></div>
+      <div><a href="../index.html">&larr; Back to Executive Summary</a></div>
+    </footer>
+  </main>
+
+  <script src="../assets/app.js"></script>
+</body>
+</html>
