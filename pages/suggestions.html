@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggestions — NYFun2</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="../index.html">NY<span>Fun2</span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="../index.html">Home</a><a href="executive-summary.html">Summary</a><a href="hotels.html">Hotels</a><a href="restaurants.html">Michelin</a><a href="activities.html">Activities</a><a href="itinerary.html">Itinerary</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged</a><a href="sources.html">Sources</a><a href="repo-review.html">Repo review</a>
+  </nav>
+</div></header>
+<main class="wrap">
+  <h1>Suggestions — review before implementing</h1>
+  <p class="lede">Options only. None of these changes has been applied. Each states its benefit, cost/risk and the verification required before implementation.</p>
+
+  <div class="table-wrap"><table style="min-width:760px"><thead><tr><th>#</th><th>Suggestion</th><th>Benefit</th><th>Cost / risk</th><th>Verification required</th></tr></thead><tbody>
+    <tr><td>1</td><td>Add an official dated-rate table for all candidate windows</td><td>Answers "cheapest 7 nights" with real numbers</td><td>Rates change; scraping may breach terms</td><td>Dated URL + rate + screenshot from official site; never write a rate without date and source</td></tr>
+    <tr><td>2</td><td>Connect a licensed transit-routing API</td><td>Replaces cluster proxy with real ≤1-hour counts</td><td>API keys/cost; 2027 service unknown</td><td>Publish method, departure assumptions and raw responses</td></tr>
+    <tr><td>3</td><td>Add official per-person menu prices</td><td>Enables dining cost comparison</td><td>Menus change; some publish no prices</td><td>Only the restaurant's own menu page; blank otherwise</td></tr>
+    <tr><td>4</td><td>Add Instagram/TikTok reviews where available</td><td>Meets "as many links as you can"</td><td>Link rot; sponsored content</td><td>Open each link; record platform, creator, access date</td></tr>
+    <tr><td>5</td><td>Refresh star status after 14 Dec 2026</td><td>Prevents stale star information</td><td>Needs a re-check task</td><td>Re-fetch all three official Guide filter pages and diff</td></tr>
+    <tr><td>6</td><td>Filter by "open on 15/16/17/18 Feb"</td><td>Faster itinerary decisions</td><td>Needs complete hours</td><td>Fill all blank hours from official sources first</td></tr>
+    <tr><td>7</td><td>Add a map with official addresses</td><td>Visual clustering</td><td>Third-party script dependency</td><td>Use only official address fields; note geocoding is approximate</td></tr>
+    <tr><td>8</td><td>Add a per-row confidence score</td><td>Makes gaps obvious</td><td>Can be mistaken for a factual rating</td><td>Define rubric from flag counts only</td></tr>
+    <tr><td>9</td><td>Add a decision log</td><td>Records why a hotel/date was chosen</td><td>Requires user input avoided in this pass</td><td>Only enable after preferences are supplied</td></tr>
+    <tr><td>10</td><td>Automated link checking in CI</td><td>Detects broken source links</td><td>Some sites block CI requests</td><td>Treat failures as warnings; manual review before marking broken</td></tr>
+    <tr><td>11</td><td>Printable one-page itinerary</td><td>Useful offline</td><td>Duplicated content can drift</td><td>Generate from the same JSON data</td></tr>
+    <tr><td>12</td><td>Record hotel cancellation deadlines</td><td>Reduces financial risk</td><td>Needs engine detail per hotel</td><td>Capture from official rate rules only</td></tr>
+  </tbody></table></div>
+
+  <h2>Recommended path</h2>
+  <div class="card"><ol>
+    <li>First #5 and #1 — star refresh and dated rates remove the biggest blockers.</li>
+    <li>Then #2 — real travel times, because the current ranking is a proxy only.</li>
+    <li>Then #3 and #6 — dining and itinerary usability.</li>
+    <li>Treat the rest as optional once core numbers are verified.</li>
+  </ol></div>
+</main>
+<footer class="footer">Research as of 25 Nov 2026 · <a href="sources.html">Source registry</a> · <a href="../index.html">Home</a></footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>

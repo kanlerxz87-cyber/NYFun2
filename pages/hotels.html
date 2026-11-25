@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotels — NYFun2</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="../index.html">NY<span>Fun2</span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="../index.html">Home</a><a href="executive-summary.html">Summary</a><a href="hotels.html">Hotels</a><a href="restaurants.html">Michelin</a><a href="activities.html">Activities</a><a href="itinerary.html">Itinerary</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged</a><a href="sources.html">Sources</a><a href="repo-review.html">Repo review</a>
+  </nav>
+</div></header>
+<main class="wrap">
+  <h1>Hotels — location, bed, bath, amenities</h1>
+  <p class="lede">Six candidate hotels checked against their own pages (and one official MICHELIN hotel page). Queen or larger bed and an in-room bath/shower were priority filters. Where the page does not explicitly say "private bathroom", that is flagged rather than assumed.</p>
+
+  <div class="banner">
+    <strong>No verified 7-night price.</strong> An official Marriott search with dates 15–22 Feb 2027 rendered no priced results (<a href="https://www.marriott.com/search/findHotels.mi?destinationAddress.city=New%20York&amp;destinationAddress.stateProvinceAbbreviation=NY&amp;fromDate=02%2F15%2F2027&amp;toDate=02%2F22%2F2027" target="_blank" rel="noopener noreferrer">dated search ↗</a>). The only official rate found is an undated "from $340/night" lead rate at The Standard. Every 7-night total cell is blank because no dated rate could be verified. No "cheapest date" can be honestly named yet.
+  </div>
+
+  <h2>Hotel ranking (address-cluster proxy only)</h2>
+  <div class="card">
+    <p>The requested ranking was by number of Michelin restaurants reachable within one hour by subway or bus. No dated door-to-door routing source was available, so that calculation is <strong>not claimed</strong>. The table instead shows counts of Guide entries from this site's 18-row table whose official address lies in the same named cluster. Treat this as a <em>working proxy</em>, not a travel-time measurement. Re-run with real routing data before choosing a hotel.</p>
+    <p class="note">Reference map: <a href="https://www.mta.info/map/36946" target="_blank" rel="noopener noreferrer">MTA official subway map ↗</a>.</p>
+  </div>
+  <div data-table="clusters"></div>
+
+  <h2>Hotel table</h2>
+  <div data-table="hotels"></div>
+
+  <h2>What would close the pricing gap</h2>
+  <div class="card">
+    <ul class="tight">
+      <li>Query each hotel's own booking engine for 15–22 Feb 2027, capture the dated URL and total including taxes/fees.</li>
+      <li>Repeat for 15–18 Feb 2027, 15 Feb–1 Mar 2027 and 15 Feb–15 Mar 2027 to find the cheapest verified window.</li>
+      <li>Confirm in writing that the specific room has a private bathroom and a queen-or-larger bed.</li>
+      <li>Run a transit-routing calculation from each hotel to each restaurant with a stated departure time.</li>
+    </ul>
+    <p class="note">See <a href="questions.html">Questions B1–B5 →</a> and <a href="suggestions.html">Suggestions 1–4 →</a>.</p>
+  </div>
+</main>
+<footer class="footer">Research as of 25 Nov 2026 · <a href="sources.html">Source registry</a> · <a href="../index.html">Home</a></footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>

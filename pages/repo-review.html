@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repo review — NYFun2</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="../index.html">NY<span>Fun2</span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="../index.html">Home</a><a href="executive-summary.html">Summary</a><a href="hotels.html">Hotels</a><a href="restaurants.html">Michelin</a><a href="activities.html">Activities</a><a href="itinerary.html">Itinerary</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged</a><a href="sources.html">Sources</a><a href="repo-review.html">Repo review</a>
+  </nav>
+</div></header>
+<main class="wrap">
+  <h1>Repository review</h1>
+  <p class="lede">Line-by-line review of the repository at the start of this session, plus irregularities for manual review. Full text is in <a href="https://github.com/kanlerxz87-cyber/NYFun2/blob/arena/215c2a25-nyfun2/docs/repo-review.md" target="_blank" rel="noopener noreferrer">docs/repo-review.md ↗</a> and <a href="https://github.com/kanlerxz87-cyber/NYFun2/blob/arena/215c2a25-nyfun2/COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a>.</p>
+
+  <h2>Starting state</h2>
+  <div class="card"><p>Base commit <code>a3a2848</code> ("Initial commit") contained exactly one tracked file: <code>README.md</code> (8 bytes). There was no site, data, workflow or coordination board. The board was created and its claim pushed before research began.</p></div>
+
+  <h2>Irregularities flagged</h2>
+  <div class="card"><ol>
+    <li><strong>Branch-name deviation:</strong> the requested <code>session-&lt;id&gt;/&lt;task&gt;</code> convention conflicts with the platform rule pinning this session to <code>arena/215c2a25-nyfun2</code>. Work stayed on the pinned branch with disjoint file scopes logged in COORDINATION.md.</li>
+    <li><strong>No competing claims existed:</strong> only <code>main</code> and this branch were present in <code>git branch -a</code>; all tasks were claimed by this session.</li>
+    <li><strong>Pages source:</strong> GitHub Pages was already enabled from <code>main</code>. Publishing from the working branch requires a Pages-source API change; no push to <code>main</code> was performed.</li>
+    <li><strong>Verification limits:</strong> official booking engines did not return dated February 2027 rates; official menu pages were not retrievable. Those cells are blank.</li>
+  </ol></div>
+
+  <h2>Verification method</h2>
+  <div class="card"><ul class="tight">
+    <li>Primary sources: MICHELIN Guide pages, NPS, NYC DOT, NYC City Clerk/DCWP, MTA, official venue sites, official hotel sites, Michelin North America press release.</li>
+    <li>Search excerpts were cross-checked against linked official pages where retrievable; partial coverage is flagged per row.</li>
+    <li>Every table row carries at least one source link; unverified values are blank and listed on <a href="flagged.html">Flagged for Review</a>.</li>
+    <li>Weekdays are deterministic calendar calculations from ISO dates, labelled as such.</li>
+  </ul></div>
+</main>
+<footer class="footer">Research as of 25 Nov 2026 · <a href="sources.html">Source registry</a> · <a href="../index.html">Home</a></footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>
