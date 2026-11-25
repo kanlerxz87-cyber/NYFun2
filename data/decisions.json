@@ -67,13 +67,18 @@
     {
       "id": "Q6",
       "question": "What will a couple actually pay at each Michelin restaurant?",
-      "whatWeKnow": "Michelin publishes only $ to $$$$ bands. No official dated menu with a total for two was confirmed on the restaurant pages checked.",
-      "whatWeDoNotKnow": "2027 menu prices, beverage pairings, service charge, tax and cancellation policies.",
-      "provisionalAnswer": "Blank and flagged; guide price band is shown instead.",
+      "whatWeKnow": "12 restaurants now have a couple total verified from an official menu/FAQ/booking page (food only, pre-tax/tip/beverages): EMP $770/$510; Le Bernardin $700/$450/$284; Jungsik $670; Masa $990/$1,500/$1,900; Gabriel Kreuther $650/$400/$470; The Modern $230/$510/$370/$570; Chef's Table BF $770; Cote $168/$450; Kochi $290; Mari $290; Jua $300; Gramercy Tavern $356/$156. Michelin's least-expensive list groups Casa Mono, Crown Shy, Jeju Noodle Bar, Semma, Tuome at ~$75/person (indicative).",
+      "whatWeDoNotKnow": "2027 menu prices (menus captured Nov 2026), beverage pairings, service charge, tax and cancellation policies for the trip dates; exact prices for Per Se, Sushi Sho, Aquavit, Atera, Atomix, Jean-Georges and most a-la-carte one-stars.",
+      "provisionalAnswer": "Use the verified couple totals on the Michelin page as a planning floor; re-confirm at booking. Per Se shows only a $200/person deposit officially, so its menu price stays blank.",
       "blocking": false,
       "howToDiscover": "Fetch each restaurant's official menu/pricing page shortly before booking and record a screenshot plus date.",
       "sources": [
-        "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-bernardin"
+        "https://www.elevenmadisonpark.com/faq",
+        "https://www.le-bernardin.com/accessible/menus/dining-room/chef-s-tasting/",
+        "https://www.masanyc.com/menus",
+        "https://www.themodernnyc.com/the-modern/",
+        "https://www.brooklynfare.com/chefs-table/",
+        "https://guide.michelin.com/en/best-of/least-expensive-one-michelin-star-restaurants-in-new-york"
       ]
     },
     {
@@ -92,14 +97,19 @@
     {
       "id": "Q8",
       "question": "Which social-media accounts actually belong to each venue, and which posts are current?",
-      "whatWeKnow": "A YouTube review link was found for several rows. NYC Parks links its own Instagram and YouTube from its official site; NPS lists its park accounts on an official page.",
-      "whatWeDoNotKnow": "Official account ownership for most restaurants and venues; whether linked reviews still represent current menus/hours.",
+      "whatWeKnow": "Official accounts confirmed from the venues' own pages: MoMA @themuseumofmodernart; The Met @metmuseum; AMNH @amnh; Empire State Building @empirestatebldg (incl. verified TikTok); Whitney @whitneymuseum; Guggenheim; 9/11 Memorial @911Memorial; High Line @highlinenyc; NYPL @nypl. Restaurants: Per Se (Tock), Aska (site footer), Eleven Madison Park and Le Bernardin (Resy venue pages). NYC Parks and NPS link their own accounts.",
+      "whatWeDoNotKnow": "Official account ownership for the remaining restaurants/venues; whether linked third-party reviews still represent current menus/hours.",
       "provisionalAnswer": "Third-party links are labelled as such. Blank where no link could be confirmed.",
       "blocking": false,
       "howToDiscover": "Follow 'social' links from each venue's official website footer and record handle/URL plus the page that confirms ownership.",
       "sources": [
-        "https://www.nycgovparks.org/parks/central-park",
-        "https://www.nps.gov/stli/learn/photosmultimedia/socialmedia.htm"
+        "https://www.moma.org/about/about-this-site",
+        "https://www.metmuseum.org/press/news/2014/webby-awards",
+        "https://www.esbnyc.com/press/visit-empire-state-building-observatory-holiday-season",
+        "https://www.thehighline.org/",
+        "https://www.nypl.org/blog/2019/08/20/nypl-insta-novels",
+        "https://www.exploretock.com/perse/faq",
+        "https://www.askanyc.com/"
       ]
     },
     {
@@ -173,7 +183,7 @@
       "blockedBy": [
         "Q6"
       ],
-      "status": "Proposed — no changes implemented"
+      "status": "Partially implemented 2026-11-25 - 12 official-menu couple totals captured with sources and capture date; remainder blank/flagged"
     },
     {
       "id": "S4",
@@ -239,7 +249,7 @@
       "detail": "Official counters read 5 three-star / 14 two-star / 50 one-star / 76 Bib Gourmand / 224 selected. The catalogue now holds 18 starred rows, so roughly 51 starred and all 300 unstarred listings remain. The list pages serve 48 rows at a time, so this is a pagination job with a fixed end point.",
       "effort": "Medium",
       "blockedBy": [],
-      "status": "Proposed - no changes implemented"
+      "status": "Implemented 2026-11-25 - full live roster of 69 starred + 3 Guide-listed rows catalogued"
     },
     {
       "id": "S11",
@@ -333,9 +343,9 @@
     },
     {
       "id": "F11",
-      "severity": "Medium",
-      "title": "Starred catalogue is 18 of 69 - the cluster picture is a sample, not a census",
-      "detail": "The official counters total 69 starred restaurants. This catalogue holds 18, so any statement about where starred dining 'concentrates' is based on a subset. Same-ZIP proximity claims were therefore kept as a floor and no travel time was inferred.",
+      "severity": "Low",
+      "title": "RESOLVED 2026-11-25: starred catalogue now covers the full live roster (69 of 69)",
+      "detail": "The canonical restaurants.json now holds all 69 live starred restaurants (5 three-star, 14 two-star, 50 one-star) plus 3 Guide-listed new additions (72 rows). Three kit-only names (Blue Hill at Stone Barns, Shion 69 Leonard Street, La Bastide by Andrea Calstier) are not in the live all-starred selection and were excluded/flagged. Cluster statements can now use the full census; travel times still require real routing.",
       "source": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred"
     },
     {
@@ -348,9 +358,37 @@
     {
       "id": "F13",
       "severity": "High",
-      "title": "Airfare, theatre and per-person menu prices remain unpriced",
-      "detail": "No flight pricing, no theatre tickets and no restaurant menu price was captured by either session. Restaurant bills are the largest unpriced line in the plan, and every starred row sits in the $$$$ band. The budget therefore shows verified line items only and no grand total.",
+      "title": "Airfare and theatre remain unpriced; restaurant menu prices PARTIALLY resolved",
+      "detail": "12 restaurants now have verified couple totals from official pages (see Q6 / Michelin page), so the largest dining line items are no longer wholly unpriced. Still unpriced: flights, theatre tickets, and exact menu prices for Per Se, Sushi Sho, Aquavit, Atera, Atomix, Jean-Georges and most a-la-carte one-stars. Menus were captured Nov 2026 and must be re-confirmed for Feb-Mar 2027. No grand total is claimed.",
       "source": "https://guide.michelin.com/en/new-york-state/new-york/restaurants/3-stars-michelin"
+    },
+    {
+      "id": "F14",
+      "severity": "Medium",
+      "title": "Per Se menu price not published on official pages",
+      "detail": "Per Se's official Tock channel and Thomas Keller site print only a $200/person deposit (Main Dining Room) and $150/person deposit (Salon), not the tasting-menu price. A $425 figure appears only in a search snippet and was NOT used. priceTwoAdults left blank and flagged; confirm by phone or at booking.",
+      "source": "https://www.exploretock.com/perse/faq"
+    },
+    {
+      "id": "F15",
+      "severity": "Medium",
+      "title": "Atomix and Atera third-party price reports conflict - not used",
+      "detail": "Official sites for Atomix (client-rendered) and Atera (unreachable) yielded no price. Third-party blogs report Atomix $295/$375 and Atera $195/$235/$298. These conflict and are not official, so both couple totals stay blank and flagged rather than guessed.",
+      "source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atomix"
+    },
+    {
+      "id": "F16",
+      "severity": "Low",
+      "title": "Corrected wrong Facebook link for Eleven Madison Park",
+      "detail": "Canonical data listed facebook.com/jalexandersrestaurantscollection (a different restaurant group) as EMP's Facebook. Removed as unverified on 2026-11-25. EMP's official Instagram (elevenmadisonpark, printed on the Resy venue page MICHELIN links) is retained.",
+      "source": "https://www.elevenmadisonpark.com/faq"
+    },
+    {
+      "id": "F17",
+      "severity": "Medium",
+      "title": "Menu prices captured Nov 2026 vs Feb-Mar 2027 trip",
+      "detail": "All verified restaurant menu prices were captured 2026-11-25 (Nov 2026 menus). The trip is Feb 15-Mar 23 2027, so prices may change. Every couple total must be re-confirmed on the official page at booking; the Michelin 14 Dec 2026 ceremony may also change distinctions.",
+      "source": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/"
     }
   ]
 }

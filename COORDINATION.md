@@ -24,10 +24,10 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T7 | Repo audit page + two-session integration log | done | arena/1a7ae497-nyfun2 | `pages/repo-audit.html` | Linked from every page nav and from the overview tile grid. |
 | T8 | Repository hygiene: licence, ignore rules, nojekyll | done | arena/1a7ae497-nyfun2 | `LICENSE`, `.gitignore`, `.nojekyll` | MIT for code, CC BY 4.0 for data and prose. |
 | T9 | Complete the Michelin catalogue to the official counters (18 of 69 starred rows today) | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/restaurants.json` | All 72 rows present (5/14/50 starred + Bib + Selected) in the namespaced kit; canonical `data/restaurants.json` still at 20 rows — merging the two is a separate decision. |
-| T10 | Per-person menu price capture for the starred restaurants | in progress | arena/fc6d5f66-nyfun2 | `data/restaurants.json`, `research/t10-prices.md` | Claimed 2026-11-25 by session fc6d5f66. Official restaurant websites that print menu prices; couple totals = 2 × published per-person price, arithmetic shown. |
-| T13 | Complete canonical starred roster to the official 69 + official social links per restaurant row | in progress | arena/fc6d5f66-nyfun2 | `data/restaurants.json`, `research/t13-roster-socials.md` | Reconciles the 72-vs-21 roster discrepancy additively; re-verify against the live MICHELIN all-starred list; social links only where printed on an official page. |
-| T14 | Refresh decisions register + executive summary for session fc6d5f66 findings | in progress | arena/fc6d5f66-nyfun2 | `data/decisions.json`, `pages/executive-summary.html`, `pages/questions.html`, `pages/suggestions.html`, `pages/flagged.html`, `pages/michelin-restaurants.html`, `pages/sources.html` | Includes the EMP Facebook-link irregularity and the PR #12 stale-base conflict. |
-| T15 | Final verification + publish of the fc6d5f66 scope; log PR #12 conflict | in progress | arena/fc6d5f66-nyfun2 | `scripts/verify.py`, `COORDINATION.md` | Runs after T10/T13/T14; owns no shared index/assets. |
+| T10 | Per-person menu price capture for the starred restaurants | done | arena/fc6d5f66-nyfun2 | `data/restaurants.json`, `research/t10-prices.md` | 12 restaurants priced from official menu/FAQ/booking pages (couple totals $156–$1,900, food only). Per Se blank (official pages show only a $200 deposit); Atomix/Atera third-party conflicts rejected. See `research/t10-prices.md`. |
+| T13 | Complete canonical starred roster to the official 69 + official social links per restaurant row | done | arena/fc6d5f66-nyfun2 | `data/restaurants.json`, `research/t13-roster-socials.md` | Canonical roster now 69 starred (5/14/50) + 3 Guide-listed = 72 rows. 3 kit-only names excluded/flagged. Official socials added for Per Se, Aska (EMP/Le Bernardin retained). |
+| T14 | Refresh decisions register + executive summary for session fc6d5f66 findings | done | arena/fc6d5f66-nyfun2 | `data/decisions.json`, `pages/executive-summary.html`, `pages/michelin-restaurants.html` | Q6/Q8 updated; F11 resolved, F13 partial; new flags F14–F17; S3/S10 status updated. Exec summary + Michelin page refreshed with a verified-price table. |
+| T15 | Final verification + publish of the fc6d5f66 scope; log PR #12 conflict | done | arena/fc6d5f66-nyfun2 | `scripts/verify.py`, `COORDINATION.md` | `scripts/verify.py` → 0 errors / 0 warnings (113 rows); `node --check assets/app.js` passes. PR #12 stale-base conflict logged below; publish = merge to main (integration owner). |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
 
@@ -196,3 +196,52 @@ per page; no absolute claims of the form "every value is verified" remain (check
 - **Active parallel session detected:** PR #12 (`arena/aad75793-nyfun2`, opened 2026-11-25 22:28 UTC) branched from the **original** commit `a3a2848` (README-only), not from current `main`. Its diff therefore re-creates `COORDINATION.md`, `README.md`, `index.html`, `assets/app.js`, `assets/styles.css`, `data/hotels.json`, `data/activities.json`, `.nojekyll` as *new files* and GitHub reports it **CONFLICTING / DIRTY**. Merging it as-is would clobber the canonical site and all four merged kits. **Flagged for the integration owner; no files from that session were touched.**
 - Claimed T10 (unclaimed), T13, T14, T15 with scopes disjoint from PR #12's file set: this session edits only `data/restaurants.json`, `data/decisions.json`, `pages/**` (canonical subpages), `scripts/verify.py`, `research/**` and this board. It does **not** edit `index.html`, `assets/**`, `data/hotels.json`, `data/activities.json`, `README.md`, `.nojekyll`, `alt/**` or `sessions/**` — those are either claimed by the parallel session or preserved prior work.
 - Known irregularity to fix inside claimed scope: `data/restaurants.json` lists Eleven Madison Park's Facebook as `facebook.com/jalexandersrestaurantscollection` (a different restaurant group). Will re-verify against an official page and correct or blank+flag.
+
+### 2026-11-25 — session `arena/fc6d5f66-nyfun2` (completion: T10 / T13 / T14 / T15)
+
+**T13 — roster reconciled to the live census.** `data/restaurants.json` now holds the full live
+MICHELIN all-starred roster: **69 starred (5 three-star, 14 two-star, 50 one-star) + 3 Guide-listed
+new additions = 72 rows**, rebuilt reproducibly by `research/build_restaurants.py` from the original
+canonical snapshot (`research/canonical-restaurants-original.json`) + the `sessions/33cfdba4` kit +
+this session's official-page captures. Three kit-only names (**Blue Hill at Stone Barns, Shion 69
+Leonard Street, La Bastide by Andrea Calstier**) are not in the live all-starred selection and were
+excluded/flagged. "Sixty Three Clinton" ↔ kit "63 Clinton" normalized. Every row keeps an official
+source link; blanks are flagged, never inferred.
+
+**T10 — 12 official-menu couple totals captured** (food only, pre-tax/tip/beverages; menus Nov 2026):
+EMP $770/$510 · Le Bernardin $700/$450/$284 · Jungsik $670 · Masa $990/$1,500/$1,900 · Gabriel
+Kreuther $650/$400/$470 · The Modern $230/$510/$370/$570 · Chef's Table BF $770 · Cote $168/$450 ·
+Kochi $290 · Mari $290 · Jua $300 · Gramercy Tavern $356/$156. Full source table in
+`research/t10-prices.md` and on the Michelin page. **Left blank + flagged:** Per Se (official pages
+print only a $200/person deposit; the $425 search-snippet figure was NOT used), Sushi Sho, Aquavit,
+Atera, Atomix, Jean-Georges, César, Joo Ok, odo, Saga, Sushi Noz and most à-la-carte one-stars.
+Atomix/Atera third-party price reports conflict and were rejected. Michelin's own least-expensive
+list groups Casa Mono, Crown Shy, Jeju Noodle Bar, Semma, Tuome at ~$75/person (indicative, not a quote).
+
+**Hours/address detail added** from official MICHELIN detail pages + restaurant sites: Aska (full
+week), odo (full week), Jua, Mari, Dirt Candy, Sushi Nakazawa, Semma, Sixty Three Clinton, Chef's
+Table BF (seatings), plus the 10 detail pages already captured. 29 rows now have hours, 33 an address.
+
+**Socials:** official accounts added for Per Se (Tock) and Aska (site footer); EMP/Le Bernardin
+official Instagram/Facebook retained from the prior canonical capture. **EMP's wrong Facebook link
+(`jalexandersrestaurantscollection`) removed and flagged (F16).** Verified activity official socials
+(MoMA, Met, AMNH, ESB incl. TikTok, Whitney, Guggenheim, 9/11 Memorial, High Line, NYPL) are recorded
+in `research/activity-socials.md` — **handoff request:** the activities owner should merge these into
+`data/activities.json` (outside this session's scope).
+
+**T14 — decisions register + pages refreshed.** Q6/Q8 updated with the verified prices/socials; F11
+re-graded to Low (roster now a census), F13 re-scoped (menu prices partially resolved; airfare/theatre
+still unpriced); new flags **F14** (Per Se price unconfirmed), **F15** (Atomix/Atera conflict), **F16**
+(EMP Facebook corrected), **F17** (Nov-2026 capture vs Feb–Mar 2027 trip). S3/S10 marked
+partially/fully implemented. Register now **12 questions, 12 suggestions, 17 flags**. Executive
+summary and Michelin page updated; a clickable verified-price table was added to the Michelin page.
+
+**T15 — verification.** `python3 scripts/verify.py` → **0 errors, 0 warnings over 113 data rows** and
+all local HTML links; `node --check assets/app.js` passes. No shared index/assets/hotels/activities
+files were touched. **Publish = merge this branch to `main`** (Pages serves `main` root); that merge is
+the integration owner's step. **PR #12 (`arena/aad75793-nyfun2`) remains CONFLICTING/DIRTY on a stale
+`a3a2848` base and must not be merged as-is** — flagged above for the integration owner.
+
+**Remaining open items (not blockers, published as flagged):** exact prices for the unpriced starred
+rows; 2027 re-confirmation of all Nov-2026 menus; post-14-Dec-2026 Michelin re-check; measured
+hotel→restaurant routing for the ≤1-hour ranking; dated 2027 hotel rates; airfare and theatre pricing.
