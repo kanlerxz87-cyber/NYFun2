@@ -27,6 +27,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T10 | Per-person menu price capture for the starred restaurants | unclaimed | — | `data/restaurants.json` | Menu pages are client-rendered; needs a source that prints prices. |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
+| T16 | Disjoint namespaced full-spec verified dashboard + multi-platform social audit + official hotel & restaurant verification | in progress | arena/657520df-nyfun2 | `sessions/657520df/**`, `COORDINATION.md` | Non-overlapping namespace under `sessions/657520df/`; leaves root `index.html`, `pages/**`, `data/**`, `alt/**`, `sessions/215c2a25/**`, and `sessions/33cfdba4/**` untouched. |
 
 ## Log
 
@@ -187,3 +188,10 @@ per page; no absolute claims of the form "every value is verified" remain (check
   cross-session discrepancies above — pre-tax vs all-in hotel basis, row-level queen+private-bath
   filtering in the canonical hotel set, the MICHELIN band-vs-dollar question, and the 72-vs-20 roster
   size. None was resolved unilaterally.
+
+### 2026-11-25 — session `arena/657520df-nyfun2` (claim)
+- Read `COORDINATION.md` and inspected all active/merged branches (`main` at `0f93b80`, plus open/active parallel branches).
+- Platform note: this session is bound to branch `arena/657520df-nyfun2` (branched from `main` @ `0f93b80`). Per platform rules, all commits and pushes stay on `arena/657520df-nyfun2`.
+- Claimed **T16** with non-overlapping scope `sessions/657520df/**` (plus logging in `COORDINATION.md`). Root shared files (`index.html`, `pages/**`, `assets/**`, `data/**`), `alt/**`, `sessions/215c2a25/**`, and `sessions/33cfdba4/**` will not be overwritten.
+- Work in scope: full line-by-line audit of `main` and parallel kits, official primary-source verification of Michelin restaurants (including published prix-fixe/menu pricing where confirmed on official restaurant sites), hotels (room bed/private bath, dated 7-night pricing across Feb 15 – Mar 23, 2027 windows, transit cluster ranking ≤1 hr), activities (official hours, exceptions, couple costs), multi-platform social links (YouTube, TikTok, Instagram), open questions/suggestions/flags, and a clean mobile-friendly dashboard at `sessions/657520df/index.html`.
+
