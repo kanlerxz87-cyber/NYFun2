@@ -19,7 +19,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T2 | Research: hotels (price/location/amenities, 7-night totals, cheapest window) | done | arena/4a10e962-nyfun2 | `data/hotels.json`, `research/hotels.md` | Private bath + queen+ bed, 2 adults; official booking-source pricing only. |
 | T3 | Research: activities + attractions, hours/exceptions, social media links | done | arena/4a10e962-nyfun2 | `data/activities.json`, `research/activities.md` | ≤1 hour travel clustering; official source per row. |
 | T4 | Research: transit/rough travel-time methodology + questions/answers/gaps | done | arena/4a10e962-nyfun2 | `research/methodology.md`, `data/questions.json` | Document limits, no inferred values. |
-| T5 | Final integration: build GitHub Pages site, line-by-line verification, publish | in progress | arena/4a10e962-nyfun2 | `index.html`, `assets/**`, `pages/**`, `.github/**` | Only after T1–T4 done; owns shared nav/index. |
+| T5 | Final integration: build GitHub Pages site, line-by-line verification, publish | done | arena/4a10e962-nyfun2 | `index.html`, `assets/**`, `pages/**`, `.github/**` | Only after T1–T4 done; owns shared nav/index. |
 
 ## Log
 
@@ -47,3 +47,9 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 - Discovered open PR #2 from session `arena/1a7ae497-nyfun2` with an overlapping full-site implementation (root HTML, `assets/*`, its own task board). Per the coordination rule, its files were **not** overwritten.
 - Its HTML/assets/tools were copied verbatim into `alt/` under this branch, with a banner on each page identifying it as the other session's kit and linking back to the main dashboard. A comparison tile was added to the main landing page and Sources page.
 - PR #2 is proposed for closure with the work preserved under `alt/`; no files from that session were modified in place.
+
+### 2026-11-25 — final publish verification (session `arena/4a10e962-nyfun2`)
+- T5 done. Live URLs verified with a fresh cache-busting request: main dashboard at https://kanlerxz87-cyber.github.io/NYFun2/index.html?check=final (all 20 Michelin rows, 12 activities, 10 hotels, 8 decisions and the alternate-kit tile render), Michelin table at https://kanlerxz87-cyber.github.io/NYFun2/pages/michelin-restaurants.html (JS-rendered rows with official source links), JSON at https://kanlerxz87-cyber.github.io/NYFun2/data/restaurants.json, and alternate kit at https://kanlerxz87-cyber.github.io/NYFun2/alt/index.html.
+- Automated checks: `python3 scripts/verify.py` → 0 errors / 0 warnings over 51 rows and all local links; alternate kit local links checked separately → 0 broken; `node --check assets/app.js` passes; local static server returned 200 for all 17 tested URLs.
+- Irregularity: an earlier cached view of the live landing page briefly showed pre-correction text; a cache-busting fetch confirmed the corrected content is actually published.
+- Cross-session action: PR #2 was closed after a comment explaining that its work is preserved under `alt/` and that a rebase would be required to make it the primary site. No other session's files were modified in place.
