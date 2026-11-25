@@ -1,157 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NYC Couples Trip · Feb 2027 — Verified Planning Dashboard</title>
-<meta name="description" content="A verified, source-linked planning kit for a 7-night New York trip for two adults, 15–22 February 2027: hotels, MICHELIN restaurants, activities, itinerary and budget.">
-<link rel="stylesheet" href="assets/site.css">
+<title>NYC Trip Plan 2027 — Sourced dashboard</title>
+<meta name="description" content="A source-checked New York City trip dashboard for February 2027: Michelin restaurants, hotels, activities, social-review links, open questions and suggestions.">
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="layout">
+<aside class="sidebar">
+  <a class="brand" href="index.html"><span class="mark">NY</span><span>NYC 2027<small>Trip dashboard</small></span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a class="active" href="index.html">Overview</a>
+    <a href="pages/executive-summary.html">Summary</a>
+    <a href="pages/michelin-restaurants.html">Michelin</a>
+    <a href="pages/hotels.html">Hotels</a>
+    <a href="pages/activities.html">Activities</a>
+    <a href="pages/itinerary.html">Itinerary</a>
+    <a href="pages/questions.html">Questions</a>
+    <a href="pages/suggestions.html">Suggestions</a>
+    <a href="pages/flagged.html">Flagged</a>
+    <a href="pages/sources.html">Sources</a>
+    <a href="pages/repo-audit.html">Repo audit</a>
+  </nav>
+  <div class="side-note">Verified against official sources · checked <span data-checked>—</span></div>
+</aside>
+<main class="content" id="main">
+  <p class="eyebrow">New York City · February 2027 · 2 adults</p>
+  <h1>A trip plan you can audit, line by line.</h1>
+  <p class="lede">This dashboard collects Michelin distinctions, restaurants, activities, hotels, review links and opening hours. Every table row carries an official source. Values that could not be confirmed are left blank and flagged — never estimated.</p>
 
-<div id="site-header"></div>
+  <div class="notice danger"><strong>Decision warning:</strong> the Michelin Northeast Cities ceremony is scheduled for <a href="https://michelinmedia.com/pages/blog/detail/article/c/a1479/" target="_blank" rel="noopener noreferrer">14 December 2026 ↗</a>, after this research and before the trip. Star levels may change.</div>
 
-<main id="main" class="wrap">
+  <div class="notice ok"><strong>New on 25 Nov 2026:</strong> dated 7-night totals for your exact dates now exist for four hotels, captured from live rate pages with the exact URL and capture date per row: <strong>Hyatt Place NY/Chelsea $1,305 all-in</strong>, Arlo NoMad $1,428, 11 Howard $1,774 and The Beekman $5,220. They are dated aggregator snapshots, not hotel quotes — see flag <a href="pages/flagged.html">F10</a>.</div>
 
-  <div class="hero">
-    <span class="eyebrow">Dashboard · research date <span id="verified-date">2026-11-25</span></span>
-    <h1>New York for two, 15–22 February 2027</h1>
-    <p class="lead">
-      Seven nights, two adults, one private-bathroom room with a queen bed or bigger — built around
-      MICHELIN-starred dining and a one-hour transit ceiling. Every number below is linked to the
-      page that states it, or it is marked <span class="badge b-unverified">unverified</span>.
-    </p>
-    <div class="pill-row">
-      <span class="pill">2 adults</span>
-      <span class="pill">7 nights (flexible 4–28)</span>
-      <span class="pill">Mon 15 Feb → Mon 22 Feb 2027</span>
-      <span class="pill">4 hotels priced</span>
-      <span class="pill">69 starred restaurants in scope</span>
-    </div>
+  <div class="grid">
+    <div class="stat"><b data-count="restaurants">—</b><span>Michelin rows, incl. guide-only</span></div>
+    <div class="stat"><b data-count="activities">—</b><span>Activities with official sources</span></div>
+    <div class="stat"><b data-count="hotels">—</b><span>Hotel candidates</span></div>
+    <div class="stat"><b data-count="questions">—</b><span>Open questions blocking decisions</span></div>
   </div>
 
-  <section>
-    <div class="section-head">
-      <h2>The four numbers that matter</h2>
-      <span class="hint">All captured 25 Nov 2026 · USD</span>
-    </div>
-    <div class="grid three">
-      <div class="kpi">
-        <div class="label">Cheapest compliant hotel</div>
-        <div class="value">$1,305</div>
-        <div class="sub">Hyatt Place NY/Chelsea · 7 nights all-in · King bed · private bathroom · breakfast included</div>
-      </div>
-      <div class="kpi">
-        <div class="label">Most expensive shortlisted</div>
-        <div class="value">$5,220</div>
-        <div class="sub">The Beekman (FiDi) · 7 nights all-in · 4× the cheapest for the same dates</div>
-      </div>
-      <div class="kpi">
-        <div class="label">Going anywhere</div>
-        <div class="value">$3<span style="font-size:14px;font-weight:600">/ride</span></div>
-        <div class="sub">MTA subway &amp; local bus fare · express bus $7.25 · <a href="https://www.mta.info/fares-tolls" target="_blank" rel="noopener">mta.info</a></div>
-      </div>
-    </div>
+  <h2>Executive summary</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Dates.</strong> Preferred trip 15–18 February 2027 (3 nights); the requested 7-night hotel pricing case is 15–22 February 2027 (Monday to Monday). Both are carried forward; the duration choice is an open decision.</li>
+      <li><strong>Michelin.</strong> The live Michelin list checked 25 November 2026 shows 5 three-star, 14 two-star and 50 one-star NYC restaurants. This site details 19 rows and clearly separates starred restaurants from Guide-listed restaurants with no star.</li>
+      <li><strong>Hotels.</strong> Twelve candidates are listed, and <strong>four now carry a dated 7-night total for 15–22 Feb 2027</strong> including all taxes: Hyatt Place NY/Chelsea <strong>$1,305</strong> (King, private bath, breakfast, free cancellation), Arlo NoMad <strong>$1,428</strong> (Queen), 11 Howard <strong>$1,774</strong> (Queen, the only hotel sharing a ZIP code with a verified starred restaurant) and The Beekman <strong>$5,220</strong>. Eight candidates stay unpriced, and no cheapest-booking-window comparison across other weeks was run.</li>
+      <li><strong>Activities.</strong> Twelve attractions and parks are listed with official opening hours and exceptions where published. Each row has a live directions link that uses the hotel selected as route origin on the Hotels page.</li>
+      <li><strong>Social proof.</strong> YouTube review links are included where found and labelled third-party. Official account links are included only where an official site confirms them.</li>
+      <li><strong>Costs.</strong> Couple totals appear only where an official adult price was published (for example MoMA, The Met and the Whitney at $60 for two). Michelin's $ band is not a dollar amount and is never converted into one.</li>
+    </ul>
+    <p><a href="pages/executive-summary.html">Read the full executive summary →</a></p>
+  </div>
 
-    <div class="callout warn" style="margin-top:16px">
-      <h4>What is deliberately blank</h4>
-      <p>
-        Restaurant prices for two, individual YouTube/TikTok links, and measured subway times are
-        <strong>not filled in</strong> — the official sources reachable in this session did not publish
-        them in readable form. Fifteen such gaps are listed with their cause and their fix on
-        <a href="flagged.html">Flagged for review</a>. Nothing was guessed to fill a table cell.
-      </p>
-    </div>
-  </section>
+  <h2>Go to a category</h2>
+  <div class="cards-a">
+    <a class="tile" href="pages/michelin-restaurants.html"><span class="tag">Dining</span><h3>Michelin restaurants</h3><p>Star levels, hours, guide bands, review links and source per row.</p></a>
+    <a class="tile" href="pages/hotels.html"><span class="tag">Stay</span><h3>Hotels</h3><p>Location, published room facts, rate evidence and the blanks that remain.</p></a>
+    <a class="tile" href="pages/activities.html"><span class="tag">Things to do</span><h3>Activities</h3><p>Official hours, exceptions, couple costs and route links.</p></a>
+    <a class="tile" href="pages/itinerary.html"><span class="tag">Plan</span><h3>Itinerary & travel</h3><p>How the ≤1-hour travel goal is handled without invented travel times.</p></a>
+    <a class="tile" href="pages/questions.html"><span class="tag">Decide</span><h3>Questions & answers</h3><p>What is known, what is missing and what blocks a reasonable decision.</p></a>
+    <a class="tile" href="pages/suggestions.html"><span class="tag">Improve</span><h3>Suggestions</h3><p>Options to consider before changing the plan or the site.</p></a>
+    <a class="tile" href="pages/flagged.html"><span class="tag">Audit</span><h3>Flagged for review</h3><p>Irregularities, conflicts and unverified values in one place.</p></a>
+    <a class="tile" href="pages/sources.html"><span class="tag">Verify</span><h3>Sources & method</h3><p>Primary-source list, verification rules and coordination notes.</p></a>
+  </div>
 
-  <section>
-    <div class="section-head"><h2>Pick a path</h2></div>
-    <div class="grid two">
-      <a class="card card-link" href="hotels.html">
-        <h3>1 · Choose the base</h3>
-        <p>Four hotels priced live for your exact dates, with bed, bathroom, taxes and rate terms side by side — plus the honest state of the MICHELIN proximity ranking.</p>
-        <span class="more">Compare hotels →</span>
-      </a>
-      <a class="card card-link" href="michelin.html">
-        <h3>2 · Choose the dinners</h3>
-        <p>All five three-star kitchens, plus the two-star and one-star entries catalogued so far — distinction, price band, hours, rules and official links.</p>
-        <span class="more">Open the MICHELIN tables →</span>
-      </a>
-      <a class="card card-link" href="activities.html">
-        <h3>3 · Choose the days</h3>
-        <p>Only the venues whose official pages were actually read: The Met, the 9/11 Memorial and Museum, Top of the Rock — with hours, prices and rules.</p>
-        <span class="more">See activities →</span>
-      </a>
-      <a class="card card-link" href="itinerary.html">
-        <h3>4 · See the whole trip</h3>
-        <p>A seven-night schedule built so that every venue sits on a day it is verifiably open, with the cost model and its arithmetic shown.</p>
-        <span class="more">Itinerary &amp; budget →</span>
-      </a>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-head">
-      <h2>Recommended trip, in one paragraph</h2>
-      <span class="hint">based only on verified facts</span>
-    </div>
-    <div class="card">
-      <p>
-        <strong>Base:</strong> Hyatt Place New York/Chelsea at an estimated <strong>$1,305 all-in</strong> for
-        seven nights — it is the cheapest of the four priced hotels, it has a King bed and an attached
-        bathroom, and the rate includes breakfast and free cancellation until 13 February 2027.
-        <strong>Upgrade if MICHELIN walkability is worth ~$120:</strong> Arlo NoMad at about
-        <strong>$1,428 all-in</strong> with a Queen Room, described by Booking as roughly 1,056 ft from the
-        Empire State Building and the 6 train.
-        <strong>Dinners:</strong> one per night across Atera ★★ (Tribeca), Eleven Madison Park ★★★
-        (Flatiron), Le Bernardin ★★★ (Midtown) and Per Se ★★★ (Columbus Circle) — the four kitchens whose
-        opening hours for your exact weekdays were verified.
-        <strong>Days:</strong> The Met ($30 each), the free 9/11 Memorial plus the Museum (open Wednesday),
-        and Top of the Rock (from $42 each).
-        <strong>Not yet costed:</strong> flights, restaurant bills and theatre tickets.
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-head"><h2>How to read this site</h2></div>
-    <div class="grid three">
-      <div class="card">
-        <h3><span class="badge b-verified">verified</span></h3>
-        <p>The figure was read directly from an official or primary source on 25 Nov 2026, and the row links to it.</p>
-      </div>
-      <div class="card">
-        <h3><span class="badge b-unverified">unverified</span></h3>
-        <p>The cell is intentionally empty. It carries a flag ID that opens the exact reason and the fix.</p>
-      </div>
-      <div class="card">
-        <h3><span class="badge b-info">estimate</span></h3>
-        <p>Arithmetic this site performed on published numbers — e.g. adding the tax lines to a pre-tax hotel total. The formula is always printed next to the figure.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-head">
-      <h2>Registers</h2>
-      <span class="hint">everything that is missing, and what to do about it</span>
-    </div>
-    <div class="grid two">
-      <a class="card card-link" href="executive-summary.html"><h3>Executive summary</h3><p>The decision-ready one-pager: findings, recommendation, cost envelope, risks.</p><span class="more">Read →</span></a>
-      <a class="card card-link" href="suggestions.html"><h3>Suggestions register</h3><p>Ten ways to improve this site before anyone acts on it, each with impact, effort and a definition of done.</p><span class="more">Review →</span></a>
-      <a class="card card-link" href="questions.html"><h3>Open questions</h3><p>Twelve questions that must be answered before a decision is defensible, with what we know, what we don't, and how to find it.</p><span class="more">Answer →</span></a>
-      <a class="card card-link" href="flagged.html"><h3>Flagged for review</h3><p>Fifteen irregularities and unverified fields, each with evidence and a remedy.</p><span class="more">Inspect →</span></a>
-      <a class="card card-link" href="sources.html"><h3>Source register</h3><p>Twenty-two sources, what each one verified, and the date it was read.</p><span class="more">Audit →</span></a>
-      <a class="card card-link" href="repo-audit.html"><h3>Repo audit</h3><p>Line-by-line review of the repository as it arrived, including the branch, Pages configuration and irregularities.</p><span class="more">See the audit →</span></a>
-    </div>
-  </section>
-
+  <h2>How to read the tables</h2>
+  <div class="card">
+    <p><strong>Official source</strong> links to the Michelin page, government page or venue's own page used for that row. <strong>Official site</strong> is the venue's own website where one was published by the source. <span class="blank">blank — unverified</span> means no official confirmation was found. A <span class="pill amber">flag</span> explains why. Review videos are third-party and are not treated as official endorsements.</p>
+    <p>On a phone, each table row becomes a card. Use the search box to filter. Select a hotel as route origin on the Hotels page; all "Route" links then start from that hotel.</p>
+  </div>
+  <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> · Coordination board: <a href="COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a> · Research date <span data-checked>—</span>.</p>
 </main>
-
-<div id="site-footer"></div>
-<script src="assets/data.js"></script>
-<script src="assets/tables.js"></script>
+</div>
 <script src="assets/app.js"></script>
 </body>
 </html>

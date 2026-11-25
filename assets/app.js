@@ -1,216 +1,155 @@
-/* ==========================================================================
-   NYC Trip Planning — shared UI (nav, tables, helpers)
-   Vanilla JS. No dependencies. Renders every data table from assets/data.js
-   ========================================================================== */
 (function () {
   'use strict';
+  const BASE = location.pathname.includes('/pages/') ? '../data/' : 'data/';
+  const DEFAULT_ORIGIN = 'citizenM New York Times Square, 218 West 50th Street, New York, NY 10019';
+  const storeKey = 'nyfun2_origin';
 
-  var VERIFIED = '2026-11-25';
+  const esc = (v) => String(v == null ? '' : v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const link = (url, label) => url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label || 'Open')} ↗</a>` : '<span class="blank">—</span>';
+  const val = (v) => v ? esc(v) : '<span class="blank">blank — unverified</span>';
+  const flags = (arr) => (arr && arr.length) ? `<ul class="flag-list">${arr.map(f => `<li>${esc(f)}</li>`).join('')}</ul>` : '<span class="pill green">none</span>';
+  const socials = (arr) => (arr && arr.length) ? `<div class="socials">${arr.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" title="${esc(s.note || '')}">${esc(s.platform)} ↗</a>`).join('')}</div>` : '<span class="blank">—</span>';
+  const origin = () => { try { return localStorage.getItem(storeKey) || DEFAULT_ORIGIN; } catch (e) { return DEFAULT_ORIGIN; } };
+  const route = (dest) => `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(dest)}`;
+  const routeLink = (dest) => `<a href="${esc(route(dest))}" target="_blank" rel="noopener noreferrer">Route ↗</a>`;
 
-  var PAGES = [
-    { href: 'index.html',              label: 'Overview' },
-    { href: 'executive-summary.html',  label: 'Executive summary' },
-    { href: 'hotels.html',             label: 'Hotels' },
-    { href: 'michelin.html',           label: 'Michelin' },
-    { href: 'activities.html',         label: 'Activities' },
-    { href: 'itinerary.html',          label: 'Itinerary & budget' },
-    { href: 'suggestions.html',        label: 'Suggestions' },
-    { href: 'questions.html',          label: 'Open questions' },
-    { href: 'flagged.html',            label: 'Flagged for review' },
-    { href: 'sources.html',            label: 'Sources' },
-    { href: 'repo-audit.html',         label: 'Repo audit' }
-  ];
-
-  /* ---------------- helpers ---------------- */
-  function esc(s) {
-    if (s === null || s === undefined) return '';
-    return String(s)
-      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
-  }
-
-  function money(n) {
-    if (n === null || n === undefined || n === '') return '';
-    var num = Number(n);
-    if (isNaN(num)) return String(n);
-    return '$' + num.toLocaleString('en-US', { maximumFractionDigits: 0 });
-  }
-
-  /* A cell is either a plain string, {v:..., flag:'F-01'}, or {link:url,text} */
-  function cell(v) {
-    if (v === null || v === undefined || v === '' || v === '—') {
-      return '<span class="badge b-unverified">unverified</span>';
+  const config = {
+    restaurants: {
+      cols: ['Name','Guide status','Cuisine','Address / area','Days & hours','Exceptions','Total for 2','Guide band','Links','Social / review','Official source','Flags / review'],
+      row: (r) => [
+        `<strong>${esc(r.name)}</strong><span class="sub">${routeLink(r.address || r.name)}</span>`,
+        `<span class="pill ${r.distinction.includes('3') ? 'green' : r.distinction.includes('2') ? '' : r.distinction.includes('1') ? '' : 'gray'}">${esc(r.distinction)}</span>`,
+        val(r.cuisine),
+        `${val(r.address)}${r.area ? `<span class="sub">${esc(r.area)}</span>` : ''}`,
+        val(r.hours),
+        val(r.exceptions),
+        val(r.priceTwoAdults),
+        val(r.guidePriceBand),
+        `${link(r.officialUrl, 'Official site')}${r.officialUrl && r.sourceUrl ? '<br>' : ''}${link(r.sourceUrl, 'MICHELIN page')}`,
+        socials(r.social),
+        `<a class="src" href="${esc(r.sourceUrl)}" target="_blank" rel="noopener noreferrer">Verify source ↗</a>`,
+        flags(r.flags)
+      ]
+    },
+    activities: {
+      cols: ['Activity','Type','Where','Days & hours','Exceptions','Cost for 2','Links','Social / review','Official source','Flags / review'],
+      row: (a) => [
+        `<strong>${esc(a.name)}</strong><span class="sub">${routeLink(a.address || a.name)}</span>`,
+        val(a.category),
+        `${val(a.address)}${a.area ? `<span class="sub">${esc(a.area)}</span>` : ''}`,
+        val(a.hours),
+        val(a.exceptions),
+        val(a.costTwoAdults),
+        link(a.officialUrl, 'Official site'),
+        socials(a.social),
+        `<a class="src" href="${esc(a.sourceUrl)}" target="_blank" rel="noopener noreferrer">Verify source ↗</a>`,
+        flags(a.flags)
+      ]
+    },
+    hotels: {
+      cols: ['Hotel','Area / address','Room & bath','Guide key / score','Published rate','7-night total','Cheapest window','Links','Source','Flags / review'],
+      row: (h) => [
+        `<strong>${esc(h.name)}</strong><span class="sub"><button class="origin-btn" data-origin="${esc(h.address || h.name)}" type="button">Use as route origin</button></span>`,
+        `${val(h.address)}${h.area ? `<span class="sub">${esc(h.area)}</span>` : ''}`,
+        `${val(h.room)}${h.privateBathroom ? `<span class="sub">Bath: ${esc(h.privateBathroom)}</span>` : ''}`,
+        `${val(h.keyStatus)}${h.guestScore ? `<span class="sub">${esc(h.guestScore)}</span>` : ''}`,
+        val(h.publishedRate),
+        (h.sevenNightTotal
+          ? `${esc(h.sevenNightTotal)}${h.allInSevenNights ? `<span class="sub"><strong>All-in: ${esc(h.allInSevenNights)}</strong></span>` : ''}${h.taxBasis ? `<span class="sub">${esc(h.taxBasis)}</span>` : ''}${h.rateCapturedOn ? `<span class="sub">Captured ${esc(h.rateCapturedOn)}</span>` : ''}`
+          : val(h.sevenNightTotal)),
+        val(h.cheapestWindow),
+        `${link(h.officialUrl, 'Official site')}${h.rateSourceUrl ? `<br>${link(h.rateSourceUrl, 'Rate source')}` : ''}`,
+        `<a class="src" href="${esc(h.sourceUrl)}" target="_blank" rel="noopener noreferrer">Verify source ↗</a>`,
+        flags(h.flags)
+      ]
+    },
+    questions: {
+      cols: ['ID','Question','What we know','What is missing','Provisional answer','Blocks decision?','How to find out','Sources'],
+      row: (q) => [
+        `<strong>${esc(q.id)}</strong>`, `<strong>${esc(q.question)}</strong>`, val(q.whatWeKnow), val(q.whatWeDoNotKnow),
+        val(q.provisionalAnswer), q.blocking ? '<span class="pill red">Yes</span>' : '<span class="pill amber">No</span>',
+        val(q.howToDiscover),
+        q.sources.map(s => `<a href="${esc(s)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`).join('<br>')
+      ]
+    },
+    suggestions: {
+      cols: ['ID','Suggestion','Detail','Effort','Blocked by','Status'],
+      row: (s) => [`<strong>${esc(s.id)}</strong>`, `<strong>${esc(s.title)}</strong>`, val(s.detail), val(s.effort), val((s.blockedBy||[]).join(', ')), val(s.status)]
+    },
+    flags: {
+      cols: ['ID','Severity','Issue','Detail','Source'],
+      row: (f) => [`<strong>${esc(f.id)}</strong>`, `<span class="pill ${f.severity === 'High' ? 'red' : f.severity === 'Medium' ? 'amber' : 'gray'}">${esc(f.severity)}</span>`, `<strong>${esc(f.title)}</strong>`, val(f.detail), `<a href="${esc(f.source)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`]
     }
-    if (typeof v === 'object' && v !== null && v.link) {
-      return '<a href="' + esc(v.link) + '" target="_blank" rel="noopener">' + esc(v.text || v.link) + '</a>';
-    }
-    if (typeof v === 'object' && v !== null && v.v !== undefined) {
-      var html = esc(v.v);
-      if (v.flag) {
-        var badge = '<a class="small" href="flagged.html#' + esc(v.flag) + '" title="See flagged item ' +
-          esc(v.flag) + '"><span class="badge b-unverified">' + esc(v.flag) + '</span></a>';
-        html = html
-          ? html + ' ' + badge
-          : '<span class="muted">unverified</span> ' + badge;
-      }
-      return html;
-    }
-    return esc(v);
+  };
+
+  async function load(name) {
+    const res = await fetch(BASE + name + '.json', {cache: 'no-store'});
+    if (!res.ok) throw new Error('Could not load ' + name + ': ' + res.status);
+    return res.json();
   }
 
-  function stars(n) {
-    var s = '';
-    for (var i = 0; i < n; i++) s += '★';
-    return '<span class="star" aria-label="' + n + ' MICHELIN stars">' + s + '</span>';
+  function renderTable(el, rows, cfg) {
+    const head = `<thead><tr>${cfg.cols.map(c => `<th scope="col">${esc(c)}</th>`).join('')}</tr></thead>`;
+    const body = `<tbody>${rows.map(r => `<tr>${cfg.row(r).map((cell, i) => `<td data-label="${esc(cfg.cols[i])}">${cell}</td>`).join('')}</tr>`).join('')}</tbody>`;
+    el.innerHTML = `<div class="table-wrap"><table>${head}${body}</table></div>`;
   }
 
-  function distinction(d) {
-    if (d === 3) return stars(3) + ' <span class="badge b-verified">3 stars</span>';
-    if (d === 2) return stars(2) + ' <span class="badge b-verified">2 stars</span>';
-    if (d === 1) return stars(1) + ' <span class="badge b-verified">1 star</span>';
-    if (d === 0) return '<span class="badge b-info">Guide-listed only — no star</span>';
-    return '';
-  }
-
-  /* ---------------- header ---------------- */
-  function buildHeader() {
-    var host = document.getElementById('site-header');
-    if (!host) return;
-    var here = (location.pathname.split('/').pop() || 'index.html');
-
-    var items = PAGES.map(function (p) {
-      var cur = (p.href === here) ? ' aria-current="page"' : '';
-      return '<li><a href="' + p.href + '"' + cur + '>' + p.label + '</a></li>';
-    }).join('');
-
-    host.className = 'site-header';
-    host.innerHTML =
-      '<div class="bar">' +
-        '<div class="brand">' +
-          '<b>NYC &middot; Feb 2027</b>' +
-          '<span>Couples trip &middot; verified research</span>' +
-        '</div>' +
-        '<button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav">Menu</button>' +
-      '</div>' +
-      '<nav class="nav" id="primaryNav" aria-label="Primary">' +
-        '<ul>' + items + '</ul>' +
-      '</nav>';
-
-    var btn = document.getElementById('menuBtn');
-    var nav = document.getElementById('primaryNav');
-    if (btn && nav) {
-      btn.addEventListener('click', function () {
-        var open = nav.classList.toggle('open');
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  function addSearch(input, tableWrap) {
+    if (!input || !tableWrap) return;
+    input.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      let shown = 0;
+      tableWrap.querySelectorAll('tbody tr').forEach(tr => {
+        const hit = !q || tr.textContent.toLowerCase().includes(q);
+        tr.style.display = hit ? '' : 'none';
+        if (hit) shown++;
       });
-    }
-  }
-
-  function buildFooter() {
-    var host = document.getElementById('site-footer');
-    if (!host) return;
-    host.className = 'site-footer';
-    host.innerHTML =
-      '<div class="wrap">' +
-        '<div><b>Research date:</b> ' + VERIFIED +
-          ' &middot; <b>Travel window:</b> 15 Feb &ndash; 22 Feb 2027 (7 nights), 2 adults</div>' +
-        '<div>Every figure on this site is either linked to the official source that states it, or labelled ' +
-          '<span class="badge b-unverified">unverified</span> and logged on ' +
-          '<a href="flagged.html">Flagged for review</a>. Nothing is estimated silently.</div>' +
-        '<div class="small">Static site &middot; no tracking &middot; no cookies &middot; ' +
-          '<a href="sources.html">full source register</a></div>' +
-      '</div>';
-  }
-
-  /* ---------------- table renderer ---------------- */
-  /* Usage in HTML:
-     <div class="table-scroll" data-table="hotels"></div>
-     Optional: data-cols="name,district,price" to subset columns  */
-  function renderTables() {
-    var holders = document.querySelectorAll('[data-table]');
-    Array.prototype.forEach.call(holders, function (holder) {
-      var key = holder.getAttribute('data-table');
-      var def = window.TABLES && window.TABLES[key];
-      if (!def) {
-        holder.innerHTML = '<p class="table-note">Table "' + esc(key) + '" not found.</p>';
-        return;
-      }
-      var cols = def.columns;
-      var only = holder.getAttribute('data-cols');
-      if (only) {
-        var wanted = only.split(',');
-        cols = cols.filter(function (c) { return wanted.indexOf(c.key) > -1; });
-      }
-
-      var thead = '<tr>' + cols.map(function (c) {
-        return '<th scope="col" class="' + (c.num ? 'num' : '') + '">' + esc(c.label) + '</th>';
-      }).join('') + '</tr>';
-
-      var rows = (def.rows || []).map(function (r) {
-        var tds = cols.map(function (c) {
-          var raw = r[c.key];
-          var empty = (raw === '' || raw === null || raw === undefined);
-          var out;
-
-          if (c.render === 'distinction') {
-            out = (r.stars === undefined || r.stars === null) ? '—' : distinction(r.stars);
-
-          } else if (c.render === 'money') {
-            out = empty
-              ? '<span class="badge b-unverified">unverified</span>'
-              : '<span class="mono">' + money(raw) + '</span>';
-
-          } else if (c.render === 'dash') {
-            out = empty ? '<span class="muted">—</span>' : cell(raw);
-
-          } else if (c.render === 'status') {
-            out = raw === 'verified'
-              ? '<span class="badge b-verified">verified</span>'
-              : '<span class="badge b-unverified">unverified</span>';
-
-          } else if (c.render === 'social') {
-            var bits = [];
-            if (r.instagram) bits.push('<a href="' + esc(r.instagram) + '" target="_blank" rel="noopener">Instagram</a>');
-            if (r.facebook)  bits.push('<a href="' + esc(r.facebook) + '" target="_blank" rel="noopener">Facebook</a>');
-            if (r.youtube)   bits.push('<a href="' + esc(r.youtube) + '" target="_blank" rel="noopener">YouTube</a>');
-            if (r.tiktok)    bits.push('<a href="' + esc(r.tiktok) + '" target="_blank" rel="noopener">TikTok</a>');
-            out = bits.length
-              ? bits.join(' · ')
-              : '<span class="muted small">none verified</span>' +
-                ' <a class="small" href="flagged.html#F-05" title="See F-05"><span class="badge b-unverified">F-05</span></a>';
-
-          } else if (c.render === 'links') {
-            /* two-link cell: the given link plus an optional official site */
-            var parts = [];
-            if (r[c.key] && r[c.key].link) parts.push('<a href="' + esc(r[c.key].link) + '" target="_blank" rel="noopener">' + esc(r[c.key].text || 'Open') + '</a>');
-            if (r.official_link) parts.push('<a href="' + esc(r.official_link) + '" target="_blank" rel="noopener">Official site</a>');
-            out = parts.length ? parts.join(' · ') : '<span class="muted">—</span>';
-
-          } else {
-            out = cell(raw);
-          }
-
-          return '<td class="' + (c.num ? 'num' : '') + '">' + out + '</td>';
-        }).join('');
-        return '<tr id="' + esc(r.id || '') + '">' + tds + '</tr>';
-      }).join('');
-
-      holder.innerHTML = '<table><thead>' + thead + '</thead><tbody>' + rows + '</tbody></table>';
+      const counter = input.parentElement.querySelector('.count');
+      if (counter) counter.textContent = `${shown} of ${tableWrap.querySelectorAll('tbody tr').length} rows shown`;
     });
   }
 
-  /* ---------------- boot ---------------- */
-  function boot() {
-    buildHeader();
-    buildFooter();
-    renderTables();
-    var stamp = document.getElementById('verified-date');
-    if (stamp) stamp.textContent = VERIFIED;
+  function setCounts(data) {
+    const d = (data.restaurants?.items || []).length;
+    const a = (data.activities?.items || []).length;
+    const h = (data.hotels?.items || []).length;
+    const f = (data.decisions?.flags || []).length;
+    const q = (data.decisions?.questions || []).length;
+    document.querySelectorAll('[data-count]').forEach(el => {
+      const map = {restaurants:d, activities:a, hotels:h, flags:f, questions:q};
+      if (map[el.dataset.count] != null) el.textContent = map[el.dataset.count];
+    });
+    document.querySelectorAll('[data-checked]').forEach(el => el.textContent = data.restaurants?.meta?.checkedOn || '');
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', boot);
-  } else {
-    boot();
+  async function init() {
+    const specs = [...document.querySelectorAll('[data-table]')];
+    try {
+      const needed = [...new Set(specs.map(s => s.dataset.table.split(':')[0]))];
+      const names = [...new Set([...needed, ...(document.querySelector('[data-count]') ? ['restaurants','activities','hotels','decisions'] : [])])];
+      const data = {};
+      await Promise.all(names.map(async n => { data[n] = await load(n); }));
+      setCounts(data);
+      specs.forEach(el => {
+        const [kind, key] = el.dataset.table.split(':');
+        let rows;
+        if (kind === 'decisions') rows = data.decisions[key] || [];
+        else rows = (data[kind]?.items) || [];
+        renderTable(el, rows, config[kind] || config[key]);
+        addSearch(el.parentElement.querySelector('input[type=search]'), el.querySelector('.table-wrap'));
+      });
+      document.querySelectorAll('.origin-btn').forEach(btn => btn.addEventListener('click', () => {
+        try { localStorage.setItem(storeKey, btn.dataset.origin); } catch (e) {}
+        document.querySelectorAll('.origin-btn').forEach(b => b.textContent = 'Use as route origin');
+        btn.textContent = '✓ Route origin set';
+        const note = document.getElementById('origin-note');
+        if (note) note.textContent = 'Route origin: ' + btn.dataset.origin;
+      }));
+      document.querySelectorAll('[data-origin-now]').forEach(el => el.textContent = origin());
+    } catch (err) {
+      document.querySelectorAll('[data-table]').forEach(el => { el.innerHTML = `<p class="notice danger">Data could not be loaded: ${esc(err.message)}</p>`; });
+      console.error(err);
+    }
   }
+  document.addEventListener('DOMContentLoaded', init);
 })();
