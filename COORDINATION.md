@@ -2,6 +2,8 @@
 
 Shared task board for parallel agent sessions. **Read this before starting work.** Claim a task by adding your session ID and file scope, commit and push immediately, then only edit files inside your claimed scope. A task marked `needs review` is published on the site's *Flagged for Review* page and does not block anything.
 
+> Branch note (2026-11-25): the platform binds this session to the current branch `arena/600d25ad-nyfun2` (branched from `main` @ `0f93b80`). The board's earlier session-convention text names `arena/4a10e962-nyfun2`; where the two disagree, the platform instruction wins and claims are logged against the current branch. The board itself remains the shared board.
+
 ## Session conventions
 
 - This repository session is bound to branch `arena/4a10e962-nyfun2` (fixed by the platform). Do not switch branches.
@@ -27,8 +29,14 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T10 | Per-person menu price capture for the starred restaurants | unclaimed | — | `data/restaurants.json` | Menu pages are client-rendered; needs a source that prints prices. |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
+| T13 | Verify + enrich activities: official hours re-check; add missing YouTube/TikTok/Instagram links for all 12 rows | unclaimed | arena/600d25ad-nyfun2 | `data/activities.json`, `research/activities-verification.md` | Source every new link to an official site (venue page or platform account page); blank + flag when not confirmed. |
+| T14 | Verify hotels: room spec + rate page pricing for 15–22 Feb 2027 (official/brand pages) | unclaimed | arena/600d25ad-nyfun2 | `data/hotels.json`, `research/hotels-verification.md` | Fill what can be confirmed; keep blanks + flags when not. |
+| T15 | Verify restaurant social links; add missing official IG/FB/YouTube where the official site confirms them | unclaimed | arena/600d25ad-nyfun2 | `data/restaurants.json`, `research/restaurants-verification.md` | Third-party reviews labelled; official-only. |
 
 ## Log
+
+### 2026-11-25 — session `arena/600d25ad-nyfun2` (verification + enrichment)
+- T13–T15 claimed on the current branch; scopes non-overlapping with other sessions. Claims committed and pushed.
 
 ### 2026-11-25 — session `arena/4a10e962-nyfun2` (continued)
 - T0 done: repo audit found no pre-existing content; no irregularities in repository history.
