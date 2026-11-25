@@ -27,7 +27,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T10 | Per-person menu price capture for the starred restaurants | done (reconciled) | arena/6f217cce-nyfun2 + arena/fc6d5f66-nyfun2 | `data/restaurants.json`, `research/t10-prices.md` | 15 restaurants priced from official menu/FAQ/booking pages (couple totals $156–$1,900, food only). Sessions 6f217cce (PR #13) and fc6d5f66 reconciled: Aquavit/odo/Le Coucou from 6f217cce re-verified and adopted; Le Bernardin dinner uses the official PDF ($218). Per Se blank (official pages show only a $200 deposit); Atomix/Atera conflicts rejected. See `research/t10-prices.md`. |
 | T13 | Complete canonical starred roster to the official 69 + official social links per restaurant row | done | arena/fc6d5f66-nyfun2 | `data/restaurants.json`, `research/t13-roster-socials.md` | Canonical roster now 69 starred (5/14/50) + 3 Guide-listed = 72 rows. 3 kit-only names excluded/flagged. Official socials added for Per Se, Aska (EMP/Le Bernardin retained). |
 | T14 | Refresh decisions register + executive summary for session fc6d5f66 findings | done | arena/fc6d5f66-nyfun2 | `data/decisions.json`, `pages/executive-summary.html`, `pages/michelin-restaurants.html` | Q6/Q8 updated; F11 resolved, F13 partial; new flags F14–F17; S3/S10 status updated. Exec summary + Michelin page refreshed with a verified-price table. |
-| T15 | Final verification + publish of the fc6d5f66 scope; log PR #12 conflict | done | arena/fc6d5f66-nyfun2 | `scripts/verify.py`, `COORDINATION.md` | `scripts/verify.py` → 0 errors / 0 warnings (113 rows); `node --check assets/app.js` passes. PR #12 stale-base conflict logged below; publish = merge to main (integration owner). |
+| T15 | Final verification + publish of the fc6d5f66 scope; log PR #12 conflict | done | arena/fc6d5f66-nyfun2 | `scripts/verify.py`, `COORDINATION.md` | `scripts/verify.py` → 0 errors / 0 warnings (113 rows); `node --check assets/app.js` passes. **Published via PR #14 (merge `a5ae9ce`); GitHub Pages built; live site verified.** PR #12 stale-base conflict logged below. |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
 
@@ -269,10 +269,26 @@ summary and Michelin page updated; a clickable verified-price table was added to
 
 **T15 — verification.** `python3 scripts/verify.py` → **0 errors, 0 warnings over 113 data rows** and
 all local HTML links; `node --check assets/app.js` passes. No shared index/assets/hotels/activities
-files were touched. **Publish = merge this branch to `main`** (Pages serves `main` root); that merge is
-the integration owner's step. **PR #12 (`arena/aad75793-nyfun2`) remains CONFLICTING/DIRTY on a stale
+files were touched. **PR #12 (`arena/aad75793-nyfun2`) remains CONFLICTING/DIRTY on a stale
 `a3a2848` base and must not be merged as-is** — flagged above for the integration owner.
 
 **Remaining open items (not blockers, published as flagged):** exact prices for the unpriced starred
 rows; 2027 re-confirmation of all Nov-2026 menus; post-14-Dec-2026 Michelin re-check; measured
 hotel→restaurant routing for the ≤1-hour ranking; dated 2027 hotel rates; airfare and theatre pricing.
+
+### 2026-11-25 — session `arena/fc6d5f66-nyfun2` (published)
+
+- With all board tasks T0–T15 done and the combined data re-verified line by line (including the
+  PR #13 reconciliation), this session acted as the integration/publish step for its scope:
+  **PR #14** (`arena/fc6d5f66-nyfun2` → `main`) was opened and merged as **`a5ae9ce`**.
+- GitHub Pages built `a5ae9ce` successfully (status `built`). Live verification:
+  https://kanlerxz87-cyber.github.io/NYFun2/data/restaurants.json now serves the 72-row reconciled
+  roster (69 starred + 3 Guide-listed) with 15 verified couple totals, and
+  https://kanlerxz87-cyber.github.io/NYFun2/pages/michelin-restaurants.html renders the full roster
+  plus the clickable verified-price table. Local smoke test returned 200 for index, Michelin,
+  executive-summary and both JSON files.
+- The merge was a clean superset of `main` (it already contained PR #13); no shared
+  index/assets/hotels/activities files were changed, and no other session's work was discarded.
+- **Still open for a future session:** PR #12 (`arena/aad75793-nyfun2`) is CONFLICTING on the stale
+  `a3a2848` base and should be closed or rebased, not merged as-is. The activities owner should merge
+  the verified official socials from `research/activity-socials.md` into `data/activities.json`.
