@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michelin Clusters &amp; Couple Dining Table — NYC 2027 Couple Planner</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">NYC 2027 Couple Planner <span>Verified Nov 25, 2026</span></a>
+      <nav class="nav" aria-label="Category pages">
+        <a href="../index.html">Executive Summary</a>
+        <a href="hotels.html">Hotels &amp; 7-Night Windows</a>
+        <a class="active" href="michelin.html">Michelin Clusters &amp; Dining</a>
+        <a href="activities.html">Activities &amp; Socials</a>
+        <a href="itinerary.html">7-Night Itinerary</a>
+        <a href="questions-suggestions.html">Questions &amp; Suggestions</a>
+        <a href="repo-audit.html">Line-by-Line Repo Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="restaurants-app" data-base="..">
+    <section class="hero">
+      <p class="eyebrow">MICHELIN Guide NYC · Starred (1★–3★) vs Guide-Listed (Bib Gourmand &amp; Selected)</p>
+      <h1>Michelin Geographic Clusters &amp; Verified Two-Adult Dining Costs</h1>
+      <p>Official NYC counts verified on <a href="https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025" target="_blank" rel="noopener" style="color:#fca5a5;text-decoration:underline">guide.michelin.com</a>: <strong>72 Starred Restaurants</strong> in the Jan 2026 Star Selection (5 Three-Star, 13 Two-Star, 54 One-Star; 69 active in live directory filter) vs <strong>~300 Non-Starred Guide Listings</strong> (76 Bib Gourmands + 224 Selected). Every couple total below is strictly verified from official restaurant menus/Tock or left blank and flagged.</p>
+    </section>
+
+    <div class="callout accent">
+      <strong>Dec 14, 2026 Ceremony Alert:</strong> Michelin announces its 2026 Northeast Cities Star Selection on <strong>December 14, 2026</strong> (<a href="https://michelinmedia.com/pages/blog/detail/article/c/a1479/" target="_blank" rel="noopener">Official Michelin Media Announcement</a>). Re-check star movements on Dec 15 before locking Jan 1, 2027 reservation drops!
+    </div>
+
+    <section class="card">
+      <h2>5 Core NYC Michelin Geographic Clusters</h2>
+      <div class="grid-3" id="clusters-grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Michelin Dining Comparison Table (Couple / 2-Adult Total, Open Hours &amp; Multi-Platform Social Reviews)</h2>
+      <div class="toolbar">
+        <input id="rest-search" type="search" placeholder="Search restaurant, cuisine, neighborhood, open days, price...">
+        <select id="rest-tier" aria-label="Filter by Michelin distinction">
+          <option value="all">All Distinctions (Starred + Bib + Selected)</option>
+          <option value="starred">Only MICHELIN-Starred (1★, 2★, 3★ — 21)</option>
+          <option value="3">★★★ Three Stars Only (5)</option>
+          <option value="2">★★ Two Stars Only (8)</option>
+          <option value="1">★ One Star Only (8)</option>
+          <option value="guide-only">Only Guide-Listed Non-Starred (Bib Gourmand + Selected — 6)</option>
+        </select>
+        <select id="rest-cluster" aria-label="Filter by cluster">
+          <option value="all">All 5 Geographic Clusters</option>
+          <option value="midtown-51">Midtown / Columbus Circle</option>
+          <option value="flatiron-nomad">Flatiron / NoMad / Gramercy</option>
+          <option value="tribeca-soho-wv">Tribeca / SoHo / Village / LES</option>
+          <option value="fidi">Financial District</option>
+          <option value="williamsburg-bk">Williamsburg, Brooklyn</option>
+        </select>
+        <span id="rest-count" class="muted"></span>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Restaurant &amp; Official Link</th>
+              <th>Starred vs Guide-Listed Status</th>
+              <th>Cluster</th>
+              <th>2-Adult Couple Total (Pre-Tax/Tip Unless Noted)</th>
+              <th>Open Days, Hours &amp; Exceptions</th>
+              <th>YouTube / TikTok / Instagram Reviews</th>
+              <th>Official Sources</th>
+            </tr>
+          </thead>
+          <tbody id="rest-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>Official Roster: <a href="https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025" target="_blank" rel="noopener">MICHELIN Guide NYC Star Selection</a></div>
+      <div><a href="../index.html">&larr; Back to Executive Summary</a></div>
+    </footer>
+  </main>
+
+  <script src="../assets/app.js"></script>
+</body>
+</html>
