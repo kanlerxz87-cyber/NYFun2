@@ -27,6 +27,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T10 | Per-person menu price capture for the starred restaurants | unclaimed | — | `data/restaurants.json` | Menu pages are client-rendered; needs a source that prints prices. |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
+| T16 | Namespaced multi-platform social-review + official menu-price + cross-window hotel/cluster dashboard (`sessions/c1cf7b23`) | in progress | arena/c1cf7b23-nyfun2 | `sessions/c1cf7b23/**`, `COORDINATION.md` | Disjoint namespace only; touches no root/shared files or other sessions' scopes. |
 
 ## Log
 
@@ -187,3 +188,10 @@ per page; no absolute claims of the form "every value is verified" remain (check
   cross-session discrepancies above — pre-tax vs all-in hotel basis, row-level queen+private-bath
   filtering in the canonical hotel set, the MICHELIN band-vs-dollar question, and the 72-vs-20 roster
   size. None was resolved unilaterally.
+
+### 2026-11-25 — session `arena/c1cf7b23-nyfun2` (claim)
+
+- Read `COORDINATION.md` and audited `main` (`0f93b80`) plus active remote branches (`arena/6f217cce-nyfun2`, `arena/309fd926-nyfun2`, `arena/600d25ad-nyfun2`, `arena/a72ce843-nyfun2`, and open PR #12 `arena/aad75793-nyfun2`).
+- Because `arena/4a10e962-nyfun2` owns the canonical root site (`index.html`, `pages/**`, `assets/**`, `data/**`) and parallel sessions have claimed `T10` (`data/restaurants.json`) and `T13`–`T15` (`data/*.json`), this session claims **T16** exclusively inside the disjoint namespace `sessions/c1cf7b23/**` (plus appending to `COORDINATION.md`).
+- Scope rule: zero edits to root HTML/CSS/JS, `data/**`, `alt/**`, `sessions/215c2a25/**`, or `sessions/33cfdba4/**`. Platform binds this session to branch `arena/c1cf7b23-nyfun2`.
+
