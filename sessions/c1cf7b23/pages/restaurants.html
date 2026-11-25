@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michelin Restaurants &amp; Clusters · NYC 2027 Couple Planner · c1cf7b23</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body data-page="restaurants" data-base="../">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">NYC 2027 Couple Planner <span class="brand-pill">Verified 25 Nov 2026</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../index.html">Executive Summary</a>
+        <a href="restaurants.html" aria-current="page">Michelin Dining (31)</a>
+        <a href="hotels.html">Hotels &amp; 7-Night Rates</a>
+        <a href="activities.html">Activities &amp; Itineraries</a>
+        <a href="decisions.html">Questions &amp; Suggestions</a>
+        <a href="flagged.html">Flagged &amp; Repo Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">Official MICHELIN Guide NYC Tally: 5×3★ · 14×2★ · 50×1★ (69 Starred; 67 in 5 Boroughs) + 76–78 Bib Gourmand + 224 Selected</p>
+      <h1>Michelin-Starred vs. Guide-Listed NYC Restaurants (2 Adults)</h1>
+      <p>Explicitly separates <strong>Currently Michelin-Starred</strong> restaurants (3★, 2★, 1★) from <strong>MICHELIN Guide-Listed (No Star)</strong> awards (<strong>Bib Gourmand</strong> &amp; <strong>Selected</strong>). Couple totals (2 adults) reflect official published menu PDFs, FAQs, and Tock pages only — 7 venues that do not publish prices online are left blank and flagged.</p>
+    </section>
+
+    <div class="alert-banner">
+      <strong>Star vs. Guide-Listed Rule &amp; Excluded Non-Guide Spots:</strong> Popular NYC spots like <em>Balthazar</em> and <em>Rubirosa</em> are <strong>NOT</strong> in the current MICHELIN Guide NYC selection and are excluded from this table. Also note: MICHELIN's <a href="https://michelinmedia.com/pages/blog/detail/article/c/a1479/" target="_blank" rel="noopener">2026 Northeast Cities Ceremony</a> runs <strong>14 Dec 2026</strong> — re-verify stars on 15 Dec 2026 before January Resy/Tock drops.
+    </div>
+
+    <section class="section-card">
+      <h2>5 Transit-Connected NYC Michelin Dining Clusters</h2>
+      <p class="lead">All 5 clusters sit within <strong>3 to 37 minutes</strong> by MTA subway, bus, or ferry from our top Chelsea, NoMad, Tribeca, and FiDi hotel picks.</p>
+      <div id="cluster-cards" class="cards-grid"></div>
+    </section>
+
+    <section class="section-card">
+      <h2>Master Michelin Restaurant Table (31 Verified Venues)</h2>
+      <p class="lead">Filter by Starred vs. Guide-Listed tier, geographic cluster, or keyword (cuisine, closed day, neighborhood, or dish). Prices exclude 8.875% NYC sales tax, beverages, and gratuity unless noted.</p>
+
+      <div class="controls-bar">
+        <input type="search" id="rest-search" placeholder="Search name, cuisine, day, cluster, price..." aria-label="Search restaurants">
+        <select id="rest-tier" aria-label="Filter by Michelin distinction">
+          <option value="ALL">All Michelin Distinctions (31)</option>
+          <option value="STARRED">Only Starred (3★ / 2★ / 1★)</option>
+          <option value="3-Star">3 MICHELIN Stars (5 — All NYC 3★)</option>
+          <option value="2-Star">2 MICHELIN Stars (12)</option>
+          <option value="1-Star">1 MICHELIN Star (8)</option>
+          <option value="GUIDE_ONLY">Only Guide-Listed · No Star (Bib + Selected)</option>
+          <option value="Bib Gourmand">Bib Gourmand Only (3)</option>
+          <option value="Guide-Listed (No Star)">MICHELIN Selected · No Star (3)</option>
+        </select>
+        <select id="rest-cluster" aria-label="Filter by NYC cluster">
+          <option value="ALL">All 5 NYC Clusters</option>
+          <option value="midtown-51-columbus">C1 · Midtown 51st–55th &amp; Columbus Cir</option>
+          <option value="flatiron-nomad-gramercy">C2 · Flatiron, NoMad, K-Town &amp; Gramercy</option>
+          <option value="tribeca-soho-village">C3 · Tribeca, SoHo, LES &amp; West Village</option>
+          <option value="fidi-wall-st">C4 · Financial District (70 Pine)</option>
+          <option value="ues-brooklyn">C5 · Upper East Side &amp; Williamsburg</option>
+        </select>
+        <span id="rest-count" class="count-pill">Loading...</span>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table responsive-cards">
+          <thead>
+            <tr>
+              <th>Restaurant &amp; Official Links</th>
+              <th>Michelin Distinction &amp; Cluster</th>
+              <th>Couple Total (2 Adults, Food Base)</th>
+              <th>Open Days &amp; Hours</th>
+              <th>Exceptions &amp; Reservation Window</th>
+              <th>Reviews (YT / TT / IG)</th>
+            </tr>
+          </thead>
+          <tbody id="restaurants-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>NYC 2027 Couple Trip Planner · Session <code>arena/c1cf7b23-nyfun2</code> · Verified 2026-11-25</span>
+    <span><a href="flagged.html">Inspect Katz's &amp; Saga schedule discrepancies and Via Carota demo-page catch</a></span>
+  </footer>
+
+  <script src="../assets/app.js"></script>
+</body>
+</html>

@@ -19,7 +19,7 @@
       },
       {
         "topic": "4 · Verified Michelin Couple Costs (2 Adults)",
-        "summary": "Unlike earlier runs that left all restaurant totals blank, we verified official published per-person and menu prices for 19 of 25 curated Michelin venues directly from restaurant websites, PDFs, and official Tock pages: 3★ couple base menus span $274 (Le Bernardin Lunch) and $436 (Le Bernardin Dinner) up to $670 (Jungsik), $770 (Eleven Madison Park Dining Room), and $900–$990 (Sushi Sho Shorter Omakase); 2★ spans $230 (The Modern Lunch) to $1,500–$1,900 (Masa); 1★ value stars include Cote Butcher's Feast ($168/couple) and Rezdôra Pasta Tasting ($220/couple); Bib Gourmand icons run $49–$68 (Cho Dang Gol) and $57.90–$61.90 (Katz's)."
+        "summary": "Unlike earlier runs that left all restaurant totals blank, we verified official published per-person and menu prices for 24 of 31 curated Michelin venues directly from restaurant websites, PDFs, and official Tock pages: 3★ couple base menus span $274 (Le Bernardin Lunch) and $436 (Le Bernardin Dinner) up to $670 (Jungsik), $770 (Eleven Madison Park Dining Room), and $900–$990 (Sushi Sho Shorter Omakase); 2★ spans $230 (The Modern Lunch) to $1,500–$1,900 (Masa); 1★ value stars include Semma ($114–$164/couple), Cote Butcher's Feast ($168/couple), and Rezdôra Pasta Tasting ($220/couple); Bib Gourmand icons run $49–$68 (Cho Dang Gol) and $57.90–$61.90 (Katz's)."
       },
       {
         "topic": "5 · Critical Pre-Trip Event Alert (14 Dec 2026)",
@@ -27,7 +27,7 @@
       },
       {
         "topic": "6 · Verified Transit & Activity Math",
-        "summary": "Official MTA subway/local bus fare is $3.00 per tap (not the outdated $2.90), capped at $35.00/person per rolling 7-day period via OMNY ($70.00/couple/week max). Seven of our 16 verified activities are $0.00 (Central Park, High Line, Staten Island Ferry, Brooklyn Bridge & DUMBO, NYPL Schwarzman, Bryant Park Rink admission, Chinatown LNY Parade), and Whitney Museum is $0.00 on Friday evenings (17:00–22:00)."
+        "summary": "Official MTA subway/local bus fare is $3.00 per tap (not the outdated $2.90), capped at $35.00/person per rolling 7-day period via OMNY ($70.00/couple/week max). Seven of our 18 verified activities are $0.00 (Central Park, High Line, Staten Island Ferry, Brooklyn Bridge & DUMBO, NYPL Schwarzman, Bryant Park Rink admission, Chinatown LNY Parade), and Whitney Museum is $0.00 on Friday evenings (17:00–22:00) and Second Sundays."
       }
     ]
   },
@@ -106,9 +106,9 @@
       "id": "Q8",
       "priority": "Medium",
       "question": "Unpublished Menu Prices & Broadway/Live Show Add-Ons: What are exact 2027 prices for César, Estela, Casa Mono, Per Se MDR, and any Broadway shows?",
-      "known": "Six of 25 restaurant rows (César, Estela, Casa Mono, Thai Diner dinner, Via Carota, Len Len / Odo EV) and SUMMIT One Vanderbilt hide live prices behind dynamic calendars or unindexed JS; Broadway Feb 2027 schedules were not selected.",
-      "missing": "Exact per-person dinner numbers for those 6 restaurants, SUMMIT's dated Feb 2027 slot price, and whether the couple wants 1–2 Broadway/jazz nights.",
-      "answerFramework": "Keep unconfirmed cells strictly blank today; if choosing any of those 6 venues, inspect live Tock/venue checkout in a browser before booking.",
+      "known": "Seven of 31 restaurant rows (César, Estela, Casa Mono, Thai Diner, Via Carota, Len Len, Odo East Village) and SUMMIT One Vanderbilt hide live prices behind dynamic calendars or unindexed JS; Broadway Feb 2027 schedules were not selected.",
+      "missing": "Exact per-person dinner numbers for those 7 restaurants, SUMMIT's dated Feb 2027 slot price, and whether the couple wants 1–2 Broadway/jazz nights.",
+      "answerFramework": "Keep unconfirmed cells strictly blank today; if choosing any of those 7 venues, inspect live Tock/venue checkout in a browser before booking.",
       "howToDiscover": "Open live checkout calendars 30–60 days before travel and log screenshots + URLs.",
       "sourceUrl": "https://www.exploretock.com/cesarrestaurant"
     },
@@ -332,14 +332,14 @@
       {
         "id": "RA-4",
         "area": "Michelin Couple Cost Coverage Gap in Root Data",
-        "status": "Resolved for 19/25 Rows in sessions/c1cf7b23",
-        "detail": "Root data/restaurants.json left priceTwoAdults blank on all 21 rows (0% coverage). By auditing official restaurant PDFs (le-bernardin.com/content/pdfs/dinner-1.2.pdf), official FAQ/menu pages (elevenmadisonpark.com/faq, jungsik.com/menu, gknyc.com/menu, saga-nyc.com/menus, odo.nyc/menu, askanyc.com/dining, cotekoreansteakhouse.com/nycdinnermenu, rezdora.nyc/menus, gramercytavern.com), and official Tock pages (Atomix, Sushi Sho, Masa, Sushi Noz, Per Se Salon), we verified couple totals for 19 of 25 rows while keeping the remaining 6 strictly blank."
+        "status": "Resolved for 24/31 Rows in sessions/c1cf7b23",
+        "detail": "Root data/restaurants.json left priceTwoAdults blank on all 21 rows (0% coverage). By auditing official restaurant PDFs (le-bernardin.com/content/pdfs/dinner-1.2.pdf, jean-georges.com), official FAQ/menu pages (elevenmadisonpark.com/faq, jungsik.com/menu, gknyc.com/menu, saga-nyc.com/menus, odo.nyc/menu, askanyc.com/dining, cotekoreansteakhouse.com/nycdinnermenu, rezdora.nyc/menus, gramercytavern.com, semmanyc.com), and official Tock pages (Atomix, Atera, Aquavit, Sushi Sho, Masa, Sushi Noz, Per Se Salon), we verified couple totals for 24 of 31 rows while keeping the remaining 7 strictly blank."
       },
       {
         "id": "RA-5",
         "area": "Preserved Parallel Kits (alt/, sessions/215c2a25/, sessions/33cfdba4/)",
-        "status": "Verified Intact",
-        "detail": "All three prior parallel kits remain untouched on main. Notably, sessions/33cfdba4 contributed a 25-leg Google Maps transit matrix (proving all 5 NYC Michelin clusters are ≤37 min from Manhattan hotels) and 5 Booking.com date windows (proving Feb 15–22 is the cheapest qualifying week). Our session cross-verifies and integrates those findings with full all-in NYC tax math and official hotel street addresses."
+        "status": "Verified Intact — Minor Schema Quirks Logged",
+        "detail": "All three prior parallel kits remain untouched on main. sessions/33cfdba4 contributed a 25-leg Google Maps transit matrix and 5 Booking.com date windows; our audit caught three minor quirks inside sessions/33cfdba4/data/: (1) pricing_windows.json W1 uses typo key 'bronze' instead of 'retrieved', (2) W2's $836 floor prices a 'Double Room (twin)' that fails the Queen+ rule, and (3) César (333 Hudson St, Hudson Square) is labeled 'West Village' while the 69-starred headline includes 2 Westchester venues (leaving 67 starred inside NYC). Also root data/decisions.json Q2 & Q3 still claim 0 dated hotel rates and 1 verified hotel room, contradicting Q9/F2 and data/hotels.json's 4 priced rows, and Guggenheim adult admission is now $30 (PWYW Tue & Sun 4–5:30pm) rather than older $25 figures."
       },
       {
         "id": "RA-6",

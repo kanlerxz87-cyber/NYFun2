@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activities, Hours &amp; Cluster Itineraries · NYC 2027 Couple Planner · c1cf7b23</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body data-page="activities" data-base="../">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">NYC 2027 Couple Planner <span class="brand-pill">Verified 25 Nov 2026</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../index.html">Executive Summary</a>
+        <a href="restaurants.html">Michelin Dining (31)</a>
+        <a href="hotels.html">Hotels &amp; 7-Night Rates</a>
+        <a href="activities.html" aria-current="page">Activities &amp; Itineraries</a>
+        <a href="decisions.html">Questions &amp; Suggestions</a>
+        <a href="flagged.html">Flagged &amp; Repo Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">18 Verified NYC Activities · All Reachable in 4 to 39 Minutes from Top Hotel Picks</p>
+      <h1>Activities, Open Hours, Seasonal Cutoffs &amp; Cluster Itineraries</h1>
+      <p>Organized table of official attraction URLs, couple costs (2 adults), open days, hours, winter exceptions, and multi-platform YouTube, TikTok, and Instagram links — paired with zero-backtracking 3-night and 7-night cluster plans.</p>
+    </section>
+
+    <div class="alert-banner">
+      <strong>Two 2027 Date-Specific Discoveries:</strong> (1) The <strong>29th Chinatown Lunar New Year Parade</strong> steps off <strong>Sunday, 21 Feb 2027 at 13:00</strong> (<a href="http://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/" target="_blank" rel="noopener">betterchinatown.com</a>) — captured if you book the 7-night 15–22 Feb window! (2) <strong>Bryant Park Winter Village Rink &amp; Lodge</strong> close for the season on <strong>28 Feb 2027</strong> (<a href="https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park" target="_blank" rel="noopener">bryantpark.org</a>) — unavailable if you delay the trip into March.
+    </div>
+
+    <section class="section-card">
+      <h2>Master Activities &amp; Attractions Table (18 Verified Entries)</h2>
+      <div class="controls-bar">
+        <input type="search" id="act-search" placeholder="Search museum, park, ferry, closed day, cutoff..." aria-label="Search activities">
+        <select id="act-cost" aria-label="Filter by admission cost">
+          <option value="ALL">All Activities (18)</option>
+          <option value="FREE">Free or Free-Night Eligible (8)</option>
+          <option value="PAID">Paid Ticketed Venues (9 + 1 dynamic)</option>
+        </select>
+        <span id="act-count" class="count-pill">Loading...</span>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table responsive-cards">
+          <thead>
+            <tr>
+              <th>Activity &amp; Official Links</th>
+              <th>Couple Cost (2 Adults)</th>
+              <th>Open Days &amp; Hours</th>
+              <th>Exceptions &amp; Seasonal Cutoffs</th>
+              <th>Transit from Hotels (≤60m)</th>
+              <th>Reviews (YT / TT / IG)</th>
+            </tr>
+          </thead>
+          <tbody id="activities-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2>Option A · Preferred 3-Night Escape (Mon 15 Feb – Thu 18 Feb 2027)</h2>
+      <p class="lead">Designed around actual weekday closures (Jungsik, Sushi Sho &amp; odo closed Mon; Saga &amp; Aska closed Mon–Tue; The Met closed Wed; 9/11 Museum closed most Tue) with every transit leg under 25 minutes.</p>
+      <div id="itin-3night" class="cards-grid"></div>
+    </section>
+
+    <section class="section-card">
+      <h2>Option B · Full 7-Night Benchmark (Mon 15 Feb – Mon 22 Feb 2027)</h2>
+      <p class="lead">Extends the preferred window through Sunday 21 Feb to unlock Free Friday at the Whitney, weekend Michelin lunches, Brooklyn 2★ Aska, and the 29th Chinatown Lunar New Year Parade.</p>
+      <div id="itin-7night" class="cards-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>NYC 2027 Couple Trip Planner · Session <code>arena/c1cf7b23-nyfun2</code> · Verified 2026-11-25</span>
+    <span><a href="decisions.html">Review open questions before locking reservations</a></span>
+  </footer>
+
+  <script src="../assets/app.js"></script>
+</body>
+</html>
