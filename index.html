@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NYFun2 — NYC Couples Trip Dashboard (Feb 15 – Mar 23, 2027)</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">Verified Nov 25, 2026 · 2 Adults · Feb 15 – Mar 23, 2027</div>
+      <h1>New York City Couples Travel Intelligence Dashboard</h1>
+      <p id="hero-headline">
+        Loading verified executive recommendations for Michelin dining, Queen/King private-bath hotels, 2027 winter/early-spring activities, and MTA transit...
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="hotels.html">Explore 2027 Hotel Deals →</a>
+        <a class="btn btn-light" href="michelin.html">27 Curated Michelin Restaurants</a>
+        <a class="btn btn-light" href="itinerary.html">7-Night Itinerary &amp; Budget Builder</a>
+        <a class="btn btn-light" href="review.html">Audit &amp; Flagged Items</a>
+      </div>
+    </section>
+
+    <div class="alert alert-danger" id="urgent-banner">
+      <strong>Time-Sensitive Nov 2026 Window:</strong> Active Booking.com <strong>Black Friday 2026 Deals (26%–41% off)</strong> cover stays through Dec 31, 2027 — putting 7-night Manhattan Queen/King stays as low as <strong>$1,021–$1,032 pre-tax</strong> (vs. +47%–91% higher in mid-March 2027!). Meanwhile, <strong>Empire State Building's $46 Flex Anytime Ticket</strong> promo runs through <strong>Nov 30, 2026</strong>.
+    </div>
+
+    <section class="kpi-grid" id="kpi-grid"></section>
+
+    <section class="card">
+      <div class="card-header">
+        <div>
+          <h2>Executive Recommendations (At a Glance)</h2>
+          <p class="muted small mb-0">Synthesized exclusively from verified official websites, live Booking.com 2027 USD inventory, NYC Dept. of Finance tax law, MTA 2026–27 fares, and live Michelin Guide counts.</p>
+        </div>
+        <span class="badge badge-verified">100% Primary-Source Audited</span>
+      </div>
+      <div class="grid-2" id="exec-recs"></div>
+    </section>
+
+    <div class="grid-2">
+      <section class="card">
+        <div class="card-header">
+          <div>
+            <h2>Live NYC 5-Borough Michelin Guide</h2>
+            <p class="muted small mb-0">Official <code>guide.michelin.com</code> live counts (Nov 25, 2026) — Starred vs. Listed clearly separated</p>
+          </div>
+          <a class="btn btn-outline" href="michelin.html">Full Guide →</a>
+        </div>
+        <div id="michelin-bars"></div>
+        <p class="cell-sub mt-2" id="michelin-alert"></p>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <div>
+            <h2>Feb vs. Mar 2027 7-Night Hotel Surge</h2>
+            <p class="muted small mb-0">Live verified Booking.com pre-tax 7-night USD totals (Arlo Midtown King &amp; Artezen Deluxe Queen)</p>
+          </div>
+          <a class="btn btn-outline" href="hotels.html">Full Matrix →</a>
+        </div>
+        <div id="hotel-surge-bars"></div>
+        <p class="cell-sub mt-2">Late February (Feb 15–Mar 1) saves <strong>$450–$910/week</strong> vs. mid-March while keeping Bryant Park Winter Village (closes Feb 28) &amp; Wollman Rink Off-Peak skating open!</p>
+      </section>
+    </div>
+
+    <section class="card">
+      <div class="card-header">
+        <div>
+          <h2>Critical 2026–2027 Countdown Timeline</h2>
+          <p class="muted small mb-0">Booking windows, reservation drops, holidays &amp; seasonal attraction closing dates</p>
+        </div>
+        <a class="btn btn-outline" href="activities.html">All 18 Activities →</a>
+      </div>
+      <div class="timeline" id="timeline-list"></div>
+    </section>
+
+    <section class="section-title">
+      <h2>Explore Every Dashboard Section</h2>
+    </section>
+    <section class="grid-3">
+      <div class="card mb-0">
+        <h3>Michelin Guide NYC</h3>
+        <p class="muted small">All 369 NYC 5-borough counts, 5 subway clusters, and 27 deeply verified restaurants (all 5×3★, 6×2★, 7×1★, 5 Bib, 4 Selected) with 2-adult prices, hours &amp; verified YouTube/TikTok reviews.</p>
+        <a class="btn btn-dark mt-1" href="michelin.html">Open Michelin Guide →</a>
+      </div>
+      <div class="card mb-0">
+        <h3>Hotels &amp; Booking Windows</h3>
+        <p class="muted small">11 verified Queen/King private-bath hotels across Manhattan &amp; Brooklyn, exact resort fees, pre-tax vs. all-in comparison, and our late-Nov vs. 8–14 day booking playbook.</p>
+        <a class="btn btn-dark mt-1" href="hotels.html">Compare Hotels →</a>
+      </div>
+      <div class="card mb-0">
+        <h3>Winter &amp; Spring Activities</h3>
+        <p class="muted small">18 iconic NYC museums, observation decks, harbor cruises, skating rinks, Broadway TKTS, jazz &amp; Feb 21 Chinatown Lunar New Year Parade with 2-adult pricing.</p>
+        <a class="btn btn-dark mt-1" href="activities.html">Browse Activities →</a>
+      </div>
+      <div class="card mb-0">
+        <h3>7-Night Itineraries &amp; Budget</h3>
+        <p class="muted small">Zero-backtracking day-by-day couple itineraries (Feb 22–Mar 1 recommended + Feb 15–22 LNY alternative) plus an interactive live 2-adult trip budget calculator.</p>
+        <a class="btn btn-dark mt-1" href="itinerary.html">Plan &amp; Calculate →</a>
+      </div>
+      <div class="card mb-0">
+        <h3>Open Questions &amp; Discovery</h3>
+        <p class="muted small">Prioritized P0/P1/P2 trip-shaping decisions (stay length, cancellation flexibility, dietary/wine preferences, room space) with interactive answer capture.</p>
+        <a class="btn btn-dark mt-1" href="questions.html">Answer Questions →</a>
+      </div>
+      <div class="card mb-0">
+        <h3>Flagged Audit &amp; Improvements</h3>
+        <p class="muted small">Radical data transparency: every blank unverified price, schedule discrepancy, bed-size trap, and roadmap suggestion tracked cleanly.</p>
+        <div class="link-row mt-1">
+          <a class="btn btn-outline" href="review.html">Flagged Audit →</a>
+          <a class="btn btn-outline" href="suggestions.html">Improvements →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    (async function () {
+      const { loadJSON, fmtUSD, escapeHTML } = window.NYFun2;
+      try {
+        const [meta, hotels, analysis] = await Promise.all([
+          loadJSON('data/meta.json'),
+          loadJSON('data/hotels.json'),
+          loadJSON('data/analysis.json')
+        ]);
+
+        document.getElementById('hero-headline').textContent = analysis.executiveSummary.headline;
+
+        const m = meta.michelinCitySummary;
+        const kpis = [
+          {
+            label: 'Recommended 7-Night Window',
+            value: 'Feb 22 – Mar 1',
+            sub: 'Lowest surge-free hotel week; catches Bryant Park before Feb 28 close'
+          },
+          {
+            label: 'Best Verified 7-Night Hotel',
+            value: '$1,032 – $1,127',
+            sub: 'Pre-tax (Arlo Midtown BF / Artezen Free Cancel); Cambria $1,364–$1,522 ALL-IN'
+          },
+          {
+            label: 'Live NYC Michelin Guide',
+            value: `${m.nycFiveBoroughTotal} Total`,
+            sub: `${m.starredTotal} Starred (${m.tiers.threeStars}×3★, ${m.tiers.twoStars}×2★, ${m.tiers.oneStar}×1★) · ${m.listedNonStarredTotal} Listed`
+          },
+          {
+            label: 'MTA 2026–27 Couple Cap',
+            value: `$${meta.transit.omnyWeeklyCapCouple} / 7 Days`,
+            sub: `$${meta.transit.subwayBusBaseFare.toFixed(2)}/ride · $35/person OMNY rolling cap`
+          },
+          {
+            label: 'Flagged for Review',
+            value: `${analysis.flaggedForReview.length} Items`,
+            sub: '3 unverified prices intentionally left blank + calendar/tax checks'
+          }
+        ];
+        document.getElementById('kpi-grid').innerHTML = kpis
+          .map(
+            (k) => `
+            <div class="kpi-card">
+              <div class="kpi-label">${escapeHTML(k.label)}</div>
+              <div class="kpi-value">${escapeHTML(k.value)}</div>
+              <div class="kpi-sub">${escapeHTML(k.sub)}</div>
+            </div>`
+          )
+          .join('');
+
+        document.getElementById('exec-recs').innerHTML = analysis.executiveSummary.topRecommendations
+          .map(
+            (r) => `
+            <div class="slot-box">
+              <div class="slot-label">${escapeHTML(r.category)}</div>
+              <div class="cell-title">${escapeHTML(r.recommendation)}</div>
+              <p class="cell-sub mb-0">${escapeHTML(r.why)}</p>
+            </div>`
+          )
+          .join('');
+
+        const maxBorough = Math.max(...m.boroughs.map((b) => b.total));
+        document.getElementById('michelin-bars').innerHTML = m.boroughs
+          .map((b) => {
+            const pct = Math.max(4, Math.round((b.total / maxBorough) * 100));
+            const starred = b.threeStars + b.twoStars + b.oneStar;
+            return `
+              <div class="bar-row">
+                <div><strong>${escapeHTML(b.borough)}</strong><div class="cell-sub">${starred}★ · ${b.bibGourmand} Bib</div></div>
+                <div class="bar-track"><div class="bar-fill navy" style="width:${pct}%"></div></div>
+                <div class="num" style="text-align:right">${b.total} spots</div>
+              </div>`;
+          })
+          .join('');
+        document.getElementById('michelin-alert').textContent = m.upcomingUpdateAlert;
+
+        const sevenNightWindows = hotels.stayWindowComparison.filter((w) => w.nights === 7);
+        const maxPrice = Math.max(...sevenNightWindows.map((w) => Math.max(w.arloMidtownPreTax || 0, w.artezenPreTax || 0, w.clubQuartersPreTax || 0)));
+        document.getElementById('hotel-surge-bars').innerHTML = sevenNightWindows
+          .map((w) => {
+            const val = w.arloMidtownPreTax;
+            const pct = Math.round((val / maxPrice) * 100);
+            const cls = val <= 1150 ? '' : val <= 1550 ? 'warn' : 'danger';
+            return `
+              <div class="bar-row">
+                <div><strong>${escapeHTML(w.label.split('(')[0].trim())}</strong><div class="cell-sub">${escapeHTML(w.seasonTag)}</div></div>
+                <div class="bar-track"><div class="bar-fill ${cls}" style="width:${pct}%"></div></div>
+                <div class="num" style="text-align:right">${fmtUSD(val)}</div>
+              </div>`;
+          })
+          .join('');
+
+        document.getElementById('timeline-list').innerHTML = meta.keyDates2027
+          .map(
+            (ev) => `
+            <div class="timeline-item ${escapeHTML(ev.impact)}">
+              <div class="timeline-date">${escapeHTML(ev.date)}</div>
+              <div>
+                <div class="cell-title">${escapeHTML(ev.title)}</div>
+                <div class="cell-sub">${escapeHTML(ev.detail)}</div>
+              </div>
+            </div>`
+          )
+          .join('');
+      } catch (err) {
+        document.getElementById('hero-headline').textContent = 'Error loading verified datasets: ' + err.message;
+      }
+    })();
+  </script>
+</body>
+</html>

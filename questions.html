@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open Questions &amp; Discovery Plan — NYFun2 Couples Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">Interactive Decision Capture · Prioritized P0 / P1 / P2</div>
+      <h1>Open Questions &amp; Trip Discovery Plan</h1>
+      <p>
+        Before locking non-refundable Black Friday hotel rates or setting 9:00 AM EST Michelin reservation alarms, confirm these 8 prioritized questions together. Your notes auto-save in your browser so you can copy a clean decision brief anytime!
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" id="copy-brief-btn">Copy My Decisions Brief</button>
+        <button class="btn btn-light" id="clear-notes-btn">Clear Saved Notes</button>
+      </div>
+    </section>
+
+    <div class="alert alert-success" id="copy-status" style="display:none"></div>
+
+    <div id="questions-container"></div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    (async function () {
+      const { loadJSON, escapeHTML } = window.NYFun2;
+      const STORAGE_KEY = 'nyfun2_discovery_answers_v1';
+      const data = await loadJSON('data/analysis.json');
+
+      function loadAnswers() {
+        try {
+          return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        } catch {
+          return {};
+        }
+      }
+
+      function saveAnswers(obj) {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(obj));
+        } catch {}
+      }
+
+      const saved = loadAnswers();
+
+      document.getElementById('questions-container').innerHTML = data.openQuestions
+        .map((q) => {
+          const badgeCls = q.priority.startsWith('P0')
+            ? 'badge-critical'
+            : q.priority.startsWith('P1')
+            ? 'badge-unverified'
+            : 'badge-info';
+          return `
+            <article class="card">
+              <div class="card-header">
+                <div>
+                  <span class="badge ${badgeCls}">${escapeHTML(q.priority)}</span>
+                  <h2 class="mt-1 mb-0">${escapeHTML(q.id)} · ${escapeHTML(q.topic)}</h2>
+                </div>
+              </div>
+              <p style="font-size:1rem;font-weight:600;color:var(--navy)">${escapeHTML(q.question)}</p>
+              <div class="grid-2 mb-0">
+                <div class="slot-box">
+                  <div class="slot-label">Why This Matters</div>
+                  <p class="small mb-0">${escapeHTML(q.whyItMatters)}</p>
+                </div>
+                <div class="slot-box">
+                  <div class="slot-label">Current Dashboard Assumption</div>
+                  <p class="small mb-0">${escapeHTML(q.defaultAssumed)}</p>
+                </div>
+              </div>
+              <div class="form-field mt-2 mb-0">
+                <label for="ans-${q.id}">Your Couple's Decision / Notes (auto-saved locally):</label>
+                <textarea id="ans-${q.id}" data-qid="${q.id}" placeholder="Type your preference here...">${escapeHTML(saved[q.id] || '')}</textarea>
+              </div>
+            </article>`;
+        })
+        .join('');
+
+      document.querySelectorAll('textarea[data-qid]').forEach((ta) => {
+        ta.addEventListener('input', () => {
+          const cur = loadAnswers();
+          cur[ta.dataset.qid] = ta.value;
+          saveAnswers(cur);
+        });
+      });
+
+      document.getElementById('copy-brief-btn').addEventListener('click', async () => {
+        const cur = loadAnswers();
+        const lines = ['# NYFun2 Couples Decision Brief (Feb–Mar 2027)', ''];
+        data.openQuestions.forEach((q) => {
+          const ans = (cur[q.id] || '').trim() || '(Not yet decided — keeping default)';
+          lines.push(`- **${q.id} (${q.topic}):** ${ans}`);
+        });
+        const text = lines.join('\n');
+        const status = document.getElementById('copy-status');
+        try {
+          await navigator.clipboard.writeText(text);
+          status.textContent = 'Copied your formatted decision brief to clipboard!';
+        } catch {
+          status.textContent = 'Clipboard unavailable — brief logged below: ' + text;
+        }
+        status.style.display = 'block';
+      });
+
+      document.getElementById('clear-notes-btn').addEventListener('click', () => {
+        saveAnswers({});
+        document.querySelectorAll('textarea[data-qid]').forEach((ta) => (ta.value = ''));
+        const status = document.getElementById('copy-status');
+        status.textContent = 'Cleared saved discovery notes from this browser.';
+        status.style.display = 'block';
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7-Night Itineraries &amp; Budget Calculator — NYFun2 Couples Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">Zero-Backtracking Neighborhood Pacing · OMNY $70/Couple 7-Day Cap</div>
+      <h1>7-Night Couples Itineraries &amp; Live 2-Adult Budget Calculator</h1>
+      <p>
+        Compare two transit-optimized 7-night plans — our recommended surge-free <strong>Feb 22 – Mar 1</strong> week vs. the <strong>Feb 15 – Feb 22</strong> Lunar New Year Parade week — plus 3 transparent total-cost scenarios and an interactive live budget builder powered directly by our verified JSON data.
+      </p>
+    </section>
+
+    <section class="section-title">
+      <h2>3 Realistic 7-Night Couple Budget Scenarios (Excl. Flights)</h2>
+    </section>
+    <section class="grid-3" id="scenario-cards"></section>
+
+    <section class="card">
+      <div class="card-header">
+        <div>
+          <h2>Interactive 2-Adult 7-Night Trip Budget Calculator</h2>
+          <p class="muted small mb-0">Mix &amp; match verified hotels, Michelin dining, and attractions — all numbers pulled directly from verified JSON datasets (unverified restaurant menus clearly excluded from auto-totals).</p>
+        </div>
+        <span class="badge badge-verified">Live Math · 2 Adults</span>
+      </div>
+      <div class="calc-grid">
+        <div>
+          <div class="form-field">
+            <label for="calc-hotel">1. Choose Your 7-Night Hotel (Feb 22–Mar 1, 2027 · Est. All-In w/ NYC 14.75% + Flat Tax)</label>
+            <select id="calc-hotel" class="select-input"></select>
+          </div>
+          <div class="form-field">
+            <label>2. Pick Your Michelin Dining Lineup (Verified Food Base for 2 Adults)</label>
+            <div class="check-list" id="calc-michelin-list"></div>
+          </div>
+          <div class="form-field">
+            <label>3. Pick Your Paid Activities (2 Adults; Free Walks/Ferry/NYPL/Grand Central = $0)</label>
+            <div class="check-list" id="calc-act-list"></div>
+          </div>
+          <div class="grid-2 mb-0">
+            <div class="form-field mb-0">
+              <label for="calc-casual">4. Casual Meals, Coffee &amp; Snacks (7 Days for 2): <span id="calc-casual-val">$500</span></label>
+              <input type="range" id="calc-casual" min="250" max="1200" step="25" value="500" />
+            </div>
+            <div class="form-field mb-0">
+              <label for="calc-drinks">5. Cocktails / Wine Pairings Buffer (2 Adults): <span id="calc-drinks-val">$300</span></label>
+              <input type="range" id="calc-drinks" min="0" max="1500" step="50" value="300" />
+            </div>
+          </div>
+        </div>
+        <aside class="calc-summary">
+          <h3>Your Live 2-Adult Estimate</h3>
+          <div class="calc-line"><span>7-Night Hotel (Est. All-In)</span><span class="num" id="sum-hotel">$0</span></div>
+          <div class="calc-line"><span>MTA OMNY 7-Day Cap (2 Adults)</span><span class="num" id="sum-transit">$70</span></div>
+          <div class="calc-line"><span>Michelin Dining (Base Food)</span><span class="num" id="sum-michelin">$0</span></div>
+          <div class="calc-line"><span>Est. Tax + Tip (~28.9% on dining)</span><span class="num" id="sum-taxtip">$0</span></div>
+          <div class="calc-line"><span>Activities &amp; Tickets (2 Adults)</span><span class="num" id="sum-act">$0</span></div>
+          <div class="calc-line"><span>Casual Food &amp; Coffee</span><span class="num" id="sum-casual">$500</span></div>
+          <div class="calc-line"><span>Drinks / Wine Buffer</span><span class="num" id="sum-drinks">$300</span></div>
+          <div class="calc-total"><span>Total (2 Adults)</span><span class="num" id="sum-total">$0</span></div>
+          <div class="calc-line" style="border:none;color:#cbd5e1;font-size:0.84rem"><span>Per Adult</span><span class="num" id="sum-pp">$0</span></div>
+          <p class="small" style="color:#cbd5e1;margin-top:0.75rem;margin-bottom:0">
+            Note: Excludes round-trip flights &amp; airport transfers. NYC sales tax is 8.875%; standard restaurant tip is 20% (note Atomix, Per Se &amp; EMP already include service — adjust Drinks/Buffer accordingly).
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-title">
+      <h2>Day-by-Day Transit-Optimized 7-Night Plans</h2>
+      <div class="pill-group" id="plan-tabs"></div>
+    </section>
+
+    <div class="alert alert-info" id="plan-header-banner"></div>
+    <div id="plan-days"></div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    (async function () {
+      const { loadJSON, fmtUSD, escapeHTML } = window.NYFun2;
+      const [meta, itinerary, hotels, michelin, activities] = await Promise.all([
+        loadJSON('data/meta.json'),
+        loadJSON('data/itinerary.json'),
+        loadJSON('data/hotels.json'),
+        loadJSON('data/michelin.json'),
+        loadJSON('data/activities.json')
+      ]);
+
+      // Scenarios
+      document.getElementById('scenario-cards').innerHTML = itinerary.budgetScenarios
+        .map(
+          (s) => `
+          <div class="card mb-0">
+            <div class="slot-label">${escapeHTML(s.name)}</div>
+            <div class="kpi-value">${fmtUSD(s.estTotalUsd)} <span class="muted small" style="font-family:var(--font-sans);font-weight:500">(${fmtUSD(s.perPersonUsd)}/pp)</span></div>
+            <p class="cell-sub mt-1">${escapeHTML(s.tagline)}</p>
+            <div class="mini-quotes">
+              <div><strong>Hotel (7n):</strong> ${fmtUSD(s.hotelUsd)} — ${escapeHTML(s.hotel)}</div>
+              <div><strong>MTA OMNY Cap:</strong> ${fmtUSD(s.transitUsd)} (2 adults, unlimited 7 days)</div>
+              <div><strong>Michelin Dining:</strong> ${fmtUSD(s.michelinDiningUsd)} — ${escapeHTML(s.michelinDiningDetail)}</div>
+              <div><strong>Activities:</strong> ${fmtUSD(s.activitiesUsd)} — ${escapeHTML(s.activitiesDetail)}</div>
+              <div><strong>Casual Food/Coffee:</strong> ${fmtUSD(s.casualMealsCoffeeUsd)}</div>
+            </div>
+            <p class="cell-sub mt-1 mb-0">${escapeHTML(s.note)}</p>
+          </div>`
+        )
+        .join('');
+
+      // Calculator Hotel Options (Normalized est. all-in using NYC 14.75% + $42 flat tax where pre-tax)
+      const hotelOptions = [
+        { id: 'arlo-midtown-bf', label: 'Arlo Midtown — King BF Non-Ref ($1,032 pre-tax → ~$1,226 est. all-in)', usd: 1226 },
+        { id: 'arlo-soho-bf', label: 'Arlo SoHo — Queen BF Non-Ref ($1,059 pre-tax → ~$1,257 est. all-in)', usd: 1257 },
+        { id: 'artezen-fc', label: 'Artezen Hotel (FiDi) — Deluxe Queen Free-Cancel ($1,127 pre-tax → ~$1,335 est. all-in)', usd: 1335, default: true },
+        { id: 'cambria-nr', label: 'Cambria Chelsea — King 240 ft² $0 Resort Fee Non-Ref ($1,364 VERIFIED ALL-IN)', usd: 1364 },
+        { id: 'club-quarters-bf', label: 'Club Quarters Grand Central — Queen 206 ft² ($1,219 pre-tax → ~$1,440 est. all-in)', usd: 1440 },
+        { id: 'cambria-fc', label: 'Cambria Chelsea — King 240 ft² $0 Resort Fee Free-Cancel ($1,522 VERIFIED ALL-IN)', usd: 1522 },
+        { id: 'motto-fc', label: 'Motto by Hilton Chelsea — King City View Free-Cancel ($1,433 pre-tax → ~$1,685 est. all-in)', usd: 1685 },
+        { id: 'ace-bf', label: 'Ace Hotel NY (NoMad) — Medium Queen 300 ft² ($1,473 pre-tax → ~$1,732 est. all-in)', usd: 1732 },
+        { id: 'beacon-allin', label: 'Hotel Beacon (UWS) — King Studio 320 ft² Kitchenette ($1,849 VERIFIED ALL-IN)', usd: 1849 },
+        { id: 'arlo-wbg', label: 'Arlo Williamsburg (BK) — Queen Free-Cancel ($2,349 VERIFIED ALL-IN)', usd: 2349 },
+        { id: 'park-hyatt', label: 'Park Hyatt NY (5★ Benchmark) — King 500 ft² ($8,190 pre-tax → ~$9,454 est. all-in)', usd: 9454 }
+      ];
+
+      const hotelSel = document.getElementById('calc-hotel');
+      hotelSel.innerHTML = hotelOptions
+        .map((h) => `<option value="${h.usd}" ${h.default ? 'selected' : ''}>${escapeHTML(h.label)}</option>`)
+        .join('');
+
+      const defaultRestaurants = new Set(['le-bernardin', 'cote', 'coqodaq', 'katzs-deli', 'tonchin']);
+      const pricedRestaurants = michelin.restaurants.filter((r) => r.cost2AdultsMin !== null);
+      document.getElementById('calc-michelin-list').innerHTML = pricedRestaurants
+        .map((r) => {
+          const checked = defaultRestaurants.has(r.id) ? 'checked' : '';
+          return `
+            <label class="check-item">
+              <input type="checkbox" class="calc-rest" value="${r.cost2AdultsMin}" ${checked} />
+              <span><strong>${escapeHTML(r.name)}</strong> (${fmtUSD(r.cost2AdultsMin)} base)</span>
+            </label>`;
+        })
+        .join('');
+
+      const defaultActivities = new Set(['met-museum', 'moma', 'summit-one-vanderbilt', 'statue-of-liberty', 'central-park-wollman-rink', 'broadway-tkts']);
+      const paidActivities = activities.activities.filter((a) => a.cost2AdultsMax > 0);
+      document.getElementById('calc-act-list').innerHTML = paidActivities
+        .map((a) => {
+          const est = a.cost2AdultsMin > 0 ? a.cost2AdultsMin : Math.min(a.cost2AdultsMax, 72);
+          const checked = defaultActivities.has(a.id) ? 'checked' : '';
+          return `
+            <label class="check-item">
+              <input type="checkbox" class="calc-act" value="${est}" ${checked} />
+              <span><strong>${escapeHTML(a.name)}</strong> (${fmtUSD(est)})</span>
+            </label>`;
+        })
+        .join('');
+
+      const casualSlider = document.getElementById('calc-casual');
+      const drinksSlider = document.getElementById('calc-drinks');
+
+      function updateCalc() {
+        const hotelUsd = Number(hotelSel.value);
+        const transitUsd = meta.transit.omnyWeeklyCapCouple;
+        let michelinBase = 0;
+        document.querySelectorAll('.calc-rest:checked').forEach((el) => (michelinBase += Number(el.value)));
+        let actUsd = 0;
+        document.querySelectorAll('.calc-act:checked').forEach((el) => (actUsd += Number(el.value)));
+        const casualUsd = Number(casualSlider.value);
+        const drinksUsd = Number(drinksSlider.value);
+        const taxTipUsd = Math.round((michelinBase + drinksUsd) * 0.28875);
+        const total = hotelUsd + transitUsd + michelinBase + taxTipUsd + actUsd + casualUsd + drinksUsd;
+
+        document.getElementById('calc-casual-val').textContent = fmtUSD(casualUsd);
+        document.getElementById('calc-drinks-val').textContent = fmtUSD(drinksUsd);
+        document.getElementById('sum-hotel').textContent = fmtUSD(hotelUsd);
+        document.getElementById('sum-transit').textContent = fmtUSD(transitUsd);
+        document.getElementById('sum-michelin').textContent = fmtUSD(michelinBase);
+        document.getElementById('sum-taxtip').textContent = fmtUSD(taxTipUsd);
+        document.getElementById('sum-act').textContent = fmtUSD(actUsd);
+        document.getElementById('sum-casual').textContent = fmtUSD(casualUsd);
+        document.getElementById('sum-drinks').textContent = fmtUSD(drinksUsd);
+        document.getElementById('sum-total').textContent = fmtUSD(total);
+        document.getElementById('sum-pp').textContent = fmtUSD(total / 2);
+      }
+
+      document.addEventListener('change', (e) => {
+        if (e.target.matches('#calc-hotel, .calc-rest, .calc-act')) updateCalc();
+      });
+      [casualSlider, drinksSlider].forEach((el) => el.addEventListener('input', updateCalc));
+      updateCalc();
+
+      // Switchable Plans
+      let activePlanId = itinerary.plans[0].id;
+      const tabsEl = document.getElementById('plan-tabs');
+
+      function renderPlan() {
+        tabsEl.innerHTML = itinerary.plans
+          .map(
+            (p) =>
+              `<button class="filter-pill ${p.id === activePlanId ? 'active' : ''}" data-plan="${p.id}">${escapeHTML(p.title.split(':')[0])}: ${escapeHTML(p.title.split(':')[1] || '')}</button>`
+          )
+          .join('');
+        tabsEl.querySelectorAll('button').forEach((btn) =>
+          btn.addEventListener('click', () => {
+            activePlanId = btn.dataset.plan;
+            renderPlan();
+          })
+        );
+
+        const plan = itinerary.plans.find((p) => p.id === activePlanId);
+        document.getElementById('plan-header-banner').innerHTML = `
+          <strong>${escapeHTML(plan.title)}</strong><br/>
+          ${escapeHTML(plan.subtitle)}<br/>
+          <strong>Suggested Base Hotel:</strong> ${escapeHTML(plan.baseHotelRecommendation)}
+        `;
+
+        document.getElementById('plan-days').innerHTML = plan.days
+          .map(
+            (d) => `
+            <article class="day-card">
+              <div class="day-header">
+                <div class="day-num">Day ${d.day} · ${escapeHTML(d.date)}</div>
+                <div class="link-row">
+                  <span class="badge badge-info">${escapeHTML(d.zone)}</span>
+                  <span class="badge badge-verified">Est. Paid Activities: ${fmtUSD(d.estActivityCost2)}</span>
+                </div>
+              </div>
+              <p class="cell-title" style="margin-bottom:0.75rem">${escapeHTML(d.theme)}</p>
+              <div class="day-slots">
+                <div class="slot-box">
+                  <div class="slot-label">Morning</div>
+                  <p class="small mb-0">${escapeHTML(d.morning)}</p>
+                </div>
+                <div class="slot-box">
+                  <div class="slot-label">Afternoon</div>
+                  <p class="small mb-0">${escapeHTML(d.afternoon)}</p>
+                </div>
+                <div class="slot-box">
+                  <div class="slot-label">Evening &amp; Michelin Pair</div>
+                  <p class="small mb-0">${escapeHTML(d.evening)}</p>
+                </div>
+              </div>
+              <div class="cell-sub mt-2"><strong>Transit Logic:</strong> ${escapeHTML(d.transitNote)}</div>
+            </article>`
+          )
+          .join('');
+      }
+
+      renderPlan();
+    })();
+  </script>
+</body>
+</html>

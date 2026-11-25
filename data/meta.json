@@ -1,0 +1,164 @@
+{
+  "project": "NYFun2 — NYC Couples Trip Intelligence Dashboard",
+  "verifiedDate": "2026-11-25",
+  "travelers": "2 Adults (Couple)",
+  "targetWindow": {
+    "start": "2027-02-15",
+    "end": "2027-03-23",
+    "display": "February 15 – March 23, 2027",
+    "recommendedStay": {
+      "checkIn": "2027-02-22",
+      "checkOut": "2027-03-01",
+      "nights": 7,
+      "label": "Mon Feb 22 – Mon Mar 1, 2027 (7 Nights)",
+      "rationale": "Lowest verified 7-night hotel pricing window across Manhattan, skips Presidents' Day weekend crowds (Feb 13–15), catches Bank of America Winter Village at Bryant Park before its Feb 28 season close, and keeps Wollman Rink open on Off-Peak pricing ($16 admission)."
+    },
+    "alternativeStay": {
+      "checkIn": "2027-02-15",
+      "checkOut": "2027-02-22",
+      "nights": 7,
+      "label": "Mon Feb 15 – Mon Feb 22, 2027 (7 Nights)",
+      "rationale": "Lowest verified rates at Arlo SoHo ($1,021 pre-tax) & Club Quarters Grand Central ($1,113 pre-tax) and captures the 29th Chinatown Lunar New Year Parade on Sun Feb 21, 2027 (1:00 PM), at the trade-off of Presidents' Day holiday crowds on Mon Feb 15."
+    }
+  },
+  "transit": {
+    "source": "MTA Approved Fare & Toll Schedule (effective January 4, 2026)",
+    "sourceUrl": "https://www.mta.info/document/195636",
+    "subwayBusBaseFare": 3.00,
+    "omnyWeeklyCapPerPerson": 35.00,
+    "omnyWeeklyCapCouple": 70.00,
+    "expressBusFare": 7.25,
+    "expressBusWeeklyCapPerPerson": 67.00,
+    "notes": "Tap-and-Go OMNY (same contactless card or phone per traveler) automatically caps subway & local bus rides at $35.00 per person per rolling 7-day period ($70.00 total for 2 adults). MetroCard is being phased out in 2026; use OMNY."
+  },
+  "hotelTaxLaw": {
+    "source": "NYC Department of Finance — Hotel Room Occupancy Tax",
+    "sourceUrl": "https://www.nyc.gov/assets/finance/downloads/pdf/08pdf/fm3608htx.pdf",
+    "nycOccupancyTaxPct": 5.875,
+    "nyNycSalesTaxPct": 8.875,
+    "combinedPct": 14.75,
+    "flatFeePerNightRangeUsd": "$4–$8/night (NYC Hotel Unit Fee + NYS Javits Center fee as itemized on Booking.com)",
+    "notes": "Booking.com US quotes show pre-tax totals (including listed mandatory hotel facility/resort fees) plus separate NYC 14.75% + flat nightly taxes. Quotes routed via Booking.com EU/DE pages show all-in tax-inclusive USD totals; every quote in this dashboard explicitly labels its exact tax basis."
+  },
+  "michelinCitySummary": {
+    "verifiedDate": "2026-11-25",
+    "officialSourceUrl": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants",
+    "ceremony2025Url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
+    "bib2025Url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/the-most-affordable-restaurants-in-new-york-city",
+    "nycFiveBoroughTotal": 369,
+    "nyStateTotal": 391,
+    "suburbanWestchesterDelta": 22,
+    "starredTotal": 69,
+    "listedNonStarredTotal": 300,
+    "tiers": {
+      "threeStars": 5,
+      "twoStars": 14,
+      "oneStar": 50,
+      "bibGourmand": 76,
+      "selected": 224
+    },
+    "boroughs": [
+      {
+        "borough": "Manhattan",
+        "total": 267,
+        "threeStars": 5,
+        "twoStars": 13,
+        "oneStar": 44,
+        "bibGourmand": 43,
+        "selected": 162,
+        "michelinUrl": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
+      },
+      {
+        "borough": "Brooklyn",
+        "total": 75,
+        "threeStars": 0,
+        "twoStars": 1,
+        "oneStar": 5,
+        "bibGourmand": 22,
+        "selected": 47,
+        "michelinUrl": "https://guide.michelin.com/us/en/new-york-state/brooklyn/restaurants"
+      },
+      {
+        "borough": "Queens",
+        "total": 19,
+        "threeStars": 0,
+        "twoStars": 0,
+        "oneStar": 1,
+        "bibGourmand": 11,
+        "selected": 7,
+        "michelinUrl": "https://guide.michelin.com/us/en/new-york-state/queens/restaurants"
+      },
+      {
+        "borough": "The Bronx",
+        "total": 5,
+        "threeStars": 0,
+        "twoStars": 0,
+        "oneStar": 0,
+        "bibGourmand": 0,
+        "selected": 5,
+        "michelinUrl": "https://guide.michelin.com/us/en/new-york-state/bronx/restaurants"
+      },
+      {
+        "borough": "Staten Island",
+        "total": 3,
+        "threeStars": 0,
+        "twoStars": 0,
+        "oneStar": 0,
+        "bibGourmand": 0,
+        "selected": 3,
+        "michelinUrl": "https://guide.michelin.com/us/en/new-york-state/staten-island/restaurants"
+      }
+    ],
+    "upcomingUpdateAlert": "Counts reflect live guide.michelin.com NYC 5-borough listings as of Nov 25, 2026 (including the Nov 2025 ceremony & July 2026 Selected additions). Michelin's next Northeast/NYC star ceremony is expected in mid-December 2026 — re-confirm star counts before locking 2027 dining reservations."
+  },
+  "keyDates2027": [
+    {
+      "date": "2026-11-25 to 2026-11-30",
+      "title": "Booking.com Black Friday 2026 Hotel Deals Active NOW",
+      "impact": "high",
+      "detail": "Live 26%–41% off deals on Booking.com cover stays through Dec 31, 2027 (Arlo SoHo $1,021, Arlo Midtown $1,032, Club Quarters $1,113 for 7 nights pre-tax). Empire State Building also runs a $46 Flex Anytime Black Friday promo through Nov 30, 2026."
+    },
+    {
+      "date": "2026-12-01 (11:00 AM EST)",
+      "title": "Sushi Sho (3★) Next Tock Reservation Drop",
+      "impact": "high",
+      "detail": "Sushi Sho releases reservations in rolling monthly drops on Tock (Dec 1 drop opens Jan 2027; Feb 2027 seats drop Jan 1, 2027 at 11:00 AM EST — verify exact release on exploretock.com/sushi-sho-nyc)."
+    },
+    {
+      "date": "2026-12 (Expected Mid-Month)",
+      "title": "Next Annual NYC Michelin Guide Ceremony",
+      "impact": "medium",
+      "detail": "Potential star promotions/removals prior to Feb 2027 travel. Re-check guide.michelin.com before finalizing tasting menu bookings."
+    },
+    {
+      "date": "2027-02-14 (Sun)",
+      "title": "Valentine's Day & Super Bowl LXI",
+      "impact": "medium",
+      "detail": "Falls the night before the Feb 15 window opens; expect residual holiday crowd carryover into Monday Feb 15."
+    },
+    {
+      "date": "2027-02-15 (Mon)",
+      "title": "Presidents' Day Federal Holiday",
+      "impact": "medium",
+      "detail": "Wollman Rink designates Mon Feb 15 as a public-sector Community Day (Peak pricing for general visitors); museums stay busy, though major ones (Met, MoMA, AMNH, 9/11) remain open. NYC public school Midwinter Recess runs Feb 15–19."
+    },
+    {
+      "date": "2027-02-21 (Sun, 1:00 PM)",
+      "title": "29th Chinatown Lunar New Year Parade & Festival",
+      "impact": "high",
+      "detail": "Officially confirmed by Better Chinatown USA (Year of the Goat/Sheep 2027; Lunar New Year itself is Feb 6). Free iconic dragon/lion dance parade through Mott & Canal Streets."
+    },
+    {
+      "date": "2027-02-28 (Sun)",
+      "title": "Bryant Park Bank of America Winter Village CLOSES",
+      "impact": "high",
+      "detail": "Officially open Oct 28, 2026 – Feb 28, 2027 (both The Rink & The Lodge close after Feb 28). Trips starting in March miss Bryant Park skating entirely."
+    },
+    {
+      "date": "2027-03-14 to 2027-03-16",
+      "title": "Wollman Rink FREE End-of-Season Days & Final Closure (Mar 16)",
+      "impact": "medium",
+      "detail": "Wollman Rink in Central Park offers free admission to everyone Sun Mar 14 – Tue Mar 16, 2027, then closes permanently for the winter season on Mar 17."
+    }
+  ]
+}

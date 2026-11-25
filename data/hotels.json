@@ -1,0 +1,594 @@
+{
+  "verifiedDate": "2026-11-25",
+  "searchCriteria": {
+    "guests": "2 Adults, 1 Room",
+    "bedRequirement": "Queen or King bed (smaller/full/wall-bed rooms explicitly skipped)",
+    "bathRequirement": "Private en-suite bathroom (verified 100%)",
+    "transitRequirement": "≤ 1 hour via MTA subway to all 5 curated NYC Michelin clusters (top Manhattan picks are ≤ 30 min!)",
+    "stayWindowAnalyzed": "February 15 – March 23, 2027 (7-night Monday-to-Monday cohorts + 3-night Presidents' Day check)"
+  },
+  "stayWindowComparison": [
+    {
+      "windowId": "feb15-18",
+      "label": "Feb 15–18, 2027 (3 Nights — Presidents' Day)",
+      "nights": 3,
+      "seasonTag": "Short Weekend / Holiday",
+      "arloMidtownPreTax": 486.36,
+      "artezenPreTax": 486.49,
+      "clubQuartersPreTax": 466.78,
+      "arloSohoPreTax": null,
+      "note": "3-night sanity check across Presidents' Day Mon Feb 15."
+    },
+    {
+      "windowId": "feb15-22",
+      "label": "Feb 15–22, 2027 (7 Nights — Presidents' Day + Lunar New Year Parade)",
+      "nights": 7,
+      "seasonTag": "Best Value + LNY Parade",
+      "arloMidtownPreTax": 1098.04,
+      "artezenPreTax": 1108.78,
+      "clubQuartersPreTax": 1113.34,
+      "arloSohoPreTax": 1020.76,
+      "note": "Lowest verified week at Arlo SoHo ($1,021) & Club Quarters ($1,113); catches Sun Feb 21 Chinatown Lunar New Year Parade."
+    },
+    {
+      "windowId": "feb22-mar1",
+      "label": "Feb 22–Mar 1, 2027 (7 Nights — RECOMMENDED SWEET SPOT)",
+      "nights": 7,
+      "seasonTag": "RECOMMENDED — Lowest Surge-Free Week",
+      "arloMidtownPreTax": 1031.80,
+      "artezenPreTax": 1069.68,
+      "clubQuartersPreTax": 1218.51,
+      "arloSohoPreTax": 1059.40,
+      "note": "Lowest verified week at Arlo Midtown ($1,032), Arlo NoMad ($1,208) & Artezen ($1,070 Deluxe / $1,007 Petite); zero federal holidays; catches Bryant Park Winter Village before Feb 28 close."
+    },
+    {
+      "windowId": "mar1-8",
+      "label": "Mar 1–8, 2027 (7 Nights — Early March Shoulder)",
+      "nights": 7,
+      "seasonTag": "+25% to +48% vs Late Feb",
+      "arloMidtownPreTax": 1531.00,
+      "artezenPreTax": 1351.20,
+      "clubQuartersPreTax": 1396.25,
+      "arloSohoPreTax": null,
+      "note": "Sharp March corporate/spring pricing jump begins; Bryant Park Winter Village already closed."
+    },
+    {
+      "windowId": "mar8-15",
+      "label": "Mar 8–15, 2027 (7 Nights — Mid-March Corporate Surge)",
+      "nights": 7,
+      "seasonTag": "+70% vs Late Feb",
+      "arloMidtownPreTax": 1754.97,
+      "artezenPreTax": null,
+      "clubQuartersPreTax": null,
+      "arloSohoPreTax": null,
+      "note": "Spring travel + corporate conference wave pushes Arlo Midtown to $1,755 non-ref / $2,019 free-cancel pre-tax."
+    },
+    {
+      "windowId": "mar15-22",
+      "label": "Mar 15–22, 2027 (7 Nights — St. Patrick's / Spring Break Peak)",
+      "nights": 7,
+      "seasonTag": "+47% to +91% Surge",
+      "arloMidtownPreTax": 1512.04,
+      "artezenPreTax": 1695.28,
+      "clubQuartersPreTax": 2130.92,
+      "arloSohoPreTax": 1291.24,
+      "note": "Highest verified prices in the entire Feb 15–Mar 23 window (+91% at Club Quarters, +58% at Artezen, +52% at Arlo Midtown free-cancel vs late Feb)."
+    }
+  ],
+  "bookingTimingPlaybook": {
+    "headline": "Book NOW (Late Nov 2026 Black Friday Window) — OR Lock Free-Cancel & Re-Check 30 Days & 8–14 Days Out",
+    "sources": [
+      { "label": "HotelMonitor NYC Feb 2027 (-38% vs annual avg)", "url": "https://hotelmonitor.co.uk/hotels/new-york/february-2027" },
+      { "label": "HotelMonitor NYC Mar 2027 (-21% vs annual avg)", "url": "https://hotelmonitor.co.uk/hotels/new-york/march-2027" },
+      { "label": "Expedia / Hotels.com 2026 Hotel Price Index", "url": "https://www.expedia.com/newsroom/2026-hotel-price-index-how-americans-are-shopping-smarter-this-summer/" }
+    ],
+    "steps": [
+      {
+        "phase": "Right Now (Nov 25 – Dec 2, 2026)",
+        "strategy": "Capture Active Black Friday Deals (26%–41% Off)",
+        "detail": "Booking.com's active 2026 Black Friday sale covers stays Nov 19, 2026 – Dec 31, 2027. If your Feb 2027 dates are locked, Arlo Midtown ($1,032), Arlo SoHo ($1,021), and Club Quarters ($1,113) non-refundable Black Friday rates beat standard free-cancel rates by $450–$550/week (and Arlo/Ace deals include 1 free date reschedule)."
+      },
+      {
+        "phase": "If Dates Are Still Flexible (Dec 2026)",
+        "strategy": "Hold a Free-Cancellation Baseline at Artezen or Cambria Chelsea",
+        "detail": "Artezen Hotel's Feb 22–Mar 1 Deluxe Queen Free-Cancellation rate is only $1,126.85 pre-tax (just $57 above non-ref!) and Cambria Chelsea ($0 resort fee!) is $1,522 all-in free-cancel. Locking a zero-risk anchor protects against rate spikes."
+      },
+      {
+        "phase": "30 Days Out & 8–14 Days Out (Jan–Feb 2027)",
+        "strategy": "Re-Shop Free-Cancel Inventory Against HPI Dip",
+        "detail": "Hotels.com's 2026 Hotel Price Index found bookings 8–14 days out average 23% below 4+ month advance rates, with Sunday check-in cheapest nationwide. Re-check your flexible booking in late Jan & mid-Feb 2027 — only switch if net all-in price beats your locked rate."
+      }
+    ]
+  },
+  "excludedNote": "AC Hotel New York Downtown by Marriott (FiDi) was evaluated as a candidate but showed zero available rooms on Booking.com for Feb 22–Mar 1, 2027; replaced in FiDi with higher-rated Artezen Hotel (9.2/10).",
+  "hotels": [
+    {
+      "id": "artezen-hotel",
+      "name": "Artezen Hotel",
+      "tier": "best-value",
+      "tierLabel": "Top Overall Value & Flexible Winner",
+      "neighborhood": "Financial District (Fulton Center)",
+      "borough": "Manhattan",
+      "address": "24 John St, New York, NY 10038",
+      "officialUrl": "https://www.artezenhotel.com/contact-us",
+      "bookingUrl": "https://www.booking.com/hotel/us/artezen.html",
+      "bookingRating": "9.2 / 10",
+      "roomType": "Deluxe Queen (also Petite Queen)",
+      "bedSpec": "1 Queen Bed",
+      "roomSizeSqFt": null,
+      "roomSizeNote": "Exact sq ft not published on Booking.com/official site — flagged on Review page",
+      "privateBathVerified": true,
+      "resortFeePerNight": 14,
+      "nearestSubways": "Fulton Center mega-hub (2 min walk): 2/3, 4/5, A/C, J/Z, R/W — 9 subway lines!",
+      "michelinAccess1Hr": {
+        "maxMinutes": 24,
+        "summary": "FiDi (Saga/Crown Shy/Manhatta) 3–6 min walk · SoHo/Tribeca 10 min · Flatiron/Midtown 15–20 min · Williamsburg/LIC 20–24 min"
+      },
+      "recommendedWindowQuote": {
+        "window": "Feb 22–Mar 1, 2027 (7 nights)",
+        "nonRefUsd": 1069.68,
+        "freeCancelUsd": 1126.85,
+        "taxBasis": "Pre-tax USD (includes $14/nt resort fee; excl. 14.75% + flat NYC taxes)",
+        "estAllInFreeCancelUsd": 1335
+      },
+      "quotes": [
+        { "window": "Feb 15–18, 2027", "nights": 3, "room": "Petite / Deluxe Queen (Free Cancel)", "amountUsd": 519.61, "taxBasis": "Pre-tax (incl. $14/nt resort fee)", "rateType": "Free Cancellation" },
+        { "window": "Feb 15–22, 2027", "nights": 7, "room": "Partner Offer (All-in verified)", "amountUsd": 1180.90, "taxBasis": "All-in ($1,022 + $158.90 taxes)", "rateType": "Partner Offer" },
+        { "window": "Feb 15–22, 2027", "nights": 7, "room": "Deluxe Queen", "amountUsd": 1168.25, "taxBasis": "Pre-tax (incl. $14/nt resort fee)", "rateType": "Free Cancellation ($1,108.78 non-ref)" },
+        { "window": "Feb 22–Mar 1, 2027", "nights": 7, "room": "Deluxe Queen (Petite $1,007/$1,061)", "amountUsd": 1126.85, "taxBasis": "Pre-tax (incl. $14/nt resort fee)", "rateType": "Free Cancellation ($1,069.68 non-ref)" },
+        { "window": "Mar 1–8, 2027", "nights": 7, "room": "Deluxe Queen (Petite $1,250)", "amountUsd": 1351.20, "taxBasis": "Pre-tax (incl. $14/nt resort fee)", "rateType": "Non-Refundable" },
+        { "window": "Mar 15–22, 2027", "nights": 7, "room": "Deluxe Queen", "amountUsd": 1789.25, "taxBasis": "Pre-tax (incl. $14/nt resort fee)", "rateType": "Free Cancellation ($1,695.28 non-ref)" }
+      ],
+      "pros": [
+        "Highest guest rating on shortlist (9.2/10) with tiny $14/nt resort fee (vs $37–$40 at Arlo/Ace).",
+        "Free-cancellation premium is only $57 for the entire week — best flexible-booking anchor in NYC!",
+        "Unbeatable Fulton Center 9-line subway hub puts every Michelin cluster within 3–24 minutes."
+      ],
+      "cons": [
+        "FiDi is quieter late at night than SoHo or Midtown (though Stone St, Crown Shy, Saga & Manhatta are steps away).",
+        "Exact room square footage not listed on official site (Petite Queen is compact — choose Deluxe Queen)."
+      ],
+      "verdict": "#1 Pick if you want Free Cancellation, highest guest quality, tiny resort fee, and lightning-fast express trains everywhere."
+    },
+    {
+      "id": "arlo-midtown",
+      "name": "Arlo Midtown",
+      "tier": "best-value",
+      "tierLabel": "Lowest Verified Feb 22–Mar 1 Rate (King Bed)",
+      "neighborhood": "Midtown West (Hell's Kitchen / Hudson Yards)",
+      "borough": "Manhattan",
+      "address": "351 W 38th St, New York, NY 10018",
+      "officialUrl": "https://arlohotels.com/midtown/rooms/king",
+      "bookingUrl": "https://www.booking.com/hotel/us/arlo-midtown.html",
+      "bookingRating": "8.5 / 10",
+      "roomType": "King Room",
+      "bedSpec": "1 King Bed",
+      "roomSizeSqFt": 160,
+      "roomSizeNote": "Compact modern micro-luxury layout (160 sq ft verified on Arlo & Booking.com)",
+      "privateBathVerified": true,
+      "resortFeePerNight": 37,
+      "nearestSubways": "A/C/E 42nd St–Port Authority (4 min walk) · 1/2/3/7/N/Q/R/W Times Sq (6 min walk)",
+      "michelinAccess1Hr": {
+        "maxMinutes": 26,
+        "summary": "Midtown West (Le Bernardin/The Modern/Tonchin) 8–18 min walk · Flatiron 12 min · FiDi/Villages 15–20 min · LIC/Williamsburg 22–26 min"
+      },
+      "recommendedWindowQuote": {
+        "window": "Feb 22–Mar 1, 2027 (7 nights)",
+        "nonRefUsd": 1031.80,
+        "freeCancelUsd": 1540.56,
+        "taxBasis": "Pre-tax USD (includes $37/nt resort fee; excl. 14.75% + flat NYC taxes)",
+        "estAllInFreeCancelUsd": 1810
+      },
+      "quotes": [
+        { "window": "Feb 15–18, 2027", "nights": 3, "room": "King Room", "amountUsd": 486.36, "taxBasis": "Pre-tax (incl. $37/nt resort fee)", "rateType": "Black Friday Non-Ref ($733.84 free cancel)" },
+        { "window": "Feb 15–22, 2027", "nights": 7, "room": "King Room", "amountUsd": 1098.04, "taxBasis": "Pre-tax (incl. $37/nt resort fee)", "rateType": "Black Friday Non-Ref ($1,650.96 free cancel)" },
+        { "window": "Feb 22–Mar 1, 2027", "nights": 7, "room": "King Room", "amountUsd": 1031.80, "taxBasis": "Pre-tax (incl. $37/nt resort fee)", "rateType": "Black Friday Non-Ref ($1,540.56 free cancel)" },
+        { "window": "Mar 1–8, 2027", "nights": 7, "room": "King Room (Partner Offer)", "amountUsd": 1531.00, "taxBasis": "Pre-tax (+$206.08 taxes verified)", "rateType": "Partner Offer" },
+        { "window": "Mar 8–15, 2027", "nights": 7, "room": "King Room", "amountUsd": 1754.97, "taxBasis": "Pre-tax (incl. $37/nt resort fee)", "rateType": "Non-Ref ($2,018.96 free cancel)" },
+        { "window": "Mar 15–22, 2027", "nights": 7, "room": "King Room", "amountUsd": 1512.04, "taxBasis": "Pre-tax (incl. $37/nt resort fee)", "rateType": "Black Friday Non-Ref ($2,340.96 free cancel)" }
+      ],
+      "pros": [
+        "Cheapest verified King-bed hotel in Manhattan for Feb 22–Mar 1 ($1,031.80 pre-tax, ~$1,226 est. all-in!).",
+        "Walkable to Broadway theaters, Hudson Yards/Edge, Bryant Park, and Midtown 3★ dining.",
+        "Black Friday deal typically allows 1 free date change (verify terms at checkout)."
+      ],
+      "cons": [
+        "Very compact 160 sq ft room — tight for 7 nights with two winter coats & large suitcases.",
+        "Huge +$509 penalty if you want free cancellation ($1,540.56 vs $1,031.80)."
+      ],
+      "verdict": "Best budget King-bed Black Friday lock-in for Feb 22–Mar 1 if you're comfortable with a smart 160 sq ft boutique footprint."
+    },
+    {
+      "id": "arlo-soho",
+      "name": "Arlo SoHo",
+      "tier": "best-value",
+      "tierLabel": "Lowest Verified Feb 15–22 Rate (SoHo)",
+      "neighborhood": "SoHo / Hudson Square",
+      "borough": "Manhattan",
+      "address": "231 Hudson St, New York, NY 10013",
+      "officialUrl": "https://arlohotels.com/soho/rooms/arlo-suite",
+      "bookingUrl": "https://www.booking.com/hotel/us/arlo-soho.html",
+      "bookingRating": "8.3 / 10",
+      "roomType": "Courtyard Queen (ADA verified Queen)",
+      "bedSpec": "1 Queen Bed",
+      "roomSizeSqFt": 150,
+      "roomSizeNote": "Micro-room ~150 sq ft (Queen verified)",
+      "privateBathVerified": true,
+      "resortFeePerNight": 37,
+      "nearestSubways": "1 Canal St (2 min walk) · A/C/E Canal St (3 min walk)",
+      "michelinAccess1Hr": {
+        "maxMinutes": 28,
+        "summary": "Tribeca/SoHo (Jungsik/Le Coucou) 5–10 min walk · West Village (Semma/Carbone) 10 min · Midtown 15 min · Williamsburg 25 min"
+      },
+      "recommendedWindowQuote": {
+        "window": "Feb 22–Mar 1, 2027 (7 nights)",
+        "nonRefUsd": 1059.40,
+        "freeCancelUsd": 1587.00,
+        "taxBasis": "Pre-tax USD (includes $37/nt resort fee; excl. 14.75% + flat NYC taxes)",
+        "estAllInFreeCancelUsd": 1865
+      },
+      "quotes": [
+        { "window": "Feb 15–22, 2027", "nights": 7, "room": "Courtyard Queen", "amountUsd": 1020.76, "taxBasis": "Pre-tax (incl. $37/nt resort fee)", "rateType": "Black Friday Non-Ref ($1,522 free cancel)" },
+        { "window": "Feb 22–Mar 1, 2027", "nights": 7, "room": "Courtyard Queen", "amountUsd": 1059.40, "taxBasis": "Pre-tax (incl. $37/nt resort fee)", "rateType": "Black Friday Non-Ref ($1,587 free cancel)" },
+        { "window": "Mar 15–22, 2027", "nights": 7, "room": "Courtyard Queen", "amountUsd": 1291.24, "taxBasis": "Pre-tax (incl. $37/nt resort fee)", "rateType": "Black Friday Non-Ref ($1,972.96 free cancel)" }
+      ],
+      "pros": [
+        "Absolute lowest verified 7-night NYC rate across all dates ($1,020.76 pre-tax Feb 15–22).",
+        "Chic SoHo/Tribeca vibe — walkable to Jungsik (3★), Le Coucou (1★), Semma (1★), and Chinatown Lunar New Year Parade!"
+      ],
+      "cons": [
+        "150 sq ft rooms are famously snug for a 7-night couple stay.",
+        "$37/nt resort fee baked into quote; steep +$528 jump for free cancellation."
+      ],
+      "verdict": "Lowest price in trendy Downtown/SoHo — ideal for the Feb 15–22 Lunar New Year week if you travel light."
+    },
+    {
+      "id": "club-quarters-grand-central",
+      "name": "Club Quarters Hotel Grand Central",
+      "tier": "best-value",
+      "tierLabel": "Grand Central Transit & Midtown Star Hub",
+      "neighborhood": "Midtown East (Grand Central)",
+      "borough": "Manhattan",
+      "address": "128 E 45th St, New York, NY 10017",
+      "officialUrl": "https://www.clubquartershotels.com/new-york-city/grand-central",
+      "bookingUrl": "https://www.booking.com/hotel/us/club-quarters-grand-central.html",
+      "bookingRating": "8.4 / 10",
+      "roomType": "Small Room with Queen Bed",
+      "bedSpec": "1 Queen Bed",
+      "roomSizeSqFt": 206,
+      "roomSizeNote": "206 sq ft — noticeably roomier than Arlo's 150–160 sq ft micro-rooms!",
+      "privateBathVerified": true,
+      "resortFeePerNight": 0,
+      "nearestSubways": "Grand Central–42nd St (3 min walk): 4/5/6, 7 (1 stop to Meju Queens!), S Shuttle",
+      "michelinAccess1Hr": {
+        "maxMinutes": 25,
+        "summary": "Sushi Sho/SUMMIT/Grand Central 4–6 min walk · Aquavit/Gabriel Kreuther 10 min · Flatiron 8 min · FiDi 14 min · LIC (Meju) 10 min via 7!"
+      },
+      "recommendedWindowQuote": {
+        "window": "Feb 22–Mar 1, 2027 (7 nights)",
+        "nonRefUsd": 1218.51,
+        "freeCancelUsd": null,
+        "taxBasis": "Pre-tax USD (excl. 14.75% + flat NYC taxes; Black Friday promo)",
+        "estAllInFreeCancelUsd": null
+      },
+      "quotes": [
+        { "window": "Feb 15–18, 2027", "nights": 3, "room": "Small Queen (206 ft²)", "amountUsd": 466.78, "taxBasis": "Pre-tax", "rateType": "Black Friday" },
+        { "window": "Feb 15–22, 2027", "nights": 7, "room": "Small Queen (206 ft²)", "amountUsd": 1113.34, "taxBasis": "Pre-tax", "rateType": "Black Friday" },
+        { "window": "Feb 22–Mar 1, 2027", "nights": 7, "room": "Small Queen (206 ft²)", "amountUsd": 1218.51, "taxBasis": "Pre-tax", "rateType": "Black Friday" },
+        { "window": "Mar 1–8, 2027", "nights": 7, "room": "Small Queen (206 ft²)", "amountUsd": 1396.25, "taxBasis": "Pre-tax", "rateType": "Black Friday" },
+        { "window": "Mar 15–22, 2027", "nights": 7, "room": "Small Queen (206 ft²)", "amountUsd": 2130.92, "taxBasis": "Pre-tax", "rateType": "Standard (+91% vs Feb 15!)" }
+      ],
+      "pros": [
+        "206 sq ft room (+30% larger than Arlo!) just 3 minutes from Grand Central Terminal & SUMMIT One Vanderbilt.",
+        "Walking distance to Sushi Sho (3★), Aquavit (2★), Gabriel Kreuther (2★) & 1 stop on the 7 train to Meju (1★, Queens).",
+        "No mandatory daily resort fee listed on Booking.com."
+      ],
+      "cons": [
+        "Most extreme March surge on our shortlist (+91% from Feb 15–22 to Mar 15–22!).",
+        "Business-hotel styling rather than trendy boutique lounge energy."
+      ],
+      "verdict": "Superb Midtown East value for Feb 15–22 ($1,113) or Feb 22–Mar 1 ($1,219) if you prioritize Midtown East/Queens Michelin access & bigger rooms than Arlo."
+    },
+    {
+      "id": "cambria-chelsea",
+      "name": "Cambria Hotel New York – Chelsea",
+      "tier": "sweet-spot",
+      "tierLabel": "Best Room Size + $0 Resort Fee Sweet Spot",
+      "neighborhood": "Chelsea / Flower District",
+      "borough": "Manhattan",
+      "address": "123 W 28th St, New York, NY 10001",
+      "officialUrl": "https://www.cambrianycchelsea.com/nyc-chelsea-hotel-rooms",
+      "bookingUrl": "https://www.booking.com/hotel/us/cambria-amp-suites-new-york-chelsea.html",
+      "bookingRating": "8.4 / 10",
+      "roomType": "King Room",
+      "bedSpec": "1 King Bed",
+      "roomSizeSqFt": 240,
+      "roomSizeNote": "240 sq ft King Room — 50% bigger than Arlo Midtown!",
+      "privateBathVerified": true,
+      "resortFeePerNight": 0,
+      "nearestSubways": "1 28th St (2 min walk) · F/M/N/Q/R/W 28th/34th St (4–5 min walk) · Penn Station (6 min)",
+      "michelinAccess1Hr": {
+        "maxMinutes": 24,
+        "summary": "Flatiron/NoMad (Atomix/COTE/EMP/Coqodaq) 8–12 min walk · Midtown/Villages 10–15 min · FiDi 16 min · Williamsburg 22 min"
+      },
+      "recommendedWindowQuote": {
+        "window": "Feb 22–Mar 1, 2027 (7 nights)",
+        "nonRefUsd": 1364.00,
+        "freeCancelUsd": 1522.00,
+        "taxBasis": "ALL-IN Tax-Inclusive USD (Booking.com DE quote; includes ALL NYC taxes & $0 resort fee!)",
+        "estAllInFreeCancelUsd": 1522
+      },
+      "quotes": [
+        { "window": "Feb 15–22, 2027", "nights": 7, "room": "King Room (240 ft²)", "amountUsd": 1234.00, "taxBasis": "Pre-tax ($0 resort fee)", "rateType": "Non-Ref ($1,379 free cancel)" },
+        { "window": "Feb 22–Mar 1, 2027", "nights": 7, "room": "King Room (240 ft²)", "amountUsd": 1364.00, "taxBasis": "ALL-IN Tax-Inclusive USD ($0 resort fee)", "rateType": "Non-Ref ($1,522 all-in free cancel)" }
+      ],
+      "pros": [
+        "TRUE $0 resort/destination fee — transparent pricing with zero front-desk surprises!",
+        "Generous 240 sq ft King Room for a full 7-night winter stay (~$1,364 ALL-IN non-ref / $1,522 ALL-IN free cancel!).",
+        "Dead-center Manhattan location walking distance to Flatiron, NoMad, Chelsea Market, High Line & Penn Station (EWR airport train!)."
+      ],
+      "cons": [
+        "Flower District block is lively by day and quieter at night.",
+        "~$140–$185 more all-in than Artezen/Arlo Midtown, though you get +80 sq ft and a King bed."
+      ],
+      "verdict": "Best balanced 7-night couple comfort pick: 240 sq ft King bed, $0 resort fee, central Chelsea/Flatiron walkability, and $1,364–$1,522 ALL-IN!"
+    },
+    {
+      "id": "arlo-nomad",
+      "name": "Arlo NoMad",
+      "tier": "sweet-spot",
+      "tierLabel": "NoMad Micro-Boutique & Skyline Views",
+      "neighborhood": "NoMad",
+      "borough": "Manhattan",
+      "address": "11 E 31st St, New York, NY 10016",
+      "officialUrl": "https://arlohotels.com/nomad/rooms",
+      "bookingUrl": "https://www.booking.com/hotel/us/arlo-nomad.html",
+      "bookingRating": "8.1 / 10",
+      "roomType": "Queen Room",
+      "bedSpec": "1 Queen Bed",
+      "roomSizeSqFt": 150,
+      "roomSizeNote": "150 sq ft floor-to-ceiling window micro-room",
+      "privateBathVerified": true,
+      "resortFeePerNight": 37,
+      "nearestSubways": "6 33rd St (3 min) · B/D/F/M/N/Q/R/W 34th St–Herald Sq (5 min)",
+      "michelinAccess1Hr": {
+        "maxMinutes": 24,
+        "summary": "Atomix 2 min walk! · Tonchin 6 min walk · COTE/EMP/Coqodaq 10 min walk · Midtown/FiDi/Brooklyn 12–24 min"
+      },
+      "recommendedWindowQuote": {
+        "window": "Feb 22–Mar 1, 2027 (7 nights)",
+        "nonRefUsd": 1208.44,
+        "freeCancelUsd": 1834.96,
+        "taxBasis": "Pre-tax USD (includes $37/nt resort fee; excl. 14.75% + flat NYC taxes)",
+        "estAllInFreeCancelUsd": 2150
+      },
+      "quotes": [
+        { "window": "Feb 15–22, 2027", "nights": 7, "room": "Queen Room (150 ft²)", "amountUsd": 1213.96, "taxBasis": "Pre-tax (incl. $37/nt resort fee)", "rateType": "Black Friday Non-Ref" },
+        { "window": "Feb 22–Mar 1, 2027", "nights": 7, "room": "Queen Room (150 ft²)", "amountUsd": 1208.44, "taxBasis": "Pre-tax (incl. $37/nt resort fee)", "rateType": "Black Friday Non-Ref ($1,834.96 free cancel)" },
+        { "window": "Mar 15–22, 2027", "nights": 7, "room": "Queen Room (150 ft²)", "amountUsd": 1633.48, "taxBasis": "Pre-tax (incl. $37/nt resort fee)", "rateType": "Black Friday Non-Ref" }
+      ],
+      "pros": [
+        "Literally 2 blocks from Atomix (2★), Empire State Building, and Koreatown.",
+        "Floor-to-ceiling windows with iconic Midtown/Empire State skyline views."
+      ],
+      "cons": [
+        "Costs ~$176 more than Arlo Midtown for an even smaller 150 sq ft Queen room.",
+        "Huge +$627 penalty for free cancellation."
+      ],
+      "verdict": "Great location for Atomix/NoMad lovers, though Cambria Chelsea gives 90 more sq ft & a King bed for nearly the same all-in cost."
+    },
+    {
+      "id": "motto-chelsea",
+      "name": "Motto by Hilton New York City Chelsea",
+      "tier": "sweet-spot",
+      "tierLabel": "Hilton Points / Sleek Chelsea Tower",
+      "neighborhood": "Chelsea",
+      "borough": "Manhattan",
+      "address": "113 W 24th St, New York, NY 10011",
+      "officialUrl": "https://www.hilton.com/en/locations/usa/new-york/new-york/manhattan-nyc/motto-by-hilton",
+      "bookingUrl": "https://www.booking.com/hotel/us/motto-by-hilton-new-york-city-chelsea.html",
+      "bookingRating": "8.4 / 10",
+      "roomType": "King Room with City View (NOTE: cheaper 'Flex Room with Wall Bed' skipped)",
+      "bedSpec": "1 King Bed (verified — avoided sofa/wall bed tier)",
+      "roomSizeSqFt": 170,
+      "roomSizeNote": "170 sq ft modern Hilton micro-room on high floors",
+      "privateBathVerified": true,
+      "resortFeePerNight": 30,
+      "nearestSubways": "F/M/1/R/W 23rd St (2–4 min walk)",
+      "michelinAccess1Hr": {
+        "maxMinutes": 24,
+        "summary": "COTE/Flatiron/EMP 6–10 min walk · Chelsea Market/High Line 10 min · Midtown/FiDi 12–16 min · Williamsburg 22 min"
+      },
+      "recommendedWindowQuote": {
+        "window": "Feb 22–Mar 1, 2027 (7 nights)",
+        "nonRefUsd": null,
+        "freeCancelUsd": 1433.00,
+        "taxBasis": "Pre-tax USD (includes $30/nt resort fee; excl. 14.75% + flat NYC taxes)",
+        "estAllInFreeCancelUsd": 1685
+      },
+      "quotes": [
+        { "window": "Feb 15–22, 2027", "nights": 7, "room": "King City View (170 ft²)", "amountUsd": 1598.00, "taxBasis": "ALL-IN Tax-Inclusive USD (Booking.com DE; incl. $30/nt resort fee)", "rateType": "Free Cancellation" },
+        { "window": "Feb 22–Mar 1, 2027", "nights": 7, "room": "King City View (170 ft²)", "amountUsd": 1433.00, "taxBasis": "Pre-tax (incl. $30/nt resort fee)", "rateType": "Free Cancellation" }
+      ],
+      "pros": [
+        "Hilton Honors points earning/redemption in prime Chelsea — 4 blocks from COTE (1★) & Flatiron.",
+        "Strong Free-Cancellation rate ($1,598 ALL-IN for Feb 15–22!)."
+      ],
+      "cons": [
+        "Watch room booking carefully: entry-level 'Flex Room' uses a sofa/wall bed — always select King City View.",
+        "Smaller (170 sq ft) & pricier than Cambria Chelsea (240 sq ft, $0 resort fee) 4 blocks north."
+      ],
+      "verdict": "Smart choice if you're redeeming/earning Hilton Honors points; otherwise Cambria Chelsea wins on room space & value."
+    },
+    {
+      "id": "ace-hotel-ny",
+      "name": "Ace Hotel New York",
+      "tier": "spacious-studio",
+      "tierLabel": "Design Icon & 300 sq ft Boutique Rooms",
+      "neighborhood": "NoMad",
+      "borough": "Manhattan",
+      "address": "20 W 29th St, New York, NY 10001",
+      "officialUrl": "https://acehotel.com/new-york/",
+      "bookingUrl": "https://www.booking.com/hotel/us/ace-new-york.html",
+      "bookingRating": "8.4 / 10",
+      "roomType": "Medium Queen Room (NOTE: cheaper 'Single' Full-bed room skipped)",
+      "bedSpec": "1 Queen Bed (verified — avoided Single Full bed)",
+      "roomSizeSqFt": 300,
+      "roomSizeNote": "Spacious 300 sq ft vintage-loft design with record player/Smeg fridge!",
+      "privateBathVerified": true,
+      "resortFeePerNight": 40,
+      "nearestSubways": "R/W 28th St (1 min walk) · 6/1/F/M 28th/34th St (4–5 min)",
+      "michelinAccess1Hr": {
+        "maxMinutes": 23,
+        "summary": "Atomix 5 min walk · COTE/Coqodaq/EMP 8–10 min walk · Midtown/Villages/FiDi 10–18 min · Brooklyn/LIC 20–23 min"
+      },
+      "recommendedWindowQuote": {
+        "window": "Feb 22–Mar 1, 2027 (7 nights)",
+        "nonRefUsd": 1472.59,
+        "freeCancelUsd": null,
+        "taxBasis": "Pre-tax USD (includes $40/nt resort fee; Black Friday Non-Ref w/ 1x reschedule)",
+        "estAllInFreeCancelUsd": null
+      },
+      "quotes": [
+        { "window": "Feb 15–22, 2027", "nights": 7, "room": "Medium Queen (300 ft²)", "amountUsd": 1472.59, "taxBasis": "Pre-tax (incl. $40/nt resort fee)", "rateType": "Black Friday Non-Ref (1x reschedule)" },
+        { "window": "Feb 22–Mar 1, 2027", "nights": 7, "room": "Medium Queen (300 ft²)", "amountUsd": 1472.59, "taxBasis": "Pre-tax (incl. $40/nt resort fee)", "rateType": "Black Friday Non-Ref (1x reschedule)" }
+      ],
+      "pros": [
+        "Iconic NYC boutique lobby lounge (Stumptown Coffee, Lobby Bar) + huge 300 sq ft rooms (double Arlo's size!).",
+        "Flat $1,472.59 Black Friday price across both late-Feb weeks with 1 free date change."
+      ],
+      "cons": [
+        "Steep $40/nt resort fee baked in; ~+$440 vs Arlo Midtown pre-tax.",
+        "Avoid the cheaper 'Single' room (1 full bed) — always confirm Medium Queen or Large."
+      ],
+      "verdict": "Best design-forward NYC vibe with real 300 sq ft breathing room right in the NoMad/Flatiron Michelin heartland."
+    },
+    {
+      "id": "hotel-beacon",
+      "name": "Hotel Beacon",
+      "tier": "spacious-studio",
+      "tierLabel": "Largest Studio (320 ft²) + Kitchenette + $0 Resort Fee",
+      "neighborhood": "Upper West Side",
+      "borough": "Manhattan",
+      "address": "2130 Broadway, New York, NY 10023",
+      "officialUrl": "https://www.beaconhotel.com/",
+      "bookingUrl": "https://www.booking.com/hotel/us/beacon.html",
+      "bookingRating": "8.9 / 10",
+      "roomType": "King Studio with Fully Equipped Kitchenette",
+      "bedSpec": "1 King Bed",
+      "roomSizeSqFt": 320,
+      "roomSizeNote": "Massive 320 sq ft UWS apartment-style studio w/ kitchenette!",
+      "privateBathVerified": true,
+      "resortFeePerNight": 0,
+      "nearestSubways": "1/2/3 72nd St Express (2 min walk) · B/C 72nd St (6 min)",
+      "michelinAccess1Hr": {
+        "maxMinutes": 35,
+        "summary": "AMNH/Central Park/Lincoln Center 5–10 min walk · Per Se 8 min · Midtown/Flatiron 12–18 min · FiDi 22 min (2/3 express) · Williamsburg 35 min"
+      },
+      "recommendedWindowQuote": {
+        "window": "Feb 22–Mar 1, 2027 (7 nights)",
+        "nonRefUsd": 1590.00,
+        "freeCancelUsd": null,
+        "taxBasis": "Partner Offer $1,590 + $259.07 NYC taxes = $1,849.07 ALL-IN ($0 resort fee!)",
+        "estAllInFreeCancelUsd": null
+      },
+      "quotes": [
+        { "window": "Feb 15–22, 2027", "nights": 7, "room": "King Studio (320 ft²)", "amountUsd": 1805.47, "taxBasis": "ALL-IN Verified ($1,552 + $253.47 taxes; $0 resort fee)", "rateType": "Partner Offer ($1,745.92 pre-tax direct)" },
+        { "window": "Feb 22–Mar 1, 2027", "nights": 7, "room": "King Studio (320 ft²)", "amountUsd": 1849.07, "taxBasis": "ALL-IN Verified ($1,590 + $259.07 taxes; $0 resort fee)", "rateType": "Partner Offer ($1,745.92 pre-tax direct)" }
+      ],
+      "pros": [
+        "320 sq ft King Studio with real kitchenette (save $300+ on breakfasts/coffee right across from Trader Joe's & Fairway!).",
+        "Official 'No Facility / Resort Fees' guarantee and 8.9/10 guest rating.",
+        "Steps from Central Park, AMNH, Beacon Theatre & 2/3 Express subway."
+      ],
+      "cons": [
+        "Longer ride (~35 min) to Brooklyn/Williamsburg compared to Midtown or FiDi.",
+        "~$500 more all-in than Artezen/Arlo Midtown."
+      ],
+      "verdict": "Unbeatable for couples who want true apartment space (320 sq ft + kitchenette), calm UWS charm, and zero junk fees."
+    },
+    {
+      "id": "arlo-williamsburg",
+      "name": "Arlo Williamsburg (formerly The Williamsburg Hotel)",
+      "tier": "brooklyn-boutique",
+      "tierLabel": "Brooklyn Boutique Comparison",
+      "neighborhood": "Williamsburg",
+      "borough": "Brooklyn",
+      "address": "96 Wythe Ave, Brooklyn, NY 11249",
+      "officialUrl": "https://arlohotels.com/williamsburg/faqs/",
+      "bookingUrl": "https://www.booking.com/hotel/us/the-williamsburg.html",
+      "bookingRating": "8.3 / 10",
+      "roomType": "Queen Room (ADA 215 ft²)",
+      "bedSpec": "1 Queen Bed",
+      "roomSizeSqFt": 215,
+      "roomSizeNote": "215 sq ft floor-to-ceiling loft styling",
+      "privateBathVerified": true,
+      "resortFeePerNight": 37,
+      "nearestSubways": "L Bedford Ave (5 min walk) · G Nassau Ave (7 min)",
+      "michelinAccess1Hr": {
+        "maxMinutes": 35,
+        "summary": "Laser Wolf directly across the street! · Aska/Four Horsemen 8–12 min walk · Villages/Flatiron 15–20 min via L · Midtown/FiDi 25–35 min"
+      },
+      "recommendedWindowQuote": {
+        "window": "Feb 22–Mar 1, 2027 (7 nights)",
+        "nonRefUsd": 2235.57,
+        "freeCancelUsd": 2348.88,
+        "taxBasis": "ALL-IN Tax-Inclusive USD (Booking.com DE quote; includes all taxes & fees)",
+        "estAllInFreeCancelUsd": 2349
+      },
+      "quotes": [
+        { "window": "Feb 22–Mar 1, 2027", "nights": 7, "room": "Queen Room (215 ft²)", "amountUsd": 2235.57, "taxBasis": "ALL-IN Tax-Inclusive USD", "rateType": "Non-Ref ($2,348.88 all-in free cancel)" }
+      ],
+      "pros": [
+        "Literally across the street from Laser Wolf rooftop & 10 min walk to Aska (2★) & The Four Horsemen (1★).",
+        "Stylish Williamsburg dining/coffee neighborhood."
+      ],
+      "cons": [
+        "Surprise finding: Brooklyn costs ~$800–$1,000 MORE all-in than top Manhattan hotels in Feb 2027!",
+        "Requires L train into Manhattan for ~80% of museums, Broadway & Manhattan Michelin spots."
+      ],
+      "verdict": "Fun vibe, but poor winter value vs. Manhattan — stay in Manhattan for ~$1,000 less and ride the L train ($3!) to Williamsburg for 1–2 dinners."
+    },
+    {
+      "id": "park-hyatt-ny",
+      "name": "Park Hyatt New York",
+      "tier": "luxury-benchmark",
+      "tierLabel": "5-Star Luxury Ceiling Benchmark",
+      "neighborhood": "Midtown West / Billionaires' Row",
+      "borough": "Manhattan",
+      "address": "153 W 57th St, New York, NY 10019",
+      "officialUrl": "https://www.hyatt.com/park-hyatt/nycph-park-hyatt-new-york/hotel-info",
+      "bookingUrl": "https://www.booking.com/hotel/us/park-hyatt-new-york.html",
+      "bookingRating": "9.0 / 10",
+      "roomType": "1 King Bed (500 ft² Flagship Suite-Scale Room)",
+      "bedSpec": "1 King Bed",
+      "roomSizeSqFt": 500,
+      "roomSizeNote": "500 sq ft marble-bath 5-star standard room + saltwater indoor lap pool!",
+      "privateBathVerified": true,
+      "resortFeePerNight": 0,
+      "nearestSubways": "F 57th St (1 min) · N/Q/R/W 57th St–7th Ave (2 min) · A/B/C/D/1 Columbus Circle (4 min)",
+      "michelinAccess1Hr": {
+        "maxMinutes": 28,
+        "summary": "Carnegie Hall across street · Central Park/Per Se/Le Bernardin/The Modern 4–9 min walk · Flatiron/FiDi/Brooklyn 15–28 min"
+      },
+      "recommendedWindowQuote": {
+        "window": "Feb 22–Mar 1, 2027 (7 nights)",
+        "nonRefUsd": 8190.00,
+        "freeCancelUsd": null,
+        "taxBasis": "Pre-tax USD (excl. 14.75% + $8/nt NYC taxes; ~$9,454 est. all-in)",
+        "estAllInFreeCancelUsd": null
+      },
+      "quotes": [
+        { "window": "Feb 22–Mar 1, 2027", "nights": 7, "room": "1 King Bed (500 ft²)", "amountUsd": 8190.00, "taxBasis": "Pre-tax (excl. 14.75% + $8/nt taxes)", "rateType": "Non-Refundable Benchmark" }
+      ],
+      "pros": [
+        "Gold-standard 5★ Manhattan flagship with 25th-floor Spa Nalai & heated saltwater pool overlooking Midtown.",
+        "Steps from Central Park, Per Se (3★), Le Bernardin (3★), and Carnegie Hall."
+      ],
+      "cons": [
+        "$8,190 pre-tax (~$9,454 all-in) for 7 nights — included solely as an ultra-luxury benchmark."
+      ],
+      "verdict": "Included as the 5-star ceiling benchmark (~6.5x Artezen/Cambria). Unless burning World of Hyatt points, invest that $7,500 savings into 3-Michelin-star meals!"
+    }
+  ]
+}

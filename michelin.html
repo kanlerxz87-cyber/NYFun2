@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michelin Guide NYC — NYFun2 Couples Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">Official Live Michelin Guide NYC · Verified Nov 25, 2026</div>
+      <h1>Michelin Guide NYC: Complete Counts, Subway Clusters &amp; 27 Curated Restaurants</h1>
+      <p>
+        Every restaurant below distinguishes <strong>Michelin-Starred</strong> (3★ / 2★ / 1★) from <strong>Listed Non-Starred</strong> (Bib Gourmand &amp; Selected), links directly to official websites and <code>guide.michelin.com</code>, displays exact <strong>2-adult costs</strong> from official menus (or explicitly flags unverified prices as blank), and includes real YouTube, TikTok &amp; Instagram reviews.
+      </p>
+    </section>
+
+    <section class="kpi-grid" id="michelin-kpis"></section>
+
+    <div class="alert alert-warn" id="ceremony-alert"></div>
+
+    <section class="card">
+      <div class="card-header">
+        <div>
+          <h2>Official NYC 5-Borough Michelin Breakdown</h2>
+          <p class="muted small mb-0">Live counts verified Nov 25, 2026 across all 5 NYC boroughs (excludes 22 suburban Westchester listings counted in the 391 NY State total).</p>
+        </div>
+        <a class="link-chip michelin" href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred" target="_blank" rel="noopener">Official All-Starred NYC ↗</a>
+      </div>
+      <div class="table-wrap mb-0">
+        <table style="min-width:640px">
+          <thead>
+            <tr>
+              <th>Borough</th>
+              <th>3★</th>
+              <th>2★</th>
+              <th>1★</th>
+              <th>Total Starred</th>
+              <th>Bib Gourmand (Listed)</th>
+              <th>Selected (Listed)</th>
+              <th>Grand Total</th>
+              <th>Official Page</th>
+            </tr>
+          </thead>
+          <tbody id="borough-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <div>
+          <h2>5 Curated Neighborhood Clusters &amp; MTA Subway Access</h2>
+          <p class="muted small mb-0">All 5 clusters sit well within 30 minutes of our top Manhattan hotels — zero need for long cross-city rides.</p>
+        </div>
+      </div>
+      <div class="grid-3 mb-0" id="cluster-cards"></div>
+    </section>
+
+    <section class="section-title">
+      <h2>27 Curated NYC Michelin Restaurants (2-Adult Pricing &amp; Verified Social Reviews)</h2>
+      <span class="result-count" id="result-count">Loading...</span>
+    </section>
+
+    <div class="controls-bar">
+      <input type="search" id="search-input" class="search-input" placeholder="Search restaurant, cuisine, neighborhood, dish..." aria-label="Search Michelin restaurants" />
+      <select id="cluster-select" class="select-input" aria-label="Filter by cluster">
+        <option value="all">All 5 Clusters</option>
+        <option value="midtown">Midtown Manhattan</option>
+        <option value="flatiron-nomad">Flatiron / NoMad / Gramercy</option>
+        <option value="lower-manhattan">Lower Manhattan (FiDi/SoHo/Tribeca)</option>
+        <option value="villages-les">Villages &amp; LES</option>
+        <option value="brooklyn-queens">Williamsburg (BK) &amp; LIC (Queens)</option>
+      </select>
+      <select id="day-select" class="select-input" aria-label="Filter by day open">
+        <option value="all">Open Any Day</option>
+        <option value="Monday">Open Monday</option>
+        <option value="Tuesday">Open Tuesday</option>
+        <option value="Wednesday">Open Wednesday</option>
+        <option value="Sunday">Open Sunday</option>
+      </select>
+      <select id="sort-select" class="select-input" aria-label="Sort restaurants">
+        <option value="tier">Sort: Michelin Tier</option>
+        <option value="cost-asc">Sort: Lowest 2-Adult Cost</option>
+        <option value="cost-desc">Sort: Highest 2-Adult Cost</option>
+        <option value="name">Sort: Name A–Z</option>
+      </select>
+      <div class="pill-group" id="tier-pills">
+        <button class="filter-pill active" data-tier="all">All (27)</button>
+        <button class="filter-pill" data-tier="starred">Starred Only (18)</button>
+        <button class="filter-pill" data-tier="3-star">3★ (5)</button>
+        <button class="filter-pill" data-tier="2-star">2★ (6)</button>
+        <button class="filter-pill" data-tier="1-star">1★ (7)</button>
+        <button class="filter-pill" data-tier="bib-gourmand">Bib Gourmand (5)</button>
+        <button class="filter-pill" data-tier="selected">Selected (4)</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="min-width:210px">Restaurant &amp; Distinction</th>
+            <th style="min-width:170px">Neighborhood &amp; Subway</th>
+            <th style="min-width:210px">Verified Hours &amp; Closures</th>
+            <th style="min-width:220px">2-Adult Cost (Official Menu)</th>
+            <th style="min-width:190px">Booking Drop &amp; Tips</th>
+            <th style="min-width:210px">Official &amp; Social Reviews</th>
+          </tr>
+        </thead>
+        <tbody id="michelin-tbody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    (async function () {
+      const { loadJSON, escapeHTML, tierBadge, socialChips } = window.NYFun2;
+      const [meta, michelin] = await Promise.all([
+        loadJSON('data/meta.json'),
+        loadJSON('data/michelin.json')
+      ]);
+
+      const m = meta.michelinCitySummary;
+      document.getElementById('ceremony-alert').innerHTML =
+        `<strong>Michelin Update Watch:</strong> ${escapeHTML(m.upcomingUpdateAlert)}`;
+
+      document.getElementById('michelin-kpis').innerHTML = [
+        { label: 'NYC 5-Borough Total', value: m.nycFiveBoroughTotal, sub: `vs. ${m.nyStateTotal} NY State (incl. ${m.suburbanWestchesterDelta} Westchester)` },
+        { label: 'Michelin Starred', value: m.starredTotal, sub: `${m.tiers.threeStars} Three-Star · ${m.tiers.twoStars} Two-Star · ${m.tiers.oneStar} One-Star` },
+        { label: 'Bib Gourmand (Listed)', value: m.tiers.bibGourmand, sub: 'Value distinction — Listed, NOT Starred' },
+        { label: 'Michelin Selected (Listed)', value: m.tiers.selected, sub: 'Quality guide listings — NOT Starred' },
+        { label: 'Curated Deep-Dive', value: `${michelin.curatedCount} Spots`, sub: 'All 5×3★ · 6×2★ · 7×1★ · 5 Bib · 4 Selected' }
+      ]
+        .map(
+          (k) => `
+          <div class="kpi-card">
+            <div class="kpi-label">${escapeHTML(k.label)}</div>
+            <div class="kpi-value">${escapeHTML(k.value)}</div>
+            <div class="kpi-sub">${escapeHTML(k.sub)}</div>
+          </div>`
+        )
+        .join('');
+
+      const rows = m.boroughs
+        .map((b) => {
+          const starred = b.threeStars + b.twoStars + b.oneStar;
+          return `
+            <tr>
+              <td><strong>${escapeHTML(b.borough)}</strong></td>
+              <td class="num">${b.threeStars}</td>
+              <td class="num">${b.twoStars}</td>
+              <td class="num">${b.oneStar}</td>
+              <td class="num"><strong>${starred}</strong></td>
+              <td class="num">${b.bibGourmand}</td>
+              <td class="num">${b.selected}</td>
+              <td class="num"><strong>${b.total}</strong></td>
+              <td><a class="link-chip michelin" href="${escapeHTML(b.michelinUrl)}" target="_blank" rel="noopener">Official List ↗</a></td>
+            </tr>`;
+        })
+        .join('');
+      const totalRow = `
+        <tr style="background:#f1eee7;font-weight:700">
+          <td>NYC 5-Borough Total</td>
+          <td class="num">${m.tiers.threeStars}</td>
+          <td class="num">${m.tiers.twoStars}</td>
+          <td class="num">${m.tiers.oneStar}</td>
+          <td class="num">${m.starredTotal}</td>
+          <td class="num">${m.tiers.bibGourmand}</td>
+          <td class="num">${m.tiers.selected}</td>
+          <td class="num">${m.nycFiveBoroughTotal}</td>
+          <td><a class="link-chip michelin" href="${escapeHTML(m.officialSourceUrl)}" target="_blank" rel="noopener">Guide NYC ↗</a></td>
+        </tr>`;
+      document.getElementById('borough-tbody').innerHTML = rows + totalRow;
+
+      document.getElementById('cluster-cards').innerHTML = michelin.clusters
+        .map(
+          (c) => `
+          <div class="slot-box">
+            <div class="slot-label">${escapeHTML(c.borough)} · ${c.curatedCount} Curated Spots</div>
+            <div class="cell-title">${escapeHTML(c.name)}</div>
+            <p class="cell-sub">${escapeHTML(c.highlight)}</p>
+            <div class="cell-sub"><strong>Subways:</strong> ${escapeHTML(c.subways)}</div>
+            <div class="cell-sub mt-1"><strong>From Arlo Midtown:</strong> ${escapeHTML(c.transitFromArloMidtown)}</div>
+            <div class="cell-sub"><strong>From Artezen (FiDi):</strong> ${escapeHTML(c.transitFromArtezen)}</div>
+          </div>`
+        )
+        .join('');
+
+      let activeTier = 'all';
+      const tierOrder = { '3-star': 1, '2-star': 2, '1-star': 3, 'bib-gourmand': 4, 'selected': 5 };
+
+      const searchEl = document.getElementById('search-input');
+      const clusterEl = document.getElementById('cluster-select');
+      const dayEl = document.getElementById('day-select');
+      const sortEl = document.getElementById('sort-select');
+
+      function renderTable() {
+        const q = searchEl.value.trim().toLowerCase();
+        const cluster = clusterEl.value;
+        const day = dayEl.value;
+        const sort = sortEl.value;
+
+        let list = michelin.restaurants.filter((r) => {
+          if (activeTier === 'starred' && !r.isStarred) return false;
+          if (activeTier !== 'all' && activeTier !== 'starred' && r.tier !== activeTier) return false;
+          if (cluster !== 'all' && r.cluster !== cluster) return false;
+          if (day !== 'all' && r.closedDays.includes(day)) return false;
+          if (q) {
+            const hay = `${r.name} ${r.cuisine} ${r.neighborhood} ${r.borough} ${r.costDisplay} ${r.bookingTips}`.toLowerCase();
+            if (!hay.includes(q)) return false;
+          }
+          return true;
+        });
+
+        list.sort((a, b) => {
+          if (sort === 'tier') return (tierOrder[a.tier] - tierOrder[b.tier]) || a.name.localeCompare(b.name);
+          if (sort === 'cost-asc') return (a.cost2AdultsMin ?? 99999) - (b.cost2AdultsMin ?? 99999);
+          if (sort === 'cost-desc') return (b.cost2AdultsMax ?? -1) - (a.cost2AdultsMax ?? -1);
+          return a.name.localeCompare(b.name);
+        });
+
+        document.getElementById('result-count').textContent = `Showing ${list.length} of ${michelin.restaurants.length} curated restaurants`;
+
+        document.getElementById('michelin-tbody').innerHTML = list
+          .map((r) => {
+            const closedBadge = r.closedDays.length
+              ? `<div class="mt-1"><span class="badge badge-unverified">Closed: ${escapeHTML(r.closedDays.join(', '))}</span></div>`
+              : `<div class="mt-1"><span class="badge badge-verified">Open 7 Days</span></div>`;
+            const costBadge = r.costUnverified
+              ? `<span class="badge badge-unverified">Flagged: Blank / Partial Unverified</span>`
+              : `<span class="badge badge-verified">Official Menu Verified</span>`;
+            return `
+              <tr>
+                <td>
+                  <div class="cell-title">${escapeHTML(r.name)}</div>
+                  <div>${tierBadge(r.tier, r.tierLabel)}</div>
+                  <div class="cell-sub mt-1">${escapeHTML(r.cuisine)}</div>
+                </td>
+                <td>
+                  <strong>${escapeHTML(r.neighborhood)}</strong>
+                  <div class="cell-sub">${escapeHTML(r.borough)} · ${escapeHTML(r.address)}</div>
+                  <div class="cell-sub mt-1"><strong>MTA:</strong> ${escapeHTML(r.nearestSubway)}</div>
+                </td>
+                <td>
+                  <div class="cell-sub" style="color:var(--ink)">${escapeHTML(r.hours)}</div>
+                  ${closedBadge}
+                </td>
+                <td>
+                  <div class="num">${escapeHTML(r.costDisplay)}</div>
+                  <div class="mt-1">${costBadge}</div>
+                  <div class="cell-sub mt-1">${escapeHTML(r.costBasis)}</div>
+                </td>
+                <td>
+                  <div class="cell-sub" style="color:var(--ink)"><strong>Drop:</strong> ${escapeHTML(r.bookingWindow)}</div>
+                  <div class="cell-sub mt-1">${escapeHTML(r.bookingTips)}</div>
+                </td>
+                <td>
+                  <div class="link-row">
+                    <a class="link-chip official" href="${escapeHTML(r.officialUrl)}" target="_blank" rel="noopener">Official Site ↗</a>
+                    <a class="link-chip michelin" href="${escapeHTML(r.michelinUrl)}" target="_blank" rel="noopener">Michelin ↗</a>
+                  </div>
+                  ${socialChips(r.reviewLinks)}
+                </td>
+              </tr>`;
+          })
+          .join('');
+      }
+
+      document.querySelectorAll('#tier-pills .filter-pill').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#tier-pills .filter-pill').forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeTier = btn.dataset.tier;
+          renderTable();
+        });
+      });
+
+      [searchEl, clusterEl, dayEl, sortEl].forEach((el) => el.addEventListener('input', renderTable));
+      renderTable();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+{
+  "verifiedDate": "2026-11-25",
+  "budgetScenarios": [
+    {
+      "id": "smart-foodie",
+      "name": "Smart Foodie Couple (7 Nights)",
+      "tagline": "Boutique Manhattan base + 1×1★ + 1×2★ Lunch + 3 Bib Gourmands + Top Attractions",
+      "hotel": "Artezen Hotel (Deluxe Queen Free-Cancel, Feb 22–Mar 1 — est. all-in)",
+      "hotelUsd": 1335,
+      "transitUsd": 70,
+      "michelinDiningUsd": 890,
+      "michelinDiningDetail": "The Modern 3-Course Lunch ($230) + COTE Butcher's Feast ($168) + Coqodaq ($104) + Katz's ($78) + Tonchin Lunch ($56) + Bungalow ($125) + est. ~28% tax/tip buffer on casual meals",
+      "activitiesUsd": 350,
+      "activitiesDetail": "SUMMIT ($91) + The Met ($60) + MoMA ($60) + Statue City Cruises ($52) + Wollman Off-Peak ($56) + Dizzy's Late Night ($30) + Free Walks/Ferry/Grand Central/NYPL",
+      "casualMealsCoffeeUsd": 490,
+      "estTotalUsd": 3135,
+      "perPersonUsd": 1568,
+      "note": "Excludes flights, airport transfers & alcohol pairings. Add ~$250–$400 for 20% tip + 8.875% NYC sales tax on Michelin dining."
+    },
+    {
+      "id": "classic-michelin",
+      "name": "Classic Michelin & Broadway Splurge (7 Nights)",
+      "tagline": "Spacious 240 ft² Chelsea King ($0 resort fee) + 1×3★ Lunch + 2×2★/1★ + Broadway + Skyline",
+      "hotel": "Cambria Hotel Chelsea (King 240 ft², Feb 22–Mar 1 ALL-IN Free-Cancel)",
+      "hotelUsd": 1522,
+      "transitUsd": 70,
+      "michelinDiningUsd": 1680,
+      "michelinDiningDetail": "Le Bernardin 3★ Lunch ($284) + Saga 2★ 6-Course ($430) + COTE 1★ ($168) + Semma 1★ ($170) + Le Coucou Lunch ($162) + Coqodaq ($104) + Katz's ($80) + ~29% tax/tip included in scenario estimate (~$282)",
+      "activitiesUsd": 565,
+      "activitiesDetail": "TKTS Broadway ($200) + SUMMIT ($91) + The Met ($60) + MoMA ($60) + 9/11 Museum ($72) + Statue Cruises ($52) + Dizzy's Late Night ($30)",
+      "casualMealsCoffeeUsd": 560,
+      "estTotalUsd": 4397,
+      "perPersonUsd": 2199,
+      "note": "Balanced bucket-list NYC week covering 3★, 2★, 1★, Bib Gourmand & Broadway without paying March hotel surge prices."
+    },
+    {
+      "id": "all-out-tasting",
+      "name": "Ultimate Culinary Bucket List (7 Nights)",
+      "tagline": "Hotel Beacon 320 ft² King Studio + Two 3★ + Two 2★ + Prime Broadway & Jazz",
+      "hotel": "Hotel Beacon UWS (320 ft² King Studio w/ Kitchenette, Feb 22–Mar 1 ALL-IN)",
+      "hotelUsd": 1849,
+      "transitUsd": 70,
+      "michelinDiningUsd": 3790,
+      "michelinDiningDetail": "Per Se 3★ ($850) + Jungsik 3★ ($670) + Atomix 2★ Counter ($848) + Gabriel Kreuther Pre-Theater ($310) + Gramercy Tavern ($356) + COTE ($168) + ~20–29% tax/tip allowance (~$588)",
+      "activitiesUsd": 760,
+      "activitiesDetail": "Prime Broadway ($260) + SUMMIT Ascent ($135) + Top of the Rock ($110) + The Met ($60) + MoMA ($60) + AMNH ($74) + Dizzy's Main Set ($90)",
+      "casualMealsCoffeeUsd": 450,
+      "estTotalUsd": 6919,
+      "perPersonUsd": 3460,
+      "note": "Still saves ~$7,500+ vs. Park Hyatt NY ($9,454 all-in room alone) — letting the entire luxury budget go into world-class dining!"
+    }
+  ],
+  "plans": [
+    {
+      "id": "recommended-feb22-mar1",
+      "title": "Recommended Core Plan: Mon Feb 22 – Mon Mar 1, 2027 (7 Nights)",
+      "subtitle": "Lowest surge-free hotel week · Catches Bryant Park Winter Village before Feb 28 close · Off-Peak Wollman Rink · Zero backtracking",
+      "baseHotelRecommendation": "Artezen Hotel (FiDi — $1,127 pre-tax free-cancel) OR Cambria Hotel Chelsea ($1,364–$1,522 ALL-IN, $0 resort fee)",
+      "days": [
+        {
+          "day": 1,
+          "date": "Mon Feb 22, 2027",
+          "zone": "Midtown East & Bryant Park Winter Village",
+          "theme": "Arrival, 42nd St Icons & Warm-Up Ramen",
+          "morning": "Arrive NYC & drop bags at hotel. Tap your contactless card/phone for OMNY ($3/ride — starts your 7-day $35/pp cap!).",
+          "afternoon": "Explore Grand Central Terminal (FREE) + NYPL Schwarzman Building (open Mon 10 AM–6 PM; FREE) → Skate or grab hot chocolate at Bank of America Winter Village at Bryant Park (CLOSES Sun Feb 28!).",
+          "evening": "Sunset at SUMMIT One Vanderbilt (indoor climate-controlled!) → Cozy Michelin Bib Gourmand dinner at Tonchin NYC ($56–$95 for 2) OR 2★ Pre-Theater at Gabriel Kreuther ($310).",
+          "transitNote": "All stops sit along a single 4-block 42nd Street corridor (4/5/6/7/B/D/F/M).",
+          "estActivityCost2": 91
+        },
+        {
+          "day": 2,
+          "date": "Tue Feb 23, 2027",
+          "zone": "Lower Manhattan & New York Harbor",
+          "theme": "Lady Liberty, Brooklyn Bridge & FiDi 60th-Floor Views",
+          "morning": "9:30 AM Statue City Cruises ferry from Battery Park to Statue of Liberty & Ellis Island ($52/couple all-in; avoid street touts!).",
+          "afternoon": "Walk across the Brooklyn Bridge to DUMBO waterfront & Time Out Market (FREE) → Return via subway or ride the FREE Staten Island Ferry at dusk!",
+          "evening": "60th-floor sunset cocktails/dinner at Manhatta Bar (walk-in, ~$95–$150) OR 1★ Crown Shy ($140–$220) — OR splurge on 2★ Saga (note: Saga opens Wed–Sun, so swap Saga to Wed/Thu if chosen!).",
+          "transitNote": "100% clustered in Lower Manhattan / FiDi (walkable from Artezen Hotel; 15 min on 1/2/3/4/5 from Midtown/Chelsea).",
+          "estActivityCost2": 52
+        },
+        {
+          "day": 3,
+          "date": "Wed Feb 24, 2027",
+          "zone": "Midtown West (MoMA, Rockefeller & Broadway)",
+          "theme": "Modern Art, 2★ Sculpture Garden Lunch & Broadway Night",
+          "morning": "10:30 AM opening at MoMA ($60/couple; Note: The Met is CLOSED Wednesdays, making Wed the ideal MoMA day!).",
+          "afternoon": "12:30 PM 2★ Michelin 3-course lunch at The Modern overlooking MoMA's Sculpture Garden ($230/couple) → Stroll Rockefeller Center & Top of the Rock ($84–$142) OR skip deck if doing Edge/SUMMIT.",
+          "evening": "Hit TKTS Times Square (opens Wed 11 AM for matinee/evening!) or Lincoln Center booth for 30–50% off Broadway show ($120–$260 for 2) → Post-show nightcap!",
+          "transitNote": "53rd St → 50th St → 47th St — completely walkable 10-block Midtown stretch!",
+          "estActivityCost2": 260
+        },
+        {
+          "day": 4,
+          "date": "Thu Feb 25, 2027",
+          "zone": "Chelsea, Hudson Yards & Flatiron Michelin Hub",
+          "theme": "Elevated Park, Food Hall & Korea-Meets-NYC Fine Dining",
+          "morning": "10:00 AM Advance Saver slot at Edge Hudson Yards ($72/couple when booked 14+ days out) → Walk south along The High Line (winter hours 7 AM–7 PM; FREE).",
+          "afternoon": "Warm up indoors at Chelsea Market (FREE entry; Los Tacos No. 1 / pastries ~$35) → Browse Flatiron District & Madison Square Park.",
+          "evening": "1★ Michelin Korean BBQ date night at COTE Butcher's Feast® ($168/couple) OR splurge on 2★ Atomix ($628–$848) or 3★ Eleven Madison Park ($450–$770) — all within 8 blocks!",
+          "transitNote": "7 train to Hudson Yards → walk south on High Line → crosstown to Flatiron (zero wasted rides!).",
+          "estActivityCost2": 72
+        },
+        {
+          "day": 5,
+          "date": "Fri Feb 26, 2027",
+          "zone": "Central Park, Upper East Side & Midtown 3★ Flagship",
+          "theme": "3★ Weekday Lunch Deal + Extended Friday Evening at The Met",
+          "morning": "Off-Peak/Peak skate at Wollman Rink in Central Park (10 AM opening; $56–$80/couple incl. skates) + walk Gapstow Bridge & Bethesda Terrace (FREE).",
+          "afternoon": "12:30 PM 3★ Michelin 3-course weekday lunch at Le Bernardin ($284/couple — NYC's ultimate 3-star value!) → Head up 5th Ave to The Met.",
+          "evening": "Extended Friday evening at The Met (open till 9:00 PM! $60/couple; sunset at Temple of Dendur + Great Hall cocktails) → Late Night Jazz at Dizzy's Club (10:45 PM set, $30/couple cover!).",
+          "transitNote": "Central Park South → W 51st St → 4/5/6 or M1–M4 bus up Fifth Ave → Columbus Circle.",
+          "estActivityCost2": 170
+        },
+        {
+          "day": 6,
+          "date": "Sat Feb 27, 2027",
+          "zone": "SoHo, West Village & Lower East Side",
+          "theme": "Cast-Iron Stroll, Iconic Deli & Village Showstopper",
+          "morning": "Brunch/early pastrami feast at Katz's Delicatessen (Bib Gourmand, open 24 hrs Fri–Sun! $65–$90/couple) before peak lunch lines.",
+          "afternoon": "Explore SoHo cast-iron galleries & Greenwich Village brownstones → Optional 1★ Le Coucou 2-course lunch ($162) if skipping Katz's morning.",
+          "evening": "1★ Semma ($130–$210, set alarm 15 days out 9 AM EST!) OR Bib Gourmand Bungalow ($100–$150) OR Selected icons Carbone ($175–$320) / Minetta Tavern ($120–$220).",
+          "transitNote": "Walkable Downtown triangle (LES → SoHo → West Village) served by F/M, 6, A/C/E, 1.",
+          "estActivityCost2": 0
+        },
+        {
+          "day": 7,
+          "date": "Sun Feb 28, 2027",
+          "zone": "Williamsburg (Brooklyn) OR FiDi 9/11 + Farewell Dinner",
+          "theme": "9/11 Memorial Reflection & Brooklyn Skyline Farewell",
+          "morning": "9:30 AM 9/11 Memorial & Museum (open Sun 9 AM–7 PM; $72/couple, warm indoor museum) + Calatrava Oculus.",
+          "afternoon": "Take the L train across the East River to Williamsburg, Brooklyn — explore Bedford Ave, vintage boutiques & waterfront skyline views (or AMNH on UWS, $74/couple).",
+          "evening": "Farewell dinner: Brooklyn's 2★ Aska ($750) OR 1★ The Four Horsemen (unverified à la carte) OR Laser Wolf heated rooftop skyline dinner — OR Manhattan farewell at 2★ Saga (63rd fl, $430) / 3★ Jungsik ($670) / Bib Coqodaq ($104)!",
+          "transitNote": "Last day of your 7-day $35/pp OMNY cap — every subway ride today is effectively FREE!",
+          "estActivityCost2": 72
+        }
+      ]
+    },
+    {
+      "id": "lny-feb15-feb22",
+      "title": "Alternative Plan: Mon Feb 15 – Mon Feb 22, 2027 (7 Nights)",
+      "subtitle": "Captures the 29th Chinatown Lunar New Year Parade (Sun Feb 21) + Lowest Arlo SoHo ($1,021) & Club Quarters ($1,113) rates",
+      "baseHotelRecommendation": "Arlo SoHo ($1,021 pre-tax BF) OR Club Quarters Grand Central ($1,113 pre-tax BF) OR Artezen ($1,168 free-cancel)",
+      "days": [
+        {
+          "day": 1,
+          "date": "Mon Feb 15, 2027 (Presidents' Day)",
+          "zone": "Midtown / Central Park (Holiday-Smart)",
+          "theme": "Dodge Holiday Crowds with Open Landmarks & Cozy Dinner",
+          "morning": "Arrive & check in. Note: NYPL Schwarzman Building typically closes on Presidents' Day & Wollman Rink runs holiday Peak pricing — save both for later in the week!",
+          "afternoon": "Walk Central Park (FREE) & explore Grand Central Terminal (open 365 days) → Afternoon reservation at MoMA ($60, open daily).",
+          "evening": "Dinner at COTE 1★ ($168) or Coqodaq Bib Gourmand ($104) — both open Mondays (unlike Jungsik, Sushi Sho, Atomix, Saga, Aska & Bungalow!).",
+          "transitNote": "Crucial Monday scheduling rule: 6 of our 27 curated Michelin spots close Mondays — pick COTE, Le Bernardin, EMP, The Modern, Gramercy Tavern, or Coqodaq!",
+          "estActivityCost2": 60
+        },
+        {
+          "day": 2,
+          "date": "Tue Feb 16, 2027",
+          "zone": "42nd St Corridor & Bryant Park",
+          "theme": "NYPL Reading Room + Bryant Park Ice + SUMMIT",
+          "morning": "10:00 AM NYPL Rose Main Reading Room public visiting hour (FREE) → Ice skate Bryant Park Winter Village ($37–$129 rental or $0 own skates).",
+          "afternoon": "SUMMIT One Vanderbilt ($91+) + lunch at Tonchin NYC Bib Gourmand ($56 weekday lunch set!).",
+          "evening": "3★ Jungsik (reopens Tuesdays! $670) OR 2★ Aquavit ($390) OR Broadway via TKTS (Tue 3 PM booth opening).",
+          "transitNote": "Midtown East corridor (4/5/6/7/B/D/F/M).",
+          "estActivityCost2": 130
+        },
+        {
+          "day": 3,
+          "date": "Wed Feb 17, 2027",
+          "zone": "Financial District & Harbor",
+          "theme": "Statue of Liberty, 9/11 Museum & 63rd-Floor Dinner",
+          "morning": "Statue City Cruises ($52 all-in) to Liberty & Ellis Islands (morning slot before 3:30 PM winter cutoff).",
+          "afternoon": "9/11 Memorial & Museum ($72; open Wed–Mon!) + Oculus.",
+          "evening": "2★ Saga on the 63rd floor (opens Wed–Sun! $430) OR 1★ Crown Shy ($140–$220) + Manhatta 60th-floor bar nightcap.",
+          "transitNote": "All Lower Manhattan / FiDi walkable.",
+          "estActivityCost2": 124
+        },
+        {
+          "day": 4,
+          "date": "Thu Feb 18, 2027",
+          "zone": "Chelsea, Hudson Yards & West Village",
+          "theme": "Edge Deck, High Line, Chelsea Market & Village Legend",
+          "morning": "Edge Hudson Yards ($72 Advance Saver) → High Line winter walk (FREE) → Chelsea Market lunch.",
+          "afternoon": "West Village brownstone stroll & cozy coffee stops.",
+          "evening": "1★ Semma ($130–$210) OR Minetta Tavern ($120–$220) OR Carbone ($175–$320).",
+          "transitNote": "7 train to Hudson Yards → walk south into Chelsea & West Village.",
+          "estActivityCost2": 72
+        },
+        {
+          "day": 5,
+          "date": "Fri Feb 19, 2027",
+          "zone": "Upper East Side & Midtown Flagships",
+          "theme": "3★ Le Bernardin Lunch + Friday Night at The Met + Jazz",
+          "morning": "Stroll 5th Ave & Central Park South (FREE) + Top of the Rock ($84–$142).",
+          "afternoon": "3★ Le Bernardin weekday lunch ($284/couple) → Head uptown to The Met.",
+          "evening": "The Met extended Friday hours until 9:00 PM ($60) → Dizzy's Club Late Night Jazz (10:45 PM, $30).",
+          "transitNote": "Midtown → 5th Ave UES → Columbus Circle.",
+          "estActivityCost2": 174
+        },
+        {
+          "day": 6,
+          "date": "Sat Feb 20, 2027",
+          "zone": "Brooklyn Bridge, DUMBO & Williamsburg",
+          "theme": "Brooklyn Bridge Crossing, DUMBO & Brooklyn Michelin",
+          "morning": "Walk Brooklyn Bridge to DUMBO & Brooklyn Bridge Park (FREE) + Time Out Market coffee/lunch.",
+          "afternoon": "Ferry or subway north to Williamsburg for shopping & craft coffee (optional: Queens' 1★ Meju 1 stop from Grand Central, $470–$564!).",
+          "evening": "Williamsburg dinner at 2★ Aska ($750) OR 1★ The Four Horsemen OR Laser Wolf heated skyline roof.",
+          "transitNote": "Brooklyn Bridge → L/G or NYC Ferry to Williamsburg.",
+          "estActivityCost2": 0
+        },
+        {
+          "day": 7,
+          "date": "Sun Feb 21, 2027 — PARADE DAY!",
+          "zone": "Chinatown, SoHo & Lower East Side",
+          "theme": "29th Chinatown Lunar New Year Parade & Iconic NYC Finale",
+          "morning": "Early pastrami & matzo ball soup at Katz's Deli ($65–$90) OR 1★ Le Coucou SoHo lunch ($162).",
+          "afternoon": "1:00 PM — 29th Chinatown Lunar New Year Parade & Festival (FREE! Mott St & Canal St → Sara D. Roosevelt Park; dragon/lion dances, confetti & street food!).",
+          "evening": "Farewell dinner at Bib Gourmand Dhamaka ($110–$170) or Bungalow ($100–$150) — OR Sunday-open 3★ Per Se ($850) / 3★ Eleven Madison Park ($450–$770)!",
+          "transitNote": "Chinatown/SoHo/LES completely walkable (5–10 min from Arlo SoHo or Artezen!).",
+          "estActivityCost2": 0
+        }
+      ]
+    }
+  ]
+}

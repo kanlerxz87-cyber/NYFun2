@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NYC Winter &amp; Early-Spring Activities — NYFun2 Couples Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">18 Verified NYC Activities · Official 2026–2027 Prices &amp; Hours</div>
+      <h1>NYC Winter &amp; Early-Spring Activities (Feb 15 – Mar 23, 2027)</h1>
+      <p>
+        Every attraction below has been verified directly against official attraction websites with <strong>total cost for 2 adults</strong>, winter/holiday operating exceptions (including Presidents' Day Mon Feb 15), subway access, and real YouTube &amp; TikTok walkthrough reviews.
+      </p>
+    </section>
+
+    <div class="alert alert-danger" id="seasonal-alert"></div>
+
+    <section class="kpi-grid" id="act-kpis"></section>
+
+    <section class="section-title">
+      <h2>18 Verified Activities &amp; Experiences</h2>
+      <span class="result-count" id="act-count">Loading...</span>
+    </section>
+
+    <div class="controls-bar">
+      <input type="search" id="act-search" class="search-input" placeholder="Search museum, observatory, free, skating, parade..." aria-label="Search activities" />
+      <select id="act-sort" class="select-input" aria-label="Sort activities">
+        <option value="default">Sort: Recommended Mix</option>
+        <option value="cost-asc">Sort: Free / Lowest Cost First</option>
+        <option value="cost-desc">Sort: Highest Cost First</option>
+        <option value="name">Sort: Name A–Z</option>
+      </select>
+      <div class="pill-group" id="act-pills">
+        <button class="filter-pill active" data-cat="all">All (18)</button>
+        <button class="filter-pill" data-cat="free">Free ($0)</button>
+        <button class="filter-pill" data-cat="Museum">Museums</button>
+        <button class="filter-pill" data-cat="Observation Deck">Observation Decks</button>
+        <button class="filter-pill" data-cat="Winter Seasonal">Winter Skating</button>
+        <button class="filter-pill" data-cat="Harbor & Ferry">Harbor &amp; Ferry</button>
+        <button class="filter-pill" data-cat="Walk & Architecture">Walks &amp; Icons</button>
+        <button class="filter-pill" data-cat="Nightlife & Theater">Broadway &amp; Jazz</button>
+        <button class="filter-pill" data-cat="Special Event 2027">2027 Event</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="min-width:210px">Activity &amp; Category</th>
+            <th style="min-width:170px">Neighborhood &amp; Transit</th>
+            <th style="min-width:225px">Verified Hours &amp; 2027 Seasonal Exceptions</th>
+            <th style="min-width:210px">Total Cost for 2 Adults</th>
+            <th style="min-width:190px">Couple Insider Tips</th>
+            <th style="min-width:205px">Official &amp; Social Reviews</th>
+          </tr>
+        </thead>
+        <tbody id="act-tbody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    (async function () {
+      const { loadJSON, escapeHTML, socialChips } = window.NYFun2;
+      const data = await loadJSON('data/activities.json');
+
+      document.getElementById('seasonal-alert').innerHTML =
+        `<strong>2027 Seasonal Deadlines:</strong> ${escapeHTML(data.seasonalHeadline)}`;
+
+      const freeCount = data.activities.filter((a) => a.cost2AdultsMin === 0).length;
+      const deckCount = data.activities.filter((a) => a.category === 'Observation Deck').length;
+      const museumCount = data.activities.filter((a) => a.category === 'Museum').length;
+
+      document.getElementById('act-kpis').innerHTML = [
+        { label: 'Verified Activities', value: data.count, sub: '100% linked to official attraction/NYC sites' },
+        { label: 'Free / $0 Entry Options', value: freeCount, sub: 'Staten Island Ferry, Central Park, High Line, Brooklyn Bridge, NYPL, Grand Central, LNY Parade & more' },
+        { label: 'Observation Decks Compared', value: deckCount, sub: 'Edge $72 Adv · Top of Rock $84+ · SUMMIT $91+ · ESB $96+' },
+        { label: 'Major Museums Audited', value: museumCount, sub: 'The Met $60 · MoMA $60 · 9/11 $72 · AMNH $74 (2026–27 rate!)' }
+      ]
+        .map(
+          (k) => `
+          <div class="kpi-card">
+            <div class="kpi-label">${escapeHTML(k.label)}</div>
+            <div class="kpi-value">${escapeHTML(k.value)}</div>
+            <div class="kpi-sub">${escapeHTML(k.sub)}</div>
+          </div>`
+        )
+        .join('');
+
+      let activeCat = 'all';
+      const searchEl = document.getElementById('act-search');
+      const sortEl = document.getElementById('act-sort');
+
+      function renderActivities() {
+        const q = searchEl.value.trim().toLowerCase();
+        const sort = sortEl.value;
+
+        let list = data.activities.filter((a) => {
+          if (activeCat === 'free' && a.cost2AdultsMin !== 0) return false;
+          if (activeCat !== 'all' && activeCat !== 'free' && a.category !== activeCat) return false;
+          if (q) {
+            const hay = `${a.name} ${a.category} ${a.neighborhood} ${a.hours} ${a.seasonalAlert} ${a.costDisplay} ${a.bookingTip}`.toLowerCase();
+            if (!hay.includes(q)) return false;
+          }
+          return true;
+        });
+
+        if (sort === 'cost-asc') list.sort((a, b) => a.cost2AdultsMin - b.cost2AdultsMin);
+        else if (sort === 'cost-desc') list.sort((a, b) => b.cost2AdultsMax - a.cost2AdultsMax);
+        else if (sort === 'name') list.sort((a, b) => a.name.localeCompare(b.name));
+
+        document.getElementById('act-count').textContent = `Showing ${list.length} of ${data.activities.length} verified activities`;
+
+        document.getElementById('act-tbody').innerHTML = list
+          .map((a) => {
+            const isFree = a.cost2AdultsMin === 0 && a.cost2AdultsMax === 0;
+            const catBadge = a.category === 'Special Event 2027' || a.category === 'Winter Seasonal' ? 'badge-critical' : 'badge-info';
+            return `
+              <tr>
+                <td>
+                  <div class="cell-title">${escapeHTML(a.name)}</div>
+                  <div class="link-row">
+                    <span class="badge ${catBadge}">${escapeHTML(a.category)}</span>
+                    ${isFree ? '<span class="badge badge-free">100% FREE</span>' : ''}
+                  </div>
+                  <div class="cell-sub mt-1"><strong>Time Needed:</strong> ${escapeHTML(a.duration)}</div>
+                </td>
+                <td>
+                  <strong>${escapeHTML(a.neighborhood)}</strong>
+                  <div class="cell-sub">${escapeHTML(a.borough)} · ${escapeHTML(a.address)}</div>
+                  <div class="cell-sub mt-1"><strong>MTA:</strong> ${escapeHTML(a.transitFromMidtown)}</div>
+                </td>
+                <td>
+                  <div class="cell-sub" style="color:var(--ink)">${escapeHTML(a.hours)}</div>
+                  <div class="mt-1"><span class="badge badge-unverified">${escapeHTML(a.seasonalAlert)}</span></div>
+                </td>
+                <td>
+                  <div class="num">${escapeHTML(a.costDisplay)}</div>
+                  <div class="cell-sub mt-1">${escapeHTML(a.costBasis)}</div>
+                </td>
+                <td>
+                  <div class="cell-sub" style="color:var(--ink)">${escapeHTML(a.bookingTip)}</div>
+                </td>
+                <td>
+                  <div class="link-row">
+                    <a class="link-chip official" href="${escapeHTML(a.officialUrl)}" target="_blank" rel="noopener">Official Site ↗</a>
+                  </div>
+                  ${socialChips(a.reviewLinks)}
+                </td>
+              </tr>`;
+          })
+          .join('');
+      }
+
+      document.querySelectorAll('#act-pills .filter-pill').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#act-pills .filter-pill').forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeCat = btn.dataset.cat;
+          renderActivities();
+        });
+      });
+
+      [searchEl, sortEl].forEach((el) => el.addEventListener('input', renderActivities));
+      renderActivities();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site &amp; Planning Improvement Suggestions — NYFun2 Couples Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">Next-Iteration Roadmap · UX, Automation &amp; Live 2027 Readiness</div>
+      <h1>Site &amp; Trip-Planning Improvement Suggestions</h1>
+      <p>
+        Concrete, high-leverage upgrades to evolve NYFun2 from a verified research dashboard into an interactive live travel companion before your Feb–Mar 2027 departure.
+      </p>
+    </section>
+
+    <div class="grid-2" id="suggestions-grid"></div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    (async function () {
+      const { loadJSON, escapeHTML } = window.NYFun2;
+      const data = await loadJSON('data/analysis.json');
+
+      document.getElementById('suggestions-grid').innerHTML = data.suggestions
+        .map((s) => {
+          const badgeCls = s.impact === 'High' ? 'badge-critical' : s.impact === 'Medium' ? 'badge-unverified' : 'badge-info';
+          return `
+            <article class="card mb-0">
+              <div class="link-row" style="margin-top:0;margin-bottom:0.55rem">
+                <span class="badge badge-selected">${escapeHTML(s.id)} · ${escapeHTML(s.category)}</span>
+                <span class="badge ${badgeCls}">${escapeHTML(s.impact)} Impact</span>
+              </div>
+              <h3>${escapeHTML(s.title)}</h3>
+              <p class="cell-sub mb-0" style="color:var(--ink-soft);font-size:0.9rem">${escapeHTML(s.detail)}</p>
+            </article>`;
+        })
+        .join('');
+    })();
+  </script>
+</body>
+</html>

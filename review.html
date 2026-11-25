@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flagged for Review &amp; Verification Audit — NYFun2 Couples Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">Zero-Hallucination Audit Ledger · Last Verified Nov 25, 2026</div>
+      <h1>Flagged for Review &amp; Data Integrity Audit</h1>
+      <p>
+        Strict verification policy: whenever a price, square footage, or operating schedule could not be confirmed from an official primary source — or showed a conflict across official pages — we left the field <strong>blank/unverified</strong> rather than guessing, and logged every exception transparently here.
+      </p>
+    </section>
+
+    <section class="kpi-grid" id="audit-kpis"></section>
+
+    <div class="controls-bar">
+      <div class="pill-group" id="audit-pills">
+        <button class="filter-pill active" data-sev="all">All Flagged Items</button>
+        <button class="filter-pill" data-sev="Critical">Critical (Unverified Prices)</button>
+        <button class="filter-pill" data-sev="Warning">Warnings (Discrepancies / Traps)</button>
+        <button class="filter-pill" data-sev="Watch">Watch (2026–27 Upcoming Changes)</button>
+      </div>
+      <span class="result-count" id="audit-count">Loading...</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="min-width:155px">ID &amp; Severity</th>
+            <th style="min-width:190px">Impacted Entity &amp; Field</th>
+            <th style="min-width:150px">Current Status</th>
+            <th style="min-width:270px">Audit Findings &amp; Evidence</th>
+            <th style="min-width:210px">Recommended Verification Action</th>
+          </tr>
+        </thead>
+        <tbody id="audit-tbody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    (async function () {
+      const { loadJSON, escapeHTML } = window.NYFun2;
+      const data = await loadJSON('data/analysis.json');
+      const items = data.flaggedForReview;
+
+      const crit = items.filter((i) => i.severity.startsWith('Critical')).length;
+      const warn = items.filter((i) => i.severity.startsWith('Warning')).length;
+      const watch = items.filter((i) => i.severity.startsWith('Watch')).length;
+
+      document.getElementById('audit-kpis').innerHTML = [
+        { label: 'Total Logged Exceptions', value: items.length, sub: 'Every gap tracked transparently' },
+        { label: 'Critical — Unverified Prices', value: crit, sub: 'Four Horsemen · Laser Wolf · Manhatta Dining Room (left blank!)' },
+        { label: 'Warnings — Discrepancies / Traps', value: warn, sub: 'Aska hours, Artezen sq ft, bed-size traps, tax-basis labels, AC Downtown' },
+        { label: 'Watch — Calendar & Guide Shifts', value: watch, sub: 'Dec 2026 Michelin ceremony, Feb/Mar 2027 closing dates, trip duration' }
+      ]
+        .map(
+          (k) => `
+          <div class="kpi-card">
+            <div class="kpi-label">${escapeHTML(k.label)}</div>
+            <div class="kpi-value">${escapeHTML(k.value)}</div>
+            <div class="kpi-sub">${escapeHTML(k.sub)}</div>
+          </div>`
+        )
+        .join('');
+
+      let activeSev = 'all';
+
+      function renderAudit() {
+        const list = items.filter((i) => activeSev === 'all' || i.severity.startsWith(activeSev));
+        document.getElementById('audit-count').textContent = `Showing ${list.length} of ${items.length} audit items`;
+
+        document.getElementById('audit-tbody').innerHTML = list
+          .map((i) => {
+            const cls = i.severity.startsWith('Critical')
+              ? 'badge-critical'
+              : i.severity.startsWith('Warning')
+              ? 'badge-unverified'
+              : 'badge-info';
+            const srcLink = i.officialSourceChecked && i.officialSourceChecked.startsWith('http')
+              ? `<div class="mt-1"><a class="link-chip official" href="${escapeHTML(i.officialSourceChecked)}" target="_blank" rel="noopener">Official Source Checked ↗</a></div>`
+              : `<div class="cell-sub mt-1">${escapeHTML(i.officialSourceChecked)}</div>`;
+            return `
+              <tr>
+                <td>
+                  <div class="cell-title">${escapeHTML(i.id)}</div>
+                  <span class="badge ${cls}">${escapeHTML(i.severity)}</span>
+                </td>
+                <td>
+                  <strong>${escapeHTML(i.entity)}</strong>
+                  <div class="cell-sub mt-1">Field: ${escapeHTML(i.field)}</div>
+                </td>
+                <td><span class="badge badge-selected">${escapeHTML(i.status)}</span></td>
+                <td>
+                  <div class="cell-sub" style="color:var(--ink)">${escapeHTML(i.detail)}</div>
+                  ${srcLink}
+                </td>
+                <td>
+                  <div class="cell-sub" style="color:var(--ink)">${escapeHTML(i.action)}</div>
+                </td>
+              </tr>`;
+          })
+          .join('');
+      }
+
+      document.querySelectorAll('#audit-pills .filter-pill').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#audit-pills .filter-pill').forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeSev = btn.dataset.sev;
+          renderAudit();
+        });
+      });
+
+      renderAudit();
+    })();
+  </script>
+</body>
+</html>

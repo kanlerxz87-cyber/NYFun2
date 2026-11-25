@@ -1,0 +1,262 @@
+{
+  "verifiedDate": "2026-11-25",
+  "executiveSummary": {
+    "headline": "Visit Mon Feb 22 – Mon Mar 1, 2027 (or Feb 15–22 for Lunar New Year Parade) & Capture Late-Nov 2026 Hotel Deals Before the +47%–91% March Surge",
+    "topRecommendations": [
+      {
+        "category": "Optimal Dates",
+        "recommendation": "Mon Feb 22 – Mon Mar 1, 2027 (7 Nights)",
+        "why": "Beats mid-March hotel rates by $450–$910/week (+47% to +91% surge after Mar 1), avoids Presidents' Day weekend crowds (Feb 13–15), still catches Bryant Park Winter Village before its Feb 28 season close, and unlocks Off-Peak Wollman Rink pricing ($56 vs $80/couple). Runner-up: Feb 15–22 captures the 29th Chinatown Lunar New Year Parade on Sun Feb 21."
+      },
+      {
+        "category": "Best Hotels (Verified Queen/King + Private Bath)",
+        "recommendation": "Artezen Hotel (FiDi) · Cambria Chelsea ($0 Resort Fee) · Arlo Midtown (Lowest BF Rate)",
+        "why": "Artezen (9.2/10, 9 subway lines at Fulton Center, $14/nt fee) offers $1,127 pre-tax Free Cancellation for Feb 22–Mar 1. Cambria Chelsea delivers a 240 sq ft King room with TRUE $0 resort fee for $1,364–$1,522 ALL-IN. Arlo Midtown hits $1,032 pre-tax Black Friday Non-Ref (160 sq ft King). Surprising finding: Brooklyn (Arlo Williamsburg $2,236–$2,349 all-in) costs ~$800–$1,000 MORE than top Manhattan bases!"
+      },
+      {
+        "category": "When to Book",
+        "recommendation": "Act During Nov 25 – Dec 2, 2026 Black Friday Window — OR Lock Free-Cancel Now & Re-Shop 8–14 Days Out",
+        "why": "Booking.com's active 2026 Black Friday deals (26%–41% off) cover stays all the way through Dec 31, 2027. Empire State Building also offers a $46 Flex Anytime Black Friday ticket through Nov 30, 2026 valid for 365 days. If dates aren't locked yet, book Artezen or Cambria Free-Cancel now and re-check ~30 days and 8–14 days out (Hotels.com 2026 HPI shows 8–14 days averages -23%)."
+      },
+      {
+        "category": "Michelin Strategy",
+        "recommendation": "Mix 1–2 Starred Lunches/Value Stars + 1 Splurge + 2–3 Bib Gourmands",
+        "why": "NYC has 369 live 5-borough Michelin listings: 69 Starred (5×3★, 14×2★, 50×1★) + 300 Listed (76 Bib Gourmand, 224 Selected). Smart couple pairings like Le Bernardin 3★ Weekday Lunch ($284), The Modern 2★ Lunch ($230), COTE 1★ Butcher's Feast ($168), and Coqodaq ($104) deliver true starred magic at a fraction of $850–$990 dinner tasting prices."
+      },
+      {
+        "category": "Transit & Total Cost",
+        "recommendation": "Use OMNY Tap-and-Go ($70/Couple 7-Day Cap) — Realistic 7-Night Couple Total: $3,135 to $6,919",
+        "why": "Effective Jan 4, 2026, MTA subway/local bus fare is $3.00 with an automatic $35/person ($70/couple) 7-day rolling OMNY cap (MetroCard sunsetting). Every shortlisted Manhattan hotel puts all 5 Michelin clusters within 3–28 minutes by subway — far under the 1-hour ceiling."
+      }
+    ]
+  },
+  "openQuestions": [
+    {
+      "id": "Q-01",
+      "priority": "P0 — Decision Blocking",
+      "topic": "Exact Trip Duration & Dates Within Feb 15 – Mar 23, 2027",
+      "question": "Are you planning a classic 7-night stay (our analysis baseline), a shorter 4–5 night getaway, or a longer 10–14+ night trip? And do you care about catching the Chinatown Lunar New Year Parade (Sun Feb 21) or Bryant Park Winter Village (closes Feb 28)?",
+      "whyItMatters": "Shifting from late Feb (Feb 15–Mar 1) to mid-March (Mar 15–22) raises verified 7-night Manhattan hotel costs by +47% to +91% (+$450 to +$910) AND misses Bryant Park Winter Village and Wollman Rink (closes Mar 16).",
+      "defaultAssumed": "7 nights, Mon Feb 22 – Mon Mar 1, 2027 (with Feb 15–22 as Lunar New Year alternative)."
+    },
+    {
+      "id": "Q-02",
+      "priority": "P0 — Decision Blocking",
+      "topic": "Total Couple Budget Ceiling (Excl. Flights)",
+      "question": "Which 7-night on-the-ground budget tier feels right: ~$3,000–$3,500 (Smart Foodie), ~$4,200–$4,800 (Classic Michelin + Broadway), or $6,500+ (Multiple 3★ Tasting Menus)?",
+      "whyItMatters": "A single 3★ dinner with wine pairings and tax/tip can reach $1,200–$1,600 for 2 adults — equal to an entire week at Artezen or Arlo Midtown!",
+      "defaultAssumed": "Three transparent scenarios modeled side-by-side ($3,135 / $4,397 / $6,919)."
+    },
+    {
+      "id": "Q-03",
+      "priority": "P0 — Decision Blocking",
+      "topic": "Non-Refundable Black Friday Savings vs. Free Cancellation Flexibility",
+      "question": "Are your Feb 2027 travel dates locked enough to book active Black Friday non-refundable deals right now (Nov 25–Dec 2, saving $450–$550/week at Arlo/Club Quarters), or do you strictly require free cancellation?",
+      "whyItMatters": "If free cancellation is required, Artezen Hotel ($1,127 pre-tax, +$57 premium) and Cambria Chelsea ($1,522 ALL-IN, $0 resort fee) dramatically beat Arlo's +$509 free-cancel penalty.",
+      "defaultAssumed": "Both Non-Refundable and Free-Cancellation prices surfaced side-by-side on Hotels page."
+    },
+    {
+      "id": "Q-04",
+      "priority": "P1 — High Impact",
+      "topic": "Hotel Room Size Comfort vs. Lowest Rate",
+      "question": "For a 7-night winter trip with coats and suitcases, are you happy in a sleek 150–160 sq ft micro-room (Arlo), or do you strongly prefer 206–320 sq ft (Club Quarters, Cambria Chelsea 240 ft², Ace 300 ft², or Hotel Beacon 320 ft² w/ kitchenette)?",
+      "whyItMatters": "Spending ~$200–$300 more total for the week upgrades you from a 160 sq ft micro-room to Cambria Chelsea's 240 sq ft King room with $0 resort fee.",
+      "defaultAssumed": "Shortlist spans 150 ft² to 500 ft² with exact verified room sizes & bed specs."
+    },
+    {
+      "id": "Q-05",
+      "priority": "P1 — High Impact",
+      "topic": "Dietary Preferences, Allergies & Alcohol / Wine Pairings",
+      "question": "Do either of you have dietary restrictions (vegetarian, vegan, shellfish/seafood allergy, halal, gluten-free) or plan to add wine/cocktail pairings at tasting menus?",
+      "whyItMatters": "Le Bernardin & Sushi Sho are seafood-centric; COTE & Katz's are meat-heavy; Eleven Madison Park & Per Se offer dedicated plant-based tastings. Wine pairings typically add $160–$450 per couple before tax/tip.",
+      "defaultAssumed": "All restaurant costs shown food-only before drinks, tax (8.875%) & tip (20%–22%) unless explicitly noted (Atomix/Per Se/Meju/Sushi Sho)."
+    },
+    {
+      "id": "Q-06",
+      "priority": "P1 — High Impact",
+      "topic": "Reservation Drop Effort vs. Effortless Dining",
+      "question": "Are you willing to set calendar alarms at 9:00–11:00 AM EST 15–30 days out to fight for ultra-competitive tables (Sushi Sho, Atomix, Semma, Carbone, Coqodaq), or prefer easier-to-book classics (Le Bernardin lunch, Aquavit, The Modern, Crown Shy, Gramercy Tavern)?",
+      "whyItMatters": "Sushi Sho (1st of month 11 AM Tock), Atomix (1st of month 3 PM Tock), and Semma (15 days out 9 AM Resy) sell out in under 60 seconds.",
+      "defaultAssumed": "Exact booking platform & release-window countdown included for all 27 restaurants."
+    },
+    {
+      "id": "Q-07",
+      "priority": "P2 — Nice to Have",
+      "topic": "Arrival Airport & Inter-City Logistics (JFK / EWR / LGA)",
+      "question": "Which NYC airport (or Amtrak/Penn Station) will you arrive into, and do you prefer transit (AirTrain + LIRR/Subway / NJ Transit) or flat-rate taxi/Uber?",
+      "whyItMatters": "Cambria Chelsea & Arlo Midtown are a 6–10 min walk to Penn Station (direct NJ Transit from EWR & LIRR from JFK); Club Quarters is steps from Grand Central Madison (LIRR direct from JFK); Artezen is right on the A train to JFK.",
+      "defaultAssumed": "Manhattan transit hubs highlighted on every hotel card."
+    },
+    {
+      "id": "Q-08",
+      "priority": "P2 — Nice to Have",
+      "topic": "Winter Cold Tolerance & Indoor Backup Preference",
+      "question": "February NYC highs average ~40–44°F (4–7°C) with brisk wind — how much outdoor time (Brooklyn Bridge, High Line, ice skating, ferry decks) feels fun vs. pivoting to indoor museums, Broadway, jazz & food halls?",
+      "whyItMatters": "Every day in our itineraries pairs outdoor highlights with immediate indoor warm-up anchors (Oculus, Chelsea Market, The Lodge, Time Out Market, MoMA, SUMMIT).",
+      "defaultAssumed": "Balanced indoor/outdoor winter pacing with indoor fallbacks on every day."
+    }
+  ],
+  "suggestions": [
+    {
+      "id": "S-01",
+      "category": "Booking Automation",
+      "impact": "High",
+      "title": "Add One-Click .ics Calendar Reminders for 2027 Michelin Reservation Drops",
+      "detail": "Generate downloadable .ics calendar alerts directly from the Michelin table so once the couple selects their exact Feb/Mar 2027 week, clicking any restaurant (e.g., Semma 15 days out 9:00 AM EST, Atomix 1st of month 3:00 PM EST, Sushi Sho 1st of month 11:00 AM EST) drops a timed alarm straight into Apple/Google Calendar."
+    },
+    {
+      "id": "S-02",
+      "category": "Interactive Geography",
+      "impact": "High",
+      "title": "Embed an Interactive Leaflet.js Neighborhood & Subway Cluster Map",
+      "detail": "Plot all 11 hotels, 27 Michelin restaurants (color-coded by 3★/2★/1★/Bib/Selected), and 18 activities on an interactive OpenStreetMap/Leaflet layer with 15-min and 30-min MTA subway radius toggles so the couple can visually see why Artezen FiDi and Cambria Chelsea eliminate backtracking."
+    },
+    {
+      "id": "S-03",
+      "category": "Live Freshness & CI",
+      "impact": "High",
+      "title": "Add a GitHub Actions Scheduled Audit After the Mid-Dec 2026 Michelin Ceremony",
+      "detail": "Create a lightweight workflow in `.github/workflows/` that checks external official links (HTTP 200), validates `data/*.json` schemas, and opens a GitHub Issue reminder right after the mid-December 2026 NYC Michelin Guide announcement to refresh star promotions/removals and Jan 2027 hotel rates."
+    },
+    {
+      "id": "S-04",
+      "category": "Personalization UX",
+      "impact": "Medium",
+      "title": "Couple Voting & Shortlist Sync (Save Favorites Across Pages)",
+      "detail": "Add a 'Heart / Shortlist' toggle persisted in `localStorage` (with JSON/URL-hash sharing between partners!) so Partner A and Partner B can independently star their must-try restaurants & activities and compare overlapping picks before booking."
+    },
+    {
+      "id": "S-05",
+      "category": "Weather & Contingency",
+      "impact": "Medium",
+      "title": "Snow-Day / Freezing-Rain 'Plan B' Toggle on Every Itinerary Day",
+      "detail": "February NYC can throw a nor'easter or 20°F wind chill. Adding a 1-click 'Bad Weather Swap' toggle on each itinerary day (e.g., swapping Brooklyn Bridge Walk → 9/11 Museum + Oculus + Brookfield Place, or High Line → Whitney Museum + Chelsea Market) makes the dashboard genuinely usable on the ground in NYC."
+    },
+    {
+      "id": "S-06",
+      "category": "Cost Precision",
+      "impact": "Medium",
+      "title": "Add Airport Transfer & Wine-Pairing Multipliers to the Budget Builder",
+      "detail": "Extend the Itinerary Budget Builder with airport choice (JFK AirTrain+LIRR vs. $70+ flat taxi, EWR NJ Transit, LGA Q70+subway) and beverage style (Non-Alcoholic / 1 Cocktail Each / Full Michelin Wine Pairing) for true door-to-door out-of-pocket budgeting."
+    },
+    {
+      "id": "S-07",
+      "category": "Print & Offline Mode",
+      "impact": "Low-Medium",
+      "title": "Print-Friendly & Offline PWA Pocket Itinerary",
+      "detail": "Add a minimal Service Worker + `@media print` stylesheet so the itinerary, restaurant addresses, confirmation notes, and nearest subway stations work cleanly underground on the NYC subway with zero cell signal."
+    }
+  ],
+  "flaggedForReview": [
+    {
+      "id": "FLG-01",
+      "severity": "Critical — Unverified Price",
+      "entity": "The Four Horsemen (1★, Williamsburg)",
+      "field": "Regular 2-Adult Dinner Price",
+      "status": "Left Blank (Unverified)",
+      "detail": "Official website (fourhorsemenbk.com) only publishes a group prix fixe ($150/pp for parties of 6). Because their 2-person à la carte small-plates menu changes daily without published online prices, the 2-adult cost field is intentionally left blank rather than guessed.",
+      "officialSourceChecked": "https://www.fourhorsemenbk.com/",
+      "action": "Check current evening menu board or recent diner receipts right before reserving; budget flexibly for natural wine."
+    },
+    {
+      "id": "FLG-02",
+      "severity": "Critical — Unverified Price",
+      "entity": "Laser Wolf Brooklyn (Selected, Williamsburg)",
+      "field": "2-Adult Shipudiya Entrée Price",
+      "status": "Left Blank (Unverified)",
+      "detail": "Official menu page (laserwolfbrooklyn.com/menus) uses dynamic/non-static rendering that did not expose USD entrée prices during verification. Left blank per strict zero-inference policy.",
+      "officialSourceChecked": "https://www.laserwolfbrooklyn.com/menus",
+      "action": "Verify live Shipudiya per-entrée pricing directly on Resy or via phone before booking."
+    },
+    {
+      "id": "FLG-03",
+      "severity": "Critical — Partial Unverified Price",
+      "entity": "Manhatta (Selected, FiDi 60th Floor)",
+      "field": "Dining Room Regular Lunch & Dinner Prix Fixe Price",
+      "status": "Bar Menu Verified ($95–$150) · Dining Room Left Blank",
+      "detail": "Official Bar Menu (manhattarestaurant.com/bar-menu/) publishes complete USD prices ($29 burger/shrimp toast, $22 cocktails), and Winter Restaurant Week 2026 lunch was $60/pp (Jan 20–Feb 12). However, regular Dining Room dinner/lunch prix fixe prices are omitted on manhattarestaurant.com/menu/dinner/, and the Chef's Counter ($275/pp) has been paused since Jan 5, 2025.",
+      "officialSourceChecked": "https://www.manhattarestaurant.com/bar-menu/",
+      "action": "Confirm live Dining Room prix fixe pricing on OpenTable/Manhatta prior to booking — or use the verified walk-in Bar for the same 60th-floor views!"
+    },
+    {
+      "id": "FLG-04",
+      "severity": "Warning — Source Discrepancy",
+      "entity": "Aska (2★, Williamsburg)",
+      "field": "Weekly Operating Days / Lunch Service",
+      "status": "Discrepancy Flagged",
+      "detail": "Aska's official FAQ states dinner service Wed–Sun 5:00–11:00 PM (closed Mon–Tue), whereas a secondary site footer referenced Tuesday service and Sunday lunch.",
+      "officialSourceChecked": "https://askanyc.com/faq",
+      "action": "Confirm exact Feb/Mar 2027 open seatings directly on Aska's live Tock booking calendar."
+    },
+    {
+      "id": "FLG-05",
+      "severity": "Warning — Missing Room Metric",
+      "entity": "Artezen Hotel (FiDi)",
+      "field": "Exact Room Square Footage",
+      "status": "Left Blank (Unverified)",
+      "detail": "Neither artezenhotel.com nor Booking.com explicitly published numeric square footage for the Petite Queen vs. Deluxe Queen rooms (private bath and Queen bed ARE verified).",
+      "officialSourceChecked": "https://www.artezenhotel.com/contact-us",
+      "action": "Confirm exact Deluxe Queen square footage with front desk if space is a deciding factor vs. Cambria Chelsea (verified 240 sq ft)."
+    },
+    {
+      "id": "FLG-06",
+      "severity": "Warning — Tax Basis Normalization",
+      "entity": "Booking.com Live Hotel Quotes (Motto Chelsea Feb 15–22, Cambria Chelsea Feb 22–Mar 1, Arlo Williamsburg)",
+      "field": "Pre-Tax vs. All-In Tax Basis",
+      "status": "Explicitly Labeled on Every Quote",
+      "detail": "Three Booking.com fetches geo-routed to `.de.html`, displaying all-in tax-inclusive USD totals (`Einschließlich Steuern und Gebühren`), while US Booking.com fetches show pre-tax USD (including listed resort fees, excluding NYC 14.75% + $4–$8/nt flat taxes). No rates were silently mixed; every quote clearly states its exact tax basis and normalized estimates use verified NYC Dept. of Finance 14.75% + flat tax math.",
+      "officialSourceChecked": "https://www.nyc.gov/assets/finance/downloads/pdf/08pdf/fm3608htx.pdf",
+      "action": "Always compare final checkout totals (room + resort fee + 14.75% + flat nightly fees) side-by-side before paying."
+    },
+    {
+      "id": "FLG-07",
+      "severity": "Warning — Hotel Room-Bed Trap",
+      "entity": "Motto by Hilton Chelsea & Ace Hotel New York",
+      "field": "Entry-Level Bed Size",
+      "status": "Lower-Tier Rooms Excluded",
+      "detail": "Motto Chelsea's cheapest Booking.com room is a 'Flex Room with Wall Bed' (sofa bed) and Ace Hotel NY's cheapest room is a 'Single' (1 Full bed). Both fail the couple's Queen/King bed requirement and were deliberately bypassed in favor of verified King City View / Medium Queen rooms.",
+      "officialSourceChecked": "https://acehotel.com/new-york/",
+      "action": "Double-check bed type on the final booking confirmation screen before completing payment."
+    },
+    {
+      "id": "FLG-08",
+      "severity": "Warning — Hotel Unavailability",
+      "entity": "AC Hotel New York Downtown by Marriott (FiDi)",
+      "field": "Feb 22–Mar 1, 2027 Inventory",
+      "status": "Excluded / Replaced",
+      "detail": "AC Hotel NY Downtown showed zero available rooms on Booking.com for Feb 22–Mar 1, 2027 during live verification. Replaced in Financial District by higher-rated Artezen Hotel (9.2/10).",
+      "officialSourceChecked": "https://www.booking.com/hotel/us/artezen.html",
+      "action": "Re-check Marriott.com directly only if redeeming Bonvoy points in FiDi."
+    },
+    {
+      "id": "FLG-09",
+      "severity": "Watch — Upcoming Annual Update",
+      "entity": "NYC Michelin Guide 2026 Ceremony (Expected Mid-Dec 2026)",
+      "field": "Citywide Star Counts & Restaurant Distinctions",
+      "status": "Live Verified as of Nov 25, 2026 — Re-Check Dec 2026",
+      "detail": "Live 5-borough counts (369 total = 69 Starred [5×3★, 14×2★, 50×1★] + 300 Listed [76 Bib Gourmand, 224 Selected]) reflect the Nov 2025 ceremony & Jul 2026 Selected additions. Michelin's next NYC/Northeast ceremony is anticipated in mid-December 2026.",
+      "officialSourceChecked": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants",
+      "action": "Re-verify star status on guide.michelin.com in late Dec 2026 prior to locking Feb/Mar 2027 reservations."
+    },
+    {
+      "id": "FLG-10",
+      "severity": "Watch — Seasonal / Holiday Deadlines",
+      "entity": "Feb 15–Mar 23, 2027 Calendar & Attractions",
+      "field": "Seasonal Closures & Presidents' Day Exceptions",
+      "status": "Confirmed & Surfaced Across All Pages",
+      "detail": "(1) Bryant Park Winter Village closes permanently after Sun Feb 28, 2027. (2) Wollman Rink closes permanently after Tue Mar 16, 2027 (with FREE Community Days Mar 14–16). (3) Chinatown Lunar New Year Parade is ONLY Sun Feb 21, 2027 at 1:00 PM. (4) NYPL Schwarzman Building typically closes Presidents' Day (Mon Feb 15, 2027). (5) 9/11 Museum closes most Tuesdays; The Met closes every Wednesday; Broadway is mostly dark Mondays.",
+      "officialSourceChecked": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+      "action": "Lock final trip dates against these exact 2027 calendar cutoffs before purchasing non-refundable flights/hotels."
+    },
+    {
+      "id": "FLG-11",
+      "severity": "Watch — Trip Length Ambiguity",
+      "entity": "Date Window (Feb 15 – Mar 23, 2027 = 36 Nights) vs. Typical Stay Length",
+      "field": "Stay Duration Basis",
+      "status": "Clarification Requested on Questions Page",
+      "detail": "The travel window spans 36 days (Feb 15–Mar 23, 2027), which typically represents a flexible search window for a ~7-night vacation rather than a 36-night stay. All hotel pricing and budgets standardize on 7-night Monday-to-Monday cohorts (plus a 3-night holiday check).",
+      "officialSourceChecked": "N/A — User Brief Scope",
+      "action": "Confirm exact number of nights in Open Questions (Q-01) so final hotel & budget totals match exact duration."
+    }
+  ]
+}

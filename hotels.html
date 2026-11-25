@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotels &amp; 2027 Booking Windows — NYFun2 Couples Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">Live Verified Booking.com 2027 USD Quotes · Queen/King + Private Bath Only</div>
+      <h1>NYC Hotels, Feb vs. Mar 2027 Surge Analysis &amp; When-to-Book Playbook</h1>
+      <p>
+        Every hotel below has a verified <strong>Queen or King bed</strong> (entry-level wall-bed and full-bed rooms intentionally skipped!), a verified <strong>private bathroom</strong>, and <strong>≤ 35 min MTA access</strong> to all 5 NYC Michelin clusters. Every quote explicitly discloses whether it is <strong>Pre-Tax (incl. resort fee)</strong> or <strong>All-In Tax-Inclusive</strong>.
+      </p>
+    </section>
+
+    <div class="alert alert-success">
+      <strong>Headline Finding:</strong> Stay <strong>Mon Feb 22 – Mon Mar 1, 2027</strong> (or <strong>Feb 15–22</strong> for the Chinatown Lunar New Year Parade) — mid-March prices jump <strong>+47% to +91%</strong> (+$450 to +$910/week!). Surprise value takeaway: <strong>Manhattan beats Brooklyn by ~$800–$1,000/week</strong> in February 2027!
+    </div>
+
+    <section class="card">
+      <div class="card-header">
+        <div>
+          <h2>When to Book: 3-Phase 2026–2027 Rate Strategy</h2>
+          <p class="muted small mb-0" id="playbook-headline"></p>
+        </div>
+        <div class="link-row" id="playbook-sources"></div>
+      </div>
+      <div class="grid-3 mb-0" id="playbook-steps"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <div>
+          <h2>Feb 15 – Mar 22, 2027 Live Rate Window Comparison (Pre-Tax USD)</h2>
+          <p class="muted small mb-0">Identical room tiers tracked across 6 date windows on Booking.com (Nov 25, 2026). Notice the steep cliff starting March 1!</p>
+        </div>
+        <a class="link-chip official" href="https://www.nyc.gov/assets/finance/downloads/pdf/08pdf/fm3608htx.pdf" target="_blank" rel="noopener">NYC Tax Law (14.75% + Flat) ↗</a>
+      </div>
+      <div class="table-wrap mb-0">
+        <table style="min-width:720px">
+          <thead>
+            <tr>
+              <th>2027 Stay Window</th>
+              <th>Season Signal</th>
+              <th>Arlo Midtown (King)</th>
+              <th>Artezen (Deluxe Queen)</th>
+              <th>Club Quarters GC (Queen)</th>
+              <th>Arlo SoHo (Queen)</th>
+              <th>Window Insight</th>
+            </tr>
+          </thead>
+          <tbody id="windows-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="alert alert-warn" id="excluded-note"></div>
+
+    <section class="section-title">
+      <h2>11 Shortlisted NYC Hotels (All Verified Queen/King + Private Bath)</h2>
+      <span class="result-count" id="hotel-count">Loading...</span>
+    </section>
+
+    <div class="controls-bar">
+      <input type="search" id="hotel-search" class="search-input" placeholder="Search hotel, neighborhood, subway line..." aria-label="Search hotels" />
+      <select id="hotel-sort" class="select-input" aria-label="Sort hotels">
+        <option value="price-asc">Sort: Lowest Feb 22–Mar 1 Quote</option>
+        <option value="size-desc">Sort: Largest Room (sq ft)</option>
+        <option value="rating-desc">Sort: Highest Guest Rating</option>
+        <option value="fee-asc">Sort: Lowest Resort Fee</option>
+      </select>
+      <div class="pill-group" id="hotel-pills">
+        <button class="filter-pill active" data-filter="all">All 11</button>
+        <button class="filter-pill" data-filter="zero-fee">$0 Resort Fee Only</button>
+        <button class="filter-pill" data-filter="free-cancel">Free Cancel Verified</button>
+        <button class="filter-pill" data-filter="spacious">≥ 200 sq ft Rooms</button>
+        <button class="filter-pill" data-filter="manhattan">Manhattan Only</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="min-width:210px">Hotel, Rating &amp; Verdict</th>
+            <th style="min-width:190px">Verified Room, Bed &amp; Bath</th>
+            <th style="min-width:125px">Resort Fee</th>
+            <th style="min-width:230px">Feb 22–Mar 1 (7-Night Quote) &amp; All Windows</th>
+            <th style="min-width:210px">Subway Hub &amp; Michelin Access (≤1 hr)</th>
+            <th style="min-width:170px">Official &amp; Booking Links</th>
+          </tr>
+        </thead>
+        <tbody id="hotels-tbody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    (async function () {
+      const { loadJSON, fmtUSDExact, escapeHTML } = window.NYFun2;
+      const data = await loadJSON('data/hotels.json');
+
+      document.getElementById('playbook-headline').textContent = data.bookingTimingPlaybook.headline;
+      document.getElementById('playbook-sources').innerHTML = data.bookingTimingPlaybook.sources
+        .map((s) => `<a class="link-chip official" href="${escapeHTML(s.url)}" target="_blank" rel="noopener">${escapeHTML(s.label)} ↗</a>`)
+        .join('');
+      document.getElementById('playbook-steps').innerHTML = data.bookingTimingPlaybook.steps
+        .map(
+          (st) => `
+          <div class="slot-box">
+            <div class="slot-label">${escapeHTML(st.phase)}</div>
+            <div class="cell-title">${escapeHTML(st.strategy)}</div>
+            <p class="cell-sub mb-0">${escapeHTML(st.detail)}</p>
+          </div>`
+        )
+        .join('');
+
+      document.getElementById('excluded-note').innerHTML =
+        `<strong>Inventory &amp; Bed-Size Safeguard:</strong> ${escapeHTML(data.excludedNote)} Also note: entry-level Motto Chelsea ("Wall Bed") and Ace Hotel NY ("Single Full Bed") rooms were intentionally bypassed to guarantee true Queen/King beds.`;
+
+      document.getElementById('windows-tbody').innerHTML = data.stayWindowComparison
+        .map((w) => {
+          const isRec = w.windowId === 'feb22-mar1';
+          return `
+            <tr style="${isRec ? 'background:#ecfdf5;' : ''}">
+              <td><strong>${escapeHTML(w.label)}</strong></td>
+              <td><span class="badge ${isRec ? 'badge-verified' : w.windowId.startsWith('mar') ? 'badge-unverified' : 'badge-info'}">${escapeHTML(w.seasonTag)}</span></td>
+              <td class="num">${w.arloMidtownPreTax ? fmtUSDExact(w.arloMidtownPreTax) : '—'}</td>
+              <td class="num">${w.artezenPreTax ? fmtUSDExact(w.artezenPreTax) : '—'}</td>
+              <td class="num">${w.clubQuartersPreTax ? fmtUSDExact(w.clubQuartersPreTax) : '—'}</td>
+              <td class="num">${w.arloSohoPreTax ? fmtUSDExact(w.arloSohoPreTax) : '—'}</td>
+              <td class="cell-sub">${escapeHTML(w.note)}</td>
+            </tr>`;
+        })
+        .join('');
+
+      let activeFilter = 'all';
+      const searchEl = document.getElementById('hotel-search');
+      const sortEl = document.getElementById('hotel-sort');
+
+      function bestQuoteVal(h) {
+        const q = h.recommendedWindowQuote;
+        return q.nonRefUsd ?? q.freeCancelUsd ?? 99999;
+      }
+
+      function renderHotels() {
+        const q = searchEl.value.trim().toLowerCase();
+        const sort = sortEl.value;
+
+        let list = data.hotels.filter((h) => {
+          if (activeFilter === 'zero-fee' && h.resortFeePerNight !== 0) return false;
+          if (activeFilter === 'free-cancel' && h.recommendedWindowQuote.freeCancelUsd === null) return false;
+          if (activeFilter === 'spacious' && (h.roomSizeSqFt === null || h.roomSizeSqFt < 200)) return false;
+          if (activeFilter === 'manhattan' && h.borough !== 'Manhattan') return false;
+          if (q) {
+            const hay = `${h.name} ${h.neighborhood} ${h.borough} ${h.nearestSubways} ${h.verdict} ${h.roomType}`.toLowerCase();
+            if (!hay.includes(q)) return false;
+          }
+          return true;
+        });
+
+        list.sort((a, b) => {
+          if (sort === 'price-asc') return bestQuoteVal(a) - bestQuoteVal(b);
+          if (sort === 'size-desc') return (b.roomSizeSqFt ?? -1) - (a.roomSizeSqFt ?? -1);
+          if (sort === 'rating-desc') return parseFloat(b.bookingRating) - parseFloat(a.bookingRating);
+          if (sort === 'fee-asc') return a.resortFeePerNight - b.resortFeePerNight;
+          return 0;
+        });
+
+        document.getElementById('hotel-count').textContent = `Showing ${list.length} of ${data.hotels.length} verified hotels`;
+
+        document.getElementById('hotels-tbody').innerHTML = list
+          .map((h) => {
+            const rq = h.recommendedWindowQuote;
+            const isAllIn = rq.taxBasis.toUpperCase().includes('ALL-IN');
+            const sizeBadge = h.roomSizeSqFt
+              ? `<span class="badge badge-info">${h.roomSizeSqFt} sq ft</span>`
+              : `<span class="badge badge-unverified">Sq ft Unverified</span>`;
+            const feeBadge = h.resortFeePerNight === 0
+              ? `<span class="badge badge-free">$0 / night</span>`
+              : `<span class="badge badge-unverified">$${h.resortFeePerNight} / night</span>`;
+            const quotesHtml = h.quotes
+              .map(
+                (qt) =>
+                  `<div><strong>${escapeHTML(qt.window)}</strong> (${qt.nights}n): <span class="num">${fmtUSDExact(qt.amountUsd)}</span> — ${escapeHTML(qt.rateType)} <span class="muted">(${escapeHTML(qt.taxBasis)})</span></div>`
+              )
+              .join('');
+
+            return `
+              <tr>
+                <td>
+                  <div class="cell-title">${escapeHTML(h.name)}</div>
+                  <div class="link-row">
+                    <span class="badge badge-verified">★ ${escapeHTML(h.bookingRating)}</span>
+                    <span class="badge badge-selected">${escapeHTML(h.neighborhood)}</span>
+                  </div>
+                  <div class="cell-sub mt-1" style="color:var(--ink)"><strong>Verdict:</strong> ${escapeHTML(h.verdict)}</div>
+                </td>
+                <td>
+                  <div><strong>${escapeHTML(h.roomType)}</strong></div>
+                  <div class="link-row mt-1">
+                    <span class="badge badge-verified">✓ ${escapeHTML(h.bedSpec)}</span>
+                    <span class="badge badge-verified">✓ Private Bath</span>
+                    ${sizeBadge}
+                  </div>
+                  <div class="cell-sub mt-1">${escapeHTML(h.roomSizeNote)}</div>
+                </td>
+                <td>
+                  ${feeBadge}
+                  <div class="cell-sub mt-1">${h.resortFeePerNight === 0 ? 'Zero junk fees!' : `+$${h.resortFeePerNight * 7}/wk (baked into Booking.com pre-tax quote)`}</div>
+                </td>
+                <td>
+                  <div class="num">
+                    ${rq.nonRefUsd ? `Non-Ref: ${fmtUSDExact(rq.nonRefUsd)}` : ''}
+                    ${rq.nonRefUsd && rq.freeCancelUsd ? '<br/>' : ''}
+                    ${rq.freeCancelUsd ? `Free Cancel: ${fmtUSDExact(rq.freeCancelUsd)}` : ''}
+                  </div>
+                  <div class="mt-1">
+                    <span class="badge ${isAllIn ? 'badge-verified' : 'badge-info'}">${isAllIn ? 'ALL-IN Tax-Inclusive' : 'Pre-Tax (+14.75% & flat tax)'}</span>
+                  </div>
+                  <div class="cell-sub mt-1">${escapeHTML(rq.taxBasis)}</div>
+                  <details class="quote-drawer">
+                    <summary>▾ View all ${h.quotes.length} verified 2027 quotes</summary>
+                    <div class="mini-quotes">${quotesHtml}</div>
+                  </details>
+                </td>
+                <td>
+                  <span class="badge badge-verified">Max ≤ ${h.michelinAccess1Hr.maxMinutes} min to all clusters</span>
+                  <div class="cell-sub mt-1"><strong>Subways:</strong> ${escapeHTML(h.nearestSubways)}</div>
+                  <div class="cell-sub mt-1">${escapeHTML(h.michelinAccess1Hr.summary)}</div>
+                </td>
+                <td>
+                  <div class="link-row">
+                    <a class="link-chip official" href="${escapeHTML(h.officialUrl)}" target="_blank" rel="noopener">Official Hotel ↗</a>
+                    <a class="link-chip" href="${escapeHTML(h.bookingUrl)}" target="_blank" rel="noopener">Booking.com ↗</a>
+                  </div>
+                  <div class="cell-sub mt-1"><strong>Address:</strong> ${escapeHTML(h.address)}</div>
+                </td>
+              </tr>`;
+          })
+          .join('');
+      }
+
+      document.querySelectorAll('#hotel-pills .filter-pill').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#hotel-pills .filter-pill').forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeFilter = btn.dataset.filter;
+          renderHotels();
+        });
+      });
+
+      [searchEl, sortEl].forEach((el) => el.addEventListener('input', renderHotels));
+      renderHotels();
+    })();
+  </script>
+</body>
+</html>
