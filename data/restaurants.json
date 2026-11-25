@@ -5,7 +5,7 @@
     "starListSource": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred",
     "starCounts": "5 three-star, 14 two-star, 50 one-star in the NYC all-starred list (checked 2026-11-25)",
     "importantTiming": "Michelin's 2026 Northeast Cities ceremony is scheduled for 2026-12-14 (https://michelinmedia.com/pages/blog/detail/article/c/a1479/), after this research date and before the proposed trip. Distinctions may change.",
-    "priceNote": "Michelin publishes only a $ symbol band, not a dollar amount. Couple totals are left blank unless an official menu price was verified.",
+    "priceNote": "Menu totals for two are simple 2× calculations from a venue-published per-person menu price (or a published table price). They are current snapshots checked 2026-11-25, not February 2027 quotes; blanks are retained where an official source was unavailable or contradictory. Michelin $–$$$$ bands are not dollar amounts.",
     "hoursCrossCheck": "Le Bernardin, Eleven Madison Park, Per Se and Atera were read independently by two sessions against the same MICHELIN records on 2026-11-25 and agree. The fuller capture (which includes Le Bernardin Thursday to Sunday and 'Sunday closed') is retained. Independent agreement is the strongest verification available without a second source."
   },
   "items": [
@@ -18,7 +18,7 @@
       "hours": "Mon–Thu 17:30–22:00; Fri–Sun 12:00–13:00 and 17:30–23:00",
       "exceptions": "No dress code (stated on the MICHELIN record). The tasting menu offers a vegan path as well as animal-protein courses.",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
+      "priceTwoAdults": "$510–$770 menu subtotal for two: Bar Tasting $255/person or Full Tasting $385/person. Gratuity not included; wine pairings extra.",
       "officialUrl": "https://www.elevenmadisonpark.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/eleven-madison-park",
       "social": [
@@ -38,9 +38,14 @@
           "note": "CNN/Richard Quest tasting-menu segment; not an official restaurant post"
         }
       ],
-      "flags": [
-        "Couple price unverified: official menu price not confirmed"
-      ]
+      "flags": [],
+      "priceSources": [
+        {
+          "label": "Official FAQ / menu prices",
+          "url": "https://www.elevenmadisonpark.com/faq"
+        }
+      ],
+      "priceCheckedOn": "2026-11-25"
     },
     {
       "name": "Jungsik New York",
@@ -51,7 +56,7 @@
       "hours": "Tue–Sun 17:00–21:30; Monday closed",
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
+      "priceTwoAdults": "$670 menu subtotal for two (Signature Menu $335/person; supplements and beverage pairings extra).",
       "officialUrl": "https://www.jungsik.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/jungsik-new-york",
       "social": [
@@ -61,9 +66,14 @@
           "note": "Review video; not an official restaurant post"
         }
       ],
-      "flags": [
-        "Couple price unverified: official menu price not confirmed"
-      ]
+      "flags": [],
+      "priceSources": [
+        {
+          "label": "Official menu",
+          "url": "https://www.jungsik.com/menu/"
+        }
+      ],
+      "priceCheckedOn": "2026-11-25"
     },
     {
       "name": "Le Bernardin",
@@ -74,7 +84,7 @@
       "hours": "Mon–Thu 12:00–14:30 and 17:00–22:30; Fri 12:00–14:30 and 17:00–23:00; Sat 17:00–23:00; Sunday closed",
       "exceptions": "Business casual dress code: jackets recommended, not required; shorts, t-shirts, short sleeves, flip-flops, sweatshirts, sweatpants and sneakers not permitted. Reservations required for the main dining room; lounge is walk-in. Card required at booking; 48-hour cancellation window at $150 per person.",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
+      "priceTwoAdults": "$274 lunch / $436 dinner menu subtotal for two (3-course lunch $137/person; 4-course dinner $218/person); supplements extra.",
       "officialUrl": "https://www.le-bernardin.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-bernardin",
       "social": [
@@ -100,9 +110,19 @@
         }
       ],
       "flags": [
-        "Couple price unverified: official menu price not confirmed",
         "Dress code and cancellation policy recorded from the Resy venue page"
-      ]
+      ],
+      "priceSources": [
+        {
+          "label": "Official lunch menu PDF",
+          "url": "https://www.le-bernardin.com/content/pdfs/lunch-2.191.pdf"
+        },
+        {
+          "label": "Official dinner menu PDF",
+          "url": "https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf"
+        }
+      ],
+      "priceCheckedOn": "2026-11-25"
     },
     {
       "name": "Per Se",
@@ -113,7 +133,7 @@
       "hours": "Daily 16:30–21:00",
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
+      "priceTwoAdults": "$370–$850 menu subtotal for two across published experiences: Salon four-course $185/person or Main Dining Room tasting $425/person. The $200/person booking deposit is applied to the bill; re-check for February 2027.",
       "officialUrl": "https://www.thomaskeller.com/perseny",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/per-se",
       "social": [
@@ -124,8 +144,19 @@
         }
       ],
       "flags": [
-        "Couple price unverified: official menu price not confirmed"
-      ]
+        "February 2027 menu price is not yet date-specific; current published tasting prices may change before travel."
+      ],
+      "priceSources": [
+        {
+          "label": "Official Tock Main Dining Room menu",
+          "url": "https://www.exploretock.com/perse/experience/288603/main-dining-room-tasting-menu"
+        },
+        {
+          "label": "Official Tock Salon four-course menu",
+          "url": "https://www.exploretock.com/perse/experience/7768/salon-lounge-seating-four-course-tasting-menu"
+        }
+      ],
+      "priceCheckedOn": "2026-11-25"
     },
     {
       "name": "Sushi Sho",
@@ -143,8 +174,11 @@
       "flags": [
         "Official website not listed by Michelin (phone only)",
         "Couple price unverified",
-        "No verified NYC social/review link found; similar-name YouTube results refer to a different city"
-      ]
+        "No verified NYC social/review link found; similar-name YouTube results refer to a different city",
+        "No New York menu price verified; the Tock Sushi Sho page that publishes $400/person is for Honolulu (383 Kalaimoku Street), not the NYC venue."
+      ],
+      "priceSources": [],
+      "priceCheckedOn": ""
     },
     {
       "name": "Aquavit",
@@ -155,7 +189,7 @@
       "hours": "Mon–Thu 12:00–14:00 and 17:30–21:00; Fri 12:00–14:00 and 17:30–21:30; Sat 17:00–21:30; Sunday closed",
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
+      "priceTwoAdults": "$160–$610 menu subtotal for two across published options: lunch two-course $80/person to Chef’s Tasting $305/person; other listed choices are $95, $185, and $195/person. Pairings/supplements extra.",
       "officialUrl": "https://www.aquavit.org/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/aquavit",
       "social": [
@@ -166,9 +200,23 @@
         }
       ],
       "flags": [
-        "Couple price unverified",
         "Social link is third-party; no official account link confirmed"
-      ]
+      ],
+      "priceSources": [
+        {
+          "label": "Official lunch menu PDF (20 Nov 2026)",
+          "url": "https://www.aquavit.org/s/DR-Lunch-112026.pdf"
+        },
+        {
+          "label": "Official dinner tasting menu PDF (20 Nov 2026)",
+          "url": "https://www.aquavit.org/s/DR-112026.pdf"
+        },
+        {
+          "label": "Official Chef’s tasting menu PDF (20 Nov 2026)",
+          "url": "https://www.aquavit.org/s/DR-112026-Chefs.pdf"
+        }
+      ],
+      "priceCheckedOn": "2026-11-25"
     },
     {
       "name": "Atomix",
@@ -179,14 +227,24 @@
       "hours": "Tue–Sat 17:30–24:00; Sunday and Monday closed",
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
+      "priceTwoAdults": "$704–$990 for two at the latest posted (December 2026) menus: Bar Tasting starts at $352/person; Chef’s Counter is $495/person, including the administrative fee. February 2027 price not published.",
       "officialUrl": "https://www.atomixnyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atomix",
       "social": [],
       "flags": [
-        "Couple price unverified",
         "No social link verified from an official source"
-      ]
+      ],
+      "priceSources": [
+        {
+          "label": "Official Tock Chef’s Counter, December 2026",
+          "url": "https://www.exploretock.com/atomixnyc/experience/629195/chefs-counter-december-2026"
+        },
+        {
+          "label": "Official Tock Bar Tasting, December 2026",
+          "url": "https://www.exploretock.com/atomixnyc/experience/629197/bar-tasting-menu-december-2026"
+        }
+      ],
+      "priceCheckedOn": "2026-11-25"
     },
     {
       "name": "Gabriel Kreuther",
@@ -197,14 +255,24 @@
       "hours": "Mon 16:45–21:30; Tue–Thu 11:45–14:15 and 16:45–21:30; Fri 11:45–14:15 and 16:45–22:00; Sat 16:45–22:00; Sunday closed",
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
+      "priceTwoAdults": "$150–$650 menu subtotal for two: lunch two-course $75/person through dinner Chef’s Tasting $325/person; published middle options are $95, $155, $200, and $235/person. Beverage pairings extra.",
       "officialUrl": "https://www.gknyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/gabriel-kreuther",
       "social": [],
       "flags": [
-        "Couple price unverified",
         "No social link verified from an official source"
-      ]
+      ],
+      "priceSources": [
+        {
+          "label": "Official lunch menu PDF (17 Nov 2026)",
+          "url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf473ff2ad124ea3845e_RGK_FallLunch%20Menu%2011.17.26%20Wine.pdf"
+        },
+        {
+          "label": "Official dinner menu PDF (17 Nov 2026)",
+          "url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf"
+        }
+      ],
+      "priceCheckedOn": "2026-11-25"
     },
     {
       "name": "The Modern",
@@ -215,15 +283,21 @@
       "hours": "Not confirmed on the Michelin page section checked",
       "exceptions": "Not confirmed",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
+      "priceTwoAdults": "$230–$570 menu subtotal for two across standard menus: lunch three-course prix fixe $115/person; lunch tasting $255/person; dinner Impressions $185/person or Abstractions $285/person. Seasonal menus may change.",
       "officialUrl": "https://www.themodernnyc.com/the-modern/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/the-modern",
       "social": [],
       "flags": [
         "Hours unverified in checked section",
-        "Couple price unverified",
         "No social link verified from an official source"
-      ]
+      ],
+      "priceSources": [
+        {
+          "label": "Official menus",
+          "url": "https://www.themodernnyc.com/the-modern/"
+        }
+      ],
+      "priceCheckedOn": "2026-11-25"
     },
     {
       "name": "Masa",
@@ -234,13 +308,20 @@
       "hours": "",
       "exceptions": "",
       "guidePriceBand": "",
-      "priceTwoAdults": "",
+      "priceTwoAdults": "Lunch starts at $990 for two; table omakase is $1,500; Hinoki Counter is $1,900. Official page excludes beverages, tax, and optional gratuity.",
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
       "social": [],
       "flags": [
-        "Detail page not yet checked: address, hours, price and social link left blank"
-      ]
+        "Address/hours/social link still need a row-specific verification; menu price is sourced separately."
+      ],
+      "priceSources": [
+        {
+          "label": "Official menus",
+          "url": "https://www.masanyc.com/menus"
+        }
+      ],
+      "priceCheckedOn": "2026-11-25"
     },
     {
       "name": "odo",
@@ -251,14 +332,21 @@
       "hours": "",
       "exceptions": "",
       "guidePriceBand": "",
-      "priceTwoAdults": "",
+      "priceTwoAdults": "$300 lunch / $540 dinner menu subtotal for two (lunch $150/person; dinner $270/person).",
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
       "social": [],
       "flags": [
-        "Detail page not yet checked: address, hours, price and social link left blank",
-        "Distinct from 'Odo East Village' below"
-      ]
+        "Distinct from 'Odo East Village' below",
+        "Address/hours/social link still need a row-specific verification; menu price is sourced separately."
+      ],
+      "priceSources": [
+        {
+          "label": "Official menu",
+          "url": "https://www.odo.nyc/menu"
+        }
+      ],
+      "priceCheckedOn": "2026-11-25"
     },
     {
       "name": "Sushi Noz",
@@ -269,13 +357,20 @@
       "hours": "",
       "exceptions": "",
       "guidePriceBand": "",
-      "priceTwoAdults": "",
+      "priceTwoAdults": "$990 for two ($495/person for the posted omakase). February 2027 rate not published.",
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
       "social": [],
       "flags": [
-        "Detail page not yet checked: address, hours, price and social link left blank"
-      ]
+        "Address/hours/social link still need a row-specific verification; menu price is sourced separately."
+      ],
+      "priceSources": [
+        {
+          "label": "Official Tock omakase booking",
+          "url": "https://www.exploretock.com/sushinoz/experience/335003/omakase"
+        }
+      ],
+      "priceCheckedOn": "2026-11-25"
     },
     {
       "name": "César",
@@ -291,8 +386,10 @@
       "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
       "social": [],
       "flags": [
-        "Detail page not yet checked: address, hours, price and social link left blank"
-      ]
+        "Official website/booking page reviewed; Tock shows a $200/person reservation deposit, not the menu price. Couple total remains blank."
+      ],
+      "priceSources": [],
+      "priceCheckedOn": ""
     },
     {
       "name": "Le Coucou",
@@ -303,7 +400,7 @@
       "hours": "Mon–Thu 11:30–14:30 and 17:00–22:00; Fri 11:30–14:00 and 17:00–23:00; Sat 11:30–14:30 and 17:00–23:00; Sun 11:30–14:30 and 17:00–22:00",
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
+      "priceTwoAdults": "$162–$440 menu subtotal for two across standard fixed-price menus: lunch $81–$150/person; dinner $220/person. Tax and gratuity not included.",
       "officialUrl": "https://lecoucou.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-coucou",
       "social": [
@@ -314,10 +411,16 @@
         }
       ],
       "flags": [
-        "Couple price unverified",
         "Located inside 11 Howard hotel",
         "Social link is third-party; no official account link confirmed"
-      ]
+      ],
+      "priceSources": [
+        {
+          "label": "Official menus",
+          "url": "https://lecoucou.com/"
+        }
+      ],
+      "priceCheckedOn": "2026-11-25"
     },
     {
       "name": "Gramercy Tavern",
@@ -328,7 +431,7 @@
       "hours": "Mon–Thu 17:00–21:00; Fri–Sat 17:00–22:00; Sun 17:00–21:00",
       "exceptions": "Michelin page lists Dining Room hours; Tavern-side hours may differ (unverified)",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
+      "priceTwoAdults": "$356 menu subtotal for two (Dining Room seasonal menu $178/person; wine pairing $118/person extra).",
       "officialUrl": "https://www.gramercytavern.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/gramercy-tavern",
       "social": [
@@ -339,9 +442,15 @@
         }
       ],
       "flags": [
-        "Couple price unverified",
         "Social link is third-party; no official account link confirmed"
-      ]
+      ],
+      "priceSources": [
+        {
+          "label": "Official Dining Room menu",
+          "url": "https://www.gramercytavern.com/menu/the-dining-room/"
+        }
+      ],
+      "priceCheckedOn": "2026-11-25"
     },
     {
       "name": "Casa Mono",
@@ -363,9 +472,11 @@
         }
       ],
       "flags": [
-        "Couple price unverified",
-        "Social link is third-party; no official account link confirmed"
-      ]
+        "Social link is third-party; no official account link confirmed",
+        "Official menu is à la carte and the published menu text checked did not provide a fixed couple total; no portion/order estimate was inferred."
+      ],
+      "priceSources": [],
+      "priceCheckedOn": ""
     },
     {
       "name": "Semma",
@@ -388,9 +499,11 @@
       ],
       "flags": [
         "Hours unverified in checked section",
-        "Couple price unverified",
-        "Social link is third-party; no official account link confirmed"
-      ]
+        "Social link is third-party; no official account link confirmed",
+        "Official menu is à la carte; a two-person total depends on choices and quantities, so no total was inferred."
+      ],
+      "priceSources": [],
+      "priceCheckedOn": ""
     },
     {
       "name": "Odo East Village",
@@ -407,8 +520,11 @@
       "social": [],
       "flags": [
         "Added to Guide July 2026; no star as of 2026-11-25 check",
-        "Address/hours/price/social not verified"
-      ]
+        "Address/hours/price/social not verified",
+        "Kept separate from the starred odo row; no official price page tied to this Guide-listed entry was confirmed."
+      ],
+      "priceSources": [],
+      "priceCheckedOn": ""
     },
     {
       "name": "Cynthia",
@@ -426,7 +542,9 @@
       "flags": [
         "Added to Guide July 2026; no star as of 2026-11-25 check",
         "Address/hours/price/social not verified"
-      ]
+      ],
+      "priceSources": [],
+      "priceCheckedOn": ""
     },
     {
       "name": "Len Len",
@@ -444,7 +562,9 @@
       "flags": [
         "Added to Guide July 2026; no star as of 2026-11-25 check",
         "Address/hours/price/social not verified"
-      ]
+      ],
+      "priceSources": [],
+      "priceCheckedOn": ""
     },
     {
       "name": "Atera",
@@ -460,10 +580,12 @@
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atera",
       "social": [],
       "flags": [
-        "Couple price unverified: official menu price not confirmed",
         "Added by the second session - this two-star restaurant was missing from the first catalogue",
-        "Saturday is the only afternoon service"
-      ]
+        "Saturday is the only afternoon service",
+        "Price left blank: official page text says $325/person while its structured menu data says $298; Tock reservation pages reviewed show deposits or older dates, not a reconciled February 2027 price."
+      ],
+      "priceSources": [],
+      "priceCheckedOn": ""
     }
   ]
 }
