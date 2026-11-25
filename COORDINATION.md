@@ -24,10 +24,14 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T7 | Repo audit page + two-session integration log | done | arena/1a7ae497-nyfun2 | `pages/repo-audit.html` | Linked from every page nav and from the overview tile grid. |
 | T8 | Repository hygiene: licence, ignore rules, nojekyll | done | arena/1a7ae497-nyfun2 | `LICENSE`, `.gitignore`, `.nojekyll` | MIT for code, CC BY 4.0 for data and prose. |
 | T9 | Complete the Michelin catalogue to the official counters (18 of 69 starred rows today) | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/restaurants.json` | All 72 rows present (5/14/50 starred + Bib + Selected) in the namespaced kit; canonical `data/restaurants.json` still at 20 rows — merging the two is a separate decision. |
-| T10 | Per-person menu price capture for the starred restaurants | unclaimed | — | `data/restaurants.json` | Menu pages are client-rendered; needs a source that prints prices. |
+| T10 | Per-person menu price capture for the starred restaurants | done (reconciled) | arena/6f217cce-nyfun2 + arena/fc6d5f66-nyfun2 | `data/restaurants.json`, `research/t10-prices.md` | 15 restaurants priced from official menu/FAQ/booking pages (couple totals $156–$1,900, food only). Sessions 6f217cce (PR #13) and fc6d5f66 reconciled: Aquavit/odo/Le Coucou from 6f217cce re-verified and adopted; Le Bernardin dinner uses the official PDF ($218). Per Se blank (official pages show only a $200 deposit); Atomix/Atera conflicts rejected. See `research/t10-prices.md`. |
+| T13 | Complete canonical starred roster to the official 69 + official social links per restaurant row | done | arena/fc6d5f66-nyfun2 | `data/restaurants.json`, `research/t13-roster-socials.md` | Canonical roster now 69 starred (5/14/50) + 3 Guide-listed = 72 rows. 3 kit-only names excluded/flagged. Official socials added for Per Se, Aska (EMP/Le Bernardin retained). |
+| T14 | Refresh decisions register + executive summary for session fc6d5f66 findings | done | arena/fc6d5f66-nyfun2 | `data/decisions.json`, `pages/executive-summary.html`, `pages/michelin-restaurants.html` | Q6/Q8 updated; F11 resolved, F13 partial; new flags F14–F17; S3/S10 status updated. Exec summary + Michelin page refreshed with a verified-price table. |
+| T15 | Final verification + publish of the fc6d5f66 scope; log PR #12 conflict | done | arena/fc6d5f66-nyfun2 | `scripts/verify.py`, `COORDINATION.md` | `scripts/verify.py` → 0 errors / 0 warnings (113 rows); `node --check assets/app.js` passes. **Published via PR #14 (merge `a5ae9ce`); GitHub Pages built; live site verified.** PR #12 stale-base conflict logged below. |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
-| T16 | Namespaced multi-platform social-review + official menu-price + cross-window hotel/cluster dashboard (`sessions/c1cf7b23`) | done in `sessions/c1cf7b23` | arena/c1cf7b23-nyfun2 | `sessions/c1cf7b23/**`, `COORDINATION.md` | Disjoint namespace only; 31 Michelin rows (24 w/ official 2-adult prices), 10 hotels (pre-tax + all-in), 18 activities, 155 YT/TT/IG links, 11 flags & 6 repo-audit findings. |
+| T16 | Disjoint namespaced full-spec verified dashboard + multi-platform social audit + official hotel & restaurant verification | done in `sessions/657520df` | arena/657520df-nyfun2 | `sessions/657520df/**`, `COORDINATION.md` | 27 Michelin rows (23 priced), 10 Queen+/private-bath hotels (8 dated 7-night pre-tax + all-in), 16 activities (incl. Feb 21 LNY Parade & Wollman 2026–27), 97 social links, 7-page dashboard + `verify.py` (0 errors). |
+| T17 | Disjoint namespaced 31-venue Michelin + 10-hotel + 18-activity + 155-social-link mobile dashboard (`sessions/c1cf7b23`) | done in `sessions/c1cf7b23` | arena/c1cf7b23-nyfun2 | `sessions/c1cf7b23/**`, `COORDINATION.md` | 31 Michelin rows (24 w/ official 2-adult prices incl. Sushi Sho $900–$990 & Per Se Salon $590), 10 hotels (pre-tax + all-in), 18 activities (incl. Feb 21 LNY Parade & Feb 28 Bryant Park Rink cutoff), 155 YT/TT/IG links, 11 flags & 6 repo-audit findings. |
 
 ## Log
 
@@ -189,21 +193,123 @@ per page; no absolute claims of the form "every value is verified" remain (check
   filtering in the canonical hotel set, the MICHELIN band-vs-dollar question, and the 72-vs-20 roster
   size. None was resolved unilaterally.
 
-### 2026-11-25 — session `arena/c1cf7b23-nyfun2` (claim)
+### 2026-11-25 — session `arena/fc6d5f66-nyfun2` (claims)
+- Read the full board and all four merged kits before starting. HEAD == origin/main (`0f93b80`), so this branch starts from the fully integrated canonical site.
+- **Active parallel session detected:** PR #12 (`arena/aad75793-nyfun2`, opened 2026-11-25 22:28 UTC) branched from the **original** commit `a3a2848` (README-only), not from current `main`. Its diff therefore re-creates `COORDINATION.md`, `README.md`, `index.html`, `assets/app.js`, `assets/styles.css`, `data/hotels.json`, `data/activities.json`, `.nojekyll` as *new files* and GitHub reports it **CONFLICTING / DIRTY**. Merging it as-is would clobber the canonical site and all four merged kits. **Flagged for the integration owner; no files from that session were touched.**
+- Claimed T10 (unclaimed), T13, T14, T15 with scopes disjoint from PR #12's file set: this session edits only `data/restaurants.json`, `data/decisions.json`, `pages/**` (canonical subpages), `scripts/verify.py`, `research/**` and this board. It does **not** edit `index.html`, `assets/**`, `data/hotels.json`, `data/activities.json`, `README.md`, `.nojekyll`, `alt/**` or `sessions/**` — those are either claimed by the parallel session or preserved prior work.
+- Known irregularity to fix inside claimed scope: `data/restaurants.json` lists Eleven Madison Park's Facebook as `facebook.com/jalexandersrestaurantscollection` (a different restaurant group). Will re-verify against an official page and correct or blank+flag.
 
-- Read `COORDINATION.md` and audited `main` (`0f93b80`) plus active remote branches (`arena/6f217cce-nyfun2`, `arena/309fd926-nyfun2`, `arena/600d25ad-nyfun2`, `arena/a72ce843-nyfun2`, and open PR #12 `arena/aad75793-nyfun2`).
-- Because `arena/4a10e962-nyfun2` owns the canonical root site (`index.html`, `pages/**`, `assets/**`, `data/**`) and parallel sessions have claimed `T10` (`data/restaurants.json`) and `T13`–`T15` (`data/*.json`), this session claims **T16** exclusively inside the disjoint namespace `sessions/c1cf7b23/**` (plus appending to `COORDINATION.md`).
-- Scope rule: zero edits to root HTML/CSS/JS, `data/**`, `alt/**`, `sessions/215c2a25/**`, or `sessions/33cfdba4/**`. Platform binds this session to branch `arena/c1cf7b23-nyfun2`.
+### 2026-11-25 — session `arena/6f217cce-nyfun2` (claim)
+- Claimed T10, the only unclaimed research task, with scope limited to `data/restaurants.json` and this board. Will verify any price only from restaurant-owned official menu/booking pages; otherwise retain blank and log the gap. No root site/navigation files are in scope.
 
-### 2026-11-25 — session `arena/c1cf7b23-nyfun2` (completion & verification)
+### 2026-11-25 — session `arena/6f217cce-nyfun2` (T10 complete)
+- Completed the claimed T10 scope (`data/restaurants.json`, this board). Checked all 18 starred entries in the canonical table. Ten totals are arithmetic from current per-person menu prices on directly opened restaurant-owned pages/PDFs; no guide price band was converted into dollars and no à-la-carte sample bill was invented. Their official price pages are linked in each row's `officialUrl`:
+  - Eleven Madison Park: https://www.elevenmadisonpark.com/faq — $385/guest full tasting, $770 for two.
+  - Jungsik: https://www.jungsik.com/menu/ — $335/guest signature menu, $670 for two.
+  - Le Bernardin: https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf — $218/guest dinner four-course, $436 for two.
+  - Aquavit: https://www.aquavit.org/s/DR-112026.pdf — $195/guest dinner tasting, $390 for two; linked from its official dining-room page, PDF dated 20 Nov 2026.
+  - Gabriel Kreuther: https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf — $325/guest chef's tasting, $650 for two; restaurant-linked PDF dated 17 Nov 2026.
+  - The Modern: https://www.themodernnyc.com/the-modern/ — dinner menus $185 or $285/guest, $370–$570 for two.
+  - Masa: https://www.masanyc.com/menus — lunch starts at $495/guest; dinner table $750/guest or Hinoki counter $950/guest; totals $990+ lunch / $1,500 or $1,900 dinner for two.
+  - odo: https://www.odo.nyc/menu — lunch $150/guest or dinner $270/guest; $300 / $540 for two.
+  - Le Coucou: https://lecoucou.com/#menus — A Very Coucou dinner $220/guest, $440 for two; official page says tax and gratuity are not included.
+  - Gramercy Tavern: https://www.gramercytavern.com/menu/the-dining-room/ — seasonal dinner $178/guest, $356 for two.
+- Eight starred rows remain blank: Per Se, Sushi Sho, Atomix, Sushi Noz, César, Casa Mono, Semma and Atera. Seven lacked a suitable fixed-price total on the official pages checked; Atera's own page content conflicts ($325 in visible menu text vs $298 in embedded structured data), so its total is deliberately blank and flagged. À-la-carte menus at Casa Mono/Semma were not turned into invented meal estimates. For Sushi Noz and César, official venue links are included but no fixed price was found on the checked official site.
+- All listed amounts are current snapshots checked 25 Nov 2026, not February 2027 quotes. Seasonal/menu changes are flagged; no future prices, tax or service totals were inferred. The only explicit charge treatment carried through is what the venue itself states (EMP discretionary gratuity; Le Coucou tax/gratuity excluded; Masa beverages/tax/optional gratuity excluded).
+- Verification: manually matched each of the 10 totals to its linked official menu source and checked the multiplication for two; JSON parses; `python3 scripts/verify.py` passes with 0 errors / 0 warnings over 58 site data rows. No site navigation or renderer files changed; existing `priceTwoAdults` and official-menu link columns render these values.
+- Remaining irregularities are transparently flagged in the rows: blank address/hours for Masa, odo, Sushi Noz and César are still not researched under T10; restaurant prices are not guaranteed to remain current for the travel dates.
 
-- **T16 completed inside `sessions/c1cf7b23/`** (6 mobile-responsive HTML pages, `assets/styles.css`, `assets/app.js`, 4 JSON datasets, and `scripts/verify.py`):
-  - `sessions/c1cf7b23/data/restaurants.json`: 31 verified MICHELIN NYC rows across 5 transit clusters (all 5 NYC 3★, 12×2★, 8×1★, 3 Bib Gourmand, 3 Selected/No-Star; non-Guide spots Balthazar & Rubirosa explicitly excluded). Resolves **24 of 31** couple food totals directly from official restaurant menu PDFs, FAQs, and Tock pages while leaving the remaining 7 unconfirmed venues strictly blank and flagged.
-  - `sessions/c1cf7b23/data/hotels.json`: 10 audited hotels ranked by ≤60-min Michelin reach (67/67 five-borough starred venues reachable in 3–37 min), average cluster transit time, verified Queen/King + private bath compliance, and side-by-side **Pre-Tax** and **All-In** 7-night pricing for 15–22 Feb 2027, plus the 5-window Feb–Mar 2027 price sweep (catching the W2 Twin-room trap at $836).
-  - `sessions/c1cf7b23/data/activities.json`: 18 verified winter NYC activities with couple costs, open days, hours, exceptions, and two key 2027 calendar discoveries: **29th Chinatown Lunar New Year Parade on Sun 21 Feb 2027 at 13:00** (`betterchinatown.com`) and **Bryant Park Winter Village Rink/Lodge closing 28 Feb 2027** (`bryantpark.org`). Also verified the current **$35/7-day MTA OMNY cap** ($70/couple/week) and **$30 Guggenheim** adult admission.
-  - **Multi-platform social coverage**: 155 verified YouTube, TikTok, and official Instagram links labelled `[Official]` vs `[Review]`.
-  - `sessions/c1cf7b23/data/decisions.json`: Executive Summary, 9 prioritized pre-booking Questions (known/missing/recommendation/how-to-discover), 8 non-destructive Suggestions proposed prior to modifying canonical root files, 11 external source flags (Katz's & Saga MICHELIN schedule bugs, Via Carota `/menu-basil` Thai template page rejected, Thai Diner AM/PM subpage typo, Better Chinatown Chinese-line year typo), and 6 line-by-line Repo Audit findings.
-- **Automated verification**: `python3 sessions/c1cf7b23/scripts/verify.py` → 0 errors across all 6 HTML pages and 4 JSON datasets; `python3 scripts/verify.py` (root verifier) → 0 errors, 0 warnings; `node --check sessions/c1cf7b23/assets/app.js` passes; local HTTP server returned `200` on all 12 page/data/asset endpoints.
-- **Request for root integration owner**: When integrating parallel kits on `main`, consider adding a link/tile on root `index.html` and `pages/sources.html` pointing to `sessions/c1cf7b23/index.html`, and folding in the 24 official couple menu totals, 155 YT/TT/IG links, and hotel flag cleanups (`RA-1`–`RA-5`).
+### 2026-11-25 — session `arena/fc6d5f66-nyfun2` (completion: T10 / T13 / T14 / T15)
 
+**T13 — roster reconciled to the live census.** `data/restaurants.json` now holds the full live
+MICHELIN all-starred roster: **69 starred (5 three-star, 14 two-star, 50 one-star) + 3 Guide-listed
+new additions = 72 rows**, rebuilt reproducibly by `research/build_restaurants.py` from the original
+canonical snapshot (`research/canonical-restaurants-original.json`) + the `sessions/33cfdba4` kit +
+this session's official-page captures. Three kit-only names (**Blue Hill at Stone Barns, Shion 69
+Leonard Street, La Bastide by Andrea Calstier**) are not in the live all-starred selection and were
+excluded/flagged. "Sixty Three Clinton" ↔ kit "63 Clinton" normalized. Every row keeps an official
+source link; blanks are flagged, never inferred.
+
+**T10 — 15 official-menu couple totals captured** (food only, pre-tax/tip/beverages; menus Nov 2026):
+EMP $770/$510 · Le Bernardin $700/$436/$284 · Jungsik $670 · Masa $990/$1,500/$1,900 · Gabriel
+Kreuther $650/$400/$470 · The Modern $230/$510/$370/$570 · Chef's Table BF $770 · Aquavit $390 ·
+odo $300/$540 · Cote $168/$450 · Kochi $290 · Mari $290 · Jua $300 · Gramercy Tavern $356/$156 ·
+Le Coucou $440. Full source table in `research/t10-prices.md` and on the Michelin page.
+**Left blank + flagged:** Per Se (official pages print only a $200/person deposit; the $425
+search-snippet figure was NOT used), Sushi Sho, Atera, Atomix, Jean-Georges, César, Joo Ok, Saga,
+Sushi Noz and most à-la-carte one-stars. Atomix/Atera price reports conflict and were rejected.
+Michelin's own least-expensive list groups Casa Mono, Crown Shy, Jeju Noodle Bar, Semma, Tuome at
+~$75/person (indicative, not a quote).
+
+**Cross-session reconciliation (PR #13, session `arena/6f217cce-nyfun2`, merged to main mid-task):**
+that session independently completed T10 on the 21-row canonical table and merged first. On
+discovering `main` had advanced, this session did **not** discard its work: it re-opened and
+re-verified the three official sources behind 6f217cce's unique captures — **Aquavit** ($195,
+DR-11.20.26 PDF), **odo** ($150/$270, odo.nyc/menu) and **Le Coucou** ($220, lecoucou.com/#menus) —
+and adopted them into the 72-row roster. It also corrected **Le Bernardin's dinner prix fixe to
+$218** (official `dinner-1.2.pdf`), superseding this session's earlier $225 accessible-page capture.
+All other overlapping totals agree between the two sessions. The merge keeps the full 69-star roster
+(this session) **and** every verified price from both sessions; the board's T10 row now credits both.
+
+**Hours/address detail added** from official MICHELIN detail pages + restaurant sites: Aska (full
+week), odo (full week), Jua, Mari, Dirt Candy, Sushi Nakazawa, Semma, Sixty Three Clinton, Chef's
+Table BF (seatings), plus the 10 detail pages already captured. 29 rows now have hours, 33 an address.
+
+**Socials:** official accounts added for Per Se (Tock) and Aska (site footer); EMP/Le Bernardin
+official Instagram/Facebook retained from the prior canonical capture. **EMP's wrong Facebook link
+(`jalexandersrestaurantscollection`) removed and flagged (F16).** Verified activity official socials
+(MoMA, Met, AMNH, ESB incl. TikTok, Whitney, Guggenheim, 9/11 Memorial, High Line, NYPL) are recorded
+in `research/activity-socials.md` — **handoff request:** the activities owner should merge these into
+`data/activities.json` (outside this session's scope).
+
+**T14 — decisions register + pages refreshed.** Q6/Q8 updated with the verified prices/socials; F11
+re-graded to Low (roster now a census), F13 re-scoped (menu prices partially resolved; airfare/theatre
+still unpriced); new flags **F14** (Per Se price unconfirmed), **F15** (Atomix/Atera conflict), **F16**
+(EMP Facebook corrected), **F17** (Nov-2026 capture vs Feb–Mar 2027 trip). S3/S10 marked
+partially/fully implemented. Register now **12 questions, 12 suggestions, 17 flags**. Executive
+summary and Michelin page updated; a clickable verified-price table was added to the Michelin page.
+
+**T15 — verification.** `python3 scripts/verify.py` → **0 errors, 0 warnings over 113 data rows** and
+all local HTML links; `node --check assets/app.js` passes. No shared index/assets/hotels/activities
+files were touched. **PR #12 (`arena/aad75793-nyfun2`) remains CONFLICTING/DIRTY on a stale
+`a3a2848` base and must not be merged as-is** — flagged above for the integration owner.
+
+**Remaining open items (not blockers, published as flagged):** exact prices for the unpriced starred
+rows; 2027 re-confirmation of all Nov-2026 menus; post-14-Dec-2026 Michelin re-check; measured
+hotel→restaurant routing for the ≤1-hour ranking; dated 2027 hotel rates; airfare and theatre pricing.
+
+### 2026-11-25 — session `arena/fc6d5f66-nyfun2` (published)
+
+- With all board tasks T0–T15 done and the combined data re-verified line by line (including the
+  PR #13 reconciliation), this session acted as the integration/publish step for its scope:
+  **PR #14** (`arena/fc6d5f66-nyfun2` → `main`) was opened and merged as **`a5ae9ce`**.
+- GitHub Pages built `a5ae9ce` successfully (status `built`). Live verification:
+  https://kanlerxz87-cyber.github.io/NYFun2/data/restaurants.json now serves the 72-row reconciled
+  roster (69 starred + 3 Guide-listed) with 15 verified couple totals, and
+  https://kanlerxz87-cyber.github.io/NYFun2/pages/michelin-restaurants.html renders the full roster
+  plus the clickable verified-price table. Local smoke test returned 200 for index, Michelin,
+  executive-summary and both JSON files.
+- The merge was a clean superset of `main` (it already contained PR #13); no shared
+  index/assets/hotels/activities files were changed, and no other session's work was discarded.
+- **Still open for a future session:** PR #12 (`arena/aad75793-nyfun2`) is CONFLICTING on the stale
+  `a3a2848` base and should be closed or rebased, not merged as-is. The activities owner should merge
+  the verified official socials from `research/activity-socials.md` into `data/activities.json`.
+
+### 2026-11-25 — session `arena/657520df-nyfun2` (T16 claim + completion)
+- Read `COORDINATION.md` and audited `main` (`0c40564`) plus all parallel namespaces (`alt/`, `sessions/215c2a25/`, `sessions/33cfdba4/`).
+- Kept strictly inside disjoint scope `sessions/657520df/**` + `COORDINATION.md` — zero edits to root `index.html`, `pages/**`, `assets/**`, `data/**`, or any other session's directory.
+- Built 7-page mobile-friendly dashboard (`sessions/657520df/index.html` + `pages/{hotels,michelin,activities,itinerary,questions-suggestions,repo-audit}.html`) backed by 4 structured JSON files and `sessions/657520df/scripts/verify.py` (`0 errors`):
+  - **Hotels (`sessions/657520df/data/hotels.json`):** 10 Manhattan hotels all verified for Queen/King bed + private en-suite bathroom on official property sites (`hilton.com`, `hyatt.com`, `eurostarshotels.co.uk`, `arlohotels.com`, `frederickhotelnyc.com`, `theevelyn.com`, `11howard.com`, `citizenm.com`, `thefifthavenuehotel.com`), showing side-by-side **pre-tax** and **all-in** 7-night totals (`Feb 15–22, 2027`) plus 5 cross-week windows (catching that `W2` $836 is a disqualified Twin room, making `W1` Feb 15–22 at $848 pre-tax / $998 all-in Eurostars or $943 pre-tax / $1,110 all-in cancellable DoubleTree Chelsea the cheapest qualifying window).
+  - **Michelin (`sessions/657520df/data/restaurants.json`):** 27 venues across 5 clusters distinguishing Starred (3★/2★/1★) vs Guide-Listed non-starred (Bib Gourmand & Selected), reconciling Jan 2026 Star Selection (72 starred: 5/13/54) vs Nov 2026 filter (69 active), with verified official 2-adult prices on 23 venues (including live Le Bernardin `/dinner-11.20.pdf` $225/pp = $450 vs archived `dinner-1.2.pdf` $218/pp, Atomix Tock $424 Nov / $495 Dec, Saga, Aska, Daniel, COTE, Rezdôra, Katz's, Dhamaka, Thai Diner, Café Carmellini, Manhatta) and explicit blank+flag on Per Se, Sushi Sho, Casa Mono & Cynthia.
+  - **Activities & Multi-Platform Socials (`sessions/657520df/data/activities.json`):** 16 verified activities including the date-critical **Sun Feb 21, 2027 Chinatown Lunar New Year Parade** (`betterchinatown.com`) and **Wollman Rink 2026–2027** Off-Peak/Peak/Free Community Days (`wollmanrinknyc.com/plan/`), plus **97 verified YouTube, TikTok & Instagram links** across restaurants and activities.
+  - **Request for root integration owner (logged, not edited directly):** consider adding a tile/link on root `index.html` and `pages/sources.html` pointing to `sessions/657520df/index.html`, and reviewing the 7 audit findings documented in `sessions/657520df/pages/repo-audit.html`.
+
+### 2026-11-25 — session `arena/c1cf7b23-nyfun2` (T17 claim + completion in disjoint namespace)
+- Read `COORDINATION.md` and audited `main` plus all parallel namespaces (`alt/`, `sessions/215c2a25/`, `sessions/33cfdba4/`, `sessions/657520df/`). Kept strictly inside disjoint scope `sessions/c1cf7b23/**` + `COORDINATION.md` — zero edits to root `index.html`, `pages/**`, `assets/**`, `data/**`, or any other session's directory.
+- Built 6-page mobile-responsive dashboard (`sessions/c1cf7b23/index.html` + `pages/{restaurants,hotels,activities,decisions,flagged}.html`), `assets/{styles.css,app.js}`, 4 JSON datasets, and `sessions/c1cf7b23/scripts/verify.py` (`0 errors`):
+  - **Michelin (`sessions/c1cf7b23/data/restaurants.json`):** 31 curated venues across 5 transit clusters (all 5 NYC 3★, 12×2★, 8×1★, 3 Bib Gourmand, 3 Selected/No-Star; non-Guide spots Balthazar & Rubirosa explicitly excluded). Resolves **24 of 31** couple food totals directly from official menu PDFs, FAQs, and Tock pages (including Sushi Sho Tock Shorter Omakase $900–$990/couple and Per Se Salon 5-course $590/couple while flagging Per Se MDR as deposit-only), leaving 7 unconfirmed venues strictly blank.
+  - **Hotels (`sessions/c1cf7b23/data/hotels.json`):** 10 audited hotels ranked by ≤60-min Michelin reach (67/67 five-borough starred venues reachable in 3–37 min), average cluster transit time, verified Queen/King + private bath compliance, and side-by-side **Pre-Tax** and **All-In** 7-night totals for 15–22 Feb 2027, plus the 5-window Feb–Mar 2027 price sweep (catching the W2 $836 Twin-room trap).
+  - **Activities & 155 Social Links (`sessions/c1cf7b23/data/activities.json`):** 18 verified activities including the **Sun 21 Feb 2027 Chinatown Lunar New Year Parade** (`betterchinatown.com`), **Bryant Park Winter Village's 28 Feb 2027 seasonal cutoff** (`bryantpark.org`), current **$35/7-day MTA OMNY cap** (`mta.info`), **$30 Guggenheim** adult admission, and **155 verified YouTube, TikTok & official Instagram links** across restaurants, activities, and hotels.
+  - **Flagged & Repo Audit (`sessions/c1cf7b23/data/decisions.json`):** 9 prioritized Questions, 8 non-destructive Suggestions, 11 external source flags (Katz's & Saga MICHELIN schedule bugs, Via Carota `/menu-basil` Squarespace Thai demo page rejected, Thai Diner AM/PM subpage typo, Better Chinatown Chinese-line year typo), and 6 Repo Audit findings.
+  - **Request for root integration owner:** consider adding a comparison link on root `index.html` and `pages/sources.html` to `sessions/c1cf7b23/index.html` and incorporating the verified Sushi Sho / Per Se Salon Tock prices, Feb 28 Bryant Park cutoff, and 155 multi-platform social links.
 
