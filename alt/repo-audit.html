@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repo audit — NYC Trip Feb 2027</title>
+<meta name="description" content="Line-by-line audit of the repository as it arrived: history, branch state, Pages configuration, missing hygiene files, and the irregularities found.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div style="background:#fff4d6;border-bottom:1px solid #e8c87a;padding:10px 16px;font:14px/1.4 -apple-system,Segoe UI,Roboto,sans-serif;color:#5c4300">
+<strong>Alternate research kit (session arena-1a7ae497).</strong> Preserved unchanged for review. The main dashboard is <a href="../index.html">here ↗</a>. This kit includes its own dated hotel-rate and budget analysis.
+</div>
+
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+
+<main id="main" class="wrap">
+
+  <div class="hero">
+    <span class="eyebrow">Repo audit · state as found on 25 Nov 2026</span>
+    <h1>What was actually in the repository</h1>
+    <p class="lead">
+      The repository was nearly empty. This page records the commands that were run, the outputs they
+      returned, and every irregularity found — so the audit itself can be checked rather than trusted.
+    </p>
+  </div>
+
+  <section>
+    <div class="section-head">
+      <h2>State as found</h2>
+      <span class="hint">raw command output, reproduced verbatim</span>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th scope="col">Check</th><th scope="col">Command</th><th scope="col">Result</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Files present</strong></td>
+            <td><code>ls -la</code></td>
+            <td><code>README.md</code> — 8 bytes. No other files, no directories other than <code>.git</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>README content</strong></td>
+            <td><code>cat README.md</code></td>
+            <td><code># NYFun2---</code> — a heading followed by three literal hyphens.</td>
+          </tr>
+          <tr>
+            <td><strong>Commit history</strong></td>
+            <td><code>git log --oneline</code></td>
+            <td><code>a3a2848 Initial commit</code> — one commit, no prior work.</td>
+          </tr>
+          <tr>
+            <td><strong>Working branch</strong></td>
+            <td><code>git status</code></td>
+            <td><code>arena/1a7ae497-nyfun2</code>, clean, branched from <code>a3a2848</code> on <code>main</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>Remote</strong></td>
+            <td><code>git remote -v</code></td>
+            <td>origin → <code>github.com/kanlerxz87-cyber/NYFun2</code> (https).</td>
+          </tr>
+          <tr>
+            <td><strong>Pages configuration</strong></td>
+            <td><code>gh api repos/kanlerxz87-cyber/NYFun2/pages</code></td>
+            <td><code>status: built</code> · <code>build_type: legacy</code> · <code>source: main, path /</code> · <code>public: true</code> · <code>https_enforced: true</code> · URL <code>https://kanlerxz87-cyber.github.io/NYFun2/</code></td>
+          </tr>
+          <tr>
+            <td><strong>Coordination board</strong></td>
+            <td><code>cat COORDINATION.md</code></td>
+            <td>File did not exist. Created as part of this session.</td>
+          </tr>
+          <tr>
+            <td><strong>Licence</strong></td>
+            <td><code>ls LICENSE*</code></td>
+            <td>None.</td>
+          </tr>
+          <tr>
+            <td><strong>Ignore rules</strong></td>
+            <td><code>ls .gitignore</code></td>
+            <td>None.</td>
+          </tr>
+          <tr>
+            <td><strong>CI / workflows</strong></td>
+            <td><code>ls .github/workflows</code></td>
+            <td>None. Pages publishes whatever is pushed to <code>main</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>Build tooling</strong></td>
+            <td><code>ls package.json</code></td>
+            <td>None — no framework, no build step.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Findings</h2></div>
+    <div class="table-scroll" data-table="repo_findings"></div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Decision taken on publishing</h2></div>
+    <div class="callout warn">
+      <h4>Pages serves <code>main</code> at the repository root</h4>
+      <p>
+        Because the Pages source is <code>main /</code>, a site placed in <code>/docs</code> would not be
+        served without reconfiguring Pages. The site therefore lives at the repository root
+        (<code>index.html</code> plus one page per topic and an <code>assets/</code> folder), which publishes
+        on merge with zero configuration change. The trade-off is that build-source files sit next to the
+        published pages — acceptable for a static, dependency-free site.
+      </p>
+    </div>
+    <div class="callout">
+      <h4>No external dependencies at all</h4>
+      <p>
+        The site uses one stylesheet, three scripts and no CDN, no fonts, no analytics, no cookies. That keeps
+        the Pages build trivially reproducible and means a blocked CDN can never break the page.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Found vs. added</h2></div>
+    <div class="grid two">
+      <div class="card">
+        <h3>Found</h3>
+        <ul class="clean">
+          <li>1 × README.md (8 bytes)</li>
+          <li>1 × commit on main</li>
+          <li>GitHub Pages already enabled</li>
+          <li>Nothing else</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Added by this session</h3>
+        <ul class="clean">
+          <li>COORDINATION.md — shared task board with claims and scopes</li>
+          <li>README.md — scope, method, sources, publishing notes</li>
+          <li>LICENSE, .gitignore, .nojekyll</li>
+          <li>11 pages + <code>assets/site.css</code>, <code>data.js</code>, <code>tables.js</code>, <code>app.js</code></li>
+          <li>A Python check script that validates every internal link and every script parses</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/data.js"></script>
+<script src="assets/tables.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

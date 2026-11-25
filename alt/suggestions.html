@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggestions register — NYC Trip Feb 2027</title>
+<meta name="description" content="Ten reviewed suggestions for improving this planning kit, each with impact, effort, problem, proposal and definition of done — plus three ready-made paths to choose from.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div style="background:#fff4d6;border-bottom:1px solid #e8c87a;padding:10px 16px;font:14px/1.4 -apple-system,Segoe UI,Roboto,sans-serif;color:#5c4300">
+<strong>Alternate research kit (session arena-1a7ae497).</strong> Preserved unchanged for review. The main dashboard is <a href="../index.html">here ↗</a>. This kit includes its own dated hotel-rate and budget analysis.
+</div>
+
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+
+<main id="main" class="wrap">
+
+  <div class="hero">
+    <span class="eyebrow">Suggestions register · nothing here is applied yet</span>
+    <h1>Ten ways to improve this before anyone acts on it</h1>
+    <p class="lead">
+      This page exists so a decision can be reviewed before it is implemented. Each suggestion names the
+      problem it solves, the change proposed, and the test that proves it worked. Pick a path at the bottom,
+      or approve individual items.
+    </p>
+  </div>
+
+  <section>
+    <div class="section-head">
+      <h2>Three paths — choose one</h2>
+      <span class="hint">or pick items individually from the register</span>
+    </div>
+    <div class="grid three">
+      <div class="card">
+        <h3>Path A · Decide this week <span class="badge b-verified">~2 hours</span></h3>
+        <p>Do <strong>S10, S5, S2</strong> only: fix trip length, price three alternative weeks, capture four
+        tasting-menu prices. Everything else stays as-is.</p>
+        <p class="small">You end up able to choose a hotel, a week and a dinner budget. Proximity and social
+        coverage stay unverified and visibly flagged.</p>
+      </div>
+      <div class="card">
+        <h3>Path B · Decision-grade <span class="badge b-info">~2 days</span></h3>
+        <p>Add <strong>S1, S3, S9</strong>: wire a transit API, complete the MICHELIN index to all 69, and
+        verify hours at each venue’s own page.</p>
+        <p class="small">You end up with a genuine hotel ranking by “starred restaurants within one hour”,
+        which is the core of the original brief.</p>
+      </div>
+      <div class="card">
+        <h3>Path C · Budget-first <span class="badge b-verified">~1 hour</span></h3>
+        <p>Do <strong>S10, S6, S2</strong>: fix length, make the refundable-vs-non-refundable premium explicit,
+        price four menus.</p>
+        <p class="small">You end up with a defensible cash ceiling. Proximity analysis is deferred.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>The register</h2>
+      <span class="hint">sorted by impact, then effort</span>
+    </div>
+    <div class="table-scroll" data-table="suggestions"></div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Suggested order of work</h2></div>
+    <div class="card">
+      <ol class="steps">
+        <li><strong>S10 first.</strong> Deciding 7 vs 14 nights invalidates or validates every number on the site — it is a single answer with a large blast radius.</li>
+        <li><strong>Then S5.</strong> Four more windows × four hotels turns “we priced one week” into “we found the cheapest week”, which is literally what the brief asks.</li>
+        <li><strong>Then S2.</strong> Menu prices are the only genuinely large unknown left in the food line.</li>
+        <li><strong>Then S1 + S3 together.</strong> A routing API is only worth wiring once the full restaurant list exists; doing S1 against 4 verified venues would be misleading.</li>
+        <li><strong>S6, S7, S8 are polish.</strong> Valuable, but they do not change a decision.</li>
+        <li><strong>S4 and S9 are governance.</strong> Adopt them as rules so future passes cannot quietly invent a handle or an opening time.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Rules this site has been holding itself to</h2></div>
+    <div class="grid two">
+      <div class="card">
+        <h3>What counts as verified</h3>
+        <p>A value is verified only when an official page — or a booking-partner page the venue itself links to — states it, and that page was read during the session. The row then links to it.</p>
+      </div>
+      <div class="card">
+        <h3>What happens when it cannot be</h3>
+        <p>The cell stays empty and gets a flag ID. There is no fallback to “roughly”, “usually” or “approximately” for a fact. Arithmetic the site performs itself is labelled as an estimate and shows the formula.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/data.js"></script>
+<script src="assets/tables.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
