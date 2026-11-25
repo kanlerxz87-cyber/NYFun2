@@ -1,0 +1,424 @@
+{
+  "checkedOn": "2026-11-25",
+  "session": "arena/c1cf7b23-nyfun2",
+  "executiveSummary": {
+    "headline": "Decision-Ready NYC Plan for 2 Adults (Feb 15 – Mar 23, 2027)",
+    "coreRecommendation": "Lock in Monday 15 Feb – Monday 22 Feb 2027 (7 nights) with a $0-prepayment free-cancellation King Room at DoubleTree by Hilton NYC Chelsea ($943 pre-tax / $1,110 all-in) or Hyatt Place NYC Chelsea ($1,113 pre-tax / $1,305 all-in with hot buffet breakfast).",
+    "keyFindings": [
+      {
+        "topic": "1 · Trip Dates & Cheapest Window",
+        "summary": "Your preferred Feb 15–18, 2027 (Mon–Thu, 3 nights) sits inside the single cheapest verified 7-night hotel window of the entire Feb 15 – Mar 23 period: Feb 15–22, 2027 ($848 pre-tax / $998 all-in Queen floor at Eurostars Wall St; $943 pre-tax / $1,110 all-in cancellable King at DoubleTree Chelsea). Extending to the full 7 nights (Feb 15–22) also captures the 29th Chinatown Lunar New Year Parade on Sunday Feb 21 at 1:00 PM and Bryant Park Winter Village before its hard Feb 28 seasonal shutdown. Waiting until mid-March (Mar 15–22) raises the exact same Queen room by +49% ($1,260 pre-tax / $1,474 all-in)."
+      },
+      {
+        "topic": "2 · Best Time to Book Hotels",
+        "summary": "No official source forecasts future hotel algorithm drops, so the provably optimal strategy is a Two-Step Cancellable Lock: (a) reserve a free-cancellation rate immediately (several properties currently run ~30–39% 'Black Friday Deals' valid on stays through Dec 2027 with free cancellation until Feb 13, 2027 and $0 upfront), then (b) re-check direct hotel & OTA rates ~30–45 days out (early January 2027) and rebook only if lower."
+      },
+      {
+        "topic": "3 · Michelin Clusters & the ≤1-Hour Subway/Bus Rule",
+        "summary": "Official MICHELIN NYC counts (verified 25 Nov 2026) stand at 69 Starred (5×3★, 14×2★, 50×1★) plus 76–78 Bib Gourmand and 224 Selected listings. Exactly 67 of the 69 starred venues sit inside the 5 boroughs (2 are in Westchester and unreachable in ≤1 hr). Across 25 measured Google Maps transit legs from 5 Manhattan hotels to all 5 NYC Michelin clusters (including Aska 2★ in Williamsburg, Brooklyn), EVERY trip took 3 to 37 minutes. Because all central Manhattan hotels tie at 67/67 reachable stars under 60 minutes, hotel ranking is decided by average cluster transit time (17.2–21.4 min), verified Queen/King + private bath compliance, and all-in 7-night cost."
+      },
+      {
+        "topic": "4 · Verified Michelin Couple Costs (2 Adults)",
+        "summary": "Unlike earlier runs that left all restaurant totals blank, we verified official published per-person and menu prices for 24 of 31 curated Michelin venues directly from restaurant websites, PDFs, and official Tock pages: 3★ couple base menus span $274 (Le Bernardin Lunch) and $436 (Le Bernardin Dinner) up to $670 (Jungsik), $770 (Eleven Madison Park Dining Room), and $900–$990 (Sushi Sho Shorter Omakase); 2★ spans $230 (The Modern Lunch) to $1,500–$1,900 (Masa); 1★ value stars include Semma ($114–$164/couple), Cote Butcher's Feast ($168/couple), and Rezdôra Pasta Tasting ($220/couple); Bib Gourmand icons run $49–$68 (Cho Dang Gol) and $57.90–$61.90 (Katz's)."
+      },
+      {
+        "topic": "5 · Critical Pre-Trip Event Alert (14 Dec 2026)",
+        "summary": "MICHELIN North America officially scheduled the 2026 Northeast Cities Ceremony for Monday, 14 December 2026 — after today's verification (25 Nov 2026) and ~2 months before your Feb 2027 trip, and critically BEFORE Jan/Feb 2027 restaurant reservations open on Resy/Tock (typically 1st of prior month or 14–30 days ahead). Re-audit star promotions/demotions on Dec 15, 2026 before locking dining deposits."
+      },
+      {
+        "topic": "6 · Verified Transit & Activity Math",
+        "summary": "Official MTA subway/local bus fare is $3.00 per tap (not the outdated $2.90), capped at $35.00/person per rolling 7-day period via OMNY ($70.00/couple/week max). Seven of our 18 verified activities are $0.00 (Central Park, High Line, Staten Island Ferry, Brooklyn Bridge & DUMBO, NYPL Schwarzman, Bryant Park Rink admission, Chinatown LNY Parade), and Whitney Museum is $0.00 on Friday evenings (17:00–22:00) and Second Sundays."
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "priority": "Blocking",
+      "question": "Exact Trip Duration: Are we booking the 3-night preferred stay (Feb 15–18), a 7-night week (Feb 15–22 or Feb 22–Mar 1), or a 2–4 week extended stay?",
+      "known": "Preferred dates Feb 15–18, 2027 = 3 nights (Mon–Thu). Feb 15–22, 2027 = 7 nights (Mon–Mon) and is the cheapest verified 7-night hotel window ($998–$1,305 all-in). Allowed window runs Feb 15 – Mar 23, 2027 (up to 36 nights).",
+      "missing": "Travelers' available PTO days and whether they want a short getaway (3 nights), standard 1-week benchmark (7 nights), or multi-week stay (14–28 nights).",
+      "answerFramework": "Choose 7 nights (Mon Feb 15 – Mon Feb 22) if schedule permits: it unlocks Friday/Saturday Michelin dinner-only schedules, Free Friday Night at the Whitney, and Sunday Feb 21's Chinatown Lunar New Year Parade while keeping hotel rates at their seasonal floor.",
+      "howToDiscover": "Confirm couple's work-leave approval and return-flight flexibility; if staying 14–28+ nights, check NYC 30+ night tax-exempt extended-stay rules vs. splitting two cancellable bookings.",
+      "sourceUrl": "https://www.timeanddate.com/calendar/monthly.html?year=2027&month=2"
+    },
+    {
+      "id": "Q2",
+      "priority": "Blocking",
+      "question": "Total Couple Budget Ceiling & Fine-Dining Allocation: How many 2★/3★ tasting menus vs. 1★/Bib Gourmand meals do you want?",
+      "known": "Verified 7-night compliant hotels span $998 to $5,220 all-in. Verified Michelin couple food-only bills span $58 (Katz's) and $168 (Cote 1★) up to $770 (EMP 3★) and $1,900 (Masa 2★ counter) BEFORE 8.875% tax, ~20% tip, and $125–$600/pp wine pairings.",
+      "missing": "Total trip budget ceiling and appetite for $800–$1,200+ all-in tasting dinners.",
+      "answerFramework": "A balanced 7-night 'Smart Splurge' mix (one 3★ dinner like Le Bernardin $436 base, one 2★ lunch like The Modern $230 or odo $300, two 1★ dinners like Cote $168 & Rezdôra $220, plus Bib Gourmand meals) keeps Michelin food base around ~$1,250/couple vs. $4,000+ for nightly 3★ tastings.",
+      "howToDiscover": "Select 1 of 3 couple budget tiers ($3,000 Value / $5,200 Balanced / $9,500+ Luxury) before Dec 31, 2026 so Jan 1 / Feb 1 Resy & Tock reservation drops target the exact right restaurants.",
+      "sourceUrl": "https://www.elevenmadisonpark.com/faq"
+    },
+    {
+      "id": "Q3",
+      "priority": "Blocking",
+      "question": "Origin City, Flights / Rail & Arrival Time on Day 1: Which NYC airport (JFK, LGA, EWR) or Amtrak hub, and what time do you land?",
+      "known": "Standard hotel check-in is 15:00–16:00. Prepaid Tock Michelin dinners (Atomix, Atera, Masa, Sushi Noz, Sushi Sho) enforce strict no-show forfeitures ($150–$1,200/person).",
+      "missing": "Origin airport/station (e.g., AMS Schiphol if traveling from South Holland, NL, or domestic US hub), flight arrival/departure times, and round-trip airfare.",
+      "answerFramework": "NEVER schedule a prepaid Tock Michelin tasting on Arrival Night (Mon Feb 15); winter transatlantic/Northeast flight delays risk forfeiting $600–$1,000 in deposits. Use walk-in Bib Gourmand (Cho Dang Gol or Katz's) on Night 1.",
+      "howToDiscover": "Price round-trip flights into JFK/EWR/LGA for Feb 15–22 vs. Feb 22–Mar 1 on airline official sites; record landing time + 2.5-hour customs/AirTrain buffer.",
+      "sourceUrl": "https://www.mta.info/fares-tolls/subway-bus"
+    },
+    {
+      "id": "Q4",
+      "priority": "High",
+      "question": "Dietary Restrictions, Allergies & Alcohol Preferences: Do either of the 2 adults have allergies or prefer non-alcoholic pairings?",
+      "known": "Jungsik's official Tock states it CANNOT accommodate soy or garlic allergies; Odo East Village is 100% gluten-free; Eleven Madison Park offers both plant-based and animal-protein paths; Semma/Dirt Candy excel at vegetarian/regional diets.",
+      "missing": "Specific allergies (shellfish, soy, garlic, gluten, nuts, dairy), meat/seafood preferences, and wine vs. temperance pairing preference.",
+      "answerFramework": "Dietary rules immediately disqualify or elevate specific 3★ houses (e.g., Le Bernardin/Sushi Sho/Masa are seafood-dominant; Jungsik bars soy/garlic allergies).",
+      "howToDiscover": "Complete a 2-minute couple dietary checklist before booking any Tock/Resy deposit.",
+      "sourceUrl": "https://www.exploretock.com/jungsik"
+    },
+    {
+      "id": "Q5",
+      "priority": "High",
+      "question": "Post-Ceremony Michelin Changes: Which NYC restaurants gain or lose stars on 14 December 2026?",
+      "known": "Current NYC tally is 5×3★, 14×2★, 50×1★ (checked 25 Nov 2026). MICHELIN's official 2026 Northeast Cities Ceremony takes place 14 Dec 2026.",
+      "missing": "The 2026/2027 star promotions, demotions, and new Bib Gourmand awards to be announced on Dec 14.",
+      "answerFramework": "Hold off on finalizing restaurant rankings until Dec 15, 2026 — convenient because February 2027 reservations do not open until Jan 1 – Feb 1, 2027 anyway.",
+      "howToDiscover": "Re-check guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred on 15 Dec 2026 and diff against our 25-row dataset.",
+      "sourceUrl": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/"
+    },
+    {
+      "id": "Q6",
+      "priority": "High",
+      "question": "Hotel Refundability vs. Lowest Rate & Room Size Tolerance: Is a $112–$489 savings worth non-refundable terms or a 150 sq ft micro-room?",
+      "known": "Eurostars Wall St Non-Refundable is $998 all-in vs. DoubleTree Chelsea Free-Cancellation King at $1,110 all-in (+$112 for full flexibility + King bed + 210 sq ft) and Hyatt Place Chelsea Free-Cancellation King + Free Breakfast at $1,305 all-in. Arlo NoMad is 150 sq ft.",
+      "missing": "Couple's preference for room square footage (150–172 sq ft micro vs. 200–300 sq ft full room) and risk tolerance for non-refundable OTA partner rates.",
+      "answerFramework": "Pay the +$112 for DoubleTree Chelsea ($1,110 all-in) or +$307 for Hyatt Place Chelsea ($1,305 all-in w/ breakfast for 2 worth ~$200+/week) to keep 100% free cancellation until Feb 13, 2027.",
+      "howToDiscover": "Compare direct Hilton Honors / World of Hyatt member cancellable quotes against the Booking.com snapshots and lock one refundable hold now.",
+      "sourceUrl": "https://www.hilton.com/en/hotels/nyccldt-doubletree-new-york-city-chelsea/hotel-info/"
+    },
+    {
+      "id": "Q7",
+      "priority": "Medium",
+      "question": "Observation Deck & Statue of Liberty Tier Choice: Which single skyline deck, and do you want Statue Crown/Pedestal access?",
+      "known": "Statue of Liberty General Ferry ($52/couple) vs. Pedestal/Crown ($52.60/couple — same price +$0.60, but sells out months early). Observation decks cost $80–$158/couple (Top of the Rock $80–$84+, ESB $93–$158+, SUMMIT dynamic).",
+      "missing": "Whether the couple wants to climb the Statue Crown (requires immediate check on cityexperiences.com) and whether they prefer classic outdoor views (Top of the Rock) vs. mirrored art installation (SUMMIT).",
+      "answerFramework": "Book Statue Crown/Pedestal Reserve ($52.60/couple) immediately if available; pick ONE observation deck (Top of the Rock at sunset for unobstructed Empire State + Central Park views) rather than paying thrice.",
+      "howToDiscover": "Check Feb 2027 Crown Reserve inventory on cityexperiences.com/new-york/city-cruises/statue/ at 60–90 days out.",
+      "sourceUrl": "https://www.cityexperiences.com/new-york/city-cruises/statue/faq/general/"
+    },
+    {
+      "id": "Q8",
+      "priority": "Medium",
+      "question": "Unpublished Menu Prices & Broadway/Live Show Add-Ons: What are exact 2027 prices for César, Estela, Casa Mono, Per Se MDR, and any Broadway shows?",
+      "known": "Seven of 31 restaurant rows (César, Estela, Casa Mono, Thai Diner, Via Carota, Len Len, Odo East Village) and SUMMIT One Vanderbilt hide live prices behind dynamic calendars or unindexed JS; Broadway Feb 2027 schedules were not selected.",
+      "missing": "Exact per-person dinner numbers for those 7 restaurants, SUMMIT's dated Feb 2027 slot price, and whether the couple wants 1–2 Broadway/jazz nights.",
+      "answerFramework": "Keep unconfirmed cells strictly blank today; if choosing any of those 7 venues, inspect live Tock/venue checkout in a browser before booking.",
+      "howToDiscover": "Open live checkout calendars 30–60 days before travel and log screenshots + URLs.",
+      "sourceUrl": "https://www.exploretock.com/cesarrestaurant"
+    },
+    {
+      "id": "Q9",
+      "priority": "Low",
+      "question": "Winter Weather Contingency & Packing: How should outdoor walks/ferries flex around mid-February NYC cold snaps or snow?",
+      "known": "Mid-February NYC days are cold/windy; Bryant Park Rink closes Feb 28; High Line Rail Yard closes at dusk; museums (Met, MoMA, AMNH, Whitney, 9/11, Guggenheim, NYPL) provide warm multi-hour indoor anchors.",
+      "missing": "7-day NWS forecast (only accurate ~5–7 days prior to Feb 15, 2027).",
+      "answerFramework": "Pair every outdoor walk (Brooklyn Bridge, High Line, Central Park, Liberty Ferry) with an adjacent indoor museum on the same subway line so days can swap seamlessly if rain/snow hits.",
+      "howToDiscover": "Check weather.gov NYC forecast 5 days before departure and swap outdoor days accordingly (free walk-up activities require $0 rebooking fee).",
+      "sourceUrl": "https://www.thehighline.org/visit/"
+    }
+  ],
+  "suggestions": [
+    {
+      "id": "S1",
+      "category": "Data & Pricing Accuracy",
+      "impact": "High",
+      "effort": "Low",
+      "title": "Standardize Hotel Tables Around Side-by-Side Pre-Tax AND All-In Totals (Including Resort Fees)",
+      "rationale": "Across the repo's parallel sessions, one session reported pre-tax totals ($848 Eurostars) while another reported all-in totals ($1,305 Hyatt Place), making cross-reading misleading because NYC's 14.75% + $4/nt tax and $35–$57/nt resort fees add $150–$730/week.",
+      "proposedAction": "Adopt dual columns (Pre-Tax 7-Night + All-In 7-Night with explicit tax/fee math) across the canonical root Hotels table before merging session kits.",
+      "status": "Proposed for Review (Demonstrated in this session's Hotels view; root canonical files untouched)"
+    },
+    {
+      "id": "S2",
+      "category": "Booking Execution",
+      "impact": "High",
+      "effort": "Low",
+      "title": "Add a Reservation Release-Date Countdown & Calendar Export (.ics) for 3★/2★ Tock & Resy Drops",
+      "rationale": "Top NYC Michelin tables (Atomix, Eleven Madison Park, Saga, Semma, Le Bernardin) sell out within minutes of their monthly/rolling release (e.g., Jan 1 at 12:00/14:00 EST or 15–30 days prior at 09:00 EST). Knowing hours isn't enough if the drop window is missed.",
+      "proposedAction": "Add a 'Booking Drop Rule' column and downloadable .ics calendar reminders for each shortlisted Michelin restaurant once travel dates are locked.",
+      "status": "Proposed for Review — Awaiting user choice of restaurants & exact dates"
+    },
+    {
+      "id": "S3",
+      "category": "Post-Dec-14 Maintenance",
+      "impact": "High",
+      "effort": "Low",
+      "title": "Schedule an Automated Post-Ceremony Michelin Re-Verification Script After 14 December 2026",
+      "rationale": "MICHELIN's 2026 Northeast Cities Ceremony is confirmed for 14 Dec 2026. Any restaurant promoted to 1★–3★ will spike in demand, and any demoted venue may alter the couple's splurge choice.",
+      "proposedAction": "Add a GitHub Actions workflow or scheduled script run on 15 Dec 2026 to diff the official NYC all-starred list against data/restaurants.json and open a review PR.",
+      "status": "Proposed for Review — No CI workflows added without approval"
+    },
+    {
+      "id": "S4",
+      "category": "Decision UX",
+      "impact": "High",
+      "effort": "Medium",
+      "title": "Add an Interactive 'Couple All-In Meal Calculator' (+8.875% NYC Tax, Tip & Pairing Toggle)",
+      "rationale": "Published Michelin menu prices ($436 Le Bernardin, $770 EMP) exclude 8.875% NYC tax (~$39–$68), 20% gratuity (~$87–$154, where not service-included), and $125–$255/pp wine pairings — meaning a '$770' dinner can actually bill $990 food-only or $1,310+ with wine.",
+      "proposedAction": "Add a toggleable Tax + Gratuity + Beverage Pairing estimator next to the official menu base total so budget planning reflects real credit-card charges while keeping official base figures separate.",
+      "status": "Proposed for Review — Kept strictly separate from raw verified table cells"
+    },
+    {
+      "id": "S5",
+      "category": "Transit & Map UX",
+      "impact": "Medium",
+      "effort": "Medium",
+      "title": "Embed an Offline-Capable Cluster Pin Map Showing Hotels vs. Day-of-Week Open Restaurants",
+      "rationale": "Because all central Manhattan hotels pass the ≤60-min transit test (max 37 min), the real geographic optimization is grouping same-day museums with walkable dinner clusters (e.g., MoMA + Le Bernardin/The Modern; Whitney/High Line + Semma/Via Carota; 9/11 Memorial + Saga/Crown Shy/Jungsik) while filtering out Monday/Sunday closures.",
+      "proposedAction": "Add a static SVG or Leaflet pin map with a 'Day of Week' filter pill (Mon–Sun) that grays out closed venues (Jungsik/Sushi Sho/odo closed Mon; Le Bernardin/Aquavit/Kreuther/Semma closed Sun; Saga/Aska closed Mon–Tue).",
+      "status": "Proposed for Review"
+    },
+    {
+      "id": "S6",
+      "category": "Social Proof Quality",
+      "impact": "Medium",
+      "effort": "Low",
+      "title": "Separate 'Official Venue Social Handle' Badges from 'Independent Reviewer Video' Links & Show Post Year",
+      "rationale": "An official Instagram handle (@lebernardinny) confirms current aesthetics and announcements, whereas independent YouTube/TikTok reviews show unvarnished portion sizes and pacing — but a 2021 review of Eleven Madison Park reflects an older menu price ($195 bar vs. $255 today).",
+      "proposedAction": "Tag every social pill with [Official] vs. [Review: YT/TT] and display capture/upload year where known so outdated prices in creator captions never override official menu numbers.",
+      "status": "Proposed for Review (Implemented as clear [Official] vs [Review] badges in this session's tables)"
+    },
+    {
+      "id": "S7",
+      "category": "Duration Trade-off",
+      "impact": "Medium",
+      "effort": "Low",
+      "title": "Add a Side-by-Side 3-Night (Feb 15–18) vs. 7-Night (Feb 15–22) vs. 14-Night Comparison Matrix",
+      "rationale": "The prompt permits 1–2 weeks, prefers Feb 15–18 (3 nights), and allows 2–4 weeks. On a 3-night Mon–Thu trip, Saga and Aska only overlap on Wed evening, Free Friday at the Whitney is missed, and Sun Feb 21's Lunar New Year Parade is missed.",
+      "proposedAction": "Surface a 3-column duration trade-off card on the Itinerary page quantifying incremental hotel + OMNY + dining cost vs. unlocked weekend-only experiences.",
+      "status": "Proposed for Review"
+    },
+    {
+      "id": "S8",
+      "category": "Repository Governance",
+      "impact": "High",
+      "effort": "Low",
+      "title": "Consolidate the 4 Namespaced Agent Kits into One Canonical Dataset Behind PR CI Checks",
+      "rationale": "Parallel sessions produced valuable complementary assets (root shell, alt/ Booking totals, sessions/33cfdba4 72-row roster + 25-leg transit matrix, and sessions/c1cf7b23 official menu prices + TikTok/YouTube/IG coverage). Keeping four separate kits indefinitely forces a human reader to cross-reference.",
+      "proposedAction": "After human review of Flagged discrepancies, run a single integration PR that merges the verified menu prices, multi-platform social links, and 25-leg transit matrix into root data/*.json and enforces scripts/verify.py via GitHub Actions.",
+      "status": "Proposed for Review — Respecting COORDINATION.md scope boundaries until approved"
+    }
+  ],
+  "flags": [
+    {
+      "id": "FL-01",
+      "severity": "High",
+      "category": "Timing / Michelin",
+      "item": "2026 MICHELIN Guide Northeast Cities Ceremony (14 Dec 2026)",
+      "issue": "Scheduled between research date (25 Nov 2026) and travel window (15 Feb – 23 Mar 2027). Current 5/14/50 star assignments may change before travel.",
+      "resolution": "Re-verify official all-starred list on 15 Dec 2026 before booking Jan/Feb reservations.",
+      "sourceUrl": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/"
+    },
+    {
+      "id": "FL-02",
+      "severity": "High",
+      "category": "Source Conflict (Hours)",
+      "item": "Katz's Delicatessen Weekend Hours",
+      "issue": "MICHELIN's listing page (guide.michelin.com/.../katz-s) displays 'Saturday: closed, Sunday: closed', whereas Katz's own official location page (katzsdelicatessen.com/location) explicitly states: 'Now open 24 hrs on weekends! Friday 8:00 AM – Sunday 11:00 PM'.",
+      "resolution": "Recorded Katz's official site hours as primary and flagged the MICHELIN data error.",
+      "sourceUrl": "https://katzsdelicatessen.com/location"
+    },
+    {
+      "id": "FL-03",
+      "severity": "High",
+      "category": "Source Conflict (Hours)",
+      "item": "Saga (2★) Monday & Tuesday Closure",
+      "issue": "MICHELIN's 2025 listing showed Saga open Mon–Sun 17:00–21:30, whereas Saga's own reservations page (saga-nyc.com/reservations) states: 'Open Five Days a Week: Wednesday - Sunday 5 pm – 9:30 pm. Closed: Monday & Tuesday.'",
+      "resolution": "Used Saga's stricter Wed–Sun schedule so Mon/Tue itinerary nights are not mistakenly planned around Saga.",
+      "sourceUrl": "https://www.saga-nyc.com/reservations"
+    },
+    {
+      "id": "FL-04",
+      "severity": "High",
+      "category": "Bogus Template Page Caught",
+      "item": "Via Carota (/menu-basil Squarespace Demo Page)",
+      "issue": "Web search on viacarota.com surfaced https://www.viacarota.com/menu-basil listing '$7.95 Gai Pad Khing' and '$4.50 Thai Summer Roll' — an unlinked Squarespace template page still live on Via Carota's domain.",
+      "resolution": "Rejected completely! Left Via Carota's couple total blank rather than polluting an Italian trattoria row with template Thai prices.",
+      "sourceUrl": "https://www.viacarota.com/"
+    },
+    {
+      "id": "FL-05",
+      "severity": "Medium",
+      "category": "Official Page Typo Caught",
+      "item": "29th Chinatown Lunar New Year Parade (Better Chinatown USA)",
+      "issue": "Official announcement page prints '2027 Lunar New Year Parade Dates Announced! ... February 21, 2027 | Sunday | 1:00pm', while the adjacent Chinese line has a copy-paste year typo reading '2026年2月21曰 (星期日)'.",
+      "resolution": "Verified against perpetual calendar: Feb 21, 2027 is Sunday (Feb 21, 2026 was Saturday). Confirmed Sunday Feb 21, 2027.",
+      "sourceUrl": "http://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/"
+    },
+    {
+      "id": "FL-06",
+      "severity": "Medium",
+      "category": "Official Page Typo Caught",
+      "item": "Thai Diner Subpage Hours Typo",
+      "issue": "thaidiner.com/home-1 and /home-2 print 'Monday - Wednesday 8:30am - 10:30am' and 'Saturday 10am - 11:30am' (plus a Wix template '500 Terry Francine St, San Francisco' block on /home-1), whereas the main homepage footer correctly prints '8:30am - 10:30pm' and '10am - 11:30pm'.",
+      "resolution": "Used verified homepage PM hours and flagged the subpage AM typos.",
+      "sourceUrl": "https://www.thaidiner.com/"
+    },
+    {
+      "id": "FL-07",
+      "severity": "Medium",
+      "category": "Internal Price Variance",
+      "item": "Eleven Madison Park Bar Tasting & Atera Seasonal Tasting",
+      "issue": "EMP's FAQ states Bar Tasting is '$255 per guest' in Q2 and 'begin at $225 per guest' in Q4 ($450–$510/couple). Atera's website schema lists '$298.00' while Tock city search showed '$325 per person' ($596–$650/couple).",
+      "resolution": "Presented exact verified ranges from both official sources rather than picking one silently.",
+      "sourceUrl": "https://www.elevenmadisonpark.com/faq"
+    },
+    {
+      "id": "FL-08",
+      "severity": "Medium",
+      "category": "Aggregator Promotional Snapshot",
+      "item": "Dated Feb 2027 Hotel Totals & Black Friday Deals",
+      "issue": "Live 15–22 Feb 2027 hotel totals come from dated Booking.com property captures (25 Nov 2026), several reflecting 30–39% 'Black Friday Deals'. Michelin's widget caps advance dates at 31 days.",
+      "resolution": "Documented exact URLs, capture date, pre-tax AND all-in NYC tax math; left citizenM Times Square and Fifth Avenue Hotel 7-night totals blank where no dated 2027 quote was captured.",
+      "sourceUrl": "https://www.booking.com/hotel/us/doubletree-new-york-city-chelsea.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
+    },
+    {
+      "id": "FL-09",
+      "severity": "Medium",
+      "category": "Seasonal Cutoff",
+      "item": "Bryant Park Winter Village Closes 28 Feb 2027",
+      "issue": "Official Bryant Park page confirms The Rink and The Lodge operate Oct 28, 2026 – Feb 28, 2027 (Holiday Shops close Jan 3, 2027). Any trip shifted into March 1–23, 2027 will find Winter Village closed for grass restoration.",
+      "resolution": "Highlighted in Activities table and Date Window comparison.",
+      "sourceUrl": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park"
+    },
+    {
+      "id": "FL-10",
+      "severity": "Low",
+      "category": "Counter Drift",
+      "item": "MICHELIN Bib Gourmand Filter Count (76 vs. 78) & 2025 Article Star Count",
+      "issue": "Earlier session captures on 25 Nov 2026 recorded 76 Bib Gourmand listings; our direct check of guide.michelin.com/.../bib-gourmand returned '1-48 of 78 restaurants' (likely reflecting surrounding Westchester/NJ edge inclusions in the 'New York City and surroundings' filter). Meanwhile, the Nov 2025 ceremony article listed 5/15/52 stars vs. 5/14/50 live today.",
+      "resolution": "Used live 5/14/50 = 69 starred count (67 inside NYC 5 boroughs) and documented the 76–78 Bib Gourmand filter behavior.",
+      "sourceUrl": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/bib-gourmand"
+    },
+    {
+      "id": "FL-11",
+      "severity": "Low",
+      "category": "Unconfirmed Blank Cells",
+      "item": "Deliberately Blank Values (No Inference Rule)",
+      "issue": "Left blank by design: couple dinner totals for César (deposit only), Estela, Casa Mono, Thai Diner, Via Carota, Len Len, Odo East Village; dated Feb 2027 7-night totals for citizenM Times Square & The Fifth Avenue Hotel; dated Feb 2027 hours for Empire State Building; dynamic ticket price for SUMMIT One Vanderbilt.",
+      "resolution": "Every blank cell is marked 'Unverified — left blank' in the UI with a direct link to the official source.",
+      "sourceUrl": "https://info.summitov.com/"
+    }
+  ],
+  "repoAudit": {
+    "baseCommit": "0f93b808ebfcdb4c29deff145ae05dc129fcfcae",
+    "checkedOn": "2026-11-25",
+    "summary": "Line-by-line audit of kanlerxz87-cyber/NYFun2 on main (commit 0f93b80) and active parallel branches.",
+    "findings": [
+      {
+        "id": "RA-1",
+        "area": "Root Canonical Site (index.html, pages/*, data/*)",
+        "status": "Verified — Sound Architecture, Known Gaps",
+        "detail": "Built by arena/4a10e962-nyfun2 and enriched with 4 dated hotel totals by arena/1a7ae497-nyfun2. scripts/verify.py passes (0 errors, 0 warnings over 58 rows). Irregularities found in root index.html prose: bullet #2 still says '20 rows' after Atera ★★ was appended as row 21, and bullet #3 still says 'Ten candidates are listed. Only citizenM Times Square has a published room specification... No 7-night total... is asserted' — contradicting the top red notice and data/hotels.json (12 rows, 4 dated totals). Not edited directly because root index.html is outside our claimed scope; logged here for integration."
+      },
+      {
+        "id": "RA-2",
+        "area": "Root data/hotels.json Flag Contradictions",
+        "status": "Irregularity Flagged for Review",
+        "detail": "In root data/hotels.json, '11 Howard' has room='Queen Room (1 queen bed)', privateBathroom='Private bathroom', and sevenNightTotal='$1,522 pre-tax...', yet its flags array still retains stale strings '7-night total unverified' and 'Room/bath configuration not verified' from before PR #8 merged. Similarly, 'The Beekman' has verified address/room/bath/rate populated, yet retains 'Address, room, bath and rate not verified' in flags. Cleaned up in our namespaced sessions/c1cf7b23/data/hotels.json and logged for root integration."
+      },
+      {
+        "id": "RA-3",
+        "area": "Social Media Multi-Platform Coverage Gap in Root Data",
+        "status": "Resolved in sessions/c1cf7b23",
+        "detail": "Prompt requires YouTube, TikTok, or Instagram review links alongside every restaurant and activity ('as many as you can'). Root data/restaurants.json had zero TikTok links across all 21 rows and empty social arrays on 9 of 21 rows; root data/activities.json had zero TikTok links across all 12 rows. Our namespaced dataset adds 80+ verified YouTube, TikTok, and official Instagram links."
+      },
+      {
+        "id": "RA-4",
+        "area": "Michelin Couple Cost Coverage Gap in Root Data",
+        "status": "Resolved for 24/31 Rows in sessions/c1cf7b23",
+        "detail": "Root data/restaurants.json left priceTwoAdults blank on all 21 rows (0% coverage). By auditing official restaurant PDFs (le-bernardin.com/content/pdfs/dinner-1.2.pdf, jean-georges.com), official FAQ/menu pages (elevenmadisonpark.com/faq, jungsik.com/menu, gknyc.com/menu, saga-nyc.com/menus, odo.nyc/menu, askanyc.com/dining, cotekoreansteakhouse.com/nycdinnermenu, rezdora.nyc/menus, gramercytavern.com, semmanyc.com), and official Tock pages (Atomix, Atera, Aquavit, Sushi Sho, Masa, Sushi Noz, Per Se Salon), we verified couple totals for 24 of 31 rows while keeping the remaining 7 strictly blank."
+      },
+      {
+        "id": "RA-5",
+        "area": "Preserved Parallel Kits (alt/, sessions/215c2a25/, sessions/33cfdba4/)",
+        "status": "Verified Intact — Minor Schema Quirks Logged",
+        "detail": "All three prior parallel kits remain untouched on main. sessions/33cfdba4 contributed a 25-leg Google Maps transit matrix and 5 Booking.com date windows; our audit caught three minor quirks inside sessions/33cfdba4/data/: (1) pricing_windows.json W1 uses typo key 'bronze' instead of 'retrieved', (2) W2's $836 floor prices a 'Double Room (twin)' that fails the Queen+ rule, and (3) César (333 Hudson St, Hudson Square) is labeled 'West Village' while the 69-starred headline includes 2 Westchester venues (leaving 67 starred inside NYC). Also root data/decisions.json Q2 & Q3 still claim 0 dated hotel rates and 1 verified hotel room, contradicting Q9/F2 and data/hotels.json's 4 priced rows, and Guggenheim adult admission is now $30 (PWYW Tue & Sun 4–5:30pm) rather than older $25 figures."
+      },
+      {
+        "id": "RA-6",
+        "area": "Parallel Session Contention on COORDINATION.md",
+        "status": "Managed via Disjoint Namespace",
+        "detail": "Remote inspection showed 5 concurrent branches claiming T10/T13–T15 or opening root-overwriting PR #12. By confining all deliverables to sessions/c1cf7b23/**, our branch avoids any file-level merge conflict on root HTML/JS/CSS/JSON."
+      }
+    ]
+  },
+  "itineraries": {
+    "threeNight": {
+      "title": "Option A · Preferred 3-Night Escape (Mon 15 Feb – Thu 18 Feb 2027)",
+      "subtitle": "Zero-backtracking cluster plan from Chelsea/NoMad base — every transit leg 4 to 34 minutes",
+      "days": [
+        {
+          "day": "Day 1 · Mon 15 Feb 2027 (Presidents' Day)",
+          "cluster": "Midtown South / Chelsea / Koreatown",
+          "morningAfternoon": "Arrive NYC & drop bags at DoubleTree Chelsea or Hyatt Place Chelsea. Walk The High Line winter promenade (10 min walk, open 07:00–20:00, $0) down to Meatpacking.",
+          "evening": "Walk-in welcoming dinner at Bib Gourmand Cho Dang Gol (55 W 35th St, 8 min walk, $49–$68/couple — zero prepaid deposit risk if flights delay) OR 1★ Cote Butcher's Feast ($168/couple, 7 min walk). Note: Jungsik, Sushi Sho, odo, Saga & Aska are closed Mondays.",
+          "maxTransit": "10 min walk"
+        },
+        {
+          "day": "Day 2 · Tue 16 Feb 2027",
+          "cluster": "Lower Manhattan + Tribeca / FiDi Stars",
+          "morningAfternoon": "Subway [1] (18 min) to Battery Park for first 09:00 Statue of Liberty & Ellis Island Ferry ($52/couple) + 9/11 Memorial Pools ($0; Museum $72/couple if open on select holiday Tuesday, otherwise swap Wed).",
+          "evening": "3★ Flagship Splurge at Jungsik New York in Tribeca (Tue–Sun 17:00–21:30, Signature Menu $670/couple, 19 min [1] back to Chelsea) OR 1★ Le Coucou ($180–$328/couple).",
+          "maxTransit": "19 min subway [1]"
+        },
+        {
+          "day": "Day 3 · Wed 17 Feb 2027",
+          "cluster": "Midtown 51st–53rd Museum & 3★ Cluster",
+          "morningAfternoon": "Morning Rose Main Reading Room visit at NYPL Schwarzman (10:00–11:00 window, $0) + Bryant Park Winter Village Rink/Lodge right outside (open until Feb 28, $0 admission). Afternoon at MoMA ($60/couple; note The Met is closed Wednesdays!). Sunset at Top of the Rock ($80–$84/couple, 3 blocks south).",
+          "evening": "3★ Dinner at Le Bernardin (155 W 51st St, 4-Course $436/couple) OR 2★ Gabriel Kreuther across from Bryant Park ($400–$650/couple) OR 2★ Saga 63rd-floor skyline tasting ($430–$630/couple, opens Wed).",
+          "maxTransit": "14 min subway [1] / [B/D/F/M]"
+        },
+        {
+          "day": "Day 4 · Thu 18 Feb 2027 (Departure)",
+          "cluster": "Upper East Side / Flatiron Lunch",
+          "morningAfternoon": "Morning at The Met Fifth Avenue (opens 10:00 Thu, $60/couple) + Central Park Bow Bridge/Mall stroll ($0).",
+          "evening": "Farewell Kaiseki Lunch at 2★ odo in Flatiron (12:00 or 13:45 seating, $300/couple, 5 min from Chelsea hotels) before airport departure.",
+          "maxTransit": "24 min subway [6]"
+        }
+      ]
+    },
+    "sevenNight": {
+      "title": "Option B · Full 7-Night Benchmark Plan (Mon 15 Feb – Mon 22 Feb 2027)",
+      "subtitle": "Unlocks Free Friday Whitney, Weekend Michelin Lunches, Brooklyn 2★ Aska & Sunday Feb 21 Lunar New Year Parade",
+      "days": [
+        {
+          "day": "Days 1–3 · Mon 15 – Wed 17 Feb",
+          "cluster": "Chelsea, Harbor/Tribeca & Midtown 51st",
+          "plan": "Follow Days 1–3 above at a relaxed pace (9/11 Museum moved to Wed morning when guaranteed open; Statue of Liberty + Brooklyn Bridge & DUMBO sunset walk on Tue)."
+        },
+        {
+          "day": "Day 4 · Thu 18 Feb",
+          "cluster": "Museum Mile (Upper East Side) + NoMad 2★",
+          "plan": "The Met Fifth Avenue ($60/couple) + Guggenheim Frank Lloyd Wright rotunda ($60/couple, 6 blocks north) + Central Park Reservoir. Evening: 2★ Atomix Bar Tasting ($628/couple) or Chef's Counter ($848/couple) in NoMad, or 1★ Rezdôra Pasta Tasting ($220/couple)."
+        },
+        {
+          "day": "Day 5 · Fri 19 Feb",
+          "cluster": "West Village & Meatpacking (Free Friday Night)",
+          "plan": "Midday lunch at 2★ The Modern ($230/couple) or Le Bernardin ($274/couple). Late afternoon West Village stroll + FREE Friday Night at Whitney Museum (17:00–22:00, $0 w/ advance ticket). Dinner at 1★ Semma ($114–$164/couple; reserve 15 days ahead at 09:00 EST)."
+        },
+        {
+          "day": "Day 6 · Sat 20 Feb",
+          "cluster": "Upper West Side + Williamsburg, Brooklyn",
+          "plan": "AMNH & Gilder Center ($74/couple, 22 min [B/C]) + Wollman Rink or Central Park West walk. Evening East River Ferry or [M]/[L] subway (30–34 min) to Williamsburg for 2★ Aska Nordic Tasting ($750/couple) or FiDi 2★ Saga ($430–$630/couple)."
+        },
+        {
+          "day": "Day 7 · Sun 21 Feb (Lunar New Year Parade!)",
+          "cluster": "Lower East Side, Chinatown & Flatiron",
+          "plan": "10:30 early pastrami brunch split at Bib Gourmand Katz's Deli ($57.90–$61.90/couple, open 24h weekends). Walk 12 min to Mott & Canal for the **29th Chinatown Lunar New Year Parade (step-off 13:00, $0)**. Finale Sunday night dinner at 3★ Eleven Madison Park ($770 Dining Room or $450–$510 Bar Tasting — open Sundays unlike Le Bernardin/Aquavit/Kreuther/Semma!)."
+        },
+        {
+          "day": "Day 8 · Mon 22 Feb (Check-Out)",
+          "cluster": "Midtown / Departure",
+          "plan": "11:00 hotel check-out, Staten Island Ferry free harbor loop or Grand Central / SUMMIT One Vanderbilt, afternoon transfer to airport."
+        }
+      ]
+    }
+  }
+}

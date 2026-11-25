@@ -1,0 +1,863 @@
+{
+  "meta": {
+    "checkedOn": "2026-11-25",
+    "session": "arena/c1cf7b23-nyfun2",
+    "officialCountsSource": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred",
+    "bibGourmandSource": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/bib-gourmand",
+    "ceremonySource": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
+    "officialStarCounts": {
+      "threeStar": 5,
+      "twoStar": 14,
+      "oneStar": 50,
+      "totalStarred": 69,
+      "bibGourmandFilterCount": 78,
+      "bibGourmandNote": "MICHELIN's live NYC Bib Gourmand filter returned 78 restaurants on 2026-11-25; earlier session snapshots recorded 76 (and 224 Selected). Both are logged on Flagged for Review.",
+      "ceremonyWarning": "The 2026 MICHELIN Guide Northeast Cities ceremony is scheduled for 14 December 2026 — between this 25 November 2026 verification and the Feb–Mar 2027 trip window."
+    },
+    "pricingBasisNote": "Couple totals (2 adults) are computed strictly as 2 × the per-person menu price or sum of published menu item prices printed on each restaurant's own official website, PDF menu, or official Tock booking page. NYC 8.875% sales tax, beverages, supplements, and gratuity are excluded unless the restaurant explicitly states 'including administrative fee' on Tock. Where no official price is published, totalPriceTwoAdults is left blank ('') and flagged."
+  },
+  "clusters": [
+    {
+      "id": "midtown-51-columbus",
+      "name": "C1 · Midtown 51st–55th & Columbus Circle",
+      "hubStations": "50 St (1/C/E), 7 Av (B/D/E), 59 St–Columbus Circle (1/A/B/C/D), 51 St (6)",
+      "starredInGuideCluster": "6 flagship 2★–3★ anchors + Midtown East/West 1★ cluster",
+      "anchorVenue": "Le Bernardin, 155 W. 51st St.",
+      "featuredCount": 7
+    },
+    {
+      "id": "flatiron-nomad-gramercy",
+      "name": "C2 · Flatiron, NoMad, Koreatown & Gramercy",
+      "hubStations": "23 St (R/W/6/F/M), 28 St (1/R/W/6), 34 St–Herald Sq (B/D/F/M/N/Q/R/W), 14 St–Union Sq",
+      "starredInGuideCluster": "Highest density of 1★–3★ Korean, Contemporary & Italian dining in NYC",
+      "anchorVenue": "Eleven Madison Park, 11 Madison Ave.",
+      "featuredCount": 9
+    },
+    {
+      "id": "tribeca-soho-village",
+      "name": "C3 · Tribeca, SoHo, Nolita, LES & West Village",
+      "hubStations": "Chambers St (1/2/3), Canal St (N/Q/R/W/6/A/C/E), Houston St (1), W 4 St (A/B/C/D/E/F/M), Broadway-Lafayette",
+      "starredInGuideCluster": "Downtown tasting counters (Jungsik 3★, Atera 2★, César 2★) + Village/SoHo 1★ & Bib icons",
+      "anchorVenue": "Jungsik New York, 2 Harrison St.",
+      "featuredCount": 9
+    },
+    {
+      "id": "fidi-wall-st",
+      "name": "C4 · Financial District (70 Pine & Wall St)",
+      "hubStations": "Wall St (2/3 & 4/5), Broad St (J/Z), Fulton St (2/3/4/5/A/C/J/Z)",
+      "starredInGuideCluster": "Vertical fine dining at 70 Pine St (Saga 2★ + Crown Shy 1★)",
+      "anchorVenue": "Crown Shy / Saga, 70 Pine St.",
+      "featuredCount": 2
+    },
+    {
+      "id": "ues-brooklyn",
+      "name": "C5 · Upper East Side & Williamsburg, Brooklyn",
+      "hubStations": "77 St (6) for UES; Bedford Av (L), Marcy Av (J/M/Z) or NYC Ferry East River for Williamsburg",
+      "starredInGuideCluster": "Upper East Side sushi counters (Sushi Noz 2★) & Brooklyn Nordic tasting (Aska 2★)",
+      "anchorVenue": "Aska, 47 S. 5th St., Brooklyn",
+      "featuredCount": 2
+    }
+  ],
+  "items": [
+    {
+      "id": "eleven-madison-park",
+      "name": "Eleven Madison Park",
+      "michelinStatus": "Starred — 3 MICHELIN Stars",
+      "tierGroup": "3-Star",
+      "clusterId": "flatiron-nomad-gramercy",
+      "clusterLabel": "C2 · Flatiron / Madison Sq",
+      "cuisine": "Contemporary (Plant-based & omnivore options)",
+      "address": "11 Madison Ave., New York, NY 10010",
+      "daysOpen": "Monday – Sunday (7 days)",
+      "hours": "Mon–Thu 17:30–22:00; Fri–Sun 12:00–13:00 & 17:30–23:00",
+      "exceptions": "No dress code per MICHELIN. Reservations open on the 1st of each month for the following month via Resy; bar counter seats walk-in.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$770 Dining Room Tasting (2 × $385) · $450–$510 Bar Tasting (2 × $225–$255)",
+      "priceDetail": "Pre-tax & pre-beverage. Wine pairing starts at +$250/couple ($125/guest). Official FAQ lists Full Tasting at $385/guest and Bar Tasting at $255/guest (and 'begins at $225' in lounge FAQ).",
+      "priceSourceUrl": "https://www.elevenmadisonpark.com/faq",
+      "officialUrl": "https://www.elevenmadisonpark.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/eleven-madison-park",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (CNN / Quest review)", "url": "https://www.youtube.com/watch?v=UOP_zc6VguM"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@thecarboholic bar tasting)", "url": "https://www.tiktok.com/@thecarboholic/video/7320274977599589675"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@eat_figs_not_pigs 3★ dining room)", "url": "https://www.tiktok.com/@eat_figs_not_pigs/video/7425727380456541471"},
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@elevenmadisonpark official)", "url": "https://www.instagram.com/elevenmadisonpark/"}
+      ],
+      "flags": [
+        "Official FAQ quotes Bar Tasting at both '$255 per guest' and 'begin at $225 per guest' on the same page; both endpoints ($450–$510/couple) shown."
+      ]
+    },
+    {
+      "id": "le-bernardin",
+      "name": "Le Bernardin",
+      "michelinStatus": "Starred — 3 MICHELIN Stars",
+      "tierGroup": "3-Star",
+      "clusterId": "midtown-51-columbus",
+      "clusterLabel": "C1 · Midtown West (51st St)",
+      "cuisine": "Seafood, French",
+      "address": "155 W. 51st St., New York, NY 10019",
+      "daysOpen": "Monday – Saturday (Closed Sunday)",
+      "hours": "Mon–Thu 12:00–14:30 & 17:00–22:30; Fri 12:00–14:30 & 17:00–23:00; Sat 17:00–23:00; Sun closed",
+      "exceptions": "Business casual (no sneakers, shorts, t-shirts, sweatshirts). Lounge is walk-in (à la carte available). 48-hr cancellation fee $150/person.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$436 Dinner 4-Course Prix Fixe (2 × $218) · $274 Lunch 3-Course (2 × $137)",
+      "priceDetail": "Published on official dinner-1.2.pdf ($218/pp) and lunch-2.191.pdf ($137/pp); excludes tax, tip, beverages, and optional caviar/truffle supplements. Chef's Tasting price not printed on those two PDFs.",
+      "priceSourceUrl": "https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf",
+      "officialUrl": "https://www.le-bernardin.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-bernardin",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (dinner review 1)", "url": "https://www.youtube.com/watch?v=rQgmx4GYjvc"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (dinner review 2)", "url": "https://www.youtube.com/watch?v=m_1jgzwF1Jk"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@beli_eats review)", "url": "https://www.tiktok.com/@beli_eats/video/7207922985192164650"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@eater pastry feature)", "url": "https://www.tiktok.com/@eater/video/7208650857494138158"},
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@lebernardinny official)", "url": "https://www.instagram.com/lebernardinny/"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "jungsik-new-york",
+      "name": "Jungsik New York",
+      "michelinStatus": "Starred — 3 MICHELIN Stars",
+      "tierGroup": "3-Star",
+      "clusterId": "tribeca-soho-village",
+      "clusterLabel": "C3 · Tribeca",
+      "cuisine": "Korean, Contemporary",
+      "address": "2 Harrison St., New York, NY 10013",
+      "daysOpen": "Tuesday – Sunday (Closed Monday)",
+      "hours": "Tue–Sun 17:00–21:30; Mon closed",
+      "exceptions": "Entire table participation required for Signature Menu. Cannot accommodate soy or garlic allergies (per official Tock page). $200/person deposit.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$670 Signature Menu (2 × $335)",
+      "priceDetail": "Published on jungsik.com/menu ('SIGNATURE MENU: 335') and confirmed on Jungsik's official Tock page. Optional pairings: Non-Alcoholic +$290/couple, Signature Wine +$450/couple.",
+      "priceSourceUrl": "https://www.jungsik.com/menu/",
+      "officialUrl": "https://www.jungsik.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/jungsik-new-york",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (tasting review)", "url": "https://www.youtube.com/watch?v=-tvjMUPEXGk"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (Jungsik NYC place hub & reviews)", "url": "https://www.tiktok.com/place/Jungsik-22535796482554226"},
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@jungsik_nyc via official Tock)", "url": "https://www.instagram.com/jungsik_nyc/"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "per-se",
+      "name": "Per Se",
+      "michelinStatus": "Starred — 3 MICHELIN Stars",
+      "tierGroup": "3-Star",
+      "clusterId": "midtown-51-columbus",
+      "clusterLabel": "C1 · Columbus Circle",
+      "cuisine": "Contemporary, French",
+      "address": "10 Columbus Circle, 4th Fl, New York, NY 10019",
+      "daysOpen": "Monday – Sunday (7 days)",
+      "hours": "Daily 16:30–21:00",
+      "exceptions": "Bookings via Tock ($200/pp deposit for Main Dining Room; $150/pp deposit for Salon). Holiday/special seatings vary.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$370 Salon 4-Course Tasting (2 × $185) · $950 Silver Experience for Two (Main Dining Room exact menu price unverified)",
+      "priceDetail": "Official Tock Salon page states $185/person ($370/couple). Official Thomas Keller Gift Experiences page lists 'Silver Experience for Two: $950.00'. Standard Main Dining Room Chef's Tasting per-person price was hidden behind deposit ($200/pp) on Tock — flagged.",
+      "priceSourceUrl": "https://www.exploretock.com/perse/experience/7768/salon-lounge-seating-five-course-tasting-menu",
+      "officialUrl": "https://www.thomaskeller.com/perseny",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/per-se",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (dinner review)", "url": "https://www.youtube.com/watch?v=OmsC0Thm3Kg"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@notsowhitepapi review)", "url": "https://www.tiktok.com/@notsowhitepapi/video/7479110522030460206"},
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@perseny via official Tock)", "url": "https://www.instagram.com/perseny/"}
+      ],
+      "flags": [
+        "Main Dining Room 9-course Chef's Tasting exact base price is behind the live Tock calendar ($200/pp deposit shown); only Salon ($370/couple) and Silver Gift Experience for Two ($950) are printed."
+      ]
+    },
+    {
+      "id": "sushi-sho",
+      "name": "Sushi Sho",
+      "michelinStatus": "Starred — 3 MICHELIN Stars",
+      "tierGroup": "3-Star",
+      "clusterId": "midtown-51-columbus",
+      "clusterLabel": "C1 · Midtown East / Bryant Park (41st St)",
+      "cuisine": "Japanese, Sushi (Edomae Omakase)",
+      "address": "3 E. 41st St., New York, NY 10017",
+      "daysOpen": "Tuesday – Sunday (Closed Monday)",
+      "hours": "Tue–Sun 17:00–22:00; Mon closed",
+      "exceptions": "No guests under age 13 (per official Tock page). Okonomi pieces ordered after omakase are billed additionally.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$900 base / $990 prepaid w/ admin fee — Shorter Omakase at Hinoki Counter (2 × $450 base / $495 w/ fee)",
+      "priceDetail": "Published on official Tock page (exploretock.com/sushi-sho-nyc): Shorter Omakase $450/pp ($495/pp prepaid incl. administrative fee), excluding tax, beverage, and optional Okonomi.",
+      "priceSourceUrl": "https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-at-hinoki-counter",
+      "officialUrl": "https://www.exploretock.com/sushi-sho-nyc",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/sushi-sho-1213976",
+      "social": [
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@thesushilegend NYC opening review)", "url": "https://www.tiktok.com/@thesushilegend/video/7350031540425887019"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@thesushilegend inside look NYC)", "url": "https://www.tiktok.com/@thesushilegend/video/7397525713336798494"},
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@sushishonyc via official Tock)", "url": "https://www.instagram.com/sushishonyc/"}
+      ],
+      "flags": [
+        "No verified NYC-specific YouTube review found (general YouTube results mix Honolulu Waikiki branch); NYC-specific TikTok & official Instagram verified."
+      ]
+    },
+    {
+      "id": "atomix",
+      "name": "Atomix",
+      "michelinStatus": "Starred — 2 MICHELIN Stars",
+      "tierGroup": "2-Star",
+      "clusterId": "flatiron-nomad-gramercy",
+      "clusterLabel": "C2 · NoMad / Murray Hill",
+      "cuisine": "Korean, Contemporary",
+      "address": "104 E. 30th St., New York, NY 10016",
+      "daysOpen": "Tuesday – Saturday (Closed Sunday & Monday)",
+      "hours": "Tue–Sat 17:30–24:00; Sun–Mon closed",
+      "exceptions": "Prepaid Tock reservations release on the 1st of the month; non-refundable / transfer rules apply.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$848 Chef's Counter (2 × $424) · $628 Bar Tasting Menu (2 × $314)",
+      "priceDetail": "Published on Atomix's official Tock page: prices include administrative fee; sales tax and beverages additional.",
+      "priceSourceUrl": "https://www.exploretock.com/atomixnyc/help",
+      "officialUrl": "https://www.atomixnyc.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atomix",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Atomix #1 North America review)", "url": "https://www.youtube.com/watch?v=U74pYh26tH8"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (couple dinner discussion)", "url": "https://www.youtube.com/watch?v=ENBmmjRwaWY"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (#atomixnyc review tag hub)", "url": "https://www.tiktok.com/tag/atomixnyc"},
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@atomixnyc via official Tock)", "url": "https://www.instagram.com/atomixnyc/"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "atera",
+      "name": "Atera",
+      "michelinStatus": "Starred — 2 MICHELIN Stars",
+      "tierGroup": "2-Star",
+      "clusterId": "tribeca-soho-village",
+      "clusterLabel": "C3 · Tribeca",
+      "cuisine": "Contemporary (Counter Tasting)",
+      "address": "77 Worth St., New York, NY 10013",
+      "daysOpen": "Monday – Sunday (7 days)",
+      "hours": "Mon 19:00–22:00; Tue–Fri 17:00–22:00; Sat 13:30–22:00; Sun 17:00–22:00",
+      "exceptions": "U-shaped open-kitchen counter seating; different start times Mon (19:00) and Sat (13:30 afternoon service). Booked via Tock.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$596–$650 Seasonal Tasting Menu (2 × $298 on website schema; $325/pp on 2026 Tock search)",
+      "priceDetail": "ateranyc.com structured menu data lists $298/pp ($596/couple), Wine Pairing $198/pp, Temperance Pairing $138/pp; Tock search listing showed $325/pp ($650/couple). Both shown.",
+      "priceSourceUrl": "https://ateranyc.com/",
+      "officialUrl": "https://ateranyc.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atera",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (2★ lunch tasting review)", "url": "https://www.youtube.com/watch?v=9c973aByL30"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@beli_eats review)", "url": "https://www.tiktok.com/@beli_eats/video/7227586132257852718"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@theseandevine tasting tour)", "url": "https://www.tiktok.com/@theseandevine/video/7196341225279016234"},
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@ateranyc via official Tock)", "url": "https://www.instagram.com/ateranyc/"}
+      ],
+      "flags": [
+        "Official website schema ($298/pp) and Tock search snippet ($325/pp) differ by $27/pp; range $596–$650 recorded."
+      ]
+    },
+    {
+      "id": "aquavit",
+      "name": "Aquavit",
+      "michelinStatus": "Starred — 2 MICHELIN Stars",
+      "tierGroup": "2-Star",
+      "clusterId": "midtown-51-columbus",
+      "clusterLabel": "C1 · Midtown East (55th St)",
+      "cuisine": "Scandinavian, Contemporary",
+      "address": "65 E. 55th St., New York, NY 10022",
+      "daysOpen": "Monday – Saturday (Closed Sunday)",
+      "hours": "Mon–Thu 12:00–14:00 & 17:30–21:00; Fri 12:00–14:00 & 17:30–21:30; Sat 17:00–21:30; Sun closed",
+      "exceptions": "Bookings via Tock (exploretock.com/aquavit). Special Valentine's/holiday menus priced higher ($350/pp).",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$350 3-Course Dinner (2 × $175) · $450 Chef's 5-Course Tasting (2 × $225)",
+      "priceDetail": "Published in Aquavit's official Fall 2025 PDF packet on aquavit.org ($175/pp 3-course; $225/pp Chef's Tasting; optional wine pairing $175/pp).",
+      "priceSourceUrl": "https://www.aquavit.org/s/AQUAVIT-FALL-2025-Private-Dining-Kit-l6b7.pdf",
+      "officialUrl": "https://www.aquavit.org/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/aquavit",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (dinner review)", "url": "https://www.youtube.com/watch?v=hVvV2QTmK_0"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@highspeeddining review)", "url": "https://www.tiktok.com/@highspeeddining/video/7362381305851530542"},
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@aquavitnyc via official Tock)", "url": "https://www.instagram.com/aquavitnyc/"}
+      ],
+      "flags": [
+        "Prices sourced from Aquavit's published Fall 2025 dining kit PDF on aquavit.org; re-check regular dining-room menu tab before Feb 2027."
+      ]
+    },
+    {
+      "id": "gabriel-kreuther",
+      "name": "Gabriel Kreuther",
+      "michelinStatus": "Starred — 2 MICHELIN Stars",
+      "tierGroup": "2-Star",
+      "clusterId": "midtown-51-columbus",
+      "clusterLabel": "C1 · Bryant Park / Midtown (42nd St)",
+      "cuisine": "French, Alsatian Contemporary",
+      "address": "41 W. 42nd St., New York, NY 10036",
+      "daysOpen": "Monday – Saturday (Closed Sunday)",
+      "hours": "Mon 16:45–21:30; Tue–Thu 11:45–14:15 & 16:45–21:30; Fri 11:45–14:15 & 16:45–22:00; Sat 16:45–22:00; Sun closed",
+      "exceptions": "Directly faces Bryant Park. Holiday menus (e.g., Valentine's Day $375/pp) replace standard menus on select dates.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$400 3-Course (2 × $200) · $470 4-Course (2 × $235) · $650 Chef's Tasting (2 × $325)",
+      "priceDetail": "Published directly on gknyc.com/menu (pre-tax, pre-tip, pre-beverage; Classic Wine Pairing $255/pp).",
+      "priceSourceUrl": "https://www.gknyc.com/menu",
+      "officialUrl": "https://www.gknyc.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/gabriel-kreuther",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (2★ kitchen & dish feature)", "url": "https://www.youtube.com/watch?v=TO4wvlub7ng"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (dining room review)", "url": "https://www.youtube.com/watch?v=FsB2JHuFQag"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@jacksdiningroom 2★ review)", "url": "https://www.tiktok.com/@jacksdiningroom/video/7262835421242035499"},
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@gabrielkreuther official)", "url": "https://www.instagram.com/gabrielkreuther/"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "the-modern",
+      "name": "The Modern",
+      "michelinStatus": "Starred — 2 MICHELIN Stars",
+      "tierGroup": "2-Star",
+      "clusterId": "midtown-51-columbus",
+      "clusterLabel": "C1 · Midtown / MoMA (53rd St)",
+      "cuisine": "Contemporary American",
+      "address": "9 W. 53rd St., New York, NY 10019",
+      "daysOpen": "Monday – Sunday (7 days)",
+      "hours": "Dining Room: Daily Lunch 12:00–14:30; Dinner Sun–Thu 17:00–21:00, Fri–Sat 17:00–21:30. Bar Room: Daily 11:30–21:00.",
+      "exceptions": "Street-level entrance at 9 W 53rd St (no MoMA museum ticket needed). Closed Thanksgiving & Christmas.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$230 Lunch 3-Course (2 × $115) · $290 Bar Room 3-Course (2 × $145) · $510 Lunch Tasting (2 × $255)",
+      "priceDetail": "Published on themodernnyc.com/the-modern/ and /the-bar-room-at-the-modern/. Main Dining Room regular evening tasting price tab is client-rendered (flagged); lunch & Bar Room exact totals verified.",
+      "priceSourceUrl": "https://www.themodernnyc.com/the-modern/",
+      "officialUrl": "https://www.themodernnyc.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/the-modern",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (2★ lunch & Bar Room review)", "url": "https://www.youtube.com/watch?v=RTkrEpQ0iqA"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Bar Room signature dishes)", "url": "https://www.youtube.com/watch?v=IdIIURNscCM"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (NYC Michelin Star Worth It — The Modern)", "url": "https://www.tiktok.com/discover/nyc-michelin-star-worth-it"}
+      ],
+      "flags": [
+        "Evening Main Dining Room tasting tab is JavaScript-switched; Lunch Prix Fixe ($230/couple), Lunch Tasting ($510/couple), and Bar Room ($290/couple) are verified in server HTML."
+      ]
+    },
+    {
+      "id": "jean-georges",
+      "name": "Jean-Georges",
+      "michelinStatus": "Starred — 2 MICHELIN Stars",
+      "tierGroup": "2-Star",
+      "clusterId": "midtown-51-columbus",
+      "clusterLabel": "C1 · Columbus Circle (1 CPW)",
+      "cuisine": "French Contemporary",
+      "address": "1 Central Park West, New York, NY 10023",
+      "daysOpen": "Tuesday – Saturday (Closed Sunday & Monday)",
+      "hours": "Tue–Sat 12:00–14:00 & 17:00–21:30; Sun–Mon closed",
+      "exceptions": "Adjacent Nougatine room serves more casual à la carte & 3-course menus.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$256 Three-Course Lunch (2 × $128) · Dinner Tasting price unverified on static page",
+      "priceDetail": "Official lunch menu page states 'Enjoy a three-course menu every Tuesday - Saturday $128 per person' ($256/couple). Dinner page renders prices client-side.",
+      "priceSourceUrl": "https://www.jean-georgesrestaurant.com/jean-georges/menus/lunch/",
+      "officialUrl": "https://www.jean-georgesrestaurant.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/jean-georges",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (tasting menu review 1)", "url": "https://www.youtube.com/watch?v=1sNffK0Z_oU"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (flagship dinner review 2)", "url": "https://www.youtube.com/watch?v=hoVKpFb03Is"}
+      ],
+      "flags": [
+        "Dinner tasting price not printed in static HTML of jean-georgesrestaurant.com/jean-georges/menus/dinner/; Lunch 3-course ($256/couple) verified."
+      ]
+    },
+    {
+      "id": "masa",
+      "name": "Masa",
+      "michelinStatus": "Starred — 2 MICHELIN Stars",
+      "tierGroup": "2-Star",
+      "clusterId": "midtown-51-columbus",
+      "clusterLabel": "C1 · Columbus Circle",
+      "cuisine": "Japanese, Sushi",
+      "address": "10 Columbus Circle, Ste. 401, New York, NY 10019",
+      "daysOpen": "Tuesday – Saturday (Closed Sunday & Monday)",
+      "hours": "Tue–Sat 12:00–14:00 & 17:00–21:30; Sun–Mon closed",
+      "exceptions": "Moved from 3★ to 2★ in the 2025 MICHELIN selection. Full per-person deposit required via Tock.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$990 Lunch Omakase (2 × $495) · $1,500 Dinner Table (2 × $750) · $1,900 Hinoki Counter (2 × $950)",
+      "priceDetail": "Published verbatim on Masa's official Tock pages (exploretock.com/masa), excluding tax and beverages. Chef's Reserve Counter is $2,400/couple (2 × $1,200).",
+      "priceSourceUrl": "https://www.exploretock.com/masa/experience/428371/dinner-omakase",
+      "officialUrl": "https://www.exploretock.com/masa/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/masa",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Masa NYC review 1)", "url": "https://www.youtube.com/watch?v=fnYmB-4xEzk"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Masa sushi review 2)", "url": "https://www.youtube.com/watch?v=pIfe-K8TPqE"},
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@chefmasanyc via official Tock)", "url": "https://www.instagram.com/chefmasanyc/"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "odo",
+      "name": "odo",
+      "michelinStatus": "Starred — 2 MICHELIN Stars",
+      "tierGroup": "2-Star",
+      "clusterId": "flatiron-nomad-gramercy",
+      "clusterLabel": "C2 · Flatiron (20th St)",
+      "cuisine": "Japanese, Kaiseki",
+      "address": "17 W. 20th St., New York, NY 10011",
+      "daysOpen": "Tuesday – Sunday (Closed Monday)",
+      "hours": "Tue–Sun Lunch seatings at 12:00 & 13:45; Dinner seatings at 18:00 & 20:30; Mon closed",
+      "exceptions": "Speakeasy entrance behind HALL bar; reservation only for Kaiseki counter. Distinct from unstarred Odo East Village.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$300 Lunch 6-Course Kaiseki (2 × $150) · $540 Dinner 8–9 Course Kaiseki (2 × $270)",
+      "priceDetail": "Published on odo.nyc/menu and odo.nyc/reservations ($150/guest lunch; $270/guest dinner; corkage $150/bottle).",
+      "priceSourceUrl": "https://www.odo.nyc/menu",
+      "officialUrl": "https://www.odo.nyc/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/odo",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Chef's Counter Kaiseki lunch)", "url": "https://www.youtube.com/watch?v=OoEDnvOc9-A"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (Odo NYC 2★ Kaiseki reviews)", "url": "https://www.tiktok.com/discover/odo-nyc"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "saga",
+      "name": "Saga",
+      "michelinStatus": "Starred — 2 MICHELIN Stars",
+      "tierGroup": "2-Star",
+      "clusterId": "fidi-wall-st",
+      "clusterLabel": "C4 · Financial District (70 Pine, 63rd Fl)",
+      "cuisine": "Contemporary",
+      "address": "70 Pine St., 63rd Floor, New York, NY 10005",
+      "daysOpen": "Wednesday – Sunday per saga-nyc.com (MICHELIN lists daily — see exception)",
+      "hours": "Wed–Sun 17:00–21:30; Mon–Tue closed (per saga-nyc.com/reservations)",
+      "exceptions": "Irregularity flagged: saga-nyc.com explicitly states 'Closed: Monday & Tuesday', whereas MICHELIN's 2025 listing showed Mon–Sun 17:00–21:30. Follow venue's stricter Wed–Sun rule when planning. Reservations release 1st of prior month via Resy.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$430 6-Course Tasting (2 × $215) · $630 10-Course Tasting (2 × $315) · $730 Solarium Kitchen Table (2 × $365)",
+      "priceDetail": "Published directly on saga-nyc.com/menus ($215, $315, and $365 per guest; pre-tax/tip/drinks).",
+      "priceSourceUrl": "https://www.saga-nyc.com/menus",
+      "officialUrl": "https://www.saga-nyc.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/saga",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (2★ 63rd-floor tasting review)", "url": "https://www.youtube.com/watch?v=H4EFAReKGwE"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@samusamuu 63rd floor review)", "url": "https://www.tiktok.com/@samusamuu/video/7173705649321299243"}
+      ],
+      "flags": [
+        "Schedule conflict between official sources: saga-nyc.com states Closed Mon & Tue; MICHELIN page showed daily 17:00–21:30. Venue's own schedule used."
+      ]
+    },
+    {
+      "id": "sushi-noz",
+      "name": "Sushi Noz",
+      "michelinStatus": "Starred — 2 MICHELIN Stars",
+      "tierGroup": "2-Star",
+      "clusterId": "ues-brooklyn",
+      "clusterLabel": "C5 · Upper East Side (78th St)",
+      "cuisine": "Japanese, Edomae Sushi",
+      "address": "181 E. 78th St., New York, NY 10075",
+      "daysOpen": "Monday – Saturday (Closed Sunday)",
+      "hours": "Mon–Sat 17:45–23:00 (seatings at 17:45/18:00 & 20:45/21:00); Sun closed",
+      "exceptions": "Chef Noz personally leads Mon–Fri 18:00 & 21:00 Hinoki counter seatings (with published exceptions on Tock); Ash Room counter serves the same menu.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$990 Omakase at Hinoki or Ash Counter (2 × $495)",
+      "priceDetail": "Published on Sushi Noz's official Tock page ('We serve the same Omakase menu at both counters, priced at $495 per person').",
+      "priceSourceUrl": "https://www.exploretock.com/sushinoz/experience/335003/omakase",
+      "officialUrl": "https://www.exploretock.com/sushinoz/experience/335003/omakase",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/sushi-noz",
+      "social": [
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@highspeeddining 2★ omakase)", "url": "https://www.tiktok.com/@highspeeddining/video/7510203950411582766"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@beli_eats Beli #8 NYC review)", "url": "https://www.tiktok.com/@beli_eats/video/7226462456132996394"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@luiscarloszara critical review)", "url": "https://www.tiktok.com/@luiscarloszara/video/7337811491497741610"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "aska",
+      "name": "Aska",
+      "michelinStatus": "Starred — 2 MICHELIN Stars",
+      "tierGroup": "2-Star",
+      "clusterId": "ues-brooklyn",
+      "clusterLabel": "C5 · Williamsburg, Brooklyn",
+      "cuisine": "Scandinavian, Contemporary",
+      "address": "47 S. 5th St., Brooklyn, NY 11249",
+      "daysOpen": "Wednesday – Sunday (Closed Monday & Tuesday)",
+      "hours": "Wed–Sun 17:00–23:00; Mon–Tue closed",
+      "exceptions": "Reservations required via OpenTable; full menu price charged for no-shows; corkage $100/750ml bottle (max 2).",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$750 12–14 Course Tasting Menu (2 × $375)",
+      "priceDetail": "Published on askanyc.com/dining ('The Aska Tasting Menu, $375 per person, is a 12-14 course journey'). Optional wine pairing starts at $250/guest (+$500/couple).",
+      "priceSourceUrl": "https://www.askanyc.com/dining",
+      "officialUrl": "https://www.askanyc.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/brooklyn/restaurant/aska",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Brooklyn's Only 2★ Restaurant)", "url": "https://www.youtube.com/watch?v=tkWrc5YBf0I"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (New Nordic in NY feature)", "url": "https://www.youtube.com/watch?v=ezmH-Ya_N4s"}
+      ],
+      "flags": [
+        "Brooklyn location: measured 30–37 min by subway/ferry from all 5 benchmarked Manhattan hotels (well under the 60-min limit)."
+      ]
+    },
+    {
+      "id": "cesar",
+      "name": "César",
+      "michelinStatus": "Starred — 2 MICHELIN Stars",
+      "tierGroup": "2-Star",
+      "clusterId": "tribeca-soho-village",
+      "clusterLabel": "C3 · Hudson Square / West SoHo",
+      "cuisine": "Contemporary, Seafood",
+      "address": "333 Hudson St., New York, NY 10013",
+      "daysOpen": "",
+      "hours": "",
+      "exceptions": "Bookings via Tock ($200/pp deposit; $10/pp cake-plating fee per official Tock FAQ).",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "",
+      "priceDetail": "Tock shows a $200/person reservation deposit ($400/couple deposit), not the final tasting-menu bill; left blank rather than inferred.",
+      "priceSourceUrl": "https://www.exploretock.com/cesarrestaurant",
+      "officialUrl": "https://www.cesar.restaurant/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/cesar",
+      "social": [
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@cesar.newyork via official Tock)", "url": "https://www.instagram.com/cesar.newyork/"}
+      ],
+      "flags": [
+        "Weekly hours and final tasting-menu total (beyond the $200/pp Tock deposit) were not printed in static HTML; left blank."
+      ]
+    },
+    {
+      "id": "le-coucou",
+      "name": "Le Coucou",
+      "michelinStatus": "Starred — 1 MICHELIN Star",
+      "tierGroup": "1-Star",
+      "clusterId": "tribeca-soho-village",
+      "clusterLabel": "C3 · SoHo (inside 11 Howard)",
+      "cuisine": "French Classic",
+      "address": "138 Lafayette St. (11 Howard Hotel), New York, NY 10013",
+      "daysOpen": "Monday – Sunday (7 days)",
+      "hours": "Mon–Thu 11:30–14:30 & 17:00–22:00; Fri 11:30–14:00 & 17:00–23:00; Sat 11:30–14:30 & 17:00–23:00; Sun 11:30–14:30 & 17:00–22:00",
+      "exceptions": "Located on the ground floor of shortlisted hotel 11 Howard (0-minute elevator commute for hotel guests).",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$180–$328 À La Carte 3-Course Range (published menu items)",
+      "priceDetail": "Computed from lecoucou.com dinner menu: 2 hors d'oeuvres ($21–$28 ea) + 2 plats ($51 halibut to $110 veal chop) + 2 desserts ($18–$23 ea) = $180–$328 pre-tax/tip/drinks.",
+      "priceSourceUrl": "https://lecoucou.com/",
+      "officialUrl": "https://lecoucou.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-coucou",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (dinner review)", "url": "https://www.youtube.com/watch?v=C_8S5mCOAIk"},
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@lecoucou_nyc official)", "url": "https://www.instagram.com/lecoucou_nyc/"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "gramercy-tavern",
+      "name": "Gramercy Tavern",
+      "michelinStatus": "Starred — 1 MICHELIN Star",
+      "tierGroup": "1-Star",
+      "clusterId": "flatiron-nomad-gramercy",
+      "clusterLabel": "C2 · Gramercy / Flatiron (20th St)",
+      "cuisine": "Contemporary American",
+      "address": "42 E. 20th St., New York, NY 10003",
+      "daysOpen": "Monday – Sunday (7 days)",
+      "hours": "Dining Room (MICHELIN): Mon–Thu & Sun 17:00–21:00; Fri–Sat 17:00–22:00",
+      "exceptions": "Front Tavern room is walk-in à la carte with earlier midday service; Dining Room serves prix-fixe/tasting.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$356 Dining Room Seasonal Menu (2 × $178) · $134–$180 Tavern À La Carte Range",
+      "priceDetail": "Published on gramercytavern.com/dining-room-menu/ ($178/pp Seasonal Menu) and /tavern-menu/ (starters $20–$28, mains $32–$42, desserts $15–$20).",
+      "priceSourceUrl": "https://www.gramercytavern.com/dining-room-menu/",
+      "officialUrl": "https://www.gramercytavern.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/gramercy-tavern",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Gramercy Tavern review)", "url": "https://www.youtube.com/watch?v=gLunwbHmtTw"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@eats.bysid 1★ seasonal menu review)", "url": "https://www.tiktok.com/@eats.bysid/video/7505420187475266846"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@thecarboholic Tavern dessert/cocoa)", "url": "https://www.tiktok.com/@thecarboholic/video/7445692800466816286"},
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@gramercytavern official)", "url": "https://www.instagram.com/gramercytavern/"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "cote",
+      "name": "Cote",
+      "michelinStatus": "Starred — 1 MICHELIN Star",
+      "tierGroup": "1-Star",
+      "clusterId": "flatiron-nomad-gramercy",
+      "clusterLabel": "C2 · Flatiron (22nd St)",
+      "cuisine": "Korean Steakhouse",
+      "address": "16 W. 22nd St., New York, NY 10010",
+      "daysOpen": "Monday – Sunday (7 days)",
+      "hours": "Sun–Wed 17:00–23:00; Thu–Sat 17:00–24:00",
+      "exceptions": "Subterranean cocktail lounge Undercote is open Mon–Sat (closed Sun). Book Flatiron (16 W 22nd), not the separate 550 Madison branch.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "$168 Butcher's Feast® (2 × $84)",
+      "priceDetail": "Published on cotekoreansteakhouse.com/nycdinnermenu ('FLATIRON — Butcher's Feast: 84 per person', 4 USDA Prime & American Wagyu cuts + banchan/stews/soft serve). Optional 1oz Japanese A5 supplement +$64/couple.",
+      "priceSourceUrl": "https://www.cotekoreansteakhouse.com/nycdinnermenu",
+      "officialUrl": "https://www.cotekoreansteakhouse.com/locations/cotenycflatiron",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/cote",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Best Steakhouse in NYC? Cote Review)", "url": "https://www.youtube.com/watch?v=nKCDLN01UOg"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Couple vlog at COTE)", "url": "https://www.youtube.com/watch?v=XzQHA5988Dc"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "crown-shy",
+      "name": "Crown Shy",
+      "michelinStatus": "Starred — 1 MICHELIN Star",
+      "tierGroup": "1-Star",
+      "clusterId": "fidi-wall-st",
+      "clusterLabel": "C4 · Financial District (70 Pine, Ground Fl)",
+      "cuisine": "Contemporary American",
+      "address": "70 Pine St., New York, NY 10005",
+      "daysOpen": "Monday – Sunday (7 days)",
+      "hours": "Mon–Wed 11:30–14:00 & 17:00–21:30; Thu–Fri 11:30–14:00 & 17:00–22:00; Sat 17:00–22:00; Sun 17:00–21:30",
+      "exceptions": "Weekday lunch only (Mon–Fri); weekend dinner only.",
+      "guidePriceBand": "$$$",
+      "totalPriceTwoAdults": "$108–$142 Lunch 3-Course À La Carte Range (dinner menu PDF unindexed — see note)",
+      "priceDetail": "Computed from crownshy.nyc/menu/lunch/ (2 appetizers $19–$25 + 2 entrées $27–$38 + 2 sherbets $8 = $108–$142). Summer Restaurant Week Dinner was $120/couple (2 × $60).",
+      "priceSourceUrl": "https://www.crownshy.nyc/menu/lunch/",
+      "officialUrl": "https://www.crownshy.nyc/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/crown-shy",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Approachable 1★ review)", "url": "https://www.youtube.com/watch?v=8SHBdN1eyfE"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (2026 value review)", "url": "https://www.youtube.com/watch?v=jdRpx9jelc4"},
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@crownshynyc official)", "url": "https://www.instagram.com/crownshynyc/"}
+      ],
+      "flags": [
+        "Regular à la carte dinner prices were not indexed in static text; verified weekday lunch range ($108–$142/couple) is shown."
+      ]
+    },
+    {
+      "id": "rezdora",
+      "name": "Rezdôra",
+      "michelinStatus": "Starred — 1 MICHELIN Star",
+      "tierGroup": "1-Star",
+      "clusterId": "flatiron-nomad-gramercy",
+      "clusterLabel": "C2 · Flatiron (20th St)",
+      "cuisine": "Italian (Emilia-Romagna)",
+      "address": "27 E. 20th St., New York, NY 10003",
+      "daysOpen": "Monday – Sunday (7 days)",
+      "hours": "Mon 17:00–23:00; Tue–Fri 12:00–14:30 & 17:00–23:00; Sat–Sun 11:30–14:30 & 17:00–23:00",
+      "exceptions": "Full table participation required for the Regional Pasta Tasting (allow 2 hours).",
+      "guidePriceBand": "$$$",
+      "totalPriceTwoAdults": "$220 Regional Pasta Tasting (2 × $110) · $136–$188 À La Carte Pasta & Antipasti",
+      "priceDetail": "Published on rezdora.nyc/menus/ ('regional pasta tasting $110', optional wine pairing $90/pp; individual pastas $25–$38, antipasti $18–$38).",
+      "priceSourceUrl": "https://www.rezdora.nyc/menus/",
+      "officialUrl": "https://www.rezdora.nyc/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/rezdora-osteria-emiliana",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Pasta Tasting Menu review)", "url": "https://www.youtube.com/watch?v=U4ObSd44hpQ"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Rezdôra NYC review)", "url": "https://www.youtube.com/watch?v=Jqj1WjLaImM"},
+        {"platform": "Instagram", "type": "official", "label": "Instagram (@rezdoranyc official)", "url": "https://www.instagram.com/rezdoranyc/"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "semma",
+      "name": "Semma",
+      "michelinStatus": "Starred — 1 MICHELIN Star",
+      "tierGroup": "1-Star",
+      "clusterId": "tribeca-soho-village",
+      "clusterLabel": "C3 · West Village (Greenwich Ave)",
+      "cuisine": "South Indian, Regional",
+      "address": "60 Greenwich Ave., New York, NY 10011",
+      "daysOpen": "Monday – Saturday (Closed Sunday)",
+      "hours": "Mon–Sat 17:00–22:00; Sun closed",
+      "exceptions": "Reservations release 15 days in advance at 09:00 EST on Resy; Kanyakumari Nandu Masala (Dungeness crab for two, $145) requests pre-order.",
+      "guidePriceBand": "$$$",
+      "totalPriceTwoAdults": "$114–$164 Typical Shared Dinner · $187+ with Pre-Order Crab for Two ($145)",
+      "priceDetail": "Published on semma.nyc: 2 small/medium plates ($21–$27 ea) + 2 large mains ($36–$55 ea) = $114–$164 pre-tax/tip; signature Dungeness Crab for Two is $145.",
+      "priceSourceUrl": "https://www.semma.nyc/",
+      "officialUrl": "https://www.semma.nyc/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/semma",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Semma 1★ review)", "url": "https://www.youtube.com/watch?v=TDf5NQ6s1DI"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "estela",
+      "name": "Estela",
+      "michelinStatus": "Starred — 1 MICHELIN Star",
+      "tierGroup": "1-Star",
+      "clusterId": "tribeca-soho-village",
+      "clusterLabel": "C3 · Nolita (Houston St)",
+      "cuisine": "Contemporary Mediterranean-Bistro",
+      "address": "47 E. Houston St., New York, NY 10012",
+      "daysOpen": "Monday – Sunday (7 days)",
+      "hours": "Mon–Thu 17:00–22:30; Fri–Sun 12:00–22:30",
+      "exceptions": "Second-floor walk-up above Houston St; weekend lunch/brunch Fri–Sun starting 12:00.",
+      "guidePriceBand": "$$$",
+      "totalPriceTwoAdults": "",
+      "priceDetail": "estelanyc.com states 'Lunch, Midday & Dinner Menus are subject to change' without printing dish prices in static HTML; left blank.",
+      "priceSourceUrl": "https://estelanyc.com/",
+      "officialUrl": "https://estelanyc.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/estela",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (World's 50 Best / Estela review)", "url": "https://www.youtube.com/watch?v=F1h708xLS8o"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (2025 1★ honest review)", "url": "https://www.youtube.com/watch?v=ooJeQOYmkMg"}
+      ],
+      "flags": [
+        "Couple price left blank: estelanyc.com does not publish static menu prices."
+      ]
+    },
+    {
+      "id": "casa-mono",
+      "name": "Casa Mono",
+      "michelinStatus": "Starred — 1 MICHELIN Star",
+      "tierGroup": "1-Star",
+      "clusterId": "flatiron-nomad-gramercy",
+      "clusterLabel": "C2 · Gramercy / Irving Place",
+      "cuisine": "Spanish, Contemporary",
+      "address": "52 Irving Pl., New York, NY 10003",
+      "daysOpen": "Monday – Sunday (7 days)",
+      "hours": "Daily 12:00–23:00",
+      "exceptions": "None published on MICHELIN record.",
+      "guidePriceBand": "$$$",
+      "totalPriceTwoAdults": "",
+      "priceDetail": "casamononyc.com/menus/ lists dish titles without prices in static HTML; left blank rather than estimated.",
+      "priceSourceUrl": "https://www.casamononyc.com/menus/",
+      "officialUrl": "https://www.casamononyc.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/casa-mono",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Casa Mono review)", "url": "https://www.youtube.com/watch?v=aEandBHkwt8"}
+      ],
+      "flags": [
+        "Couple price left blank: casamononyc.com lists tapas/raciones without dollar amounts."
+      ]
+    },
+    {
+      "id": "katzs-delicatessen",
+      "name": "Katz's Delicatessen",
+      "michelinStatus": "MICHELIN Guide — Bib Gourmand (No Star)",
+      "tierGroup": "Bib Gourmand",
+      "clusterId": "tribeca-soho-village",
+      "clusterLabel": "C3 · Lower East Side (Houston St)",
+      "cuisine": "Deli",
+      "address": "205 E. Houston St., New York, NY 10002",
+      "daysOpen": "Monday – Sunday (24 hrs Fri AM through Sun PM per katzsdelicatessen.com)",
+      "hours": "Mon–Thu 08:00–23:00; Continuous Fri 08:00 through Sun 23:00 (24 hrs on weekends)",
+      "exceptions": "Walk-in paper cutter ticket system (do not lose ticket). Flagged discrepancy: MICHELIN page mistakenly lists Sat–Sun closed, whereas katzsdelicatessen.com/location confirms open 24 hrs Fri 8 AM – Sun 11 PM.",
+      "guidePriceBand": "$",
+      "totalPriceTwoAdults": "$57.90–$61.90 Two Pastrami Sandwiches (2 × $28.95–$30.95)",
+      "priceDetail": "katzsdelicatessen.com homepage lists Pastrami Sandwich at $28.95 ($57.90/couple); in-store menu board shows $30.95 ($61.90/couple); 3-Meat Platter is $51.95 shared.",
+      "priceSourceUrl": "https://katzsdelicatessen.com/location",
+      "officialUrl": "https://katzsdelicatessen.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/katz-s",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Katz's comprehensive menu review)", "url": "https://www.youtube.com/watch?v=xaOfgXQozEE"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Eating at Katz's Deli)", "url": "https://www.youtube.com/watch?v=mbbqzrpzPLg"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@beli_eats 8.8/10 pastrami review)", "url": "https://www.tiktok.com/@beli_eats/video/7161884178504502570"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@snackspert Dutch review of Katz's)", "url": "https://www.tiktok.com/@snackspert/video/7621253166306168097"}
+      ],
+      "flags": [
+        "Hours discrepancy caught between official sources: MICHELIN's record says Sat–Sun closed, while katzsdelicatessen.com/location explicitly states 'Now open 24 hrs on weekends! Fri 8:00 AM – Sun 11:00 PM'."
+      ]
+    },
+    {
+      "id": "cho-dang-gol",
+      "name": "Cho Dang Gol",
+      "michelinStatus": "MICHELIN Guide — Bib Gourmand (No Star)",
+      "tierGroup": "Bib Gourmand",
+      "clusterId": "flatiron-nomad-gramercy",
+      "clusterLabel": "C2 · Koreatown / Herald Sq (35th St)",
+      "cuisine": "Korean (Homemade Tofu House)",
+      "address": "55 W. 35th St., New York, NY 10001",
+      "daysOpen": "Monday – Sunday (7 days)",
+      "hours": "Mon–Thu 12:00–14:30 & 17:00–21:30; Fri–Sun 12:00–21:30",
+      "exceptions": "Walk-in only (no reservations). MICHELIN notes 'Credit cards not accepted' — verify payment method on arrival.",
+      "guidePriceBand": "$$",
+      "totalPriceTwoAdults": "$49–$68 Two Stews + Shared Pancake (published menu)",
+      "priceDetail": "Published on chodanggolnyc.com/menu: 2 Homemade Tofu Stews ($16.99–$17.99 ea) + 1 Shrimp/Seafood Pancake ($14.99–$18.99) or Bulgogi ($29.99); Mon–Fri Lunch Combo is $39.98/couple (2 × $19.99).",
+      "priceSourceUrl": "https://chodanggolnyc.com/menu",
+      "officialUrl": "https://chodanggolnyc.com/",
+      "sourceUrl": "https://guide.michelin.com/tw/en/new-york-state/new-york/restaurant/cho-dang-gol",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Two-Minute Lunch Review)", "url": "https://www.youtube.com/watch?v=2ittP9Mcj1s"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Best Tofu House in K-Town)", "url": "https://www.youtube.com/watch?v=IM2BMKCmiOA"}
+      ],
+      "flags": []
+    },
+    {
+      "id": "thai-diner",
+      "name": "Thai Diner",
+      "michelinStatus": "MICHELIN Guide — Bib Gourmand (No Star)",
+      "tierGroup": "Bib Gourmand",
+      "clusterId": "tribeca-soho-village",
+      "clusterLabel": "C3 · Nolita (Mott St)",
+      "cuisine": "Thai-American",
+      "address": "186 Mott St., New York, NY 10012",
+      "daysOpen": "Monday – Sunday (7 days)",
+      "hours": "Mon–Wed 08:30–22:30; Thu–Fri 08:30–23:30; Sat 10:00–23:30; Sun 10:00–22:30 (homepage)",
+      "exceptions": "No phone contact (per official header). EarlyBirds menu Mon–Fri 08:30–11:00. Subpages on thaidiner.com contain a typo ('10:30am' instead of '10:30pm') — homepage hours used and flagged.",
+      "guidePriceBand": "$$",
+      "totalPriceTwoAdults": "",
+      "priceDetail": "Partial item prices only on thaidiner.com/home-1 (e.g., Phat Bai Horapha Cheesesteak $21, Cocktails $16); full dinner entrée prices are in an image/PDF, so full couple dinner total is left blank.",
+      "priceSourceUrl": "https://www.thaidiner.com/home-1",
+      "officialUrl": "https://www.thaidiner.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/thai-diner",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Thai Diner Egg Sandwich & review)", "url": "https://www.youtube.com/watch?v=ZyCMQ8kUBcE"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Trying NYC's Thai Diner)", "url": "https://www.youtube.com/watch?v=-RqAn4y8k8o"}
+      ],
+      "flags": [
+        "thaidiner.com subpages contain template text/typos ('8:30am - 10:30am'); homepage footer hours ('8:30am - 10:30pm') are used.",
+        "Full dinner menu prices not in plain text; couple total left blank (Cheesesteak $21 × 2 = $42 verified for daytime)."
+      ]
+    },
+    {
+      "id": "via-carota",
+      "name": "Via Carota",
+      "michelinStatus": "MICHELIN Guide — Selected / Listed (No Star)",
+      "tierGroup": "Guide-Listed (No Star)",
+      "clusterId": "tribeca-soho-village",
+      "clusterLabel": "C3 · West Village (Grove St)",
+      "cuisine": "Italian Trattoria",
+      "address": "51 Grove St., New York, NY 10014",
+      "daysOpen": "Monday–Wednesday & Friday–Sunday (MICHELIN record shows Thursday closed)",
+      "hours": "Mon–Wed & Fri 11:00–23:00; Sat–Sun 10:00–23:00; Thu closed (per MICHELIN record checked)",
+      "exceptions": "Heavy walk-in demand; confirm Thursday hours directly before visiting.",
+      "guidePriceBand": "$$",
+      "totalPriceTwoAdults": "",
+      "priceDetail": "viacarota.com does not publish current daily trattoria prices in plain text (an unrelated Squarespace template page /menu-basil exists on the domain and was rejected during verification); left blank.",
+      "priceSourceUrl": "https://www.viacarota.com/",
+      "officialUrl": "https://www.viacarota.com/",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/via-carota",
+      "social": [
+        {"platform": "YouTube", "type": "review", "label": "YouTube (Is Via Carota Worth The Hype?)", "url": "https://www.youtube.com/watch?v=yB-C_0u-dMU"},
+        {"platform": "YouTube", "type": "review", "label": "YouTube (2026 Via Carota visit)", "url": "https://www.youtube.com/watch?v=MRsiDhqL8sI"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@tastebywill dish ranking)", "url": "https://www.tiktok.com/@tastebywill/video/7490335259582680350"},
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@beli_eats Via Carota vs I Sodi)", "url": "https://www.tiktok.com/@beli_eats/video/7133341863532039466"}
+      ],
+      "flags": [
+        "Irregularity caught: viacarota.com/menu-basil is an unlinked Squarespace Thai-food demo template ($7.95 Gai Pad Khing), NOT Via Carota's Italian menu — rejected! Couple total left blank."
+      ]
+    },
+    {
+      "id": "len-len",
+      "name": "Len Len",
+      "michelinStatus": "MICHELIN Guide — Selected / Listed (No Star)",
+      "tierGroup": "Guide-Listed (No Star)",
+      "clusterId": "flatiron-nomad-gramercy",
+      "clusterLabel": "C2 · Flatiron (20th St)",
+      "cuisine": "Thai",
+      "address": "40 E. 20th St., New York, NY 10003",
+      "daysOpen": "",
+      "hours": "",
+      "exceptions": "Added to the MICHELIN Guide in July 2026 (no star as of 25 Nov 2026).",
+      "guidePriceBand": "$$",
+      "totalPriceTwoAdults": "",
+      "priceDetail": "Menu prices and daily hours not confirmed on official MICHELIN snippet; left blank.",
+      "priceSourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/len-len",
+      "officialUrl": "",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/len-len",
+      "social": [
+        {"platform": "TikTok", "type": "review", "label": "TikTok (@imma_eat_this Len Len NYC review)", "url": "https://www.tiktok.com/@imma_eat_this/video/7221307181885312302"}
+      ],
+      "flags": [
+        "Added to Guide July 2026; weekly hours, official URL, and couple total left blank pending post-Dec 14 ceremony check."
+      ]
+    },
+    {
+      "id": "odo-east-village",
+      "name": "Odo East Village",
+      "michelinStatus": "MICHELIN Guide — Selected / Listed (No Star)",
+      "tierGroup": "Guide-Listed (No Star)",
+      "clusterId": "tribeca-soho-village",
+      "clusterLabel": "C3 · East Village (5th St)",
+      "cuisine": "Japanese, Kaiseki Izakaya (100% Gluten-Free)",
+      "address": "536 E. 5th St., New York, NY 10009",
+      "daysOpen": "",
+      "hours": "",
+      "exceptions": "Opened Feb 2026; Added to MICHELIN Guide July 2026 (no star as of 25 Nov 2026). Entire menu is gluten-free; reservations release daily 30 days ahead.",
+      "guidePriceBand": "$$$$",
+      "totalPriceTwoAdults": "",
+      "priceDetail": "Shared izakaya plates; exact prices not published on odo.nyc announcement page — left blank.",
+      "priceSourceUrl": "https://www.odo.nyc/news-events/odo-east-village-opens",
+      "officialUrl": "https://www.odo.nyc/news-events/odo-east-village-opens",
+      "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/odo-east-village",
+      "social": [],
+      "flags": [
+        "Opened Feb 2026; daily hours, couple total, and dedicated social review videos not yet confirmed — left blank."
+      ]
+    }
+  ]
+}
