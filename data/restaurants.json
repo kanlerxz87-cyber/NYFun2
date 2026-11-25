@@ -5,7 +5,7 @@
     "starListSource": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred",
     "starCounts": "5 three-star, 14 two-star, 50 one-star in the NYC all-starred list (checked 2026-11-25)",
     "importantTiming": "Michelin's 2026 Northeast Cities ceremony is scheduled for 2026-12-14 (https://michelinmedia.com/pages/blog/detail/article/c/a1479/), after this research date and before the proposed trip. Distinctions may change.",
-    "priceNote": "Michelin publishes only a $ symbol band, not a dollar amount. Couple totals are left blank unless an official menu price was verified.",
+    "priceNote": "As of 2026-11-25, fixed menu prices from official restaurant-owned pages are shown as the arithmetic total for two adults (2 × the published per-person rate), with the named service/menu basis. This is a current menu snapshot, not a February 2027 quote; menus may change before travel. Optional drinks, pairings, supplements, tax and service are not added unless explicitly stated. Blank means no suitable fixed-price couple total was confirmed from an official source; see row flags. The officialUrl field links directly to the restaurant menu/source where a price was confirmed.",
     "hoursCrossCheck": "Le Bernardin, Eleven Madison Park, Per Se and Atera were read independently by two sessions against the same MICHELIN records on 2026-11-25 and agree. The fuller capture (which includes Le Bernardin Thursday to Sunday and 'Sunday closed') is retained. Independent agreement is the strongest verification available without a second source."
   },
   "items": [
@@ -18,8 +18,8 @@
       "hours": "Mon–Thu 17:30–22:00; Fri–Sun 12:00–13:00 and 17:30–23:00",
       "exceptions": "No dress code (stated on the MICHELIN record). The tasting menu offers a vegan path as well as animal-protein courses.",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "officialUrl": "https://www.elevenmadisonpark.com/",
+      "priceTwoAdults": "$770 — full six-course tasting menu for two (2 × $385 per guest; current published menu snapshot; gratuity is discretionary and not included per FAQ).",
+      "officialUrl": "https://www.elevenmadisonpark.com/faq",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/eleven-madison-park",
       "social": [
         {
@@ -39,7 +39,7 @@
         }
       ],
       "flags": [
-        "Couple price unverified: official menu price not confirmed"
+        "Menu price snapshot: 2026-11-25 official FAQ: $385/guest full tasting; prices can change before Feb 2027."
       ]
     },
     {
@@ -51,8 +51,8 @@
       "hours": "Tue–Sun 17:00–21:30; Monday closed",
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "officialUrl": "https://www.jungsik.com/",
+      "priceTwoAdults": "$670 — signature menu for two (2 × $335; menu subtotal, 2026-11-25 check).",
+      "officialUrl": "https://www.jungsik.com/menu/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/jungsik-new-york",
       "social": [
         {
@@ -62,7 +62,7 @@
         }
       ],
       "flags": [
-        "Couple price unverified: official menu price not confirmed"
+        "Menu price snapshot: 2026-11-25 official menu: signature menu $335; future menu may change."
       ]
     },
     {
@@ -74,8 +74,8 @@
       "hours": "Mon–Thu 12:00–14:30 and 17:00–22:30; Fri 12:00–14:30 and 17:00–23:00; Sat 17:00–23:00; Sunday closed",
       "exceptions": "Business casual dress code: jackets recommended, not required; shorts, t-shirts, short sleeves, flip-flops, sweatshirts, sweatpants and sneakers not permitted. Reservations required for the main dining room; lounge is walk-in. Card required at booking; 48-hour cancellation window at $150 per person.",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "officialUrl": "https://www.le-bernardin.com/",
+      "priceTwoAdults": "$436 — dinner four-course prix fixe for two (2 × $218; menu subtotal, 2026-11-25 check).",
+      "officialUrl": "https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-bernardin",
       "social": [
         {
@@ -100,8 +100,8 @@
         }
       ],
       "flags": [
-        "Couple price unverified: official menu price not confirmed",
-        "Dress code and cancellation policy recorded from the Resy venue page"
+        "Dress code and cancellation policy recorded from the Resy venue page",
+        "Menu price snapshot: 2026-11-25 official dinner menu PDF: $218/person; tax/service not added."
       ]
     },
     {
@@ -124,7 +124,7 @@
         }
       ],
       "flags": [
-        "Couple price unverified: official menu price not confirmed"
+        "No current official per-person menu price or fixed two-person total confirmed in the checked official sources; blank retained."
       ]
     },
     {
@@ -142,8 +142,8 @@
       "social": [],
       "flags": [
         "Official website not listed by Michelin (phone only)",
-        "Couple price unverified",
-        "No verified NYC social/review link found; similar-name YouTube results refer to a different city"
+        "No verified NYC social/review link found; similar-name YouTube results refer to a different city",
+        "No current official per-person menu price or fixed two-person total confirmed in the checked official sources; blank retained."
       ]
     },
     {
@@ -155,8 +155,8 @@
       "hours": "Mon–Thu 12:00–14:00 and 17:30–21:00; Fri 12:00–14:00 and 17:30–21:30; Sat 17:00–21:30; Sunday closed",
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "officialUrl": "https://www.aquavit.org/",
+      "priceTwoAdults": "$390 — dinner tasting menu for two (2 × $195; menu subtotal, official 20 Nov 2026 dinner menu).",
+      "officialUrl": "https://www.aquavit.org/s/DR-112026.pdf",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/aquavit",
       "social": [
         {
@@ -166,8 +166,8 @@
         }
       ],
       "flags": [
-        "Couple price unverified",
-        "Social link is third-party; no official account link confirmed"
+        "Social link is third-party; no official account link confirmed",
+        "Menu price snapshot: Official dinner PDF linked by Aquavit dining-room page; file/title dated 20 Nov 2026; recheck for Feb 2027."
       ]
     },
     {
@@ -180,12 +180,12 @@
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
       "priceTwoAdults": "",
-      "officialUrl": "https://www.atomixnyc.com/",
+      "officialUrl": "https://www.atomixnyc.com/current-menu",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atomix",
       "social": [],
       "flags": [
-        "Couple price unverified",
-        "No social link verified from an official source"
+        "No social link verified from an official source",
+        "Official site describes the tasting format but the checked official menu/booking links did not publish a price; total left blank."
       ]
     },
     {
@@ -197,13 +197,13 @@
       "hours": "Mon 16:45–21:30; Tue–Thu 11:45–14:15 and 16:45–21:30; Fri 11:45–14:15 and 16:45–22:00; Sat 16:45–22:00; Sunday closed",
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "officialUrl": "https://www.gknyc.com/",
+      "priceTwoAdults": "$650 — chef’s tasting menu for two (2 × $325; menu subtotal, official dinner menu dated 17 Nov 2026).",
+      "officialUrl": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/gabriel-kreuther",
       "social": [],
       "flags": [
-        "Couple price unverified",
-        "No social link verified from an official source"
+        "No social link verified from an official source",
+        "Menu price snapshot: Official restaurant-linked dinner PDF dated 17 Nov 2026; recheck for Feb 2027."
       ]
     },
     {
@@ -215,14 +215,14 @@
       "hours": "Not confirmed on the Michelin page section checked",
       "exceptions": "Not confirmed",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
+      "priceTwoAdults": "$370–$570 — dinner tasting menu for two: Impressions $185/guest or Abstractions $285/guest (current published menu subtotal).",
       "officialUrl": "https://www.themodernnyc.com/the-modern/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/the-modern",
       "social": [],
       "flags": [
         "Hours unverified in checked section",
-        "Couple price unverified",
-        "No social link verified from an official source"
+        "No social link verified from an official source",
+        "Menu price snapshot: Official menu page checked 2026-11-25; dinner menus are seasonal and may change before travel."
       ]
     },
     {
@@ -234,12 +234,13 @@
       "hours": "",
       "exceptions": "",
       "guidePriceBand": "",
-      "priceTwoAdults": "",
-      "officialUrl": "",
+      "priceTwoAdults": "$990+ lunch starting total for two; dinner $1,500 (table omakase) or $1,900 (Hinoki counter omakase), each menu subtotal for two. Official page excludes beverages, tax and optional gratuity.",
+      "officialUrl": "https://www.masanyc.com/menus",
       "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
       "social": [],
       "flags": [
-        "Detail page not yet checked: address, hours, price and social link left blank"
+        "Menu price snapshot: Official menu page checked 2026-11-25: lunch starts $495/person, table $750/person, counter $950/person; prices may change.",
+        "Address/hours remain blank because they were outside this menu-price verification scope; confirm before itinerary planning."
       ]
     },
     {
@@ -251,13 +252,14 @@
       "hours": "",
       "exceptions": "",
       "guidePriceBand": "",
-      "priceTwoAdults": "",
-      "officialUrl": "",
+      "priceTwoAdults": "$300 lunch / $540 dinner for two (2 × $150 or $270 per guest, respectively; menu subtotal).",
+      "officialUrl": "https://www.odo.nyc/menu",
       "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
       "social": [],
       "flags": [
-        "Detail page not yet checked: address, hours, price and social link left blank",
-        "Distinct from 'Odo East Village' below"
+        "Distinct from 'Odo East Village' below",
+        "Menu price snapshot: Official menu page checked 2026-11-25; price is menu subtotal, evolving menu; recheck for Feb 2027.",
+        "Address/hours remain blank because they were outside this menu-price verification scope; confirm before itinerary planning."
       ]
     },
     {
@@ -270,11 +272,12 @@
       "exceptions": "",
       "guidePriceBand": "",
       "priceTwoAdults": "",
-      "officialUrl": "",
+      "officialUrl": "https://www.sushinoz.com/",
       "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
       "social": [],
       "flags": [
-        "Detail page not yet checked: address, hours, price and social link left blank"
+        "No current official per-person menu price or fixed two-person total confirmed in the checked official sources; blank retained.",
+        "Address/hours remain blank because they were outside this menu-price verification scope; confirm before itinerary planning."
       ]
     },
     {
@@ -287,11 +290,12 @@
       "exceptions": "",
       "guidePriceBand": "",
       "priceTwoAdults": "",
-      "officialUrl": "",
+      "officialUrl": "https://www.cesar.restaurant/",
       "sourceUrl": "https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
       "social": [],
       "flags": [
-        "Detail page not yet checked: address, hours, price and social link left blank"
+        "No current official per-person menu price or fixed two-person total confirmed in the checked official sources; blank retained.",
+        "Address/hours remain blank because they were outside this menu-price verification scope; confirm before itinerary planning."
       ]
     },
     {
@@ -303,8 +307,8 @@
       "hours": "Mon–Thu 11:30–14:30 and 17:00–22:00; Fri 11:30–14:00 and 17:00–23:00; Sat 11:30–14:30 and 17:00–23:00; Sun 11:30–14:30 and 17:00–22:00",
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "officialUrl": "https://lecoucou.com/",
+      "priceTwoAdults": "$440 — A Very Coucou dinner for two (2 × $220; official menu states tax and gratuity not included).",
+      "officialUrl": "https://lecoucou.com/#menus",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-coucou",
       "social": [
         {
@@ -314,9 +318,9 @@
         }
       ],
       "flags": [
-        "Couple price unverified",
         "Located inside 11 Howard hotel",
-        "Social link is third-party; no official account link confirmed"
+        "Social link is third-party; no official account link confirmed",
+        "Menu price snapshot: Official menu checked 2026-11-25; seasonal current menu; taxes and gratuity not included; recheck for Feb 2027."
       ]
     },
     {
@@ -328,8 +332,8 @@
       "hours": "Mon–Thu 17:00–21:00; Fri–Sat 17:00–22:00; Sun 17:00–21:00",
       "exceptions": "Michelin page lists Dining Room hours; Tavern-side hours may differ (unverified)",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "officialUrl": "https://www.gramercytavern.com/",
+      "priceTwoAdults": "$356 — five-course Dining Room seasonal dinner for two (2 × $178; current published menu subtotal).",
+      "officialUrl": "https://www.gramercytavern.com/menu/the-dining-room/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/gramercy-tavern",
       "social": [
         {
@@ -339,8 +343,8 @@
         }
       ],
       "flags": [
-        "Couple price unverified",
-        "Social link is third-party; no official account link confirmed"
+        "Social link is third-party; no official account link confirmed",
+        "Menu price snapshot: Official dinner menu checked 2026-11-25; seasonal and subject to change; no tax/service assumption made."
       ]
     },
     {
@@ -363,8 +367,8 @@
         }
       ],
       "flags": [
-        "Couple price unverified",
-        "Social link is third-party; no official account link confirmed"
+        "Social link is third-party; no official account link confirmed",
+        "Official source lists a variable à la carte menu but no complete fixed-price meal for two; no sample bill inferred."
       ]
     },
     {
@@ -388,8 +392,8 @@
       ],
       "flags": [
         "Hours unverified in checked section",
-        "Couple price unverified",
-        "Social link is third-party; no official account link confirmed"
+        "Social link is third-party; no official account link confirmed",
+        "Official source shows à la carte items but no fixed per-person menu or defined two-person meal total; no sample bill inferred."
       ]
     },
     {
@@ -460,9 +464,10 @@
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atera",
       "social": [],
       "flags": [
-        "Couple price unverified: official menu price not confirmed",
         "Added by the second session - this two-star restaurant was missing from the first catalogue",
-        "Saturday is the only afternoon service"
+        "Saturday is the only afternoon service",
+        "Menu-price sources conflict on the official site: page text says $325 per guest while embedded structured data says $298; total left blank pending clarification.",
+        "Official source for review: https://ateranyc.com/ (both conflicting values appear in page content/embedded data)."
       ]
     }
   ]
