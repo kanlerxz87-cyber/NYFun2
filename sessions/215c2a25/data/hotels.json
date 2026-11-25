@@ -1,0 +1,66 @@
+{
+  "asOf": "2026-11-25",
+  "warning": "No dated, bookable rate for 15–22 February 2027 could be confirmed from an official hotel booking site. Marriott's dated search rendered zero priced results; other booking engines are not official sources. Seven-night totals are therefore blank, not estimated. The 'cluster proxy' counts are counts of restaurants in this site's 18-row table whose official address is in the same named cluster; they are NOT measured transit times and are flagged as unverified.",
+  "clusterCounts": [
+    {"cluster": "Midtown / Columbus Circle", "count": 6, "rows": "Le Bernardin, Per Se, Sushi Sho, Masa, The Modern, Jean-Georges"},
+    {"cluster": "Flatiron / NoMad / Gramercy", "count": 5, "rows": "Eleven Madison Park, Atomix, Cote, Gramercy Tavern, Café Carmellini"},
+    {"cluster": "Tribeca / SoHo", "count": 3, "rows": "Jungsik, Atera, Le Coucou"},
+    {"cluster": "West Village", "count": 2, "rows": "Sushi Nakazawa, Cynthia"},
+    {"cluster": "East Village", "count": 1, "rows": "Tuome"},
+    {"cluster": "Upper East Side", "count": 1, "rows": "Daniel"}
+  ],
+  "rows": [
+    {
+      "rank": 1, "name": "The Fifth Avenue Hotel", "address": "250 Fifth Ave (The Fifth Avenue Hotel, 1 W 28th St), New York, NY 10001", "area": "NoMad / Flatiron",
+      "bed": "", "bathroom": "", "amenities": "Guide lists Café Carmellini at this hotel; no official room/bath spec retrieved",
+      "leadRate": "", "total7": "", "cluster": "NoMad / Flatiron", "proxyCount": 5,
+      "link": "https://guide.michelin.com/us/en/hotels-stays/nyc/the-fifth-avenue-hotel-13538",
+      "sources": ["michelin-hotel-fifth-ave", "michelin-cafe-carmellini"], "verification": "partial",
+      "flags": ["room-not-verified", "bath-not-verified", "price-unverified", "transit-1h-unverified", "rank-is-cluster-proxy"]
+    },
+    {
+      "rank": 2, "name": "11 Howard", "address": "11 Howard Street, New York, NY 10013", "area": "SoHo",
+      "bed": "Howard Queen: queen bed", "bathroom": "Bathrooms finished in marble and brass; organic bath products (official wording; the word 'private' is not used)",
+      "amenities": "Complimentary high-speed wireless Internet; minibar; in-room safe; Grown Alchemist bath amenities; 48-inch TV",
+      "leadRate": "", "total7": "", "cluster": "Tribeca / SoHo", "proxyCount": 3,
+      "link": "https://www.11howard.com/rooms/the-howard-queen",
+      "sources": ["11-howard-queen", "michelin-le-coucou"], "verification": "partial",
+      "flags": ["bath-privacy-wording-not-explicit", "price-unverified", "transit-1h-unverified", "rank-is-cluster-proxy"]
+    },
+    {
+      "rank": 3, "name": "The Standard, High Line", "address": "", "area": "West Village / Meatpacking",
+      "bed": "Standard Queen (official booking page)", "bathroom": "", "amenities": "Steps from the Whitney Museum of Art; 338 rooms with skyline/Hudson views (official hotel description)",
+      "leadRate": "From $340/night — official booking page, undated (not a 2027 rate)", "total7": "", "cluster": "West Village", "proxyCount": 2,
+      "link": "https://book.standardhotels.com/whitney/?rt=google%7Ccpc%7CABZ02-The-Standard-High-Line-Brand-Local%7Cthe+standard+hotel",
+      "sources": ["standard-high-line"], "verification": "partial",
+      "flags": ["address-not-captured", "bath-not-verified", "price-undated", "total-unverified", "transit-1h-unverified", "rank-is-cluster-proxy"]
+    },
+    {
+      "rank": 4, "name": "citizenM New York Bowery", "address": "", "area": "Bowery / Lower East Side",
+      "bed": "One wall-to-wall XL king bed (official citizenM brand page)", "bathroom": "Power shower in room (official brand page; 'private' wording not used)",
+      "amenities": "Self check-in, canteenM 24/7 snacks and beverages, smart-room tablet, fast Wi-Fi, living spaces",
+      "leadRate": "", "total7": "", "cluster": "East Village", "proxyCount": 1,
+      "link": "https://www.marriott.com/brands/citizenm.mi",
+      "sources": ["citizenm-brand"], "verification": "partial",
+      "flags": ["address-not-captured", "bath-privacy-wording-not-explicit", "price-unverified", "transit-1h-unverified", "rank-is-cluster-proxy"]
+    },
+    {
+      "rank": 5, "name": "The Bowery Hotel", "address": "", "area": "Bowery / East Village",
+      "bed": "Bowery Queen: one queen bed, 250 sq ft (official room page)", "bathroom": "Rainfall shower (official room page); other room types list a marble soaking tub",
+      "amenities": "Not captured from official room page",
+      "leadRate": "", "total7": "", "cluster": "East Village", "proxyCount": 1,
+      "link": "https://theboweryhotel.com/rooms/bowery-queen/",
+      "sources": ["bowery-queen"], "verification": "partial",
+      "flags": ["address-not-captured", "bath-privacy-wording-not-explicit", "price-unverified", "transit-1h-unverified", "rank-is-cluster-proxy"]
+    },
+    {
+      "rank": 6, "name": "The William Vale", "address": "111 N 12th St, Brooklyn, NY 11249", "area": "Williamsburg, Brooklyn",
+      "bed": "Manhattan View Queen with Balcony: one queen bed, 240 sq ft + 72 sq ft balcony", "bathroom": "Glass-enclosed rainfall shower, Le Labo amenities, bathrobes (official room page)",
+      "amenities": "Seasonal Vale Pool, 24/7 fitness center, on-site dining (Westlight, Leuca, Little Fino), complimentary Wi-Fi, twice-daily housekeeping",
+      "leadRate": "", "total7": "", "cluster": "Brooklyn (outside Manhattan clusters)", "proxyCount": 0,
+      "link": "https://www.thewilliamvale.com/rooms/manhattan-view-queen-with-balcony/",
+      "sources": ["william-vale-queen"], "verification": "partial",
+      "flags": ["bath-privacy-wording-not-explicit", "price-unverified", "transit-1h-unverified", "rank-is-cluster-proxy", "brooklyn-cluster-not-counted"]
+    }
+  ]
+}
