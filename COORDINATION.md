@@ -5,7 +5,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 ## Session conventions
 
 - This repository session is bound to branch `arena/4a10e962-nyfun2` (fixed by the platform). Do not switch branches.
-- Session ID for this branch: `arena/4a10e962-nyfun2`.
+- Session ID for this branch: `arena/4a10e962-nyfun2` (historical; this session runs on `arena/eea68c1e-nyfun2`).
 - Shared outputs (site navigation, index, integrated tables) are edited only during final integration after the research tasks are complete.
 - Every factual table row needs a source URL from an official/primary source. Unconfirmed values stay blank and are listed on the Flagged for Review page.
 - Before each push: `git pull --rebase origin arena/4a10e962-nyfun2`, then push to that same branch. Never discard another session's work on conflict — stop and log it.
@@ -27,6 +27,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T10 | Per-person menu price capture for the starred restaurants | unclaimed | — | `data/restaurants.json` | Menu pages are client-rendered; needs a source that prints prices. |
 | T11 | Measured door-to-door transit times for the ≤1-hour rule | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/transit_anchors.json` | 25/25 legs measured via Google Maps transit, 2026-11-25 17:14–17:31 ET. All ≤37 min ⇒ the 1-hour rule does not separate Manhattan hotels. |
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
+| T13 | Gap audit vs user request: enrich verifiable social links/hours/official links, tighten tables for required columns, update summary/questions/flags/suggestions, repo audit, verify & publish-ready | in progress | arena/eea68c1e-nyfun2 | `COORDINATION.md`, `README.md`, `data/restaurants.json`, `data/activities.json`, `data/hotels.json`, `data/decisions.json`, `index.html`, `pages/*.html`, `assets/*`, `scripts/verify.py` | No other session claimed these shared files at claim time. Will not overwrite `alt/**`, `sessions/**` namespaces. All added facts must carry official/primary source or be left blank+flagged. |
 
 ## Log
 
@@ -187,3 +188,7 @@ per page; no absolute claims of the form "every value is verified" remain (check
   cross-session discrepancies above — pre-tax vs all-in hotel basis, row-level queen+private-bath
   filtering in the canonical hotel set, the MICHELIN band-vs-dollar question, and the 72-vs-20 roster
   size. None was resolved unilaterally.
+
+### 2026-11-25 — session `arena/eea68c1e-nyfun2` (claim)
+- Audited repo state on branch `arena/eea68c1e-nyfun2` (HEAD 0f93b80, same as origin/main at claim time). Existing canonical site, `alt/`, and `sessions/33cfdba4`/`sessions/215c2a25` namespaces present; no other active claim on shared canonical files observed in COORDINATION.md.
+- Claimed T13 for a gap-closure pass against the user request: verify/enrich social media links (YouTube/TikTok/Instagram where confirmable), ensure required table columns (days/hours/exceptions, official links, social links, costs) are present/clear, update executive summary/questions/suggestions/flags, repo audit, and run verification. Will follow no-hallucination rule: blank+flag for anything not confirmed from official/primary source.
