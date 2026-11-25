@@ -18,13 +18,12 @@ import sys
 from datetime import date
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-# This kit is namespaced so it cannot overwrite the canonical root site that a
-# parallel session owns and publishes. KIT_DIR names the namespace; nothing here
-# writes outside it.
+# Fully self-contained kit: the script lives beside the pages it writes, so it
+# cannot touch the canonical root site that a parallel session owns and publishes.
+OUT = Path(__file__).resolve().parent
+ROOT = OUT                       # kept for the few links that reference the repo tree
 KIT_DIR = "sessions/33cfdba4"
-OUT = ROOT / KIT_DIR
-DATA = ROOT / "data"
+DATA = OUT / "data"
 
 TODAY = "2026-11-25"  # research date stamped on every verified cell set
 
@@ -844,7 +843,7 @@ def page_audit():
     body += '<h2>Raw data</h2>'
     body += '<p class="small">Every table on this site is generated from JSON in the repository. Nothing is hard-coded in the templates, so a correction to a data file regenerates the affected pages.</p><ul class="checks">'
     for f in ("restaurants", "hotels", "activities", "pricing_windows", "transit_anchors", "itinerary", "questions", "suggestions", "flags", "audit", "executive_summary", "site"):
-        body += f'<li>{link("https://github.com/kanlerxz87-cyber/NYFun2/blob/arena/33cfdba4-nyfun2/data/" + f + ".json", "data/" + f + ".json")}</li>'
+        body += f'<li>{link("https://github.com/kanlerxz87-cyber/NYFun2/blob/main/sessions/33cfdba4/data/" + f + ".json", "data/" + f + ".json")}</li>'
     body += "</ul>"
 
     page("repo-audit.html", "Repo Audit", "Fifteen audit findings with evidence and status, the full source registry, and links to the raw data.", body)
