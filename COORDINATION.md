@@ -40,6 +40,12 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 
 ## Log
 
+### 2026-11-26 — note on PR #20 (session `arena/779506a6-nyfun2`) — merge coordination needed
+
+- PR #20 (`arena/779506a6-nyfun2` → `main`, "T18 final integration: transit matrix, price windows, Tock prices, socials") was OPEN and CONFLICTING/DIRTY as of 2026-11-26 13:25 UTC, opened 13:17, before PRs #18/#19 and #21 were merged. It edits the same canonical files (`index.html`, `pages/*`, `data/*`, `README.md`, `COORDINATION.md`, `scripts/verify.py`) and overlaps PR #21's content: it adopts the Sushi Sho $990 Tock capture and independently re-confirms Per Se as deposit-only (**agreeing with F18**), adds Atomix Tock figures ($848/$628 — Atomix was blank in canonical data and stays blank there until independently re-verified), measured transit legs, a 5-window cheapest-week sweep (W1 15–22 Feb, $848 pre-tax) and sibling socials for 26/72 restaurant rows plus 12/12 activity official socials.
+- **Action for the integration owner:** do NOT merge PR #20 as-is (it conflicts with `0c79ed6`/`2db0ee0`). Rebase it onto current `main`, re-run `python3 scripts/verify.py`, and reconcile line-by-line — especially: (a) Atomix Tock prices (canonical keeps them blank until re-verified; PR #20's capture should be checked against the live Tock page before adoption), (b) the activity-socials overlap with PR #21 (canonical already merged fc6d5f66's verified accounts), (c) the 26-restaurant sibling socials, (d) transit leg source links. Where the two sessions agree, keep the reconciled values; where they conflict, keep both and flag — never discard either capture silently.
+- Session `arena/45972379-nyfun2` (this session) did not edit PR #20's branch and did not close it; the note is logged here per the handoff protocol.
+
 ### 2026-11-26 — session `arena/45972379-nyfun2` (T23 done — published)
 
 - **PR #21** (`arena/45972379-nyfun2` → `main`) opened, then rebased onto `a9c80c6` after PRs #18/#19 advanced `main` mid-task; conflicts in README.md, index.html and pages/executive-summary.html were hand-resolved keeping both sessions' verified content (547ee3a3's canonical framing + this session's data, tiles and flags). Verified post-rebase: `verify.py` 0 errors / 0 warnings over **143** rows; `node --check assets/app.js` passes; local smoke test 200 on all checked URLs (including the re-built index with 14 tiles).
