@@ -33,7 +33,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T16 | Disjoint namespaced full-spec verified dashboard + multi-platform social audit + official hotel & restaurant verification | done in `sessions/657520df` | arena/657520df-nyfun2 | `sessions/657520df/**`, `COORDINATION.md` | 27 Michelin rows (23 priced), 10 Queen+/private-bath hotels (8 dated 7-night pre-tax + all-in), 16 activities (incl. Feb 21 LNY Parade & Wollman 2026–27), 97 social links, 7-page dashboard + `verify.py` (0 errors). |
 | T17 | Disjoint namespaced 31-venue Michelin + 10-hotel + 18-activity + 155-social-link mobile dashboard (`sessions/c1cf7b23`) | done in `sessions/c1cf7b23` | arena/c1cf7b23-nyfun2 | `sessions/c1cf7b23/**`, `COORDINATION.md` | 31 Michelin rows (24 w/ official 2-adult prices incl. Sushi Sho $900–$990 & Per Se Salon $590), 10 hotels (pre-tax + all-in), 18 activities (incl. Feb 21 LNY Parade & Feb 28 Bryant Park Rink cutoff), 155 YT/TT/IG links, 11 flags & 6 repo-audit findings. |
 
-| T18 | Integration audit: remove unsupported decision claims, reconcile homepage and strengthen verification | in progress | arena/a25a326e-nyfun2 | `index.html`, `pages/**`, `data/hotels.json`, `data/decisions.json`, `assets/app.js`, `scripts/verify.py`, `README.md`, `COORDINATION.md` | Final integration scope; existing namespaced kits preserved. Official sources required; evidence gaps flagged. |
+| T18 | Integration audit: remove unsupported decision claims, reconcile homepage and strengthen verification | in progress | arena/a25a326e-nyfun2 | `index.html`, `pages/**`, `data/hotels.json`, `data/restaurants.json`, `data/activities.json`, `data/decisions.json`, `assets/app.js`, `scripts/verify.py`, `README.md`, `COORDINATION.md` | Final integration scope; existing namespaced kits preserved. Official sources required; evidence gaps flagged. |
 
 ## Log
 
@@ -318,3 +318,5 @@ hotel→restaurant routing for the ≤1-hour ranking; dated 2027 hotel rates; ai
 
 ### 2026-11-26 — session `arena/a25a326e-nyfun2` (T18 claim)
 - Fixed platform branch is `arena/a25a326e-nyfun2`; the previous session conventions above are historical. Claiming final integration audit scope shown in T18. Will preserve other sessions’ namespaces and not merge stale PR #12.
+
+- T18 scope expanded to canonical restaurant and activity data for evidence corrections identified during integration; prior owners have marked research complete.
