@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-11-25",
+  "checkedOn": "2026-11-26",
   "questions": [
     {
       "id": "Q1",
@@ -16,26 +16,41 @@
     {
       "id": "Q2",
       "question": "What is the real total price for a 7-night stay for two adults, including taxes and fees?",
-      "whatWeKnow": "citizenM publishes an undated 'from $395 / night' rate. Michelin states its hotel booking widget cannot book more than 31 days ahead.",
-      "whatWeDoNotKnow": "Dated 2027 rates for any shortlisted hotel, taxes, resort/amenity fees and cancellation terms.",
-      "provisionalAnswer": "Left blank and flagged. No 7-night total is invented.",
+      "whatWeKnow": "Booking.com returned 15–22 Feb 2027 / 2-adult / 7-night pre-tax snapshots for 8 of the 10 qualifying hotels, captured 2026-11-25 or 2026-11-26. Rates include different room and cancellation plans; room/resort fees and excluded taxes are documented per row. No full final checkout total was captured.",
+      "whatWeDoNotKnow": "The final checkout total for the selected room on the day of payment, including all taxes, city/destination fees and any resort fee; the best direct-hotel rate; and whether the volatile OTA rate will remain available.",
+      "provisionalAnswer": "Treat each hotel figure only as a dated Booking.com pre-tax snapshot, not an official hotel quote or a verified all-in total. The Hotels table leaves the all-in field blank instead of modeling tax arithmetic.",
       "blocking": true,
-      "howToDiscover": "Check each hotel's own booking engine when the 2027 booking window opens; record screenshot/URL and date checked.",
+      "howToDiscover": "Compare the exact named room and cancellation plan on the hotel's own booking engine and the OTA; proceed to the final checkout summary and record the full taxes/fees, date, room and screenshot before paying.",
       "sources": [
-        "https://www.citizenm.com/es/hoteles/america/nueva-york/times-square-hotel",
-        "https://guide.michelin.com/en/hotels-stays/nyc/11-howard-8129"
+        "https://www.booking.com/hotel/us/doubletree-new-york-city-chelsea.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+        "https://www.booking.com/hotel/us/hyatt-place-new-york-chelsea.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1",
+        "https://www.booking.com/hotel/us/exchange-manhattan.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+        "https://www.booking.com/hotel/us/arlo-nomad.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+        "https://www.booking.com/hotel/us/new-york-95-west-broadway.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+        "https://www.booking.com/hotel/us/gershwin.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+        "https://www.booking.com/hotel/us/11-howard.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&sb_price_type=total&type=total",
+        "https://www.booking.com/hotel/us/the-beekman-a-thompson-hotel.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
       ]
     },
     {
       "id": "Q3",
       "question": "Which shortlisted hotels actually have a private bathroom and a queen-size bed or larger for two adults on the chosen dates?",
-      "whatWeKnow": "Marriott's citizenM brand page states XL king bed, up to two adults, power shower and fast Wi-Fi. Other shortlisted hotels' room pages were not checked.",
-      "whatWeDoNotKnow": "Room-type availability and bed/bath details for the remaining hotels.",
-      "provisionalAnswer": "Only citizenM Times Square meets the bed/bath requirement on an official page; the rest are flagged unverified.",
+      "whatWeKnow": "Ten shortlisted properties now have a named Queen- or King-bed room and private bathroom verified from primary property-room pages: DoubleTree Chelsea, Hyatt Place Chelsea, Eurostars Wall Street, Arlo NoMad, The Frederick, The Evelyn, 11 Howard, citizenM Times Square, The Beekman and The Fifth Avenue Hotel.",
+      "whatWeDoNotKnow": "Whether each exact room type is still available for the chosen dates at checkout; the rate-plan/bed assignment can differ from a property's general room catalogue. Six earlier MICHELIN candidates remain outside this qualifying shortlist pending room-level evidence.",
+      "provisionalAnswer": "All ten current shortlist entries meet the room-spec requirement at property-page level. Confirm exact dated availability and the selected room's bed/bath before payment; the two unpriced properties still have no dated rate.",
       "blocking": true,
-      "howToDiscover": "Fetch each hotel's official rooms page and the exact room type shown for the booking dates.",
+      "howToDiscover": "Open the row's official room-page link and confirm the named Queen/King room plus private bath in the actual dated booking plan. Re-check both at final checkout.",
       "sources": [
-        "https://www.marriott.com/brands/citizenm.mi"
+        "https://www.hilton.com/en/hotels/nyccldt-doubletree-new-york-city-chelsea/hotel-info/",
+        "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/hotel-info",
+        "https://www.eurostarshotels.co.uk/eurostars-wall-street/rooms.html",
+        "https://arlohotels.com/nomad/rooms/",
+        "https://www.frederickhotelnyc.com/rooms-suites",
+        "https://www.theevelyn.com/rooms-suites",
+        "https://www.11howard.com/rooms/the-howard-queen",
+        "https://www.marriott.com/brands/citizenm.mi",
+        "https://www.hyatt.com/thompson-hotels/en-US/lgath-the-beekman/rooms",
+        "https://www.thefifthavenuehotel.com/accommodations/"
       ]
     },
     {
@@ -54,30 +69,40 @@
     {
       "id": "Q5",
       "question": "How many Michelin restaurants are within one hour by subway or bus of each hotel?",
-      "whatWeKnow": "Official addresses for 13 detailed rows and Michelin's official star list; no official door-to-door travel times for Feb 2027.",
-      "whatWeDoNotKnow": "Routed travel times from each candidate hotel at the time of day you will travel.",
-      "provisionalAnswer": "Not ranked as fact. The site provides a link to live directions for every pair and a flagged proximity proxy instead.",
+      "whatWeKnow": "The T11 dataset records 25 Google Maps transit-mode 'leave now' legs from five hotel origins to five representative MICHELIN clusters, captured 2026-11-25 17:14–17:31 ET; returned times range from 3 to 37 minutes. The origins include four hotels in the current shortlist and one separate reference hotel. Several very short results were walk-only, not subway/bus rides.",
+      "whatWeDoNotKnow": "Future February 2027 service conditions or departure-time-specific journeys; exact transit-only results for every shortlisted hotel, all restaurant/attraction pairs, and any accessibility requirements.",
+      "provisionalAnswer": "The sampled Google Maps results are all under 60 minutes, but they are live snapshots and do not establish a future timetable or a complete public-transit-only matrix. Do not rank every hotel from this sample.",
       "blocking": true,
-      "howToDiscover": "Run one door-to-door routing query per hotel/restaurant pair, store the result with date/time and source, then recompute the ranking.",
+      "howToDiscover": "For the chosen hotel and itinerary, rerun Google Maps with transit constrained at the intended departure times, reject walk-only routes when the subway/bus rule is strict, and save the timestamp, duration and link.",
       "sources": [
-        "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred",
-        "https://www.mta.info/maps"
+        "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Le+Bernardin+New+York&travelmode=transit",
+        "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Le+Bernardin+New+York&travelmode=transit",
+        "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Jungsik+New+York&travelmode=transit",
+        "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Aska+Brooklyn&travelmode=transit"
       ]
     },
     {
       "id": "Q6",
       "question": "What will a couple actually pay at each Michelin restaurant?",
-      "whatWeKnow": "15 restaurants now have a couple total verified from an official menu/FAQ/booking page (food only, pre-tax/tip/beverages), reconciled across sessions fc6d5f66 and 6f217cce: EMP $770/$510; Le Bernardin $700/$436/$284; Jungsik $670; Masa $990/$1,500/$1,900; Gabriel Kreuther $650/$400/$470; The Modern $230/$510/$370/$570; Chef's Table BF $770; Aquavit $390; odo $300/$540; Cote $168/$450; Kochi $290; Mari $290; Jua $300; Gramercy Tavern $356/$156; Le Coucou $440. Michelin's least-expensive list groups Casa Mono, Crown Shy, Jeju Noodle Bar, Semma, Tuome at ~$75/person (indicative).",
-      "whatWeDoNotKnow": "2027 menu prices (menus captured Nov 2026), beverage pairings, service charge, tax and cancellation policies for the trip dates; exact prices for Per Se, Sushi Sho, Atera, Atomix, Jean-Georges, César, Joo Ok, Saga, Sushi Noz and most a-la-carte one-stars.",
-      "provisionalAnswer": "Use the verified couple totals on the Michelin page as a planning floor; re-confirm at booking. Per Se shows only a $200/person deposit officially, so its menu price stays blank.",
+      "whatWeKnow": "19 restaurant rows now have an official menu/booking-channel price for two, captured 2026-11-25–26 (food/menu subtotal except where the source includes an administrative fee): EMP $770/$510; Le Bernardin $700/$450 dinner/$284 lunch (current PDF; earlier PDFs showed $436/$274); Jungsik $670; Masa $990/$1,500/$1,900; Gabriel Kreuther $650/$400/$470; The Modern $230/$510/$370/$570; Chef's Table at Brooklyn Fare $770; Aquavit $390; odo $300/$540; Cote $168/$450; Kochi $290; Mari $290; Jua $300; Gramercy Tavern $356/$156; Le Coucou $440; Sushi Sho $990 prepaid; Saga $430/$630/$730; Aska $750; Atomix $848/$628. Michelin's least-expensive-starred feature is indicative, not a venue quote.",
+      "whatWeDoNotKnow": "Feb–Mar 2027 menu prices, taxes/tip/drinks and final booking charges; exact menu prices for Per Se (official pages show a deposit), Atera (source conflict), Sushi Noz, César, Joo Ok and many à-la-carte venues. Several amounts include administrative fees while others do not; follow each row's note.",
+      "provisionalAnswer": "Use only the linked per-person menu/booking snapshots as a planning reference, not a trip-date quote. Recheck the venue's official source at booking; never convert MICHELIN's price band into a bill.",
       "blocking": false,
       "howToDiscover": "Fetch each restaurant's official menu/pricing page shortly before booking and record a screenshot plus date.",
       "sources": [
         "https://www.elevenmadisonpark.com/faq",
-        "https://www.le-bernardin.com/accessible/menus/dining-room/chef-s-tasting/",
+        "https://www.le-bernardin.com/content/pdfs/dinner-11.20.pdf",
+        "https://www.le-bernardin.com/accessible/menus/dining-room/lunch/",
+        "https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf",
         "https://www.masanyc.com/menus",
         "https://www.themodernnyc.com/the-modern/",
         "https://www.brooklynfare.com/chefs-table/",
+        "https://www.aquavit.org/s/DR-112026.pdf",
+        "https://www.odo.nyc/menu",
+        "https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-at-hinoki-counter",
+        "https://www.saga-nyc.com/menus",
+        "https://www.askanyc.com/dining",
+        "https://www.exploretock.com/atomixnyc/help",
         "https://guide.michelin.com/en/best-of/least-expensive-one-michelin-star-restaurants-in-new-york"
       ]
     },
@@ -115,11 +140,11 @@
     {
       "id": "Q9",
       "question": "What is the total budget ceiling for two adults, and what share of it is accommodation?",
-      "whatWeKnow": "Four hotels now have dated all-in totals for the same seven nights, spanning $1,305 to $5,220 - a 4x range.",
-      "whatWeDoNotKnow": "The ceiling, and therefore whether the $1,305 stay is 'good value' or 'the only option'.",
-      "provisionalAnswer": "Site ranks by verified attributes and shows the full price spread instead of assuming a budget.",
+      "whatWeKnow": "Eight of ten qualifying hotel candidates have 7-night Booking.com pre-tax snapshots for 15–22 Feb 2027, captured 25–26 Nov 2026. The snapshots span about $1,040 to $4,942 depending on property/room/rate plan, but final checkout totals and the budget ceiling are not known.",
+      "whatWeDoNotKnow": "The traveler's budget ceiling, the final all-in checkout amount for the selected room/rate plan, and whether a direct-hotel offer or another room is better value.",
+      "provisionalAnswer": "Show pre-tax aggregator snapshots and their rate terms without calling them all-in totals or assuming a budget. Compare actual checkout totals only after the traveler sets a ceiling and selects the room/cancellation plan.",
       "blocking": true,
-      "howToDiscover": "State a total and an accommodation share; then the hotel shortlist collapses to one or two options.",
+      "howToDiscover": "Set the budget ceiling, then compare the exact room/rate plan at the hotel and aggregator checkout; record all taxes/fees and cancellation terms before deciding.",
       "sources": []
     },
     {
@@ -157,23 +182,23 @@
     {
       "id": "S1",
       "title": "Add a dated hotel quote workflow with official screenshots",
-      "detail": "When the booking window opens, capture a dated screenshot from each hotel's own booking page for 15–22 Feb 2027, including taxes and cancellation terms. This unblocks the largest cost decision.",
+      "detail": "Eight of ten qualifying candidates now have dated Booking.com pre-tax snapshots for 15–22 Feb 2027. The remaining step is an exact direct-hotel comparison and final-checkout capture showing taxes, fees, room and cancellation terms; do not call an OTA snapshot an official quote.",
       "effort": "Medium",
       "blockedBy": [
         "Q2",
         "Q3"
       ],
-      "status": "Proposed — no changes implemented"
+      "status": "Partially implemented 2026-11-26 — 8 aggregator snapshots captured; direct hotel quotes and verified final checkout totals remain open"
     },
     {
       "id": "S2",
       "title": "Run and store actual hotel-to-restaurant routing results",
-      "detail": "For each shortlisted hotel, route to each starred restaurant by subway/bus at 18:00 on a weekday and a Saturday; store duration and the routing URL. Then rank hotels by verified count under 60 minutes.",
+      "detail": "T11 captured 25 Google Maps transit-mode 'leave now' legs (five hotel origins × five MICHELIN clusters) on 25 Nov 2026; all were 3–37 minutes, but some short results were walk-only and the sample does not cover all ten shortlisted hotels or future trip times. Rerun with transit constrained for the selected hotel and itinerary.",
       "effort": "High",
       "blockedBy": [
         "Q5"
       ],
-      "status": "Proposed — no changes implemented"
+      "status": "Partially implemented 2026-11-25 — 25 route snapshots stored; exact trip-time/transit-only coverage remains open"
     },
     {
       "id": "S3",
@@ -183,7 +208,7 @@
       "blockedBy": [
         "Q6"
       ],
-      "status": "Partially implemented 2026-11-25 - 12 official-menu couple totals captured with sources and capture date; remainder blank/flagged"
+      "status": "Partially implemented 2026-11-26 — 19 venue menu/booking-channel couple totals now have row-level sources; remaining prices are blank and flagged"
     },
     {
       "id": "S4",
@@ -238,7 +263,7 @@
     {
       "id": "S9",
       "title": "Show the flexibility premium in dollars on every hotel row",
-      "detail": "The gap between non-refundable and refundable is material and now measurable: 11 Howard is +$426 ($1,522 to $1,948) and The Beekman is +$454 ($4,488 to $4,942) for the same seven nights. Presenting it as an explicit 'insurance price' turns an abstract trade-off into a number.",
+      "detail": "The current Booking.com snapshots show a $426 pre-tax gap for 11 Howard ($1,522 non-refundable to $1,948 flexible) and a $454 gap for The Beekman ($4,488 to $4,942) on the same week. These are volatile OTA observations, not official quotes or final totals.",
       "effort": "Low",
       "blockedBy": [],
       "status": "Proposed - no changes implemented"
@@ -246,7 +271,7 @@
     {
       "id": "S10",
       "title": "Complete the MICHELIN index to the official counters",
-      "detail": "Official counters read 5 three-star / 14 two-star / 50 one-star / 76 Bib Gourmand / 224 selected. The catalogue now holds 18 starred rows, so roughly 51 starred and all 300 unstarred listings remain. The list pages serve 48 rows at a time, so this is a pagination job with a fixed end point.",
+      "detail": "The canonical catalogue now contains the full live 69 starred (5/14/50) MICHELIN roster plus 3 Guide-listed additions with no star (72 total rows); star distinctions can change at the 14 Dec 2026 ceremony.",
       "effort": "Medium",
       "blockedBy": [],
       "status": "Implemented 2026-11-25 - full live roster of 69 starred + 3 Guide-listed rows catalogued"
@@ -254,7 +279,7 @@
     {
       "id": "S11",
       "title": "Re-capture rates weekly and warn when a figure is stale",
-      "detail": "Every dated total on this site is a 2026-11-25 snapshot, and at least one depended on a promotion that expires 31 Dec 2026. A scheduled re-capture that overwrites the JSON and surfaces a diff would stop the page from going quietly out of date.",
+      "detail": "Eight hotels have dated 15–22 Feb 2027 Booking.com pre-tax snapshots captured on 25–26 Nov 2026; two are still blank, and no other date window has been captured in the canonical site. Re-capture weekly and show per-row age and rate-plan changes.",
       "effort": "Medium",
       "blockedBy": [
         "Q2"
@@ -281,9 +306,9 @@
     {
       "id": "F2",
       "severity": "Low",
-      "title": "No verified 7-night hotel total or cheapest booking window - PARTIALLY RESOLVED",
-      "detail": "Resolved for four hotels on 2026-11-25: Booking.com returned live 7-night totals for 15-22 Feb 2027 (Hyatt Place NY/Chelsea $1,305 all-in, Arlo NoMad $1,428, 11 Howard $1,774, The Beekman $5,220) with the exact rate URL and capture date per row. Still open: no hotel's own booking engine was read, eight of twelve candidates remain unpriced, and no other week in the 15 Feb - 23 Mar window was priced. See F10 for the snapshot/expiry risk.",
-      "source": "https://www.booking.com/hotel/us/hyatt-place-new-york-chelsea.en-us.html?checkin=2027-02-15&checkout=2027-02-22"
+      "title": "Dated hotel-rate evidence is partial; cheapest window remains unknown",
+      "detail": "Eight of the 10 qualifying hotel candidates now have a Booking.com pre-tax snapshot for 15–22 Feb 2027 (captured 25–26 Nov 2026); two have no dated rate. These are aggregator observations, not hotel quotes or verified final checkout totals. No other week is compared, so the cheapest window stays blank. See F10 for rate volatility and omitted-tax caveats.",
+      "source": "https://www.booking.com/hotel/us/hyatt-place-new-york-chelsea.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1"
     },
     {
       "id": "F3",
@@ -316,9 +341,9 @@
     {
       "id": "F7",
       "severity": "Medium",
-      "title": "NYPL official pages showed different weekly hours",
-      "detail": "Different official NYPL pages displayed different hours; the regular-hours page is used and flagged for re-check.",
-      "source": "https://www.nypl.org/locations/schwarzman/research"
+      "title": "NYPL 2027 Presidents’ Day closure is unconfirmed",
+      "detail": "The NYPL closing calendar page checked lists 2026 holiday closures, not a confirmed 2027 Presidents’ Day closure. The Rose Main Reading Room's visitor hour is 10:00–11:00 Mon–Sat (last entry 10:50); verify the live 2027 calendar before planning on 15 Feb.",
+      "source": "https://www.nypl.org/help/closings"
     },
     {
       "id": "F8",
@@ -337,9 +362,9 @@
     {
       "id": "F10",
       "severity": "Medium",
-      "title": "Dated hotel totals are aggregator snapshots and one depends on an expiring promotion",
-      "detail": "All four dated totals come from Booking.com rate pages read 2026-11-25, not from the hotels' own booking engines. Arlo NoMad's $1,213.96 pre-tax depended on a 'Black Friday Deal - 39% off, valid on stays 19 Nov 2026 to 31 Dec 2027'. The same room after that promotion ends will cost more. Treat every total as a dated observation.",
-      "source": "https://www.booking.com/hotel/us/arlo-nomad.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1"
+      "title": "Hotel prices are volatile Booking.com snapshots; no verified all-in checkout total",
+      "detail": "Eight qualifying hotels have dated 15–22 Feb 2027 Booking.com snapshots captured 25–26 Nov. Prices vary by named room, cancellation plan and promotions; mandatory resort fees are included only where the page says so, while taxes/fixed fees are listed separately. Full final checkout totals were not captured and no tax arithmetic is presented as a booking total. Recheck directly with the hotel and at checkout before paying.",
+      "source": "https://www.booking.com/hotel/us/arlo-nomad.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
     },
     {
       "id": "F11",
@@ -358,9 +383,9 @@
     {
       "id": "F13",
       "severity": "High",
-      "title": "Airfare and theatre remain unpriced; restaurant menu prices PARTIALLY resolved",
-      "detail": "12 restaurants now have verified couple totals from official pages (see Q6 / Michelin page), so the largest dining line items are no longer wholly unpriced. Still unpriced: flights, theatre tickets, and exact menu prices for Per Se, Sushi Sho, Aquavit, Atera, Atomix, Jean-Georges and most a-la-carte one-stars. Menus were captured Nov 2026 and must be re-confirmed for Feb-Mar 2027. No grand total is claimed.",
-      "source": "https://guide.michelin.com/en/new-york-state/new-york/restaurants/3-stars-michelin"
+      "title": "Airfare and theatre remain unpriced; restaurant prices partially resolved",
+      "detail": "19 restaurant rows now have official menu/booking-channel prices for two, checked 25–26 Nov 2026; prices may change before travel and some include administrative fees while others exclude tax, tip or drinks. Still unpriced: flights, theatre tickets and menu prices for Per Se, Atera, Sushi Noz, César, Joo Ok and many à-la-carte venues. No grand trip budget is claimed.",
+      "source": "https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-at-hinoki-counter"
     },
     {
       "id": "F14",
@@ -372,9 +397,9 @@
     {
       "id": "F15",
       "severity": "Medium",
-      "title": "Atomix and Atera third-party price reports conflict - not used",
-      "detail": "Atomix's official site is client-rendered (no price); third-party blogs report $295/$375. Atera's own page content conflicts ($325 visible menu text vs $298 embedded structured data, per session 6f217cce), and third-party reports vary $195/$235/$298. None are a clean official fixed total, so both couple totals stay blank and flagged rather than guessed.",
-      "source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atomix"
+      "title": "Atera menu price remains unresolved because its official-source values conflict",
+      "detail": "Atomix is no longer in this conflict: its official Tock page showed a Nov 2026 Chef's Counter at $424/person and Bar Tasting at $314/person (administrative fee included). Atera's official page/embedded data and third-party reports conflict; its couple price remains blank until the venue publishes or confirms one price.",
+      "source": "https://www.ateranyc.com/"
     },
     {
       "id": "F16",
@@ -387,8 +412,29 @@
       "id": "F17",
       "severity": "Medium",
       "title": "Menu prices captured Nov 2026 vs Feb-Mar 2027 trip",
-      "detail": "All verified restaurant menu prices were captured 2026-11-25 (Nov 2026 menus). The trip is Feb 15-Mar 23 2027, so prices may change. Every couple total must be re-confirmed on the official page at booking; the Michelin 14 Dec 2026 ceremony may also change distinctions.",
+      "detail": "Verified restaurant menu prices were captured 25–26 Nov 2026; the trip is Feb–Mar 2027, so prices, fees and terms may change. Reconfirm each total on its official source at booking. Michelin's 14 Dec 2026 ceremony can also change distinctions.",
       "source": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/"
+    },
+    {
+      "id": "F18",
+      "severity": "Medium",
+      "title": "Wollman Rink has a restricted Community Day on 15 February 2027",
+      "detail": "The official 2026–27 plan labels 15 Feb as Community Day for public-sector employees and families; remaining tickets are Peak-priced. The rink is open beyond the preferred 15–18 Feb trip, but check eligibility, tickets, waiver, no-re-entry and non-refundable terms before visiting.",
+      "source": "https://wollmanrinknyc.com/plan/"
+    },
+    {
+      "id": "F19",
+      "severity": "Medium",
+      "title": "Chinatown parade page contains a year discrepancy in Chinese text",
+      "detail": "Better Chinatown's English announcement gives Sunday 21 Feb 2027 at 13:00, but a Chinese-language line appears to print 2026. The date is within the 15–22 Feb seven-night window and outside the preferred 15–18 Feb short trip; reconfirm with the organizer before planning around it.",
+      "source": "https://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/"
+    },
+    {
+      "id": "F20",
+      "severity": "Low",
+      "title": "Six MICHELIN-listed hotels are outside the qualifying shortlist pending room evidence",
+      "detail": "The main hotel table now includes only properties with a named Queen/King room and private bathroom verified from a primary room page. Maritime, MADE, Marlton, Soho Grand, Arlo Soho and The Wall Street Hotel were removed from the qualifying shortlist because that evidence was not captured; this is not a claim that they lack qualifying rooms. Re-add only after room-level sources are checked.",
+      "source": "https://guide.michelin.com/en/hotels-stays/nyc"
     }
   ]
 }

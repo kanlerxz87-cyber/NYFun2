@@ -55,7 +55,7 @@
         `${val(h.keyStatus)}${h.guestScore ? `<span class="sub">${esc(h.guestScore)}</span>` : ''}`,
         val(h.publishedRate),
         (h.sevenNightTotal
-          ? `${esc(h.sevenNightTotal)}${h.allInSevenNights ? `<span class="sub"><strong>All-in: ${esc(h.allInSevenNights)}</strong></span>` : ''}${h.taxBasis ? `<span class="sub">${esc(h.taxBasis)}</span>` : ''}${h.rateCapturedOn ? `<span class="sub">Captured ${esc(h.rateCapturedOn)}</span>` : ''}`
+          ? `${esc(h.sevenNightTotal)}${h.rateRoom ? `<span class="sub">Quoted room: ${esc(h.rateRoom)}</span>` : ''}${h.allInSevenNights ? `<span class="sub"><strong>All-in: ${esc(h.allInSevenNights)}</strong></span>` : ''}${h.taxBasis ? `<span class="sub">${esc(h.taxBasis)}</span>` : ''}${h.rateCapturedOn ? `<span class="sub">Captured ${esc(h.rateCapturedOn)}</span>` : ''}`
           : val(h.sevenNightTotal)),
         val(h.cheapestWindow),
         `${link(h.officialUrl, 'Official site')}${h.rateSourceUrl ? `<br>${link(h.rateSourceUrl, 'Rate source')}` : ''}`,

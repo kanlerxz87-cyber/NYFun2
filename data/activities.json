@@ -1,8 +1,8 @@
 {
   "meta": {
-    "checkedOn": "2026-11-25",
-    "travelTimePolicy": "No door-to-door minutes are stated. Each row links to a live map-directions URL so the user can verify travel from the chosen hotel on the travel date.",
-    "costPolicy": "Only prices printed on the venue's own official page are used. A couple total is shown only as a simple multiplication of a published adult price; otherwise it is blank and flagged."
+    "checkedOn": "2026-11-26",
+    "travelTimePolicy": "25 Google Maps transit-mode snapshots (5 hotel origins × 5 MICHELIN clusters) were captured 2026-11-25 at 17:14–17:31 ET; results were 3–37 minutes. These are live 'leave now' estimates, not February 2027 schedules or guarantees; the dataset does not cover every shortlisted hotel/activity.",
+    "costPolicy": "Only prices currently printed by a venue, government operator, or event organizer are recorded. Couple totals multiply a published per-adult price; date-sensitive fares and menu/booking snapshots are explicitly labelled and must be rechecked before purchase."
   },
   "items": [
     {
@@ -11,10 +11,10 @@
       "area": "Liberty Island / Ellis Island (ferry access)",
       "address": "Liberty Island and Ellis Island; access by Statue City Cruises ferry only",
       "hours": "Park and Liberty Island Information Center: daily 09:00–16:30",
-      "exceptions": "Last entry into the statue 15:30. Closed Thanksgiving Day (26 Nov 2026) and Christmas Day (25 Dec 2026). Ferry times published separately by Statue City Cruises.",
-      "costTwoAdults": "",
+      "exceptions": "NPS park/Information Center hours are daily 09:00–16:30; last statue entry 15:30. Ferry sailing times are published separately by Statue City Cruises; NPS holiday closures currently list 2026 dates.",
+      "costTwoAdults": "$52 ($26 × 2) for current Statue City Cruises General Admission ferry tickets; recheck the Feb 2027 fare and selected ticket tier.",
       "officialUrl": "https://www.nps.gov/stli/index.htm",
-      "sourceUrl": "https://www.nps.gov/stli/planyourvisit/hours.htm",
+      "sourceUrl": "https://www.cityexperiences.com/new-york/city-cruises/statue/faq/general/",
       "social": [
         {
           "platform": "NPS official social-media page",
@@ -28,7 +28,7 @@
         }
       ],
       "flags": [
-        "Ferry fare and 2027 schedule not confirmed on the NPS hours page; blank"
+        "$26 adult General Admission is a current operator fare checked 2026-11-26, not a guaranteed Feb 2027 fare; verify departure schedule and ticket type before purchase."
       ]
     },
     {
@@ -130,11 +130,11 @@
       "category": "Memorial / museum",
       "area": "Lower Manhattan / World Trade Center",
       "address": "World Trade Center, New York, NY",
-      "hours": "Memorial: daily 08:00–20:00. Museum: Wed–Mon and select Tuesdays 09:00–19:00 (last entry 17:30).",
-      "exceptions": "Museum requires advance ticket purchase. Memorial is free and open seven days a week.",
-      "costTwoAdults": "",
+      "hours": "Outdoor Memorial daily 08:00–20:00. Museum 09:00–19:00 on Wed–Mon and many Tuesdays; last entry 17:30.",
+      "exceptions": "The outdoor Memorial is free and open daily. The Museum requires a ticket; confirm the February 2027 Tuesday schedule and timed-entry availability.",
+      "costTwoAdults": "$48–$72 for two at the currently published $24–$36 adult Museum admission; outdoor Memorial admission is free.",
       "officialUrl": "https://www.911memorial.org/visit",
-      "sourceUrl": "https://www.911memorial.org/visit",
+      "sourceUrl": "https://www.911memorial.org/visit/visit-museum-1",
       "social": [
         {
           "platform": "YouTube (third-party visit)",
@@ -143,7 +143,7 @@
         }
       ],
       "flags": [
-        "Museum ticket prices and February 2027 select-Tuesday dates not confirmed"
+        "Published adult Museum admission is a $24–$36 range (checked 2026-11-26); exact ticket price and February 2027 Tuesday hours depend on the selected date/time."
       ]
     },
     {
@@ -235,7 +235,7 @@
       "area": "Lower Manhattan ⇄ Staten Island",
       "address": "Whitehall Terminal, Manhattan ⇄ St. George Terminal, Staten Island",
       "hours": "24 hours a day, 365 days a year",
-      "exceptions": "Weekend schedule applies on listed holidays (none inside the proposed 15–18 Feb 2027 window).",
+      "exceptions": "Weekend/holiday schedules can differ from the weekday timetable. Monday 15 Feb 2027 is Presidents' Day; confirm the service schedule on the official NYC DOT page before visiting.",
       "costTwoAdults": "$0 (free service per NYC DOT)",
       "officialUrl": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
       "sourceUrl": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
@@ -246,22 +246,70 @@
           "note": "Ferry ride video; not an NYC DOT post"
         }
       ],
-      "flags": []
+      "flags": [
+        "Presidents' Day is 15 Feb 2027; the holiday/weekend timetable for that date was not confirmed in this check."
+      ]
     },
     {
       "name": "New York Public Library, Stephen A. Schwarzman Building",
       "category": "Architecture / reading rooms",
       "area": "Midtown / Bryant Park",
       "address": "Fifth Avenue and 42nd Street, New York, NY 10018",
-      "hours": "Mon 10:00–18:00; Tue 10:00–20:00; Wed 10:00–20:00; Thu 10:00–18:00; Fri 10:00–18:00; Sat 10:00–18:00; Sun 13:00–17:00",
-      "exceptions": "Division hours may vary. Rose Main Reading Room visiting hour 10:00–11:00 Mon–Sat; last entry 10:50. Closed on listed holidays.",
+      "hours": "Building: Mon 10:00–18:00; Tue–Wed 10:00–20:00; Thu–Sat 10:00–18:00; Sun 13:00–17:00. Rose Main Reading Room visitor hour: Mon–Sat 10:00–11:00; last entry 10:50.",
+      "exceptions": "Department hours vary. The NYPL closing calendar checked lists 2026 holidays only; a Presidents' Day closure on Mon 15 Feb 2027 is not confirmed. Check the live calendar before visiting.",
       "costTwoAdults": "",
       "officialUrl": "https://www.nypl.org/locations/schwarzman",
-      "sourceUrl": "https://www.nypl.org/locations/schwarzman/research",
+      "sourceUrl": "https://www.nypl.org/help/closings",
       "social": [],
       "flags": [
-        "Different NYPL official pages displayed different weeks' hours; re-check before visit",
-        "No social link verified"
+        "Rose Main Reading Room visitor hour is 10:00–11:00 Mon–Sat (last entry 10:50); regular building hours are separate.",
+        "The closing calendar checked lists 2026 holidays only; do not assume the building is closed on Presidents' Day 2027."
+      ]
+    },
+    {
+      "name": "Wollman Rink in Central Park",
+      "category": "Seasonal outdoor ice skating",
+      "area": "Central Park South",
+      "address": "830 Fifth Avenue (enter Central Park at 59th Street and Sixth Avenue), New York, NY 10065",
+      "hours": "Mon–Tue 10:00–14:30; Wed–Thu 10:00–21:00; Fri–Sat 10:00–22:00; Sun 10:00–21:00 (posted weekly hours)",
+      "exceptions": "2026–27 season: 28 Oct 2026–16 Mar 2027. 15 Feb is a Community Day for public-sector employees and families; remaining tickets are Peak-priced. 16–21 Feb are Peak; 22–25 Feb Off-Peak. Everyone entering signs a waiver; arrival up to 30 min early; no re-entry; tickets non-refundable.",
+      "costTwoAdults": "$56 admission for two on Peak days (2 × $28); $32 on Off-Peak days (2 × $16); $80 on Prime days (2 × $40); $24 skate rental for two if needed (2 × $12). 15 Feb Community Day eligibility is restricted; posted prices include tax.",
+      "officialUrl": "https://wollmanrinknyc.com/",
+      "sourceUrl": "https://wollmanrinknyc.com/plan/",
+      "social": [],
+      "flags": [
+        "15 Feb 2027 is a restricted Community Day, not an ordinary public session; remaining tickets are Peak-priced. Verify eligibility, time slot and ticket terms before purchase.",
+        "Season closes 16 Mar 2027; re-check live hours and ticket availability."
+      ]
+    },
+    {
+      "name": "Bank of America Winter Village at Bryant Park (The Rink & The Lodge)",
+      "category": "Seasonal outdoor ice rink and food hall",
+      "area": "Midtown / Bryant Park",
+      "address": "Bryant Park, between 40th and 42nd Streets and Fifth and Sixth Avenues, New York, NY 10018",
+      "hours": "Rink daily 08:00–22:00; The Lodge daily 10:00–22:00 (posted season hours)",
+      "exceptions": "Rink and The Lodge season ends 28 Feb 2027. Holiday Shops end 3 Jan 2027. Rink admission is free; skate rental pricing varies by timed session and was not captured as a fixed amount.",
+      "costTwoAdults": "$0 rink admission for two with your own skates; rental is extra and date/time-dependent (no fixed rental quote captured).",
+      "officialUrl": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+      "sourceUrl": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+      "social": [],
+      "flags": [
+        "Rink and Lodge close for the season on 28 Feb 2027; Holiday Shops close 3 Jan. Skate rental price varies by timed session and is not stated as a fixed amount here."
+      ]
+    },
+    {
+      "name": "29th Annual Chinatown Lunar New Year Parade & Festival",
+      "category": "Date-specific cultural parade",
+      "area": "Chinatown / Little Italy, Lower Manhattan",
+      "address": "Mott and Canal Streets, New York, NY 10013",
+      "hours": "Sunday 21 Feb 2027; parade starts at 13:00 (organizer announcement)",
+      "exceptions": "One-day event falls inside the 15–22 Feb seven-night window but after the preferred 15–18 Feb short trip. The English announcement says 21 Feb 2027; a Chinese-language line on the same page appears to print 2026 in error. Reconfirm with the organizer near the date.",
+      "costTwoAdults": "$0 (public street parade; no ticket charge listed by the organizer)",
+      "officialUrl": "https://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/",
+      "sourceUrl": "https://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/",
+      "social": [],
+      "flags": [
+        "Date is source-specific: English text announces Sunday 21 Feb 2027 at 13:00, while a Chinese-language line appears to contain a 2026 year typo; verify with Better Chinatown before planning around it."
       ]
     }
   ]

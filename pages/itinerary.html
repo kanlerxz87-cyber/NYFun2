@@ -30,18 +30,19 @@
 <main class="content" id="main">
   <p class="eyebrow">Planning logic</p>
   <h1>Itinerary & the one-hour travel goal</h1>
-  <p class="lede">The request asks to keep activities within one hour of the hotel by subway or bus. Rather than invent door-to-door times, this page shows the verified inputs and the exact step needed to turn them into a route-checked timetable.</p>
-  <h2>What is verified</h2>
+  <p class="lede">A route sample now tests the ≤1-hour goal, with its limits made explicit. The saved figures are Google Maps “leave now” estimates from the capture moment—not February 2027 transit schedules or guarantees.</p>
+  <h2>What the route sample shows</h2>
   <div class="card">
     <ul>
-      <li>Official addresses for 13 starred restaurants (four further starred rows are name-only and flagged) and 12 attractions; see their tables.</li>
-      <li>Published opening days and hours for the majority of those rows.</li>
-      <li>The <a href="https://www.mta.info/maps" target="_blank" rel="noopener noreferrer">MTA's official subway and bus maps ↗</a>, which identify the lines serving each area.</li>
-      <li>Live Google Maps directions links embedded in every restaurant and activity row, using the hotel you select as origin.</li>
+      <li><strong>25 legs:</strong> five hotel origins × five representative MICHELIN clusters, captured on 25 Nov 2026 between 17:14 and 17:31 ET. Returned estimates range from 3 to 37 minutes; all were under one hour.</li>
+      <li><strong>Hotels tested:</strong> Eurostars Wall Street, DoubleTree Chelsea, The Frederick Tribeca, The Evelyn NoMad and The Benjamin Royal Sonesta. The first four are on the current hotel shortlist; The Benjamin is a separate route-test reference.</li>
+      <li><strong>Route mode:</strong> Google Maps was queried in transit mode, but several very short trips returned walk-only results. Do not treat these as pure subway/bus legs where a ride is required.</li>
+      <li><a href="../sessions/33cfdba4/data/transit_anchors.json">Open the saved T11 matrix ↗</a> for each time, route line and directions URL. It is a snapshot, not a timetable.</li>
+      <li>The <a href="https://www.mta.info/maps" target="_blank" rel="noopener noreferrer">MTA's official subway and bus maps ↗</a> identify the lines serving each area; live route links are embedded in every restaurant and activity row.</li>
     </ul>
   </div>
   <h2>What is not verified</h2>
-  <div class="notice danger">No official source published a door-to-door travel time from a chosen hotel to every activity for the actual February 2027 dates and times. No such times are asserted here. Consequently hotel ranking by "count of Michelin restaurants within one hour" is marked as a decision blocker (Q5), not presented as a finished score.</div>
+  <div class="notice danger">This sample does not cover all ten shortlisted hotels, every starred restaurant or every activity, and it does not predict service on the February 2027 travel dates. Because some results are walk-only, it is not a complete subway/bus-only matrix. Do not use it to rank all hotels by the number of destinations within one hour; Q5 remains open until the selected hotel and planned departure times are re-routed.</div>
   <h2>Suggested structure (not a confirmed timetable)</h2>
   <div class="card">
     <ol class="timeline">
@@ -53,7 +54,7 @@
   </div>
   <h2>How to finish this page properly</h2>
   <div class="card">
-    <p>For each shortlisted hotel, route to each shortlisted restaurant and attraction at the intended departure time, record the minutes and the URL, then keep only pairs at 60 minutes or less. That dataset — not an estimate — is what should drive the hotel ranking and the final day-by-day plan.</p>
+    <p>Once a hotel and itinerary are chosen, rerun each planned trip at its intended departure time with transit constrained. Record the timestamp, mode, minutes and URL; reject walk-only routes when the subway/bus rule is strict. Recheck close to travel and keep only verified pairs at 60 minutes or less. That date-specific matrix—not this “leave now” sample—should drive the final timetable.</p>
   </div>
 
   <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">NYFun2 ↗</a> · <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">Coordination board ↗</a> · Research date <span data-checked>—</span>.</p>

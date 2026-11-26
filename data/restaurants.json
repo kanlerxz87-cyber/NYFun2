@@ -1,16 +1,17 @@
 {
   "meta": {
-    "checkedOn": "2026-11-25",
+    "checkedOn": "2026-11-26",
     "session": "arena/fc6d5f66-nyfun2",
     "sourceOfTruth": "Live MICHELIN Guide all-starred list (pages 1-2) + individual MICHELIN restaurant pages + official restaurant websites/menu pages",
     "starListSource": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
     "starCounts": "5 three-star, 14 two-star, 50 one-star = 69 starred (live filter counters, re-verified 2026-11-25). Plus 3 Guide-listed new-addition rows (no star) = 72 total rows.",
     "rosterReconciliation": "The namespaced kit sessions/33cfdba4 carried 72 rows but 3 (Blue Hill at Stone Barns, Shion 69 Leonard Street, La Bastide by Andrea Calstier) are NOT in the live all-starred selection; excluded here and flagged. This canonical roster is the live 69 starred + 3 guide-listed.",
     "importantTiming": "Michelin's 2026 Northeast Cities ceremony is scheduled for 2026-12-14 (https://michelinmedia.com/pages/blog/detail/article/c/a1479/), after this research and before the trip. Distinctions may change.",
-    "priceNote": "priceTwoAdults = 2 x a per-person price printed on an official restaurant page (menu/FAQ/booking channel); food only, before tax, tip and beverages unless noted. Arithmetic and the exact source URL are in priceNote/priceSourceUrl and on the Michelin page's price-verification table. A-la-carte restaurants and unreachable prices stay blank and flagged. Michelin's $ band is shown separately as guidePriceBand. Menus were captured Nov 2026; re-confirm for the Feb-Mar 2027 trip.",
+    "priceNote": "priceTwoAdults is the arithmetic on the venue's currently published per-person menu/booking price; tax, tip, drinks and add-ons are only included when the source says so. Four newly verified prices and the Le Bernardin menu were reconciled on 2026-11-26; other menu captures are dated 2026-11-25. None is a guaranteed Feb–Mar 2027 price. See each row's priceNote and priceSourceUrl.",
     "hoursNote": "Hours transcribed from MICHELIN detail pages or the restaurant's own site. Rows not yet transcribed are blank and flagged; the linked MICHELIN page shows the live schedule.",
     "socialNote": "Social links labelled (official) were read from the restaurant's own site or its official booking channel. Third-party review links are labelled as such and are not official endorsements.",
-    "hoursCrossCheck": "Le Bernardin, Eleven Madison Park, Per Se and Atera were read independently by two sessions against the same MICHELIN records on 2026-11-25 and agree. The fuller capture (which includes Le Bernardin Thursday to Sunday and 'Sunday closed') is retained. Independent agreement is the strongest verification available without a second source."
+    "hoursCrossCheck": "Le Bernardin, Eleven Madison Park, Per Se and Atera were read independently by two sessions against the same MICHELIN records on 2026-11-25 and agree. The fuller capture (which includes Le Bernardin Thursday to Sunday and 'Sunday closed') is retained. Independent agreement is the strongest verification available without a second source.",
+    "priceCaptureWindow": "Official menu/booking-channel snapshots checked 2026-11-25 to 2026-11-26. Recheck at reservation time; no future price is inferred."
   },
   "items": [
     {
@@ -20,19 +21,17 @@
       "address": "3 E. 41st St., New York, NY 10017",
       "area": "Murray Hill (address-based grouping)",
       "hours": "Tue–Sun 17:00–22:00; Monday closed",
-      "exceptions": "None published on the Michelin page checked",
+      "exceptions": "Official Tock Shorter Omakase listing showed booking availability through 28 Feb 2027; the next reservation release is 1 Dec 2026 at 11:00 a.m. ET. Check the selected date and payment/cancellation terms at checkout.",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "priceNote": "",
-      "priceSourceUrl": "",
-      "officialUrl": "",
+      "priceTwoAdults": "$990 Shorter Omakase at Hinoki Counter (2 × $495 prepaid, administrative fee included)",
+      "priceNote": "The official Tock experience page listed $495 per guest prepaid, including the administrative fee. Other taxes, beverages and optional add-ons are not included unless shown at checkout. Snapshot checked 2026-11-26; not a Feb 2027 guaranteed price.",
+      "priceSourceUrl": "https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-at-hinoki-counter",
+      "officialUrl": "https://www.exploretock.com/sushi-sho-nyc/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/sushi-sho-1213976",
       "social": [],
       "flags": [
-        "Official website not listed by Michelin (phone only)",
-        "Couple price unverified: no official menu price published",
-        "No verified NYC social/review link found; similar-name YouTube results refer to a different city",
-        "No official social account verified this session; see MICHELIN/official site"
+        "No official NYC-specific YouTube/social account verified; similarly named search results refer to another city.",
+        "Recheck prepaid price, taxes and terms when reservations open; current listing is a Nov 2026 snapshot."
       ]
     },
     {
@@ -97,9 +96,9 @@
       "hours": "Mon–Thu 12:00–14:30 and 17:00–22:30; Fri 12:00–14:30 and 17:00–23:00; Sat 17:00–23:00; Sunday closed",
       "exceptions": "Business casual dress code: jackets recommended, not required; shorts, t-shirts, short sleeves, flip-flops, sweatshirts, sweatpants and sneakers not permitted. Reservations required for the main dining room; lounge is walk-in. Card required at booking; 48-hour cancellation window at $150 per person.",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "$700 (Chef's Tasting, 2 x $350); $436 (Dinner prix fixe, 2 x $218); $284 (Lunch prix fixe, 2 x $142)",
-      "priceNote": "Official dinner menu PDF (dinner-1.2.pdf): dinner 4-course $218/person. Chef's Tasting $350 ($530 w/ wine pairing); Lunch 3-course $142. Supplements extra (caviar $145/oz). Reconciled with session 6f217cce: an earlier accessible-page capture showed $225 dinner, but the current official PDF states $218 and is used.",
-      "priceSourceUrl": "https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf",
+      "priceTwoAdults": "$700 Chef's Tasting (2 × $350); $450 Dinner prix fixe (2 × $225); $284 Lunch prix fixe (2 × $142)",
+      "priceNote": "Current official dinner menu/PDF checked 2026-11-26 lists the dinner prix fixe at $225 per person; the current lunch page lists $142, and the Chef's Tasting is $350. An earlier official dinner PDF (https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf) showed $218 dinner / $137 lunch, so keep those capture-specific figures separate; current amounts are not guaranteed for Feb–Mar 2027. Supplements, drinks and service are separate unless stated.",
+      "priceSourceUrl": "https://www.le-bernardin.com/content/pdfs/dinner-11.20.pdf",
       "officialUrl": "https://www.le-bernardin.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-bernardin",
       "social": [
@@ -195,18 +194,18 @@
       "cuisine": "Contemporary",
       "address": "70 Pine St., New York, NY 10005",
       "area": "Financial District (address-based grouping)",
-      "hours": "Daily 17:00-21:30",
-      "exceptions": "",
+      "hours": "Wed–Sun 17:00–21:30; Mon–Tue closed (venue reservations page)",
+      "exceptions": "Saga's own reservations page says closed Monday and Tuesday; the MICHELIN listing checked showed daily hours. Follow the venue's stricter schedule and recheck before booking.",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "priceNote": "",
-      "priceSourceUrl": "",
+      "priceTwoAdults": "$430 six-course (2 × $215); $630 ten-course (2 × $315); $730 Kitchen Table (2 × $365)",
+      "priceNote": "The venue's official menus list $215 per guest (six courses), $315 (ten courses) and $365 (Kitchen Table). Menu snapshot checked 2026-11-26; not a Feb 2027 quote. Confirm tax, gratuity, drinks and booking terms at checkout.",
+      "priceSourceUrl": "https://www.saga-nyc.com/menus",
       "officialUrl": "https://www.saga-nyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/saga",
       "social": [],
       "flags": [
-        "Couple price unverified",
-        "No official social account verified this session; see MICHELIN/official site"
+        "Schedule conflict: Saga's reservations page says closed Mon–Tue while the MICHELIN page showed daily service; use the venue's schedule.",
+        "No official social account verified this session; see MICHELIN/official site."
       ]
     },
     {
@@ -297,15 +296,15 @@
       "hours": "Tue–Sat 17:30–24:00; Sunday and Monday closed",
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "priceNote": "",
-      "priceSourceUrl": "",
+      "priceTwoAdults": "$848 Chef's Counter (2 × $424); $628 Bar Tasting (2 × $314)",
+      "priceNote": "Official Atomix Tock help/listing showed Nov 2026 Chef's Counter at $424 per person and Bar Tasting at $314 per person, including administrative fee; tax and beverages are additional. These are dated snapshots, not Feb 2027 prices.",
+      "priceSourceUrl": "https://www.exploretock.com/atomixnyc/help",
       "officialUrl": "https://www.atomixnyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atomix",
       "social": [],
       "flags": [
-        "Couple price unverified: third-party reports conflict ($295/$375) - not used; official menu page client-rendered",
-        "No official social account verified this session; see MICHELIN/official site"
+        "Official Tock amounts are a Nov 2026 snapshot, not a quote for the 2027 trip; recheck the released menu.",
+        "No official social account verified this session; see MICHELIN/official site."
       ]
     },
     {
@@ -317,10 +316,10 @@
       "hours": "Mon closed; Tue-Sun 17:00-23:00",
       "exceptions": "This establishment manages its own bookings; contact the restaurant directly (MICHELIN).",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "priceNote": "",
-      "priceSourceUrl": "",
-      "officialUrl": "https://askanyc.com/",
+      "priceTwoAdults": "$750 12–14 course tasting (2 × $375); wine pairing from $500 for two (optional)",
+      "priceNote": "Official dining page lists the Aska Tasting Menu at $375 per person (12–14 courses); optional wine pairing starts at $250 per guest. Snapshot checked 2026-11-26; recheck for the travel date and confirm any tax/service charges at booking.",
+      "priceSourceUrl": "https://www.askanyc.com/dining",
+      "officialUrl": "https://www.askanyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/brooklyn/restaurant/aska",
       "social": [
         {
@@ -339,9 +338,7 @@
           "note": "Printed in the footer of askanyc.com"
         }
       ],
-      "flags": [
-        "Couple price unverified: official menu price not published on reachable page"
-      ]
+      "flags": []
     },
     {
       "name": "Aquavit",

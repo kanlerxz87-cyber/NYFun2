@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Repo audit &amp; integration log — NYC 2027</title>
-<meta name="description" content="Audit of the repository as it arrived, the two-session integration log, and the verification evidence for the combined dataset.">
+<meta name="description" content="Historical repository audit, multi-session integration log and final T18 reconciliation evidence.">
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
@@ -30,13 +30,8 @@
 <main class="content" id="main">
 
   <p class="eyebrow">Audit · repository &amp; integration</p>
-  <h1>What was in the repo, and how two sessions were reconciled</h1>
-  <p class="lede">Three agent sessions worked this repository on the same day, on separate branches. None
-  overwrote another. This page records what the repository contained when each session started, what each
-  session produced, how the overlap was resolved, and the evidence that the combined dataset is internally
-  consistent. The third session is the clean case: on finding the site already published, it moved
-  everything it had written into its own namespace (<code>sessions/215c2a25/</code>) and touched no shared
-  file — the behaviour the board is supposed to produce.</p>
+  <h1>Repository audit &amp; integration history</h1>
+  <p class="lede">This page preserves the historical audit of the first root-site integration (25 Nov 2026); those initial counts and checks are explicitly historical. The final T18 reconciliation through 26 Nov is recorded in section 6 below, with the current canonical row counts, decisions and verification evidence. See <a href="../COORDINATION.md">COORDINATION.md ↗</a> for the full multi-session history.</p>
 
   <h2>1 · State as found</h2>
   <div class="card">
@@ -119,7 +114,19 @@
     <p class="muted" style="font-size:13px;margin:10px 0 0">Reproduce any check from a clone. Nothing on this site requires network access to render.</p>
   </div>
 
-  <h2>6 · Open repository work</h2>
+  <h2>6 · Final T18 reconciliation (26 Nov 2026)</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Canonical restaurant data:</strong> 72 rows (69 starred + 3 Guide-listed additions) and 19 official menu/booking-channel price records. Sushi Sho, Saga, Aska and Atomix prices were added from their official booking/menu pages. Le Bernardin now uses the current linked dinner PDF ($225/guest); the older official $218 capture is documented, not averaged.</li>
+      <li><strong>Hotel shortlist:</strong> 10 named Queen/King room types with private bathrooms verified on property pages. Eight dated Booking.com pre-tax snapshots are linked to their exact rate pages and capture dates; all-in totals are blank because final checkout totals were not captured. Six earlier MICHELIN candidates lacking room-level evidence are held out pending verification, not asserted to be non-qualifying.</li>
+      <li><strong>Activities:</strong> 15 canonical rows, including Wollman Rink (15 Feb Community Day terms), Bryant Park's 28 Feb cutoff, and the Chinatown parade announced for 21 Feb 2027. NYPL's 2027 Presidents' Day closure remains unconfirmed; current operator ticket prices are labelled as snapshots.</li>
+      <li><strong>Travel:</strong> T11's 25 Google Maps transit-mode legs remain linked as a historical 3–37-minute sample from five hotel origins to five MICHELIN clusters. It includes walk-only results and does not cover every current hotel or a future departure time; Q5 stays open for itinerary-specific transit-only routing.</li>
+      <li><strong>Decision register:</strong> 12 questions, 12 suggestions and 20 flags. Q2/Q3/Q5/Q6/Q9 and S1/S2/S3/S10/S11 now reflect the reconciled evidence and its limits.</li>
+      <li><strong>Verification:</strong> <code>python3 scripts/verify.py</code> reports 0 errors / 0 warnings across 141 canonical rows (72 restaurants, 10 hotels, 15 activities, 12 questions, 12 suggestions, 20 flags) and checks local links in 11 root HTML pages. <code>node --check assets/app.js</code> passes; <code>git diff --check</code> is clean.</li>
+    </ul>
+  </div>
+
+  <h2>7 · Open repository work</h2>
   <div class="card">
     <ul>
       <li>Protect <code>main</code> and route future work through pull requests, so parallel sessions cannot force-push over each other.</li>
