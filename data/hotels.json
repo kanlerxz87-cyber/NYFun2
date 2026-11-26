@@ -5,7 +5,8 @@
     "requirements": "2 adults, private bathroom, queen-size bed or bigger, travel <= 1 hour to Michelin clusters & activities",
     "preferredWindow": "15\u201318 Feb 2027 (3 nights)",
     "priced7NightWindow": "15\u201322 Feb 2027 (7 nights)",
-    "rankingMethodology": "Ranked by: (1) Michelin Reach (100% of NYC starred restaurants reachable in 3\u201337 min), (2) Average Cluster Transit Time, (3) 7-Night Cost Efficiency (Pre-tax & All-in), (4) Verified Room & Bed Specifications"
+    "rankingMethodology": "Ranked by: (1) Michelin Reach (100% of NYC starred restaurants reachable in 3\u201337 min), (2) Average Cluster Transit Time, (3) 7-Night Cost Efficiency (Pre-tax & All-in), (4) Verified Room & Bed Specifications",
+    "integrationCheckedOn": "2026-11-26"
   },
   "bookingWindows": [
     {
@@ -98,7 +99,9 @@
       ],
       "flags": [
         "Rate reflects a 30% Black Friday Deal snapshot captured 2026-11-25; lock in free-cancellation hold and re-shop."
-      ]
+      ],
+      "sevenNightPreTax": "$943 ($942.91)",
+      "sevenNightAllIn": "$1,110"
     },
     {
       "rank": 2,
@@ -139,7 +142,9 @@
       ],
       "flags": [
         "Booking.com dated snapshot (2026-11-25); verify direct World of Hyatt member rate before final payment."
-      ]
+      ],
+      "sevenNightPreTax": "$1,113",
+      "sevenNightAllIn": "$1,305"
     },
     {
       "rank": 3,
@@ -174,7 +179,9 @@
       ],
       "flags": [
         "Cheapest $848/$998 tier is a non-refundable Partner Offer; pay ~$206 more (~$1,204 all-in) for refundable terms or pick DoubleTree Chelsea ($1,110 all-in cancellable)."
-      ]
+      ],
+      "sevenNightPreTax": "$848 non-ref \u00b7 $1,025 refundable",
+      "sevenNightAllIn": "$998 non-ref \u00b7 ~$1,204 refundable"
     },
     {
       "rank": 4,
@@ -215,7 +222,9 @@
       ],
       "flags": [
         "Compact 150 sq ft room; rate depended on a 39% Black Friday Deal snapshot captured 2026-11-25."
-      ]
+      ],
+      "sevenNightPreTax": "$1,214 ($1,213.96 incl. $37/nt resort fee)",
+      "sevenNightAllIn": "$1,428"
     },
     {
       "rank": 5,
@@ -250,7 +259,9 @@
       ],
       "flags": [
         "Mandatory $38/night resort fee is already baked into the $1,653 pre-tax total."
-      ]
+      ],
+      "sevenNightPreTax": "$1,653 (incl. $38/nt resort fee)",
+      "sevenNightAllIn": "$1,925"
     },
     {
       "rank": 6,
@@ -286,7 +297,9 @@
       "flags": [
         "MICHELIN hotel page shows guest score 18/20 while Le Coucou page shows 18.1/20.",
         "$1,774 rate is non-refundable; flexible rate is $2,263 all-in."
-      ]
+      ],
+      "sevenNightPreTax": "$1,522 non-ref \u00b7 $1,948 flexible",
+      "sevenNightAllIn": "$1,774 non-ref \u00b7 $2,263 flexible"
     },
     {
       "rank": 7,
@@ -321,7 +334,9 @@
       ],
       "flags": [
         "Must book 'Studio 1 Queen Bed' or higher \u2014 the hotel's cheapest room uses a Full bed."
-      ]
+      ],
+      "sevenNightPreTax": "$1,747 (incl. $38/nt resort fee)",
+      "sevenNightAllIn": "$2,033"
     },
     {
       "rank": 8,
@@ -362,7 +377,9 @@
       ],
       "flags": [
         "Dated 15\u201322 Feb 2027 7-night total left blank (only undated 'From $395/night' confirmed on official page)."
-      ]
+      ],
+      "sevenNightPreTax": "",
+      "sevenNightAllIn": ""
     },
     {
       "rank": 9,
@@ -403,7 +420,9 @@
       ],
       "flags": [
         "Costs ~4.7\u00d7 DoubleTree Chelsea for the exact same 7 nights; included as verified 1-MICHELIN-Key luxury benchmark."
-      ]
+      ],
+      "sevenNightPreTax": "$4,488 non-ref \u00b7 $4,942 flexible",
+      "sevenNightAllIn": "$5,220 non-ref \u00b7 $5,741 flexible"
     },
     {
       "rank": 10,
@@ -431,7 +450,9 @@
       "social": [],
       "flags": [
         "Dated 7-night total, specific room-tier bed/bath line, and video review left blank pending direct 2027 rate check."
-      ]
+      ],
+      "sevenNightPreTax": "",
+      "sevenNightAllIn": ""
     }
   ]
 }

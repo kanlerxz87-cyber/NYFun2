@@ -4,7 +4,8 @@
     "session": "arena/847ea2ef-nyfun2",
     "sourceOfTruth": "Live MICHELIN Guide all-starred selection + individual detail pages + official venue sites",
     "starListSource": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
-    "starCounts": "5 three-star, 14 two-star, 50 one-star = 69 starred + 3 Guide-listed additions = 72 rows total."
+    "starCounts": "5 three-star, 14 two-star, 50 one-star = 69 starred + 3 Guide-listed additions = 72 rows total.",
+    "integrationCheckedOn": "2026-11-26"
   },
   "items": [
     {
