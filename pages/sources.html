@@ -23,6 +23,7 @@
     <a href="suggestions.html">Suggestions</a>
     <a href="flagged.html">Flagged</a>
     <a class="active" href="sources.html">Sources</a>
+    <a href="research.html">Research</a>
     <a href="repo-audit.html">Repo audit</a>
   </nav>
   <div class="side-note">Verified against official sources · checked <span data-checked>—</span></div>
@@ -38,7 +39,8 @@
       <li>If a value cannot be confirmed, the cell is blank and an explanation is added to the Flags page.</li>
       <li>Review videos are labelled third-party; they are not used to establish hours, prices or ownership.</li>
       <li>Neighbourhood labels are derived from the published street address and marked "address-based grouping".</li>
-      <li>No travel duration is claimed without a stored routing result.</li>
+      <li>Measured travel minutes come from a stored routing result with the exact Google Maps URL and capture time; an unmeasured leg stays blank. The minutes are a snapshot, not an official timetable.</li>
+      <li>Final integration (26 Nov 2026) re-fetched the official parade, Bryant Park, Wollman, Tock and menu pages named below. Conflicts are recorded on the <a href="flagged.html">Flagged</a> page (F18–F23).</li>
     </ul>
   </div>
   <h2>Primary sources used</h2>
@@ -56,6 +58,10 @@
       <li><a href="https://www.911memorial.org/visit" target="_blank" rel="noopener noreferrer">9/11 Memorial & Museum ↗</a> · <a href="https://www.thehighline.org/visit/" target="_blank" rel="noopener noreferrer">The High Line ↗</a> · <a href="https://whitney.org/visit" target="_blank" rel="noopener noreferrer">Whitney ↗</a> · <a href="https://www.guggenheim.org/plan-your-visit" target="_blank" rel="noopener noreferrer">Guggenheim ↗</a></li>
       <li><a href="https://www.esbnyc.com/visit/hours-of-operation" target="_blank" rel="noopener noreferrer">Empire State Building hours ↗</a> · <a href="https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml" target="_blank" rel="noopener noreferrer">NYC DOT Staten Island Ferry ↗</a> · <a href="https://www.nypl.org/locations/schwarzman/research" target="_blank" rel="noopener noreferrer">NYPL Schwarzman Building ↗</a></li>
       <li><a href="https://www.mta.info/maps" target="_blank" rel="noopener noreferrer">MTA official subway/bus maps ↗</a></li>
+      <li><a href="https://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/" target="_blank" rel="noopener noreferrer">Better Chinatown — 2027 parade date (re-fetched 26 Nov 2026) ↗</a></li>
+      <li><a href="https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park" target="_blank" rel="noopener noreferrer">Bryant Park — Winter Village 28 Feb 2027 season end ↗</a> · <a href="https://wollmanrinknyc.com/plan/" target="_blank" rel="noopener noreferrer">Wollman Rink — 2026–27 hours, calendar and prices ↗</a></li>
+      <li><a href="https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-at-hinoki-counter" target="_blank" rel="noopener noreferrer">Sushi Sho official Tock price ↗</a> · <a href="https://www.saga-nyc.com/menus" target="_blank" rel="noopener noreferrer">Saga menus ↗</a> · <a href="https://www.askanyc.com/dining" target="_blank" rel="noopener noreferrer">Aska dining ↗</a> · <a href="https://www.danielnyc.com/cuisine/prix-fixe" target="_blank" rel="noopener noreferrer">Daniel prix fixe ↗</a> · <a href="https://www.exploretock.com/perse/experience/7768/salon-lounge-seating-four-course-tasting-menu" target="_blank" rel="noopener noreferrer">Per Se Tock (deposits only) ↗</a></li>
+      <li><a href="https://info.summitov.com/" target="_blank" rel="noopener noreferrer">SUMMIT One Vanderbilt official FAQ footer ↗</a> · <a href="https://www.rockefellercenter.com/buy-tickets/top-of-the-rock/" target="_blank" rel="noopener noreferrer">Top of the Rock timed admission ↗</a></li>
     </ul>
   </div>
   <h2>Repository & coordination</h2>
@@ -64,6 +70,7 @@
     <p>Platform constraint: the session is bound to one branch, so the requested per-session branch naming could not be used; non-overlapping file scopes and immediate claim commits were used instead.</p>
     <p>A third session (<code>arena/215c2a25</code>) produced another independent kit, preserved at <a href="../sessions/215c2a25/index.html">sessions/215c2a25/index.html ↗</a> with its own data and source register.</p>
     <p>A parallel session (<code>arena/1a7ae497</code>) produced an independent site. Its work is preserved unchanged under <a href="../alt/index.html">alt/ ↗</a> rather than overwritten; its hotel-rate and budget findings can be compared with the blank/flagged values on this site.</p>
+    <p>Two further kits (<a href="../sessions/657520df/index.html">657520df ↗</a> and <a href="../sessions/c1cf7b23/index.html">c1cf7b23 ↗</a>) supplied verified room/bath facts, social links and price evidence; the transit/pricing kit (<a href="../sessions/33cfdba4/index.html">33cfdba4 ↗</a>) supplied the measured matrix and five weekly price snapshots. The final integration pass re-read the official pages behind every value it copied and left all session directories unchanged. Evidence and caveats: <a href="research.html">Research &amp; integration</a>.</p>
   </div>
 
   <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">NYFun2 ↗</a> · <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">Coordination board ↗</a> · Research date <span data-checked>—</span>.</p>
