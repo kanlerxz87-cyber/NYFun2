@@ -1,4 +1,4 @@
-# NYFun2 — New York City trip plan, February 2027
+# NYFun2 — New York City trip plan, February–March 2027
 
 A static, source-audited planning dashboard for **two adults** in New York City inside the
 **15 Feb – 23 Mar 2027** window, built around MICHELIN dining and hotels that publish a
@@ -9,9 +9,10 @@ A static, source-audited planning dashboard for **two adults** in New York City 
 **Preferred trip:** 15–18 Feb 2027 (Mon–Thu, 3 nights).
 **Priced case:** 15–22 Feb 2027 (Mon–Mon, 7 nights) — the window the brief asked to price.
 
----
+**Travel window:** preferred 15–18 Feb 2027; priced case 15–22 Feb 2027 (Monday → Monday, 7 nights); full allowed window 15 Feb–23 Mar 2027.
+**Date-critical:** the 29th Chinatown Lunar New Year Parade is on Sun 21 Feb 2027 — it is only catchable on the 7-night window, not the preferred 15–18 Feb trip. Wollman Rink closes 16 Mar 2027; Bryant Park Winter Village closes 28 Feb 2027. Michelin's 2026 ceremony is 14 Dec 2026 (before the trip).
 
-## The rule this project runs on
+The root site is the canonical source-linked catalogue. The separate [T17 detailed planning kit](https://kanlerxz87-cyber.github.io/NYFun2/sessions/c1cf7b23/index.html) is a curated, independently researched comparison with additional dated hotel windows, measured transit data and social links. The kits retain separate datasets and assumptions; do not combine their prices without checking each source and flag.
 
 > Every table row carries a link to the official page it came from. A value that cannot be
 > confirmed is **blank and flagged** — never estimated, and never inferred from a similar venue.
@@ -45,7 +46,7 @@ Each row also carries a verification badge:
 | `pages/repo-audit.html` | What each session contributed, what this integration changed |
 | `pages/compare.html` | The five parallel session kits and their disagreements |
 
-## Headline findings
+## Findings and limits
 
 - **MICHELIN census (re-checked 2026-11-26):** 5 three-star, 14 two-star, 50 one-star (69 starred),
   76 Bib Gourmand, 224 Selected.
