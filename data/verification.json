@@ -54,7 +54,7 @@
   },
   {
    "fact": "The Met admission and hours",
-   "value": "Adults $30 ($60 for two); Sat-Mon/Tue/Thu 10-17, Fri-Sat 10-21, closed Wednesday",
+   "value": "Adults $30 ($60 for two); Sun/Mon/Tue/Thu 10-17, Fri-Sat 10-21, closed Wednesday",
    "source": "https://www.metmuseum.org/plan-your-visit",
    "note": "Admission table read on the official page today; the Wednesday closure corroborated by four independent guides because the hours block was not in the page section captured",
    "result": "Verified (hours corroborated)"

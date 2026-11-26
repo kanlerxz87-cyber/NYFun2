@@ -410,3 +410,21 @@ Met, 9/11) — the merge now keys them and the verifier fails on duplicates. (b)
 attached Eurostars' transit legs to The Wall Street Hotel — replaced with explicit key matching, and
 unmeasured hotels now show a blank. (c) The Benjamin had measured transit but no official source for
 its room, so it was dropped from the published list rather than shown unsourced.
+
+**PR and merge result.**
+
+- PR: https://github.com/kanlerxz87-cyber/NYFun2/pull/23 — opened against `main`, first reported
+  CONFLICTING because `main` had moved to `2db0ee0` mid-session; after the merge of `main` into the
+  branch the PR merged cleanly at **2026-11-26T13:27:25Z**.
+- Merge commit on `main`: `a78f15e` (branch head `80a457e`, "T24: merge main's verified data as
+  canonical base, renumber flags, regenerate dashboard").
+- Pages: build `1405555114` for commit `a78f15e` completed with status **built** (23 s, no error);
+  `GET /repos/.../pages` reports `"status":"built"`, source `main` `/`, https enforced.
+- Live check: `https://kanlerxz87-cyber.github.io/NYFun2/pages/verification.html` returns the new
+  dated page with the 16 checks and the 72 / 24 / 35 / 27 counters, i.e. the merged build is what
+  Pages is serving.
+- Pre-merge gate: `verify.py` 0 errors / 0 warnings over 13 pages and 150 rows, `node --check`
+  passes, local HTTP smoke test 200 on every asset type, and a jsdom render test confirmed every
+  page's tables populate from JSON with no console errors (restaurants 101 rows, hotels 21,
+  activities 18, questions 13, suggestions 17, flags 28, verification 16, compare 5, repo-audit 8,
+  itinerary 5, sources 11; landing counters 72/24/16/8/18/28).
