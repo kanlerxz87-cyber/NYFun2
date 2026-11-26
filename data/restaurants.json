@@ -22,17 +22,23 @@
       "hours": "Tue–Sun 17:00–22:00; Monday closed",
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "priceNote": "",
-      "priceSourceUrl": "",
-      "officialUrl": "",
+      "priceTwoAdults": "$990 (Shorter Omakase at Hinoki Counter, 2 x $495, Tock prepaid incl. administrative fee)",
+      "priceNote": "Official Tock page re-verified 2026-11-26: 'Shorter Omakase at Hinoki Counter' — $495 per person INCLUDING administrative fee; prepaid reservation for parties of 1 to 4; currently booking through Sun 28 Feb 2027, new reservations release Tue 1 Dec 2026 11:00 AM EST. Base price excluding the fee is not printed on the page. 2 x $495 = $990. Not yet re-checked for Feb–Mar 2027 (menus/prices may change; see F17).",
+      "priceSourceUrl": "https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-at-hinoki-counter",
+      "officialUrl": "https://www.exploretock.com/sushi-sho-nyc",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/sushi-sho-1213976",
-      "social": [],
+      "social": [
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/sushishonyc",
+          "note": "Official account linked from the restaurant's official Tock page ('View Sushi Sho - NYC on Instagram'), verified 2026-11-26"
+        }
+      ],
       "flags": [
         "Official website not listed by Michelin (phone only)",
-        "Couple price unverified: no official menu price published",
         "No verified NYC social/review link found; similar-name YouTube results refer to a different city",
-        "No official social account verified this session; see MICHELIN/official site"
+        "Booking releases 1 Dec 2026 11:00 AM EST; parties of 1–4 only; confirmation required by 1 day prior or Tock may cancel",
+        "No verified NYC-specific third-party review video; YouTube results mix the Honolulu branch"
       ]
     },
     {
@@ -138,8 +144,8 @@
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
       "priceTwoAdults": "",
-      "priceNote": "Official Tock channel shows a $200/person deposit (Main Dining Room) and $150/person deposit (Salon); the tasting-menu price itself is not printed on the reachable Tock/Thomas Keller pages. A $425 figure appears only in a search snippet and is NOT used.",
-      "priceSourceUrl": "",
+      "priceNote": "Official Tock pages re-verified 2026-11-26: Main Dining Room Tasting Menu — STARTING AT $200 per person (deposit); Salon Lounge Seating — now listed as Four-Course Tasting Menu, $150 per person (deposit), parties of 1–4. Session c1cf7b23 (25 Nov 2026) recorded a $185/person Five-Course Salon experience ($370 for two); the official page now shows a Four-Course menu at a $150/pp deposit, so $185/$370 could NOT be re-confirmed and is not used. Full tasting-menu base prices are not printed on the reachable official pages.",
+      "priceSourceUrl": "https://www.exploretock.com/perse/experience/7768/salon-lounge-seating-four-course-tasting-menu",
       "officialUrl": "https://www.thomaskeller.com/perseny",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/per-se",
       "social": [
@@ -165,7 +171,7 @@
         }
       ],
       "flags": [
-        "Couple price unverified: official pages show only the $200/person deposit, not the menu price; $425 search-snippet figure not used. Confirm by phone or at booking."
+        "Couple price unverified: official Tock pages show deposits only (MDR from $200/pp; Salon $150/pp four-course). The $185/pp figure recorded 25 Nov 2026 could not be re-confirmed on 2026-11-26 — the Salon experience is now Four-Course with a $150/pp deposit. $425 search-snippet figure not used. Confirm the menu price by phone/Tock at booking"
       ]
     },
     {

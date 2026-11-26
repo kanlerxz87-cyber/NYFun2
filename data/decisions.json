@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-11-25",
+  "checkedOn": "2026-11-26",
   "questions": [
     {
       "id": "Q1",
@@ -389,6 +389,27 @@
       "title": "Menu prices captured Nov 2026 vs Feb-Mar 2027 trip",
       "detail": "All verified restaurant menu prices were captured 2026-11-25 (Nov 2026 menus). The trip is Feb 15-Mar 23 2027, so prices may change. Every couple total must be re-confirmed on the official page at booking; the Michelin 14 Dec 2026 ceremony may also change distinctions.",
       "source": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/"
+    },
+    {
+      "id": "F18",
+      "severity": "Medium",
+      "title": "Per Se Salon listing changed; earlier $370/couple figure not re-confirmable",
+      "detail": "Session c1cf7b23 (2026-11-25) recorded Per Se's Salon Lounge Seating as a Five-Course tasting at $185/pp ($370 for two). On 2026-11-26 the official Tock page (experience/7768) lists the Salon Lounge Seating as a Four-Course Tasting Menu at $150/pp DEPOSIT, parties of 1-4; the Main Dining Room Tasting Menu prints 'starting at $200 per person' (deposit). No base menu price is printed on either official page, so Per Se stays blank. Any $185/$370/$425/$590 figure must be treated as unconfirmed until Per Se confirms by phone or the live Tock calendar at booking.",
+      "source": "https://www.exploretock.com/perse/experience/7768/salon-lounge-seating-four-course-tasting-menu"
+    },
+    {
+      "id": "F19",
+      "severity": "Low",
+      "title": "LNY Parade official page: Chinese text prints 2026 for a 2027 event",
+      "detail": "The official organizer page (betterchinatown.com) prints '日期 : 2026年2月21日 (星期日)' in its Chinese line while the English headline and body print 'February 21, 2027 | Sunday | 1:00pm'. Calendar arithmetic confirms 21 Feb 2027 is a Sunday (21 Feb 2026 was a Saturday). The site treats the parade date as Sunday 21 Feb 2027; the Chinese-text year is an official-page typo, flagged for manual review.",
+      "source": "https://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/"
+    },
+    {
+      "id": "F20",
+      "severity": "Medium",
+      "title": "Winter 2027 season cutoffs shrink the bookable window",
+      "detail": "Three dated rows were added 2026-11-26 (re-verified against the live official pages): (1) 29th Chinatown Lunar New Year Parade — Sun 21 Feb 2027 only; catchable only on the 7-night 15-22 Feb window, not on the preferred 15-18 Feb trip. (2) Bank of America Winter Village at Bryant Park — The Rink/The Lodge close 28 Feb 2027; Holiday Shops already closed 3 Jan 2027. (3) Wollman Rink — open through 16 Mar 2027 only; Feb 15 2027 is a Community Day restricted to NYC public-sector employees and their families; 16-21 Feb prices at Peak ($28/adult); 22 Feb onwards Off-Peak ($16); 17-23 Mar the rink is closed. Preferred window and any March dates are materially affected.",
+      "source": "https://wollmanrinknyc.com/plan/"
     }
   ]
 }
