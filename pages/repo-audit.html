@@ -30,15 +30,20 @@
 <main class="content" id="main">
 
   <p class="eyebrow">Audit · repository &amp; integration</p>
-  <h1>What was in the repo, and how two sessions were reconciled</h1>
-  <p class="lede">Three agent sessions worked this repository on the same day, on separate branches. None
-  overwrote another. This page records what the repository contained when each session started, what each
-  session produced, how the overlap was resolved, and the evidence that the combined dataset is internally
-  consistent. The third session is the clean case: on finding the site already published, it moved
-  everything it had written into its own namespace (<code>sessions/215c2a25/</code>) and touched no shared
-  file — the behaviour the board is supposed to produce.</p>
+  <h1>Repository audit &amp; integration history</h1>
+  <p class="lede">The first sections below preserve the repository's historical audit and integration record. The current consistency check is at the top: later sessions added separate planning kits and data, so historical counts must not be read as current totals.</p>
 
-  <h2>1 · State as found</h2>
+  <h2>Current dashboard state · checked 26 Nov 2026</h2>
+  <div class="notice info"><strong>Canonical root data:</strong> 72 restaurant records, 12 hotels, 12 activities, 12 questions, 12 suggestions and 17 flags. The root verifier checks local links, JSON validity, required HTTPS sources for factual category rows, optional decision-source URL shapes and blank-field flags. It cannot check external page availability or prove a linked page is official. Four open questions have no source list because they are unresolved prompts; the Questions table now labels that absence instead of crashing.</div>
+  <div class="card">
+    <ul>
+      <li><strong>Expanded independent planning kit:</strong> <a href="../sessions/c1cf7b23/index.html">T17 dashboard</a> has 31 curated Michelin venues (24 with a cited 2-adult price), 10 hotels with its own date-window rate captures, 18 activities and 155 social/review links. Its transit calculations, rate basis and 11 flags are independent; they are presented separately, not silently merged into the canonical data.</li>
+      <li><strong>Current integration correction:</strong> the root landing page, README and executive summary previously described old counts/rate availability after the canonical datasets had changed. Those summaries were aligned with the data. The T17 dashboard is now linked from the landing page.</li>
+      <li><strong>Verification limitation:</strong> structural checks do not follow URLs, validate a seller's current availability, or establish whether a social account is official. Use each row's source and the <a href="flagged.html">Flagged for Review</a> page before making a purchase.</li>
+    </ul>
+  </div>
+
+  <h2>1 · State as found (historical)</h2>
   <div class="card">
     <div class="table-wrap">
       <table>
@@ -108,7 +113,10 @@
       <table>
         <thead><tr><th>Check</th><th>Command</th><th>Result</th></tr></thead>
         <tbody>
-          <tr><td>Local links, JSON validity, source-per-row</td><td><code>python3 scripts/verify.py</code></td><td>0 errors, 0 warnings over 58 data rows</td></tr>
+          <tr><td>Current local links, JSON validity, source structure, blank-field flags</td><td><code>python3 scripts/verify.py</code></td><td>0 errors, 0 warnings over 137 canonical JSON rows (including questions and suggestions); local links resolved.</td></tr>
+          <tr><td>Independent T17 kit structure</td><td><code>python3 sessions/c1cf7b23/scripts/verify.py</code></td><td>0 errors; independent data and methodology are not merged into the canonical rows.</td></tr>
+          <tr><td>Root JavaScript syntax</td><td><code>node --check assets/app.js</code></td><td>Passes; missing question-source lists are rendered as unprovided rather than throwing an error.</td></tr>
+          <tr><td>Git diff whitespace</td><td><code>git diff --check</code></td><td>Passes.</td></tr>
           <tr><td>JS syntax</td><td><code>node --check assets/app.js</code></td><td>passes</td></tr>
           <tr><td>Static serve</td><td><code>python3 -m http.server</code> then request each page</td><td>all pages and assets return 200</td></tr>
           <tr><td>Calendar arithmetic</td><td>Python <code>datetime</code></td><td>15 Feb 2027 is a Monday, 22 Feb 2027 is a Monday, exactly 7 nights</td></tr>

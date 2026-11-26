@@ -1,90 +1,59 @@
-# NYFun2 — New York City trip plan, February 2027
+# NYFun2 — New York City trip plan, February–March 2027
 
-A static, source-audited planning dashboard for two adults in New York City, built around
-MICHELIN-starred dining and hotels that meet a private-bathroom / queen-or-larger-bed requirement.
+A mobile-friendly, source-audited planning dashboard for two adults. The preferred dates are **15–18 February 2027** (3 nights); the canonical seven-night hotel comparison uses **15–22 February 2027**. The full allowed trip window is 15 February–23 March 2027.
 
 **Live site:** https://kanlerxz87-cyber.github.io/NYFun2/
 
-**Travel window:** preferred 15–18 Feb 2027; priced case 15–22 Feb 2027 (Monday → Monday, 7 nights).
+## Use the dashboards
 
----
+The root site is the canonical source-linked catalogue. The separate [T17 detailed planning kit](https://kanlerxz87-cyber.github.io/NYFun2/sessions/c1cf7b23/index.html) is a curated, independently researched comparison with additional dated hotel windows, measured transit data and social links. The kits retain separate datasets and assumptions; do not combine their prices without checking each source and flag.
 
-## The rule this project runs on
-
-> Every table row carries an official source. Values that cannot be confirmed are left blank and
-> flagged — never estimated.
-
-Where the site performs arithmetic itself (adding a published tax rate to a published pre-tax total),
-the formula is printed next to the result. A review video is labelled third-party; it is never presented
-as an official endorsement.
-
-## What is here
-
-| Path | Purpose |
+| Path | Contents |
 |---|---|
-| `index.html` | Dashboard / overview |
-| `pages/executive-summary.html` | Decision-ready summary |
-| `pages/michelin-restaurants.html` | 21 restaurant rows — star level, hours, guide band, review links, source |
-| `pages/hotels.html` | 12 hotel candidates, 4 with dated 7-night totals |
-| `pages/activities.html` | 12 activities with official hours, exceptions and couple costs |
-| `pages/itinerary.html` | Day plan and how the ≤1-hour travel goal is handled |
-| `pages/questions.html` | 12 open questions: known / missing / how to discover |
-| `pages/suggestions.html` | 12 improvement options, none implemented |
-| `pages/flagged.html` | 13 flags: every unverified value and irregularity |
+| `index.html` | Overview, decision warning and links to all planning views |
+| `pages/executive-summary.html` | Decision brief, risks and decision sequence |
+| `pages/michelin-restaurants.html` | 72 records: 69 starred in the 25 Nov 2026 snapshot plus 3 Guide-listed additions; star status, hours, menu totals and flags |
+| `pages/hotels.html` | 12 hotel candidates; 4 dated 7-night totals from third-party rate pages, 8 unpriced |
+| `pages/activities.html` | 12 activities with official hours, exceptions, costs where published and route-query links |
+| `pages/itinerary.html` | Itinerary and one-hour routing limits |
+| `pages/questions.html` | 12 open questions, known facts, information gaps and discovery steps |
+| `pages/suggestions.html` | 12 options for improving decision-making, awaiting review |
+| `pages/flagged.html` | 17 irregularities, unverified fields and time-sensitive cautions |
 | `pages/sources.html` | Primary-source register and verification rules |
-| `pages/repo-audit.html` | Repository audit and the two-session integration log |
-| `data/restaurants.json` | Restaurant dataset |
-| `data/hotels.json` | Hotel dataset |
-| `data/activities.json` | Activities dataset |
-| `data/decisions.json` | Questions, suggestions and flags |
-| `assets/styles.css` · `assets/app.js` | Styling and table rendering (no dependencies) |
-| `scripts/verify.py` | Pre-push verification |
-| `COORDINATION.md` | Shared task board and session log |
-| `alt/` | The parallel session's independent kit, preserved verbatim for comparison (not linked from the main nav) |
-| `LICENSE` | MIT for code, CC BY 4.0 for data and prose |
+| `pages/repo-audit.html` | Repository and integration history, with the latest consistency check |
+| `sessions/c1cf7b23/` | Independent detailed kit: 31 curated Michelin venues, 10 hotels, 18 activities and its own datasets, flags and verifier |
+| `data/` | Canonical JSON datasets |
+| `assets/styles.css`, `assets/app.js` | Responsive layout and table rendering; no third-party runtime dependencies |
+| `scripts/verify.py` | Local-link, JSON, source-URL and blank-field checks |
+| `COORDINATION.md` | Shared task board, verification notes and integration log |
 
-## Headline findings
+## Findings and limits
 
-- **MICHELIN counts (official filter panel, 25 Nov 2026):** 5 three-star, 14 two-star, 50 one-star,
-  76 Bib Gourmand, 224 guide-listed with no star.
-- **Dated hotel totals now exist** for 15–22 Feb 2027, all-in for two adults:
-  **Hyatt Place NY/Chelsea $1,305** · Arlo NoMad $1,428 · 11 Howard $1,774 · The Beekman $5,220.
-  A 4× spread for identical dates. They are dated aggregator snapshots, not hotel quotes (flag F10).
-- **11 Howard** is the only shortlisted hotel sharing a ZIP code (10013) with a verified starred
-  restaurant — Atera ★★, 77 Worth St.
-- **MTA fare is $3** per subway / local-bus ride ($7.25 express), not the $2.90 still quoted in older guides.
-- **Michelin's 2026 Northeast Cities ceremony is scheduled for 14 Dec 2026** — after this research,
-  before the trip. Star levels may change (flag F1).
+- **Michelin:** canonical records contain 69 starred restaurants (5 three-star, 14 two-star, 50 one-star) plus 3 Guide-listed additions with no star, based on the 25 Nov 2026 snapshot. Michelin's announced 14 Dec 2026 ceremony occurs before the trip; re-check distinctions after that date.
+- **Restaurant costs:** 15 canonical restaurant records have an official-source two-adult menu total. Totals are menu/food amounts, not a full bill with tax, tip, drinks or add-ons unless a row explicitly says otherwise. Prices may change before travel.
+- **Hotels:** four canonical rows have dated 15–22 Feb 2027 totals captured from Booking.com on 25 Nov 2026. They are third-party snapshots, not hotel quotes; eight of twelve candidates remain unpriced. The canonical dataset does not prove the cheapest week across the entire requested window. The separate T17 kit has a five-window sweep with its own rate evidence and eligibility checks.
+- **Transit:** the canonical hotel ranking does not assert a one-hour Michelin-reach score. The T17 kit reports transit measurements for its own hotel/cluster set; see its methodology and flags before relying on a comparison.
+- **Open decisions:** trip length, total budget, airport/airfare, dietary and accessibility requirements, and the exact hotel are unresolved. The Questions and Suggestions pages make the gaps and next steps explicit.
 
-## Deliberately blank
+## Evidence policy
 
-No measured transit times (no routing source was reachable, so only same-ZIP proximity is claimed and
-each pair links a live directions query), no per-person restaurant prices (client-rendered menu pages),
-no airfare, no theatre tickets. Every gap is on `pages/flagged.html` with its cause and its remedy.
+Every factual row in the category tables links to a primary or official source. Values that could not be confirmed are left blank and explained in the Flags page. Arithmetic (such as multiplying an official per-person menu price by two, or applying a published tax basis) is identified in context. User-generated reviews are labelled third-party and are not treated as official endorsements. Dated prices and hours are time-sensitive and should be rechecked before booking.
 
 ## Verify locally
 
 ```bash
-python3 scripts/verify.py     # local links, JSON validity, source-per-row, blank-implies-flag
-node --check assets/app.js    # JS syntax
-python3 -m http.server 8000   # then open http://localhost:8000/
+python3 scripts/verify.py
+python3 sessions/c1cf7b23/scripts/verify.py
+node --check assets/app.js
+python3 -m http.server 8000
 ```
 
-No build step and no third-party dependencies: the site is HTML, one stylesheet, one script and JSON.
+The root dashboard is static HTML/CSS/JavaScript with local JSON data. GitHub Pages serves `main` from the repository root; `.nojekyll` is present.
 
-## Publishing
+## Repository review
 
-GitHub Pages is configured to serve `main` at the repository root, so a merge to `main` deploys.
-`.nojekyll` is present so Jekyll does not process the folder.
-
-## Sessions and coordination
-
-Two agent sessions worked this repository on 2026-11-25 on separate branches and were merged rather
-than overwritten. See `COORDINATION.md` for the task board and `pages/repo-audit.html` for the
-integration log: what each session contributed, which flag was resolved (F2), and which new risk the
-merged data introduced (F10).
+See `pages/repo-audit.html` for historical integration decisions and the latest audit. `COORDINATION.md` records task ownership, evidence sources, verification performed and irregularities. No claim is made that a static verifier can prove an external URL remains live or that every cited source is an official page; review row-level sources and flags before purchase.
 
 ## Licence
 
-Code: MIT. Data and prose: CC BY 4.0. Third-party marks, quotations and source pages remain the
-property of their owners. See `LICENSE`.
+Code: MIT. Data and prose: CC BY 4.0. Third-party marks, quotations and linked source content remain the property of their owners. See `LICENSE`.
