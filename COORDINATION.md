@@ -417,6 +417,10 @@ its room, so it was dropped from the published list rather than shown unsourced.
 - Live check: `https://kanlerxz87-cyber.github.io/NYFun2/pages/verification.html` returns the new
   dated page with the 16 checks and the 72 / 24 / 35 / 27 counters, i.e. the merged build is what
   Pages is serving.
+- Follow-up PR: https://github.com/kanlerxz87-cyber/NYFun2/pull/26 — the two live-page wording
+  fixes plus this record; merged as `5e2e3b6` (branch head `a7c2c52`). Pages rebuilt for `5e2e3b6`
+  with status **built**, and the live verification page now shows "Sun/Mon/Tue/Thu" and "35 stored
+  transit legs".
 - Pre-merge gate: `verify.py` 0 errors / 0 warnings over 13 pages and 150 rows, `node --check`
   passes, local HTTP smoke test 200 on every asset type, and a jsdom render test confirmed every
   page's tables populate from JSON with no console errors (restaurants 101 rows, hotels 21,

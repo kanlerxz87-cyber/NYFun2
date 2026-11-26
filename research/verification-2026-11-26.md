@@ -100,6 +100,7 @@ python3 scripts/verify.py       # 0 errors, 0 warnings
 - **Deploy:** PR #23 merged to `main` as `a78f15e`; GitHub Pages build for that commit reports
   `built`, and the live `pages/verification.html` shows this log.
 
-Two wording defects caught in the live page and fixed in the follow-up commit: the Met hours cell
+Two wording defects caught in the live page and fixed in follow-up PR #26 (merged as `5e2e3b6`,
+Pages `built`, both strings confirmed on the live page): the Met hours cell
 read "Sat-Mon/Tue/Thu" (now "Sun/Mon/Tue/Thu") and the transit note said "35 stored transit minutes"
 (now "35 stored transit legs: 25 hotel→cluster, 10 hotel→activity").
