@@ -69,7 +69,9 @@
         `<strong>${esc(q.id)}</strong>`, `<strong>${esc(q.question)}</strong>`, val(q.whatWeKnow), val(q.whatWeDoNotKnow),
         val(q.provisionalAnswer), q.blocking ? '<span class="pill red">Yes</span>' : '<span class="pill amber">No</span>',
         val(q.howToDiscover),
-        q.sources.map(s => `<a href="${esc(s)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`).join('<br>')
+        (Array.isArray(q.sources) && q.sources.length
+          ? q.sources.map(s => `<a href="${esc(s)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`).join('<br>')
+          : '<span class="blank">No source recorded — open question</span>')
       ]
     },
     suggestions: {
