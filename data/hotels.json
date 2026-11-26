@@ -1,962 +1,458 @@
 {
- "meta": {
-  "checkedOn": "2026-11-25",
-  "targetWindow": "15–22 Feb 2027 (7 nights, Mon–Mon). Preferred short window 15–18 Feb 2027 is only 3 nights.",
-  "bookingReality": "Correction to the earlier note (2026-11-25, second session): dated rates for 15-22 Feb 2027 ARE obtainable from third-party booking engines. Michelin's own hotel widget enforces a 31-day advance limit, but Booking.com returned live 7-night totals for the exact dates, recorded below with the capture date and exact rate URL. No hotel's own booking engine was read directly, so these are dated aggregator snapshots, not hotel quotes.",
-  "rankingPolicy": "Rank 1 group = private bath + queen/king bed confirmed AND a stored door-to-door transit measurement (25 legs were captured across five origin hotels; one origin was dropped for lacking an official source). Every measured hotel reaches all five sampled MICHELIN clusters in 37 minutes or less, so the one-hour rule does not separate them; ties break on average sampled transit time, then on verified all-in 7-night price. Hotels with no stored measurement follow, then hotels whose bed/bath specification is unconfirmed (flagged, never assumed).",
-  "ratePolicy": "publishedRate = undated 'from' rate on an official page. sevenNightTotal = live total for 2027-02-15 to 2027-02-22, 2 adults, captured 2026-11-25, pre-tax as quoted; tax lines and the all-in arithmetic are in taxBasis and allInSevenNights. Never mix the two columns.",
-  "integrationCheckedOn": "2026-11-26",
-  "hotelCount": 16,
-  "pricedCount": 8,
-  "measuredCount": 4,
-  "qualifiedCount": 10,
-  "droppedWithoutSource": [
-   "The Benjamin Royal Sonesta New York"
+  "meta": {
+    "checkedOn": "2026-11-26",
+    "session": "arena/847ea2ef-nyfun2",
+    "requirements": "2 adults, private bathroom, queen-size bed or bigger, travel <= 1 hour to Michelin clusters & activities",
+    "preferredWindow": "15\u201318 Feb 2027 (3 nights)",
+    "priced7NightWindow": "15\u201322 Feb 2027 (7 nights)",
+    "rankingMethodology": "Ranked by: (1) Michelin Reach (100% of NYC starred restaurants reachable in 3\u201337 min), (2) Average Cluster Transit Time, (3) 7-Night Cost Efficiency (Pre-tax & All-in), (4) Verified Room & Bed Specifications",
+    "integrationCheckedOn": "2026-11-26"
+  },
+  "bookingWindows": [
+    {
+      "windowId": "W1",
+      "dates": "Mon 15 Feb \u2013 Mon 22 Feb 2027",
+      "nights": 7,
+      "cheapestQualifyingHotel": "Eurostars Wall Street (Queen Room, Private Bath)",
+      "preTaxTotalUsd": "$848",
+      "estimatedAllInUsd": "$998",
+      "perNightPreTaxUsd": "$121",
+      "notes": "Includes preferred 15\u201318 Feb window + Presidents' Day Mon 15 Feb + 29th Chinatown Lunar New Year Parade Sun 21 Feb (1:00 PM). Cheapest verified Queen-bed 7-night total across all 5 tested weeks.",
+      "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
+    },
+    {
+      "windowId": "W2",
+      "dates": "Mon 22 Feb \u2013 Mon 1 Mar 2027",
+      "nights": 7,
+      "cheapestQualifyingHotel": "Eurostars Wall Street (Twin room shown at $836 \u2014 FAILS Queen requirement)",
+      "preTaxTotalUsd": "$836 (Twin \u2014 disqualified)",
+      "estimatedAllInUsd": "Queen tier unverified for W2",
+      "perNightPreTaxUsd": "$119 (Twin)",
+      "notes": "Last week of Bryant Park Winter Village (closes Sun 28 Feb 2027). Entry $836 rate is a Twin room that fails the Queen+ rule; Queen room requires live re-check.",
+      "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-22&checkout=2027-03-01&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
+    },
+    {
+      "windowId": "W3",
+      "dates": "Mon 1 Mar \u2013 Mon 8 Mar 2027",
+      "nights": 7,
+      "cheapestQualifyingHotel": "DoubleTree by Hilton New York Downtown (King Room)",
+      "preTaxTotalUsd": "$1,087",
+      "estimatedAllInUsd": "$1,275",
+      "perNightPreTaxUsd": "$155",
+      "notes": "+28% above Feb 15\u201322 pre-tax floor. Note: Bryant Park Rink/Lodge is already closed (ended Feb 28).",
+      "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
+    },
+    {
+      "windowId": "W4",
+      "dates": "Mon 8 Mar \u2013 Mon 15 Mar 2027",
+      "nights": 7,
+      "cheapestQualifyingHotel": "Eurostars Wall Street (Queen Room)",
+      "preTaxTotalUsd": "$1,106",
+      "estimatedAllInUsd": "$1,297",
+      "perNightPreTaxUsd": "$158",
+      "notes": "+30% above Feb 15\u201322 pre-tax floor; early spring demand ramp.",
+      "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-03-08&checkout=2027-03-15&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
+    },
+    {
+      "windowId": "W5",
+      "dates": "Mon 15 Mar \u2013 Mon 22 Mar 2027",
+      "nights": 7,
+      "cheapestQualifyingHotel": "Eurostars Wall Street (Queen Room)",
+      "preTaxTotalUsd": "$1,260",
+      "estimatedAllInUsd": "$1,474",
+      "perNightPreTaxUsd": "$180",
+      "notes": "+49% above Feb 15\u201322 pre-tax floor (St. Patrick's Day / Spring Break compression).",
+      "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-03-15&checkout=2027-03-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "name": "DoubleTree by Hilton Hotel New York City - Chelsea",
+      "tierBadge": "Best Overall Value + Cancellable King",
+      "area": "Chelsea / Midtown South",
+      "address": "128 West 29th Street, New York, NY 10001",
+      "room": "King Room \u2013 Non-Smoking (210 sq ft, 1 King bed)",
+      "privateBathroom": "Verified \u2014 Private bathroom (Hilton & Booking property spec)",
+      "bedVerified": "Yes \u2014 1 King bed",
+      "keyStatus": "Shortlisted",
+      "guestScore": "Top Verified",
+      "publishedRate": "$943 / 7 nights",
+      "sevenNightTotal": "$943 ($942.91) pre-tax",
+      "allInSevenNights": "$1,110",
+      "taxBasis": "Excludes 14.75% NYC/NYS hotel & sales tax + $4/night city tax ($942.91 \u00d7 1.1475 + $28 = $1,110). Free cancellation before 13 Feb 2027, $0 prepayment (30% off Black Friday Deal captured 25 Nov 2026).",
+      "cheapestWindow": "Mon Feb 15 \u2013 Mon Feb 22, 2027 ($848 pre-tax / $998 all-in Eurostars; $943 pre-tax / $1,110 all-in DoubleTree Chelsea)",
+      "rateCapturedOn": "2026-11-25",
+      "michelinWithin60Min": "67 / 67 NYC Starred (100% of 5-borough stars) \u00b7 5/5 clusters in 12\u201334 min (avg 20.4 min)",
+      "clusterTransitBreakdown": "Flatiron (EMP): 12 min walk \u00b7 Midtown 51st (Le Bernardin): 14 min [1] \u00b7 Tribeca (Jungsik): 19 min [1] \u00b7 FiDi (Crown Shy): 23 min [2/3] \u00b7 Williamsburg (Aska): 34 min [M]",
+      "amenities": "Fitness center, on-site restaurant/bar, room service, 28th St subway (1,056 ft), Penn Station 3 blocks",
+      "officialUrl": "https://www.hilton.com/en/hotels/nyccldt-doubletree-new-york-city-chelsea/hotel-info/",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/doubletree-new-york-city-chelsea.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "sourceUrl": "https://www.hilton.com/en/hotels/nyccldt-doubletree-new-york-city-chelsea/hotel-info/",
+      "social": [
+        {
+          "platform": "YouTube",
+          "type": "review",
+          "label": "YouTube (Hotel overview)",
+          "url": "https://www.youtube.com/watch?v=piCTxgmz-7Q"
+        }
+      ],
+      "flags": [
+        "Rate reflects a 30% Black Friday Deal snapshot captured 2026-11-25; lock in free-cancellation hold and re-shop."
+      ],
+      "sevenNightPreTax": "$943 ($942.91)",
+      "sevenNightAllIn": "$1,110"
+    },
+    {
+      "rank": 2,
+      "name": "Hyatt Place New York / Chelsea",
+      "tierBadge": "Best Free-Breakfast Cancellable King",
+      "area": "Chelsea / Flatiron Border",
+      "address": "140 West 24th Street, New York, NY 10011",
+      "room": "King Room (180 sq ft, 1 King bed)",
+      "privateBathroom": "Verified \u2014 Attached private bathroom",
+      "bedVerified": "Yes \u2014 1 King bed",
+      "keyStatus": "Shortlisted",
+      "guestScore": "Top Verified",
+      "publishedRate": "$1,113 / 7 nights",
+      "sevenNightTotal": "$1,113 pre-tax",
+      "allInSevenNights": "$1,305",
+      "taxBasis": "$1,113 \u00d7 1.1475 + (7 \u00d7 $4 city tax) = $1,305 all-in ($159/nt pre-tax). Includes buffet breakfast + free cancellation before 13 Feb 2027.",
+      "cheapestWindow": "Mon Feb 15 \u2013 Mon Feb 22, 2027 ($848 pre-tax / $998 all-in Eurostars; $943 pre-tax / $1,110 all-in DoubleTree Chelsea)",
+      "rateCapturedOn": "2026-11-25",
+      "michelinWithin60Min": "67 / 67 NYC Starred (100% of 5-borough stars) \u00b7 ~0.4 mi walk to Eleven Madison Park, odo & Cote",
+      "clusterTransitBreakdown": "23rd St subways (1, F/M, C/E, R/W) within 2\u20135 blocks; same Chelsea/Flatiron transit envelope as DoubleTree Chelsea (all NYC clusters \u226435 min)",
+      "amenities": "Complimentary hot buffet breakfast, fitness center, 507 rooms, high-floor skyline options, free Wi-Fi",
+      "officialUrl": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/hotel-info",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/hyatt-place-new-york-chelsea.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1",
+      "sourceUrl": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/hotel-info",
+      "social": [
+        {
+          "platform": "YouTube",
+          "type": "review",
+          "label": "YouTube (2026 Full Walkthrough & Review)",
+          "url": "https://www.youtube.com/watch?v=lVmb66gBMhk"
+        },
+        {
+          "platform": "YouTube",
+          "type": "review",
+          "label": "YouTube (Room Tour & Review)",
+          "url": "https://www.youtube.com/watch?v=ntojy5DxQ3A"
+        }
+      ],
+      "flags": [
+        "Booking.com dated snapshot (2026-11-25); verify direct World of Hyatt member rate before final payment."
+      ],
+      "sevenNightPreTax": "$1,113",
+      "sevenNightAllIn": "$1,305"
+    },
+    {
+      "rank": 3,
+      "name": "Eurostars Wall Street",
+      "tierBadge": "Lowest Absolute Price ($998 All-In)",
+      "area": "Financial District, Lower Manhattan",
+      "address": "129 Front Street, New York, NY 10005",
+      "room": "Queen Room (172 sq ft, 1 Queen bed)",
+      "privateBathroom": "Verified \u2014 Private bathroom",
+      "bedVerified": "Yes \u2014 1 Queen bed (watch out for Twin room on other weeks)",
+      "keyStatus": "Shortlisted",
+      "guestScore": "Top Verified",
+      "publishedRate": "$848 / 7 nights",
+      "sevenNightTotal": "$848 non-ref \u00b7 $1,025 refundable pre-tax",
+      "allInSevenNights": "$998 non-ref \u00b7 ~$1,204 refundable",
+      "taxBasis": "Booking.com displays exact $149.66 tax for the $848 Partner Offer ($848 + $149.66 = $997.66). Refundable Black Friday rate was $1,025 pre-tax (~$1,204 all-in).",
+      "cheapestWindow": "Mon Feb 15 \u2013 Mon Feb 22, 2027 ($848 pre-tax / $998 all-in Eurostars; $943 pre-tax / $1,110 all-in DoubleTree Chelsea)",
+      "rateCapturedOn": "2026-11-25",
+      "michelinWithin60Min": "67 / 67 NYC Starred (100% of 5-borough stars) \u00b7 5/5 clusters in 3\u201332 min (avg 21.4 min)",
+      "clusterTransitBreakdown": "FiDi (Crown Shy/Saga): 3 min walk \u00b7 Tribeca (Jungsik): 17 min [2/3] \u00b7 Midtown 51st (Le Bernardin): 26 min [2/3\u21921] \u00b7 Flatiron (EMP): 29 min [4/5/6] \u00b7 Williamsburg (Aska): 32 min [NYC Ferry ER]",
+      "amenities": "24-hr front desk, elevator, daily housekeeping, free Wi-Fi, 3-min walk to 70 Pine (Saga 2\u2605 / Crown Shy 1\u2605) & Pier 11 Ferry",
+      "officialUrl": "https://www.eurostarshotels.co.uk/eurostars-wall-street.html",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/exchange-manhattan.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "sourceUrl": "https://www.eurostarshotels.co.uk/eurostars-wall-street.html",
+      "social": [
+        {
+          "platform": "YouTube",
+          "type": "review",
+          "label": "YouTube (2026 Eurostars Wall St overview)",
+          "url": "https://www.youtube.com/watch?v=Nqenvt3hh-c"
+        }
+      ],
+      "flags": [
+        "Cheapest $848/$998 tier is a non-refundable Partner Offer; pay ~$206 more (~$1,204 all-in) for refundable terms or pick DoubleTree Chelsea ($1,110 all-in cancellable)."
+      ],
+      "sevenNightPreTax": "$848 non-ref \u00b7 $1,025 refundable",
+      "sevenNightAllIn": "$998 non-ref \u00b7 ~$1,204 refundable"
+    },
+    {
+      "rank": 4,
+      "name": "Arlo NoMad",
+      "tierBadge": "Central NoMad Micro-Boutique",
+      "area": "NoMad / Midtown South",
+      "address": "11 East 31st Street, New York, NY 10016",
+      "room": "Queen Room (150 sq ft, 1 Queen bed)",
+      "privateBathroom": "Private en-suite shower room (micro-room footprint 150 sq ft)",
+      "bedVerified": "Yes \u2014 1 Queen bed (confirmed on arlohotels.com/nomad/rooms/; avoid Bunk room)",
+      "keyStatus": "Shortlisted",
+      "guestScore": "Top Verified",
+      "publishedRate": "$1,214 / 7 nights",
+      "sevenNightTotal": "$1,214 ($1,213.96 incl. $37/nt resort fee) pre-tax",
+      "allInSevenNights": "$1,428",
+      "taxBasis": "$1,213.96 \u00d7 1.1475 + $28 city tax + $7 tourism fee = $1,428. Captures 39% off Black Friday promo.",
+      "cheapestWindow": "Mon Feb 15 \u2013 Mon Feb 22, 2027 ($848 pre-tax / $998 all-in Eurostars; $943 pre-tax / $1,110 all-in DoubleTree Chelsea)",
+      "rateCapturedOn": "2026-11-25",
+      "michelinWithin60Min": "67 / 67 NYC Starred (100% of 5-borough stars) \u00b7 1 block from Atomix 2\u2605 (104 E 30th St)",
+      "clusterTransitBreakdown": "28th & 33rd St (6, R/W, 1) + Herald Sq hub 3 blocks away; walks to Atomix (2 min), Eleven Madison Park (8 min), Koreatown (4 min)",
+      "amenities": "A.R.T. NoMad rooftop bar, NoMad Diner, fitness access, floor-to-ceiling city views in Sky rooms",
+      "officialUrl": "https://arlohotels.com/nomad/rooms/",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/arlo-nomad.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1",
+      "sourceUrl": "https://arlohotels.com/nomad/faqs/",
+      "social": [
+        {
+          "platform": "YouTube",
+          "type": "review",
+          "label": "YouTube (Arlo NoMad honest review)",
+          "url": "https://www.youtube.com/watch?v=XuQp3NisMHI"
+        },
+        {
+          "platform": "YouTube",
+          "type": "review",
+          "label": "YouTube (Rooftop & room tour)",
+          "url": "https://www.youtube.com/watch?v=DzUuuuIvmBs"
+        }
+      ],
+      "flags": [
+        "Compact 150 sq ft room; rate depended on a 39% Black Friday Deal snapshot captured 2026-11-25."
+      ],
+      "sevenNightPreTax": "$1,214 ($1,213.96 incl. $37/nt resort fee)",
+      "sevenNightAllIn": "$1,428"
+    },
+    {
+      "rank": 5,
+      "name": "The Evelyn NoMad",
+      "tierBadge": "Top Couples Dining Location (9.5/10)",
+      "area": "NoMad / Madison Square North",
+      "address": "7 East 27th Street, New York, NY 10016",
+      "room": "Superior Queen Room (180 sq ft, 1 Queen bed)",
+      "privateBathroom": "Verified \u2014 Attached bathroom with walk-in shower",
+      "bedVerified": "Yes \u2014 1 Queen bed",
+      "keyStatus": "Shortlisted",
+      "guestScore": "Top Verified",
+      "publishedRate": "$1,653 / 7 nights",
+      "sevenNightTotal": "$1,653 (incl. $38/nt resort fee) pre-tax",
+      "allInSevenNights": "$1,925",
+      "taxBasis": "$1,653 \u00d7 1.1475 + $28 city tax = ~$1,925 all-in. Free cancellation before 13 Feb 2027, $0 prepayment until 11 Feb 2027, breakfast included.",
+      "cheapestWindow": "Mon Feb 15 \u2013 Mon Feb 22, 2027 ($848 pre-tax / $998 all-in Eurostars; $943 pre-tax / $1,110 all-in DoubleTree Chelsea)",
+      "rateCapturedOn": "2026-11-25",
+      "michelinWithin60Min": "67 / 67 NYC Starred (100% of 5-borough stars) \u00b7 5/5 clusters in 4\u201334 min (avg 20.2 min \u2014 fastest average)",
+      "clusterTransitBreakdown": "Flatiron (EMP): 4 min walk \u00b7 Midtown 51st (Le Bernardin): 14 min [1] \u00b7 FiDi (Crown Shy): 24 min [R/W] \u00b7 Tribeca (Jungsik): 25 min [1] \u00b7 Williamsburg (Aska): 34 min [R/W\u2192L\u2192B32]",
+      "amenities": "Breakfast included, Brass / Tusk Bar on-site dining, fitness center, soundproof Art Deco rooms, 4-min walk to 28th St subway & Madison Sq Park",
+      "officialUrl": "https://www.theevelyn.com/rooms-suites",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/gershwin.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "sourceUrl": "https://www.theevelyn.com/location",
+      "social": [
+        {
+          "platform": "YouTube",
+          "type": "review",
+          "label": "YouTube (Insider Tour of The Evelyn NoMad)",
+          "url": "https://www.youtube.com/watch?v=_OlyYxc3Mt0"
+        }
+      ],
+      "flags": [
+        "Mandatory $38/night resort fee is already baked into the $1,653 pre-tax total."
+      ],
+      "sevenNightPreTax": "$1,653 (incl. $38/nt resort fee)",
+      "sevenNightAllIn": "$1,925"
+    },
+    {
+      "rank": 6,
+      "name": "11 Howard (MICHELIN Guide Listed \u00b7 Le Coucou 1\u2605 On-Site)",
+      "tierBadge": "Best SoHo Boutique + On-Site 1\u2605 Star",
+      "area": "SoHo / Chinatown\u2013Tribeca Border",
+      "address": "11 Howard Street, New York, NY 10013",
+      "room": "Queen Room (1 Queen bed)",
+      "privateBathroom": "Verified \u2014 Private bathroom",
+      "bedVerified": "Yes \u2014 1 Queen bed",
+      "keyStatus": "MICHELIN Guide Listed",
+      "guestScore": "Top Verified",
+      "publishedRate": "$1,522 / 7 nights",
+      "sevenNightTotal": "$1,522 non-ref \u00b7 $1,948 flexible pre-tax",
+      "allInSevenNights": "$1,774 non-ref \u00b7 $2,263 flexible",
+      "taxBasis": "Includes $35/nt resort fee in pre-tax; $1,522 \u00d7 1.1474 + $28 = $1,774 non-refundable (flexible costs +$489 all-in).",
+      "cheapestWindow": "Mon Feb 15 \u2013 Mon Feb 22, 2027 ($848 pre-tax / $998 all-in Eurostars; $943 pre-tax / $1,110 all-in DoubleTree Chelsea)",
+      "rateCapturedOn": "2026-11-25",
+      "michelinWithin60Min": "67 / 67 NYC Starred (100% of 5-borough stars) \u00b7 On-site Le Coucou 1\u2605 + same ZIP (10013) as Jungsik 3\u2605, Atera 2\u2605 & C\u00e9sar 2\u2605",
+      "clusterTransitBreakdown": "Canal St mega-hub (N/Q/R/W/6/J/Z/A/C/E) 1\u20133 blocks away; walks to Le Coucou (0 min), Atera (7 min), Jungsik (10 min), Thai Diner (6 min)",
+      "amenities": "MICHELIN guest score 18.0\u201318.1/20, Le Coucou 1\u2605 French restaurant & The Blond lounge on-site, Scandinavian design",
+      "officialUrl": "https://guide.michelin.com/en/hotels-stays/nyc/11-howard-8129",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/11-howard.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1",
+      "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/11-howard-8129",
+      "social": [
+        {
+          "platform": "YouTube",
+          "type": "review",
+          "label": "YouTube (11 Howard Hotel NYC review)",
+          "url": "https://www.youtube.com/watch?v=TFVosn-DtdA"
+        }
+      ],
+      "flags": [
+        "MICHELIN hotel page shows guest score 18/20 while Le Coucou page shows 18.1/20.",
+        "$1,774 rate is non-refundable; flexible rate is $2,263 all-in."
+      ],
+      "sevenNightPreTax": "$1,522 non-ref \u00b7 $1,948 flexible",
+      "sevenNightAllIn": "$1,774 non-ref \u00b7 $2,263 flexible"
+    },
+    {
+      "rank": 7,
+      "name": "The Frederick Hotel Tribeca",
+      "tierBadge": "Best Downtown Tribeca Cancellable + Breakfast",
+      "area": "Tribeca, Lower Manhattan",
+      "address": "95 West Broadway, New York, NY 10007",
+      "room": "Studio 1 Queen Bed (200 sq ft \u2014 bypass entry Full-bed room)",
+      "privateBathroom": "Verified \u2014 Private bathroom",
+      "bedVerified": "Yes \u2014 1 Queen bed (entry room is Full bed and was excluded)",
+      "keyStatus": "Shortlisted",
+      "guestScore": "Top Verified",
+      "publishedRate": "$1,747 / 7 nights",
+      "sevenNightTotal": "$1,747 (incl. $38/nt resort fee) pre-tax",
+      "allInSevenNights": "$2,033",
+      "taxBasis": "$1,747 \u00d7 1.1475 + $28 city tax = ~$2,033 all-in. Free cancellation before 13 Feb 2027, $0 prepayment until 11 Feb 2027, American breakfast included.",
+      "cheapestWindow": "Mon Feb 15 \u2013 Mon Feb 22, 2027 ($848 pre-tax / $998 all-in Eurostars; $943 pre-tax / $1,110 all-in DoubleTree Chelsea)",
+      "rateCapturedOn": "2026-11-25",
+      "michelinWithin60Min": "67 / 67 NYC Starred (100% of 5-borough stars) \u00b7 5/5 clusters in 5\u201330 min (avg 17.2 min \u2014 #1 fastest overall)",
+      "clusterTransitBreakdown": "Tribeca (Jungsik/Atera): 5 min walk \u00b7 FiDi (Crown Shy): 8 min [2/3] \u00b7 Midtown 51st (Le Bernardin): 21 min [1] \u00b7 Flatiron (EMP): 22 min [R/W] \u00b7 Williamsburg (Aska): 30 min [J/Z]",
+      "amenities": "American breakfast included, fitness center, soundproof landmark rooms, Chambers St (1/2/3) express subway outside door",
+      "officialUrl": "https://www.frederickhotelnyc.com/location",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/new-york-95-west-broadway.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "sourceUrl": "https://www.frederickhotelnyc.com/location",
+      "social": [
+        {
+          "platform": "YouTube",
+          "type": "review",
+          "label": "YouTube (2026 Frederick Hotel Tribeca overview)",
+          "url": "https://www.youtube.com/watch?v=pjcl6cNx8sM"
+        }
+      ],
+      "flags": [
+        "Must book 'Studio 1 Queen Bed' or higher \u2014 the hotel's cheapest room uses a Full bed."
+      ],
+      "sevenNightPreTax": "$1,747 (incl. $38/nt resort fee)",
+      "sevenNightAllIn": "$2,033"
+    },
+    {
+      "rank": 8,
+      "name": "citizenM New York Times Square",
+      "tierBadge": "Midtown Theater & 51st St Hub (2027 Dated Rate Unverified)",
+      "area": "Times Square / Midtown West",
+      "address": "218 West 50th Street, New York, NY 10019",
+      "room": "citizenM Room \u2014 1 XL King wall-to-wall bed (up to 2 adults)",
+      "privateBathroom": "Verified \u2014 En-suite power shower pod",
+      "bedVerified": "Yes \u2014 XL King bed (official Marriott/citizenM brand spec)",
+      "keyStatus": "Shortlisted",
+      "guestScore": "Top Verified",
+      "publishedRate": "",
+      "sevenNightTotal": "",
+      "allInSevenNights": "",
+      "taxBasis": "Official citizenM page lists undated 'From $395 / night'; no live 15\u201322 Feb 2027 dated quote captured \u2014 left blank rather than multiplying undated starting rate.",
+      "cheapestWindow": "Mon Feb 15 \u2013 Mon Feb 22, 2027 ($848 pre-tax / $998 all-in Eurostars; $943 pre-tax / $1,110 all-in DoubleTree Chelsea)",
+      "rateCapturedOn": "2026-11-25",
+      "michelinWithin60Min": "67 / 67 NYC Starred (100% of 5-borough stars) \u00b7 2-min walk to Le Bernardin 3\u2605, 5-min walk to The Modern 2\u2605, 9-min walk to Per Se 3\u2605 & Masa 2\u2605",
+      "clusterTransitBreakdown": "50th St (1, C/E) & 49th St (N/R/W) on block; immediate walk to C1 Midtown 3\u2605 cluster",
+      "amenities": "cloudM rooftop bar, 24/7 canteenM, iPad room mood control, luggage storage, ultra-fast Wi-Fi",
+      "officialUrl": "https://www.citizenm.com/hotels/america/new-york/times-square-hotel",
+      "rateSourceUrl": "https://www.marriott.com/brands/citizenm.mi",
+      "sourceUrl": "https://www.marriott.com/brands/citizenm.mi",
+      "social": [
+        {
+          "platform": "YouTube",
+          "type": "review",
+          "label": "YouTube (citizenM Times Square room tour & review)",
+          "url": "https://www.youtube.com/watch?v=VKkzOjkk0jE"
+        },
+        {
+          "platform": "YouTube",
+          "type": "review",
+          "label": "YouTube (citizenM NYC hotel review)",
+          "url": "https://www.youtube.com/watch?v=8ui5twDCPEw"
+        }
+      ],
+      "flags": [
+        "Dated 15\u201322 Feb 2027 7-night total left blank (only undated 'From $395/night' confirmed on official page)."
+      ],
+      "sevenNightPreTax": "",
+      "sevenNightAllIn": ""
+    },
+    {
+      "rank": 9,
+      "name": "The Beekman, a Thompson Hotel (1 MICHELIN Key)",
+      "tierBadge": "Gilded-Age Luxury Splurge Benchmark",
+      "area": "Financial District / City Hall",
+      "address": "123 Nassau Street, New York, NY 10038",
+      "room": "King Room (300 sq ft, 1 King bed; Queen rooms also sold)",
+      "privateBathroom": "Verified \u2014 Private marble bathroom with rain shower, robes & slippers",
+      "bedVerified": "Yes \u2014 1 King bed",
+      "keyStatus": "1 MICHELIN Key",
+      "guestScore": "Top Verified",
+      "publishedRate": "$4,488 / 7 nights",
+      "sevenNightTotal": "$4,488 non-ref \u00b7 $4,942 flexible pre-tax",
+      "allInSevenNights": "$5,220 non-ref \u00b7 $5,741 flexible",
+      "taxBasis": "Includes $57/nt resort fee in pre-tax; $4,488 \u00d7 1.1475 + $70 ($10/nt combined city/destination/tourism fees) = $5,220 all-in.",
+      "cheapestWindow": "Mon Feb 15 \u2013 Mon Feb 22, 2027 ($848 pre-tax / $998 all-in Eurostars; $943 pre-tax / $1,110 all-in DoubleTree Chelsea)",
+      "rateCapturedOn": "2026-11-25",
+      "michelinWithin60Min": "67 / 67 NYC Starred (100% of 5-borough stars) \u00b7 Fulton St 8-line transit super-hub 1 block away",
+      "clusterTransitBreakdown": "Fulton St (2/3/4/5/A/C/J/Z) connects non-stop to Midtown East, Midtown West, Flatiron, Tribeca & Brooklyn",
+      "amenities": "1 MICHELIN Key, iconic 9-story Victorian atrium, Temple Court (Tom Colicchio) & Le Gratin (Daniel Boulud) on-site, luxury concierge",
+      "officialUrl": "https://www.hyatt.com/thompson-hotels/en-US/nycth-the-beekman-a-thompson-hotel/overview",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/the-beekman-a-thompson-hotel.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1",
+      "sourceUrl": "https://guide.michelin.com/en/article/travel/guide-financial-district-new-york",
+      "social": [
+        {
+          "platform": "YouTube",
+          "type": "review",
+          "label": "YouTube (2026 Beekman Gilded Age Luxury review)",
+          "url": "https://www.youtube.com/watch?v=ha5xdTzqSu0"
+        },
+        {
+          "platform": "YouTube",
+          "type": "review",
+          "label": "YouTube (Aug 2026 Room Tour & Review)",
+          "url": "https://www.youtube.com/watch?v=7oxXgkCOFUk"
+        }
+      ],
+      "flags": [
+        "Costs ~4.7\u00d7 DoubleTree Chelsea for the exact same 7 nights; included as verified 1-MICHELIN-Key luxury benchmark."
+      ],
+      "sevenNightPreTax": "$4,488 non-ref \u00b7 $4,942 flexible",
+      "sevenNightAllIn": "$5,220 non-ref \u00b7 $5,741 flexible"
+    },
+    {
+      "rank": 10,
+      "name": "The Fifth Avenue Hotel (2 MICHELIN Keys \u00b7 20/20 Score)",
+      "tierBadge": "Top MICHELIN Key Trophy Stay (2027 Rate Unverified)",
+      "area": "NoMad / Fifth Avenue",
+      "address": "1 West 28th Street (250 Fifth Avenue), New York, NY 10001",
+      "room": "",
+      "privateBathroom": "",
+      "bedVerified": "Unverified for dated Feb 2027 room line",
+      "keyStatus": "2 MICHELIN Keys",
+      "guestScore": "Top Verified",
+      "publishedRate": "",
+      "sevenNightTotal": "",
+      "allInSevenNights": "",
+      "taxBasis": "MICHELIN widget caps advance bookings at 31 days; dated Feb 2027 quote not captured \u2014 left blank.",
+      "cheapestWindow": "Mon Feb 15 \u2013 Mon Feb 22, 2027 ($848 pre-tax / $998 all-in Eurostars; $943 pre-tax / $1,110 all-in DoubleTree Chelsea)",
+      "rateCapturedOn": "2026-11-25",
+      "michelinWithin60Min": "67 / 67 NYC Starred (100% of 5-borough stars) \u00b7 Same NoMad block cluster as The Evelyn (4 min walk to EMP)",
+      "clusterTransitBreakdown": "28th St (R/W, 1, 6) within 1\u20132 blocks; Caf\u00e9 Carmellini (MICHELIN Guide) on-site",
+      "amenities": "2 MICHELIN Keys, 20/20 MICHELIN guest score, Caf\u00e9 Carmellini & The Portrait Bar on-site, butler service",
+      "officialUrl": "https://www.thefifthavenuehotel.com/",
+      "rateSourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-fifth-avenue-hotel-13538",
+      "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-fifth-avenue-hotel-13538",
+      "social": [],
+      "flags": [
+        "Dated 7-night total, specific room-tier bed/bath line, and video review left blank pending direct 2027 rate check."
+      ],
+      "sevenNightPreTax": "",
+      "sevenNightAllIn": ""
+    }
   ]
- },
- "items": [
-  {
-   "name": "Eurostars Wall Street",
-   "flags": [
-    "Cheapest $848/$998 tier is a non-refundable Partner Offer; pay ~$206 more (~$1,204 all-in) for refundable terms or pick DoubleTree Chelsea ($1,110 all-in cancellable).",
-    "Room area discrepancy flagged: official eurostarshotels.co.uk states 27 m² (~290 sq ft) for Queen Room while Booking.com lists 172 sq ft",
-    "Note: Week 2 (Feb 22–Mar 1) $836 search result is a Twin room and is excluded for failing the Queen-bed requirement"
-   ],
-   "provenance": {
-    "row": "added from arena/c1cf7b23-nyfun2 (property not in the first canonical set)",
-    "address": "arena/c1cf7b23-nyfun2",
-    "area": "arena/c1cf7b23-nyfun2",
-    "room": "arena/c1cf7b23-nyfun2",
-    "privateBathroom": "arena/c1cf7b23-nyfun2",
-    "sevenNightPreTax": "arena/c1cf7b23-nyfun2",
-    "sevenNightAllIn": "arena/c1cf7b23-nyfun2",
-    "rateSourceUrl": "arena/c1cf7b23-nyfun2",
-    "officialUrl": "arena/c1cf7b23-nyfun2",
-    "sourceUrl": "arena/c1cf7b23-nyfun2",
-    "amenities": "arena/c1cf7b23-nyfun2",
-    "michelinWithin60": "arena/c1cf7b23-nyfun2",
-    "clusterTransit": "arena/c1cf7b23-nyfun2",
-    "taxBasis": "arena/657520df-nyfun2",
-    "cancellation": "arena/657520df-nyfun2"
-   },
-   "address": "129 Front Street, New York, NY 10005",
-   "area": "Financial District, Lower Manhattan",
-   "room": "Queen Room (172 sq ft, 1 Queen bed)",
-   "privateBathroom": "Verified — Private bathroom",
-   "sevenNightPreTax": "$848 non-ref · $1,025 refundable",
-   "sevenNightAllIn": "$998 non-ref · ~$1,204 refundable",
-   "rateSourceUrl": "https://www.booking.com/hotel/us/exchange-manhattan.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-   "officialUrl": "https://www.eurostarshotels.co.uk/eurostars-wall-street.html",
-   "sourceUrl": "https://www.eurostarshotels.co.uk/eurostars-wall-street.html",
-   "amenities": "24-hr front desk, elevator, daily housekeeping, free Wi-Fi, 3-min walk to 70 Pine (Saga 2★ / Crown Shy 1★) & Pier 11 Ferry",
-   "michelinWithin60": "67 / 67 NYC Starred (100% of 5-borough stars) · 5/5 clusters in 3–32 min (avg 21.4 min)",
-   "clusterTransit": "FiDi (Crown Shy/Saga): 3 min walk · Tribeca (Jungsik): 17 min [2/3] · Midtown 51st (Le Bernardin): 26 min [2/3→1] · Flatiron (EMP): 29 min [4/5/6] · Williamsburg (Aska): 32 min [NYC Ferry ER]",
-   "taxBasis": "$848 + $149.66 displayed tax/city fee = $997.66 (~$998 all-in); refundable Black Friday rate $1,025 × 1.1475 + $28 = $1,204 all-in",
-   "cancellation": "$848 is Partner Offer non-refundable; $1,025 pre-tax ($1,204 all-in) adds free cancellation",
-   "transit": {
-    "measured": true,
-    "legs": [
-     {
-      "anchor": "Midtown 51st St cluster",
-      "destination": "Le Bernardin New York",
-      "minutes": 26,
-      "lines": [
-       "2/3 from Wall St → 1"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Le+Bernardin+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Tribeca / Lower Manhattan cluster",
-      "destination": "Jungsik New York",
-      "minutes": 17,
-      "lines": [
-       "2/3 from Wall St"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Jungsik+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Flatiron / Madison Square cluster",
-      "destination": "Eleven Madison Park New York",
-      "minutes": 29,
-      "lines": [
-       "4/5/6 from Wall St"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Eleven+Madison+Park+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Financial District cluster",
-      "destination": "Crown Shy New York",
-      "minutes": 3,
-      "lines": [
-       "walk, 0.1 mile via Pine St"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Crown+Shy+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Williamsburg, Brooklyn",
-      "destination": "Aska Brooklyn",
-      "minutes": 32,
-      "lines": [
-       "NYC Ferry ER from Pier 11/Wall St, $4.50"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Aska+Brooklyn&travelmode=transit"
-     }
-    ],
-    "maxMinutes": 32,
-    "avgMinutes": 21.4,
-    "clustersWithin60": 5,
-    "clustersMeasured": 5,
-    "starsCoveredWithin60": 38,
-    "capturedOn": "2026-11-25",
-    "method": "Google Maps transit, 'leave now', door-to-door incl. walking; fastest itinerary returned."
-   },
-   "qualifies": true,
-   "pricedTier": "dated 7-night total",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 1
-  },
-  {
-   "name": "DoubleTree by Hilton Hotel New York City - Chelsea",
-   "flags": [
-    "Rate reflects a 30% Black Friday Deal snapshot captured 2026-11-25; lock in free-cancellation hold and re-shop.",
-    "Dated 7-night total is a Booking.com snapshot captured 2026-11-25 during a 30%-off Black Friday promotion; re-verify on hilton.com before booking"
-   ],
-   "provenance": {
-    "row": "added from arena/c1cf7b23-nyfun2 (property not in the first canonical set)",
-    "address": "arena/c1cf7b23-nyfun2",
-    "area": "arena/c1cf7b23-nyfun2",
-    "room": "arena/c1cf7b23-nyfun2",
-    "privateBathroom": "arena/c1cf7b23-nyfun2",
-    "sevenNightPreTax": "arena/c1cf7b23-nyfun2",
-    "sevenNightAllIn": "arena/c1cf7b23-nyfun2",
-    "rateSourceUrl": "arena/c1cf7b23-nyfun2",
-    "officialUrl": "arena/c1cf7b23-nyfun2",
-    "sourceUrl": "arena/c1cf7b23-nyfun2",
-    "amenities": "arena/c1cf7b23-nyfun2",
-    "michelinWithin60": "arena/c1cf7b23-nyfun2",
-    "clusterTransit": "arena/c1cf7b23-nyfun2",
-    "taxBasis": "arena/657520df-nyfun2",
-    "cancellation": "arena/657520df-nyfun2"
-   },
-   "address": "128 West 29th Street, New York, NY 10001",
-   "area": "Chelsea / Midtown South",
-   "room": "King Room – Non-Smoking (210 sq ft, 1 King bed)",
-   "privateBathroom": "Verified — Private bathroom (Hilton & Booking property spec)",
-   "sevenNightPreTax": "$943 ($942.91)",
-   "sevenNightAllIn": "$1,110",
-   "rateSourceUrl": "https://www.booking.com/hotel/us/doubletree-new-york-city-chelsea.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-   "officialUrl": "https://www.hilton.com/en/hotels/nyccldt-doubletree-new-york-city-chelsea/hotel-info/",
-   "sourceUrl": "https://www.hilton.com/en/hotels/nyccldt-doubletree-new-york-city-chelsea/hotel-info/",
-   "amenities": "Fitness center, on-site restaurant/bar, room service, 28th St subway (1,056 ft), Penn Station 3 blocks",
-   "michelinWithin60": "67 / 67 NYC Starred (100% of 5-borough stars) · 5/5 clusters in 12–34 min (avg 20.4 min)",
-   "clusterTransit": "Flatiron (EMP): 12 min walk · Midtown 51st (Le Bernardin): 14 min [1] · Tribeca (Jungsik): 19 min [1] · FiDi (Crown Shy): 23 min [2/3] · Williamsburg (Aska): 34 min [M]",
-   "taxBasis": "$942.91 pre-tax × 1.1475 + (7 × $4 city tax) = $1,110.00 all-in",
-   "cancellation": "Free cancellation before Feb 13, 2027 · $0 prepayment (30% off Black Friday Deal snapshot)",
-   "transit": {
-    "measured": true,
-    "legs": [
-     {
-      "anchor": "Midtown 51st St cluster",
-      "destination": "Le Bernardin New York",
-      "minutes": 14,
-      "lines": [
-       "1 from 28 St"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Le+Bernardin+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Tribeca / Lower Manhattan cluster",
-      "destination": "Jungsik New York",
-      "minutes": 19,
-      "lines": [
-       "1 from 28 St"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Jungsik+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Flatiron / Madison Square cluster",
-      "destination": "Eleven Madison Park New York",
-      "minutes": 12,
-      "lines": [
-       "walk, 0.5 mile via W 29th St and Broadway"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Eleven+Madison+Park+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Financial District cluster",
-      "destination": "Crown Shy New York",
-      "minutes": 23,
-      "lines": [
-       "2/3 from 34 St-Penn Station"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Crown+Shy+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Williamsburg, Brooklyn",
-      "destination": "Aska Brooklyn",
-      "minutes": 34,
-      "lines": [
-       "M from 23 St"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Aska+Brooklyn&travelmode=transit"
-     }
-    ],
-    "maxMinutes": 34,
-    "avgMinutes": 20.4,
-    "clustersWithin60": 5,
-    "clustersMeasured": 5,
-    "starsCoveredWithin60": 38,
-    "capturedOn": "2026-11-25",
-    "method": "Google Maps transit, 'leave now', door-to-door incl. walking; fastest itinerary returned."
-   },
-   "qualifies": true,
-   "pricedTier": "dated 7-night total",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 2
-  },
-  {
-   "name": "The Evelyn NoMad",
-   "flags": [
-    "Mandatory $38/night resort fee is already baked into the $1,653 pre-tax total.",
-    "Displayed nightly average ($198/nt) excludes the $38/nt resort fee that is bundled into the $1,653 pre-tax stay total"
-   ],
-   "provenance": {
-    "row": "added from arena/c1cf7b23-nyfun2 (property not in the first canonical set)",
-    "address": "arena/c1cf7b23-nyfun2",
-    "area": "arena/c1cf7b23-nyfun2",
-    "room": "arena/c1cf7b23-nyfun2",
-    "privateBathroom": "arena/c1cf7b23-nyfun2",
-    "sevenNightPreTax": "arena/c1cf7b23-nyfun2",
-    "sevenNightAllIn": "arena/c1cf7b23-nyfun2",
-    "rateSourceUrl": "arena/c1cf7b23-nyfun2",
-    "officialUrl": "arena/c1cf7b23-nyfun2",
-    "sourceUrl": "arena/c1cf7b23-nyfun2",
-    "amenities": "arena/c1cf7b23-nyfun2",
-    "michelinWithin60": "arena/c1cf7b23-nyfun2",
-    "clusterTransit": "arena/c1cf7b23-nyfun2",
-    "taxBasis": "arena/657520df-nyfun2",
-    "cancellation": "arena/657520df-nyfun2"
-   },
-   "address": "7 East 27th Street, New York, NY 10016",
-   "area": "NoMad / Madison Square North",
-   "room": "Superior Queen Room (180 sq ft, 1 Queen bed)",
-   "privateBathroom": "Verified — Attached bathroom with walk-in shower",
-   "sevenNightPreTax": "$1,653 (incl. $38/nt resort fee)",
-   "sevenNightAllIn": "$1,925",
-   "rateSourceUrl": "https://www.booking.com/hotel/us/gershwin.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-   "officialUrl": "https://www.theevelyn.com/rooms-suites",
-   "sourceUrl": "https://www.theevelyn.com/location",
-   "amenities": "Breakfast included, Brass / Tusk Bar on-site dining, fitness center, soundproof Art Deco rooms, 4-min walk to 28th St subway & Madison Sq Park",
-   "michelinWithin60": "67 / 67 NYC Starred (100% of 5-borough stars) · 5/5 clusters in 4–34 min (avg 20.2 min — fastest average)",
-   "clusterTransit": "Flatiron (EMP): 4 min walk · Midtown 51st (Le Bernardin): 14 min [1] · FiDi (Crown Shy): 24 min [R/W] · Tribeca (Jungsik): 25 min [1] · Williamsburg (Aska): 34 min [R/W→L→B32]",
-   "taxBasis": "$1,653 pre-tax × 1.1475 + (7 × $4 city tax) = $1,924.82 all-in",
-   "cancellation": "Free cancellation before Feb 13, 2027 · Pay nothing until Feb 11, 2027 · Breakfast included",
-   "transit": {
-    "measured": true,
-    "legs": [
-     {
-      "anchor": "Midtown 51st St cluster",
-      "destination": "Le Bernardin New York",
-      "minutes": 14,
-      "lines": [
-       "1 from 28 St"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Le+Bernardin+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Tribeca / Lower Manhattan cluster",
-      "destination": "Jungsik New York",
-      "minutes": 25,
-      "lines": [
-       "1 from 28 St"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Jungsik+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Flatiron / Madison Square cluster",
-      "destination": "Eleven Madison Park New York",
-      "minutes": 4,
-      "lines": [
-       "walk, 0.2 mile via E 27th St and Madison Ave"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Eleven+Madison+Park+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Financial District cluster",
-      "destination": "Crown Shy New York",
-      "minutes": 24,
-      "lines": [
-       "R/W from 28 St"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Crown+Shy+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Williamsburg, Brooklyn",
-      "destination": "Aska Brooklyn",
-      "minutes": 34,
-      "lines": [
-       "R/W → L → B32 bus"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Aska+Brooklyn&travelmode=transit"
-     }
-    ],
-    "maxMinutes": 34,
-    "avgMinutes": 20.2,
-    "clustersWithin60": 5,
-    "clustersMeasured": 5,
-    "starsCoveredWithin60": 38,
-    "capturedOn": "2026-11-25",
-    "method": "Google Maps transit, 'leave now', door-to-door incl. walking; fastest itinerary returned."
-   },
-   "qualifies": true,
-   "pricedTier": "dated 7-night total",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 3
-  },
-  {
-   "name": "The Frederick Hotel Tribeca",
-   "flags": [
-    "Must book 'Studio 1 Queen Bed' or higher — the hotel's cheapest room uses a Full bed.",
-    "Entry-level 'Standard Full' room has a Full bed and fails the Queen+ rule; ensure 'Studio Queen' (or Studio King) is selected"
-   ],
-   "provenance": {
-    "row": "added from arena/c1cf7b23-nyfun2 (property not in the first canonical set)",
-    "address": "arena/c1cf7b23-nyfun2",
-    "area": "arena/c1cf7b23-nyfun2",
-    "room": "arena/c1cf7b23-nyfun2",
-    "privateBathroom": "arena/c1cf7b23-nyfun2",
-    "sevenNightPreTax": "arena/c1cf7b23-nyfun2",
-    "sevenNightAllIn": "arena/c1cf7b23-nyfun2",
-    "rateSourceUrl": "arena/c1cf7b23-nyfun2",
-    "officialUrl": "arena/c1cf7b23-nyfun2",
-    "sourceUrl": "arena/c1cf7b23-nyfun2",
-    "amenities": "arena/c1cf7b23-nyfun2",
-    "michelinWithin60": "arena/c1cf7b23-nyfun2",
-    "clusterTransit": "arena/c1cf7b23-nyfun2",
-    "taxBasis": "arena/657520df-nyfun2",
-    "cancellation": "arena/657520df-nyfun2"
-   },
-   "address": "95 West Broadway, New York, NY 10007",
-   "area": "Tribeca, Lower Manhattan",
-   "room": "Studio 1 Queen Bed (200 sq ft — bypass entry Full-bed room)",
-   "privateBathroom": "Verified — Private bathroom",
-   "sevenNightPreTax": "$1,747 (incl. $38/nt resort fee)",
-   "sevenNightAllIn": "$2,033",
-   "rateSourceUrl": "https://www.booking.com/hotel/us/new-york-95-west-broadway.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-   "officialUrl": "https://www.frederickhotelnyc.com/location",
-   "sourceUrl": "https://www.frederickhotelnyc.com/location",
-   "amenities": "American breakfast included, fitness center, soundproof landmark rooms, Chambers St (1/2/3) express subway outside door",
-   "michelinWithin60": "67 / 67 NYC Starred (100% of 5-borough stars) · 5/5 clusters in 5–30 min (avg 17.2 min — #1 fastest overall)",
-   "clusterTransit": "Tribeca (Jungsik/Atera): 5 min walk · FiDi (Crown Shy): 8 min [2/3] · Midtown 51st (Le Bernardin): 21 min [1] · Flatiron (EMP): 22 min [R/W] · Williamsburg (Aska): 30 min [J/Z]",
-   "taxBasis": "$1,747 pre-tax × 1.1475 + (7 × $4 city tax) = $2,032.68 all-in",
-   "cancellation": "Free cancellation before Feb 13, 2027 · Pay nothing until Feb 11, 2027 · Breakfast included",
-   "transit": {
-    "measured": true,
-    "legs": [
-     {
-      "anchor": "Midtown 51st St cluster",
-      "destination": "Le Bernardin New York",
-      "minutes": 21,
-      "lines": [
-       "1 from Chambers St"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Le+Bernardin+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Tribeca / Lower Manhattan cluster",
-      "destination": "Jungsik New York",
-      "minutes": 5,
-      "lines": [
-       "walk, 0.2 mile via Hudson St"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Jungsik+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Flatiron / Madison Square cluster",
-      "destination": "Eleven Madison Park New York",
-      "minutes": 22,
-      "lines": [
-       "R/W from City Hall"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Eleven+Madison+Park+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Financial District cluster",
-      "destination": "Crown Shy New York",
-      "minutes": 8,
-      "lines": [
-       "2/3 from Chambers St"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Crown+Shy+New+York&travelmode=transit"
-     },
-     {
-      "anchor": "Williamsburg, Brooklyn",
-      "destination": "Aska Brooklyn",
-      "minutes": 30,
-      "lines": [
-       "J/Z from Chambers St"
-      ],
-      "source": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Aska+Brooklyn&travelmode=transit"
-     }
-    ],
-    "maxMinutes": 30,
-    "avgMinutes": 17.2,
-    "clustersWithin60": 5,
-    "clustersMeasured": 5,
-    "starsCoveredWithin60": 38,
-    "capturedOn": "2026-11-25",
-    "method": "Google Maps transit, 'leave now', door-to-door incl. walking; fastest itinerary returned."
-   },
-   "qualifies": true,
-   "pricedTier": "dated 7-night total",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 4
-  },
-  {
-   "name": "Hyatt Place New York / Chelsea",
-   "area": "Chelsea (Flatiron border)",
-   "address": "140 West 24th Street, New York, NY 10011",
-   "room": "King Room, 180 sq ft (1 king bed)",
-   "privateBathroom": "Attached (private) bathroom",
-   "keyStatus": "",
-   "guestScore": "",
-   "publishedRate": "",
-   "sevenNightTotal": "$1,113 pre-tax for 7 nights ($159/night average)",
-   "allInSevenNights": "$1,305",
-   "taxBasis": "Quote is pre-tax; add 14.75% tax + $4 city tax per night. 1,113 x 1.1475 + (7 x 4) = $1,305.",
-   "cheapestWindow": "",
-   "officialUrl": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/hotel-info",
-   "sourceUrl": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/hotel-info",
-   "rateSourceUrl": "https://www.booking.com/hotel/us/hyatt-place-new-york-chelsea.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1",
-   "rateCapturedOn": "2026-11-25",
-   "flags": [
-    "Rate is a Booking.com snapshot captured 2026-11-25, not the hotel's own engine",
-    "Quoted total excludes taxes and the $4/night city tax; see taxBasis",
-    "Cheapest compliant hotel of the four priced; buffet breakfast included, free cancellation before 13 Feb 2027",
-    "Booking.com dated snapshot (2026-11-25); verify direct World of Hyatt member rate before final payment.",
-    "Aggregator rate snapshot captured 2026-11-25; compare World of Hyatt member direct rate at booking"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json",
-    "sevenNightPreTax": "arena/c1cf7b23-nyfun2",
-    "sevenNightAllIn": "arena/c1cf7b23-nyfun2",
-    "amenities": "arena/c1cf7b23-nyfun2",
-    "michelinWithin60": "arena/c1cf7b23-nyfun2",
-    "clusterTransit": "arena/c1cf7b23-nyfun2",
-    "cancellation": "arena/657520df-nyfun2"
-   },
-   "sevenNightPreTax": "$1,113",
-   "sevenNightAllIn": "$1,305",
-   "amenities": "Complimentary hot buffet breakfast, fitness center, 507 rooms, high-floor skyline options, free Wi-Fi",
-   "michelinWithin60": "67 / 67 NYC Starred (100% of 5-borough stars) · ~0.4 mi walk to Eleven Madison Park, odo & Cote",
-   "clusterTransit": "23rd St subways (1, F/M, C/E, R/W) within 2–5 blocks; same Chelsea/Flatiron transit envelope as DoubleTree Chelsea (all NYC clusters ≤35 min)",
-   "cancellation": "Free cancellation before Feb 13, 2027 · Buffet breakfast for 2 adults included",
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": true,
-   "pricedTier": "dated 7-night total",
-   "verifiedToday": true,
-   "verifyStatus": "checked today (2026-11-26)",
-   "rank": 5
-  },
-  {
-   "name": "Arlo NoMad",
-   "area": "NoMad / Flatiron",
-   "address": "11 East 31st Street, New York, NY 10016",
-   "room": "Queen Room, 150 sq ft (1 queen bed)",
-   "privateBathroom": "Sold as private; bathroom type not stated on the rate line",
-   "keyStatus": "",
-   "guestScore": "",
-   "publishedRate": "",
-   "sevenNightTotal": "$1,213.96 pre-tax for 7 nights ($136 room + $37 resort fee per night)",
-   "allInSevenNights": "$1,428",
-   "taxBasis": "Resort fee already inside the pre-tax total; add 14.75% tax + $4 city tax + $1 tourism fee per night. 1,213.96 x 1.1475 + 28 + 7 = $1,428.",
-   "cheapestWindow": "",
-   "officialUrl": "https://arlohotels.com/nomad/rooms/",
-   "sourceUrl": "https://arlohotels.com/nomad/rooms/",
-   "rateSourceUrl": "https://www.booking.com/hotel/us/arlo-nomad.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1",
-   "rateCapturedOn": "2026-11-25",
-   "flags": [
-    "Street address and ZIP not printed on either official page - deliberately blank",
-    "Rate depends on a 'Black Friday Deal' (39% off) valid on stays 19 Nov 2026 to 31 Dec 2027; it will expire",
-    "Room types confirmed on the hotel's own page: Queen, King, Bunk",
-    "Compact 150 sq ft room; rate depended on a 39% Black Friday Deal snapshot captured 2026-11-25.",
-    "Compact micro-room footprint (150 sq ft) — verify comfort preference for a 7- to 14-night couple stay",
-    "Rate includes mandatory $37/night resort fee and promotional Black Friday discount"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json",
-    "address": "arena/c1cf7b23-nyfun2",
-    "sevenNightPreTax": "arena/c1cf7b23-nyfun2",
-    "sevenNightAllIn": "arena/c1cf7b23-nyfun2",
-    "amenities": "arena/c1cf7b23-nyfun2",
-    "michelinWithin60": "arena/c1cf7b23-nyfun2",
-    "clusterTransit": "arena/c1cf7b23-nyfun2",
-    "cancellation": "arena/657520df-nyfun2"
-   },
-   "sevenNightPreTax": "$1,214 ($1,213.96 incl. $37/nt resort fee)",
-   "sevenNightAllIn": "$1,428",
-   "amenities": "A.R.T. NoMad rooftop bar, NoMad Diner, fitness access, floor-to-ceiling city views in Sky rooms",
-   "michelinWithin60": "67 / 67 NYC Starred (100% of 5-borough stars) · 1 block from Atomix 2★ (104 E 30th St)",
-   "clusterTransit": "28th & 33rd St (6, R/W, 1) + Herald Sq hub 3 blocks away; walks to Atomix (2 min), Eleven Madison Park (8 min), Koreatown (4 min)",
-   "cancellation": "Snapshot reflects 39%-off Black Friday Deal (valid on stays through Dec 31, 2027; promotional booking window expires)",
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": true,
-   "pricedTier": "dated 7-night total",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 6
-  },
-  {
-   "name": "11 Howard",
-   "area": "SoHo",
-   "address": "11 Howard Street, New York, NY",
-   "room": "Queen Room (1 queen bed)",
-   "privateBathroom": "Private bathroom",
-   "keyStatus": "",
-   "guestScore": "18.1 / 20 (Michelin guest score on the restaurant page; 18 on the hotel page)",
-   "publishedRate": "",
-   "sevenNightTotal": "$1,522 pre-tax for 7 nights, non-refundable ($182 room + $35 resort fee per night)",
-   "cheapestWindow": "",
-   "officialUrl": "https://guide.michelin.com/en/hotels-stays/nyc/11-howard-8129",
-   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/11-howard-8129",
-   "rateSourceUrl": "https://www.booking.com/hotel/us/11-howard.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1",
-   "flags": [
-    "7-night total unverified",
-    "Cheapest rate is non-refundable; the refundable rate costs $426 more for the same week",
-    "Hotel page and restaurant page showed different guest scores",
-    "On-site one-star restaurant Le Coucou (https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-coucou)",
-    "Only shortlisted hotel sharing a ZIP code (10013) with a verified starred restaurant - Atera, 77 Worth St",
-    "Room/bath configuration not verified",
-    "Same-ZIP star count is a floor, not a travel-time ranking (see the one-hour flag)",
-    "MICHELIN hotel page shows guest score 18/20 while Le Coucou page shows 18.1/20.",
-    "$1,774 rate is non-refundable; flexible rate is $2,263 all-in.",
-    "Resolves root-site flag: room & private marble bathroom now verified directly on official 11howard.com/rooms/the-howard-queen",
-    "Michelin guest score shows minor variance across pages (18.0 on hotel page vs 18.1 on Le Coucou page)"
-   ],
-   "allInSevenNights": "$1,774",
-   "taxBasis": "Resort fee inside the pre-tax total; add 14.74% tax + $4 city tax per night. 1,522 x 1.1474 + 28 = $1,774. Flexible rate $1,948 -> about $2,263 all-in.",
-   "rateCapturedOn": "2026-11-25",
-   "provenance": {
-    "row": "canonical data/hotels.json",
-    "sevenNightPreTax": "arena/c1cf7b23-nyfun2",
-    "sevenNightAllIn": "arena/c1cf7b23-nyfun2",
-    "officialUrl": "arena/c1cf7b23-nyfun2",
-    "amenities": "arena/c1cf7b23-nyfun2",
-    "michelinWithin60": "arena/c1cf7b23-nyfun2",
-    "clusterTransit": "arena/c1cf7b23-nyfun2",
-    "cancellation": "arena/657520df-nyfun2"
-   },
-   "sevenNightPreTax": "$1,522 non-ref · $1,948 flexible",
-   "sevenNightAllIn": "$1,774 non-ref · $2,263 flexible",
-   "amenities": "MICHELIN guest score 18.0–18.1/20, Le Coucou 1★ French restaurant & The Blond lounge on-site, Scandinavian design",
-   "michelinWithin60": "67 / 67 NYC Starred (100% of 5-borough stars) · On-site Le Coucou 1★ + same ZIP (10013) as Jungsik 3★, Atera 2★ & César 2★",
-   "clusterTransit": "Canal St mega-hub (N/Q/R/W/6/J/Z/A/C/E) 1–3 blocks away; walks to Le Coucou (0 min), Atera (7 min), Jungsik (10 min), Thai Diner (6 min)",
-   "cancellation": "$1,774 all-in is non-refundable; flexible cancellation adds +$489 all-in ($2,263)",
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": true,
-   "pricedTier": "dated 7-night total",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 7
-  },
-  {
-   "name": "The Beekman, a Thompson Hotel",
-   "area": "Financial District",
-   "address": "123 Nassau Street, New York, NY 10038",
-   "room": "King Room, 300 sq ft (also sells Queen Rooms)",
-   "privateBathroom": "Private bathroom with shower, bathrobes, slippers",
-   "keyStatus": "1 MICHELIN Key (Michelin FiDi travel guide)",
-   "guestScore": "",
-   "publishedRate": "",
-   "sevenNightTotal": "$4,488 pre-tax for 7 nights, non-refundable ($584 room + $57 resort fee per night)",
-   "cheapestWindow": "",
-   "officialUrl": "https://www.hyatt.com/thompson-hotels/en-US/nycth-the-beekman-a-thompson-hotel/overview",
-   "sourceUrl": "https://guide.michelin.com/en/article/travel/guide-financial-district-new-york",
-   "rateSourceUrl": "https://www.booking.com/hotel/us/the-beekman-a-thompson-hotel.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1",
-   "flags": [
-    "Address, room, bath and rate not verified",
-    "Only shortlisted hotel with a destination tax on top of city tax",
-    "Roughly 4x the cheapest compliant quote for identical dates - splurge reference only",
-    "Costs ~4.7× DoubleTree Chelsea for the exact same 7 nights; included as verified 1-MICHELIN-Key luxury benchmark.",
-    "Resolves root-site flag: exact room types & Carrara marble rain-shower bathrooms verified directly on hyatt.com",
-    "4.7x the cost of DoubleTree Chelsea for identical dates"
-   ],
-   "allInSevenNights": "$5,220",
-   "taxBasis": "Resort fee inside the pre-tax total; add 14.75% city tax + $6 destination tax + $2 tax + $2 tourism fee per night. 4,488 x 1.1475 + (7 x 10) = $5,220. Flexible rate $4,942 -> about $5,741 all-in.",
-   "rateCapturedOn": "2026-11-25",
-   "provenance": {
-    "row": "canonical data/hotels.json",
-    "sevenNightPreTax": "arena/c1cf7b23-nyfun2",
-    "sevenNightAllIn": "arena/c1cf7b23-nyfun2",
-    "amenities": "arena/c1cf7b23-nyfun2",
-    "michelinWithin60": "arena/c1cf7b23-nyfun2",
-    "clusterTransit": "arena/c1cf7b23-nyfun2",
-    "cancellation": "arena/657520df-nyfun2"
-   },
-   "sevenNightPreTax": "$4,488 non-ref · $4,942 flexible",
-   "sevenNightAllIn": "$5,220 non-ref · $5,741 flexible",
-   "amenities": "1 MICHELIN Key, iconic 9-story Victorian atrium, Temple Court (Tom Colicchio) & Le Gratin (Daniel Boulud) on-site, luxury concierge",
-   "michelinWithin60": "67 / 67 NYC Starred (100% of 5-borough stars) · Fulton St 8-line transit super-hub 1 block away",
-   "clusterTransit": "Fulton St (2/3/4/5/A/C/J/Z) connects non-stop to Midtown East, Midtown West, Flatiron, Tribeca & Brooklyn",
-   "cancellation": "$5,220 all-in is non-refundable; flexible rate is $5,741 all-in",
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": true,
-   "pricedTier": "dated 7-night total",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 8
-  },
-  {
-   "name": "citizenM New York Times Square",
-   "area": "Times Square / Midtown West",
-   "address": "218 West 50th Street, New York, NY 10019",
-   "room": "XL king bed; room designed for up to two adults; power shower; fast Wi-Fi",
-   "privateBathroom": "En-suite power shower (published by Marriott/citizenM brand page)",
-   "keyStatus": "",
-   "guestScore": "",
-   "publishedRate": "From $395 / night — undated 'from' rate on the hotel's official page; rates vary by date and room type",
-   "sevenNightTotal": "",
-   "cheapestWindow": "",
-   "officialUrl": "https://www.citizenm.com/hotels/america/new-york/times-square-hotel",
-   "sourceUrl": "https://www.marriott.com/brands/citizenm.mi",
-   "rateSourceUrl": "https://www.citizenm.com/es/hoteles/america/nueva-york/times-square-hotel",
-   "flags": [
-    "7-night total and cheapest window unverified for 2027 dates",
-    "Published rate is an undated starting rate, not a quoted rate for the trip",
-    "Dated 15–22 Feb 2027 7-night total left blank (only undated 'From $395/night' confirmed on official page).",
-    "Dated Feb 2027 7-night total not captured; only undated 'From $395/night' official starting rate confirmed"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json",
-    "amenities": "arena/c1cf7b23-nyfun2",
-    "michelinWithin60": "arena/c1cf7b23-nyfun2",
-    "clusterTransit": "arena/c1cf7b23-nyfun2",
-    "taxBasis": "arena/657520df-nyfun2",
-    "cancellation": "arena/657520df-nyfun2"
-   },
-   "amenities": "cloudM rooftop bar, 24/7 canteenM, iPad room mood control, luggage storage, ultra-fast Wi-Fi",
-   "michelinWithin60": "67 / 67 NYC Starred (100% of 5-borough stars) · 2-min walk to Le Bernardin 3★, 5-min walk to The Modern 2★, 9-min walk to Per Se 3★ & Masa 2★",
-   "clusterTransit": "50th St (1, C/E) & 49th St (N/R/W) on block; immediate walk to C1 Midtown 3★ cluster",
-   "taxBasis": "Undated official 'From $395/night' starting rate published on citizenm.com; exact Feb 15–22, 2027 7-night total not captured and left blank",
-   "cancellation": "Unverified for Feb 2027 dates",
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": true,
-   "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 9
-  },
-  {
-   "name": "The Fifth Avenue Hotel",
-   "area": "NoMad / Fifth Avenue",
-   "address": "1 West 28th Street (250 Fifth Avenue), New York, NY 10001",
-   "room": "City King (285 sq ft) or Corner King (375 sq ft, Duxiana king bed, max 2 guests)",
-   "privateBathroom": "Verified: Private marble bathroom with walk-in shower, Dyson hair dryer & butler service (thefifthavenuehotel.com)",
-   "keyStatus": "2 MICHELIN Keys (icons on Michelin listing)",
-   "guestScore": "20 / 20 (Michelin guest score)",
-   "publishedRate": "",
-   "sevenNightTotal": "",
-   "cheapestWindow": "",
-   "officialUrl": "https://www.thefifthavenuehotel.com/",
-   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-fifth-avenue-hotel-13538",
-   "rateSourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-fifth-avenue-hotel-13538",
-   "flags": [
-    "Address, room and bath not verified",
-    "7-night total unverified",
-    "On-site Guide restaurant Café Carmellini",
-    "Dated 7-night total, specific room-tier bed/bath line, and video review left blank pending direct 2027 rate check.",
-    "Resolves root-site flag on address/room/bath via official thefifthavenuehotel.com/accommodations/; dated 7-night Feb 2027 price remains blank"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json",
-    "address": "arena/c1cf7b23-nyfun2",
-    "officialUrl": "arena/c1cf7b23-nyfun2",
-    "amenities": "arena/c1cf7b23-nyfun2",
-    "michelinWithin60": "arena/c1cf7b23-nyfun2",
-    "clusterTransit": "arena/c1cf7b23-nyfun2",
-    "room": "arena/657520df-nyfun2",
-    "privateBathroom": "arena/657520df-nyfun2",
-    "taxBasis": "arena/657520df-nyfun2",
-    "rateSourceUrl": "arena/657520df-nyfun2",
-    "cancellation": "arena/657520df-nyfun2"
-   },
-   "amenities": "2 MICHELIN Keys, 20/20 MICHELIN guest score, Café Carmellini & The Portrait Bar on-site, butler service",
-   "michelinWithin60": "67 / 67 NYC Starred (100% of 5-borough stars) · Same NoMad block cluster as The Evelyn (4 min walk to EMP)",
-   "clusterTransit": "28th St (R/W, 1, 6) within 1–2 blocks; Café Carmellini (MICHELIN Guide) on-site",
-   "taxBasis": "Blank — unverified. Michelin widget blocks >31-day advance quotes and dated Feb 2027 rate was not captured from property booking engine",
-   "cancellation": "Unverified for Feb 2027 dates",
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": true,
-   "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 10
-  },
-  {
-   "name": "The Maritime Hotel",
-   "area": "Chelsea",
-   "address": "",
-   "room": "",
-   "privateBathroom": "",
-   "keyStatus": "",
-   "guestScore": "19 / 20 (Michelin guest score)",
-   "publishedRate": "",
-   "sevenNightTotal": "",
-   "cheapestWindow": "",
-   "officialUrl": "",
-   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-maritime-hotel-32",
-   "rateSourceUrl": "",
-   "flags": [
-    "Address, room, bath and rate not verified"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json"
-   },
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": false,
-   "eligibilityNote": "Queen+/private-bath specification not confirmed on an official property page: excluded from the recommendation until verified (flag F26).",
-   "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 11
-  },
-  {
-   "name": "MADE Hotel",
-   "area": "Flatiron / NoMad (per Michelin listing order; exact address unverified)",
-   "address": "",
-   "room": "",
-   "privateBathroom": "",
-   "keyStatus": "",
-   "guestScore": "18.9 / 20 (Michelin guest score)",
-   "publishedRate": "",
-   "sevenNightTotal": "",
-   "cheapestWindow": "",
-   "officialUrl": "",
-   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/made-hotel-8712",
-   "rateSourceUrl": "",
-   "flags": [
-    "Address, room, bath and rate not verified",
-    "Area label needs official confirmation"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json"
-   },
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": false,
-   "eligibilityNote": "Queen+/private-bath specification not confirmed on an official property page: excluded from the recommendation until verified (flag F26).",
-   "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 12
-  },
-  {
-   "name": "The Marlton Hotel",
-   "area": "Greenwich Village (address not verified)",
-   "address": "",
-   "room": "",
-   "privateBathroom": "",
-   "keyStatus": "",
-   "guestScore": "18.8 / 20 (Michelin guest score)",
-   "publishedRate": "",
-   "sevenNightTotal": "",
-   "cheapestWindow": "",
-   "officialUrl": "",
-   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-marlton-hotel-7089",
-   "rateSourceUrl": "",
-   "flags": [
-    "Address, room, bath and rate not verified"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json"
-   },
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": false,
-   "eligibilityNote": "Queen+/private-bath specification not confirmed on an official property page: excluded from the recommendation until verified (flag F26).",
-   "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 13
-  },
-  {
-   "name": "Soho Grand Hotel",
-   "area": "SoHo",
-   "address": "",
-   "room": "",
-   "privateBathroom": "",
-   "keyStatus": "",
-   "guestScore": "18.4 / 20 (Michelin guest score)",
-   "publishedRate": "",
-   "sevenNightTotal": "",
-   "cheapestWindow": "",
-   "officialUrl": "",
-   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/soho-grand-hotel-3461",
-   "rateSourceUrl": "",
-   "flags": [
-    "Address, room, bath and rate not verified"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json"
-   },
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": false,
-   "eligibilityNote": "Queen+/private-bath specification not confirmed on an official property page: excluded from the recommendation until verified (flag F26).",
-   "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 14
-  },
-  {
-   "name": "Arlo Soho",
-   "area": "SoHo",
-   "address": "",
-   "room": "",
-   "privateBathroom": "",
-   "keyStatus": "",
-   "guestScore": "18.4 / 20 (Michelin guest score)",
-   "publishedRate": "",
-   "sevenNightTotal": "",
-   "cheapestWindow": "",
-   "officialUrl": "",
-   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/arlo-soho-8260",
-   "rateSourceUrl": "",
-   "flags": [
-    "Address, room, bath and rate not verified"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json"
-   },
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": false,
-   "eligibilityNote": "Queen+/private-bath specification not confirmed on an official property page: excluded from the recommendation until verified (flag F26).",
-   "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 15
-  },
-  {
-   "name": "The Wall Street Hotel",
-   "area": "Financial District",
-   "address": "",
-   "room": "",
-   "privateBathroom": "",
-   "keyStatus": "1 MICHELIN Key (Michelin FiDi travel guide)",
-   "guestScore": "",
-   "publishedRate": "",
-   "sevenNightTotal": "",
-   "cheapestWindow": "",
-   "officialUrl": "",
-   "sourceUrl": "https://guide.michelin.com/en/article/travel/guide-financial-district-new-york",
-   "rateSourceUrl": "",
-   "flags": [
-    "Address, room, bath and rate not verified"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json"
-   },
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": false,
-   "eligibilityNote": "Queen+/private-bath specification not confirmed on an official property page: excluded from the recommendation until verified (flag F26).",
-   "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 16
-  }
- ],
- "windows": [
-  {
-   "windowId": "W1",
-   "dates": "Mon 15 Feb – Mon 22 Feb 2027",
-   "nights": 7,
-   "cheapestQualifyingHotel": "Eurostars Wall Street (Queen Room, Private Bath)",
-   "preTaxTotalUsd": "$848",
-   "estimatedAllInUsd": "$998",
-   "perNightPreTaxUsd": "$121",
-   "notes": "Includes preferred 15–18 Feb window + Presidents' Day Mon 15 Feb + 29th Chinatown Lunar New Year Parade Sun 21 Feb (1:00 PM). Cheapest verified Queen-bed 7-night total across all 5 tested weeks.",
-   "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
-  },
-  {
-   "windowId": "W2",
-   "dates": "Mon 22 Feb – Mon 1 Mar 2027",
-   "nights": 7,
-   "cheapestQualifyingHotel": "Eurostars Wall Street (Twin room shown at $836 — FAILS Queen requirement)",
-   "preTaxTotalUsd": "$836 (Twin — disqualified)",
-   "estimatedAllInUsd": "Queen tier unverified for W2",
-   "perNightPreTaxUsd": "$119 (Twin)",
-   "notes": "Last week of Bryant Park Winter Village (closes Sun 28 Feb 2027). Entry $836 rate is a Twin room that fails the Queen+ rule; Queen room requires live re-check.",
-   "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-22&checkout=2027-03-01&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
-  },
-  {
-   "windowId": "W3",
-   "dates": "Mon 1 Mar – Mon 8 Mar 2027",
-   "nights": 7,
-   "cheapestQualifyingHotel": "DoubleTree by Hilton New York Downtown (King Room)",
-   "preTaxTotalUsd": "$1,087",
-   "estimatedAllInUsd": "$1,275",
-   "perNightPreTaxUsd": "$155",
-   "notes": "+28% above Feb 15–22 pre-tax floor. Note: Bryant Park Rink/Lodge is already closed (ended Feb 28).",
-   "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
-  },
-  {
-   "windowId": "W4",
-   "dates": "Mon 8 Mar – Mon 15 Mar 2027",
-   "nights": 7,
-   "cheapestQualifyingHotel": "Eurostars Wall Street (Queen Room)",
-   "preTaxTotalUsd": "$1,106",
-   "estimatedAllInUsd": "$1,297",
-   "perNightPreTaxUsd": "$158",
-   "notes": "+30% above Feb 15–22 pre-tax floor; early spring demand ramp.",
-   "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-03-08&checkout=2027-03-15&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
-  },
-  {
-   "windowId": "W5",
-   "dates": "Mon 15 Mar – Mon 22 Mar 2027",
-   "nights": 7,
-   "cheapestQualifyingHotel": "Eurostars Wall Street (Queen Room)",
-   "preTaxTotalUsd": "$1,260",
-   "estimatedAllInUsd": "$1,474",
-   "perNightPreTaxUsd": "$180",
-   "notes": "+49% above Feb 15–22 pre-tax floor (St. Patrick's Day / Spring Break compression).",
-   "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-03-15&checkout=2027-03-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
-  }
- ]
 }
