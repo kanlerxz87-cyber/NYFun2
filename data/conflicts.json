@@ -1,0 +1,227 @@
+{
+ "checkedOn": "2026-11-26",
+ "note": "Disagreements found while merging kits into the canonical data. Nothing here was silently resolved.",
+ "conflicts": [
+  {
+   "type": "price-disagreement",
+   "row": "Eleven Madison Park",
+   "session": "arena/c1cf7b23-nyfun2",
+   "kitValue": "$770 Dining Room Tasting (2 × $385) · $450–$510 Bar Tasting (2 × $225–$255)",
+   "canonicalValue": "$770 (Full Tasting, 2 x $385); $510 (Bar Tasting, 2 x $255)",
+   "source": "https://www.elevenmadisonpark.com/faq",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
+   "row": "Le Bernardin",
+   "session": "arena/c1cf7b23-nyfun2",
+   "kitValue": "$436 Dinner 4-Course Prix Fixe (2 × $218) · $274 Lunch 3-Course (2 × $137)",
+   "canonicalValue": "$700 (Chef's Tasting, 2 x $350); $436 (Dinner prix fixe, 2 x $218); $284 (Lunch prix fixe, 2 x $142)",
+   "source": "https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
+   "row": "Le Bernardin",
+   "session": "arena/657520df-nyfun2",
+   "kitValue": "$450 Dinner Prix Fixe (2 × $225) · $700 Chef's Tasting (2 × $350) · $284 Lunch (2 × $142)",
+   "canonicalValue": "$700 (Chef's Tasting, 2 x $350); $436 (Dinner prix fixe, 2 x $218); $284 (Lunch prix fixe, 2 x $142)",
+   "source": "https://www.le-bernardin.com/accessible/menus/dining-room/dinner/",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
+   "row": "Aquavit",
+   "session": "arena/c1cf7b23-nyfun2",
+   "kitValue": "$350 3-Course Dinner (2 × $175) · $450 Chef's 5-Course Tasting (2 × $225)",
+   "canonicalValue": "$390 (dinner tasting, 2 x $195)",
+   "source": "https://www.aquavit.org/s/AQUAVIT-FALL-2025-Private-Dining-Kit-l6b7.pdf",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
+   "row": "Aquavit",
+   "session": "arena/657520df-nyfun2",
+   "kitValue": "$390 Tasting Menu (2 × $195) · $610 Chef's Tasting (2 × $305) · $160–$190 Lunch 2/3-Course (2 × $80/$95)",
+   "canonicalValue": "$390 (dinner tasting, 2 x $195)",
+   "source": "https://www.aquavit.org/s/DR-112026.pdf",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
+   "row": "Gabriel Kreuther",
+   "session": "arena/657520df-nyfun2",
+   "kitValue": "$400 Dinner 3-Course (2 × $200) · $470 Dinner 4-Course (2 × $235) · $650 Chef's Tasting (2 × $325) · $150–$190 Lunch (2 × $75/$95)",
+   "canonicalValue": "$650 (Chef's Tasting, 2 x $325); $400 (3-course, 2 x $200); $470 (4-course, 2 x $235)",
+   "source": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
+   "row": "The Modern",
+   "session": "arena/c1cf7b23-nyfun2",
+   "kitValue": "$230 Lunch 3-Course (2 × $115) · $290 Bar Room 3-Course (2 × $145) · $510 Lunch Tasting (2 × $255)",
+   "canonicalValue": "$230 (Lunch prix fixe, 2 x $115); $510 (Lunch Tasting, 2 x $255); $370 (Impressions, 2 x $185); $570 (Abstractions, 2 x $285)",
+   "source": "https://www.themodernnyc.com/the-modern/",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
+   "row": "The Modern",
+   "session": "arena/657520df-nyfun2",
+   "kitValue": "$370 Impressions Dinner (2 × $185) · $570 Abstractions Dinner (2 × $285) · $230 Lunch 3-Course (2 × $115)",
+   "canonicalValue": "$230 (Lunch prix fixe, 2 x $115); $510 (Lunch Tasting, 2 x $255); $370 (Impressions, 2 x $185); $570 (Abstractions, 2 x $285)",
+   "source": "https://www.themodernnyc.com/the-modern/",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
+   "row": "Le Coucou",
+   "session": "arena/c1cf7b23-nyfun2",
+   "kitValue": "$180–$328 À La Carte 3-Course Range (published menu items)",
+   "canonicalValue": "$440 (A Very Coucou Dinner, 2 x $220)",
+   "source": "https://lecoucou.com/",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
+   "row": "Le Coucou",
+   "session": "arena/657520df-nyfun2",
+   "kitValue": "$176–$352 À La Carte 3-Course Range",
+   "canonicalValue": "$440 (A Very Coucou Dinner, 2 x $220)",
+   "source": "https://lecoucou.com/",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
+   "row": "Semma",
+   "session": "arena/657520df-nyfun2",
+   "kitValue": "$105–$220 À La Carte Couple Range",
+   "canonicalValue": "$114–$164 Typical Shared Dinner · $187+ with Pre-Order Crab for Two ($145)",
+   "source": "https://www.semma.nyc/",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
+   "row": "Cote",
+   "session": "arena/c1cf7b23-nyfun2",
+   "kitValue": "$168 Butcher's Feast® (2 × $84)",
+   "canonicalValue": "$168 (Butcher's Feast, 2 x $84); $450 (Steak Omakase, 2 x $225)",
+   "source": "https://www.cotekoreansteakhouse.com/nycdinnermenu",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
+   "row": "Crown Shy",
+   "session": "arena/657520df-nyfun2",
+   "kitValue": "$108–$168 À La Carte Couple Range",
+   "canonicalValue": "$108–$142 Lunch 3-Course À La Carte Range (dinner menu PDF unindexed — see note)",
+   "source": "https://www.crownshy.nyc/menu/lunch/",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
+   "row": "Gramercy Tavern",
+   "session": "arena/c1cf7b23-nyfun2",
+   "kitValue": "$356 Dining Room Seasonal Menu (2 × $178) · $134–$180 Tavern À La Carte Range",
+   "canonicalValue": "$356 (Dining Room Seasonal Menu, 2 x $178); $156 (Tavern 3-course, 2 x $78)",
+   "source": "https://www.gramercytavern.com/dining-room-menu/",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
+   "row": "Rezdôra",
+   "session": "arena/657520df-nyfun2",
+   "kitValue": "$220 Regional Pasta Tasting (2 × $110) · $108–$172 À La Carte",
+   "canonicalValue": "$220 Regional Pasta Tasting (2 × $110) · $136–$188 À La Carte Pasta & Antipasti",
+   "source": "https://www.rezdora.nyc/menus/",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  }
+ ],
+ "kitOnlyRestaurants": [
+  {
+   "name": "Katz's Delicatessen",
+   "session": "arena/c1cf7b23-nyfun2",
+   "status": "not in the official 69-star census checked 2026-11-26",
+   "source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/katz-s"
+  },
+  {
+   "name": "Katz's Delicatessen",
+   "session": "arena/657520df-nyfun2",
+   "status": "not in the official 69-star census checked 2026-11-26",
+   "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/katz-s"
+  },
+  {
+   "name": "Cho Dang Gol",
+   "session": "arena/c1cf7b23-nyfun2",
+   "status": "not in the official 69-star census checked 2026-11-26",
+   "source": "https://guide.michelin.com/tw/en/new-york-state/new-york/restaurant/cho-dang-gol"
+  },
+  {
+   "name": "Thai Diner",
+   "session": "arena/c1cf7b23-nyfun2",
+   "status": "not in the official 69-star census checked 2026-11-26",
+   "source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/thai-diner"
+  },
+  {
+   "name": "Thai Diner",
+   "session": "arena/657520df-nyfun2",
+   "status": "not in the official 69-star census checked 2026-11-26",
+   "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/thai-diner"
+  },
+  {
+   "name": "Via Carota",
+   "session": "arena/c1cf7b23-nyfun2",
+   "status": "not in the official 69-star census checked 2026-11-26",
+   "source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/via-carota"
+  },
+  {
+   "name": "COTE Korean Steakhouse",
+   "session": "arena/657520df-nyfun2",
+   "status": "not in the official 69-star census checked 2026-11-26",
+   "source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/cote"
+  },
+  {
+   "name": "Dhamaka",
+   "session": "arena/657520df-nyfun2",
+   "status": "not in the official 69-star census checked 2026-11-26",
+   "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/dhamaka"
+  },
+  {
+   "name": "Café Carmellini",
+   "session": "arena/657520df-nyfun2",
+   "status": "not in the official 69-star census checked 2026-11-26",
+   "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/cafe-carmellini"
+  },
+  {
+   "name": "Manhatta",
+   "session": "arena/657520df-nyfun2",
+   "status": "not in the official 69-star census checked 2026-11-26",
+   "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/manhatta"
+  },
+  {
+   "name": "Blue Hill at Stone Barns",
+   "session": "arena/33cfdba4-nyfun2",
+   "status": "not in the official 69-star census checked 2026-11-26",
+   "source": ""
+  },
+  {
+   "name": "63 Clinton",
+   "session": "arena/33cfdba4-nyfun2",
+   "status": "not in the official 69-star census checked 2026-11-26",
+   "source": ""
+  },
+  {
+   "name": "Shion 69 Leonard Street",
+   "session": "arena/33cfdba4-nyfun2",
+   "status": "not in the official 69-star census checked 2026-11-26",
+   "source": ""
+  },
+  {
+   "name": "La Bastide by Andrea Calstier",
+   "session": "arena/33cfdba4-nyfun2",
+   "status": "not in the official 69-star census checked 2026-11-26",
+   "source": ""
+  }
+ ]
+}

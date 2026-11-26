@@ -3,72 +3,72 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sources — NYC 2027</title>
-<meta name="description" content="Sources: source-checked NYC trip planning for February 2027.">
+<title>Sources &amp; method — NYC 2027</title>
+<meta name="description" content="The verification rules, the primary-source register, and the two scripts that turn canonical data into this site.">
+<meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="layout">
-<aside class="sidebar">
-  <a class="brand" href="../index.html"><span class="mark">NY</span><span>NYC 2027<small>Trip dashboard</small></span></a>
-  <nav class="nav" aria-label="Main navigation">
-    <a href="../index.html">Overview</a>
-    <a href="executive-summary.html">Summary</a>
-    <a href="michelin-restaurants.html">Michelin</a>
-    <a href="hotels.html">Hotels</a>
-    <a href="activities.html">Activities</a>
-    <a href="itinerary.html">Itinerary</a>
-    <a href="questions.html">Questions</a>
-    <a href="suggestions.html">Suggestions</a>
-    <a href="flagged.html">Flagged</a>
-    <a class="active" href="sources.html">Sources</a>
-    <a href="repo-audit.html">Repo audit</a>
-  </nav>
-  <div class="side-note">Verified against official sources · checked <span data-checked>—</span></div>
-</aside>
-<main class="content" id="main">
-  <p class="eyebrow">Method & provenance</p>
-  <h1>Sources and verification rules</h1>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="../index.html"><span class="mark">NY</span><span><b>NYC 2027</b><small>2 adults · Feb 2027</small></span></a>
+  <nav class="nav" aria-label="Main navigation"><a href="../index.html">Overview</a><a href="executive-summary.html">Summary</a><a href="michelin-restaurants.html">Michelin</a><a href="hotels.html">Hotels</a><a href="activities.html">Activities</a><a href="itinerary.html">Itinerary</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged</a><a href="verification.html">Verification</a><a class="active" href="sources.html">Sources</a><a href="repo-audit.html">Repo audit</a></nav>
+</div></header>
+<main class="wrap" id="main">
+  <p class="eyebrow">Method · provenance</p>
+  <h1>Sources, rules and how to reproduce</h1>
+  <p class="lede">The verification rules, the primary-source register, and the two scripts that turn canonical data into this site.</p>
+
+  <h2>The rules this build follows</h2>
   <div class="card">
-    <h3>Verification rules used</h3>
-    <ul>
-      <li>Every table row links to an official or primary source: Michelin Guide, a government site (NPS, NYC DOT, NYC Parks) or the venue's own website.</li>
-      <li>A value is recorded only when that source states it. Arithmetic on a published adult price is labelled as such.</li>
-      <li>If a value cannot be confirmed, the cell is blank and an explanation is added to the Flags page.</li>
-      <li>Review videos are labelled third-party; they are not used to establish hours, prices or ownership.</li>
-      <li>Neighbourhood labels are derived from the published street address and marked "address-based grouping".</li>
-      <li>No travel duration is claimed without a stored routing result.</li>
-    </ul>
-  </div>
-  <h2>Primary sources used</h2>
-  <div class="card">
-    <ul>
-      <li><a href="https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred" target="_blank" rel="noopener noreferrer">Michelin Guide — NYC all starred restaurants ↗</a></li>
-      <li><a href="https://guide.michelin.com/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025" target="_blank" rel="noopener noreferrer">Michelin — 2025 NYC star announcement ↗</a></li>
-      <li><a href="https://guide.michelin.com/en/article/travel/new-restaurants-new-york" target="_blank" rel="noopener noreferrer">Michelin — July 2026 NYC additions ↗</a></li>
-      <li><a href="https://michelinmedia.com/pages/blog/detail/article/c/a1479/" target="_blank" rel="noopener noreferrer">Michelin North America — 2026 ceremony date ↗</a></li>
-      <li><a href="https://guide.michelin.com/en/hotels-stays/nyc" target="_blank" rel="noopener noreferrer">Michelin Guide — NYC hotels ↗</a></li>
-      <li><a href="https://www.marriott.com/brands/citizenm.mi" target="_blank" rel="noopener noreferrer">Marriott — citizenM room specification ↗</a></li>
-      <li><a href="https://www.nps.gov/stli/planyourvisit/hours.htm" target="_blank" rel="noopener noreferrer">U.S. National Park Service — Statue of Liberty hours ↗</a></li>
-      <li><a href="https://www.nycgovparks.org/parks/central-park" target="_blank" rel="noopener noreferrer">NYC Parks — Central Park ↗</a></li>
-      <li><a href="https://www.metmuseum.org/plan-your-visit" target="_blank" rel="noopener noreferrer">The Met ↗</a> · <a href="https://www.moma.org/visit/" target="_blank" rel="noopener noreferrer">MoMA ↗</a> · <a href="https://www.amnh.org/plan-your-visit/hours" target="_blank" rel="noopener noreferrer">AMNH hours ↗</a></li>
-      <li><a href="https://www.911memorial.org/visit" target="_blank" rel="noopener noreferrer">9/11 Memorial & Museum ↗</a> · <a href="https://www.thehighline.org/visit/" target="_blank" rel="noopener noreferrer">The High Line ↗</a> · <a href="https://whitney.org/visit" target="_blank" rel="noopener noreferrer">Whitney ↗</a> · <a href="https://www.guggenheim.org/plan-your-visit" target="_blank" rel="noopener noreferrer">Guggenheim ↗</a></li>
-      <li><a href="https://www.esbnyc.com/visit/hours-of-operation" target="_blank" rel="noopener noreferrer">Empire State Building hours ↗</a> · <a href="https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml" target="_blank" rel="noopener noreferrer">NYC DOT Staten Island Ferry ↗</a> · <a href="https://www.nypl.org/locations/schwarzman/research" target="_blank" rel="noopener noreferrer">NYPL Schwarzman Building ↗</a></li>
-      <li><a href="https://www.mta.info/maps" target="_blank" rel="noopener noreferrer">MTA official subway/bus maps ↗</a></li>
-    </ul>
-  </div>
-  <h2>Repository & coordination</h2>
-  <div class="card">
-    <p>Work was performed on branch <code>arena/4a10e962-nyfun2</code>. The shared task board is <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a>; it records task ownership, file scopes, sources verified and irregularities. The initial repository contained only an 8-byte README, so no earlier work was overwritten.</p>
-    <p>Platform constraint: the session is bound to one branch, so the requested per-session branch naming could not be used; non-overlapping file scopes and immediate claim commits were used instead.</p>
-    <p>A third session (<code>arena/215c2a25</code>) produced another independent kit, preserved at <a href="../sessions/215c2a25/index.html">sessions/215c2a25/index.html ↗</a> with its own data and source register.</p>
-    <p>A parallel session (<code>arena/1a7ae497</code>) produced an independent site. Its work is preserved unchanged under <a href="../alt/index.html">alt/ ↗</a> rather than overwritten; its hotel-rate and budget findings can be compared with the blank/flagged values on this site.</p>
+    <ol>
+      <li><strong>One official source per row.</strong> MICHELIN Guide, a government page, or the venue's own site. Social platforms are used for links, never to establish a price or an hour.</li>
+      <li><strong>No inference.</strong> If a page does not state it, the cell is blank. Bands ($$–$$$$) are never converted to dollars; a "from" rate is never treated as a quote.</li>
+      <li><strong>Arithmetic is shown.</strong> A couple total is always 2 × the published per-person price, and hotel all-in totals show the tax formula used.</li>
+      <li><strong>Provenance is recorded per field.</strong> Each merged row carries a <code>provenance</code> object naming the session that supplied each value.</li>
+      <li><strong>Conflicts are published, not resolved silently.</strong> Disagreements go to <code>data/conflicts.json</code> and the Flagged page.</li>
+      <li><strong>Third-party is labelled.</strong> Review videos are marked as reviews; only accounts confirmed by the venue's own site are called official.</li>
+    </ol>
   </div>
 
-  <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">NYFun2 ↗</a> · <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">Coordination board ↗</a> · Research date <span data-checked>—</span>.</p>
+  <h2>Primary-source register</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th scope="col">Source</th><th scope="col">Used for</th><th scope="col">Link</th></tr></thead>
+    <tbody>
+      <tr><td data-label="Source">MICHELIN Guide — NYC all-starred</td><td data-label="Used for">Census (5/14/50), star levels, addresses, bands</td><td data-label="Link"><a href="https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred" target="_blank" rel="noopener noreferrer">Open ↗</a></td></tr>
+      <tr><td data-label="Source">MICHELIN Guide — restaurant pages</td><td data-label="Used for">Hours, address, cuisine, band per restaurant</td><td data-label="Link"><a href="https://guide.michelin.com/en/new-york-state/new-york/restaurant/jungsik-new-york" target="_blank" rel="noopener noreferrer">Example ↗</a></td></tr>
+      <tr><td data-label="Source">MICHELIN North America — ceremony notice</td><td data-label="Used for">14 Dec 2026 ceremony date</td><td data-label="Link"><a href="https://michelinmedia.com/pages/blog/detail/article/c/a1479/" target="_blank" rel="noopener noreferrer">Open ↗</a></td></tr>
+      <tr><td data-label="Source">Each restaurant's own menu / FAQ / booking channel</td><td data-label="Used for">Couple prices for 24 rows</td><td data-label="Link">Linked per row on the Michelin page</td></tr>
+      <tr><td data-label="Source">Booking.com Manhattan search (dated)</td><td data-label="Used for">7-night rates for 15–22 Feb 2027 and the five windows</td><td data-label="Link"><a href="https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price" target="_blank" rel="noopener noreferrer">Open ↗</a></td></tr>
+      <tr><td data-label="Source">Hotel brand pages (Hyatt, Hilton, Marriott/citizenM, Arlo, Eurostars)</td><td data-label="Used for">Room type, bed size, private bathroom</td><td data-label="Link">Linked per row on the Hotels page</td></tr>
+      <tr><td data-label="Source">Google Maps transit directions</td><td data-label="Used for">35 door-to-door legs (25 hotel→cluster, 10 hotel→activity)</td><td data-label="Link"><a href="https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Le+Bernardin+New+York&travelmode=transit" target="_blank" rel="noopener noreferrer">Example ↗</a></td></tr>
+      <tr><td data-label="Source">The Met · MoMA · AMNH · Whitney · Guggenheim · 9/11 · High Line · NYPL · NPS · NYC DOT · ESB</td><td data-label="Used for">Activity hours, closures, adult prices</td><td data-label="Link">Linked per row on the Activities page</td></tr>
+      <tr><td data-label="Source">betterchinatown.com</td><td data-label="Used for">21 Feb 2027 Lunar New Year parade</td><td data-label="Link"><a href="http://betterchinatown.com/" target="_blank" rel="noopener noreferrer">Open ↗</a></td></tr>
+      <tr><td data-label="Source">bryantpark.org · wollmanrinknyc.com</td><td data-label="Used for">Winter Village and Wollman season, prices</td><td data-label="Link"><a href="https://bryantpark.org/activities/winter-village" target="_blank" rel="noopener noreferrer">Bryant Park ↗</a> · <a href="https://wollmanrinknyc.com/plan/" target="_blank" rel="noopener noreferrer">Wollman ↗</a></td></tr>
+      <tr><td data-label="Source">MTA</td><td data-label="Used for">Subway/bus fares and route context</td><td data-label="Link"><a href="https://www.mta.info/fares" target="_blank" rel="noopener noreferrer">Open ↗</a></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>How this build is produced</h2>
+  <div class="card">
+    <p><code>research/canonical/*.json</code> holds the pristine datasets from the research sessions. <code>scripts/build_data.py</code> merges the parallel kits into <code>data/*.json</code> under the rules above (idempotent — re-running cannot double-count). <code>scripts/build_site.py</code> renders these pages. <code>scripts/verify.py</code> checks links, source-per-row, and blank-implies-flag.</p>
+    <pre class="small" style="overflow-x:auto;background:var(--gray-bg);padding:12px;border-radius:8px">python3 scripts/verify.py
+node --check assets/app.js</pre>
+    <p class="small muted">No build step, no dependencies, no trackers. GitHub Pages serves the repository root.</p>
+  </div>
+
+  <footer class="foot">
+    <p><strong>Data as captured:</strong> <span data-checked>2026-11-26</span> ·
+    <strong>Official-source verification:</strong> 2026-11-26 ·
+    <strong>Roster census:</strong> 2026-11-25</p>
+    <p>Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> ·
+    Coordination board: <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a> ·
+    <a href="../pages/flagged.html">Flagged for review</a> ·
+    <a href="../pages/verification.html">Verification log</a> ·
+    <a href="../pages/compare.html">Compare session kits</a></p>
+    <p class="small">Prices are what the linked official page said on the capture date. Nothing here is a booking, a quote, or financial advice. Blank means unverified — never estimated.</p>
+  </footer>
 </main>
-</div>
 <script src="../assets/app.js"></script>
 </body>
 </html>

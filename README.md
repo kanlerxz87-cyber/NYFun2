@@ -1,90 +1,112 @@
 # NYFun2 — New York City trip plan, February 2027
 
-A static, source-audited planning dashboard for two adults in New York City, built around
-MICHELIN-starred dining and hotels that meet a private-bathroom / queen-or-larger-bed requirement.
+A static, source-audited planning dashboard for **two adults** in New York City inside the
+**15 Feb – 23 Mar 2027** window, built around MICHELIN dining and hotels that publish a
+**queen-or-larger bed and a private bathroom**.
 
 **Live site:** https://kanlerxz87-cyber.github.io/NYFun2/
 
-**Travel window:** preferred 15–18 Feb 2027; priced case 15–22 Feb 2027 (Monday → Monday, 7 nights).
+**Preferred trip:** 15–18 Feb 2027 (Mon–Thu, 3 nights).
+**Priced case:** 15–22 Feb 2027 (Mon–Mon, 7 nights) — the window the brief asked to price.
 
 ---
 
 ## The rule this project runs on
 
-> Every table row carries an official source. Values that cannot be confirmed are left blank and
-> flagged — never estimated.
+> Every table row carries a link to the official page it came from. A value that cannot be
+> confirmed is **blank and flagged** — never estimated, and never inferred from a similar venue.
 
-Where the site performs arithmetic itself (adding a published tax rate to a published pre-tax total),
-the formula is printed next to the result. A review video is labelled third-party; it is never presented
-as an official endorsement.
+Where the site does arithmetic (2 × a published per-person menu price, or a published pre-tax
+hotel total plus the stated 14.75% NYC occupancy/sales tax), the formula is printed next to the
+result. Review videos are labelled third-party; they are never presented as official.
 
-## What is here
+Each row also carries a verification badge:
 
-| Path | Purpose |
+| Badge | Meaning |
 |---|---|
-| `index.html` | Dashboard / overview |
-| `pages/executive-summary.html` | Decision-ready summary |
-| `pages/michelin-restaurants.html` | 21 restaurant rows — star level, hours, guide band, review links, source |
-| `pages/hotels.html` | 12 hotel candidates, 4 with dated 7-night totals |
-| `pages/activities.html` | 12 activities with official hours, exceptions and couple costs |
-| `pages/itinerary.html` | Day plan and how the ≤1-hour travel goal is handled |
-| `pages/questions.html` | 12 open questions: known / missing / how to discover |
-| `pages/suggestions.html` | 12 improvement options, none implemented |
-| `pages/flagged.html` | 13 flags: every unverified value and irregularity |
-| `pages/sources.html` | Primary-source register and verification rules |
-| `pages/repo-audit.html` | Repository audit and the two-session integration log |
-| `data/restaurants.json` | Restaurant dataset |
-| `data/hotels.json` | Hotel dataset |
-| `data/activities.json` | Activities dataset |
-| `data/decisions.json` | Questions, suggestions and flags |
-| `assets/styles.css` · `assets/app.js` | Styling and table rendering (no dependencies) |
-| `scripts/verify.py` | Pre-push verification |
-| `COORDINATION.md` | Shared task board and session log |
-| `alt/` | The parallel session's independent kit, preserved verbatim for comparison (not linked from the main nav) |
-| `LICENSE` | MIT for code, CC BY 4.0 for data and prose |
+| **checked today** | the official page was re-read on 2026-11-26 |
+| **carried capture** | the value comes from the 2026-11-25 capture; the source link is on the row |
+
+## Pages
+
+| Page | What it answers |
+|---|---|
+| `index.html` | Overview, headline numbers, how to read a row |
+| `pages/executive-summary.html` | Bottom line, findings, decision order, illustrative weekly budget |
+| `pages/michelin-restaurants.html` | All 72 rows (69 starred + 3 guide-listed), verified couple prices, the five cluster anchors |
+| `pages/hotels.html` | 16 candidates, ranking rule, dated 7-night totals, five booking windows, when to book |
+| `pages/activities.html` | 17 activities with official hours, closures and couple costs |
+| `pages/itinerary.html` | 7-night skeleton from verified opening days, plus the 3-night variant |
+| `pages/questions.html` | 13 questions: known / missing / provisional answer / how to close |
+| `pages/suggestions.html` | 17 improvement options with status and effort |
+| `pages/flagged.html` | 26 flags: unverified values, conflicts, irregularities |
+| `pages/verification.html` | Dated log of the 16 checks re-run on 2026-11-26 and what could not be re-read |
+| `pages/sources.html` | Rules, primary-source register, reproduce steps |
+| `pages/repo-audit.html` | What each session contributed, what this integration changed |
+| `pages/compare.html` | The five parallel session kits and their disagreements |
 
 ## Headline findings
 
-- **MICHELIN counts (official filter panel, 25 Nov 2026):** 5 three-star, 14 two-star, 50 one-star,
-  76 Bib Gourmand, 224 guide-listed with no star.
-- **Dated hotel totals now exist** for 15–22 Feb 2027, all-in for two adults:
-  **Hyatt Place NY/Chelsea $1,305** · Arlo NoMad $1,428 · 11 Howard $1,774 · The Beekman $5,220.
-  A 4× spread for identical dates. They are dated aggregator snapshots, not hotel quotes (flag F10).
-- **11 Howard** is the only shortlisted hotel sharing a ZIP code (10013) with a verified starred
-  restaurant — Atera ★★, 77 Worth St.
-- **MTA fare is $3** per subway / local-bus ride ($7.25 express), not the $2.90 still quoted in older guides.
-- **Michelin's 2026 Northeast Cities ceremony is scheduled for 14 Dec 2026** — after this research,
-  before the trip. Star levels may change (flag F1).
+- **MICHELIN census (re-checked 2026-11-26):** 5 three-star, 14 two-star, 50 one-star (69 starred),
+  76 Bib Gourmand, 224 Selected.
+- **Dining money:** 24 restaurants have a couple total built from an official menu/FAQ/booking
+  page — from **$156** (Gramercy Tavern tavern three-course) and **$168** (Cote Butcher's Feast)
+  to **$1,900** (Masa hinoki counter). Atomix, Atera and Per Se stay blank because captures
+  disagree (flag F22).
+- **Hotels:** 16 candidates; 8 carry a dated 7-night total for two adults for 15–22 Feb 2027 —
+  from **$998 all-in** (Eurostars Wall Street, non-refundable) to **$5,220** (The Beekman).
+  Best value with free cancellation: **DoubleTree Chelsea, $1,110 all-in**.
+- **The one-hour rule:** 25 measured hotel→MICHELIN-cluster legs were all **3–37 minutes**, so
+  the rule does not separate central Manhattan hotels. It is used as a pass/fail gate; the ranking
+  falls through to verified price, then average transit.
+- **Cheapest week:** 15–22 Feb 2027 is the cheapest of the five weeks tested ($848 pre-tax floor)
+  versus $1,087–$1,260 for the March windows. The $836 figure for 22 Feb–1 Mar is a **twin room**
+  and fails the queen-bed rule.
+- **Dates that matter:** Presidents' Day Mon 15 Feb; **Chinatown Lunar New Year parade Sun 21 Feb
+  2027, 13:00**; Bryant Park rink to 28 Feb; Wollman Rink to 16 Mar; the Met closes Wednesdays.
+- **Michelin ceremony:** 14 Dec 2026 — after this research, before the trip (flag F1).
 
-## Deliberately blank
+## Data and build
 
-No measured transit times (no routing source was reachable, so only same-ZIP proximity is claimed and
-each pair links a live directions query), no per-person restaurant prices (client-rendered menu pages),
-no airfare, no theatre tickets. Every gap is on `pages/flagged.html` with its cause and its remedy.
-
-## Verify locally
+| Path | Purpose |
+|---|---|
+| `data/restaurants.json` | 72 rows, per-field `provenance`, verification badge |
+| `data/hotels.json` | 16 rows + 5 booking windows + transit objects + ranking |
+| `data/activities.json` | 17 rows with hours, exceptions, costs, socials |
+| `data/decisions.json` | 13 questions, 17 suggestions, 26 flags |
+| `data/verification.json` | Dated verification log and coverage counters |
+| `data/conflicts.json` | Every kit disagreement and out-of-census venue name |
+| `research/canonical/` | Pristine pre-merge datasets (the merge input) |
+| `scripts/build_data.py` | Idempotent merge of the kits into `data/*.json` |
+| `scripts/build_site.py` | Renders `index.html` and `pages/*.html` |
+| `scripts/verify.py` | Links, sources, duplicates, blank-implies-flag, hotel arithmetic |
+| `assets/styles.css` · `assets/app.js` | Styling and table rendering (no dependencies) |
 
 ```bash
-python3 scripts/verify.py     # local links, JSON validity, source-per-row, blank-implies-flag
-node --check assets/app.js    # JS syntax
-python3 -m http.server 8000   # then open http://localhost:8000/
+python3 scripts/build_data.py     # merge kits -> data/*.json
+python3 scripts/build_site.py     # data/*.json -> html
+python3 scripts/verify.py         # 0 errors / 0 warnings required
+node --check assets/app.js
+python3 -m http.server 8000       # then open http://localhost:8000/
 ```
 
-No build step and no third-party dependencies: the site is HTML, one stylesheet, one script and JSON.
+There is no build step on the host: GitHub Pages serves the repository root from `main`, and
+`.nojekyll` stops Jekyll processing.
 
-## Publishing
+## What is deliberately blank
 
-GitHub Pages is configured to serve `main` at the repository root, so a merge to `main` deploys.
-`.nojekyll` is present so Jekyll does not process the folder.
+Airfare; theatre tickets; the 3-night hotel total; per-dish à-la-carte totals; six hotels without a
+published bed-and-bathroom line; 45 restaurant social links that could not be confirmed; every
+transit pair that was never routed. Each gap is on `pages/flagged.html` with its cause and the
+step that would close it.
 
 ## Sessions and coordination
 
-Two agent sessions worked this repository on 2026-11-25 on separate branches and were merged rather
-than overwritten. See `COORDINATION.md` for the task board and `pages/repo-audit.html` for the
-integration log: what each session contributed, which flag was resolved (F2), and which new risk the
-merged data introduced (F10).
+Five parallel agent sessions produced independent kits for the same brief. They are preserved
+verbatim under `sessions/` and `alt/`, and the comparison is on `pages/compare.html`. The shared
+task board `COORDINATION.md` records ownership, sources and irregularities; this integration ran
+as task **T18** on branch `arena/9bc6abed-nyfun2`.
 
 ## Licence
 
-Code: MIT. Data and prose: CC BY 4.0. Third-party marks, quotations and source pages remain the
-property of their owners. See `LICENSE`.
+MIT for code; CC BY 4.0 for data and prose. Restaurant and hotel facts belong to their sources.

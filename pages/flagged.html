@@ -3,43 +3,41 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Flagged — NYC 2027</title>
-<meta name="description" content="Flagged: source-checked NYC trip planning for February 2027.">
+<title>Flagged for review — NYC 2027</title>
+<meta name="description" content="Every unverified value, conflicting capture and irregularity, with the source you need to check it.">
+<meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="layout">
-<aside class="sidebar">
-  <a class="brand" href="../index.html"><span class="mark">NY</span><span>NYC 2027<small>Trip dashboard</small></span></a>
-  <nav class="nav" aria-label="Main navigation">
-    <a href="../index.html">Overview</a>
-    <a href="executive-summary.html">Summary</a>
-    <a href="michelin-restaurants.html">Michelin</a>
-    <a href="hotels.html">Hotels</a>
-    <a href="activities.html">Activities</a>
-    <a href="itinerary.html">Itinerary</a>
-    <a href="questions.html">Questions</a>
-    <a href="suggestions.html">Suggestions</a>
-    <a class="active" href="flagged.html">Flagged</a>
-    <a href="sources.html">Sources</a>
-    <a href="repo-audit.html">Repo audit</a>
-  </nav>
-  <div class="side-note">Verified against official sources · checked <span data-checked>—</span></div>
-</aside>
-<main class="content" id="main">
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="../index.html"><span class="mark">NY</span><span><b>NYC 2027</b><small>2 adults · Feb 2027</small></span></a>
+  <nav class="nav" aria-label="Main navigation"><a href="../index.html">Overview</a><a href="executive-summary.html">Summary</a><a href="michelin-restaurants.html">Michelin</a><a href="hotels.html">Hotels</a><a href="activities.html">Activities</a><a href="itinerary.html">Itinerary</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a class="active" href="flagged.html">Flagged</a><a href="verification.html">Verification</a><a href="sources.html">Sources</a><a href="repo-audit.html">Repo audit</a></nav>
+</div></header>
+<main class="wrap" id="main">
   <p class="eyebrow">Audit trail</p>
   <h1>Flagged for review</h1>
-  <p class="lede">Irregularities, conflicting official snippets and values that could not be confirmed. A status of "needs review" does not block the rest of the site; it means the affected value must not be treated as decided.</p>
-  <section>
-    <div class="toolbar"><input type="search" aria-label="Search flags" placeholder="Search flags…"><span class="count"></span></div>
-    <div data-table="decisions:flags"></div>
-  </section>
-  <div class="notice">Blank cells throughout the site correspond to these flags. They were left empty rather than filled with estimates.</div>
+  <p class="lede">Every unverified value, conflicting capture and irregularity, with the source you need to check it.</p>
 
-  <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">NYFun2 ↗</a> · <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">Coordination board ↗</a> · Research date <span data-checked>—</span>.</p>
+  <div class="notice warn"><strong>These do not block the trip.</strong> They are the things you should look at before relying on a specific number: unverified values, conflicting official captures, and known irregularities. Severity High means it changes a decision; Medium means it changes a number; Low is a housekeeping or wording issue.</div>
+  <div class="card"><p><strong>26 flags</strong>, each with its source. Where a value is contested, the site keeps the value that the strongest official page supports and shows the alternative on the flag rather than silently picking one.</p></div>
+  <div class="toolbar"><input type="search" aria-label="Search flags" placeholder="Search flags…">
+    <select data-filter="severity" aria-label="Filter by severity"><option value="">All severities</option><option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option></select>
+    <span class="count"></span></div>
+  <div data-table="decisions:flags"></div>
+
+  <footer class="foot">
+    <p><strong>Data as captured:</strong> <span data-checked>2026-11-26</span> ·
+    <strong>Official-source verification:</strong> 2026-11-26 ·
+    <strong>Roster census:</strong> 2026-11-25</p>
+    <p>Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> ·
+    Coordination board: <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a> ·
+    <a href="../pages/flagged.html">Flagged for review</a> ·
+    <a href="../pages/verification.html">Verification log</a> ·
+    <a href="../pages/compare.html">Compare session kits</a></p>
+    <p class="small">Prices are what the linked official page said on the capture date. Nothing here is a booking, a quote, or financial advice. Blank means unverified — never estimated.</p>
+  </footer>
 </main>
-</div>
 <script src="../assets/app.js"></script>
 </body>
 </html>

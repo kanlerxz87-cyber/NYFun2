@@ -4,44 +4,86 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hotels — NYC 2027</title>
-<meta name="description" content="Hotels: source-checked NYC trip planning for February 2027.">
+<meta name="description" content="16 candidates, 8 with a dated 7-night total for two adults, 4 with measured transit to every sampled MICHELIN cluster, and a clear note on the 6 whose bed and bathroom are still unconfirmed.">
+<meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="layout">
-<aside class="sidebar">
-  <a class="brand" href="../index.html"><span class="mark">NY</span><span>NYC 2027<small>Trip dashboard</small></span></a>
-  <nav class="nav" aria-label="Main navigation">
-    <a href="../index.html">Overview</a>
-    <a href="executive-summary.html">Summary</a>
-    <a href="michelin-restaurants.html">Michelin</a>
-    <a class="active" href="hotels.html">Hotels</a>
-    <a href="activities.html">Activities</a>
-    <a href="itinerary.html">Itinerary</a>
-    <a href="questions.html">Questions</a>
-    <a href="suggestions.html">Suggestions</a>
-    <a href="flagged.html">Flagged</a>
-    <a href="sources.html">Sources</a>
-    <a href="repo-audit.html">Repo audit</a>
-  </nav>
-  <div class="side-note">Verified against official sources · checked <span data-checked>—</span></div>
-</aside>
-<main class="content" id="main">
-  <p class="eyebrow">Stay · source-checked</p>
-  <h1>Hotel shortlist</h1>
-  <p class="lede">Ten candidates from the Michelin Guide's NYC hotel selection and the citizenM/Marriott brand site. Room facts, bed size and private-bath details are shown only where an official page confirms them.</p>
-  <div class="notice danger"><strong>Price finding — updated 25 Nov 2026:</strong> Michelin's own hotel widget states "You cannot book more than 31 days" ahead, and no hotel's own booking engine published a dated February 2027 rate. <strong>However, dated rates are obtainable from third-party booking engines</strong>: four hotels now carry a live 7-night total for 15–22 Feb 2027 with the exact rate URL and capture date on each row. They are aggregator snapshots, not hotel quotes, and at least one depended on a promotion expiring 31 Dec 2026 (flag <a href="flagged.html">F10</a>). Eight of twelve candidates remain unpriced, and the cheapest-booking-window column is still blank because no other week was priced.</div>
-  <div class="card" id="origin-note">Route origin: citizenM New York Times Square, 218 West 50th Street, New York, NY 10019 (default). Select any hotel below to change it.</div>
-  <section>
-    <div class="toolbar"><input type="search" aria-label="Search hotels" placeholder="Search hotels…"><span class="count"></span></div>
-    <div data-table="hotels"></div>
-  </section>
-  <div class="notice info"><strong>Ranking caveat:</strong> a verified "number of Michelin restaurants within one hour" score needs routed travel times for each pair. Until then, candidates are ordered by the verified attributes shown, not by an invented proximity score. See <a href="itinerary.html">Itinerary & travel</a>.</div>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="../index.html"><span class="mark">NY</span><span><b>NYC 2027</b><small>2 adults · Feb 2027</small></span></a>
+  <nav class="nav" aria-label="Main navigation"><a href="../index.html">Overview</a><a href="executive-summary.html">Summary</a><a href="michelin-restaurants.html">Michelin</a><a class="active" href="hotels.html">Hotels</a><a href="activities.html">Activities</a><a href="itinerary.html">Itinerary</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged</a><a href="verification.html">Verification</a><a href="sources.html">Sources</a><a href="repo-audit.html">Repo audit</a></nav>
+</div></header>
+<main class="wrap" id="main">
+  <p class="eyebrow">Stay · ranked</p>
+  <h1>Hotels ranked by verified MICHELIN reach, then price</h1>
+  <p class="lede">16 candidates, 8 with a dated 7-night total for two adults, 4 with measured transit to every sampled MICHELIN cluster, and a clear note on the 6 whose bed and bathroom are still unconfirmed.</p>
 
-  <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">NYFun2 ↗</a> · <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">Coordination board ↗</a> · Research date <span data-checked>—</span>.</p>
+  <div class="notice good"><strong>Ranking rule.</strong> Primary key: a verified private bathroom + queen-or-larger bed <em>and</em> at least one stored door-to-door transit measurement. Every measured hotel reaches every sampled MICHELIN cluster inside 60 minutes (3–37 min), so the one-hour rule does not separate them and ties break on verified all-in price, then average transit time. Hotels with no measurement follow; hotels whose bed/bath is unconfirmed are listed last and excluded from the recommendation. <span class="small muted">25 transit legs were captured from five origin hotels on 2026-11-25; one origin (The Benjamin) was dropped for lacking an official source, so four published hotels carry measurements.</span></div>
+
+  <h2>Recommended shortlist</h2>
+  <div class="tiles"><div class="card">
+      <h3 style="margin-top:0">#1 · Eurostars Wall Street</h3>
+      <p class="small muted">Financial District, Lower Manhattan</p>
+      <p><strong>All-in 7 nights:</strong> $998 non-ref · ~$1,204 refundable <span class="small muted">(pre-tax $848 non-ref · $1,025 refundable)</span><br>
+      <strong>MICHELIN reach:</strong> 5/5 sampled clusters ≤60 min · avg 21.4 min · longest 32 min<br>
+      <strong>Room:</strong> Queen Room (172 sq ft, 1 Queen bed)<br>
+      <strong>Bath:</strong> Verified — Private bathroom</p>
+      <p class="small">Cheapest $848/$998 tier is a non-refundable Partner Offer; pay ~$206 more (~$1,204 all-in) for refundable terms or pick DoubleTree Chelsea ($1,110 all-in cancellable).</p>
+      </div>
+<div class="card">
+      <h3 style="margin-top:0">#2 · DoubleTree by Hilton Hotel New York City - Chelsea</h3>
+      <p class="small muted">Chelsea / Midtown South</p>
+      <p><strong>All-in 7 nights:</strong> $1,110 <span class="small muted">(pre-tax $943 ($942.91))</span><br>
+      <strong>MICHELIN reach:</strong> 5/5 sampled clusters ≤60 min · avg 20.4 min · longest 34 min<br>
+      <strong>Room:</strong> King Room – Non-Smoking (210 sq ft, 1 King bed)<br>
+      <strong>Bath:</strong> Verified — Private bathroom (Hilton &amp; Booking property spec)</p>
+      <p class="small">Rate reflects a 30% Black Friday Deal snapshot captured 2026-11-25; lock in free-cancellation hold and re-shop.</p>
+      </div>
+<div class="card">
+      <h3 style="margin-top:0">#3 · The Evelyn NoMad</h3>
+      <p class="small muted">NoMad / Madison Square North</p>
+      <p><strong>All-in 7 nights:</strong> $1,925 <span class="small muted">(pre-tax $1,653 (incl. $38/nt resort fee))</span><br>
+      <strong>MICHELIN reach:</strong> 5/5 sampled clusters ≤60 min · avg 20.2 min · longest 34 min<br>
+      <strong>Room:</strong> Superior Queen Room (180 sq ft, 1 Queen bed)<br>
+      <strong>Bath:</strong> Verified — Attached bathroom with walk-in shower</p>
+      <p class="small">Mandatory $38/night resort fee is already baked into the $1,653 pre-tax total.</p>
+      </div></div>
+
+  <h2>All candidates, ranked</h2>
+  <div class="toolbar"><input type="search" aria-label="Search table" placeholder="Search hotels by name, area, price or room…"><select data-filter="verify" aria-label="Filter by verification status"><option value="">All rows</option><option value="today">Checked today (2026-11-26)</option><option value="carried">Carried capture (2026-11-25)</option></select><select data-filter="qualified" aria-label="Filter by bed/bath verification"><option value="">All candidates</option><option value="qualified">Bed + bath verified</option><option value="unverified">Specification unverified</option></select><span class="count"></span></div>
+  <div data-table="hotels"></div>
+
+  <h2>Is the preferred week the cheapest? (five windows measured)</h2>
+  <p class="lede">Every window is 7 nights, two adults, 4–5 star Manhattan, sorted by the cheapest <em>qualifying</em> room. The date arithmetic and each booking search URL are in the table.</p>
+  <div data-table="hotels:windows"></div>
+  <div class="notice warn"><strong>The trap in W2.</strong> The $836 February 22 – March 1 rate is a <em>twin</em> room, which fails your queen-bed rule, so it is not comparable. The qualifying floor across the window is the preferred week (W1, 15–22 Feb) at $848 pre-tax / $998 all-in.</div>
+
+  <h2>When to book</h2>
+  <div class="card">
+    <p><strong>Now, at a cancellable rate.</strong> Two of the priced hotels were running 30–39% "Black Friday" promotions on 25 Nov 2026 (DoubleTree Chelsea, Arlo NoMad). A free-cancellation, $0-prepayment hold captures that price without risking a non-refundable commitment before the 14 Dec 2026 MICHELIN announcement and before the 3-vs-7-night decision.</p>
+    <p><strong>Then re-shop</strong> in early February 2027 (14–30 days out) and around the ceremony. No official source promises a future price drop, so the cancellable hold is the risk cap, not a prediction.</p>
+    <p><strong>Re-quote before paying:</strong> the totals here are third-party booking-engine snapshots captured 2026-11-25, not hotel quotes (flag F23). Booking.com property pages refused this session's fetcher on 2026-11-26, so they could not be re-quoted today.</p>
+  </div>
+
+  <h2>Why the ranking is not just "count of restaurants within an hour"</h2>
+  <div class="card">
+    <p>25 legs were measured on 2026-11-25 between five hotels and the five MICHELIN cluster anchors. The longest was 37 minutes (Williamsburg). Because every hotel reached every sampled cluster, the count is identical (5/5) for all measured hotels, and the metric carries no information for choosing between them. The site therefore reports the measured reach as a pass/fail gate and ranks on verified price and room quality. Unmeasured hotels show a blank rather than an implied 5/5.</p>
+    <p class="small muted">Method: Google Maps directions, travelmode=transit, "leave now", fastest itinerary returned, door-to-door including walks; captured 17:14–17:31 ET. Live service estimates, not timetables — re-run each row's Route link before committing to a reservation.</p>
+  </div>
+
+  <footer class="foot">
+    <p><strong>Data as captured:</strong> <span data-checked>2026-11-26</span> ·
+    <strong>Official-source verification:</strong> 2026-11-26 ·
+    <strong>Roster census:</strong> 2026-11-25</p>
+    <p>Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> ·
+    Coordination board: <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a> ·
+    <a href="../pages/flagged.html">Flagged for review</a> ·
+    <a href="../pages/verification.html">Verification log</a> ·
+    <a href="../pages/compare.html">Compare session kits</a></p>
+    <p class="small">Prices are what the linked official page said on the capture date. Nothing here is a booking, a quote, or financial advice. Blank means unverified — never estimated.</p>
+  </footer>
 </main>
-</div>
 <script src="../assets/app.js"></script>
 </body>
 </html>

@@ -32,7 +32,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
 | T16 | Disjoint namespaced full-spec verified dashboard + multi-platform social audit + official hotel & restaurant verification | done in `sessions/657520df` | arena/657520df-nyfun2 | `sessions/657520df/**`, `COORDINATION.md` | 27 Michelin rows (23 priced), 10 Queen+/private-bath hotels (8 dated 7-night pre-tax + all-in), 16 activities (incl. Feb 21 LNY Parade & Wollman 2026–27), 97 social links, 7-page dashboard + `verify.py` (0 errors). |
 | T17 | Disjoint namespaced 31-venue Michelin + 10-hotel + 18-activity + 155-social-link mobile dashboard (`sessions/c1cf7b23`) | done in `sessions/c1cf7b23` | arena/c1cf7b23-nyfun2 | `sessions/c1cf7b23/**`, `COORDINATION.md` | 31 Michelin rows (24 w/ official 2-adult prices incl. Sushi Sho $900–$990 & Per Se Salon $590), 10 hotels (pre-tax + all-in), 18 activities (incl. Feb 21 LNY Parade & Feb 28 Bryant Park Rink cutoff), 155 YT/TT/IG links, 11 flags & 6 repo-audit findings. |
-| T18 | Final integration + line-by-line verification refresh + mobile dashboard refresh + publish | in progress | arena/9bc6abed-nyfun2 | `index.html`, `pages/**`, `assets/**`, `data/**`, `scripts/**`, `README.md`, `research/verification-2026-11-26.md`, `COORDINATION.md` | Reconciles every namespaced kit into the canonical root site, re-checks facts against official sources on 2026-11-26, publishes a verification matrix, and records unresolved items on the Flagged page. |
+| T18 | Final integration + line-by-line verification refresh + mobile dashboard refresh + publish | done (PR pending) | arena/9bc6abed-nyfun2 | `index.html`, `pages/**`, `assets/**`, `data/**`, `scripts/**`, `README.md`, `research/verification-2026-11-26.md`, `COORDINATION.md` | Reconciles every namespaced kit into the canonical root site, re-checks facts against official sources on 2026-11-26, publishes a verification matrix, and records unresolved items on the Flagged page. |
 
 ## Log
 
@@ -321,3 +321,54 @@ hotel→restaurant routing for the ≤1-hour ranking; dated 2027 hotel rates; ai
 - Claimed **T18** as the final integration session: all other board tasks are `done`, so shared outputs (`index.html`, `pages/**`, `data/**`, `assets/**`, `scripts/**`) now have a single owner and cannot conflict with an active claim.
 - Scope rule kept: no edits inside another session's namespace directory; their files stay verbatim for comparison.
 - Live-verification tool access differs from earlier sessions (this sandbox reaches GitHub plus a proxied fetch/search channel; no direct socket access to external hosts). Every re-check performed today is dated and linked in `research/verification-2026-11-26.md` and on the site's Verification page; anything not re-fetched today is labelled as a carried 2026-11-25 capture, never as re-verified.
+
+### 2026-11-26 — session `arena/9bc6abed-nyfun2` (T18 completion)
+
+**Scope delivered.** Rebuilt the shared dashboard in place: `index.html`, `pages/**` (13 pages incl.
+new `verification.html` and `compare.html`), `assets/styles.css`, `assets/app.js`,
+`scripts/build_data.py`, `scripts/build_site.py`, `scripts/verify.py`, `data/*.json`,
+`research/canonical/*`, `research/verification-2026-11-26.md`, `README.md`. No file inside another
+session's namespace was modified.
+
+**Merge method.** `research/canonical/*.json` holds the pristine datasets; `scripts/build_data.py`
+rebuilds `data/*.json` from them plus the kits, so the merge is idempotent and cannot double-count.
+A kit value is copied only into a blank field and only when the kit row carries a source URL for it;
+each row records which session supplied each field in a `provenance` object.
+
+**Result.** 72 restaurant rows (69 starred + 3 guide-listed; 24 with a couple price, 35 with hours,
+27 with social links), 16 hotels (8 dated 7-night totals, 10 with verified queen/king + private
+bath, 4 with measured transit), 17 activities (17 with social links, 14 with a couple cost),
+13 questions, 17 suggestions, 26 flags, 16 dated verification checks, 5 booking windows.
+
+**Sources verified today (2026-11-26).** MICHELIN all-starred filter counters and 15 star levels
+(https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred); menu pages for
+Eleven Madison Park (elevenmadisonpark.com/faq), Jungsik, Masa, Cote and Gramercy Tavern; Met and
+MoMA admission/hours; betterchinatown.com parade date; Hyatt Place Chelsea room specification.
+Full list with per-check outcomes: `research/verification-2026-11-26.md`.
+
+**Verification performed.** `python3 scripts/verify.py` → **0 errors, 0 warnings** over 13 HTML
+pages and 147 data rows (local links, http source per row, duplicate rows, social URL scheme,
+hotel all-in arithmetic against the stated 14.75% + fee formula, blank-implies-flag).
+`node --check assets/app.js` passes. Local HTTP smoke test returned 200 for the overview, the
+Michelin and Hotels pages, `data/restaurants.json`, `assets/app.js` and `assets/styles.css`.
+
+**Irregularities logged (new flags F19–F26).**
+- F19 betterchinatown.com mixes the 2026 and 2027 parade dates (Chinese line stale).
+- F20 the previous front page understated its own dataset (20/12/10 vs 72/12/12; README 21) — fixed.
+- F21 14 kit venues are outside the 69-star census and one kit carried 3 starred names absent from
+  today's live list; none were merged into the census (`data/conflicts.json`).
+- F22 Atomix, Atera and Per Se prices stay blank (conflicting official captures);
+  Le Bernardin keeps $218 with the $225 alternative shown.
+- F23 Booking.com property pages refused the fetcher, so the dated hotel totals are 2026-11-25
+  snapshots; the window search page did load.
+- F24 six hotels have no verified queen/king + private-bath line and are excluded from the
+  recommendation (The Maritime, MADE, The Marlton, Soho Grand, Arlo Soho, The Wall Street Hotel).
+- F25 bryantpark.org and wollmanrinknyc.com were unreachable; dates/prices corroborated by ≥3
+  independent 2026-27 listings.
+- F26 45 starred rows still have no social/video link; none were invented (suggestion S17).
+- The Benjamin was dropped from the hotel list: measured transit existed but no official source for
+  its room did.
+
+**Handoff.** PR #12 (`arena/aad75793-nyfun2`) remains open and stale; it was not merged and nothing
+from it was used. The namespaced kits stay readable for comparison and are linked from
+`pages/compare.html`.

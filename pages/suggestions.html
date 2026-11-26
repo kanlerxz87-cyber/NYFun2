@@ -4,42 +4,42 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Suggestions — NYC 2027</title>
-<meta name="description" content="Suggestions: source-checked NYC trip planning for February 2027.">
+<meta name="description" content="Sixteen options to improve decision-making — with current status, so implemented ideas are not confused with proposals.">
+<meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="layout">
-<aside class="sidebar">
-  <a class="brand" href="../index.html"><span class="mark">NY</span><span>NYC 2027<small>Trip dashboard</small></span></a>
-  <nav class="nav" aria-label="Main navigation">
-    <a href="../index.html">Overview</a>
-    <a href="executive-summary.html">Summary</a>
-    <a href="michelin-restaurants.html">Michelin</a>
-    <a href="hotels.html">Hotels</a>
-    <a href="activities.html">Activities</a>
-    <a href="itinerary.html">Itinerary</a>
-    <a href="questions.html">Questions</a>
-    <a class="active" href="suggestions.html">Suggestions</a>
-    <a href="flagged.html">Flagged</a>
-    <a href="sources.html">Sources</a>
-    <a href="repo-audit.html">Repo audit</a>
-  </nav>
-  <div class="side-note">Verified against official sources · checked <span data-checked>—</span></div>
-</aside>
-<main class="content" id="main">
-  <p class="eyebrow">Review before implementing</p>
-  <h1>Suggestions for improving the plan and the site</h1>
-  <p class="lede">These are proposals only. None has been implemented as a fact or a change to verified data. Review them and choose the path that is worth the effort.</p>
-  <section>
-    <div class="toolbar"><input type="search" aria-label="Search suggestions" placeholder="Search suggestions…"><span class="count"></span></div>
-    <div data-table="decisions:suggestions"></div>
-  </section>
-  <div class="card"><h3>Recommended order</h3><p>S1 and S6 remove the two largest sources of uncertainty (hotel pricing and Michelin timing). S2 then makes the one-hour goal measurable. S7 is a small UI change that helps any reader see only fully verified rows.</p></div>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="../index.html"><span class="mark">NY</span><span><b>NYC 2027</b><small>2 adults · Feb 2027</small></span></a>
+  <nav class="nav" aria-label="Main navigation"><a href="../index.html">Overview</a><a href="executive-summary.html">Summary</a><a href="michelin-restaurants.html">Michelin</a><a href="hotels.html">Hotels</a><a href="activities.html">Activities</a><a href="itinerary.html">Itinerary</a><a href="questions.html">Questions</a><a class="active" href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged</a><a href="verification.html">Verification</a><a href="sources.html">Sources</a><a href="repo-audit.html">Repo audit</a></nav>
+</div></header>
+<main class="wrap" id="main">
+  <p class="eyebrow">Improve · nothing applied without review</p>
+  <h1>Suggestions, ranked by effort</h1>
+  <p class="lede">Sixteen options to improve decision-making — with current status, so implemented ideas are not confused with proposals.</p>
 
-  <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">NYFun2 ↗</a> · <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">Coordination board ↗</a> · Research date <span data-checked>—</span>.</p>
+  <div class="card">
+    <p><strong>17 suggestions</strong> for improving the plan or this site. Nothing here is implemented unless the Status column says so — this is the review list you asked for, so you can pick a path before anything changes.</p>
+    <p class="small muted">How to use it: filter to "Proposed" for uninplemented ideas, or "Implemented"/"Partially implemented" to see what this build already did. Each suggestion names its effort and what blocks it.</p>
+  </div>
+  <div class="toolbar"><input type="search" aria-label="Search suggestions" placeholder="Search suggestions…">
+    <select data-filter="status" aria-label="Filter by status"><option value="">All statuses</option><option value="done">Implemented</option><option value="partial">Partially implemented</option><option value="proposed">Proposed</option></select>
+    <span class="count"></span></div>
+  <div data-table="decisions:suggestions"></div>
+
+  <footer class="foot">
+    <p><strong>Data as captured:</strong> <span data-checked>2026-11-26</span> ·
+    <strong>Official-source verification:</strong> 2026-11-26 ·
+    <strong>Roster census:</strong> 2026-11-25</p>
+    <p>Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> ·
+    Coordination board: <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a> ·
+    <a href="../pages/flagged.html">Flagged for review</a> ·
+    <a href="../pages/verification.html">Verification log</a> ·
+    <a href="../pages/compare.html">Compare session kits</a></p>
+    <p class="small">Prices are what the linked official page said on the capture date. Nothing here is a booking, a quote, or financial advice. Blank means unverified — never estimated.</p>
+  </footer>
 </main>
-</div>
 <script src="../assets/app.js"></script>
 </body>
 </html>
