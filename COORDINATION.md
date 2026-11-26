@@ -32,8 +32,14 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
 | T16 | Disjoint namespaced full-spec verified dashboard + multi-platform social audit + official hotel & restaurant verification | done in `sessions/657520df` | arena/657520df-nyfun2 | `sessions/657520df/**`, `COORDINATION.md` | 27 Michelin rows (23 priced), 10 Queen+/private-bath hotels (8 dated 7-night pre-tax + all-in), 16 activities (incl. Feb 21 LNY Parade & Wollman 2026–27), 97 social links, 7-page dashboard + `verify.py` (0 errors). |
 | T17 | Disjoint namespaced 31-venue Michelin + 10-hotel + 18-activity + 155-social-link mobile dashboard (`sessions/c1cf7b23`) | done in `sessions/c1cf7b23` | arena/c1cf7b23-nyfun2 | `sessions/c1cf7b23/**`, `COORDINATION.md` | 31 Michelin rows (24 w/ official 2-adult prices incl. Sushi Sho $900–$990 & Per Se Salon $590), 10 hotels (pre-tax + all-in), 18 activities (incl. Feb 21 LNY Parade & Feb 28 Bryant Park Rink cutoff), 155 YT/TT/IG links, 11 flags & 6 repo-audit findings. |
+| T18 | Final integration, line-by-line verification, PR to main and Pages publish | **in progress** (claimed 2026-11-26) | arena/4a8e5aa4-nyfun2 | `index.html`, `assets/**`, `pages/**`, `data/**`, `scripts/**`, `COORDINATION.md` | All T0–T17 are done, so this session takes the final-integration role. Will not edit any `sessions/**` or `alt/**` file. Shared branch is fixed by the platform to `arena/4a8e5aa4-nyfun2`, not the older branch named in the conventions above. |
 
 ## Log
+
+### 2026-11-26 — session `arena/4a8e5aa4-nyfun2` (T18 claim)
+- Read the full board first. T0–T17 are all marked done, so no claimed research task is being started.
+- Claimed the final-integration task T18: root landing page, root `assets/**`, `pages/**`, `data/**`, `scripts/**` and this board. All parallel kits under `sessions/**` and `alt/**` are read-only references.
+- Platform fixes this session to branch `arena/4a8e5aa4-nyfun2`; the older branch name in the board's conventions belongs to a previous session and was not changed by this session.
 
 ### 2026-11-25 — session `arena/4a10e962-nyfun2` (continued)
 - T0 done: repo audit found no pre-existing content; no irregularities in repository history.
