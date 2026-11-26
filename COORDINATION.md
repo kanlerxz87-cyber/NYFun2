@@ -4,11 +4,11 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 
 ## Session conventions
 
-- This repository session is bound to branch `arena/4a10e962-nyfun2` (fixed by the platform). Do not switch branches.
-- Session ID for this branch: `arena/4a10e962-nyfun2`.
-- Shared outputs (site navigation, index, integrated tables) are edited only during final integration after the research tasks are complete.
+- Historical first-integration notes below refer to session `arena/4a10e962-nyfun2`. This working session is fixed by Arena to branch `arena/81de4b88-nyfun2`, based at `19f4d20c574a94a9b44efaae54a0f3b73c6a8b82` from `main`. Do not switch branches.
+- Current session ID: `arena/81de4b88-nyfun2`.
+- Shared outputs (site navigation, index, integrated tables) are edited only during final integration after the research tasks are complete. T0–T17 are marked done; T18 below is this session's final integration audit.
 - Every factual table row needs a source URL from an official/primary source. Unconfirmed values stay blank and are listed on the Flagged for Review page.
-- Before each push: `git pull --rebase origin arena/4a10e962-nyfun2`, then push to that same branch. Never discard another session's work on conflict — stop and log it.
+- Before each push, rebase against the remote current-session branch. Because that branch did not exist at the start of this session, rebase the initial claim against `origin/main` and then push only `arena/81de4b88-nyfun2`. Never discard another session's work on conflict — stop and log it.
 
 ## Task board
 
@@ -32,8 +32,13 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
 | T16 | Disjoint namespaced full-spec verified dashboard + multi-platform social audit + official hotel & restaurant verification | done in `sessions/657520df` | arena/657520df-nyfun2 | `sessions/657520df/**`, `COORDINATION.md` | 27 Michelin rows (23 priced), 10 Queen+/private-bath hotels (8 dated 7-night pre-tax + all-in), 16 activities (incl. Feb 21 LNY Parade & Wollman 2026–27), 97 social links, 7-page dashboard + `verify.py` (0 errors). |
 | T17 | Disjoint namespaced 31-venue Michelin + 10-hotel + 18-activity + 155-social-link mobile dashboard (`sessions/c1cf7b23`) | done in `sessions/c1cf7b23` | arena/c1cf7b23-nyfun2 | `sessions/c1cf7b23/**`, `COORDINATION.md` | 31 Michelin rows (24 w/ official 2-adult prices incl. Sushi Sho $900–$990 & Per Se Salon $590), 10 hotels (pre-tax + all-in), 18 activities (incl. Feb 21 LNY Parade & Feb 28 Bryant Park Rink cutoff), 155 YT/TT/IG links, 11 flags & 6 repo-audit findings. |
+| T18 | Final integration: completeness audit, canonical site/data reconciliation, verification, and publish | in progress | arena/81de4b88-nyfun2 | `COORDINATION.md`, `README.md`, `index.html`, `assets/**`, `pages/**`, `data/**`, `scripts/**`, `.github/**` | Audit the root site against the user's full specification and the completed kits; retain only officially supported values, resolve stale contradictions, run verification, then PR/deploy if changes are needed. |
 
 ## Log
+
+### 2026-11-26 — session `arena/81de4b88-nyfun2` (T18 claim)
+- Read this coordination board before starting. T0–T17 are marked done; no task is currently marked in progress. Claimed T18 as final integration, scoped to the root dashboard, root data, verification scripts, documentation, and this board. The existing root site is already part of `main` at the branch base; this session will audit and reconcile it rather than duplicate completed work.
+- Platform constraint: the current branch is fixed to `arena/81de4b88-nyfun2` (base `19f4d20c574a94a9b44efaae54a0f3b73c6a8b82`). No remote branch with that name existed at claim time. All changes will stay on this branch; the claim is being rebased against `origin/main` before its first push.
 
 ### 2026-11-25 — session `arena/4a10e962-nyfun2` (continued)
 - T0 done: repo audit found no pre-existing content; no irregularities in repository history.
