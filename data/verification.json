@@ -75,17 +75,17 @@
   },
   {
    "fact": "Bryant Park Winter Village season",
-   "value": "Season 28 Oct 2026 - 28 Feb 2027; rink 08:00-22:00 daily; holiday shops end 3 Jan 2027",
-   "source": "https://bryantpark.org/activities/winter-village",
-   "note": "Official page could not be fetched today (fetch error); four independent 2026 guides agree. Official link kept for manual check",
-   "result": "Corroborated, official page unreachable"
+   "value": "Season 28 Oct 2026 - 28 Feb 2027; rink 08:00-22:00 daily; Lodge 10:00-22:00; holiday shops end 3 Jan 2027; rental $18.72-$64.48",
+   "source": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+   "note": "Re-read directly from bryantpark.org on 2026-11-26 (sessions 45972379 and 4a8e5aa4)",
+   "result": "Verified"
   },
   {
    "fact": "Wollman Rink 2026-27",
-   "value": "Season 28 Oct 2026 - 16 Mar 2027; adults $16 off-peak / $28 peak / $40 prime; rental $12",
+   "value": "Season 28 Oct 2026 - 16 Mar 2027; adults $16 off-peak / $28 peak / $40 prime; rental $12; 15 Feb Community Day, 16-21 Feb Peak, 22-25 Feb Off-Peak",
    "source": "https://wollmanrinknyc.com/plan/",
-   "note": "Official page not fetched today; three independent 2026-27 price round-ups agree",
-   "result": "Corroborated, official page not re-read"
+   "note": "Re-read directly from wollmanrinknyc.com/plan/ on 2026-11-26 (sessions 45972379 and 4a8e5aa4)",
+   "result": "Verified"
   },
   {
    "fact": "Hyatt Place NY/Chelsea room specification",
@@ -114,14 +114,75 @@
    "source": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
    "note": "Not re-fetched today; carried from the 2026-11-25 capture and still the basis of flag F1",
    "result": "Carried"
+  },
+  {
+   "fact": "Atomix Tock pricing & socials",
+   "value": "Nov Chef's Counter $424/pp ($848) & Bar Tasting $314/pp ($628) incl. admin fee; Dec $495/pp & from $352/pp; @atomixnyc",
+   "source": "https://www.exploretock.com/atomixnyc/help",
+   "note": "Read directly from Atomix's official Tock help page on 2026-11-26 (session arena/779506a6-nyfun2); explains why earlier sessions saw $424 vs $495",
+   "result": "Verified"
+  },
+  {
+   "fact": "Sushi Sho Tock pricing & release",
+   "value": "Shorter Omakase at Hinoki Counter $495/pp incl. admin fee ($990 for two); booking through 28 Feb 2027; releases 1 Dec 2026 11:00 AM EST; @sushishonyc",
+   "source": "https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-at-hinoki-counter",
+   "note": "Read directly from Sushi Sho's official Tock page on 2026-11-26 (sessions 45972379, 4a8e5aa4, 779506a6)",
+   "result": "Verified"
+  },
+  {
+   "fact": "Per Se Tock deposit-only status",
+   "value": "Main Dining Room starting at $200/pp deposit; Salon Four-Course $150/pp deposit; no full menu price printed",
+   "source": "https://www.exploretock.com/perse/experience/7768/salon-lounge-seating-four-course-tasting-menu",
+   "note": "Read directly from Per Se's official Tock page on 2026-11-26; confirms row must stay blank (F18/F24)",
+   "result": "Verified"
+  },
+  {
+   "fact": "Guggenheim admission and hours",
+   "value": "General Admission $30 ($60 for two); daily 10:30-17:30; PWYW Tue & Sun 16:00-17:30",
+   "source": "https://www.guggenheim.org/plan-your-visit",
+   "note": "Read directly from guggenheim.org/plan-your-visit on 2026-11-26 (session arena/779506a6-nyfun2)",
+   "result": "Verified"
+  },
+  {
+   "fact": "AMNH Pay What You Wish & hours",
+   "value": "NY-resident PWYW suggested $25 adult ($50 for two, GA only); non-NY mandatory GA; closed Thanksgiving 26 Nov",
+   "source": "https://www.amnh.org/plan-your-visit",
+   "note": "Read directly from amnh.org/plan-your-visit on 2026-11-26 (session arena/779506a6-nyfun2)",
+   "result": "Verified"
+  },
+  {
+   "fact": "9/11 Memorial & Museum hours",
+   "value": "Memorial daily 08:00-20:00; Museum Wed-Mon + select Tue 09:00-19:00 (last entry 17:30); advance Museum ticket required",
+   "source": "https://www.911memorial.org/visit",
+   "note": "Read directly from 911memorial.org/visit on 2026-11-26 (session arena/779506a6-nyfun2)",
+   "result": "Verified"
+  },
+  {
+   "fact": "Empire State Building seasonal hours",
+   "value": "Open 365 days; typical winter 10:00-22:00 (doors close 21:00; select Nov/Dec dates 09:00-23:00)",
+   "source": "https://www.esbnyc.com/visit/hours-of-operation",
+   "note": "Read directly from esbnyc.com/visit/hours-of-operation on 2026-11-26 (session arena/779506a6-nyfun2); Feb 2027 calendar not yet posted",
+   "result": "Verified"
+  },
+  {
+   "fact": "SUMMIT One Vanderbilt opening days",
+   "value": "Daily (Sunday-Saturday) 08:00-24:00, last entry 22:30; no Tuesday closure on official FAQ",
+   "source": "https://info.summitov.com/",
+   "note": "Read directly from info.summitov.com FAQ footer on 2026-11-26 (session arena/4a8e5aa4-nyfun2; F29)",
+   "result": "Verified"
+  },
+  {
+   "fact": "MTA subway and bus fares",
+   "value": "Subway / local / limited / Select Bus Service $3; express bus $7.25",
+   "source": "https://www.mta.info/fares-tolls",
+   "note": "Read directly from mta.info/fares-tolls on 2026-11-26 (session arena/779506a6-nyfun2)",
+   "result": "Verified"
   }
  ],
  "resultCounts": {
-  "Verified": 9,
+  "Verified": 20,
   "Verified (hours corroborated)": 1,
   "Verified (typo flagged)": 1,
-  "Corroborated, official page unreachable": 1,
-  "Corroborated, official page not re-read": 1,
   "NOT re-quoted today - carried": 1,
   "Carried snapshot": 1,
   "Carried": 1
@@ -130,7 +191,7 @@
   "restaurants": {
    "rows": 72,
    "withOfficialSource": 72,
-   "withPrice": 24,
+   "withPrice": 25,
    "withHours": 35,
    "withSocial": 27,
    "withAddress": 39

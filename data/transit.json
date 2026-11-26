@@ -1,0 +1,70 @@
+{
+  "as_of": "2026-11-25",
+  "method": "Google Maps Directions, travelmode=transit, 'Leave now', captured 2026-11-25 between 17:14 and 17:31 America/New_York, origin = hotel name exactly as on Booking.com, destination = representative restaurant/venue name. Each row records the FASTEST itinerary Google returned at capture (not the pre-selected default, which is sometimes slower). Times are door-to-door incl. walking. Live service estimates, not timetables; re-run the linked URL before committing to a reservation.",
+  "url_template": "https://www.google.com/maps/dir/?api=1&origin={origin}&destination={destination}&travelmode=transit",
+  "fare_note": "Every subway/bus itinerary showed $3.00 (OMNY/MetroCard single ride). NYC Ferry legs showed $4.50. Fares verified only as displayed in the directions panel.",
+  "hotel_origins": {
+    "eurostars-wall": "Eurostars Wall Street New York",
+    "doubletree-chelsea": "DoubleTree by Hilton Hotel New York City Chelsea",
+    "frederick-tribeca": "The Frederick Hotel Tribeca New York",
+    "evelyn-nomad": "The Evelyn NoMad New York",
+    "benjamin-midtown": "The Benjamin Royal Sonesta New York"
+  },
+  "anchors": [
+    {"id": "midtown-51", "label": "Midtown 51st St cluster", "destination": "Le Bernardin New York", "restaurants": ["Le Bernardin", "The Modern", "Per Se", "Jean-Georges", "Sushi Sho", "Masa"]},
+    {"id": "flatiron", "label": "Flatiron / Madison Square cluster", "destination": "Eleven Madison Park New York", "restaurants": ["Eleven Madison Park", "Atomix", "Cote", "Jua", "Oiji Mi", "Noda", "Rezdôra", "odo", "YingTao", "Yoshino", "Mari", "Casa Mono"]},
+    {"id": "tribeca", "label": "Tribeca / Lower Manhattan cluster", "destination": "Jungsik New York", "restaurants": ["Jungsik New York", "Atera", "Icca", "Huso", "Muku", "Shion 69 Leonard Street", "L'Abeille", "Le Coucou", "Corima", "Bar Miller", "Shmoné", "Estela"]},
+    {"id": "fidi", "label": "Financial District cluster", "destination": "Crown Shy New York", "restaurants": ["Saga", "Crown Shy", "Family Meal at Blue Hill", "Delmonico's"]},
+    {"id": "brooklyn-wburg", "label": "Williamsburg, Brooklyn", "destination": "Aska Brooklyn", "restaurants": ["Aska", "Francie", "Shota Omakase", "The Four Horsemen"]}
+  ],
+  "matrix": [
+    {"hotel": "eurostars-wall", "anchor": "midtown-51", "minutes": 26, "lines": ["2/3 from Wall St → 1"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Le+Bernardin+New+York&travelmode=transit"},
+    {"hotel": "eurostars-wall", "anchor": "tribeca", "minutes": 17, "lines": ["2/3 from Wall St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Jungsik+New+York&travelmode=transit"},
+    {"hotel": "eurostars-wall", "anchor": "flatiron", "minutes": 29, "lines": ["4/5/6 from Wall St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Eleven+Madison+Park+New+York&travelmode=transit"},
+    {"hotel": "eurostars-wall", "anchor": "fidi", "minutes": 3, "lines": ["walk, 0.1 mile via Pine St"], "mode": "walk", "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Crown+Shy+New+York&travelmode=transit"},
+    {"hotel": "eurostars-wall", "anchor": "brooklyn-wburg", "minutes": 32, "lines": ["NYC Ferry ER from Pier 11/Wall St, $4.50"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Aska+Brooklyn&travelmode=transit"},
+
+    {"hotel": "doubletree-chelsea", "anchor": "midtown-51", "minutes": 14, "lines": ["1 from 28 St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Le+Bernardin+New+York&travelmode=transit"},
+    {"hotel": "doubletree-chelsea", "anchor": "tribeca", "minutes": 19, "lines": ["1 from 28 St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Jungsik+New+York&travelmode=transit"},
+    {"hotel": "doubletree-chelsea", "anchor": "flatiron", "minutes": 12, "lines": ["walk, 0.5 mile via W 29th St and Broadway"], "mode": "walk", "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Eleven+Madison+Park+New+York&travelmode=transit"},
+    {"hotel": "doubletree-chelsea", "anchor": "fidi", "minutes": 23, "lines": ["2/3 from 34 St-Penn Station"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Crown+Shy+New+York&travelmode=transit"},
+    {"hotel": "doubletree-chelsea", "anchor": "brooklyn-wburg", "minutes": 34, "lines": ["M from 23 St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Aska+Brooklyn&travelmode=transit"},
+
+    {"hotel": "frederick-tribeca", "anchor": "midtown-51", "minutes": 21, "lines": ["1 from Chambers St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Le+Bernardin+New+York&travelmode=transit"},
+    {"hotel": "frederick-tribeca", "anchor": "tribeca", "minutes": 5, "lines": ["walk, 0.2 mile via Hudson St"], "mode": "walk", "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Jungsik+New+York&travelmode=transit"},
+    {"hotel": "frederick-tribeca", "anchor": "flatiron", "minutes": 22, "lines": ["R/W from City Hall"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Eleven+Madison+Park+New+York&travelmode=transit"},
+    {"hotel": "frederick-tribeca", "anchor": "fidi", "minutes": 8, "lines": ["2/3 from Chambers St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Crown+Shy+New+York&travelmode=transit"},
+    {"hotel": "frederick-tribeca", "anchor": "brooklyn-wburg", "minutes": 30, "lines": ["J/Z from Chambers St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Aska+Brooklyn&travelmode=transit"},
+
+    {"hotel": "evelyn-nomad", "anchor": "midtown-51", "minutes": 14, "lines": ["1 from 28 St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Le+Bernardin+New+York&travelmode=transit"},
+    {"hotel": "evelyn-nomad", "anchor": "tribeca", "minutes": 25, "lines": ["1 from 28 St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Jungsik+New+York&travelmode=transit"},
+    {"hotel": "evelyn-nomad", "anchor": "flatiron", "minutes": 4, "lines": ["walk, 0.2 mile via E 27th St and Madison Ave"], "mode": "walk", "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Eleven+Madison+Park+New+York&travelmode=transit"},
+    {"hotel": "evelyn-nomad", "anchor": "fidi", "minutes": 24, "lines": ["R/W from 28 St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Crown+Shy+New+York&travelmode=transit"},
+    {"hotel": "evelyn-nomad", "anchor": "brooklyn-wburg", "minutes": 34, "lines": ["R/W → L → B32 bus"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Aska+Brooklyn&travelmode=transit"},
+
+    {"hotel": "benjamin-midtown", "anchor": "midtown-51", "minutes": 13, "lines": ["E from Lexington Av/53 St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Benjamin+Royal+Sonesta+New+York&destination=Le+Bernardin+New+York&travelmode=transit"},
+    {"hotel": "benjamin-midtown", "anchor": "tribeca", "minutes": 32, "lines": ["6 from 51 St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Benjamin+Royal+Sonesta+New+York&destination=Jungsik+New+York&travelmode=transit"},
+    {"hotel": "benjamin-midtown", "anchor": "flatiron", "minutes": 12, "lines": ["6 from 51 St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Benjamin+Royal+Sonesta+New+York&destination=Eleven+Madison+Park+New+York&travelmode=transit"},
+    {"hotel": "benjamin-midtown", "anchor": "fidi", "minutes": 25, "lines": ["6 → 4/5 from 51 St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Benjamin+Royal+Sonesta+New+York&destination=Crown+Shy+New+York&travelmode=transit"},
+    {"hotel": "benjamin-midtown", "anchor": "brooklyn-wburg", "minutes": 37, "lines": ["6 → L → B32 bus"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=The+Benjamin+Royal+Sonesta+New+York&destination=Aska+Brooklyn&travelmode=transit"}
+  ],
+  "activity_legs": [
+    {"hotel": "eurostars-wall", "activity": "The Metropolitan Museum of Art", "minutes": 39, "lines": ["4/5 from Wall St to 86 St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=The+Metropolitan+Museum+of+Art&travelmode=transit"},
+    {"hotel": "eurostars-wall", "activity": "Museum of Modern Art", "minutes": 32, "lines": ["2/3 → 1 from Wall St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Museum+of+Modern+Art&travelmode=transit"},
+    {"hotel": "eurostars-wall", "activity": "American Museum of Natural History", "minutes": 34, "lines": ["2/3 → 1 → B/C from Wall St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=American+Museum+of+Natural+History,+200+Central+Park+West,+New+York,+NY+10024&travelmode=transit"},
+    {"hotel": "eurostars-wall", "activity": "Katz's Delicatessen", "minutes": 22, "lines": ["M15-SBS from Water St/Wall St"], "verified": "v", "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Katz%27s+Delicatessen,+205+E+Houston+St,+New+York,+NY+10002&travelmode=transit"},
+    {"hotel": "eurostars-wall", "activity": "National September 11 Memorial & Museum", "minutes": null, "verified": "u", "note": "Walkable from the Financial District; not yet timed — see flag T-03"},
+    {"hotel": "eurostars-wall", "activity": "Statue of Liberty (Battery Park ferry)", "minutes": null, "verified": "u", "note": "Battery Park is 0.6 mi from the hotel per Booking.com; ferry sailing time is not a transit leg — see flag T-03"},
+    {"hotel": "eurostars-wall", "activity": "The High Line", "minutes": null, "verified": "u", "note": "Not yet timed — see flag T-03"},
+    {"hotel": "eurostars-wall", "activity": "Top of the Rock", "minutes": null, "verified": "u", "note": "Not yet timed — see flag T-03"},
+    {"hotel": "eurostars-wall", "activity": "Central Park", "minutes": null, "verified": "u", "note": "Not yet timed — see flag T-03"},
+    {"hotel": "eurostars-wall", "activity": "NYPL Stephen A. Schwarzman Building", "minutes": null, "verified": "u", "note": "Not yet timed — see flag T-03"}
+  ],
+  "findings": [
+    "All 25 hotel→Michelin-cluster legs came in at 37 minutes or less, so the '≤1 hour' rule does NOT separate these five Manhattan hotels. Every hotel reaches 100% of the sampled clusters. The ranking therefore falls through to price and room quality (see Hotels page).",
+    "The single fastest Michelin connection in the set is Eurostars Wall Street → Crown Shy: a 3-minute, 0.1-mile WALK. The Frederick Tribeca → Jungsik is a 5-minute walk.",
+    "Brooklyn is not the long pole it was assumed to be: Williamsburg (Aska) is 30–37 minutes from all five hotels, under the 1-hour limit. Downtown hotels reach it via J/Z or the NYC Ferry, not only via the L train.",
+    "Midtown East (Benjamin) is the slowest of the five to the Downtown clusters (32 min Tribeca, 25 min FiDi) and the most expensive per night of the Manhattan-verified set after Evelyn and Frederick.",
+    "AMNH lookup trap: searching 'American Museum of Natural History' resolved to Houston, TX. The corrected query includes the street address; always pass the full address when the venue name is ambiguous."
+  ]
+}

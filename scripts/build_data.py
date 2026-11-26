@@ -95,10 +95,17 @@ def merge_social(*groups):
 # --------------------------------------------------------------------------
 VERIFIED_TODAY_RESTAURANTS = {
     "Eleven Madison Park", "Jungsik New York", "Masa", "Cote", "Gramercy Tavern",
-    "Le Coucou", "Sushi Sho", "Atera", "Saga", "Joo Ok", "César", "Noda",
+    "Le Coucou", "Sushi Sho", "Per Se", "Atomix", "Atera", "Saga", "Joo Ok", "César", "Noda",
     "Jeju Noodle Bar", "Semma", "Yoshino", "Crown Shy", "Shmoné",
 }
-VERIFIED_TODAY_ACTIVITIES = {"The Met Fifth Avenue", "MoMA (Museum of Modern Art)"}
+VERIFIED_TODAY_ACTIVITIES = {
+    "The Met Fifth Avenue", "MoMA (Museum of Modern Art)",
+    "Solomon R. Guggenheim Museum", "American Museum of Natural History",
+    "9/11 Memorial (outdoor) and Museum", "Empire State Building Observatory",
+    "Wollman Rink in Central Park",
+    "Bank of America Winter Village at Bryant Park (The Rink & The Lodge)",
+    "29th Chinatown Lunar New Year Parade & Festival (2027)",
+}
 VERIFIED_TODAY_HOTELS = {"Hyatt Place New York / Chelsea"}
 
 
@@ -123,8 +130,8 @@ def build_restaurants():
     conflicts, enriched, kit_only = [], Counter(), []
     # Venues where the kits' official pages disagree with each other or are not a
     # menu page: no price is adopted, the row stays blank and is flagged (F15/F24).
+    # (Atomix was resolved 2026-11-26 via its official Tock page: Nov $424/$314 vs Dec $495/$352+.)
     PRICE_BLOCKLIST = {
-        "Atomix": "Kits report $424-$495 per person from different capture dates and a help page, not a menu.",
         "Atera": "Kits report $298 (restaurant page) and $325 (booking page) per person.",
         "Per Se": "Kits report $185 (Salon 4-course) and $295 (Salon 5-course); the dining room shows only a deposit.",
     }
@@ -614,7 +621,7 @@ def build_activities():
         if k in seen_keys or k == "katz" or is_dup(r.get("name"), [x["name"] for x in out]):
             continue
         seen_keys.add(k)
-        out.append({
+        item = {
             "name": r.get("name"),
             "category": r.get("category") or "",
             "area": r.get("area") or r.get("neighborhood") or "",
@@ -630,7 +637,22 @@ def build_activities():
             "flags": as_list(r.get("flags")),
             "provenance": {"row": f"added from {session} (activity not in the first canonical set)"},
             "verifyStatus": "carried capture (2026-11-25)",
-        })
+        }
+        # Preserve PR #28 (arena/4a8e5aa4-nyfun2) official FAQ correction for SUMMIT One Vanderbilt
+        if "SUMMIT One Vanderbilt" in str(item["name"]):
+            item["daysOpen"] = "Daily (7 days) — official FAQ footer lists every weekday, re-read 26 Nov 2026"
+            item["hours"] = "Daily 08:00–24:00; last entry 22:30 (official FAQ footer, re-read 26 Nov 2026)"
+            item["exceptions"] = ("Final re-check found no Tuesday closure on the official page: it prints daily "
+                                  "08:00–24:00 and an earlier kit note about historical winter Tuesday closures is not "
+                                  "carried forward. All ticket sales are final; low-visibility rebooking terms and "
+                                  "mirrored-floor dress guidance remain on the official page. F29 records the discrepancy.")
+            item["flags"] = [
+                "Dynamic timed-ticket checkout price for Feb 2027 still requires a live Webstore check; couple cost left blank rather than citing third-party ~$40 estimates.",
+                "F29: the opening-days line was corrected from the kit's 'historically closed Tuesdays' after the official FAQ footer was re-read on 26 Nov 2026.",
+            ]
+            item["provenance"]["hoursAndDays"] = "Re-verified 2026-11-26 by arena/4a8e5aa4-nyfun2 against https://info.summitov.com/"
+            item["verifyStatus"] = "checked today (2026-11-26)"
+        out.append(item)
 
     data_canon["items"] = out
     data_canon["meta"].update({
@@ -678,12 +700,12 @@ V = [
     ("Chinatown Lunar New Year Parade 2027", "29th parade: Sunday 21 February 2027, 13:00, Chinatown; firecracker ceremony Sat 6 Feb 2027",
      "http://betterchinatown.com/",
      "Organiser page plus two independent listings agree. The organiser's Chinese-language line on the same page still says 2026 - flagged F19", "Verified (typo flagged)"),
-    ("Bryant Park Winter Village season", "Season 28 Oct 2026 - 28 Feb 2027; rink 08:00-22:00 daily; holiday shops end 3 Jan 2027",
-     "https://bryantpark.org/activities/winter-village",
-     "Official page could not be fetched today (fetch error); four independent 2026 guides agree. Official link kept for manual check", "Corroborated, official page unreachable"),
-    ("Wollman Rink 2026-27", "Season 28 Oct 2026 - 16 Mar 2027; adults $16 off-peak / $28 peak / $40 prime; rental $12",
+    ("Bryant Park Winter Village season", "Season 28 Oct 2026 - 28 Feb 2027; rink 08:00-22:00 daily; Lodge 10:00-22:00; holiday shops end 3 Jan 2027; rental $18.72-$64.48",
+     "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+     "Re-read directly from bryantpark.org on 2026-11-26 (sessions 45972379 and 4a8e5aa4)", "Verified"),
+    ("Wollman Rink 2026-27", "Season 28 Oct 2026 - 16 Mar 2027; adults $16 off-peak / $28 peak / $40 prime; rental $12; 15 Feb Community Day, 16-21 Feb Peak, 22-25 Feb Off-Peak",
      "https://wollmanrinknyc.com/plan/",
-     "Official page not fetched today; three independent 2026-27 price round-ups agree", "Corroborated, official page not re-read"),
+     "Re-read directly from wollmanrinknyc.com/plan/ on 2026-11-26 (sessions 45972379 and 4a8e5aa4)", "Verified"),
     ("Hyatt Place NY/Chelsea room specification", "King-bed rooms with a bathroom with shower; 180 sq ft; address 140 West 24th Street",
      "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms",
      "Read from the official rooms page today", "Verified"),
@@ -696,6 +718,33 @@ V = [
     ("Michelin 2026 ceremony date", "14 Dec 2026 (Northeast Cities)",
      "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
      "Not re-fetched today; carried from the 2026-11-25 capture and still the basis of flag F1", "Carried"),
+    ("Atomix Tock pricing & socials", "Nov Chef's Counter $424/pp ($848) & Bar Tasting $314/pp ($628) incl. admin fee; Dec $495/pp & from $352/pp; @atomixnyc",
+     "https://www.exploretock.com/atomixnyc/help",
+     "Read directly from Atomix's official Tock help page on 2026-11-26 (session arena/779506a6-nyfun2); explains why earlier sessions saw $424 vs $495", "Verified"),
+    ("Sushi Sho Tock pricing & release", "Shorter Omakase at Hinoki Counter $495/pp incl. admin fee ($990 for two); booking through 28 Feb 2027; releases 1 Dec 2026 11:00 AM EST; @sushishonyc",
+     "https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-at-hinoki-counter",
+     "Read directly from Sushi Sho's official Tock page on 2026-11-26 (sessions 45972379, 4a8e5aa4, 779506a6)", "Verified"),
+    ("Per Se Tock deposit-only status", "Main Dining Room starting at $200/pp deposit; Salon Four-Course $150/pp deposit; no full menu price printed",
+     "https://www.exploretock.com/perse/experience/7768/salon-lounge-seating-four-course-tasting-menu",
+     "Read directly from Per Se's official Tock page on 2026-11-26; confirms row must stay blank (F18/F24)", "Verified"),
+    ("Guggenheim admission and hours", "General Admission $30 ($60 for two); daily 10:30-17:30; PWYW Tue & Sun 16:00-17:30",
+     "https://www.guggenheim.org/plan-your-visit",
+     "Read directly from guggenheim.org/plan-your-visit on 2026-11-26 (session arena/779506a6-nyfun2)", "Verified"),
+    ("AMNH Pay What You Wish & hours", "NY-resident PWYW suggested $25 adult ($50 for two, GA only); non-NY mandatory GA; closed Thanksgiving 26 Nov",
+     "https://www.amnh.org/plan-your-visit",
+     "Read directly from amnh.org/plan-your-visit on 2026-11-26 (session arena/779506a6-nyfun2)", "Verified"),
+    ("9/11 Memorial & Museum hours", "Memorial daily 08:00-20:00; Museum Wed-Mon + select Tue 09:00-19:00 (last entry 17:30); advance Museum ticket required",
+     "https://www.911memorial.org/visit",
+     "Read directly from 911memorial.org/visit on 2026-11-26 (session arena/779506a6-nyfun2)", "Verified"),
+    ("Empire State Building seasonal hours", "Open 365 days; typical winter 10:00-22:00 (doors close 21:00; select Nov/Dec dates 09:00-23:00)",
+     "https://www.esbnyc.com/visit/hours-of-operation",
+     "Read directly from esbnyc.com/visit/hours-of-operation on 2026-11-26 (session arena/779506a6-nyfun2); Feb 2027 calendar not yet posted", "Verified"),
+    ("SUMMIT One Vanderbilt opening days", "Daily (Sunday-Saturday) 08:00-24:00, last entry 22:30; no Tuesday closure on official FAQ",
+     "https://info.summitov.com/",
+     "Read directly from info.summitov.com FAQ footer on 2026-11-26 (session arena/4a8e5aa4-nyfun2; F29)", "Verified"),
+    ("MTA subway and bus fares", "Subway / local / limited / Select Bus Service $3; express bus $7.25",
+     "https://www.mta.info/fares-tolls",
+     "Read directly from mta.info/fares-tolls on 2026-11-26 (session arena/779506a6-nyfun2)", "Verified"),
 ]
 
 
@@ -738,8 +787,9 @@ def build_decisions(rest, hot, act):
     q["Q5"]["provisionalAnswer"] = ("Treat 'within one hour' as satisfied for any central Manhattan hotel; rank on price, "
                                     "room quality and average transit instead. Unmeasured hotels carry a blank, not a guess.")
     q["Q5"]["blocking"] = False
-    q["Q6"]["provisionalAnswer"] = ("Use the verified couple totals as a planning floor and re-confirm at booking. Per Se, "
-                                    "Atomix and Atera stay blank until an official menu price resolves the conflict (F24).")
+    q["Q6"]["provisionalAnswer"] = ("Use the verified couple totals as a planning floor and re-confirm at booking. Per Se "
+                                    "and Atera stay blank until an official menu price resolves the conflict (F24); Atomix "
+                                    "is resolved via Tock ($848/$628 November, $990/$704+ December - re-confirm for 2027).")
     q["Q6"]["whatWeKnow"] = (f"{rest['coverage']['priceTwoAdults']} of {rest['rows']} restaurant rows carry a couple total built from "
                              "a per-person price on an official menu, FAQ or official booking channel: from $156 (Gramercy "
                              "Tavern tavern three-course) to $1,900 (Masa Hinoki Counter). Food only, before tax and tip. "
@@ -822,12 +872,12 @@ def build_decisions(rest, hot, act):
                     "data/conflicts.json for review."),
          "source": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred"},
         {"id": "F24", "severity": "Medium",
-         "title": "Three restaurant prices are contested and stay blank",
-         "detail": ("Atomix ($424 vs $495 per person, different capture dates and a help page rather than a menu), Atera "
-                    "($298 on the site vs $325 on the booking page) and Per Se ($185 Salon 4-course vs $295 Salon 5-course; "
-                    "the dining room publishes only a deposit) are not adopted as prices. Le Bernardin's dinner prix fixe "
-                    "also exists as $218 (dinner-1.2.pdf) and $225 (a later PDF read by another session); the $218 figure is kept "
-                    "and both are shown."),
+         "title": "Two restaurant prices (Atera, Per Se) remain contested/deposit-only and stay blank; Atomix is month-variable",
+         "detail": ("Atera ($298 on the site vs $325 on the booking page) and Per Se ($185 Salon 4-course vs $295 Salon 5-course; "
+                    "the live Tock pages publish only $200 MDR / $150 Salon deposits) are not adopted as prices and stay blank. "
+                    "Atomix's $424 vs $495/pp difference was resolved on its official Tock page (November $424/$314 vs December $495/$352+ "
+                    "incl. admin fee; November adopted, Feb-Mar 2027 flagged). Le Bernardin's dinner prix fixe keeps $218 (dinner-1.2.pdf) "
+                    "with the $225 later-PDF figure also noted."),
          "source": "data/conflicts.json"},
         {"id": "F25", "severity": "Medium",
          "title": "Dated hotel totals could not be re-quoted today",
@@ -843,11 +893,13 @@ def build_decisions(rest, hot, act):
                     "measured but dropped entirely: no official source for its room.)"),
          "source": "data/hotels.json"},
         {"id": "F27", "severity": "Low",
-         "title": "Two winter-activity official pages were unreachable today",
-         "detail": ("bryantpark.org and wollmanrinknyc.com could not be fetched on 2026-11-26. Season dates (Bryant Park to "
-                    "28 Feb 2027, Wollman 28 Oct 2026-16 Mar 2027) and Wollman prices ($16/$28/$40, $12 rental) come from at "
-                    "least three independent 2026-27 listings; the official links stay on the row for manual confirmation."),
-         "source": "https://wollmanrinknyc.com/plan/"},
+         "title": "RESOLVED 2026-11-26: two winter-activity official pages re-read successfully",
+         "detail": ("Session 4a8e5aa4 fetched both official pages on 26 Nov 2026. Bryant Park states 28 Oct 2026–28 Feb 2027, "
+                    "Rink 08:00–22:00, The Lodge 10:00–22:00, and rental $18.72–$64.48 including admin fees. Wollman states "
+                    "28 Oct 2026–16 Mar 2027, day-specific hours, $16/$28/$40 adult admission and $12 rental, with 15 Feb a "
+                    "restricted Community Day, 16–21 Feb Peak and 22–25 Feb Off-Peak. The previously unreachable values are now "
+                    "confirmed on the official pages linked from those rows; no new figures were inferred."),
+         "source": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park"},
     ]
     social_gap = rest["rows"] - rest["coverage"]["social"]
     new_flags.append({
@@ -858,6 +910,15 @@ def build_decisions(rest, hot, act):
                    "account could be confirmed against the venue's own site, so none was invented. The MICHELIN page and "
                    "the restaurant's own site remain on every row, and suggestion S17 is the route to closing the gap."),
         "source": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred"})
+    new_flags.append({
+        "id": "F29", "severity": "Low",
+        "title": "SUMMIT One Vanderbilt opening days corrected from official FAQ",
+        "detail": ("A parallel kit warned that SUMMIT was historically closed on Tuesdays in winter and told readers to check "
+                   "the calendar. The official FAQ footer was re-read on 26 Nov 2026 and lists Sunday through Saturday as "
+                   "08:00–24:00 with last entry at 22:30. The canonical row now says Daily (7 days); the earlier caveat is "
+                   "retained here rather than repeated as a fact. Ticket price remains blank — no adult price was printed on "
+                   "the page checked."),
+        "source": "https://info.summitov.com/"})
     existing_f = {x["id"] for x in data["flags"]}
     for item in new_flags:
         if item["id"] not in existing_f:

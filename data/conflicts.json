@@ -40,6 +40,15 @@
   },
   {
    "type": "price-disagreement",
+   "row": "Atomix",
+   "session": "arena/657520df-nyfun2",
+   "kitValue": "$848–$990 Chef's Counter (2 × $424 Nov / $495 Dec) · $628–$704 Bar Tasting (2 × $314 Nov / $352 Dec)",
+   "canonicalValue": "$848 (November Chef's Counter, 2 x $424) / $628 (November Bar Tasting, 2 x $314) - Tock prepaid incl. administrative fee",
+   "source": "https://www.exploretock.com/atomixnyc/",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
    "row": "Aquavit",
    "session": "arena/c1cf7b23-nyfun2",
    "kitValue": "$350 3-Course Dinner (2 × $175) · $450 Chef's 5-Course Tasting (2 × $225)",

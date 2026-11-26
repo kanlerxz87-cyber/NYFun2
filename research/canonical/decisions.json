@@ -372,9 +372,9 @@
     {
       "id": "F15",
       "severity": "Medium",
-      "title": "Atomix and Atera third-party price reports conflict - not used",
-      "detail": "Atomix's official site is client-rendered (no price); third-party blogs report $295/$375. Atera's own page content conflicts ($325 visible menu text vs $298 embedded structured data, per session 6f217cce), and third-party reports vary $195/$235/$298. None are a clean official fixed total, so both couple totals stay blank and flagged rather than guessed.",
-      "source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atomix"
+      "title": "Atomix resolved via official Tock page (month-variable); Atera third-party reports still conflict",
+      "detail": "Atomix's official Tock help page (exploretock.com/atomixnyc/help, verified live 2026-11-26) explains the $424 vs $495 discrepancy: November Chef's Counter is $424/pp ($848/couple) and Bar Tasting $314/pp ($628/couple) incl. admin fee, while December 2026 is $495/pp and starting at $352/pp. November rates are adopted with a month-variability flag. Atera still conflicts ($298 site schema vs $325 Tock search) and stays blank.",
+      "source": "https://www.exploretock.com/atomixnyc/help"
     },
     {
       "id": "F16",

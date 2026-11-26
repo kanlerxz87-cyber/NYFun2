@@ -67,9 +67,9 @@
   {
    "id": "Q6",
    "question": "What will a couple actually pay at each Michelin restaurant?",
-   "whatWeKnow": "24 of 72 restaurant rows carry a couple total built from a per-person price on an official menu, FAQ or official booking channel: from $156 (Gramercy Tavern tavern three-course) to $1,900 (Masa Hinoki Counter). Food only, before tax and tip. The full per-restaurant reconciliation (including EMP $770/$510, Le Bernardin $700/$436/$284, Masa $990/$1,500/$1,900, Gabriel Kreuther $650/$400/$470) is on the Michelin page's price table.",
+   "whatWeKnow": "25 of 72 restaurant rows carry a couple total built from a per-person price on an official menu, FAQ or official booking channel: from $156 (Gramercy Tavern tavern three-course) to $1,900 (Masa Hinoki Counter). Food only, before tax and tip. The full per-restaurant reconciliation (including EMP $770/$510, Le Bernardin $700/$436/$284, Masa $990/$1,500/$1,900, Gabriel Kreuther $650/$400/$470) is on the Michelin page's price table.",
    "whatWeDoNotKnow": "2027 menu prices (menus captured Nov 2026), beverage pairings, service charge, tax and cancellation policies for the trip dates; exact prices for Per Se, Sushi Sho, Atera, Atomix, Jean-Georges, César, Joo Ok, Saga, Sushi Noz and most a-la-carte one-stars.",
-   "provisionalAnswer": "Use the verified couple totals as a planning floor and re-confirm at booking. Per Se, Atomix and Atera stay blank until an official menu price resolves the conflict (F24).",
+   "provisionalAnswer": "Use the verified couple totals as a planning floor and re-confirm at booking. Per Se and Atera stay blank until an official menu price resolves the conflict (F24); Atomix is resolved via Tock ($848/$628 November, $990/$704+ December - re-confirm for 2027).",
    "blocking": false,
    "howToDiscover": "Fetch each restaurant's official menu/pricing page shortly before booking and record a screenshot plus date.",
    "sources": [
@@ -195,7 +195,7 @@
    "blockedBy": [
     "Q6"
    ],
-   "status": "Implemented 2026-11-26 - 24 official-menu couple totals, each with its source URL and capture date."
+   "status": "Implemented 2026-11-26 - 25 official-menu couple totals, each with its source URL and capture date."
   },
   {
    "id": "S4",
@@ -426,9 +426,9 @@
   {
    "id": "F15",
    "severity": "Medium",
-   "title": "Atomix and Atera third-party price reports conflict - not used",
-   "detail": "Atomix's official site is client-rendered (no price); third-party blogs report $295/$375. Atera's own page content conflicts ($325 visible menu text vs $298 embedded structured data, per session 6f217cce), and third-party reports vary $195/$235/$298. None are a clean official fixed total, so both couple totals stay blank and flagged rather than guessed.",
-   "source": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atomix"
+   "title": "Atomix resolved via official Tock page (month-variable); Atera third-party reports still conflict",
+   "detail": "Atomix's official Tock help page (exploretock.com/atomixnyc/help, verified live 2026-11-26) explains the $424 vs $495 discrepancy: November Chef's Counter is $424/pp ($848/couple) and Bar Tasting $314/pp ($628/couple) incl. admin fee, while December 2026 is $495/pp and starting at $352/pp. November rates are adopted with a month-variability flag. Atera still conflicts ($298 site schema vs $325 Tock search) and stays blank.",
+   "source": "https://www.exploretock.com/atomixnyc/help"
   },
   {
    "id": "F16",
@@ -489,8 +489,8 @@
   {
    "id": "F24",
    "severity": "Medium",
-   "title": "Three restaurant prices are contested and stay blank",
-   "detail": "Atomix ($424 vs $495 per person, different capture dates and a help page rather than a menu), Atera ($298 on the site vs $325 on the booking page) and Per Se ($185 Salon 4-course vs $295 Salon 5-course; the dining room publishes only a deposit) are not adopted as prices. Le Bernardin's dinner prix fixe also exists as $218 (dinner-1.2.pdf) and $225 (a later PDF read by another session); the $218 figure is kept and both are shown.",
+   "title": "Two restaurant prices (Atera, Per Se) remain contested/deposit-only and stay blank; Atomix is month-variable",
+   "detail": "Atera ($298 on the site vs $325 on the booking page) and Per Se ($185 Salon 4-course vs $295 Salon 5-course; the live Tock pages publish only $200 MDR / $150 Salon deposits) are not adopted as prices and stay blank. Atomix's $424 vs $495/pp difference was resolved on its official Tock page (November $424/$314 vs December $495/$352+ incl. admin fee; November adopted, Feb-Mar 2027 flagged). Le Bernardin's dinner prix fixe keeps $218 (dinner-1.2.pdf) with the $225 later-PDF figure also noted.",
    "source": "data/conflicts.json"
   },
   {
@@ -511,7 +511,7 @@
    "id": "F27",
    "severity": "Low",
    "title": "RESOLVED 2026-11-26: two winter-activity official pages re-read successfully",
-   "detail": "This session fetched both official pages on 26 Nov 2026. Bryant Park states 28 Oct 2026–28 Feb 2027, Rink 08:00–22:00, The Lodge 10:00–22:00, and rental $18.72–$64.48 including admin fees. Wollman states 28 Oct 2026–16 Mar 2027, day-specific hours, $16/$28/$40 adult admission and $12 rental, with 15 Feb a restricted Community Day, 16–21 Feb Peak and 22–25 Feb Off-Peak. The previously unreachable values are now confirmed on the official pages linked from those rows; no new figures were inferred.",
+   "detail": "Session 4a8e5aa4 fetched both official pages on 26 Nov 2026. Bryant Park states 28 Oct 2026–28 Feb 2027, Rink 08:00–22:00, The Lodge 10:00–22:00, and rental $18.72–$64.48 including admin fees. Wollman states 28 Oct 2026–16 Mar 2027, day-specific hours, $16/$28/$40 adult admission and $12 rental, with 15 Feb a restricted Community Day, 16–21 Feb Peak and 22–25 Feb Off-Peak. The previously unreachable values are now confirmed on the official pages linked from those rows; no new figures were inferred.",
    "source": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park"
   },
   {

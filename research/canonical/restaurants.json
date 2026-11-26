@@ -303,15 +303,25 @@
       "hours": "Tue–Sat 17:30–24:00; Sunday and Monday closed",
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "priceNote": "",
-      "priceSourceUrl": "",
+      "priceTwoAdults": "$848 (November Chef's Counter, 2 x $424) / $628 (November Bar Tasting, 2 x $314) - Tock prepaid incl. administrative fee",
+      "priceNote": "Official Tock help page (exploretock.com/atomixnyc/help) verified live 2026-11-26 by session arena/779506a6-nyfun2: November Chef's Counter $424/pp ($848 for two) and November Bar Tasting $314/pp ($628 for two), both including administrative fee; December 2026 rises to Chef's Counter $495/pp ($990 for two) and Bar Tasting starting at $352/pp ($704+ for two). February-March 2027 pricing not yet released; re-confirm on Tock when the reservation window opens (F17).",
+      "priceSourceUrl": "https://www.exploretock.com/atomixnyc/help",
       "officialUrl": "https://www.atomixnyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atomix",
-      "social": [],
+      "social": [
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/atomixnyc",
+          "note": "Official account linked from Atomix's official Tock page, verified 2026-11-26"
+        },
+        {
+          "platform": "Facebook (official)",
+          "url": "https://www.facebook.com/atomixnyc",
+          "note": "Official account linked from Atomix's official Tock page, verified 2026-11-26"
+        }
+      ],
       "flags": [
-        "Couple price unverified: third-party reports conflict ($295/$375) - not used; official menu page client-rendered",
-        "No official social account verified this session; see MICHELIN/official site"
+        "Menu price varies by month on Tock (Nov $424/$314 vs Dec $495/$352+ per person incl. admin fee); Feb-Mar 2027 rates not yet posted - re-confirm at release"
       ]
     },
     {
