@@ -251,13 +251,7 @@
 =======
         q.blocking ? '<span class="pill red">Yes — Blocking</span>' : '<span class="pill amber">No</span>',
         val(q.howToDiscover),
-<<<<<<< HEAD
-        (Array.isArray(q.sources) && q.sources.length
-          ? q.sources.map(s => `<a href="${esc(s)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`).join('<br>')
-          : '<span class="blank">No source recorded — open question</span>')
-=======
         (q.sources || [q.source]).filter(Boolean).map(s => `<a class="src" href="${esc(s)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`).join('<br>')
->>>>>>> e17ec92 (Integrate complete verified NYC 2027 trip dashboard: 72 Michelin restaurants, 10 ranked hotels with 5-week sweeps, 18 activities, transit matrix, and decision framework (T18))
       ]
     },
     suggestions: {
