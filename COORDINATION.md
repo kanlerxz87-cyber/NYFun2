@@ -4,8 +4,8 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 
 ## Session conventions
 
-- Sessions are bound to the branch the platform gives them; do not switch branches. Historical notes below refer to earlier branches (`arena/4a10e962-nyfun2`, `arena/1a7ae497-nyfun2`, `arena/657520df-nyfun2`, `arena/c1cf7b23-nyfun2`, `arena/fc6d5f66-nyfun2`, `arena/33cfdba4-nyfun2`, `arena/6f217cce-nyfun2`).
-- **Active integration session for this branch (`arena/9bc6abed-nyfun2`): session ID `arena/9bc6abed-nyfun2`, task T18.**
+- This repository session is bound to branch `arena/4a10e962-nyfun2` (fixed by the platform). Do not switch branches.
+- Session ID for this branch: `arena/4a10e962-nyfun2`.
 - Shared outputs (site navigation, index, integrated tables) are edited only during final integration after the research tasks are complete.
 - Every factual table row needs a source URL from an official/primary source. Unconfirmed values stay blank and are listed on the Flagged for Review page.
 - Before each push: `git pull --rebase origin arena/4a10e962-nyfun2`, then push to that same branch. Never discard another session's work on conflict — stop and log it.
@@ -32,7 +32,12 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
 | T16 | Disjoint namespaced full-spec verified dashboard + multi-platform social audit + official hotel & restaurant verification | done in `sessions/657520df` | arena/657520df-nyfun2 | `sessions/657520df/**`, `COORDINATION.md` | 27 Michelin rows (23 priced), 10 Queen+/private-bath hotels (8 dated 7-night pre-tax + all-in), 16 activities (incl. Feb 21 LNY Parade & Wollman 2026–27), 97 social links, 7-page dashboard + `verify.py` (0 errors). |
 | T17 | Disjoint namespaced 31-venue Michelin + 10-hotel + 18-activity + 155-social-link mobile dashboard (`sessions/c1cf7b23`) | done in `sessions/c1cf7b23` | arena/c1cf7b23-nyfun2 | `sessions/c1cf7b23/**`, `COORDINATION.md` | 31 Michelin rows (24 w/ official 2-adult prices incl. Sushi Sho $900–$990 & Per Se Salon $590), 10 hotels (pre-tax + all-in), 18 activities (incl. Feb 21 LNY Parade & Feb 28 Bryant Park Rink cutoff), 155 YT/TT/IG links, 11 flags & 6 repo-audit findings. |
-| T18 | Final integration + line-by-line verification refresh + mobile dashboard refresh + publish | done (PR pending) | arena/9bc6abed-nyfun2 | `index.html`, `pages/**`, `assets/**`, `data/**`, `scripts/**`, `README.md`, `research/verification-2026-11-26.md`, `COORDINATION.md` | Reconciles every namespaced kit into the canonical root site, re-checks facts against official sources on 2026-11-26, publishes a verification matrix, and records unresolved items on the Flagged page. |
+| T18 | Final integration audit: reconcile landing-page claims with current data, surface the detailed planning kit, refresh repo audit evidence, and keep question rendering robust | done | arena/547ee3a3-nyfun2 | `index.html`, `README.md`, `pages/executive-summary.html`, `pages/repo-audit.html`, `assets/app.js`, `scripts/verify.py`, `COORDINATION.md` | Merged in PR #18 (`fe0e76d`). GitHub Pages build and deploy workflow 45827500278 succeeded; Pages API reports `built`. |
+
+| T21 | Root integration of parallel-session outputs: tiles to the session dashboards, verified activity official socials merged into canonical data, three date-critical Feb–Mar 2027 activity rows added (verified live), Sushi Sho Tock price + flags reconciled, Per Se deposit figures re-verified (renumbered: T18 collided with arena/547ee3a3-nyfun2's T18) | done | arena/45972379-nyfun2 | `index.html`, `pages/activities.html`, `pages/sources.html`, `pages/michelin-restaurants.html`, `pages/executive-summary.html`, `data/activities.json`, `data/restaurants.json`, `data/decisions.json`, `README.md`, `COORDINATION.md` | Claims the two handoff requests logged by sessions 657520df and c1cf7b23 and the fc6d5f66 activity-socials merge. (Renumbered from T18 after rebase onto main a9c80c6.) |
+| T22 | Resolve PR #12 (arena/aad75793-nyfun2, CONFLICTING on stale base a3a2848): close with explanation, do not merge | done | arena/45972379-nyfun2 | PR #12 only (no files) | Closed unmerged 2026-11-26 with explanatory comment. Board guidance since 2026-11-25: close or rebase, never merge as-is. (Renumbered from T19.) |
+| T23 | Final verification + publish: verify.py, node --check, link check, PR to main, merge, confirm GitHub Pages deploy, record PR link and merge result | done | arena/45972379-nyfun2 | `COORDINATION.md`, `README.md` | Rebased onto main a9c80c6 (PRs #18/#19); conflict resolved without discarding 547ee3a3's work. Publish only after verification passes. (Renumbered from T20.) |
+| T24 | Final integration and verification refresh on the current main (rebased after T18–T23 landed mid-task): merge every kit into canonical data, re-read official sources on 2026-11-26, rebuild the mobile dashboard, publish a dated verification log, PR + merge + Pages check | done | arena/9bc6abed-nyfun2 | `index.html`, `pages/**`, `assets/**`, `data/**`, `scripts/**`, `research/canonical/**`, `research/verification-2026-11-26.md`, `README.md`, `COORDINATION.md` | Renumbered from T18 after `arena/547ee3a3-nyfun2` and `arena/45972379-nyfun2` claimed T18–T23 on a newer main. Their data (Sushi Sho Tock $990, Per Se deposits, Wollman/Bryant Park/LNY rows, socials) is the canonical base of this build — nothing they verified was discarded. |
 
 ## Log
 
@@ -338,60 +343,64 @@ hotel→restaurant routing for the ≤1-hour ranking; dated 2027 hotel rates; ai
   - **Request for root integration owner:** consider adding a comparison link on root `index.html` and `pages/sources.html` to `sessions/c1cf7b23/index.html` and incorporating the verified Sushi Sho / Per Se Salon Tock prices, Feb 28 Bryant Park cutoff, and 155 multi-platform social links.
 
 
-### 2026-11-26 — session `arena/9bc6abed-nyfun2` (T18 claim)
+### 2026-11-26 — session `arena/547ee3a3-nyfun2` (T18 claim)
+- Read the coordination board first. All prior T0–T17 items are marked done; no active task owner is listed.
+- Claimed final integration audit scope: `index.html`, `README.md`, `pages/executive-summary.html`, `pages/repo-audit.html`, `assets/app.js`, `scripts/verify.py`, and this board. No dataset or other session namespace was changed.
+- Baseline checks: `python3 scripts/verify.py` → 0 errors / 0 warnings; `python3 sessions/c1cf7b23/scripts/verify.py` → 0 errors. Found root landing/executive summary claims lag current canonical data and requested richer detail in the namespaced T17 dashboard is not clearly surfaced.
 
-- Read the board, audited `main` (`19f4d20`) and every namespaced kit (`alt/`, `sessions/215c2a25`, `sessions/33cfdba4`, `sessions/657520df`, `sessions/c1cf7b23`).
-- Claimed **T18** as the final integration session: all other board tasks are `done`, so shared outputs (`index.html`, `pages/**`, `data/**`, `assets/**`, `scripts/**`) now have a single owner and cannot conflict with an active claim.
-- Scope rule kept: no edits inside another session's namespace directory; their files stay verbatim for comparison.
-- Live-verification tool access differs from earlier sessions (this sandbox reaches GitHub plus a proxied fetch/search channel; no direct socket access to external hosts). Every re-check performed today is dated and linked in `research/verification-2026-11-26.md` and on the site's Verification page; anything not re-fetched today is labelled as a carried 2026-11-25 capture, never as re-verified.
+### 2026-11-26 — session `arena/547ee3a3-nyfun2` (T18 integration audit, verification)
+- Reconciled the root landing page, README and executive summary with the current canonical datasets (72 restaurants; 12 hotels; 12 activities; 12 questions; 12 suggestions; 17 flags). Removed obsolete claims that the catalogue was only 20 rows and that no dated 7-night rates existed.
+- Promoted the independent T17 detailed dashboard link at the root and documented that its 31-restaurant / 10-hotel / 18-activity set, price windows and transit ranking stay separate from canonical data. No restaurant/hotel/activity dataset or other session namespace was edited.
+- Fixed a render defect: Q9–Q12 have no `sources` array; the Questions renderer now labels this as an open unanswered source field rather than calling `.map()` on `undefined`.
+- Expanded the root verifier's row count and decision-array checks. It now checks all 137 canonical JSON rows and explicitly states that structural checks do not prove a URL is live or official. It still enforces HTTPS source fields on the factual restaurant, hotel, activity and flag rows, checks optional decision source URLs and flags blank category fields.
+- Verification: `python3 scripts/verify.py` → 0 errors / 0 warnings over 137 rows; `python3 sessions/c1cf7b23/scripts/verify.py` → 0 errors; `node --check assets/app.js` passes; `git diff --check` passes; static HTTP smoke test returned 200 for the root, summary, repo audit, questions page, script, restaurant JSON and T17 entry point.
+- Reviewable source references for ongoing claims remain row-linked in canonical datasets and T17. Canonical MICHELIN/ceremony sources include `https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred` and `https://michelinmedia.com/pages/blog/detail/article/c/a1479/`; the T17 page links to its detailed per-row official sources and flags. No claim of fresh external URL availability was made by this local audit.
 
-### 2026-11-26 — session `arena/9bc6abed-nyfun2` (T18 completion)
+### 2026-11-26 — T18 publication result (session `arena/547ee3a3-nyfun2`)
+- Pull request **#18**: https://github.com/kanlerxz87-cyber/NYFun2/pull/18 — merged to `main` at `fe0e76de05eb1e4acb4d400432fbfe68dfebf66a` on 2026-11-26 13:16 UTC.
+- GitHub Pages build/deploy workflow **45827500278** completed successfully (build, deploy and report-build-status jobs all green); Pages API reports status `built` for that merge commit. Published URL: https://kanlerxz87-cyber.github.io/NYFun2/.
+- Workflow warning: GitHub notes `actions/upload-artifact@v4` targets deprecated Node.js 20 and is currently forced onto Node.js 24. Deployment still succeeded; this is a maintenance item, not a site-build failure.
+- T18 complete. Repository changes remained within the claimed integration scope; no source datasets or other session kits were altered.
 
-**Scope delivered.** Rebuilt the shared dashboard in place: `index.html`, `pages/**` (13 pages incl.
-new `verification.html` and `compare.html`), `assets/styles.css`, `assets/app.js`,
-`scripts/build_data.py`, `scripts/build_site.py`, `scripts/verify.py`, `data/*.json`,
-`research/canonical/*`, `research/verification-2026-11-26.md`, `README.md`. No file inside another
-session's namespace was modified.
+### 2026-11-26 — session `arena/9bc6abed-nyfun2` (T24: integration on top of main, conflict resolved)
 
-**Merge method.** `research/canonical/*.json` holds the pristine datasets; `scripts/build_data.py`
-rebuilds `data/*.json` from them plus the kits, so the merge is idempotent and cannot double-count.
-A kit value is copied only into a blank field and only when the kit row carries a source URL for it;
-each row records which session supplied each field in a `provenance` object.
+**What happened.** This session claimed T18 when the board showed every task done. While it was
+researching, sessions `arena/547ee3a3-nyfun2` (T18) and `arena/45972379-nyfun2` (T21–T23) landed
+PRs #18–#22 on `main`, so the claim collided and PR #23 came up CONFLICTING.
 
-**Result.** 72 restaurant rows (69 starred + 3 guide-listed; 24 with a couple price, 35 with hours,
-27 with social links), 16 hotels (8 dated 7-night totals, 10 with verified queen/king + private
-bath, 4 with measured transit), 17 activities (17 with social links, 14 with a couple cost),
-13 questions, 17 suggestions, 26 flags, 16 dated verification checks, 5 booking windows.
+**How the conflict was resolved.** No work was discarded. `origin/main` was merged into the branch;
+this session then adopted **main's datasets as the new pristine canonical base**
+(`research/canonical/*.json` re-copied from main), so every fact the other sessions verified —
+Sushi Sho's Tock $990, Per Se's revised deposit-only pages, the three date-critical February rows,
+the merged official socials, flags F18–F20 — flows into this build. This session's merge rules are
+re-applied on top of that base; the shared HTML is regenerated from the merged data rather than
+hand-merged. Task renumbered **T24** to avoid the T18 collision. PR #12 stays closed unmerged.
 
-**Sources verified today (2026-11-26).** MICHELIN all-starred filter counters and 15 star levels
-(https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred); menu pages for
-Eleven Madison Park (elevenmadisonpark.com/faq), Jungsik, Masa, Cote and Gramercy Tavern; Met and
-MoMA admission/hours; betterchinatown.com parade date; Hyatt Place Chelsea room specification.
-Full list with per-check outcomes: `research/verification-2026-11-26.md`.
+**Delivered.** 13 pages (new: `verification.html`, `compare.html`), rebuilt mobile-first CSS and a
+JSON-driven table renderer with verification badges, per-field provenance, `scripts/build_data.py`
+(idempotent merge), `scripts/build_site.py`, a stricter `scripts/verify.py` (0 errors / 0 warnings
+over 13 pages and 150 rows), and `research/verification-2026-11-26.md`.
 
-**Verification performed.** `python3 scripts/verify.py` → **0 errors, 0 warnings** over 13 HTML
-pages and 147 data rows (local links, http source per row, duplicate rows, social URL scheme,
-hotel all-in arithmetic against the stated 14.75% + fee formula, blank-implies-flag).
-`node --check assets/app.js` passes. Local HTTP smoke test returned 200 for the overview, the
-Michelin and Hotels pages, `data/restaurants.json`, `assets/app.js` and `assets/styles.css`.
+**Sources re-read today by this session (2026-11-26).** MICHELIN all-starred counters (5/14/50, 69
+total) plus 15 star levels; Eleven Madison Park FAQ; Jungsik, Masa, Cote and Gramercy Tavern menus;
+Met and MoMA admission/hours; betterchinatown.com parade date; Hyatt Place Chelsea room spec.
+Carried from the other sessions the same day: Sushi Sho Tock price, Per Se deposit pages, Wollman
+calendar, Bryant Park season, activity official socials — all linked from their rows.
 
-**Irregularities logged (new flags F19–F26).**
-- F19 betterchinatown.com mixes the 2026 and 2027 parade dates (Chinese line stale).
-- F20 the previous front page understated its own dataset (20/12/10 vs 72/12/12; README 21) — fixed.
-- F21 14 kit venues are outside the 69-star census and one kit carried 3 starred names absent from
-  today's live list; none were merged into the census (`data/conflicts.json`).
-- F22 Atomix, Atera and Per Se prices stay blank (conflicting official captures);
-  Le Bernardin keeps $218 with the $225 alternative shown.
-- F23 Booking.com property pages refused the fetcher, so the dated hotel totals are 2026-11-25
-  snapshots; the window search page did load.
-- F24 six hotels have no verified queen/king + private-bath line and are excluded from the
-  recommendation (The Maritime, MADE, The Marlton, Soho Grand, Arlo Soho, The Wall Street Hotel).
-- F25 bryantpark.org and wollmanrinknyc.com were unreachable; dates/prices corroborated by ≥3
-  independent 2026-27 listings.
-- F26 45 starred rows still have no social/video link; none were invented (suggestion S17).
-- The Benjamin was dropped from the hotel list: measured transit existed but no official source for
-  its room did.
+**Verification performed.** `python3 scripts/verify.py` → **0 errors, 0 warnings** (local links,
+http source per row, duplicate-row detection, social URL scheme, hotel all-in arithmetic against the
+stated 14.75% + fee formula, blank-implies-flag); `node --check assets/app.js` passes; local HTTP
+smoke test 200 on overview, Michelin, Hotels, `data/restaurants.json`, `assets/app.js`,
+`assets/styles.css`.
 
-**Handoff.** PR #12 (`arena/aad75793-nyfun2`) remains open and stale; it was not merged and nothing
-from it was used. The namespaced kits stay readable for comparison and are linked from
-`pages/compare.html`.
+**Flag numbering.** This session's new flags are **F21–F28** (F18–F20 belong to the other sessions).
+F21 coverage limits · F22 stale headline counts (fixed) · F23 kit rosters outside the census ·
+F24 contested prices (Atomix/Atera/Per Se) · F25 dated hotel totals not re-quoted · F26 six hotels
+without a verified bed/bath · F27 winter-activity official pages unreachable · F28 45 starred rows
+without a confirmed social link.
+
+**Irregularities found while merging.** (a) Kits duplicated rows once merged (Frederick, NYPL, the
+Met, 9/11) — the merge now keys them and the verifier fails on duplicates. (b) A fuzzy name match
+attached Eurostars' transit legs to The Wall Street Hotel — replaced with explicit key matching, and
+unmeasured hotels now show a blank. (c) The Benjamin had measured transit but no official source for
+its room, so it was dropped from the published list rather than shown unsourced.

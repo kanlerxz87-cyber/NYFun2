@@ -36,11 +36,11 @@ Each row also carries a verification badge:
 | `pages/executive-summary.html` | Bottom line, findings, decision order, illustrative weekly budget |
 | `pages/michelin-restaurants.html` | All 72 rows (69 starred + 3 guide-listed), verified couple prices, the five cluster anchors |
 | `pages/hotels.html` | 16 candidates, ranking rule, dated 7-night totals, five booking windows, when to book |
-| `pages/activities.html` | 17 activities with official hours, closures and couple costs |
+| `pages/activities.html` | 18 activities with official hours, closures and couple costs |
 | `pages/itinerary.html` | 7-night skeleton from verified opening days, plus the 3-night variant |
 | `pages/questions.html` | 13 questions: known / missing / provisional answer / how to close |
 | `pages/suggestions.html` | 17 improvement options with status and effort |
-| `pages/flagged.html` | 26 flags: unverified values, conflicts, irregularities |
+| `pages/flagged.html` | 28 flags: unverified values, conflicts, irregularities |
 | `pages/verification.html` | Dated log of the 16 checks re-run on 2026-11-26 and what could not be re-read |
 | `pages/sources.html` | Rules, primary-source register, reproduce steps |
 | `pages/repo-audit.html` | What each session contributed, what this integration changed |
@@ -53,7 +53,7 @@ Each row also carries a verification badge:
 - **Dining money:** 24 restaurants have a couple total built from an official menu/FAQ/booking
   page — from **$156** (Gramercy Tavern tavern three-course) and **$168** (Cote Butcher's Feast)
   to **$1,900** (Masa hinoki counter). Atomix, Atera and Per Se stay blank because captures
-  disagree (flag F22).
+  disagree or the page only shows a deposit (flag F24).
 - **Hotels:** 16 candidates; 8 carry a dated 7-night total for two adults for 15–22 Feb 2027 —
   from **$998 all-in** (Eurostars Wall Street, non-refundable) to **$5,220** (The Beekman).
   Best value with free cancellation: **DoubleTree Chelsea, $1,110 all-in**.
@@ -64,7 +64,8 @@ Each row also carries a verification badge:
   versus $1,087–$1,260 for the March windows. The $836 figure for 22 Feb–1 Mar is a **twin room**
   and fails the queen-bed rule.
 - **Dates that matter:** Presidents' Day Mon 15 Feb; **Chinatown Lunar New Year parade Sun 21 Feb
-  2027, 13:00**; Bryant Park rink to 28 Feb; Wollman Rink to 16 Mar; the Met closes Wednesdays.
+  2027, 13:00** (catchable only on the 7-night window); Bryant Park rink to 28 Feb; Wollman Rink to
+  16 Mar (16–21 Feb peak, 22 Feb–13 Mar off-peak); the Met closes Wednesdays.
 - **Michelin ceremony:** 14 Dec 2026 — after this research, before the trip (flag F1).
 
 ## Data and build
@@ -73,8 +74,8 @@ Each row also carries a verification badge:
 |---|---|
 | `data/restaurants.json` | 72 rows, per-field `provenance`, verification badge |
 | `data/hotels.json` | 16 rows + 5 booking windows + transit objects + ranking |
-| `data/activities.json` | 17 rows with hours, exceptions, costs, socials |
-| `data/decisions.json` | 13 questions, 17 suggestions, 26 flags |
+| `data/activities.json` | 18 rows with hours, exceptions, costs, socials |
+| `data/decisions.json` | 13 questions, 17 suggestions, 28 flags |
 | `data/verification.json` | Dated verification log and coverage counters |
 | `data/conflicts.json` | Every kit disagreement and out-of-census venue name |
 | `research/canonical/` | Pristine pre-merge datasets (the merge input) |
@@ -97,16 +98,22 @@ There is no build step on the host: GitHub Pages serves the repository root from
 ## What is deliberately blank
 
 Airfare; theatre tickets; the 3-night hotel total; per-dish à-la-carte totals; six hotels without a
-published bed-and-bathroom line; 45 restaurant social links that could not be confirmed; every
+published bed-and-bathroom line; 45 of 72 restaurant social links that could not be confirmed; every
 transit pair that was never routed. Each gap is on `pages/flagged.html` with its cause and the
 step that would close it.
 
 ## Sessions and coordination
 
-Five parallel agent sessions produced independent kits for the same brief. They are preserved
-verbatim under `sessions/` and `alt/`, and the comparison is on `pages/compare.html`. The shared
-task board `COORDINATION.md` records ownership, sources and irregularities; this integration ran
-as task **T18** on branch `arena/9bc6abed-nyfun2`.
+Several agent sessions worked this repository in parallel. Their kits are preserved verbatim under
+`sessions/` and `alt/`, and the comparison is on `pages/compare.html`. The shared task board
+`COORDINATION.md` records ownership, sources and irregularities.
+
+This build ran as task **T24** on branch `arena/9bc6abed-nyfun2`, after sessions
+`arena/547ee3a3-nyfun2` (T18) and `arena/45972379-nyfun2` (T21–T23) merged PRs #18–#22 to `main`
+mid-task. Rather than overwrite them, the branch merged `main` and adopted **main's datasets as the
+new canonical base**, so their verified findings (Sushi Sho's Tock price, Per Se's deposit-only
+pages, the Wollman/Bryant Park/Lunar New Year rows, the official activity socials, flags F18–F20)
+are all in this build. The merge is recorded on `pages/repo-audit.html` and in `COORDINATION.md`.
 
 ## Licence
 

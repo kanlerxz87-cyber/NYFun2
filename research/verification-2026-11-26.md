@@ -37,11 +37,25 @@ remains a carried capture from 2026-11-25. The machine-readable version is `data
 | Bryant Park Winter Village 2026-27 | 28 Oct 2026 – 28 Feb 2027; rink 08:00–22:00; shops end 3 Jan 2027 | https://bryantpark.org/activities/winter-village | four independent 2026 guides |
 | Wollman Rink 2026-27 | 28 Oct 2026 – 16 Mar 2027; adults $16 off-peak / $28 peak / $40 prime; rental $12 | https://wollmanrinknyc.com/plan/ | three independent 2026-27 price round-ups |
 
+## Re-read by the parallel sessions the same day (2026-11-26)
+
+These checks were performed by `arena/45972379-nyfun2` / `arena/547ee3a3-nyfun2` and are now part of
+the canonical data this build starts from; each row keeps its official link.
+
+| Fact | Value confirmed | Source |
+|---|---|---|
+| Sushi Sho price | Tock "Shorter Omakase at Hinoki Counter" $495/person incl. administrative fee ⇒ $990 for two; booking through 28 Feb 2027 | https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-hinoki-counter |
+| Per Se | Main Dining Room tasting "starting at $200/person" deposit; Salon Lounge now a four-course menu at $150/person deposit — earlier $185/$370 capture could not be re-confirmed, so the row stays blank | https://www.exploretock.com/perse/experience/7768/salon-lounge-seating |
+| Wollman Rink 2026-27 calendar | 15 Feb Community Day (public-sector employees/families), 16–21 Feb peak $28, 22 Feb–13 Mar off-peak $16, 14–16 Mar community days; season ends 16 Mar 2027 | https://wollmanrinknyc.com/plan/ |
+| Bryant Park Winter Village | Rink and Lodge to 28 Feb 2027; holiday shops closed 3 Jan 2027; free admission | https://bryantpark.org/activities/winter-village |
+| Lunar New Year parade | 29th parade Sun 21 Feb 2027, 13:00 | http://betterchinatown.com/ |
+| Activity official socials | MoMA, Met, AMNH, 9/11, High Line, Whitney, Guggenheim, ESB, NYPL, Wollman | each venue's own social page |
+
 ## Not re-read (carried capture, 2026-11-25)
 
 | Fact | Why | Where it lives |
 |---|---|---|
-| Dated hotel totals for 15–22 Feb 2027 | Booking.com property pages returned an error to the fetcher; the Manhattan window search page did load, confirming availability | `data/hotels.json`; flags F10/F23 |
+| Dated hotel totals for 15–22 Feb 2027 | Booking.com property pages returned an error to the fetcher; the Manhattan window search page did load, confirming availability | `data/hotels.json`; flags F10/F25 |
 | 25 hotel→cluster and 10 hotel→activity transit legs | Google Maps cannot be queried programmatically from this session | `sessions/33cfdba4/data/transit_anchors.json`; each row links a live directions query |
 | MICHELIN ceremony date (14 Dec 2026) | not re-fetched | https://michelinmedia.com/pages/blog/detail/article/c/a1479/ ; flag F1 |
 | Remaining 57 restaurant rows' star levels | spot-check + census rather than 72 individual page reads | `data/restaurants.json` with a MICHELIN link per row |
@@ -49,12 +63,12 @@ remains a carried capture from 2026-11-25. The machine-readable version is `data
 
 ## Problems found while verifying
 
-1. **Stale counts on the previous site (F20).** The old front page said 20 restaurant rows, 12
+1. **Stale counts on the previous site (F22).** The old front page said 20 restaurant rows, 12
    activities and 10 hotels; its own data held 72, 12 and 12, and README said 21. Counts are now
    rendered from JSON at load and the static HTML matches.
-2. **Kit rosters ≠ official census (F21).** 14 kit venues are outside the 69-star roster; one kit
+2. **Kit rosters ≠ official census (F23).** 14 kit venues are outside the 69-star roster; one kit
    carried three starred names absent from today's live list. None were merged into the census.
-3. **Contested prices (F22).** Atomix ($424 vs $495/person), Atera ($298 vs $325) and Per Se
+3. **Contested prices (F24).** Atomix ($424 vs $495/person), Atera ($298 vs $325) and Per Se
    ($185 vs $295) stay blank. Le Bernardin keeps $218 with the $225 alternative shown.
 4. **Organiser typo (F19).** betterchinatown.com's English line says 21 Feb 2027; the Chinese line
    beside it still says 2026. Two independent 2027 listings agree with the English date.
@@ -64,6 +78,8 @@ remains a carried capture from 2026-11-25. The machine-readable version is `data
    Street Hotel. Matching is now key-based and unmeasured hotels stay blank.
 7. **One hotel dropped for lack of a source.** The Benjamin had measured transit but no official
    page for its room, so it was removed from the published list rather than shown unsourced.
+8. **Flag ID collision.** The parallel sessions used F18–F20, so this session's new flags were
+   renumbered F21–F28; the organiser-typo flag was dropped because their F19 already records it.
 
 ## Reproduce
 

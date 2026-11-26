@@ -122,7 +122,7 @@ def build_restaurants():
 
     conflicts, enriched, kit_only = [], Counter(), []
     # Venues where the kits' official pages disagree with each other or are not a
-    # menu page: no price is adopted, the row stays blank and is flagged (F15/F23).
+    # menu page: no price is adopted, the row stays blank and is flagged (F15/F24).
     PRICE_BLOCKLIST = {
         "Atomix": "Kits report $424-$495 per person from different capture dates and a help page, not a menu.",
         "Atera": "Kits report $298 (restaurant page) and $325 (booking page) per person.",
@@ -423,7 +423,7 @@ def build_hotels():
         h["qualifies"] = has_bed and has_bath
         if not h["qualifies"]:
             h["eligibilityNote"] = ("Queen+/private-bath specification not confirmed on an official property page: "
-                                    "excluded from the recommendation until verified (flag F24).")
+                                    "excluded from the recommendation until verified (flag F26).")
         h["pricedTier"] = "dated 7-night total" if (h.get("sevenNightPreTax") or h.get("sevenNightAllIn")) else ""
         h["verifiedToday"] = h["name"] in VERIFIED_TODAY_HOTELS
         h["verifyStatus"] = "checked today (2026-11-26)" if h["verifiedToday"] else "carried capture (2026-11-25)"
@@ -699,23 +699,36 @@ V = [
 ]
 
 
+def merge_text(old, new):
+    """Keep the existing verified wording and append the new wording when it adds facts."""
+    old = (old or "").strip()
+    new = (new or "").strip()
+    if not old:
+        return new
+    if not new or new in old:
+        return old
+    return old + " " + new
+
+
 def build_decisions(rest, hot, act):
     data = canon("decisions")
     q = {x["id"]: x for x in data["questions"]}
     sg = {x["id"]: x for x in data["suggestions"]}
 
-    q["Q1"]["whatWeKnow"] = ("15 Feb 2027 is a Monday and 18 Feb a Thursday; 15-22 Feb 2027 is exactly 7 nights. "
+    q["Q1"]["whatWeKnow"] = merge_text(q["Q1"].get("whatWeKnow"), ("15 Feb 2027 is a Monday and 18 Feb a Thursday; 15-22 Feb 2027 is exactly 7 nights. "
                              "All dated hotel totals on this site use the 7-night window because that is what the "
-                             "request asked to compare.")
-    q["Q2"]["whatWeKnow"] = (f"{hot['priced']} of {hot['rows']} shortlisted properties now carry a dated 7-night total for "
+                             "request asked to compare."))
+    q["Q2"]["whatWeKnow"] = merge_text(q["Q2"].get("whatWeKnow"), (f"{hot['priced']} of {hot['rows']} shortlisted properties now carry a dated 7-night total for "
                              "15-22 Feb 2027, two adults, captured 2026-11-25. All-in range: $998 (Eurostars Wall Street, "
                              "non-refundable) to $5,220 (The Beekman). Totals are third-party booking-engine snapshots, "
-                             "not hotel quotes, and two depend on promotions that expire.")
+                             "not hotel quotes, and two depend on promotions that expire."))
     q["Q2"]["provisionalAnswer"] = ("Use $1,110 all-in at DoubleTree Chelsea (free cancellation) as the budget anchor and "
                                     "$998 (Eurostars, non-refundable) as the floor. Re-quote both before paying.")
+    q["Q3"]["provisionalAnswer"] = (f"{hot['qualified']} of {hot['rows']} properties have a published queen/king bed and private "
+                                    "bathroom and can be booked against the requirement; the others must be verified first.")
     q["Q3"]["whatWeKnow"] = (f"{hot['qualified']} of {hot['rows']} properties publish a queen/king bed plus a private bathroom "
-                             "on an official property page (or a property page the kits quote directly). Seven do not, and are "
-                             "excluded from the recommendation (flag F24).")
+                             "on an official property page (or a property page the kits quote directly). "
+                             f"{hot['rows'] - hot['qualified']} do not, and are excluded from the recommendation (flag F26).")
     q["Q5"]["whatWeKnow"] = ("25 hotel-to-MICHELIN-cluster legs were measured with Google Maps transit on 2026-11-25 "
                              "(17:14-17:31 ET) across five origin hotels; one of those five was dropped from the "
                              "shortlist for having no official source, leaving four published hotels with measured "
@@ -725,12 +738,16 @@ def build_decisions(rest, hot, act):
     q["Q5"]["provisionalAnswer"] = ("Treat 'within one hour' as satisfied for any central Manhattan hotel; rank on price, "
                                     "room quality and average transit instead. Unmeasured hotels carry a blank, not a guess.")
     q["Q5"]["blocking"] = False
+    q["Q6"]["provisionalAnswer"] = ("Use the verified couple totals as a planning floor and re-confirm at booking. Per Se, "
+                                    "Atomix and Atera stay blank until an official menu price resolves the conflict (F24).")
     q["Q6"]["whatWeKnow"] = (f"{rest['coverage']['priceTwoAdults']} of {rest['rows']} restaurant rows carry a couple total built from "
                              "a per-person price on an official menu, FAQ or official booking channel: from $156 (Gramercy "
-                             "Tavern tavern three-course) to $1,900 (Masa Hinoki Counter). Food only, before tax and tip.")
-    q["Q8"]["whatWeKnow"] = (f"{rest['coverage']['social']} restaurant rows and {act['social']} activity rows carry at least one "
+                             "Tavern tavern three-course) to $1,900 (Masa Hinoki Counter). Food only, before tax and tip. "
+                             "The full per-restaurant reconciliation (including EMP $770/$510, Le Bernardin $700/$436/$284, "
+                             "Masa $990/$1,500/$1,900, Gabriel Kreuther $650/$400/$470) is on the Michelin page's price table.")
+    q["Q8"]["whatWeKnow"] = merge_text(q["Q8"].get("whatWeKnow"), (f"{rest['coverage']['social']} restaurant rows and {act['social']} activity rows carry at least one "
                              "social link. Each link is labelled official or third-party review; ownership is only asserted "
-                             "where the venue's own site or the platform's verified account confirms it.")
+                             "where the venue's own site or the platform's verified account confirms it."))
 
     if "Q13" not in q:
         data["questions"].append({
@@ -782,7 +799,7 @@ def build_decisions(rest, hot, act):
             data["suggestions"].append(item)
 
     new_flags = [
-        {"id": "F18", "severity": "High",
+        {"id": "F21", "severity": "High",
          "title": "This session could not re-read every official page",
          "detail": ("The sandbox reaches GitHub directly and external pages through a proxied fetch/search channel. "
                     "16 checks were re-run on 2026-11-26 (MICHELIN filter counters, 15 star levels, 5 menus, Met and MoMA, "
@@ -790,19 +807,13 @@ def build_decisions(rest, hot, act):
                     "bryantpark.org and wollmanrinknyc.com could not be fetched, so those figures are carried captures or "
                     "secondary corroboration. Every row states which it is."),
          "source": "data/verification.json"},
-        {"id": "F19", "severity": "Low",
-         "title": "Organiser's page mixes the 2026 and 2027 Lunar New Year dates",
-         "detail": ("betterchinatown.com shows the 29th parade as Sunday 21 February 2027 at 13:00 in English, but the "
-                    "Chinese-language line beside it still reads 2026. Two independent 2027 event listings agree with the "
-                    "English date. Confirm with the organiser before building a day around it."),
-         "source": "http://betterchinatown.com/"},
-        {"id": "F20", "severity": "Medium",
+        {"id": "F22", "severity": "Medium",
          "title": "The previous front page understated its own data (fixed in this build)",
          "detail": ("index.html said the site detailed 20 restaurant rows, 12 attractions and 10 hotel candidates while the "
                     "datasets held 72 restaurant rows, 12 activities and 12 hotels; README said 21. All counts are now "
                     "rendered from the JSON at load time, so they cannot drift again."),
          "source": "https://github.com/kanlerxz87-cyber/NYFun2/blob/main/index.html"},
-        {"id": "F21", "severity": "Medium",
+        {"id": "F23", "severity": "Medium",
          "title": "Kit rosters are not the same census as the live MICHELIN list",
          "detail": ("The parallel kits contained 14 venue names outside the 69-star census (Katz's, Thai Diner, Via Carota, "
                     "Dhamaka, Manhatta, Cafe Carmellini and others - Bib Gourmand/Selected or non-Guide), and one kit carried "
@@ -810,7 +821,7 @@ def build_decisions(rest, hot, act):
                     "Leonard Street, La Bastide by Andrea Calstier). None were added to the census; all are listed in "
                     "data/conflicts.json for review."),
          "source": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred"},
-        {"id": "F22", "severity": "Medium",
+        {"id": "F24", "severity": "Medium",
          "title": "Three restaurant prices are contested and stay blank",
          "detail": ("Atomix ($424 vs $495 per person, different capture dates and a help page rather than a menu), Atera "
                     "($298 on the site vs $325 on the booking page) and Per Se ($185 Salon 4-course vs $295 Salon 5-course; "
@@ -818,19 +829,20 @@ def build_decisions(rest, hot, act):
                     "also exists as $218 (dinner-1.2.pdf) and $225 (a later PDF read by another session); the $218 figure is kept "
                     "and both are shown."),
          "source": "data/conflicts.json"},
-        {"id": "F23", "severity": "Medium",
+        {"id": "F25", "severity": "Medium",
          "title": "Dated hotel totals could not be re-quoted today",
          "detail": ("Booking.com property pages refused this session's fetcher, so the 15-22 Feb 2027 totals are the "
                     "2026-11-25 snapshots. Two of them (DoubleTree, Arlo NoMad) were Black Friday promotions whose terms "
                     "expire; the search page for the window did load, confirming the dates remain bookable."),
          "source": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price"},
-        {"id": "F24", "severity": "Medium",
-         "title": "Seven shortlisted hotels still lack a verified bed and bathroom line",
-         "detail": ("The Maritime, MADE, The Marlton, Soho Grand, Arlo Soho, The Wall Street Hotel and The Benjamin do not "
-                    "have a published queen/king + private-bathroom statement in the sources checked. They are listed for "
-                    "completeness and excluded from the recommendation rather than assumed to comply."),
+        {"id": "F26", "severity": "Medium",
+         "title": f"{hot['rows'] - hot['qualified']} shortlisted hotels still lack a verified bed and bathroom line",
+         "detail": ("The Maritime, MADE, The Marlton, Soho Grand, Arlo Soho and The Wall Street Hotel do not have a "
+                    "published queen/king + private-bathroom statement in the sources checked, so they are listed for "
+                    "completeness and excluded from the recommendation rather than assumed to comply. (The Benjamin was "
+                    "measured but dropped entirely: no official source for its room.)"),
          "source": "data/hotels.json"},
-        {"id": "F25", "severity": "Low",
+        {"id": "F27", "severity": "Low",
          "title": "Two winter-activity official pages were unreachable today",
          "detail": ("bryantpark.org and wollmanrinknyc.com could not be fetched on 2026-11-26. Season dates (Bryant Park to "
                     "28 Feb 2027, Wollman 28 Oct 2026-16 Mar 2027) and Wollman prices ($16/$28/$40, $12 rental) come from at "
@@ -839,7 +851,7 @@ def build_decisions(rest, hot, act):
     ]
     social_gap = rest["rows"] - rest["coverage"]["social"]
     new_flags.append({
-        "id": "F26", "severity": "Medium",
+        "id": "F28", "severity": "Medium",
         "title": f"{social_gap} starred restaurants still have no social or video link",
         "detail": ("You asked for a YouTube/TikTok/Instagram link per restaurant. Links were found and merged for "
                    f"{rest['coverage']['social']} of {rest['rows']} rows; for the remaining {social_gap} no specific video or "

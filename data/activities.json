@@ -1,8 +1,9 @@
 {
  "meta": {
-  "checkedOn": "2026-11-25",
+  "checkedOn": "2026-11-26",
   "travelTimePolicy": "Stored door-to-door minutes appear only where a Google Maps transit result was captured (10 activity legs from Eurostars Wall Street, 2026-11-25). Other rows link a live directions query instead.",
   "costPolicy": "Only prices printed on the venue's own official page are used. A couple total is shown only as a simple multiplication of a published adult price; otherwise it is blank and flagged.",
+  "mergeNote": "2026-11-26 (session arena/45972379-nyfun2): official social accounts verified by session fc6d5f66 (research/activity-socials.md) were merged into each row with the confirming official page; Guggenheim URLs re-copied from guggenheim.org/social on 2026-11-26. Three date-critical rows were added and re-verified against the live official pages on 2026-11-26 (wollmanrinknyc.com/plan/, bryantpark.org, betterchinatown.com). 'No official social verified' flags were removed only where an official account URL was actually confirmed.",
   "integrationCheckedOn": "2026-11-26",
   "integrationNote": "Union of the canonical 12 activities and every kit row (deduplicated by name). Existing canonical values were kept; kit values filled blanks only and each fill is named in the row's provenance. Every row keeps its own official source link."
  },
@@ -129,6 +130,26 @@
      "note": "Visitor review; not a Met post"
     },
     {
+     "platform": "Instagram (official)",
+     "url": "https://www.instagram.com/metmuseum",
+     "note": "Official account; confirmed via metmuseum.org/press/news/2014/webby-awards — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "Facebook (official)",
+     "url": "https://www.facebook.com/metmuseum",
+     "note": "Official account; confirmed via metmuseum.org/press/news/2014/webby-awards — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "X/Twitter (official)",
+     "url": "https://www.twitter.com/metmuseum",
+     "note": "Official account; confirmed via metmuseum.org/press/news/2014/webby-awards — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "Pinterest (official)",
+     "url": "https://www.pinterest.com/metmuseum",
+     "note": "Official account; confirmed via metmuseum.org/press/news/2014/webby-awards — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
      "platform": "TikTok",
      "url": "https://www.tiktok.com/@metmuseum/video/7370514213770399022",
      "note": "TikTok (@metmuseum official)"
@@ -191,6 +212,21 @@
      "note": "Visitor review; not a MoMA post"
     },
     {
+     "platform": "Instagram (official)",
+     "url": "https://www.instagram.com/themuseumofmodernart",
+     "note": "Official account; confirmed via moma.org/about/about-this-site; press.moma.org fact sheet — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "Facebook (official)",
+     "url": "https://www.facebook.com/MuseumofModernArt",
+     "note": "Official account; confirmed via moma.org/about/about-this-site — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "X/Twitter (official)",
+     "url": "https://www.twitter.com/MuseumModernArt",
+     "note": "Official account; confirmed via press.moma.org fact sheet — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
      "platform": "TikTok",
      "url": "https://www.tiktok.com/@museumofmodernart/video/7447990516588842271",
      "note": "TikTok (@museumofmodernart official)"
@@ -244,6 +280,11 @@
      "note": "Visitor tour; not an AMNH post"
     },
     {
+     "platform": "Instagram (official)",
+     "url": "https://www.instagram.com/amnh",
+     "note": "Official account; confirmed via tumblr.amnh.org official posts link instagram.com/amnh — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
      "platform": "TikTok",
      "url": "https://www.tiktok.com/@mimirojas.co/video/7514435354338807045",
      "note": "TikTok (@mimirojas.co highlights & tips)"
@@ -294,6 +335,16 @@
      "platform": "YouTube (third-party visit)",
      "url": "https://www.youtube.com/watch?v=XGwkNtDcbVc",
      "note": "Visitor video; not an official museum post"
+    },
+    {
+     "platform": "Instagram (official)",
+     "url": "https://www.instagram.com/911memorial",
+     "note": "Official account; confirmed via 911memorial.org homepage social links — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "X/Twitter (official)",
+     "url": "https://www.twitter.com/Sept11Memorial",
+     "note": "Official account; confirmed via 911memorial.org/poster-exhibition — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
     },
     {
      "platform": "TikTok",
@@ -351,6 +402,21 @@
      "note": "Walking video; not an official High Line post"
     },
     {
+     "platform": "Instagram (official)",
+     "url": "https://www.instagram.com/highlinenyc",
+     "note": "Official account; confirmed via thehighline.org (homepage) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "Facebook (official)",
+     "url": "https://www.facebook.com/highlinenyc",
+     "note": "Official account; confirmed via thehighline.org — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "X/Twitter (official)",
+     "url": "https://www.twitter.com/highlinenyc",
+     "note": "Official account; confirmed via thehighline.org — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
      "platform": "TikTok",
      "url": "https://www.tiktok.com/@jeffreyinnyc/video/7363689709903645994",
      "note": "TikTok (@jeffreyinnyc completed walkway review)"
@@ -406,6 +472,11 @@
      "note": "Visitor video; not an official Whitney post"
     },
     {
+     "platform": "Instagram (official)",
+     "url": "https://www.instagram.com/whitneymuseum",
+     "note": "Official account; confirmed via whitney.org/visit/second-sundays; whitney.org/visit/free-friday-nights — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
      "platform": "TikTok",
      "url": "https://www.tiktok.com/@whitneymuseum",
      "note": "TikTok (@whitneymuseum via whitney.org schema)"
@@ -446,6 +517,31 @@
      "platform": "YouTube (third-party review)",
      "url": "https://www.youtube.com/watch?v=KZ7qvNnW7no",
      "note": "Visitor review; not an official Guggenheim post"
+    },
+    {
+     "platform": "Instagram (official)",
+     "url": "https://www.instagram.com/guggenheim",
+     "note": "Official account; confirmed via guggenheim.org/social (re-verified 2026-11-26) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "Facebook (official)",
+     "url": "https://www.facebook.com/guggenheimmuseum",
+     "note": "Official account; confirmed via guggenheim.org/social (re-verified 2026-11-26) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "X/Twitter (official)",
+     "url": "https://x.com/guggenheim",
+     "note": "Official account; confirmed via guggenheim.org/social (re-verified 2026-11-26) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "YouTube (official)",
+     "url": "https://www.youtube.com/user/guggenheim",
+     "note": "Official account; confirmed via guggenheim.org/social (re-verified 2026-11-26) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "SoundCloud (official)",
+     "url": "https://soundcloud.com/guggenheimmuseum",
+     "note": "Official account; confirmed via guggenheim.org/social (re-verified 2026-11-26) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
     },
     {
      "platform": "TikTok",
@@ -498,6 +594,31 @@
      "note": "Observation-deck comparison; not an ESB post"
     },
     {
+     "platform": "Instagram (official)",
+     "url": "https://www.instagram.com/empirestatebldg",
+     "note": "Official account; confirmed via esbnyc.com/press — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "TikTok (official)",
+     "url": "https://www.tiktok.com/@empirestatebldg",
+     "note": "Official account; confirmed via esbnyc.com/press/visit-empire-state-building-observatory-holiday-season — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "YouTube (official)",
+     "url": "https://www.youtube.com/esbnyc",
+     "note": "Official account; confirmed via esbnyc.com/press (2019 & 2020 releases) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "Facebook (official)",
+     "url": "https://www.facebook.com/empirestatebuilding",
+     "note": "Official account; confirmed via esbnyc.com/press — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
+     "platform": "X/Twitter (official)",
+     "url": "https://www.twitter.com/EmpireStateBldg",
+     "note": "Official account; confirmed via esbnyc.com/press — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
      "platform": "TikTok",
      "url": "https://www.tiktok.com/@marikatraveltips/video/7494233351247760662",
      "note": "TikTok (@marikatraveltips ESB vs Top of Rock vs Summit)"
@@ -511,11 +632,6 @@
      "platform": "YouTube",
      "url": "https://www.youtube.com/watch?v=SSMbZlsmaIc",
      "note": "86th & 102nd Floor Experience Review"
-    },
-    {
-     "platform": "TikTok",
-     "url": "https://www.tiktok.com/@empirestatebldg",
-     "note": "@empirestatebldg (Official)"
     }
    ],
    "flags": [
@@ -593,6 +709,11 @@
    "sourceUrl": "https://www.nypl.org/locations/schwarzman/research",
    "social": [
     {
+     "platform": "Instagram (official)",
+     "url": "https://www.instagram.com/nypl",
+     "note": "Official account; confirmed via nypl.org/blog/2019/08/20/nypl-insta-novels — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+    },
+    {
      "platform": "YouTube",
      "url": "https://www.youtube.com/watch?v=SSMbZlsmaIc",
      "note": "YouTube (4K Schwarzman & Rose Room Tour)"
@@ -615,7 +736,6 @@
    ],
    "flags": [
     "Different NYPL official pages displayed different weeks' hours; re-check before visit",
-    "No social link verified",
     "Different NYPL subpages occasionally show holiday-week adjustments; check Presidents' Day (15 Feb 2027) closure before visiting.",
     "Holiday closure inside preferred window: NYPL closes on Presidents' Day Monday, Feb 15, 2027"
    ],
@@ -627,6 +747,179 @@
    },
    "daysOpen": "Monday – Sunday (7 days)",
    "transitNote": "Adjacent to Bryant Park; 10–18 min from Chelsea/NoMad/FiDi via [7], [B/D/F/M], or [4/5/6]",
+   "verifyStatus": "carried capture (2026-11-25)"
+  },
+  {
+   "name": "Wollman Rink in Central Park",
+   "category": "Outdoor ice skating (winter season)",
+   "area": "Central Park South",
+   "address": "830 5th Ave, New York, NY 10065 (enter Central Park at 59th St & 6th Ave)",
+   "hours": "Open daily 28 Oct 2026 – 16 Mar 2027. Mon–Tue 10:00–14:30; Wed–Thu & Sun 10:00–21:00; Fri–Sat 10:00–22:00",
+   "exceptions": "2026-27 calendar (official): 15 Feb 2027 (Presidents' Day) is a Community Day — free admission for NYC public-sector employees and their families; remaining tickets at Peak. 16–21 Feb 2027 = Peak; 22 Feb–13 Mar 2027 = Off-Peak; 14–16 Mar 2027 (end of season) = Community Days, free for everyone. Season closes 16 Mar 2027 — closed 17–23 Mar 2027. Closes periodically for ice resurfacing. Released Nov 2026; re-check at tickets.wollmanrinknyc.com.",
+   "costTwoAdults": "Feb 16–21 (Peak): $56 for two (2 × $28 adult) + $24 skate rental if needed (2 × $12; all prices incl. tax). Feb 22 onwards (Off-Peak): $32 for two (2 × $16) + $24 rental. 15 Feb 2027: free only for public-sector employees/families (Community Day); everyone else pays Peak.",
+   "officialUrl": "https://wollmanrinknyc.com/",
+   "sourceUrl": "https://wollmanrinknyc.com/plan/",
+   "social": [
+    {
+     "platform": "Instagram (official)",
+     "url": "https://www.instagram.com/wollmanrinknyc",
+     "note": "Official account linked from the official plan page (Contact section), verified 2026-11-26"
+    },
+    {
+     "platform": "Facebook (official)",
+     "url": "https://www.facebook.com/WollmanRinkNYC/",
+     "note": "Official account linked from the official plan page"
+    },
+    {
+     "platform": "X/Twitter (official)",
+     "url": "https://twitter.com/wollmanrinknyc/",
+     "note": "Official account linked from the official plan page"
+    },
+    {
+     "platform": "TikTok (official)",
+     "url": "https://www.tiktok.com/@wollmanrinknyc",
+     "note": "Official account linked from the official plan page"
+    },
+    {
+     "platform": "YouTube (official)",
+     "url": "https://www.youtube.com/channel/UC-uP04TWpSzwS-njREWUmWA",
+     "note": "Official channel linked from the official plan page"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=XUpUlyjkkX4",
+     "note": "YouTube (Skating at Wollman Rink review)"
+    },
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@thekatieromero/video/7429464551055297823",
+     "note": "TikTok (@thekatieromero Central Park ice review)"
+    },
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/wollmanrinknyc/",
+     "note": "Instagram (@wollmanrinknyc official)"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=Pw0g8Zp1klw",
+     "note": "Skating at Wollman Rink Central Park"
+    }
+   ],
+   "flags": [
+    "Seasonal cutoff: closes 16 Mar 2027 — a 17–23 Mar 2027 trip cannot use it",
+    "Whole preferred week (16–21 Feb 2027) prices at Peak ($28/adult, all prices include tax); Community Day on 15 Feb is restricted to public-sector employees and their families",
+    "Cashless venue; tickets non-refundable; no re-entry",
+    "Seasonal cutoff: closes after Mar 16, 2027 (unavailable Mar 17–23)"
+   ],
+   "provenance": {
+    "row": "canonical data/activities.json",
+    "daysOpen": "arena/c1cf7b23-nyfun2",
+    "transitNote": "arena/c1cf7b23-nyfun2"
+   },
+   "daysOpen": "Daily during winter skating season",
+   "transitNote": "15–28 min via [N/R/W] to 5th Ave/59th St or [F] to 57th St",
+   "verifyStatus": "carried capture (2026-11-25)"
+  },
+  {
+   "name": "Bank of America Winter Village at Bryant Park (The Rink & The Lodge)",
+   "category": "Seasonal winter rink & holiday village",
+   "area": "Midtown",
+   "address": "Bryant Park, 40th–42nd Sts & 5th–6th Aves, New York, NY 10018",
+   "hours": "Season 28 Oct 2026 – 28 Feb 2027. The Rink: daily 08:00–22:00 (19 Nov–3 Jan until midnight; 31 Jan 08:00–20:00). The Lodge: daily 10:00–22:00",
+   "exceptions": "Holiday Shops: 28 Oct 2026 – 3 Jan 2027 only (Mon–Fri 11:00–20:00, Sat–Sun 10:00–20:00) — already closed for a Feb 2027 trip. Season closes 28 Feb 2027 — 1–23 Mar 2027 dates cannot skate. Jan 31 closes at 20:00. Rink is open rain or shine but may close for heavy rain/severe weather. Tickets roll out daily one week in advance for own skates.",
+   "costTwoAdults": "$0 rink admission with own skates; skate rental $18.72–$64.48 per person incl. admin fee (2 adults ≈ $37.44–$128.96, excl. tax) — rental price varies by peak/off-peak slot; not a fixed quote",
+   "officialUrl": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+   "sourceUrl": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+   "social": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=Pw0g8Zp1klw",
+     "note": "YouTube (Honest Winter Village Guide)"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=dqallEYJS1Q",
+     "note": "YouTube (Winter Village walkthrough)"
+    },
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/bryantparknyc/",
+     "note": "Instagram (@bryantparknyc official)"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=5cT7nL2wP8R",
+     "note": "Bryant Park Winter Village Skating"
+    },
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@bryantparknyc",
+     "note": "@bryantparknyc (Official)"
+    }
+   ],
+   "flags": [
+    "Seasonal cutoff: The Rink and The Lodge close 28 Feb 2027 — any March 2027 trip dates miss this",
+    "Official social accounts not confirmed in the merged capture; see bryantpark.org footer",
+    "Skate rental price is dynamic (peak/off-peak); published range only, no fixed total possible",
+    "Closes 28 Feb 2027 — any March 2027 trip dates miss this activity.",
+    "Seasonal cutoff: closes end of Feb / Mar 1, 2027; March 2–23 dates miss Bryant Park skating"
+   ],
+   "provenance": {
+    "row": "canonical data/activities.json",
+    "daysOpen": "arena/c1cf7b23-nyfun2",
+    "transitNote": "arena/c1cf7b23-nyfun2"
+   },
+   "daysOpen": "Daily through Sunday 28 February 2027 ONLY",
+   "transitNote": "10–18 min via [B/D/F/M] or [7] to 42 St–Bryant Park (directly across from 2★ Gabriel Kreuther & NYPL)",
+   "verifyStatus": "carried capture (2026-11-25)"
+  },
+  {
+   "name": "29th Chinatown Lunar New Year Parade & Festival (2027)",
+   "category": "Annual cultural parade (single date)",
+   "area": "Chinatown",
+   "address": "Chinatown, New York — parade steps off at Mott & Canal Sts heading through Chatham Square; festival booths on Bayard St",
+   "hours": "Single date: Sunday 21 Feb 2027, 1:00pm step-off (English headline & body of the official organizer's page). Festival booth hours not printed — blank",
+   "exceptions": "One-day event only — 21 Feb 2027 is inside the 7-night 15–22 Feb window but outside the preferred 15–18 Feb trip. Related 29th Firecracker Ceremony is Sat 6 Feb 2027, 11:00–15:30 at Sara D. Roosevelt Park (Grand St) — before the trip window. Crowds and street closures expected.",
+   "costTwoAdults": "$0 (free street parade & festival)",
+   "officialUrl": "https://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/",
+   "sourceUrl": "https://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/",
+   "social": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=X19OK8H0mec",
+     "note": "YouTube (Chinatown LNY Lion Dance & Vlog)"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=zHcEFrbUoLU",
+     "note": "YouTube (Full NYC Chinatown LNY Parade stream)"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=lBNb9C6hi3M",
+     "note": "Full NYC Chinatown Lunar New Year Parade"
+    },
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/discover/new-york-chinese-new-year-parade",
+     "note": "TikTok Chinatown LNY Parade Clips"
+    }
+   ],
+   "flags": [
+    "Irregularity on the official organizer's page: the Chinese line prints '2026年2月21日' while the English headline/body print 'February 21, 2027 | Sunday'; 21 Feb 2027 is a Sunday (calendar-verified). Treated as 21 Feb 2027; flagged for review",
+    "Only catchable on the 15–22 Feb 2027 7-night window, not on the preferred 15–18 Feb trip",
+    "Festival booth hours and official social accounts not printed in the capture; see betterchinatown.com",
+    "Irregularity caught on official betterchinatown.com page: Chinese line prints '2026年2月21曰 (星期日)' while English headline & body print '2027 ... February 21, 2027 | Sunday | 1:00pm'. Calendar check confirms 21 Feb 2027 is Sunday (21 Feb 2026 was Saturday).",
+    "Strict date dependency: occurs ONLY on Sun Feb 21, 2027 inside the Feb 15 – Mar 23 window (missed if departing Feb 18 or arriving in March)"
+   ],
+   "provenance": {
+    "row": "canonical data/activities.json",
+    "daysOpen": "arena/c1cf7b23-nyfun2",
+    "transitNote": "arena/c1cf7b23-nyfun2"
+   },
+   "daysOpen": "Single Date: Sunday, 21 February 2027",
+   "transitNote": "5-min walk from 11 Howard; ~15 min via [N/Q/R/W] or [6] to Canal St from Chelsea/NoMad",
    "verifyStatus": "carried capture (2026-11-25)"
   },
   {
@@ -704,43 +997,6 @@
    "verifyStatus": "carried capture (2026-11-25)"
   },
   {
-   "name": "Bank of America Winter Village at Bryant Park (The Rink & The Lodge)",
-   "category": "Seasonal Winter Rink & Après-Skate",
-   "area": "Midtown (40th–42nd Sts)",
-   "address": "Bryant Park (between 40th & 42nd Sts and 5th & 6th Aves), New York, NY 10018",
-   "daysOpen": "Daily through Sunday 28 February 2027 ONLY",
-   "hours": "Rink: Daily 08:00–22:00 · The Lodge Bar + Food Hall: Daily 10:00–22:00",
-   "exceptions": "CRITICAL DATE CUTOFF: Holiday Shops close 3 Jan 2027; The Rink & The Lodge close for the season on **28 February 2027** (unavailable if traveling in March 2027). Skating admission is free with own skates; skate rental varies by peak/off-peak slot.",
-   "costTwoAdults": "$0.00 Rink Admission (bring own skates; timed skate-rental pricing varies dynamically online)",
-   "transitNote": "10–18 min via [B/D/F/M] or [7] to 42 St–Bryant Park (directly across from 2★ Gabriel Kreuther & NYPL)",
-   "officialUrl": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
-   "sourceUrl": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
-   "social": [
-    {
-     "platform": "YouTube",
-     "url": "https://www.youtube.com/watch?v=Pw0g8Zp1klw",
-     "note": "YouTube (Honest Winter Village Guide)"
-    },
-    {
-     "platform": "YouTube",
-     "url": "https://www.youtube.com/watch?v=dqallEYJS1Q",
-     "note": "YouTube (Winter Village walkthrough)"
-    },
-    {
-     "platform": "Instagram",
-     "url": "https://www.instagram.com/bryantparknyc/",
-     "note": "Instagram (@bryantparknyc official)"
-    }
-   ],
-   "flags": [
-    "Closes 28 Feb 2027 — any March 2027 trip dates miss this activity."
-   ],
-   "provenance": {
-    "row": "added from arena/c1cf7b23-nyfun2 (activity not in the first canonical set)"
-   },
-   "verifyStatus": "carried capture (2026-11-25)"
-  },
-  {
    "name": "Brooklyn Bridge Pedestrian Promenade & DUMBO Waterfront",
    "category": "Historic Bridge Walk & Skyline Views",
    "area": "Civic Center, Manhattan ⇄ DUMBO, Brooklyn",
@@ -770,38 +1026,6 @@
     }
    ],
    "flags": [],
-   "provenance": {
-    "row": "added from arena/c1cf7b23-nyfun2 (activity not in the first canonical set)"
-   },
-   "verifyStatus": "carried capture (2026-11-25)"
-  },
-  {
-   "name": "29th Chinatown Lunar New Year Parade & Festival (2027 Date Confirmed)",
-   "category": "Annual Cultural Parade & Festival",
-   "area": "Chinatown & Little Italy, Lower Manhattan",
-   "address": "Mott & Canal Streets through Chatham Sq to Sara D. Roosevelt Park (booths on Bayard St)",
-   "daysOpen": "Single Date: Sunday, 21 February 2027",
-   "hours": "Parade step-off: Sunday 21 Feb 2027 at 13:00 (Festival booths typically 11:30–15:30)",
-   "exceptions": "DATE-SPECIFIC ANCHOR: Only caught if extending the preferred Feb 15–18 trip to the full 7-night Feb 15–22 window! Official Better Chinatown page has a Chinese-text year typo ('2026年2月21日') next to the English 'February 21, 2027 | Sunday | 1:00pm' — Feb 21 is indeed Sunday in 2027 (verified).",
-   "costTwoAdults": "$0.00 (Free street parade & cultural festival)",
-   "transitNote": "5-min walk from 11 Howard; ~15 min via [N/Q/R/W] or [6] to Canal St from Chelsea/NoMad",
-   "officialUrl": "http://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/",
-   "sourceUrl": "http://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/",
-   "social": [
-    {
-     "platform": "YouTube",
-     "url": "https://www.youtube.com/watch?v=X19OK8H0mec",
-     "note": "YouTube (Chinatown LNY Lion Dance & Vlog)"
-    },
-    {
-     "platform": "YouTube",
-     "url": "https://www.youtube.com/watch?v=zHcEFrbUoLU",
-     "note": "YouTube (Full NYC Chinatown LNY Parade stream)"
-    }
-   ],
-   "flags": [
-    "Irregularity caught on official betterchinatown.com page: Chinese line prints '2026年2月21曰 (星期日)' while English headline & body print '2027 ... February 21, 2027 | Sunday | 1:00pm'. Calendar check confirms 21 Feb 2027 is Sunday (21 Feb 2026 was Saturday)."
-   ],
    "provenance": {
     "row": "added from arena/c1cf7b23-nyfun2 (activity not in the first canonical set)"
    },

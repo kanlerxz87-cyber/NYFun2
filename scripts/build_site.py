@@ -180,6 +180,7 @@ def build():
     <a class="tile" href="pages/verification.html"><span class="tag">Audit</span><h3>Verification log</h3><p>What was re-read on {CHECKS_DATE}, what was only corroborated, and what stayed a carried capture.</p></a>
     <a class="tile" href="pages/sources.html"><span class="tag">Method</span><h3>Sources & rules</h3><p>The verification rules, the primary-source register and how to reproduce the build.</p></a>
     <a class="tile" href="pages/repo-audit.html"><span class="tag">Repo</span><h3>Repository audit</h3><p>What each session contributed, what this integration changed and what it found.</p></a>
+    <a class="tile" href="pages/compare.html"><span class="tag">Parallel work</span><h3>Compare session kits</h3><p>Five independent kits, what each added and where they disagree.</p></a>
   </div>
 
   <h2>How to read a row</h2>
@@ -214,8 +215,8 @@ def build():
   <h2>Key findings</h2>
   <div class="card">
     <ul>
-      <li><strong>Dining.</strong> {len(r_items)} rows: 69 starred ({star_counts["3"]}+{star_counts["2"]}+{star_counts["1"]}) plus 3 guide-listed. {len(priced)} have a verified couple total from an official menu, FAQ or official booking channel — from <strong>$156</strong> (Gramercy Tavern tavern three-course) and <strong>$168</strong> (Cote Butcher's Feast) up to <strong>$1,900</strong> (Masa hinoki counter). Three prices (Atomix, Atera, Per Se) are contested between captures and stay blank (flag F22).</li>
-      <li><strong>Hotels.</strong> {len(hotels_priced)} of {len(h_items)} shortlisted properties have a dated 7-night total; {len(qualified)} publish a queen/king bed plus private bathroom. {len(h_items) - len(qualified)} do not and are excluded from the recommendation rather than assumed to comply (F24).</li>
+      <li><strong>Dining.</strong> {len(r_items)} rows: 69 starred ({star_counts["3"]}+{star_counts["2"]}+{star_counts["1"]}) plus 3 guide-listed. {len(priced)} have a verified couple total from an official menu, FAQ or official booking channel — from <strong>$156</strong> (Gramercy Tavern tavern three-course) and <strong>$168</strong> (Cote Butcher's Feast) up to <strong>$1,900</strong> (Masa hinoki counter). Three prices (Atomix, Atera, Per Se) are contested between captures and stay blank (flag F24).</li>
+      <li><strong>Hotels.</strong> {len(hotels_priced)} of {len(h_items)} shortlisted properties have a dated 7-night total; {len(qualified)} publish a queen/king bed plus private bathroom. {len(h_items) - len(qualified)} do not and are excluded from the recommendation rather than assumed to comply (F26).</li>
       <li><strong>The one-hour rule.</strong> 25 measured hotel→cluster legs, all 3–37 minutes, so every published hotel with a measurement reaches all five sampled MICHELIN clusters within an hour. The constraint is satisfied everywhere it can be measured; price and room quality decide.</li>
       <li><strong>Dates that matter.</strong> Presidents' Day Mon 15 Feb; Chinatown Lunar New Year parade Sun 21 Feb 13:00; Bryant Park rink closes Sun 28 Feb; Wollman Rink runs to 16 Mar (cheap off-peak $16); the Met is closed Wednesdays; MoMA is open late Fridays.</li>
       <li><strong>Risk.</strong> Star levels may change on 14 Dec 2026; menus and rates are November 2026 captures; the hotel totals are booking-engine snapshots, not quotes.</li>
@@ -295,7 +296,7 @@ def build():
   {toolbar("Search 72 restaurants by name, cuisine, area, price or day…", VERIFY_SELECT + '<select data-filter="stars" aria-label="Filter by star level"><option value="">All distinctions</option><option value="3">3 stars</option><option value="2">2 stars</option><option value="1">1 star</option><option value="guide">Guide-listed (no star)</option></select>')}
   <div data-table="restaurants"></div>
 
-  <div class="notice info"><strong>How the price columns work.</strong> A dollar total appears only where an official page printed the per-person price. The MICHELIN band ($$–$$$$) is shown separately. "Price on request", "MP" and deposit-only venues are blank and flagged — Per Se publishes only a $200 deposit; Atomix and Atera have conflicting captures (F22).</div>
+  <div class="notice info"><strong>How the price columns work.</strong> A dollar total appears only where an official page printed the per-person price. The MICHELIN band ($$–$$$$) is shown separately. "Price on request", "MP" and deposit-only venues are blank and flagged — Per Se publishes only a $200 deposit; Atomix and Atera have conflicting captures (F24).</div>
 """
     pages["michelin"] = shell(
         "michelin", "MICHELIN restaurants", "Dining · source-checked", "MICHELIN restaurants and guide listings",
@@ -336,7 +337,7 @@ def build():
   <div class="card">
     <p><strong>Now, at a cancellable rate.</strong> Two of the priced hotels were running 30–39% "Black Friday" promotions on 25 Nov 2026 (DoubleTree Chelsea, Arlo NoMad). A free-cancellation, $0-prepayment hold captures that price without risking a non-refundable commitment before the 14 Dec 2026 MICHELIN announcement and before the 3-vs-7-night decision.</p>
     <p><strong>Then re-shop</strong> in early February 2027 (14–30 days out) and around the ceremony. No official source promises a future price drop, so the cancellable hold is the risk cap, not a prediction.</p>
-    <p><strong>Re-quote before paying:</strong> the totals here are third-party booking-engine snapshots captured 2026-11-25, not hotel quotes (flag F23). Booking.com property pages refused this session's fetcher on {CHECKS_DATE}, so they could not be re-quoted today.</p>
+    <p><strong>Re-quote before paying:</strong> the totals here are third-party booking-engine snapshots captured 2026-11-25, not hotel quotes (flag F25). Booking.com property pages refused this session's fetcher on {CHECKS_DATE}, so they could not be re-quoted today.</p>
   </div>
 
   <h2>Why the ranking is not just "count of restaurants within an hour"</h2>
@@ -558,6 +559,8 @@ node --check assets/app.js</pre>
         <tr><td data-label="Path"><code>sessions/c1cf7b23/</code></td><td data-label="What">31-venue, 10-hotel, 18-activity kit with 155 social links</td><td data-label="Status">Preserved; source of most hours/socials and 4 dated hotel rates</td></tr>
         <tr><td data-label="Path"><code>sessions/657520df/</code></td><td data-label="What">27-venue kit with cross-week window analysis</td><td data-label="Status">Preserved; source of Met/MoMA/Whitney socials and window notes</td></tr>
         <tr><td data-label="Path"><code>sessions/33cfdba4/</code></td><td data-label="What">72-row roster, 25-leg transit matrix, 5 price windows</td><td data-label="Status">Preserved; source of the transit measurements</td></tr>
+        <tr><td data-label="Path"><code>data/verification.json</code>, <code>data/conflicts.json</code>, <code>research/verification-2026-11-26.md</code></td><td data-label="What">Dated verification log, every kit conflict, and the narrative audit</td><td data-label="Status">New 2026-11-26</td></tr>
+        <tr><td data-label="Path"><code>pages/verification.html</code>, <code>pages/compare.html</code></td><td data-label="What">Public verification log and kit comparison</td><td data-label="Status">New 2026-11-26</td></tr>
         <tr><td data-label="Path"><code>sessions/215c2a25/</code>, <code>alt/</code></td><td data-label="What">Two earlier independent dashboards</td><td data-label="Status">Preserved, not linked in the main navigation</td></tr>
       </tbody>
     </table></div>
@@ -566,19 +569,29 @@ node --check assets/app.js</pre>
   <h2>Audit findings from this integration</h2>
   <div class="card">
     <ul>
-      <li><strong>Stale headline counts (F20).</strong> The previous front page claimed 20 restaurant rows, 12 activities and 10 hotels while its own data held 72, 12 and 12; README said 21. All counts are now rendered from JSON at load, and the static HTML matches.</li>
-      <li><strong>Kit rosters were not the official census (F21).</strong> 14 kit venues sit outside the 69-star roster, and one kit carried 3 starred names absent from today's live list. None were added; all are in <code>data/conflicts.json</code>.</li>
+      <li><strong>Stale headline counts (F22).</strong> The previous front page claimed 20 restaurant rows, 12 activities and 10 hotels while its own data held 72, 12 and 12; README said 21. All counts are now rendered from JSON at load, and the static HTML matches.</li>
+      <li><strong>Kit rosters were not the official census (F23).</strong> 14 kit venues sit outside the 69-star roster, and one kit carried 3 starred names absent from today's live list. None were added; all are in <code>data/conflicts.json</code>.</li>
       <li><strong>Duplicate rows in merged kits.</strong> The same hotel appeared as "The Frederick Hotel Tribeca" and "The Frederick Hotel Tribeca, a Small Luxury Hotel"; NYPL, the Met and 9/11 each appeared twice. The merge now keys these and reports rather than duplicates.</li>
       <li><strong>Mis-traced transit risk.</strong> A fuzzy name match initially attached Eurostars Wall Street's transit legs to The Wall Street Hotel. Matching is now key-based, and unmeasured hotels are blank.</li>
-      <li><strong>Contested prices stay blank (F22).</strong> Atomix, Atera and Per Se are not assigned a price; Le Bernardin keeps $218 with the $225 alternative shown.</li>
-      <li><strong>Verification is dated, not implied (F18).</strong> 16 checks were re-read on 2026-11-26; everything else is labelled a carried capture.</li>
+      <li><strong>Contested prices stay blank (F24).</strong> Atomix, Atera and Per Se are not assigned a price; Le Bernardin keeps $218 with the $225 alternative shown.</li>
+      <li><strong>Verification is dated, not implied (F21).</strong> 16 checks were re-read on 2026-11-26; everything else is labelled a carried capture.</li>
     </ul>
   </div>
 
-  <h2>Coordination</h2>
+  <h2>Parallel sessions and the merge that resolved the collision</h2>
   <div class="card">
-    <p>Task board: <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a>. This session claimed <strong>T18</strong> (final integration and verification refresh) after every research task was already marked done, and edited only the shared integration scope — no other session's namespace.</p>
-    <p>Parallel kits and what each adds: <a href="compare.html">Compare session kits →</a></p>
+    <p>Several sessions worked this repository at once. This build started as task T18, then found that
+    <code>arena/547ee3a3-nyfun2</code> (T18) and <code>arena/45972379-nyfun2</code> (T21–T23) had already merged
+    PRs #18–#22 to <code>main</code>, making the first PR (#23) conflicting.</p>
+    <p><strong>Resolution:</strong> <code>main</code> was merged into the branch and <em>its datasets were adopted as the new
+    canonical base</em> (<code>research/canonical/*.json</code>), so their verified work — Sushi Sho's Tock price,
+    Per Se's revised deposit pages, the Wollman / Bryant Park / Lunar New Year rows, the official activity
+    socials, and flags F18–F20 — flows into this build. Their pages were regenerated from that merged data
+    rather than overwritten by hand, and the task was renumbered <strong>T24</strong> to avoid the T18 collision.
+    Nothing another session verified was discarded; the one file that could not be auto-merged
+    (<code>COORDINATION.md</code>) keeps both sessions' entries.</p>
+    <p>Task board: <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a> ·
+    Parallel kits and what each adds: <a href="compare.html">Compare session kits →</a></p>
   </div>
 """
     pages["repo"] = shell(

@@ -4,6 +4,15 @@
  "conflicts": [
   {
    "type": "price-disagreement",
+   "row": "Sushi Sho",
+   "session": "arena/c1cf7b23-nyfun2",
+   "kitValue": "$900 base / $990 prepaid w/ admin fee — Shorter Omakase at Hinoki Counter (2 × $450 base / $495 w/ fee)",
+   "canonicalValue": "$990 (Shorter Omakase at Hinoki Counter, 2 x $495, Tock prepaid incl. administrative fee)",
+   "source": "https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-at-hinoki-counter",
+   "action": "canonical value kept; both shown on the Michelin page note"
+  },
+  {
+   "type": "price-disagreement",
    "row": "Eleven Madison Park",
    "session": "arena/c1cf7b23-nyfun2",
    "kitValue": "$770 Dining Room Tasting (2 × $385) · $450–$510 Bar Tasting (2 × $225–$255)",
