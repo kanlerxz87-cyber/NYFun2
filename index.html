@@ -3,84 +3,79 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NYC Trip Plan 2027 — Sourced dashboard</title>
-<meta name="description" content="A source-checked New York City trip dashboard for February–March 2027: Michelin restaurants, hotels, activities, review links, open questions and suggestions.">
+<title>NYC 2027 trip dashboard — NYC 2027</title>
+<meta name="description" content="MICHELIN dining, hotel pricing and February activities for two adults, with every claim tied to an official source and every gap left visibly blank.">
+<meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="layout">
-<aside class="sidebar">
-  <a class="brand" href="index.html"><span class="mark">NY</span><span>NYC 2027<small>Trip dashboard</small></span></a>
-  <nav class="nav" aria-label="Main navigation">
-    <a class="active" href="index.html">Overview</a>
-    <a href="pages/executive-summary.html">Summary</a>
-    <a href="pages/michelin-restaurants.html">Michelin</a>
-    <a href="pages/hotels.html">Hotels</a>
-    <a href="pages/activities.html">Activities</a>
-    <a href="pages/itinerary.html">Itinerary</a>
-    <a href="pages/questions.html">Questions</a>
-    <a href="pages/suggestions.html">Suggestions</a>
-    <a href="pages/flagged.html">Flagged</a>
-    <a href="pages/sources.html">Sources</a>
-    <a href="pages/repo-audit.html">Repo audit</a>
-  </nav>
-  <div class="side-note">Data snapshot checked <span data-checked>—</span></div>
-</aside>
-<main class="content" id="main">
-  <p class="eyebrow">New York City · 15 Feb–23 Mar 2027 · 2 adults</p>
-  <h1>A trip plan you can audit, line by line.</h1>
-  <p class="lede">The preferred dates are 15–18 February 2027 (3 nights). For the requested 7-night hotel comparison, the canonical dataset uses 15–22 February. Each factual table row links to its source; unconfirmed values stay blank and are flagged.</p>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="index.html"><span class="mark">NY</span><span><b>NYC 2027</b><small>2 adults · Feb 2027</small></span></a>
+  <nav class="nav" aria-label="Main navigation"><a class="active" href="index.html">Overview</a><a href="pages/executive-summary.html">Summary</a><a href="pages/michelin-restaurants.html">Michelin</a><a href="pages/hotels.html">Hotels</a><a href="pages/activities.html">Activities</a><a href="pages/itinerary.html">Itinerary</a><a href="pages/questions.html">Questions</a><a href="pages/suggestions.html">Suggestions</a><a href="pages/flagged.html">Flagged</a><a href="pages/verification.html">Verification</a><a href="pages/sources.html">Sources</a><a href="pages/repo-audit.html">Repo audit</a></nav>
+</div></header>
+<main class="wrap" id="main">
+  <p class="eyebrow">New York City · 15 Feb – 23 Mar 2027 · 2 adults</p>
+  <h1>A trip you can audit, line by line.</h1>
+  <p class="lede">MICHELIN dining, hotel pricing and February activities for two adults, with every claim tied to an official source and every gap left visibly blank.</p>
 
-  <div class="notice danger"><strong>Before booking:</strong> Michelin's 2026 Northeast Cities ceremony is scheduled for <a href="https://michelinmedia.com/pages/blog/detail/article/c/a1479/" target="_blank" rel="noopener noreferrer">14 December 2026 ↗</a>, before the trip; distinctions can change. The canonical hotel table has four dated 7-night totals for 15–22 February, captured from third-party booking pages on 25 November 2026—not hotel quotes. Eight of twelve hotels are unpriced there, and that dataset does not compare all weeks in the requested window. Re-check the room, cancellation terms, tax and final rate before payment; see <a href="pages/flagged.html">Flagged for Review</a>.</div>
+  <div class="notice good"><strong>What this is.</strong> A source-audited plan for two adults in New York City inside the 15 Feb – 23 Mar 2027 window, built around MICHELIN dining and hotels that publish a queen-or-larger bed and a private bathroom. Every row links the page it came from. Anything that could not be confirmed is blank and sits on the <a href="pages/flagged.html">Flagged</a> page.</div>
 
-  <div class="grid">
-    <div class="stat"><b data-count="restaurants">—</b><span>restaurant records in the canonical table</span></div>
-    <div class="stat"><b data-count="activities">—</b><span>activity records in the canonical table</span></div>
-    <div class="stat"><b data-count="hotels">—</b><span>hotel candidates</span></div>
-    <div class="stat"><b data-count="questions">—</b><span>open questions</span></div>
+  <div class="stats">
+    <div class="stat"><b data-count="restaurants">72</b><span>MICHELIN rows (69 starred + 3 guide-listed)</span></div>
+    <div class="stat"><b data-count="priced">24</b><span>with a verified couple price</span></div>
+    <div class="stat"><b data-count="hotels">16</b><span>hotel candidates · <span data-count="hotelPriced">8</span> with a dated 7-night total</span></div>
+    <div class="stat"><b data-count="activities">18</b><span>activities with official hours</span></div>
+    <div class="stat"><b data-count="flags">28</b><span>flagged items for your review</span></div>
   </div>
 
-  <h2>Executive summary</h2>
   <div class="card">
+    <h2 style="margin-top:0">The short version</h2>
     <ul>
-      <li><strong>Michelin.</strong> The canonical restaurant table contains 72 records: 69 starred venues in the 25 Nov 2026 live-list snapshot (5 three-star, 14 two-star, 50 one-star) plus 3 Guide-listed additions without stars. Sixteen have an official-source couple menu total recorded — including Sushi Sho's $990 for two (Tock, re-verified 26 Nov 2026); prices are food-only unless the row says otherwise and may change before the trip.</li>
-      <li><strong>Hotels.</strong> Twelve candidates are listed. Four have dated 15–22 Feb 2027 totals from a third-party booking engine; eight are blank. These dated snapshots are not direct hotel quotes. The canonical dataset has not established the cheapest week across the full travel window.</li>
-      <li><strong>Transit.</strong> The canonical site's hotel ranking does not claim a verified count of Michelin restaurants within one hour. A separate, detailed planning kit reports measured transit legs and a multi-week hotel comparison; it is preserved separately, with its own data and flags, and should be treated as an independent research set rather than merged canonical data.</li>
-      <li><strong>Activities.</strong> Fifteen activities are in the canonical table, including three date-critical winter 2027 rows re-verified against the live official pages on 26 Nov 2026: the <strong>29th Chinatown Lunar New Year Parade</strong> (Sun 21 Feb 2027, 1:00pm, free), <strong>Wollman Rink</strong> (28 Oct 2026–16 Mar 2027; 16–21 Feb Peak $28/adult; 22 Feb onwards Off-Peak $16; 15 Feb is a restricted Community Day) and <strong>Bryant Park Winter Village</strong> (free rink admission; closes 28 Feb 2027). Each row has a live directions link that uses the hotel selected as route origin on the Hotels page.</li>
-      <li><strong>Decisions still needed.</strong> Trip length (3 nights vs. 7–14 nights), budget, airport/airfare, dietary/accessibility needs and the chosen hotel are unresolved. See <a href="pages/questions.html">Questions</a> and <a href="pages/suggestions.html">Suggestions</a>.</li>
+      <li><strong>Dates.</strong> Your preferred window is <strong>15–18 Feb 2027</strong> (Mon–Thu, 3 nights). All hotel maths here uses the requested <strong>7-night</strong> case, <strong>15–22 Feb 2027</strong> (Mon–Mon). Feb 15 is Presidents' Day; the Chinatown Lunar New Year parade is <strong>Sunday 21 Feb 2027 at 13:00</strong> — inside the 7-night window, outside the 3-night one.</li>
+      <li><strong>Hotels.</strong> 8 of 16 candidates carry a dated 7-night total for two adults, from <strong>$998 non-ref · ~$1,204 refundable</strong> all-in (Eurostars Wall Street, non-refundable) to <strong>$5,220</strong> (The Beekman). Best value with free cancellation: <strong>DoubleTree Chelsea, $1,110 all-in</strong>.</li>
+      <li><strong>Dining.</strong> The live MICHELIN filter reads <strong>5 three-star, 14 two-star, 50 one-star</strong> — 69 starred, all catalogued here plus 3 guide-listed newcomers. 24 rows have a couple total from an official menu; the cheapest is <strong>Gramercy Tavern's tavern three-course at $156</strong>, then <strong>Cote's Butcher's Feast at $168</strong>.</li>
+      <li><strong>The one-hour rule.</strong> 25 hotel→MICHELIN-cluster subway/bus legs were measured: every one was <strong>3–37 minutes</strong>. The rule therefore does not separate central Manhattan hotels; the ranking falls through to price and room quality.</li>
+      <li><strong>What could change.</strong> MICHELIN's next New York ceremony is <strong>14 Dec 2026</strong>, before the trip. Restaurant menus and hotel rates were captured in November 2026 and must be re-checked before booking.</li>
     </ul>
-    <p><a href="pages/executive-summary.html">Read the full executive summary →</a></p>
+    <p><a href="pages/executive-summary.html"><strong>Read the executive summary →</strong></a></p>
   </div>
 
-  <h2>Choose a planning view</h2>
-  <div class="notice info"><strong>Date-critical, Feb–Mar 2027:</strong> Sun 21 Feb 2027 is the 29th Chinatown Lunar New Year Parade (1:00pm, free) — only possible on the 7-night 15–22 Feb window, not the preferred 15–18 Feb trip. <a href="pages/activities.html">Wollman Rink</a> prices Presidents' week at Peak ($28/adult; 15 Feb is a restricted Community Day), 22 Feb onwards Off-Peak ($16), and closes 16 Mar 2027. <a href="pages/activities.html">Bryant Park Winter Village</a> (free rink admission) closes 28 Feb 2027.</div>
-  <div class="notice info"><strong>Detailed trip-planning kit:</strong> the independently researched T17 dashboard provides a curated 31-restaurant Michelin table (24 official couple prices), 10 hotels with dated 7-night and cross-week snapshots, 18 activities, 155 social/review links, transit-based hotel ranking, open questions and a flagged-items page. Its prices are time-sensitive and several entries are explicitly flagged. <a href="sessions/c1cf7b23/index.html">Open the detailed planning kit →</a></div>
-  <div class="cards-a">
-    <a class="tile" href="pages/michelin-restaurants.html"><span class="tag">Dining</span><h3>Canonical Michelin catalogue</h3><p>72 records; clear distinction between starred and Guide-listed entries, with source, hours and price blanks flagged.</p></a>
-    <a class="tile" href="pages/hotels.html"><span class="tag">Stay</span><h3>Canonical hotel shortlist</h3><p>12 candidates, dated rate evidence where captured, bed/bath blanks and explicit ranking limits.</p></a>
-    <a class="tile" href="pages/activities.html"><span class="tag">Things to do</span><h3>Activities</h3><p>Official hours, exceptions, couple costs where published, official socials and route queries.</p></a>
-    <a class="tile" href="pages/itinerary.html"><span class="tag">Plan</span><h3>Itinerary & travel</h3><p>How to verify the one-hour travel goal without treating unmeasured routes as facts.</p></a>
-    <a class="tile" href="pages/questions.html"><span class="tag">Decide</span><h3>Questions & answers</h3><p>What is known, what is missing, what blocks a decision and how to find out.</p></a>
-    <a class="tile" href="pages/suggestions.html"><span class="tag">Improve</span><h3>Suggestions</h3><p>Non-destructive improvements for review before implementation.</p></a>
-    <a class="tile" href="pages/flagged.html"><span class="tag">Audit</span><h3>Flagged for review</h3><p>Unverified facts, discrepancies and time-sensitive findings.</p></a>
-    <a class="tile" href="pages/sources.html"><span class="tag">Verify</span><h3>Sources & method</h3><p>Primary-source register, attribution and verification limits.</p></a>
-    <a class="tile" href="pages/repo-audit.html"><span class="tag">Audit</span><h3>Repository audit</h3><p>Historical integration record plus the latest consistency audit.</p></a>
-    <a class="tile" href="alt/index.html"><span class="tag">Alternate</span><h3>Earlier alternate kit</h3><p>Previous independent implementation preserved for comparison.</p></a>
-    <a class="tile" href="sessions/215c2a25/index.html"><span class="tag">Independent</span><h3>Additional source-linked kit</h3><p>Another independently researched dashboard and its own assumptions.</p></a>
-    <a class="tile" href="sessions/33cfdba4/index.html"><span class="tag">Transit kit</span><h3>Measured transit matrix</h3><p>A fourth session's kit with 25/25 measured Google Maps transit legs (all ≤37 min) and a closure-aware itinerary.</p></a>
-    <a class="tile" href="sessions/657520df/index.html"><span class="tag">Audited build</span><h3>Verified couple dashboard</h3><p>A fifth session's 7-page mobile dashboard: 10 audited hotels (pre-tax + all-in 7-night totals), 27 Michelin rows with 23 verified prices, 97 social links.</p></a>
-    <a class="tile" href="sessions/c1cf7b23/index.html"><span class="tag">Reviewed build</span><h3>31-venue mobile dashboard</h3><p>A sixth session's 31-venue Michelin table (24 official couple totals), 10 hotels, 18 activities and 155 verified YT/TikTok/IG links, with flags and repo audit.</p></a>
+  <h2>Browse by category</h2>
+  <div class="tiles">
+    <a class="tile" href="pages/michelin-restaurants.html"><span class="tag">Dining</span><h3>MICHELIN restaurants</h3><p>All 69 starred venues plus guide-listed rows: star level, price for two, hours, social links, source.</p></a>
+    <a class="tile" href="pages/hotels.html"><span class="tag">Stay</span><h3>Hotels & ranking</h3><p>Bed/bath evidence, dated 7-night totals, measured MICHELIN reach and the five price windows.</p></a>
+    <a class="tile" href="pages/activities.html"><span class="tag">Things to do</span><h3>Activities</h3><p>Official hours, closures, couple costs and the date-critical February events.</p></a>
+    <a class="tile" href="pages/itinerary.html"><span class="tag">Plan</span><h3>Itinerary</h3><p>A 7-night skeleton built only from verified opening days, plus the 3-night variant.</p></a>
+    <a class="tile" href="pages/questions.html"><span class="tag">Decide</span><h3>Questions & answers</h3><p>What is known, what is missing, and what actually blocks a booking decision.</p></a>
+    <a class="tile" href="pages/suggestions.html"><span class="tag">Improve</span><h3>Suggestions</h3><p>16 options to improve the plan or the site, each with effort, blockers and status.</p></a>
+    <a class="tile" href="pages/flagged.html"><span class="tag">Audit</span><h3>Flagged for review</h3><p>Every unverified value, conflict and irregularity, with its source, in one list.</p></a>
+    <a class="tile" href="pages/verification.html"><span class="tag">Audit</span><h3>Verification log</h3><p>What was re-read on 2026-11-26, what was only corroborated, and what stayed a carried capture.</p></a>
+    <a class="tile" href="pages/sources.html"><span class="tag">Method</span><h3>Sources & rules</h3><p>The verification rules, the primary-source register and how to reproduce the build.</p></a>
+    <a class="tile" href="pages/repo-audit.html"><span class="tag">Repo</span><h3>Repository audit</h3><p>What each session contributed, what this integration changed and what it found.</p></a>
+    <a class="tile" href="pages/compare.html"><span class="tag">Parallel work</span><h3>Compare session kits</h3><p>Five independent kits, what each added and where they disagree.</p></a>
   </div>
 
-  <h2>How to read the tables</h2>
+  <h2>How to read a row</h2>
   <div class="card">
-    <p><strong>Official source</strong> links to the primary page used for a row. <strong>Official site</strong> links to the venue's own website where available. <span class="blank">blank — unverified</span> means the value was not confirmed; consult the linked flag. Review videos are third-party and are not endorsements.</p>
-    <p>On a phone, each table row becomes a card. Use the search box to filter. Select a hotel on the Hotels page to set it as the origin for the live route-query links.</p>
+    <p><strong>Status badge.</strong> <span class="pill green">checked today</span> means the official page was read again on 2026-11-26. <span class="pill gray">carried capture</span> means the value comes from the 2026-11-25 capture and the source link is still there for you to open.</p>
+    <p><strong>Blank</strong> (<span class="blank">blank — unverified</span>) means no official page confirmed the value. It is never filled with an estimate. Each blank is explained on the Flagged page.</p>
+    <p><strong>Route</strong> links open live Google Maps transit directions from the hotel you pick on the Hotels page. Stored minutes only appear where a real routing result was captured.</p>
+    <p><strong>Social links</strong> are labelled by platform; "review" links are third-party and are not treated as endorsements.</p>
   </div>
-  <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> · Coordination board: <a href="COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a> · Canonical data checked <span data-checked>—</span>.</p>
+
+  <footer class="foot">
+    <p><strong>Data as captured:</strong> <span data-checked>2026-11-26</span> ·
+    <strong>Official-source verification:</strong> 2026-11-26 ·
+    <strong>Roster census:</strong> 2026-11-25</p>
+    <p>Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> ·
+    Coordination board: <a href="COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a> ·
+    <a href="pages/flagged.html">Flagged for review</a> ·
+    <a href="pages/verification.html">Verification log</a> ·
+    <a href="pages/compare.html">Compare session kits</a></p>
+    <p class="small">Prices are what the linked official page said on the capture date. Nothing here is a booking, a quote, or financial advice. Blank means unverified — never estimated.</p>
+  </footer>
 </main>
-</div>
 <script src="assets/app.js"></script>
 </body>
 </html>

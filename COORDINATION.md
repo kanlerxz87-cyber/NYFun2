@@ -37,6 +37,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T21 | Root integration of parallel-session outputs: tiles to the session dashboards, verified activity official socials merged into canonical data, three date-critical Feb–Mar 2027 activity rows added (verified live), Sushi Sho Tock price + flags reconciled, Per Se deposit figures re-verified (renumbered: T18 collided with arena/547ee3a3-nyfun2's T18) | done | arena/45972379-nyfun2 | `index.html`, `pages/activities.html`, `pages/sources.html`, `pages/michelin-restaurants.html`, `pages/executive-summary.html`, `data/activities.json`, `data/restaurants.json`, `data/decisions.json`, `README.md`, `COORDINATION.md` | Claims the two handoff requests logged by sessions 657520df and c1cf7b23 and the fc6d5f66 activity-socials merge. (Renumbered from T18 after rebase onto main a9c80c6.) |
 | T22 | Resolve PR #12 (arena/aad75793-nyfun2, CONFLICTING on stale base a3a2848): close with explanation, do not merge | done | arena/45972379-nyfun2 | PR #12 only (no files) | Closed unmerged 2026-11-26 with explanatory comment. Board guidance since 2026-11-25: close or rebase, never merge as-is. (Renumbered from T19.) |
 | T23 | Final verification + publish: verify.py, node --check, link check, PR to main, merge, confirm GitHub Pages deploy, record PR link and merge result | done | arena/45972379-nyfun2 | `COORDINATION.md`, `README.md` | Rebased onto main a9c80c6 (PRs #18/#19); conflict resolved without discarding 547ee3a3's work. Publish only after verification passes. (Renumbered from T20.) |
+| T24 | Final integration and verification refresh on the current main (rebased after T18–T23 landed mid-task): merge every kit into canonical data, re-read official sources on 2026-11-26, rebuild the mobile dashboard, publish a dated verification log, PR + merge + Pages check | done | arena/9bc6abed-nyfun2 | `index.html`, `pages/**`, `assets/**`, `data/**`, `scripts/**`, `research/canonical/**`, `research/verification-2026-11-26.md`, `README.md`, `COORDINATION.md` | Renumbered from T18 after `arena/547ee3a3-nyfun2` and `arena/45972379-nyfun2` claimed T18–T23 on a newer main. Their data (Sushi Sho Tock $990, Per Se deposits, Wollman/Bryant Park/LNY rows, socials) is the canonical base of this build — nothing they verified was discarded. |
 
 ## Log
 
@@ -366,3 +367,46 @@ hotel→restaurant routing for the ≤1-hour ranking; dated 2027 hotel rates; ai
 - GitHub Pages build/deploy workflow **45827500278** completed successfully (build, deploy and report-build-status jobs all green); Pages API reports status `built` for that merge commit. Published URL: https://kanlerxz87-cyber.github.io/NYFun2/.
 - Workflow warning: GitHub notes `actions/upload-artifact@v4` targets deprecated Node.js 20 and is currently forced onto Node.js 24. Deployment still succeeded; this is a maintenance item, not a site-build failure.
 - T18 complete. Repository changes remained within the claimed integration scope; no source datasets or other session kits were altered.
+
+### 2026-11-26 — session `arena/9bc6abed-nyfun2` (T24: integration on top of main, conflict resolved)
+
+**What happened.** This session claimed T18 when the board showed every task done. While it was
+researching, sessions `arena/547ee3a3-nyfun2` (T18) and `arena/45972379-nyfun2` (T21–T23) landed
+PRs #18–#22 on `main`, so the claim collided and PR #23 came up CONFLICTING.
+
+**How the conflict was resolved.** No work was discarded. `origin/main` was merged into the branch;
+this session then adopted **main's datasets as the new pristine canonical base**
+(`research/canonical/*.json` re-copied from main), so every fact the other sessions verified —
+Sushi Sho's Tock $990, Per Se's revised deposit-only pages, the three date-critical February rows,
+the merged official socials, flags F18–F20 — flows into this build. This session's merge rules are
+re-applied on top of that base; the shared HTML is regenerated from the merged data rather than
+hand-merged. Task renumbered **T24** to avoid the T18 collision. PR #12 stays closed unmerged.
+
+**Delivered.** 13 pages (new: `verification.html`, `compare.html`), rebuilt mobile-first CSS and a
+JSON-driven table renderer with verification badges, per-field provenance, `scripts/build_data.py`
+(idempotent merge), `scripts/build_site.py`, a stricter `scripts/verify.py` (0 errors / 0 warnings
+over 13 pages and 150 rows), and `research/verification-2026-11-26.md`.
+
+**Sources re-read today by this session (2026-11-26).** MICHELIN all-starred counters (5/14/50, 69
+total) plus 15 star levels; Eleven Madison Park FAQ; Jungsik, Masa, Cote and Gramercy Tavern menus;
+Met and MoMA admission/hours; betterchinatown.com parade date; Hyatt Place Chelsea room spec.
+Carried from the other sessions the same day: Sushi Sho Tock price, Per Se deposit pages, Wollman
+calendar, Bryant Park season, activity official socials — all linked from their rows.
+
+**Verification performed.** `python3 scripts/verify.py` → **0 errors, 0 warnings** (local links,
+http source per row, duplicate-row detection, social URL scheme, hotel all-in arithmetic against the
+stated 14.75% + fee formula, blank-implies-flag); `node --check assets/app.js` passes; local HTTP
+smoke test 200 on overview, Michelin, Hotels, `data/restaurants.json`, `assets/app.js`,
+`assets/styles.css`.
+
+**Flag numbering.** This session's new flags are **F21–F28** (F18–F20 belong to the other sessions).
+F21 coverage limits · F22 stale headline counts (fixed) · F23 kit rosters outside the census ·
+F24 contested prices (Atomix/Atera/Per Se) · F25 dated hotel totals not re-quoted · F26 six hotels
+without a verified bed/bath · F27 winter-activity official pages unreachable · F28 45 starred rows
+without a confirmed social link.
+
+**Irregularities found while merging.** (a) Kits duplicated rows once merged (Frederick, NYPL, the
+Met, 9/11) — the merge now keys them and the verifier fails on duplicates. (b) A fuzzy name match
+attached Eurostars' transit legs to The Wall Street Hotel — replaced with explicit key matching, and
+unmeasured hotels now show a blank. (c) The Benjamin had measured transit but no official source for
+its room, so it was dropped from the published list rather than shown unsourced.
