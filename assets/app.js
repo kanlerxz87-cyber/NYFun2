@@ -10,7 +10,7 @@
   const flags = (arr) => (arr && arr.length) ? `<ul class="flag-list">${arr.map(f => `<li>${esc(f)}</li>`).join('')}</ul>` : '<span class="pill green">none</span>';
   const socials = (arr) => (arr && arr.length) ? `<div class="socials">${arr.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" title="${esc(s.note || '')}">${esc(s.platform)} ↗</a>`).join('')}</div>` : '<span class="blank">—</span>';
   const origin = () => { try { return localStorage.getItem(storeKey) || DEFAULT_ORIGIN; } catch (e) { return DEFAULT_ORIGIN; } };
-  const route = (dest) => `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(dest)}`;
+  const route = (dest) => `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(dest)}&travelmode=transit`;
   const routeLink = (dest) => `<a href="${esc(route(dest))}" target="_blank" rel="noopener noreferrer">Route ↗</a>`;
 
   const config = {
@@ -23,7 +23,7 @@
         `${val(r.address)}${r.area ? `<span class="sub">${esc(r.area)}</span>` : ''}`,
         val(r.hours),
         val(r.exceptions),
-        val(r.priceTwoAdults),
+        `${val(r.priceTwoAdults)}${r.priceSourceUrl ? `<span class="sub">${link(r.priceSourceUrl, 'Menu price source')}</span>` : ''}`,
         val(r.guidePriceBand),
         `${link(r.officialUrl, 'Official site')}${r.officialUrl && r.sourceUrl ? '<br>' : ''}${link(r.sourceUrl, 'MICHELIN page')}`,
         socials(r.social),
@@ -69,12 +69,12 @@
         `<strong>${esc(q.id)}</strong>`, `<strong>${esc(q.question)}</strong>`, val(q.whatWeKnow), val(q.whatWeDoNotKnow),
         val(q.provisionalAnswer), q.blocking ? '<span class="pill red">Yes</span>' : '<span class="pill amber">No</span>',
         val(q.howToDiscover),
-        q.sources.map(s => `<a href="${esc(s)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`).join('<br>')
+        (q.sources || []).length ? q.sources.map(s => link(s, 'Source')).join('<br>') : '<span class="blank">blank — unverified</span>'
       ]
     },
     suggestions: {
-      cols: ['ID','Suggestion','Detail','Effort','Blocked by','Status'],
-      row: (s) => [`<strong>${esc(s.id)}</strong>`, `<strong>${esc(s.title)}</strong>`, val(s.detail), val(s.effort), val((s.blockedBy||[]).join(', ')), val(s.status)]
+      cols: ['ID','Suggestion','Detail','Effort','Blocked by','Status','Relevant official source'],
+      row: (s) => [`<strong>${esc(s.id)}</strong>`, `<strong>${esc(s.title)}</strong>`, val(s.detail), val(s.effort), val((s.blockedBy||[]).join(', ')), val(s.status), link(s.source, 'Source')]
     },
     flags: {
       cols: ['ID','Severity','Issue','Detail','Source'],

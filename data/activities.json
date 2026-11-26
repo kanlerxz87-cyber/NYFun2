@@ -69,9 +69,9 @@
       "address": "1000 Fifth Avenue, New York, NY 10028",
       "hours": "Sun–Tue and Thu 10:00–17:00; Fri–Sat 10:00–21:00; Wednesday closed",
       "exceptions": "Closed Thanksgiving Day, 25 Dec, 1 Jan and the first Monday in May.",
-      "costTwoAdults": "$60 (2 × $30 general admission published by The Met)",
+      "costTwoAdults": "$60 (2 × $30 general adult admission; eligibility discounts may apply)",
       "officialUrl": "https://www.metmuseum.org/plan-your-visit",
-      "sourceUrl": "https://www.metmuseum.org/visit/met-fifth-avenue",
+      "sourceUrl": "https://www.metmuseum.org/plan-your-visit",
       "social": [
         {
           "platform": "YouTube (third-party review)",
@@ -81,7 +81,7 @@
       ],
       "flags": [
         "Official Met pages showed conflicting Wednesday/Thursday hours in different snippets; re-check before booking",
-        "Admission excludes ticketed exhibitions"
+        "Admission eligibility and exhibition inclusion should be checked on the official ticket page before purchase."
       ]
     },
     {

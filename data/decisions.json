@@ -10,31 +10,31 @@
       "blocking": true,
       "howToDiscover": "Pick one window before requesting live quotes; all hotel totals depend on it.",
       "sources": [
-        "https://www.timeanddate.com/calendar/monthly.html?year=2027&month=2"
+        "https://www.nist.gov/pml/time-and-frequency-division/time-realization/leap-seconds"
       ]
     },
     {
       "id": "Q2",
       "question": "What is the real total price for a 7-night stay for two adults, including taxes and fees?",
-      "whatWeKnow": "citizenM publishes an undated 'from $395 / night' rate. Michelin states its hotel booking widget cannot book more than 31 days ahead.",
-      "whatWeDoNotKnow": "Dated 2027 rates for any shortlisted hotel, taxes, resort/amenity fees and cancellation terms.",
-      "provisionalAnswer": "Left blank and flagged. No 7-night total is invented.",
+      "whatWeKnow": "No hotel-direct dated seven-night total was confirmed in this integration audit.",
+      "whatWeDoNotKnow": "Comparable official hotel totals, taxes, fees, room availability and cancellation terms across the travel window.",
+      "provisionalAnswer": "Seven-night totals and cheapest week are blank; prior third-party snapshots excluded.",
       "blocking": true,
-      "howToDiscover": "Check each hotel's own booking engine when the 2027 booking window opens; record screenshot/URL and date checked.",
+      "howToDiscover": "Capture dated quotes for the same room and two adults from each hotel’s official booking engine, with all fees and terms.",
       "sources": [
-        "https://www.citizenm.com/es/hoteles/america/nueva-york/times-square-hotel",
-        "https://guide.michelin.com/en/hotels-stays/nyc/11-howard-8129"
+        "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms"
       ]
     },
     {
       "id": "Q3",
       "question": "Which shortlisted hotels actually have a private bathroom and a queen-size bed or larger for two adults on the chosen dates?",
-      "whatWeKnow": "Marriott's citizenM brand page states XL king bed, up to two adults, power shower and fast Wi-Fi. Other shortlisted hotels' room pages were not checked.",
-      "whatWeDoNotKnow": "Room-type availability and bed/bath details for the remaining hotels.",
-      "provisionalAnswer": "Only citizenM Times Square meets the bed/bath requirement on an official page; the rest are flagged unverified.",
+      "whatWeKnow": "Hyatt publishes a king room with a bathroom and shower. The page does not explicitly say private; citizenM brand describes a king and shower.",
+      "whatWeDoNotKnow": "Private bathroom and qualifying room availability on the requested dates.",
+      "provisionalAnswer": "Treat all rooms as candidates pending confirmation of private bath and availability.",
       "blocking": true,
       "howToDiscover": "Fetch each hotel's official rooms page and the exact room type shown for the booking dates.",
       "sources": [
+        "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms",
         "https://www.marriott.com/brands/citizenm.mi"
       ]
     },
@@ -54,9 +54,9 @@
     {
       "id": "Q5",
       "question": "How many Michelin restaurants are within one hour by subway or bus of each hotel?",
-      "whatWeKnow": "Official addresses for 13 detailed rows and Michelin's official star list; no official door-to-door travel times for Feb 2027.",
+      "whatWeKnow": "The restaurant table includes source-linked addresses where recorded; no comparable dated subway/bus routing matrix is verified.",
       "whatWeDoNotKnow": "Routed travel times from each candidate hotel at the time of day you will travel.",
-      "provisionalAnswer": "Not ranked as fact. The site provides a link to live directions for every pair and a flagged proximity proxy instead.",
+      "provisionalAnswer": "No count or proximity ranking is established; directions links are not evidence of a travel duration.",
       "blocking": true,
       "howToDiscover": "Run one door-to-door routing query per hotel/restaurant pair, store the result with date/time and source, then recompute the ranking.",
       "sources": [
@@ -67,7 +67,7 @@
     {
       "id": "Q6",
       "question": "What will a couple actually pay at each Michelin restaurant?",
-      "whatWeKnow": "15 restaurants now have a couple total verified from an official menu/FAQ/booking page (food only, pre-tax/tip/beverages), reconciled across sessions fc6d5f66 and 6f217cce: EMP $770/$510; Le Bernardin $700/$436/$284; Jungsik $670; Masa $990/$1,500/$1,900; Gabriel Kreuther $650/$400/$470; The Modern $230/$510/$370/$570; Chef's Table BF $770; Aquavit $390; odo $300/$540; Cote $168/$450; Kochi $290; Mari $290; Jua $300; Gramercy Tavern $356/$156; Le Coucou $440. Michelin's least-expensive list groups Casa Mono, Crown Shy, Jeju Noodle Bar, Semma, Tuome at ~$75/person (indicative).",
+      "whatWeKnow": "Selected menus have historical food-only couple prices. Eleven Madison Park’s FAQ conflicts on the bar price (F19). Amounts exclude tax, tip and drinks unless stated and are not quotes for 2027.",
       "whatWeDoNotKnow": "2027 menu prices (menus captured Nov 2026), beverage pairings, service charge, tax and cancellation policies for the trip dates; exact prices for Per Se, Sushi Sho, Atera, Atomix, Jean-Georges, César, Joo Ok, Saga, Sushi Noz and most a-la-carte one-stars.",
       "provisionalAnswer": "Use the verified couple totals on the Michelin page as a planning floor; re-confirm at booking. Per Se shows only a $200/person deposit officially, so its menu price stays blank.",
       "blocking": false,
@@ -115,12 +115,14 @@
     {
       "id": "Q9",
       "question": "What is the total budget ceiling for two adults, and what share of it is accommodation?",
-      "whatWeKnow": "Four hotels now have dated all-in totals for the same seven nights, spanning $1,305 to $5,220 - a 4x range.",
-      "whatWeDoNotKnow": "The ceiling, and therefore whether the $1,305 stay is 'good value' or 'the only option'.",
-      "provisionalAnswer": "Site ranks by verified attributes and shows the full price spread instead of assuming a budget.",
+      "whatWeKnow": "Two adults and a seven-night comparison are specified; no official all-in hotel total is confirmed.",
+      "whatWeDoNotKnow": "Total budget and allocation to accommodation, dining and transport.",
+      "provisionalAnswer": "No value ranking can be determined without comparable official prices and a budget.",
       "blocking": true,
       "howToDiscover": "State a total and an accommodation share; then the hotel shortlist collapses to one or two options.",
-      "sources": []
+      "sources": [
+        "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms"
+      ]
     },
     {
       "id": "Q10",
@@ -130,7 +132,9 @@
       "provisionalAnswer": "Day one is left light: check-in plus an evening dinner that can flex. Nothing time-critical before 19:00.",
       "blocking": true,
       "howToDiscover": "Price flights for 15 Feb and 22 Feb 2027, then re-time day one.",
-      "sources": []
+      "sources": [
+        "https://www.mta.info/guides/airports"
+      ]
     },
     {
       "id": "Q11",
@@ -140,17 +144,21 @@
       "provisionalAnswer": "Indoor anchors (museums, dining) are scheduled on fixed days; outdoor items stay movable.",
       "blocking": false,
       "howToDiscover": "Add a climate-normals reference (for example National Weather Service climate data) and tag each activity indoor/outdoor.",
-      "sources": []
+      "sources": [
+        "https://www.weather.gov/okx/climate"
+      ]
     },
     {
       "id": "Q12",
       "question": "Are there mobility, dietary or accessibility requirements that must filter the shortlist?",
       "whatWeKnow": "MICHELIN publishes facilities per restaurant (wheelchair access, vegetarian/vegan/halal/kosher options); hotels list accessible room types.",
       "whatWeDoNotKnow": "Whether any requirement applies. One allergy or mobility need can eliminate half the starred list.",
-      "provisionalAnswer": "No filter applied; all rows carry their published facilities so a filter can be added without re-research.",
+      "provisionalAnswer": "No accessibility or dietary filter has been applied; venue-specific details must be verified.",
       "blocking": false,
       "howToDiscover": "State the requirement, then filter on the MICHELIN 'Services & Facilities' tags already in the records.",
-      "sources": []
+      "sources": [
+        "https://www.elevenmadisonpark.com/faq"
+      ]
     }
   ],
   "suggestions": [
@@ -163,7 +171,8 @@
         "Q2",
         "Q3"
       ],
-      "status": "Proposed — no changes implemented"
+      "status": "Proposed — no changes implemented",
+      "source": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms"
     },
     {
       "id": "S2",
@@ -173,7 +182,8 @@
       "blockedBy": [
         "Q5"
       ],
-      "status": "Proposed — no changes implemented"
+      "status": "Proposed — no changes implemented",
+      "source": "https://www.mta.info/maps"
     },
     {
       "id": "S3",
@@ -183,7 +193,8 @@
       "blockedBy": [
         "Q6"
       ],
-      "status": "Partially implemented 2026-11-25 - 12 official-menu couple totals captured with sources and capture date; remainder blank/flagged"
+      "status": "Partially implemented; prior captures require rechecking and incomplete rows remain flagged.",
+      "source": "https://www.elevenmadisonpark.com/faq"
     },
     {
       "id": "S4",
@@ -193,7 +204,8 @@
       "blockedBy": [
         "Q8"
       ],
-      "status": "Proposed — no changes implemented"
+      "status": "Proposed — no changes implemented",
+      "source": "https://www.moma.org/about/about-this-site"
     },
     {
       "id": "S5",
@@ -204,7 +216,8 @@
         "Q1",
         "Q2"
       ],
-      "status": "Proposed — no changes implemented"
+      "status": "Proposed — no changes implemented",
+      "source": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms"
     },
     {
       "id": "S6",
@@ -214,7 +227,8 @@
       "blockedBy": [
         "Q4"
       ],
-      "status": "Proposed — no changes implemented"
+      "status": "Proposed — no changes implemented",
+      "source": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/"
     },
     {
       "id": "S7",
@@ -222,7 +236,8 @@
       "detail": "Add a client-side toggle that hides rows carrying flags, so a traveler can see only the fully verified subset at a glance.",
       "effort": "Low",
       "blockedBy": [],
-      "status": "Proposed — no changes implemented"
+      "status": "Proposed — no changes implemented",
+      "source": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025"
     },
     {
       "id": "S8",
@@ -233,7 +248,8 @@
         "Q5",
         "Q7"
       ],
-      "status": "Proposed — no changes implemented"
+      "status": "Proposed — no changes implemented",
+      "source": "https://www.mta.info/maps"
     },
     {
       "id": "S9",
@@ -241,7 +257,8 @@
       "detail": "The gap between non-refundable and refundable is material and now measurable: 11 Howard is +$426 ($1,522 to $1,948) and The Beekman is +$454 ($4,488 to $4,942) for the same seven nights. Presenting it as an explicit 'insurance price' turns an abstract trade-off into a number.",
       "effort": "Low",
       "blockedBy": [],
-      "status": "Proposed - no changes implemented"
+      "status": "Proposed - no changes implemented",
+      "source": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms"
     },
     {
       "id": "S10",
@@ -249,7 +266,8 @@
       "detail": "Official counters read 5 three-star / 14 two-star / 50 one-star / 76 Bib Gourmand / 224 selected. The catalogue now holds 18 starred rows, so roughly 51 starred and all 300 unstarred listings remain. The list pages serve 48 rows at a time, so this is a pagination job with a fixed end point.",
       "effort": "Medium",
       "blockedBy": [],
-      "status": "Implemented 2026-11-25 - full live roster of 69 starred + 3 Guide-listed rows catalogued"
+      "status": "Partially implemented; capture coverage and ownership need review.",
+      "source": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025"
     },
     {
       "id": "S11",
@@ -259,7 +277,8 @@
       "blockedBy": [
         "Q2"
       ],
-      "status": "Proposed - no changes implemented"
+      "status": "Proposed - no changes implemented",
+      "source": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms"
     },
     {
       "id": "S12",
@@ -267,7 +286,8 @@
       "detail": "Several official pages are client-rendered: le-bernardin.com/menus returned one image, elevenmadisonpark.com returned a slide carousel, moma.org failed to load twice. Those blanks close immediately with a JavaScript-enabled session, and each capture should store the exact quoted text.",
       "effort": "Low",
       "blockedBy": [],
-      "status": "Proposed - no changes implemented"
+      "status": "Proposed - no changes implemented",
+      "source": "https://www.metmuseum.org/plan-your-visit"
     }
   ],
   "flags": [
@@ -280,17 +300,17 @@
     },
     {
       "id": "F2",
-      "severity": "Low",
-      "title": "No verified 7-night hotel total or cheapest booking window - PARTIALLY RESOLVED",
-      "detail": "Resolved for four hotels on 2026-11-25: Booking.com returned live 7-night totals for 15-22 Feb 2027 (Hyatt Place NY/Chelsea $1,305 all-in, Arlo NoMad $1,428, 11 Howard $1,774, The Beekman $5,220) with the exact rate URL and capture date per row. Still open: no hotel's own booking engine was read, eight of twelve candidates remain unpriced, and no other week in the 15 Feb - 23 Mar window was priced. See F10 for the snapshot/expiry risk.",
-      "source": "https://www.booking.com/hotel/us/hyatt-place-new-york-chelsea.en-us.html?checkin=2027-02-15&checkout=2027-02-22"
+      "severity": "High",
+      "title": "No official dated 7-night hotel totals or cheapest week",
+      "detail": "Prior third-party snapshots and calculated all-in prices do not meet the requested official-source standard and have been removed from the main hotel table. Capture comparable hotel-direct quotes, including fees and cancellation terms.",
+      "source": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms"
     },
     {
       "id": "F3",
       "severity": "Medium",
       "title": "Trip length mismatch in the request",
       "detail": "Preferred trip is 3 nights (15–18 Feb 2027) but the hotel-pricing request asks for a 7-night total. Both are shown; no single assumption was silently chosen.",
-      "source": "https://www.timeanddate.com/calendar/monthly.html?year=2027&month=2"
+      "source": "https://www.nist.gov/pml/time-and-frequency-division/time-realization/leap-seconds"
     },
     {
       "id": "F4",
@@ -337,15 +357,15 @@
     {
       "id": "F10",
       "severity": "Medium",
-      "title": "Dated hotel totals are aggregator snapshots and one depends on an expiring promotion",
-      "detail": "All four dated totals come from Booking.com rate pages read 2026-11-25, not from the hotels' own booking engines. Arlo NoMad's $1,213.96 pre-tax depended on a 'Black Friday Deal - 39% off, valid on stays 19 Nov 2026 to 31 Dec 2027'. The same room after that promotion ends will cost more. Treat every total as a dated observation.",
-      "source": "https://www.booking.com/hotel/us/arlo-nomad.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1"
+      "title": "Historical third-party hotel snapshots excluded",
+      "detail": "Earlier Booking.com snapshots and tax arithmetic are preserved only in historical research kits and commit history; they are not official hotel quotes and must not be treated as current or bookable.",
+      "source": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms"
     },
     {
       "id": "F11",
-      "severity": "Low",
-      "title": "RESOLVED 2026-11-25: starred catalogue now covers the full live roster (69 of 69)",
-      "detail": "The canonical restaurants.json now holds all 69 live starred restaurants (5 three-star, 14 two-star, 50 one-star) plus 3 Guide-listed new additions (72 rows). Three kit-only names (Blue Hill at Stone Barns, Shion 69 Leonard Street, La Bastide by Andrea Calstier) are not in the live all-starred selection and were excluded/flagged. Cluster statements can now use the full census; travel times still require real routing.",
+      "severity": "Medium",
+      "title": "Historical roster completeness not independently confirmed",
+      "detail": "The previous session reported 69 starred entries in the November 2026 live selection; the full roster and count were not independently rechecked during this integration. Compare each entry with current Michelin listings.",
       "source": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred"
     },
     {
@@ -389,6 +409,27 @@
       "title": "Menu prices captured Nov 2026 vs Feb-Mar 2027 trip",
       "detail": "All verified restaurant menu prices were captured 2026-11-25 (Nov 2026 menus). The trip is Feb 15-Mar 23 2027, so prices may change. Every couple total must be re-confirmed on the official page at booking; the Michelin 14 Dec 2026 ceremony may also change distinctions.",
       "source": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/"
+    },
+    {
+      "id": "F18",
+      "severity": "High",
+      "title": "Hotel prices and room claims did not meet evidence standard",
+      "detail": "Four earlier third-party rate snapshots and tax calculations were presented as prices despite the official-source requirement. They are removed from the main table. Some room and bath fields also contradicted their own flags; those fields are blank. Past research kits are historical and not reverified.",
+      "source": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms"
+    },
+    {
+      "id": "F19",
+      "severity": "High",
+      "title": "Eleven Madison Park bar tasting FAQ conflict",
+      "detail": "The same official FAQ says $255 per guest and elsewhere says reservations begin at $225 per guest. The bar couple total is omitted pending venue confirmation; the $385 per-person full tasting is separately stated.",
+      "source": "https://www.elevenmadisonpark.com/faq"
+    },
+    {
+      "id": "F20",
+      "severity": "High",
+      "title": "Historical roster, hours, prices and social links not independently rechecked in full",
+      "detail": "The 25 November data was inherited from earlier sessions. Automated checks test structure and local links, not truth, current availability, official ownership, live page status or travel time. Recheck each row at its cited venue or Michelin source; conflicting alternative kits are not verified.",
+      "source": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025"
     }
   ]
 }

@@ -67,8 +67,8 @@
       "hours": "Mon–Thu 17:30–22:00; Fri–Sun 12:00–13:00 and 17:30–23:00",
       "exceptions": "No dress code. Reservations open on the 1st of each month for the following month; all sales final and non-refundable. Gratuity not included.",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "$770 (Full Tasting, 2 x $385); $510 (Bar Tasting, 2 x $255)",
-      "priceNote": "Official FAQ: Full Tasting $385/guest, Bar Tasting $255/guest; wine pairing from $125/guest; gratuity not included; all sales final/non-refundable; reservations open 1st of month for following month.",
+      "priceTwoAdults": "$770 (Full Tasting, 2 × $385; food only)",
+      "priceNote": "FAQ gives conflicting Bar Tasting prices ($255 and from $225 per person); bar total omitted pending clarification.",
       "priceSourceUrl": "https://www.elevenmadisonpark.com/faq",
       "officialUrl": "https://www.elevenmadisonpark.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/eleven-madison-park",
@@ -85,7 +85,8 @@
         }
       ],
       "flags": [
-        "Corrected 2026-11-25: canonical data listed facebook.com/jalexandersrestaurantscollection (a different restaurant group) as EMP's Facebook; removed as unverified. Official Instagram retained (handle printed on the Resy venue page MICHELIN links)."
+        "Corrected 2026-11-25: canonical data listed facebook.com/jalexandersrestaurantscollection (a different restaurant group) as EMP's Facebook; removed as unverified. Official Instagram retained (handle printed on the Resy venue page MICHELIN links).",
+        "Official FAQ conflicts on Bar Tasting price: $255 per guest vs from $225 per guest; bar total unverified (F19)."
       ]
     },
     {
