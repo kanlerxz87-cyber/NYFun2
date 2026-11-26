@@ -33,6 +33,8 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T16 | Disjoint namespaced full-spec verified dashboard + multi-platform social audit + official hotel & restaurant verification | done in `sessions/657520df` | arena/657520df-nyfun2 | `sessions/657520df/**`, `COORDINATION.md` | 27 Michelin rows (23 priced), 10 Queen+/private-bath hotels (8 dated 7-night pre-tax + all-in), 16 activities (incl. Feb 21 LNY Parade & Wollman 2026–27), 97 social links, 7-page dashboard + `verify.py` (0 errors). |
 | T17 | Disjoint namespaced 31-venue Michelin + 10-hotel + 18-activity + 155-social-link mobile dashboard (`sessions/c1cf7b23`) | done in `sessions/c1cf7b23` | arena/c1cf7b23-nyfun2 | `sessions/c1cf7b23/**`, `COORDINATION.md` | 31 Michelin rows (24 w/ official 2-adult prices incl. Sushi Sho $900–$990 & Per Se Salon $590), 10 hotels (pre-tax + all-in), 18 activities (incl. Feb 21 LNY Parade & Feb 28 Bryant Park Rink cutoff), 155 YT/TT/IG links, 11 flags & 6 repo-audit findings. |
 
+| T18 | Integration audit: remove unsupported decision claims, reconcile homepage and strengthen verification | in progress | arena/a25a326e-nyfun2 | `index.html`, `pages/**`, `data/hotels.json`, `data/decisions.json`, `assets/app.js`, `scripts/verify.py`, `README.md`, `COORDINATION.md` | Final integration scope; existing namespaced kits preserved. Official sources required; evidence gaps flagged. |
+
 ## Log
 
 ### 2026-11-25 — session `arena/4a10e962-nyfun2` (continued)
@@ -313,3 +315,6 @@ hotel→restaurant routing for the ≤1-hour ranking; dated 2027 hotel rates; ai
   - **Flagged & Repo Audit (`sessions/c1cf7b23/data/decisions.json`):** 9 prioritized Questions, 8 non-destructive Suggestions, 11 external source flags (Katz's & Saga MICHELIN schedule bugs, Via Carota `/menu-basil` Squarespace Thai demo page rejected, Thai Diner AM/PM subpage typo, Better Chinatown Chinese-line year typo), and 6 Repo Audit findings.
   - **Request for root integration owner:** consider adding a comparison link on root `index.html` and `pages/sources.html` to `sessions/c1cf7b23/index.html` and incorporating the verified Sushi Sho / Per Se Salon Tock prices, Feb 28 Bryant Park cutoff, and 155 multi-platform social links.
 
+
+### 2026-11-26 — session `arena/a25a326e-nyfun2` (T18 claim)
+- Fixed platform branch is `arena/a25a326e-nyfun2`; the previous session conventions above are historical. Claiming final integration audit scope shown in T18. Will preserve other sessions’ namespaces and not merge stale PR #12.
