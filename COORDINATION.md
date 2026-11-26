@@ -32,7 +32,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
 | T16 | Disjoint namespaced full-spec verified dashboard + multi-platform social audit + official hotel & restaurant verification | done in `sessions/657520df` | arena/657520df-nyfun2 | `sessions/657520df/**`, `COORDINATION.md` | 27 Michelin rows (23 priced), 10 Queen+/private-bath hotels (8 dated 7-night pre-tax + all-in), 16 activities (incl. Feb 21 LNY Parade & Wollman 2026–27), 97 social links, 7-page dashboard + `verify.py` (0 errors). |
 | T17 | Disjoint namespaced 31-venue Michelin + 10-hotel + 18-activity + 155-social-link mobile dashboard (`sessions/c1cf7b23`) | done in `sessions/c1cf7b23` | arena/c1cf7b23-nyfun2 | `sessions/c1cf7b23/**`, `COORDINATION.md` | 31 Michelin rows (24 w/ official 2-adult prices incl. Sushi Sho $900–$990 & Per Se Salon $590), 10 hotels (pre-tax + all-in), 18 activities (incl. Feb 21 LNY Parade & Feb 28 Bryant Park Rink cutoff), 155 YT/TT/IG links, 11 flags & 6 repo-audit findings. |
-| T18 | Final integration audit: reconcile landing-page claims with current data, surface the detailed planning kit, and refresh repo audit evidence | in progress | arena/547ee3a3-nyfun2 | `index.html`, `README.md`, `pages/executive-summary.html`, `pages/repo-audit.html`, `assets/app.js`, `scripts/verify.py`, `COORDINATION.md` | All earlier T0–T17 entries are marked done. Initial checks: canonical verifier reports 0 errors/0 warnings; T17 namespaced verifier reports 0 errors. Found stale root executive-summary and repo-audit text plus landing-page claims that contradict the current datasets. |
+| T18 | Final integration audit: reconcile landing-page claims with current data, surface the detailed planning kit, refresh repo audit evidence, and keep question rendering robust | done | arena/547ee3a3-nyfun2 | `index.html`, `README.md`, `pages/executive-summary.html`, `pages/repo-audit.html`, `assets/app.js`, `scripts/verify.py`, `COORDINATION.md` | Merged in PR #18 (`fe0e76d`). GitHub Pages build and deploy workflow 45827500278 succeeded; Pages API reports `built`. |
 
 ## Log
 
@@ -317,7 +317,7 @@ hotel→restaurant routing for the ≤1-hour ranking; dated 2027 hotel rates; ai
 
 ### 2026-11-26 — session `arena/547ee3a3-nyfun2` (T18 claim)
 - Read the coordination board first. All prior T0–T17 items are marked done; no active task owner is listed.
-- Claimed final integration audit scope: `index.html`, `README.md`, `pages/executive-summary.html`, `pages/repo-audit.html`, and this board only. No dataset or other session namespace will be changed.
+- Claimed final integration audit scope: `index.html`, `README.md`, `pages/executive-summary.html`, `pages/repo-audit.html`, `assets/app.js`, `scripts/verify.py`, and this board. No dataset or other session namespace was changed.
 - Baseline checks: `python3 scripts/verify.py` → 0 errors / 0 warnings; `python3 sessions/c1cf7b23/scripts/verify.py` → 0 errors. Found root landing/executive summary claims lag current canonical data and requested richer detail in the namespaced T17 dashboard is not clearly surfaced.
 
 ### 2026-11-26 — session `arena/547ee3a3-nyfun2` (T18 integration audit, verification)
@@ -327,3 +327,9 @@ hotel→restaurant routing for the ≤1-hour ranking; dated 2027 hotel rates; ai
 - Expanded the root verifier's row count and decision-array checks. It now checks all 137 canonical JSON rows and explicitly states that structural checks do not prove a URL is live or official. It still enforces HTTPS source fields on the factual restaurant, hotel, activity and flag rows, checks optional decision source URLs and flags blank category fields.
 - Verification: `python3 scripts/verify.py` → 0 errors / 0 warnings over 137 rows; `python3 sessions/c1cf7b23/scripts/verify.py` → 0 errors; `node --check assets/app.js` passes; `git diff --check` passes; static HTTP smoke test returned 200 for the root, summary, repo audit, questions page, script, restaurant JSON and T17 entry point.
 - Reviewable source references for ongoing claims remain row-linked in canonical datasets and T17. Canonical MICHELIN/ceremony sources include `https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred` and `https://michelinmedia.com/pages/blog/detail/article/c/a1479/`; the T17 page links to its detailed per-row official sources and flags. No claim of fresh external URL availability was made by this local audit.
+
+### 2026-11-26 — T18 publication result (session `arena/547ee3a3-nyfun2`)
+- Pull request **#18**: https://github.com/kanlerxz87-cyber/NYFun2/pull/18 — merged to `main` at `fe0e76de05eb1e4acb4d400432fbfe68dfebf66a` on 2026-11-26 13:16 UTC.
+- GitHub Pages build/deploy workflow **45827500278** completed successfully (build, deploy and report-build-status jobs all green); Pages API reports status `built` for that merge commit. Published URL: https://kanlerxz87-cyber.github.io/NYFun2/.
+- Workflow warning: GitHub notes `actions/upload-artifact@v4` targets deprecated Node.js 20 and is currently forced onto Node.js 24. Deployment still succeeded; this is a maintenance item, not a site-build failure.
+- T18 complete. Repository changes remained within the claimed integration scope; no source datasets or other session kits were altered.
