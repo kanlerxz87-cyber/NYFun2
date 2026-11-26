@@ -34,7 +34,16 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T17 | Disjoint namespaced 31-venue Michelin + 10-hotel + 18-activity + 155-social-link mobile dashboard (`sessions/c1cf7b23`) | done in `sessions/c1cf7b23` | arena/c1cf7b23-nyfun2 | `sessions/c1cf7b23/**`, `COORDINATION.md` | 31 Michelin rows (24 w/ official 2-adult prices incl. Sushi Sho $900–$990 & Per Se Salon $590), 10 hotels (pre-tax + all-in), 18 activities (incl. Feb 21 LNY Parade & Feb 28 Bryant Park Rink cutoff), 155 YT/TT/IG links, 11 flags & 6 repo-audit findings. |
 | T18 | Final integration audit: reconcile landing-page claims with current data, surface the detailed planning kit, refresh repo audit evidence, and keep question rendering robust | done | arena/547ee3a3-nyfun2 | `index.html`, `README.md`, `pages/executive-summary.html`, `pages/repo-audit.html`, `assets/app.js`, `scripts/verify.py`, `COORDINATION.md` | Merged in PR #18 (`fe0e76d`). GitHub Pages build and deploy workflow 45827500278 succeeded; Pages API reports `built`. |
 
+| T18 | Root integration of parallel-session outputs: tiles to the two session dashboards, verified activity official socials merged into canonical data, three date-critical Feb–Mar 2027 activity rows added (verified live), Sushi Sho Tock price + flags reconciled, Per Se deposit figures re-verified | in progress | arena/45972379-nyfun2 | `index.html`, `pages/activities.html`, `pages/sources.html`, `pages/michelin-restaurants.html`, `pages/flagged.html`, `data/activities.json`, `data/restaurants.json`, `data/decisions.json`, `COORDINATION.md` | Claims the two handoff requests logged by sessions 657520df and c1cf7b23 and the fc6d5f66 activity-socials merge. |
+| T19 | Resolve PR #12 (arena/aad75793-nyfun2, CONFLICTING on stale base a3a2848): close with explanation, do not merge | in progress | arena/45972379-nyfun2 | PR #12 only (no files) | Board guidance since 2026-11-25: close or rebase, never merge as-is. Work superseded by PRs #13–#17 and preserved in `alt/` / `sessions/`. |
+| T20 | Final verification + publish: verify.py, node --check, link check, PR to main, merge, confirm GitHub Pages deploy, record PR link and merge result | in progress | arena/45972379-nyfun2 | `COORDINATION.md`, `README.md` | Blocked by T18; publish only after verification passes. |
+
 ## Log
+
+### 2026-11-26 — session `arena/45972379-nyfun2` (final integration: claims T18/T19/T20)
+- Read the board and audited `main` (19f4d20, merge of PR #17). All research tasks T0–T17 are recorded done; the site is live. This session acts as the final integration/publish session the board describes.
+- Claimed T18 (root integration of the two logged handoff requests + three date-critical activity rows, each re-verified against the live official page on 2026-11-26), T19 (close PR #12, never merge as-is), T20 (verify, publish, record).
+- Work begins from a clean tree on `arena/45972379-nyfun2`, branched from 19f4d20.
 
 ### 2026-11-25 — session `arena/4a10e962-nyfun2` (continued)
 - T0 done: repo audit found no pre-existing content; no irregularities in repository history.
