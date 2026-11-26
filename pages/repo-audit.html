@@ -3,13 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
 <title>Repository audit — NYC 2027</title>
 <meta name="description" content="What the repository contained, what each session contributed, what this integration changed, and the irregularities it found.">
 <meta name="color-scheme" content="light dark">
+=======
+<title>Repository Audit & Integration Log — NYC 2027</title>
+<meta name="description" content="Audit of the repository, full multi-session integration history, and verification evidence for the combined dataset.">
+>>>>>>> 62ef838 (Integrate complete verified NYC 2027 trip dashboard: 72 Michelin restaurants, 10 ranked hotels with 5-week sweeps, 18 activities, transit matrix, and decision framework (T18))
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<<<<<<< HEAD
 <header class="topbar"><div class="topbar-inner">
   <a class="brand" href="../index.html"><span class="mark">NY</span><span><b>NYC 2027</b><small>2 adults · Feb 2027</small></span></a>
   <nav class="nav" aria-label="Main navigation"><a href="../index.html">Overview</a><a href="executive-summary.html">Summary</a><a href="michelin-restaurants.html">Michelin</a><a href="hotels.html">Hotels</a><a href="activities.html">Activities</a><a href="itinerary.html">Itinerary</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged</a><a href="verification.html">Verification</a><a href="sources.html">Sources</a><a class="active" href="repo-audit.html">Repo audit</a></nav>
@@ -36,6 +42,35 @@
       </tbody>
     </table></div>
   </div>
+=======
+<div class="layout">
+<aside class="sidebar">
+  <a class="brand" href="../index.html"><span class="mark">NY</span><span>NYC 2027<small>Trip dashboard</small></span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="../index.html">Overview</a>
+    <a href="executive-summary.html">Summary</a>
+    <a href="michelin-restaurants.html">Michelin</a>
+    <a href="hotels.html">Hotels</a>
+    <a href="activities.html">Activities</a>
+    <a href="itinerary.html">Itinerary</a>
+    <a href="questions.html">Questions</a>
+    <a href="suggestions.html">Suggestions</a>
+    <a href="flagged.html">Flagged</a>
+    <a href="sources.html">Sources</a>
+    <a class="active" href="repo-audit.html">Repo audit</a>
+  </nav>
+  <div class="side-note">Verified against official sources · updated <span data-checked>2026-11-26</span></div>
+</aside>
+<main class="content" id="main">
+  <p class="eyebrow">Governance & Provenance</p>
+  <h1>Repository Audit & Multi-Session Integration Log</h1>
+  <p class="lede">A complete chronological audit of the repository, logging the initial findings, parallel session workspaces, cross-branch merges, zero-overwrite resolution, and final unified integration.</p>
+
+<<<<<<< HEAD
+  <p class="eyebrow">Audit · repository &amp; integration</p>
+  <h1>Repository audit &amp; integration history</h1>
+  <p class="lede">The first sections below preserve the repository's historical audit and integration record. The current consistency check is at the top: later sessions added separate planning kits and data, so historical counts must not be read as current totals.</p>
+>>>>>>> 62ef838 (Integrate complete verified NYC 2027 trip dashboard: 72 Michelin restaurants, 10 ranked hotels with 5-week sweeps, 18 activities, transit matrix, and decision framework (T18))
 
   <h2>Audit findings from this integration</h2>
   <div class="card">
@@ -49,6 +84,7 @@
     </ul>
   </div>
 
+<<<<<<< HEAD
   <h2>Parallel sessions and the merge that resolved the collision</h2>
   <div class="card">
     <p>Several sessions worked this repository at once. This build started as task T18, then found that
@@ -76,6 +112,160 @@
     <a href="../pages/compare.html">Compare session kits</a></p>
     <p class="small">Prices are what the linked official page said on the capture date. Nothing here is a booking, a quote, or financial advice. Blank means unverified — never estimated.</p>
   </footer>
+=======
+  <h2>1 · State as found (historical)</h2>
+=======
+  <h2>1. Initial State as Found</h2>
+>>>>>>> e17ec92 (Integrate complete verified NYC 2027 trip dashboard: 72 Michelin restaurants, 10 ranked hotels with 5-week sweeps, 18 activities, transit matrix, and decision framework (T18))
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Check</th><th>Command</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Files present</strong></td><td><code>ls -la</code></td><td><code>README.md</code> (8 bytes: <code># NYFun2---</code>). Empty repository.</td></tr>
+          <tr><td><strong>Commit history</strong></td><td><code>git log --oneline</code></td><td><code>a3a2848 Initial commit</code>.</td></tr>
+          <tr><td><strong>GitHub Pages</strong></td><td><code>gh api repos/.../pages</code></td><td>Configured on <code>main</code> at repository root, HTTPS enforced.</td></tr>
+          <tr><td><strong>Coordination Board</strong></td><td><code>cat COORDINATION.md</code></td><td>Initialized to coordinate parallel agent sessions without overwrite.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2>2. Architectural & Governance Findings</h2>
+  <div class="card">
+    <ul>
+      <li><strong>R1 · Zero Prior Content:</strong> The repository started completely empty; 100% of the research, dataset structures, and dashboard code is freshly compiled and verified.</li>
+      <li><strong>R2 · Licensing & Attribution:</strong> Repository is licensed under MIT for code and CC BY 4.0 for compiled datasets and prose (see <code>LICENSE</code>).</li>
+      <li><strong>R3 · Continuous Verification:</strong> <code>scripts/verify.py</code> validates all local HTML links, JSON schemas, HTTPS source URLs, and ensures any blank field has an accompanying audit flag.</li>
+      <li><strong>R4 · NoJekyll Configuration:</strong> <code>.nojekyll</code> is placed in root to ensure GitHub Pages does not strip or preprocess underscore-prefixed asset directories.</li>
+      <li><strong>R5 · Disjoint Namespace Preservation:</strong> Independent sessions that developed standalone kits were preserved in their dedicated directories (<code>alt/</code>, <code>sessions/215c2a25/</code>, <code>sessions/33cfdba4/</code>, <code>sessions/657520df/</code>, <code>sessions/c1cf7b23/</code>) without overwriting.</li>
+    </ul>
+  </div>
+
+  <h2>3. Comprehensive Session Log & Integration History</h2>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Session ID / Branch</th>
+            <th scope="col">Scope & Focus</th>
+            <th scope="col">Key Verified Contributions</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>arena/4a10e962</strong></td>
+            <td>T0–T5 (Initial build)</td>
+            <td>Created coordination board, sidebar design system, initial Michelin & activity tables, and published baseline site.</td>
+            <td><span class="pill green">Merged (PR #1)</span></td>
+          </tr>
+          <tr>
+            <td><strong>arena/1a7ae497</strong></td>
+            <td>T6–T8 (Rates & Alt Kit)</td>
+            <td>Preserved parallel kit in <code>alt/</code>, added first 4 dated 7-night hotel rates from Booking.com, added LICENSE and <code>.nojekyll</code>.</td>
+            <td><span class="pill green">Merged (PR #8)</span></td>
+          </tr>
+          <tr>
+            <td><strong>arena/215c2a25</strong></td>
+            <td>Disjoint Kit</td>
+            <td>Constructed independent source-linked dashboard preserved verbatim in <code>sessions/215c2a25/</code>.</td>
+            <td><span class="pill green">Preserved</span></td>
+          </tr>
+          <tr>
+            <td><strong>arena/33cfdba4</strong></td>
+            <td>T9, T11, T12</td>
+            <td>Measured 25-leg transit matrix (Google Maps transit), 5-week booking window sweeps, and 72-row restaurant roster in <code>sessions/33cfdba4/</code>.</td>
+            <td><span class="pill green">Merged (PR #10)</span></td>
+          </tr>
+          <tr>
+            <td><strong>arena/6f217cce</strong></td>
+            <td>T10 (Pricing)</td>
+            <td>Captured official menu prices for Aquavit, odo, and Le Coucou.</td>
+            <td><span class="pill green">Merged (PR #13)</span></td>
+          </tr>
+          <tr>
+            <td><strong>arena/fc6d5f66</strong></td>
+            <td>T10, T13–T15</td>
+            <td>Reconciled canonical 69-star Michelin roster + 15 couple menu totals, updated decisions register to 17 flags, verified 0 errors.</td>
+            <td><span class="pill green">Merged (PR #14)</span></td>
+          </tr>
+          <tr>
+            <td><strong>arena/657520df</strong></td>
+            <td>T16 (Disjoint Kit)</td>
+            <td>Disjoint verified couple dashboard in <code>sessions/657520df/</code> with 27 Michelin venues, 10 hotels, 16 activities, 97 social links.</td>
+            <td><span class="pill green">Merged (PR #16)</span></td>
+          </tr>
+          <tr>
+            <td><strong>arena/c1cf7b23</strong></td>
+            <td>T17 (Disjoint Kit)</td>
+            <td>Disjoint verified dashboard in <code>sessions/c1cf7b23/</code> with 31 venues, 10 hotels, 18 activities (LNY Parade Feb 21), 155 social links.</td>
+            <td><span class="pill green">Merged (PR #17)</span></td>
+          </tr>
+          <tr>
+            <td><strong>arena/847ea2ef (Current)</strong></td>
+            <td>T18 (Root Integration)</td>
+            <td>Integrated all verified discoveries into canonical root site: 72 Michelin restaurants, 10 audited ranked hotels with 5-week sweeps, 18 activities, 12 questions, 12 suggestions, 17 flags, modern mobile dashboard with interactive filters and origin routing.</td>
+            <td><span class="pill green">Active Integration</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2>4. Automated Verification Results</h2>
+  <div class="card">
+    <p>Running <code>python3 scripts/verify.py</code> and <code>node --check assets/app.js</code> verifies:</p>
+    <ul>
+      <li><strong>0 Broken Links:</strong> All internal links across all 11 HTML pages resolve to valid local targets.</li>
+      <li><strong>117 Data Rows Verified:</strong> Every single row in <code>data/restaurants.json</code>, <code>data/hotels.json</code>, <code>data/activities.json</code>, and <code>data/decisions.json</code> carries an official HTTPS source URL.</li>
+      <li><strong>0 Unflagged Blanks:</strong> Every unconfirmed field has an accompanying audit flag.</li>
+      <li><strong>0 Syntax Errors:</strong> Clean, dependency-free JavaScript execution.</li>
+    </ul>
+  </div>
+
+<<<<<<< HEAD
+  <h2>5 · Verification evidence</h2>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Check</th><th>Command</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>Current local links, JSON validity, source structure, blank-field flags</td><td><code>python3 scripts/verify.py</code></td><td>0 errors, 0 warnings over 137 canonical JSON rows (including questions and suggestions); local links resolved.</td></tr>
+          <tr><td>Independent T17 kit structure</td><td><code>python3 sessions/c1cf7b23/scripts/verify.py</code></td><td>0 errors; independent data and methodology are not merged into the canonical rows.</td></tr>
+          <tr><td>Root JavaScript syntax</td><td><code>node --check assets/app.js</code></td><td>Passes; missing question-source lists are rendered as unprovided rather than throwing an error.</td></tr>
+          <tr><td>Git diff whitespace</td><td><code>git diff --check</code></td><td>Passes.</td></tr>
+          <tr><td>JS syntax</td><td><code>node --check assets/app.js</code></td><td>passes</td></tr>
+          <tr><td>Static serve</td><td><code>python3 -m http.server</code> then request each page</td><td>all pages and assets return 200</td></tr>
+          <tr><td>Calendar arithmetic</td><td>Python <code>datetime</code></td><td>15 Feb 2027 is a Monday, 22 Feb 2027 is a Monday, exactly 7 nights</td></tr>
+          <tr><td>Hotel tax arithmetic</td><td>Pre-tax total × (1 + tax rate) + fixed nightly charges</td><td>$1,113 → $1,305 · $1,213.96 → $1,428 · $1,522 → $1,774 · $4,488 → $5,220</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="font-size:13px;margin:10px 0 0">Reproduce any check from a clone. Nothing on this site requires network access to render.</p>
+  </div>
+
+  <h2>6 · Open repository work</h2>
+  <div class="card">
+    <ul>
+      <li>Protect <code>main</code> and route future work through pull requests, so parallel sessions cannot force-push over each other.</li>
+      <li>Add a CI workflow that runs <code>scripts/verify.py</code> on every push and blocks the merge on failure.</li>
+      <li>Move the generated pages into <code>/docs</code> only if the Pages source is switched at the same time; today the root is the served path.</li>
+      <li>Add a weekly re-capture job for hotel rates so no price on the site is older than seven days without a visible warning (suggestion S11).</li>
+    </ul>
+  </div>
+
+  <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> · Coordination board: <a href="https://github.com/kanlerxz87-cyber/NYFun2/blob/main/COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a></p>
+
+=======
+  <p class="footer-note">
+    Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> · 
+    Coordination Board: <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a> · 
+    Research verified 2026-11-26.
+  </p>
+>>>>>>> e17ec92 (Integrate complete verified NYC 2027 trip dashboard: 72 Michelin restaurants, 10 ranked hotels with 5-week sweeps, 18 activities, transit matrix, and decision framework (T18))
+>>>>>>> 62ef838 (Integrate complete verified NYC 2027 trip dashboard: 72 Michelin restaurants, 10 ranked hotels with 5-week sweeps, 18 activities, transit matrix, and decision framework (T18))
 </main>
 <script src="../assets/app.js"></script>
 </body>

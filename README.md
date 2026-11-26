@@ -1,17 +1,36 @@
+<<<<<<< HEAD
 # NYFun2 — New York City trip plan, February–March 2027
 
+<<<<<<< HEAD
 A static, source-audited planning dashboard for **two adults** in New York City inside the
 **15 Feb – 23 Mar 2027** window, built around MICHELIN dining and hotels that publish a
 **queen-or-larger bed and a private bathroom**.
+=======
+A mobile-friendly, source-audited planning dashboard for two adults. The preferred dates are **15–18 February 2027** (3 nights); the canonical seven-night hotel comparison uses **15–22 February 2027**. The full allowed trip window is 15 February–23 March 2027.
+=======
+# NYFun2 — New York City Trip Planning Dashboard (Feb–Mar 2027)
+>>>>>>> 62ef838 (Integrate complete verified NYC 2027 trip dashboard: 72 Michelin restaurants, 10 ranked hotels with 5-week sweeps, 18 activities, transit matrix, and decision framework (T18))
 
-**Live site:** https://kanlerxz87-cyber.github.io/NYFun2/
+A static, source-audited intelligence and vacation planning dashboard for a couple (2 adults) in New York City, built around MICHELIN-starred dining clusters, verified Queen/King-bed and private-bathroom hotel accommodations with ≤1-hour transit reach, date-specific February 2027 activities, real pricing, and structured decision frameworks.
+>>>>>>> e17ec92 (Integrate complete verified NYC 2027 trip dashboard: 72 Michelin restaurants, 10 ranked hotels with 5-week sweeps, 18 activities, transit matrix, and decision framework (T18))
 
+<<<<<<< HEAD
 **Preferred trip:** 15–18 Feb 2027 (Mon–Thu, 3 nights).
 **Priced case:** 15–22 Feb 2027 (Mon–Mon, 7 nights) — the window the brief asked to price.
+=======
+**Live Site:** https://kanlerxz87-cyber.github.io/NYFun2/
+
+<<<<<<< HEAD
+## Use the dashboards
+=======
+**Travel Window:** Preferred core 15–18 Feb 2027 (3 nights, Presidents' Day); priced baseline 15–22 Feb 2027 (Monday → Monday, 7 nights); full eligibility window 15 Feb – 23 Mar 2027.
+>>>>>>> e17ec92 (Integrate complete verified NYC 2027 trip dashboard: 72 Michelin restaurants, 10 ranked hotels with 5-week sweeps, 18 activities, transit matrix, and decision framework (T18))
+>>>>>>> 62ef838 (Integrate complete verified NYC 2027 trip dashboard: 72 Michelin restaurants, 10 ranked hotels with 5-week sweeps, 18 activities, transit matrix, and decision framework (T18))
 
 **Travel window:** preferred 15–18 Feb 2027; priced case 15–22 Feb 2027 (Monday → Monday, 7 nights); full allowed window 15 Feb–23 Mar 2027.
 **Date-critical:** the 29th Chinatown Lunar New Year Parade is on Sun 21 Feb 2027 — it is only catchable on the 7-night window, not the preferred 15–18 Feb trip. Wollman Rink closes 16 Mar 2027; Bryant Park Winter Village closes 28 Feb 2027. Michelin's 2026 ceremony is 14 Dec 2026 (before the trip).
 
+<<<<<<< HEAD
 The root site is the canonical source-linked catalogue. The separate [T17 detailed planning kit](https://kanlerxz87-cyber.github.io/NYFun2/sessions/c1cf7b23/index.html) is a curated, independently researched comparison with additional dated hotel windows, measured transit data and social links. The kits retain separate datasets and assumptions; do not combine their prices without checking each source and flag.
 
 > Every table row carries a link to the official page it came from. A value that cannot be
@@ -70,6 +89,7 @@ Each row also carries a verification badge:
 
 ## Data and build
 
+<<<<<<< HEAD
 | Path | Purpose |
 |---|---|
 | `data/restaurants.json` | 72 rows, per-field `provenance`, verification badge |
@@ -88,6 +108,77 @@ Each row also carries a verification badge:
 python3 scripts/build_data.py     # merge kits -> data/*.json
 python3 scripts/build_site.py     # data/*.json -> html
 python3 scripts/verify.py         # 0 errors / 0 warnings required
+=======
+Every factual row in the category tables links to a primary or official source. Values that could not be confirmed are left blank and explained in the Flags page. Arithmetic (such as multiplying an official per-person menu price by two, or applying a published tax basis) is identified in context. User-generated reviews are labelled third-party and are not treated as official endorsements. Dated prices and hours are time-sensitive and should be rechecked before booking.
+=======
+## Core Verification Rule
+
+> Every single data row carries an official HTTPS source link. Values that cannot be confirmed from an official source are left deliberately blank and flagged on the Flagged for Review page — never estimated or hallucinated.
+
+Where arithmetic is performed (adding published 14.75% tax + $3.50/nt unit fee to published pre-tax rates, or multiplying adult admission for 2), the formula and source basis are explicitly documented. Third-party review videos (YouTube, TikTok) are labeled as traveler preview media and not official venue endorsements.
+
+---
+
+## Site Structure & Dashboard Pages
+
+| Path | Purpose | Key Content |
+|---|---|---|
+| `index.html` | Overview & Dashboard | High-level metrics, key findings, quick category tiles, transit verdict |
+| `pages/executive-summary.html` | Executive Summary | Decision blueprint, hotel rankings, Michelin clusters, budget tiers ($1.8k–$9.5k), booking timeline |
+| `pages/michelin-restaurants.html` | Michelin Dining Directory | Full 72-row roster (69 starred + 3 guide additions), 24 verified couple prices, clusters, 100+ review links |
+| `pages/hotels.html` | Hotels & Booking Windows | 10 ranked hotels (Queen+/private bath verified), 7-night totals (pre-tax & all-in), 5-week price sweep |
+| `pages/activities.html` | Activities & Events | 18 curated NYC activities, operating hours, exceptions, couple costs, Chinatown Lunar New Year Parade |
+| `pages/itinerary.html` | Itinerary & Transit Matrix | 7-day & 4-day cluster-aligned plans, 25-leg measured transit matrix (3–37 min), closure rules |
+| `pages/questions.html` | Decision Framework | 12 prioritized questions: what we know, what is missing, blocking status, discovery playbook |
+| `pages/suggestions.html` | Suggestions Portal | 12 prioritized improvement proposals with impact, effort, prerequisites, and action paths |
+| `pages/flagged.html` | Flagged for Review | 17 transparent audit flags covering unverified fields, ceremony risks, and pricing caveats |
+| `pages/sources.html` | Sources & Methodology | Primary-source directory, strict verification standards, cross-session audit trails |
+| `pages/repo-audit.html` | Repository Audit | Multi-session integration history, git logs, automated verification evidence |
+| `data/restaurants.json` | Restaurant Dataset | 72 rows (69 starred + 3 Guide-listed), verified couple prices, operating hours, socials |
+| `data/hotels.json` | Hotel Dataset | 10 ranked hotels, Queen+/private bath specs, 7-night rates, 5 weekly booking sweeps |
+| `data/activities.json` | Activities Dataset | 18 attractions, verified 2-adult admission costs, opening hours, schedule exceptions |
+| `data/decisions.json` | Decisions Dataset | 12 questions, 12 suggestions, 17 flags, executive briefing |
+| `assets/styles.css` · `assets/app.js` | Styling & Logic | Modern responsive design, interactive filters, origin-based route calculation |
+| `scripts/verify.py` | Automated Verification | Local link validation, JSON integrity, HTTPS source enforcement, blank-flag checks |
+| `COORDINATION.md` | Task Board & Log | Multi-session task board, ownership scopes, commit log |
+
+---
+
+## Headline Findings & Strategic Analysis
+
+1. **≤1-Hour Transit Rule 100% Satisfied:**
+   Across 25 measured door-to-door transit legs via MTA subway and local walking, all shortlisted Manhattan hotels reach 100% of NYC's 67 Michelin-starred restaurants and top activities in **3 to 37 minutes** (average 17.2 to 21.4 minutes). The 1-hour constraint is comfortably satisfied across the board.
+>>>>>>> e17ec92 (Integrate complete verified NYC 2027 trip dashboard: 72 Michelin restaurants, 10 ranked hotels with 5-week sweeps, 18 activities, transit matrix, and decision framework (T18))
+
+2. **Cheapest Upcoming Time to Book (5-Week Sweep):**
+   Across the 15 Feb – 23 Mar 2027 window, **Week 1 (15–22 Feb 2027)** is the cheapest verified Queen-bed stay:
+   - **Eurostars Wall Street:** $848 pre-tax / $998 all-in (non-ref) · $1,025 pre-tax / $1,204 all-in (cancellable)
+   - **DoubleTree by Hilton Chelsea (#1 Pick):** $943 pre-tax / $1,110 all-in (cancellable, King bed, central location)
+   - *Warning on Week 2 (22 Feb – 1 Mar):* The entry $836 rate at Eurostars is a *Twin Bed room* (disqualified for Queen+ requirement).
+
+3. **Date-Critical February 2027 Events:**
+   - **29th Chinatown Lunar New Year Parade & Festival:** Sunday, February 21, 2027 at 1:00 PM (Mott St to Grand St, Free).
+   - **Bank of America Winter Village at Bryant Park:** Free admission ice rink closes for the season on **Sunday, February 28, 2027**.
+
+4. **Michelin Dining Clusters & Verified Menu Prices:**
+   - 69 starred restaurants (5×3★, 14×2★, 50×1★) across 5 transit clusters (Midtown West, Flatiron/NoMad, Tribeca/Lower Manhattan, Upper East Side, Williamsburg).
+   - 24 venues have exact verified 2-adult food subtotals ($156 to $1,900 for two).
+
+5. **MTA Fare & Subway Budget:**
+   - MTA single ride is **$3.00** ($35/week OMNY fare cap for unlimited subway/bus rides).
+
+6. **Michelin Guide Ceremony Notice:**
+   - The 2026/2027 Northeast Cities ceremony is scheduled for **14 December 2026**. Star levels should be re-checked post-ceremony.
+
+---
+
+## Local Verification & Testing
+
+```bash
+<<<<<<< HEAD
+python3 scripts/verify.py
+python3 sessions/c1cf7b23/scripts/verify.py
+>>>>>>> 62ef838 (Integrate complete verified NYC 2027 trip dashboard: 72 Michelin restaurants, 10 ranked hotels with 5-week sweeps, 18 activities, transit matrix, and decision framework (T18))
 node --check assets/app.js
 python3 -m http.server 8000       # then open http://localhost:8000/
 ```
@@ -117,4 +208,26 @@ are all in this build. The merge is recorded on `pages/repo-audit.html` and in `
 
 ## Licence
 
+<<<<<<< HEAD
 MIT for code; CC BY 4.0 for data and prose. Restaurant and hotel facts belong to their sources.
+=======
+Code: MIT. Data and prose: CC BY 4.0. Third-party marks, quotations and linked source content remain the property of their owners. See `LICENSE`.
+=======
+python3 scripts/verify.py     # Checks local HTML links, JSON integrity, sources, and flags
+node --check assets/app.js    # Checks JavaScript syntax
+python3 -m http.server 8000   # Starts local static preview at http://localhost:8000/
+```
+
+No build tools or external dependencies are required. The site runs natively in any modern browser.
+
+---
+
+## Publishing
+
+GitHub Pages serves `main` at the repository root with `.nojekyll` enabled.
+
+## Licence
+
+MIT for code; CC BY 4.0 for compiled data and prose. See `LICENSE`.
+>>>>>>> e17ec92 (Integrate complete verified NYC 2027 trip dashboard: 72 Michelin restaurants, 10 ranked hotels with 5-week sweeps, 18 activities, transit matrix, and decision framework (T18))
+>>>>>>> 62ef838 (Integrate complete verified NYC 2027 trip dashboard: 72 Michelin restaurants, 10 ranked hotels with 5-week sweeps, 18 activities, transit matrix, and decision framework (T18))
