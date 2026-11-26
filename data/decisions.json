@@ -10,7 +10,7 @@
       "blocking": true,
       "howToDiscover": "Pick one window before requesting live quotes; all hotel totals depend on it.",
       "sources": [
-        "https://www.nist.gov/pml/time-and-frequency-division/time-realization/leap-seconds"
+        "https://www.timeanddate.com/calendar/monthly.html?year=2027&month=2"
       ]
     },
     {
@@ -67,9 +67,9 @@
     {
       "id": "Q6",
       "question": "What will a couple actually pay at each Michelin restaurant?",
-      "whatWeKnow": "Selected menus have historical food-only couple prices. Eleven Madison Park’s FAQ conflicts on the bar price (F19). Amounts exclude tax, tip and drinks unless stated and are not quotes for 2027.",
+      "whatWeKnow": "Selected menus have historical food-only couple prices. Eleven Madison Park’s FAQ conflicts on the bar price (F19). Amounts exclude tax, tip and drinks unless stated and are not quotes for 2027. Two Le Bernardin dinner PDFs also conflict (F21).",
       "whatWeDoNotKnow": "2027 menu prices (menus captured Nov 2026), beverage pairings, service charge, tax and cancellation policies for the trip dates; exact prices for Per Se, Sushi Sho, Atera, Atomix, Jean-Georges, César, Joo Ok, Saga, Sushi Noz and most a-la-carte one-stars.",
-      "provisionalAnswer": "Use the verified couple totals on the Michelin page as a planning floor; re-confirm at booking. Per Se shows only a $200/person deposit officially, so its menu price stays blank.",
+      "provisionalAnswer": "Historical menu captures are not guaranteed floors or 2027 quotes; recheck each price and terms with the venue before booking.",
       "blocking": false,
       "howToDiscover": "Fetch each restaurant's official menu/pricing page shortly before booking and record a screenshot plus date.",
       "sources": [
@@ -233,7 +233,7 @@
     {
       "id": "S7",
       "title": "Make the site filterable by 'confirmed today / needs re-check'",
-      "detail": "Add a client-side toggle that hides rows carrying flags, so a traveler can see only the fully verified subset at a glance.",
+      "detail": "Add a filter for explicit verification status after defining field-level evidence; lack of a flag alone does not prove a row fully verified.",
       "effort": "Low",
       "blockedBy": [],
       "status": "Proposed — no changes implemented",
@@ -310,7 +310,7 @@
       "severity": "Medium",
       "title": "Trip length mismatch in the request",
       "detail": "Preferred trip is 3 nights (15–18 Feb 2027) but the hotel-pricing request asks for a 7-night total. Both are shown; no single assumption was silently chosen.",
-      "source": "https://www.nist.gov/pml/time-and-frequency-division/time-realization/leap-seconds"
+      "source": "https://www.timeanddate.com/calendar/monthly.html?year=2027&month=2"
     },
     {
       "id": "F4",
@@ -379,7 +379,7 @@
       "id": "F13",
       "severity": "High",
       "title": "Airfare and theatre remain unpriced; restaurant menu prices PARTIALLY resolved",
-      "detail": "12 restaurants now have verified couple totals from official pages (see Q6 / Michelin page), so the largest dining line items are no longer wholly unpriced. Still unpriced: flights, theatre tickets, and exact menu prices for Per Se, Sushi Sho, Aquavit, Atera, Atomix, Jean-Georges and most a-la-carte one-stars. Menus were captured Nov 2026 and must be re-confirmed for Feb-Mar 2027. No grand total is claimed.",
+      "detail": "Some historical official-menu captures exist, but many restaurants, airfare and theatre remain unpriced; all menu totals require rechecking for the trip. No grand total is claimed.",
       "source": "https://guide.michelin.com/en/new-york-state/new-york/restaurants/3-stars-michelin"
     },
     {
@@ -430,6 +430,14 @@
       "title": "Historical roster, hours, prices and social links not independently rechecked in full",
       "detail": "The 25 November data was inherited from earlier sessions. Automated checks test structure and local links, not truth, current availability, official ownership, live page status or travel time. Recheck each row at its cited venue or Michelin source; conflicting alternative kits are not verified.",
       "source": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025"
+    },
+    {
+      "id": "F21",
+      "severity": "High",
+      "title": "Le Bernardin dinner menu PDF price conflict",
+      "detail": "Two official PDFs show different dinner prices: dinner-1.2.pdf $218 and dinner-11.20.pdf $225 per person. Neither document establishes which price applies to the 2027 trip; the dinner total is blank pending confirmation. Compare the second PDF at https://www.le-bernardin.com/content/pdfs/dinner-11.20.pdf.",
+      "source": "https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf",
+      "secondSource": "https://www.le-bernardin.com/content/pdfs/dinner-11.20.pdf"
     }
   ]
 }

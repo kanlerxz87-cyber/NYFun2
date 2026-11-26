@@ -78,7 +78,7 @@
     },
     flags: {
       cols: ['ID','Severity','Issue','Detail','Source'],
-      row: (f) => [`<strong>${esc(f.id)}</strong>`, `<span class="pill ${f.severity === 'High' ? 'red' : f.severity === 'Medium' ? 'amber' : 'gray'}">${esc(f.severity)}</span>`, `<strong>${esc(f.title)}</strong>`, val(f.detail), `<a href="${esc(f.source)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`]
+      row: (f) => [`<strong>${esc(f.id)}</strong>`, `<span class="pill ${f.severity === 'High' ? 'red' : f.severity === 'Medium' ? 'amber' : 'gray'}">${esc(f.severity)}</span>`, `<strong>${esc(f.title)}</strong>`, val(f.detail), `${link(f.source, 'Source')}${f.secondSource ? `<br>${link(f.secondSource, 'Compare source')}` : ''}`]
     }
   };
 

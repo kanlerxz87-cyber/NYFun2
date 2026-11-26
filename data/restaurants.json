@@ -98,9 +98,9 @@
       "hours": "Mon–Thu 12:00–14:30 and 17:00–22:30; Fri 12:00–14:30 and 17:00–23:00; Sat 17:00–23:00; Sunday closed",
       "exceptions": "Business casual dress code: jackets recommended, not required; shorts, t-shirts, short sleeves, flip-flops, sweatshirts, sweatpants and sneakers not permitted. Reservations required for the main dining room; lounge is walk-in. Card required at booking; 48-hour cancellation window at $150 per person.",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "$700 (Chef's Tasting, 2 x $350); $436 (Dinner prix fixe, 2 x $218); $284 (Lunch prix fixe, 2 x $142)",
-      "priceNote": "Official dinner menu PDF (dinner-1.2.pdf): dinner 4-course $218/person. Chef's Tasting $350 ($530 w/ wine pairing); Lunch 3-course $142. Supplements extra (caviar $145/oz). Reconciled with session 6f217cce: an earlier accessible-page capture showed $225 dinner, but the current official PDF states $218 and is used.",
-      "priceSourceUrl": "https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf",
+      "priceTwoAdults": "$700 (Chef's Tasting, 2 × $350); $284 (Lunch prix fixe, 2 × $142); dinner blank — conflicting official PDFs",
+      "priceNote": "Official dinner PDFs conflict at $218 and $225 per person; neither is established as applicable to travel dates. See F21.",
+      "priceSourceUrl": "https://www.le-bernardin.com/accessible/menus/dining-room/chef-s-tasting/",
       "officialUrl": "https://www.le-bernardin.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/le-bernardin",
       "social": [
@@ -126,7 +126,8 @@
         }
       ],
       "flags": [
-        "Dress code and cancellation policy recorded from the Resy venue page"
+        "Dress code and cancellation policy recorded from the Resy venue page",
+        "Official dinner PDFs conflict: $218 vs $225 per person; dinner total omitted pending confirmation (F21)."
       ]
     },
     {

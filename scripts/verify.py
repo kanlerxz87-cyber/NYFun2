@@ -1,56 +1,64 @@
 #!/usr/bin/env python3
-"""Static verification for the NYFun2 dashboard.
-
-Checks: local links resolve, JSON parses, every data row carries an official
-source URL, and blank fields have an explanatory flag. No network calls are made.
-"""
+"""Check local dashboard structure only; this does not verify external facts."""
 import json
 import re
 import sys
+from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 errors = []
-warnings = []
 
-for html in sorted(ROOT.glob('*.html')) + sorted((ROOT / 'pages').glob('*.html')):
-    text = html.read_text(encoding='utf-8')
-    for href in re.findall(r'href="([^"#]+)', text):
-        if href.startswith(('http://', 'https://', 'mailto:', 'tel:', 'javascript:')):
+class Links(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.urls = []
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        for key in ('href', 'src'):
+            if key in attrs:
+                self.urls.append(attrs[key])
+
+pages = sorted(ROOT.glob('*.html')) + sorted((ROOT / 'pages').glob('*.html'))
+for html in pages:
+    parser = Links()
+    parser.feed(html.read_text(encoding='utf-8'))
+    for url in parser.urls:
+        parts = urlsplit(url)
+        if parts.scheme or parts.netloc or not parts.path:
             continue
-        target = (html.parent / href.split('?')[0]).resolve()
-        if not target.exists():
-            errors.append(f'{html.relative_to(ROOT)}: missing local link {href}')
+        target = (html.parent / unquote(parts.path)).resolve()
+        if not target.is_relative_to(ROOT) or not target.exists():
+            errors.append(f'{html.relative_to(ROOT)}: missing local target {url}')
 
-row_files = {
-    'data/restaurants.json': 'items',
-    'data/activities.json': 'items',
-    'data/hotels.json': 'items',
-    'data/decisions.json': 'flags',
-}
-for rel, key in row_files.items():
-    doc = json.loads((ROOT / rel).read_text(encoding='utf-8'))
-    rows = doc[key] if key in doc else sum((doc[k] for k in ('questions', 'suggestions', 'flags')), [])
-    for i, row in enumerate(rows, 1):
-        label = f'{rel} row {i} ({row.get("name") or row.get("title") or row.get("id")})'
-        source = row.get('sourceUrl') or row.get('source') or row.get('rateSourceUrl')
-        if not source or not source.startswith('https://'):
-            errors.append(f'{label}: no https official source URL')
-        if rel == 'data/restaurants.json':
-            blankable = ['address', 'hours', 'priceTwoAdults', 'officialUrl']
-        elif rel == 'data/hotels.json':
-            blankable = ['room', 'privateBathroom', 'sevenNightTotal', 'cheapestWindow', 'publishedRate']
-        elif rel == 'data/activities.json':
-            blankable = ['hours', 'costTwoAdults']
-        else:
-            blankable = []
-        if any(not row.get(f) for f in blankable) and not row.get('flags'):
-            warnings.append(f'{label}: blank field with no flag')
+docs = {}
+for name in ('restaurants', 'activities', 'hotels', 'decisions'):
+    try:
+        docs[name] = json.loads((ROOT / 'data' / f'{name}.json').read_text(encoding='utf-8'))
+    except (ValueError, OSError) as e:
+        errors.append(f'{name}: {e}')
 
-print(f'Checked HTML local links and {sum(len(json.loads((ROOT / f).read_text())[k]) for f, k in row_files.items() if k in json.loads((ROOT / f).read_text()))} data rows.')
-for w in warnings:
-    print('WARN ', w)
-for e in errors:
-    print('ERROR', e)
-print(f'Result: {len(errors)} errors, {len(warnings)} warnings')
-sys.exit(1 if errors else 0)
+count = 0
+for name in ('restaurants', 'activities', 'hotels'):
+    for row in docs.get(name, {}).get('items', []):
+        count += 1
+        label = f'{name}: {row.get("name", "unnamed")}'
+        if not row.get('sourceUrl', '').startswith('https://'):
+            errors.append(f'{label}: missing source URL')
+        if name == 'restaurants' and row.get('priceTwoAdults') and not row.get('priceSourceUrl'):
+            errors.append(f'{label}: menu price missing source URL')
+        if name == 'hotels' and row.get('sevenNightTotal') and not row.get('rateSourceUrl'):
+            errors.append(f'{label}: hotel total missing rate source URL')
+for group in ('questions', 'suggestions', 'flags'):
+    for row in docs.get('decisions', {}).get(group, []):
+        count += 1
+        sources = row.get('sources', []) or [row.get('source', '')]
+        if not any(s.startswith('https://') for s in sources):
+            errors.append(f'{group}: {row.get("id")} missing contextual source URL')
+
+for error in errors:
+    print('ERROR', error)
+print(f'Checked {len(pages)} main HTML files and {count} data rows: {len(errors)} errors.')
+print('External URLs, source accuracy and current availability are NOT checked.')
+sys.exit(bool(errors))
