@@ -51,6 +51,20 @@ the canonical data this build starts from; each row keeps its official link.
 | Lunar New Year parade | 29th parade Sun 21 Feb 2027, 13:00 | http://betterchinatown.com/ |
 | Activity official socials | MoMA, Met, AMNH, 9/11, High Line, Whitney, Guggenheim, ESB, NYPL, Wollman | each venue's own social page |
 
+## Re-read by `arena/779506a6-nyfun2` and `arena/4a8e5aa4-nyfun2` the same day (2026-11-26)
+
+| Fact | Value confirmed | Source |
+|---|---|---|
+| Atomix Tock pricing & socials | November Chef's Counter $424/pp ($848/couple) & Bar Tasting $314/pp ($628/couple) incl. administrative fee; December $495/pp & starting at $352/pp; official `@atomixnyc` Instagram/Facebook | https://www.exploretock.com/atomixnyc/help |
+| Sushi Sho Tock pricing & release | Shorter Omakase at Hinoki Counter $495/pp incl. admin fee ($990 for two); booking through 28 Feb 2027; releases 1 Dec 2026 11:00 AM EST; `@sushishonyc` | https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-at-hinoki-counter |
+| Per Se Tock deposit-only status | Main Dining Room from $200/pp deposit; Salon Four-Course $150/pp deposit; no full menu price printed | https://www.exploretock.com/perse/experience/7768/salon-lounge-seating-four-course-tasting-menu |
+| Guggenheim admission & hours | General Admission $30 ($60 for two); daily 10:30–17:30; PWYW Tue & Sun 16:00–17:30 | https://www.guggenheim.org/plan-your-visit |
+| AMNH Pay What You Wish & hours | NY-resident PWYW suggested $25 adult ($50 for two, GA only); non-NY visitors pay mandatory GA; closed Thanksgiving 26 Nov | https://www.amnh.org/plan-your-visit |
+| 9/11 Memorial & Museum hours | Memorial daily 08:00–20:00; Museum Wed–Mon + select Tue 09:00–19:00 (last entry 17:30); advance Museum ticket required | https://www.911memorial.org/visit |
+| Empire State Building seasonal hours | Open 365 days; typical winter schedule 10:00–22:00 (doors close 21:00; select Nov/Dec dates 09:00–23:00) | https://www.esbnyc.com/visit/hours-of-operation |
+| SUMMIT One Vanderbilt opening days | Daily (Sunday–Saturday) 08:00–24:00, last entry 22:30; no Tuesday closure on official FAQ (F29) | https://info.summitov.com/ |
+| MTA subway and bus fares | Subway / local / limited / Select Bus Service $3; express bus $7.25 | https://www.mta.info/fares-tolls |
+
 ## Not re-read (carried capture, 2026-11-25)
 
 | Fact | Why | Where it lives |

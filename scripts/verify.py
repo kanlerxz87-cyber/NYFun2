@@ -128,6 +128,15 @@ for c in ver["checks"]:
     if not str(c.get("source", "")).startswith("http"):
         add(errors, f"verification [{c['fact']}]: no http source")
 
+# -------------------------------------------------------------- transit matrix
+transit = json.loads((ROOT / "data/transit.json").read_text(encoding="utf-8"))
+for i, leg in enumerate(transit.get("matrix", []), 1):
+    rows_checked += 1
+    if not str(leg.get("source", "")).startswith("https://"):
+        add(errors, f"data/transit.json leg {i}: no https directions source")
+    if not leg.get("minutes"):
+        add(errors, f"data/transit.json leg {i}: missing minutes")
+
 # --------------------------------------------------------------------- report
 print(f"Checked {len(list(ROOT.glob('*.html'))) + len(list((ROOT / 'pages').glob('*.html')))} HTML pages "
       f"and {rows_checked} data rows.")
@@ -135,7 +144,7 @@ print(f"Datasets: restaurants {len(docs['data/restaurants.json']['items'])}, "
       f"hotels {len(docs['data/hotels.json']['items'])}, "
       f"activities {len(docs['data/activities.json']['items'])}, "
       f"questions {len(dec['questions'])}, suggestions {len(dec['suggestions'])}, flags {len(dec['flags'])}, "
-      f"verification checks {len(ver['checks'])}")
+      f"verification checks {len(ver['checks'])}, transit legs {len(transit.get('matrix', []))}")
 for w in warnings:
     print("WARN ", w)
 for err in errors:

@@ -215,7 +215,7 @@ def build():
   <h2>Key findings</h2>
   <div class="card">
     <ul>
-      <li><strong>Dining.</strong> {len(r_items)} rows: 69 starred ({star_counts["3"]}+{star_counts["2"]}+{star_counts["1"]}) plus 3 guide-listed. {len(priced)} have a verified couple total from an official menu, FAQ or official booking channel — from <strong>$156</strong> (Gramercy Tavern tavern three-course) and <strong>$168</strong> (Cote Butcher's Feast) up to <strong>$1,900</strong> (Masa hinoki counter). Three prices (Atomix, Atera, Per Se) are contested between captures and stay blank (flag F24).</li>
+      <li><strong>Dining.</strong> {len(r_items)} rows: 69 starred ({star_counts["3"]}+{star_counts["2"]}+{star_counts["1"]}) plus 3 guide-listed. {len(priced)} have a verified couple total from an official menu, FAQ or official booking channel — from <strong>$156</strong> (Gramercy Tavern tavern three-course) and <strong>$168</strong> (Cote Butcher's Feast) up to <strong>$1,900</strong> (Masa hinoki counter), including Atomix ($848/$628 November Tock) and Sushi Sho ($990 Tock). Two prices (Atera, Per Se) remain contested/deposit-only and stay blank (flag F24).</li>
       <li><strong>Hotels.</strong> {len(hotels_priced)} of {len(h_items)} shortlisted properties have a dated 7-night total; {len(qualified)} publish a queen/king bed plus private bathroom. {len(h_items) - len(qualified)} do not and are excluded from the recommendation rather than assumed to comply (F26).</li>
       <li><strong>The one-hour rule.</strong> 25 measured hotel→cluster legs, all 3–37 minutes, so every published hotel with a measurement reaches all five sampled MICHELIN clusters within an hour. The constraint is satisfied everywhere it can be measured; price and room quality decide.</li>
       <li><strong>Dates that matter.</strong> Presidents' Day Mon 15 Feb; Chinatown Lunar New Year parade Sun 21 Feb 13:00; Bryant Park rink closes Sun 28 Feb; Wollman Rink runs to 16 Mar (cheap off-peak $16); the Met is closed Wednesdays; MoMA is open late Fridays.</li>
@@ -296,7 +296,7 @@ def build():
   {toolbar("Search 72 restaurants by name, cuisine, area, price or day…", VERIFY_SELECT + '<select data-filter="stars" aria-label="Filter by star level"><option value="">All distinctions</option><option value="3">3 stars</option><option value="2">2 stars</option><option value="1">1 star</option><option value="guide">Guide-listed (no star)</option></select>')}
   <div data-table="restaurants"></div>
 
-  <div class="notice info"><strong>How the price columns work.</strong> A dollar total appears only where an official page printed the per-person price. The MICHELIN band ($$–$$$$) is shown separately. "Price on request", "MP" and deposit-only venues are blank and flagged — Per Se publishes only a $200 deposit; Atomix and Atera have conflicting captures (F24).</div>
+  <div class="notice info"><strong>How the price columns work.</strong> A dollar total appears only where an official page printed the per-person price. The MICHELIN band ($$–$$$$) is shown separately. "Price on request", "MP" and deposit-only venues are blank and flagged — Per Se publishes only deposits ($200 MDR / $150 Salon); Atera has conflicting captures (F24); Atomix carries its verified November Tock rates ($848/$628) with December ($990/$704+) noted.</div>
 """
     pages["michelin"] = shell(
         "michelin", "MICHELIN restaurants", "Dining · source-checked", "MICHELIN restaurants and guide listings",
@@ -573,7 +573,7 @@ node --check assets/app.js</pre>
       <li><strong>Kit rosters were not the official census (F23).</strong> 14 kit venues sit outside the 69-star roster, and one kit carried 3 starred names absent from today's live list. None were added; all are in <code>data/conflicts.json</code>.</li>
       <li><strong>Duplicate rows in merged kits.</strong> The same hotel appeared as "The Frederick Hotel Tribeca" and "The Frederick Hotel Tribeca, a Small Luxury Hotel"; NYPL, the Met and 9/11 each appeared twice. The merge now keys these and reports rather than duplicates.</li>
       <li><strong>Mis-traced transit risk.</strong> A fuzzy name match initially attached Eurostars Wall Street's transit legs to The Wall Street Hotel. Matching is now key-based, and unmeasured hotels are blank.</li>
-      <li><strong>Contested prices stay blank (F24).</strong> Atomix, Atera and Per Se are not assigned a price; Le Bernardin keeps $218 with the $225 alternative shown.</li>
+      <li><strong>Contested prices stay blank (F24).</strong> Atera and Per Se are not assigned a price; Atomix carries its verified November Tock price ($848/$628) with December ($990/$704+) flagged; Le Bernardin keeps $218 with the $225 alternative shown.</li>
       <li><strong>Verification is dated, not implied (F21).</strong> 16 checks were re-read on 2026-11-26; everything else is labelled a carried capture.</li>
     </ul>
   </div>

@@ -162,8 +162,8 @@
         }
       ],
       "flags": [
-        "Ticket prices not confirmed on the checked official hours page",
-        "Address from official museum site but not repeated on the hours page"
+        "Address from official museum site but not repeated on the hours page",
+        "Official plan-your-visit page (verified 2026-11-26) states Pay What You Wish is for NY State residents only (suggested $25 adult = $50/couple, General Admission only); non-NY visitors pay mandatory General Admission (kit capture $37/adult = $74/couple; confirm tier at checkout)"
       ]
     },
     {
@@ -194,7 +194,7 @@
         }
       ],
       "flags": [
-        "Museum ticket prices and February 2027 select-Tuesday dates not confirmed"
+        "February-March 2027 select-Tuesday Museum opening dates not yet posted; advance Museum ticket purchase required (911memorial.org/visit, verified 2026-11-26)"
       ]
     },
     {
@@ -262,9 +262,9 @@
       "category": "Museum",
       "area": "Upper East Side",
       "address": "1071 Fifth Avenue, New York, NY 10128",
-      "hours": "Every day 10:30–17:30",
-      "exceptions": "Pay What You Wish Tue and Sun 16:00–17:30. Listed holiday hours apply Nov/Dec 2026.",
-      "costTwoAdults": "",
+      "hours": "Daily 10:30-17:30",
+      "exceptions": "Pay What You Wish Tuesdays and Sundays 16:00-17:30. Members-only hours select Mondays 18:00-20:00. Closed Thanksgiving Day (26 Nov) and Christmas Day (25 Dec); early close 16:00 on 24 Dec.",
+      "costTwoAdults": "$60 (2 x $30 General Admission published on guggenheim.org/plan-your-visit)",
       "officialUrl": "https://www.guggenheim.org/plan-your-visit",
       "sourceUrl": "https://www.guggenheim.org/plan-your-visit",
       "social": [
@@ -299,16 +299,14 @@
           "note": "Official account; confirmed via guggenheim.org/social (re-verified 2026-11-26) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
         }
       ],
-      "flags": [
-        "Adult admission not confirmed in the checked official page section"
-      ]
+      "flags": []
     },
     {
       "name": "Empire State Building Observatory",
       "category": "Observation deck",
       "area": "Midtown / Herald Square",
       "address": "20 W 34th Street, New York, NY 10118",
-      "hours": "",
+      "hours": "Open 365 days; typical winter schedule 10:00-22:00 (doors close 21:00; select dates 09:00-23:00 per esbnyc.com/visit/hours-of-operation)",
       "exceptions": "Official site says the building is open every day including holidays but hours change by date; date-specific hours must be checked on the official hours page.",
       "costTwoAdults": "",
       "officialUrl": "https://www.esbnyc.com/visit/hours-of-operation",
@@ -346,8 +344,8 @@
         }
       ],
       "flags": [
-        "February 2027 hours not published; hours left blank",
-        "Ticket prices not confirmed"
+        "February-March 2027 date-specific hours not yet posted on esbnyc.com/visit/hours-of-operation; re-check 30 days out",
+        "Ticket prices come from kit online-checkout capture ($44/adult + $5 order fee); not printed on the hours page itself"
       ]
     },
     {
