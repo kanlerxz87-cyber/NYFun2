@@ -1,0 +1,150 @@
+{
+ "checkedOn": "2026-11-26",
+ "session": "arena/9bc6abed-nyfun2",
+ "methodNote": "This session's sandbox reaches GitHub directly and external sites through a proxied fetch/search channel. Pages that block that channel are recorded as unreachable rather than assumed. A value is only marked Verified when the official page itself was read today.",
+ "checks": [
+  {
+   "fact": "Michelin NYC starred census",
+   "value": "5 three-star / 14 two-star / 50 one-star; 69 starred; 76 Bib Gourmand; 224 Selected",
+   "source": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred",
+   "note": "Confirmed on the live filter panel, 2026-11-26",
+   "result": "Verified"
+  },
+  {
+   "fact": "Star level spot-check, 15 rows",
+   "value": "Le Coucou 1*, Sushi Sho 3*, Jungsik 3*, EMP 3*, Atera 2*, Saga 2*, Joo Ok 2*, Cesar 2*, Noda 1*, Jeju Noodle Bar 1*, Semma 1*, Yoshino 1*, Cote 1*, Crown Shy 1*, Shmone 1*",
+   "source": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred",
+   "note": "Star icons on the official list matched the catalogue for all 15 sampled rows",
+   "result": "Verified"
+  },
+  {
+   "fact": "Eleven Madison Park menu prices",
+   "value": "Full Tasting $385/guest ($770 for two); Bar Tasting $255/guest ($510); lounge bar tasting 'begins at $225' ($450)",
+   "source": "https://www.elevenmadisonpark.com/faq",
+   "note": "Read directly from the official FAQ; both bar-tasting endpoints exist on the same page",
+   "result": "Verified"
+  },
+  {
+   "fact": "Jungsik menu price",
+   "value": "Signature Menu $335/guest -> $670 for two",
+   "source": "https://www.jungsik.com/menu/",
+   "note": "Read from the official menu page",
+   "result": "Verified"
+  },
+  {
+   "fact": "Masa menu prices",
+   "value": "Lunch from $495; Table Omakase $750; Hinoki Counter $950 -> $990 / $1,500 / $1,900 for two",
+   "source": "https://www.masanyc.com/menus",
+   "note": "Read from the official menus page",
+   "result": "Verified"
+  },
+  {
+   "fact": "Cote menu prices",
+   "value": "Butcher's Feast $84/guest ($168); Steak Omakase $225/guest ($450)",
+   "source": "https://www.cotekoreansteakhouse.com/nycdinnermenu",
+   "note": "Read from the official Flatiron dinner menu",
+   "result": "Verified"
+  },
+  {
+   "fact": "Gramercy Tavern menu prices",
+   "value": "Dining Room Seasonal Menu $178/guest ($356); Tavern three-course $78 ($156)",
+   "source": "https://www.gramercytavern.com/dining-room-menu/",
+   "note": "Read from the official menu page",
+   "result": "Verified"
+  },
+  {
+   "fact": "The Met admission and hours",
+   "value": "Adults $30 ($60 for two); Sun/Mon/Tue/Thu 10-17, Fri-Sat 10-21, closed Wednesday",
+   "source": "https://www.metmuseum.org/plan-your-visit",
+   "note": "Admission table read on the official page today; the Wednesday closure corroborated by four independent guides because the hours block was not in the page section captured",
+   "result": "Verified (hours corroborated)"
+  },
+  {
+   "fact": "MoMA admission and hours",
+   "value": "Adults $30 ($60 for two); daily 10:30-17:30, Friday to 20:30; closed Thanksgiving and 25 Dec",
+   "source": "https://www.moma.org/visit/",
+   "note": "Read directly from the official visit page",
+   "result": "Verified"
+  },
+  {
+   "fact": "Chinatown Lunar New Year Parade 2027",
+   "value": "29th parade: Sunday 21 February 2027, 13:00, Chinatown; firecracker ceremony Sat 6 Feb 2027",
+   "source": "http://betterchinatown.com/",
+   "note": "Organiser page plus two independent listings agree. The organiser's Chinese-language line on the same page still says 2026 - flagged F19",
+   "result": "Verified (typo flagged)"
+  },
+  {
+   "fact": "Bryant Park Winter Village season",
+   "value": "Season 28 Oct 2026 - 28 Feb 2027; rink 08:00-22:00 daily; holiday shops end 3 Jan 2027",
+   "source": "https://bryantpark.org/activities/winter-village",
+   "note": "Official page could not be fetched today (fetch error); four independent 2026 guides agree. Official link kept for manual check",
+   "result": "Corroborated, official page unreachable"
+  },
+  {
+   "fact": "Wollman Rink 2026-27",
+   "value": "Season 28 Oct 2026 - 16 Mar 2027; adults $16 off-peak / $28 peak / $40 prime; rental $12",
+   "source": "https://wollmanrinknyc.com/plan/",
+   "note": "Official page not fetched today; three independent 2026-27 price round-ups agree",
+   "result": "Corroborated, official page not re-read"
+  },
+  {
+   "fact": "Hyatt Place NY/Chelsea room specification",
+   "value": "King-bed rooms with a bathroom with shower; 180 sq ft; address 140 West 24th Street",
+   "source": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms",
+   "note": "Read from the official rooms page today",
+   "result": "Verified"
+  },
+  {
+   "fact": "Dated hotel rates for 15-22 Feb 2027",
+   "value": "$1,113 pre-tax Hyatt Place, $1,214 Arlo NoMad, $1,522 11 Howard, $848 Eurostars, $943 DoubleTree",
+   "source": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price",
+   "note": "Booking.com property detail pages returned an error to this session's fetcher, so the dated totals could not be re-quoted today. The search page for the window did load, confirming availability for 15-22 Feb 2027. Treat the totals as 2026-11-25 snapshots (F10)",
+   "result": "NOT re-quoted today - carried"
+  },
+  {
+   "fact": "Transit times",
+   "value": "25 hotel->cluster legs, 3-37 minutes; 10 hotel->activity legs",
+   "source": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Le+Bernardin+New+York&travelmode=transit",
+   "note": "Captured 2026-11-25 17:14-17:31 ET. Google Maps cannot be queried programmatically from this session, so the stored minutes are snapshots; each leg links a live directions query",
+   "result": "Carried snapshot"
+  },
+  {
+   "fact": "Michelin 2026 ceremony date",
+   "value": "14 Dec 2026 (Northeast Cities)",
+   "source": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
+   "note": "Not re-fetched today; carried from the 2026-11-25 capture and still the basis of flag F1",
+   "result": "Carried"
+  }
+ ],
+ "resultCounts": {
+  "Verified": 9,
+  "Verified (hours corroborated)": 1,
+  "Verified (typo flagged)": 1,
+  "Corroborated, official page unreachable": 1,
+  "Corroborated, official page not re-read": 1,
+  "NOT re-quoted today - carried": 1,
+  "Carried snapshot": 1,
+  "Carried": 1
+ },
+ "coverage": {
+  "restaurants": {
+   "rows": 72,
+   "withOfficialSource": 72,
+   "withPrice": 24,
+   "withHours": 35,
+   "withSocial": 27,
+   "withAddress": 39
+  },
+  "hotels": {
+   "rows": 16,
+   "priced": 8,
+   "measuredTransit": 4
+  },
+  "activities": {
+   "rows": 18,
+   "withHours": 18,
+   "withSocial": 18,
+   "withCost": 17
+  }
+ }
+}

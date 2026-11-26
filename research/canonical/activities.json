@@ -1,0 +1,471 @@
+{
+  "meta": {
+    "checkedOn": "2026-11-26",
+    "travelTimePolicy": "No door-to-door minutes are stated. Each row links to a live map-directions URL so the user can verify travel from the chosen hotel on the travel date.",
+    "costPolicy": "Only prices printed on the venue's own official page are used. A couple total is shown only as a simple multiplication of a published adult price; otherwise it is blank and flagged.",
+    "mergeNote": "2026-11-26 (session arena/45972379-nyfun2): official social accounts verified by session fc6d5f66 (research/activity-socials.md) were merged into each row with the confirming official page; Guggenheim URLs re-copied from guggenheim.org/social on 2026-11-26. Three date-critical rows were added and re-verified against the live official pages on 2026-11-26 (wollmanrinknyc.com/plan/, bryantpark.org, betterchinatown.com). 'No official social verified' flags were removed only where an official account URL was actually confirmed."
+  },
+  "items": [
+    {
+      "name": "Statue of Liberty National Monument + Ellis Island",
+      "category": "Historic site / ferry",
+      "area": "Liberty Island / Ellis Island (ferry access)",
+      "address": "Liberty Island and Ellis Island; access by Statue City Cruises ferry only",
+      "hours": "Park and Liberty Island Information Center: daily 09:00–16:30",
+      "exceptions": "Last entry into the statue 15:30. Closed Thanksgiving Day (26 Nov 2026) and Christmas Day (25 Dec 2026). Ferry times published separately by Statue City Cruises.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.nps.gov/stli/index.htm",
+      "sourceUrl": "https://www.nps.gov/stli/planyourvisit/hours.htm",
+      "social": [
+        {
+          "platform": "NPS official social-media page",
+          "url": "https://www.nps.gov/stli/learn/photosmultimedia/socialmedia.htm",
+          "note": "Official National Park Service page listing park accounts"
+        },
+        {
+          "platform": "YouTube (third-party guide)",
+          "url": "https://www.youtube.com/watch?v=0SrIPtUt7Vo",
+          "note": "Visitor guide; not an NPS post"
+        }
+      ],
+      "flags": [
+        "Ferry fare and 2027 schedule not confirmed on the NPS hours page; blank"
+      ]
+    },
+    {
+      "name": "Central Park",
+      "category": "Park / walking",
+      "area": "Manhattan, 59th–110th Streets",
+      "address": "5 Av to Central Park W, 59 St to 110 St",
+      "hours": "06:00–01:00 (NYC Parks statement on Central Park hours)",
+      "exceptions": "NYC Parks says park hours may vary and signs at entrances govern; general NYC Parks hours are 06:00–22:00 or 06:00–01:00 depending on park.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.nycgovparks.org/parks/central-park",
+      "sourceUrl": "https://www.nycgovparks.org/news/press-releases?id=21596",
+      "social": [
+        {
+          "platform": "Instagram (official NYC Parks)",
+          "url": "https://www.instagram.com/nycparks",
+          "note": "Linked from NYC Parks official site"
+        },
+        {
+          "platform": "YouTube (official NYC Parks)",
+          "url": "https://youtube.com/@nycparks",
+          "note": "Linked from NYC Parks official site"
+        },
+        {
+          "platform": "YouTube (third-party walk)",
+          "url": "https://www.youtube.com/watch?v=0AU9_H47w7k",
+          "note": "Walking tour; not official"
+        }
+      ],
+      "flags": [
+        "Park hours can change seasonally; confirm at entrance"
+      ]
+    },
+    {
+      "name": "The Met Fifth Avenue",
+      "category": "Museum",
+      "area": "Upper East Side",
+      "address": "1000 Fifth Avenue, New York, NY 10028",
+      "hours": "Sun–Tue and Thu 10:00–17:00; Fri–Sat 10:00–21:00; Wednesday closed",
+      "exceptions": "Closed Thanksgiving Day, 25 Dec, 1 Jan and the first Monday in May.",
+      "costTwoAdults": "$60 (2 × $30 general admission published by The Met)",
+      "officialUrl": "https://www.metmuseum.org/plan-your-visit",
+      "sourceUrl": "https://www.metmuseum.org/visit/met-fifth-avenue",
+      "social": [
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=788Zi2S6XSQ",
+          "note": "Visitor review; not a Met post"
+        },
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/metmuseum",
+          "note": "Official account; confirmed via metmuseum.org/press/news/2014/webby-awards — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "Facebook (official)",
+          "url": "https://www.facebook.com/metmuseum",
+          "note": "Official account; confirmed via metmuseum.org/press/news/2014/webby-awards — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "X/Twitter (official)",
+          "url": "https://www.twitter.com/metmuseum",
+          "note": "Official account; confirmed via metmuseum.org/press/news/2014/webby-awards — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "Pinterest (official)",
+          "url": "https://www.pinterest.com/metmuseum",
+          "note": "Official account; confirmed via metmuseum.org/press/news/2014/webby-awards — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        }
+      ],
+      "flags": [
+        "Official Met pages showed conflicting Wednesday/Thursday hours in different snippets; re-check before booking",
+        "Admission excludes ticketed exhibitions"
+      ]
+    },
+    {
+      "name": "MoMA (Museum of Modern Art)",
+      "category": "Museum",
+      "area": "Midtown",
+      "address": "11 West 53 Street, New York, NY 10019",
+      "hours": "Daily 10:30–17:30; Friday 10:30–20:30",
+      "exceptions": "Open every day except Thanksgiving and Christmas. Galleries close ~15 minutes before museum closing.",
+      "costTwoAdults": "$60 (2 × $30 adult admission published by MoMA)",
+      "officialUrl": "https://www.moma.org/visit/",
+      "sourceUrl": "https://www.moma.org/visit/",
+      "social": [
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=iKhkApixPYA",
+          "note": "Visitor review; not a MoMA post"
+        },
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/themuseumofmodernart",
+          "note": "Official account; confirmed via moma.org/about/about-this-site; press.moma.org fact sheet — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "Facebook (official)",
+          "url": "https://www.facebook.com/MuseumofModernArt",
+          "note": "Official account; confirmed via moma.org/about/about-this-site — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "X/Twitter (official)",
+          "url": "https://www.twitter.com/MuseumModernArt",
+          "note": "Official account; confirmed via press.moma.org fact sheet — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "name": "American Museum of Natural History",
+      "category": "Museum",
+      "area": "Upper West Side",
+      "address": "Central Park West at 79th Street, New York, NY 10024",
+      "hours": "Daily 10:00–17:30",
+      "exceptions": "Closed Thanksgiving Day and Christmas Day. Extended holiday hours on select dates in Nov/Jan; temporary hall closures listed weekly.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.amnh.org/plan-your-visit",
+      "sourceUrl": "https://www.amnh.org/plan-your-visit/hours",
+      "social": [
+        {
+          "platform": "YouTube (third-party tour/review)",
+          "url": "https://www.youtube.com/watch?v=UphcGvF-bsc",
+          "note": "Visitor tour; not an AMNH post"
+        },
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/amnh",
+          "note": "Official account; confirmed via tumblr.amnh.org official posts link instagram.com/amnh — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        }
+      ],
+      "flags": [
+        "Ticket prices not confirmed on the checked official hours page",
+        "Address from official museum site but not repeated on the hours page"
+      ]
+    },
+    {
+      "name": "9/11 Memorial (outdoor) and Museum",
+      "category": "Memorial / museum",
+      "area": "Lower Manhattan / World Trade Center",
+      "address": "World Trade Center, New York, NY",
+      "hours": "Memorial: daily 08:00–20:00. Museum: Wed–Mon and select Tuesdays 09:00–19:00 (last entry 17:30).",
+      "exceptions": "Museum requires advance ticket purchase. Memorial is free and open seven days a week.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.911memorial.org/visit",
+      "sourceUrl": "https://www.911memorial.org/visit",
+      "social": [
+        {
+          "platform": "YouTube (third-party visit)",
+          "url": "https://www.youtube.com/watch?v=XGwkNtDcbVc",
+          "note": "Visitor video; not an official museum post"
+        },
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/911memorial",
+          "note": "Official account; confirmed via 911memorial.org homepage social links — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "X/Twitter (official)",
+          "url": "https://www.twitter.com/Sept11Memorial",
+          "note": "Official account; confirmed via 911memorial.org/poster-exhibition — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        }
+      ],
+      "flags": [
+        "Museum ticket prices and February 2027 select-Tuesday dates not confirmed"
+      ]
+    },
+    {
+      "name": "The High Line",
+      "category": "Park / walking",
+      "area": "Chelsea / Meatpacking",
+      "address": "West Side Manhattan elevated park (Gansevoort St north to 34th St)",
+      "hours": "Dec 1–Mar 31: 07:00–20:00 (this seasonal window covers the proposed February trip)",
+      "exceptions": "Rail Yard Preserve between 30th and 34th Streets closes at dusk.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.thehighline.org/visit/",
+      "sourceUrl": "https://www.thehighline.org/visit/",
+      "social": [
+        {
+          "platform": "YouTube (third-party walk)",
+          "url": "https://www.youtube.com/watch?v=s1c4oQB2u8w",
+          "note": "Walking video; not an official High Line post"
+        },
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/highlinenyc",
+          "note": "Official account; confirmed via thehighline.org (homepage) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "Facebook (official)",
+          "url": "https://www.facebook.com/highlinenyc",
+          "note": "Official account; confirmed via thehighline.org — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "X/Twitter (official)",
+          "url": "https://www.twitter.com/highlinenyc",
+          "note": "Official account; confirmed via thehighline.org — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        }
+      ],
+      "flags": [
+        "Admission cost not stated on the checked official page; left blank"
+      ]
+    },
+    {
+      "name": "Whitney Museum of American Art",
+      "category": "Museum",
+      "area": "Meatpacking District",
+      "address": "99 Gansevoort Street, New York, NY 10014",
+      "hours": "Mon 10:30–18:00; Tue closed; Wed–Thu 10:30–18:00; Fri 10:30–22:00; Sat–Sun 10:30–18:00",
+      "exceptions": "Free Friday nights and second Sundays. Listed holiday hours apply to Nov/Dec 2026; no February 2027 exception published.",
+      "costTwoAdults": "$60 (2 × $30 adult admission published by the Whitney)",
+      "officialUrl": "https://whitney.org/visit",
+      "sourceUrl": "https://whitney.org/visit",
+      "social": [
+        {
+          "platform": "YouTube (third-party visit)",
+          "url": "https://www.youtube.com/watch?v=EcGGHbBBWEQ",
+          "note": "Visitor video; not an official Whitney post"
+        },
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/whitneymuseum",
+          "note": "Official account; confirmed via whitney.org/visit/second-sundays; whitney.org/visit/free-friday-nights — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "name": "Solomon R. Guggenheim Museum",
+      "category": "Museum",
+      "area": "Upper East Side",
+      "address": "1071 Fifth Avenue, New York, NY 10128",
+      "hours": "Every day 10:30–17:30",
+      "exceptions": "Pay What You Wish Tue and Sun 16:00–17:30. Listed holiday hours apply Nov/Dec 2026.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.guggenheim.org/plan-your-visit",
+      "sourceUrl": "https://www.guggenheim.org/plan-your-visit",
+      "social": [
+        {
+          "platform": "YouTube (third-party review)",
+          "url": "https://www.youtube.com/watch?v=KZ7qvNnW7no",
+          "note": "Visitor review; not an official Guggenheim post"
+        },
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/guggenheim",
+          "note": "Official account; confirmed via guggenheim.org/social (re-verified 2026-11-26) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "Facebook (official)",
+          "url": "https://www.facebook.com/guggenheimmuseum",
+          "note": "Official account; confirmed via guggenheim.org/social (re-verified 2026-11-26) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "X/Twitter (official)",
+          "url": "https://x.com/guggenheim",
+          "note": "Official account; confirmed via guggenheim.org/social (re-verified 2026-11-26) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "YouTube (official)",
+          "url": "https://www.youtube.com/user/guggenheim",
+          "note": "Official account; confirmed via guggenheim.org/social (re-verified 2026-11-26) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "SoundCloud (official)",
+          "url": "https://soundcloud.com/guggenheimmuseum",
+          "note": "Official account; confirmed via guggenheim.org/social (re-verified 2026-11-26) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        }
+      ],
+      "flags": [
+        "Adult admission not confirmed in the checked official page section"
+      ]
+    },
+    {
+      "name": "Empire State Building Observatory",
+      "category": "Observation deck",
+      "area": "Midtown / Herald Square",
+      "address": "20 W 34th Street, New York, NY 10118",
+      "hours": "",
+      "exceptions": "Official site says the building is open every day including holidays but hours change by date; date-specific hours must be checked on the official hours page.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.esbnyc.com/visit/hours-of-operation",
+      "sourceUrl": "https://www.esbnyc.com/visit/hours-of-operation",
+      "social": [
+        {
+          "platform": "YouTube (third-party comparison)",
+          "url": "https://www.youtube.com/watch?v=jr6MHzeFo2c",
+          "note": "Observation-deck comparison; not an ESB post"
+        },
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/empirestatebldg",
+          "note": "Official account; confirmed via esbnyc.com/press — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "TikTok (official)",
+          "url": "https://www.tiktok.com/@empirestatebldg",
+          "note": "Official account; confirmed via esbnyc.com/press/visit-empire-state-building-observatory-holiday-season — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "YouTube (official)",
+          "url": "https://www.youtube.com/esbnyc",
+          "note": "Official account; confirmed via esbnyc.com/press (2019 & 2020 releases) — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "Facebook (official)",
+          "url": "https://www.facebook.com/empirestatebuilding",
+          "note": "Official account; confirmed via esbnyc.com/press — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        },
+        {
+          "platform": "X/Twitter (official)",
+          "url": "https://www.twitter.com/EmpireStateBldg",
+          "note": "Official account; confirmed via esbnyc.com/press — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        }
+      ],
+      "flags": [
+        "February 2027 hours not published; hours left blank",
+        "Ticket prices not confirmed"
+      ]
+    },
+    {
+      "name": "Staten Island Ferry",
+      "category": "Ferry / skyline views",
+      "area": "Lower Manhattan ⇄ Staten Island",
+      "address": "Whitehall Terminal, Manhattan ⇄ St. George Terminal, Staten Island",
+      "hours": "24 hours a day, 365 days a year",
+      "exceptions": "Weekend schedule applies on listed holidays (none inside the proposed 15–18 Feb 2027 window).",
+      "costTwoAdults": "$0 (free service per NYC DOT)",
+      "officialUrl": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
+      "sourceUrl": "https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml",
+      "social": [
+        {
+          "platform": "YouTube (third-party ride)",
+          "url": "https://www.youtube.com/watch?v=bxgMWN-KXXo",
+          "note": "Ferry ride video; not an NYC DOT post"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "name": "New York Public Library, Stephen A. Schwarzman Building",
+      "category": "Architecture / reading rooms",
+      "area": "Midtown / Bryant Park",
+      "address": "Fifth Avenue and 42nd Street, New York, NY 10018",
+      "hours": "Mon 10:00–18:00; Tue 10:00–20:00; Wed 10:00–20:00; Thu 10:00–18:00; Fri 10:00–18:00; Sat 10:00–18:00; Sun 13:00–17:00",
+      "exceptions": "Division hours may vary. Rose Main Reading Room visiting hour 10:00–11:00 Mon–Sat; last entry 10:50. Closed on listed holidays.",
+      "costTwoAdults": "",
+      "officialUrl": "https://www.nypl.org/locations/schwarzman",
+      "sourceUrl": "https://www.nypl.org/locations/schwarzman/research",
+      "social": [
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/nypl",
+          "note": "Official account; confirmed via nypl.org/blog/2019/08/20/nypl-insta-novels — verified 2026-11-25 (session arena/fc6d5f66-nyfun2) against the venue's own official page / press / privacy page; URLs are the canonical platform profiles"
+        }
+      ],
+      "flags": [
+        "Different NYPL official pages displayed different weeks' hours; re-check before visit"
+      ]
+    },
+    {
+      "name": "Wollman Rink in Central Park",
+      "category": "Outdoor ice skating (winter season)",
+      "area": "Central Park South",
+      "address": "830 5th Ave, New York, NY 10065 (enter Central Park at 59th St & 6th Ave)",
+      "hours": "Open daily 28 Oct 2026 – 16 Mar 2027. Mon–Tue 10:00–14:30; Wed–Thu & Sun 10:00–21:00; Fri–Sat 10:00–22:00",
+      "exceptions": "2026-27 calendar (official): 15 Feb 2027 (Presidents' Day) is a Community Day — free admission for NYC public-sector employees and their families; remaining tickets at Peak. 16–21 Feb 2027 = Peak; 22 Feb–13 Mar 2027 = Off-Peak; 14–16 Mar 2027 (end of season) = Community Days, free for everyone. Season closes 16 Mar 2027 — closed 17–23 Mar 2027. Closes periodically for ice resurfacing. Released Nov 2026; re-check at tickets.wollmanrinknyc.com.",
+      "costTwoAdults": "Feb 16–21 (Peak): $56 for two (2 × $28 adult) + $24 skate rental if needed (2 × $12; all prices incl. tax). Feb 22 onwards (Off-Peak): $32 for two (2 × $16) + $24 rental. 15 Feb 2027: free only for public-sector employees/families (Community Day); everyone else pays Peak.",
+      "officialUrl": "https://wollmanrinknyc.com/",
+      "sourceUrl": "https://wollmanrinknyc.com/plan/",
+      "social": [
+        {
+          "platform": "Instagram (official)",
+          "url": "https://www.instagram.com/wollmanrinknyc",
+          "note": "Official account linked from the official plan page (Contact section), verified 2026-11-26"
+        },
+        {
+          "platform": "Facebook (official)",
+          "url": "https://www.facebook.com/WollmanRinkNYC/",
+          "note": "Official account linked from the official plan page"
+        },
+        {
+          "platform": "X/Twitter (official)",
+          "url": "https://twitter.com/wollmanrinknyc/",
+          "note": "Official account linked from the official plan page"
+        },
+        {
+          "platform": "TikTok (official)",
+          "url": "https://www.tiktok.com/@wollmanrinknyc",
+          "note": "Official account linked from the official plan page"
+        },
+        {
+          "platform": "YouTube (official)",
+          "url": "https://www.youtube.com/channel/UC-uP04TWpSzwS-njREWUmWA",
+          "note": "Official channel linked from the official plan page"
+        }
+      ],
+      "flags": [
+        "Seasonal cutoff: closes 16 Mar 2027 — a 17–23 Mar 2027 trip cannot use it",
+        "Whole preferred week (16–21 Feb 2027) prices at Peak ($28/adult, all prices include tax); Community Day on 15 Feb is restricted to public-sector employees and their families",
+        "Cashless venue; tickets non-refundable; no re-entry"
+      ]
+    },
+    {
+      "name": "Bank of America Winter Village at Bryant Park (The Rink & The Lodge)",
+      "category": "Seasonal winter rink & holiday village",
+      "area": "Midtown",
+      "address": "Bryant Park, 40th–42nd Sts & 5th–6th Aves, New York, NY 10018",
+      "hours": "Season 28 Oct 2026 – 28 Feb 2027. The Rink: daily 08:00–22:00 (19 Nov–3 Jan until midnight; 31 Jan 08:00–20:00). The Lodge: daily 10:00–22:00",
+      "exceptions": "Holiday Shops: 28 Oct 2026 – 3 Jan 2027 only (Mon–Fri 11:00–20:00, Sat–Sun 10:00–20:00) — already closed for a Feb 2027 trip. Season closes 28 Feb 2027 — 1–23 Mar 2027 dates cannot skate. Jan 31 closes at 20:00. Rink is open rain or shine but may close for heavy rain/severe weather. Tickets roll out daily one week in advance for own skates.",
+      "costTwoAdults": "$0 rink admission with own skates; skate rental $18.72–$64.48 per person incl. admin fee (2 adults ≈ $37.44–$128.96, excl. tax) — rental price varies by peak/off-peak slot; not a fixed quote",
+      "officialUrl": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+      "sourceUrl": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+      "social": [],
+      "flags": [
+        "Seasonal cutoff: The Rink and The Lodge close 28 Feb 2027 — any March 2027 trip dates miss this",
+        "Official social accounts not confirmed in the merged capture; see bryantpark.org footer",
+        "Skate rental price is dynamic (peak/off-peak); published range only, no fixed total possible"
+      ]
+    },
+    {
+      "name": "29th Chinatown Lunar New Year Parade & Festival (2027)",
+      "category": "Annual cultural parade (single date)",
+      "area": "Chinatown",
+      "address": "Chinatown, New York — parade steps off at Mott & Canal Sts heading through Chatham Square; festival booths on Bayard St",
+      "hours": "Single date: Sunday 21 Feb 2027, 1:00pm step-off (English headline & body of the official organizer's page). Festival booth hours not printed — blank",
+      "exceptions": "One-day event only — 21 Feb 2027 is inside the 7-night 15–22 Feb window but outside the preferred 15–18 Feb trip. Related 29th Firecracker Ceremony is Sat 6 Feb 2027, 11:00–15:30 at Sara D. Roosevelt Park (Grand St) — before the trip window. Crowds and street closures expected.",
+      "costTwoAdults": "$0 (free street parade & festival)",
+      "officialUrl": "https://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/",
+      "sourceUrl": "https://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/",
+      "social": [],
+      "flags": [
+        "Irregularity on the official organizer's page: the Chinese line prints '2026年2月21日' while the English headline/body print 'February 21, 2027 | Sunday'; 21 Feb 2027 is a Sunday (calendar-verified). Treated as 21 Feb 2027; flagged for review",
+        "Only catchable on the 15–22 Feb 2027 7-night window, not on the preferred 15–18 Feb trip",
+        "Festival booth hours and official social accounts not printed in the capture; see betterchinatown.com"
+      ]
+    }
+  ]
+}

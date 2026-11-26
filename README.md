@@ -1,94 +1,123 @@
-# NYFun2 — New York City trip plan, February 2027
+# NYFun2 — New York City trip plan, February–March 2027
 
-A static, source-audited planning dashboard for two adults in New York City, built around
-MICHELIN-starred dining, hotels with a private bathroom and a queen-or-larger bed, and a
-one-hour travel goal.
+A static, source-audited planning dashboard for **two adults** in New York City inside the
+**15 Feb – 23 Mar 2027** window, built around MICHELIN dining and hotels that publish a
+**queen-or-larger bed and a private bathroom**.
 
 **Live site:** https://kanlerxz87-cyber.github.io/NYFun2/
 
-**Travel window:** preferred 15–18 Feb 2027 (3 nights); priced case 15–22 Feb 2027 (7 nights,
-Monday → Monday). The permitted range is 15 Feb – 23 Mar 2027.
+**Preferred trip:** 15–18 Feb 2027 (Mon–Thu, 3 nights).
+**Priced case:** 15–22 Feb 2027 (Mon–Mon, 7 nights) — the window the brief asked to price.
 
----
+**Travel window:** preferred 15–18 Feb 2027; priced case 15–22 Feb 2027 (Monday → Monday, 7 nights); full allowed window 15 Feb–23 Mar 2027.
+**Date-critical:** the 29th Chinatown Lunar New Year Parade is on Sun 21 Feb 2027 — it is only catchable on the 7-night window, not the preferred 15–18 Feb trip. Wollman Rink closes 16 Mar 2027; Bryant Park Winter Village closes 28 Feb 2027. Michelin's 2026 ceremony is 14 Dec 2026 (before the trip).
 
-## The rule this project runs on
+The root site is the canonical source-linked catalogue. The separate [T17 detailed planning kit](https://kanlerxz87-cyber.github.io/NYFun2/sessions/c1cf7b23/index.html) is a curated, independently researched comparison with additional dated hotel windows, measured transit data and social links. The kits retain separate datasets and assumptions; do not combine their prices without checking each source and flag.
 
-> Every table row carries a source URL. Values that cannot be confirmed are left blank and
-> flagged — never estimated.
+> Every table row carries a link to the official page it came from. A value that cannot be
+> confirmed is **blank and flagged** — never estimated, and never inferred from a similar venue.
 
-Where the site performs arithmetic itself (a published adult price × 2, or a published tax rate
-added to a published pre-tax total), the formula is printed next to the result. A review video is
-labelled third-party; it is never presented as an official endorsement or used to establish a
-price or opening hour.
+Where the site does arithmetic (2 × a published per-person menu price, or a published pre-tax
+hotel total plus the stated 14.75% NYC occupancy/sales tax), the formula is printed next to the
+result. Review videos are labelled third-party; they are never presented as official.
 
-## What is here
+Each row also carries a verification badge:
+
+| Badge | Meaning |
+|---|---|
+| **checked today** | the official page was re-read on 2026-11-26 |
+| **carried capture** | the value comes from the 2026-11-25 capture; the source link is on the row |
+
+## Pages
+
+| Page | What it answers |
+|---|---|
+| `index.html` | Overview, headline numbers, how to read a row |
+| `pages/executive-summary.html` | Bottom line, findings, decision order, illustrative weekly budget |
+| `pages/michelin-restaurants.html` | All 72 rows (69 starred + 3 guide-listed), verified couple prices, the five cluster anchors |
+| `pages/hotels.html` | 16 candidates, ranking rule, dated 7-night totals, five booking windows, when to book |
+| `pages/activities.html` | 18 activities with official hours, closures and couple costs |
+| `pages/itinerary.html` | 7-night skeleton from verified opening days, plus the 3-night variant |
+| `pages/questions.html` | 13 questions: known / missing / provisional answer / how to close |
+| `pages/suggestions.html` | 17 improvement options with status and effort |
+| `pages/flagged.html` | 28 flags: unverified values, conflicts, irregularities |
+| `pages/verification.html` | Dated log of the 16 checks re-run on 2026-11-26 and what could not be re-read |
+| `pages/sources.html` | Rules, primary-source register, reproduce steps |
+| `pages/repo-audit.html` | What each session contributed, what this integration changed |
+| `pages/compare.html` | The five parallel session kits and their disagreements |
+
+## Findings and limits
+
+- **MICHELIN census (re-checked 2026-11-26):** 5 three-star, 14 two-star, 50 one-star (69 starred),
+  76 Bib Gourmand, 224 Selected.
+- **Dining money:** 24 restaurants have a couple total built from an official menu/FAQ/booking
+  page — from **$156** (Gramercy Tavern tavern three-course) and **$168** (Cote Butcher's Feast)
+  to **$1,900** (Masa hinoki counter). Atomix, Atera and Per Se stay blank because captures
+  disagree or the page only shows a deposit (flag F24).
+- **Hotels:** 16 candidates; 8 carry a dated 7-night total for two adults for 15–22 Feb 2027 —
+  from **$998 all-in** (Eurostars Wall Street, non-refundable) to **$5,220** (The Beekman).
+  Best value with free cancellation: **DoubleTree Chelsea, $1,110 all-in**.
+- **The one-hour rule:** 25 measured hotel→MICHELIN-cluster legs were all **3–37 minutes**, so
+  the rule does not separate central Manhattan hotels. It is used as a pass/fail gate; the ranking
+  falls through to verified price, then average transit.
+- **Cheapest week:** 15–22 Feb 2027 is the cheapest of the five weeks tested ($848 pre-tax floor)
+  versus $1,087–$1,260 for the March windows. The $836 figure for 22 Feb–1 Mar is a **twin room**
+  and fails the queen-bed rule.
+- **Dates that matter:** Presidents' Day Mon 15 Feb; **Chinatown Lunar New Year parade Sun 21 Feb
+  2027, 13:00** (catchable only on the 7-night window); Bryant Park rink to 28 Feb; Wollman Rink to
+  16 Mar (16–21 Feb peak, 22 Feb–13 Mar off-peak); the Met closes Wednesdays.
+- **Michelin ceremony:** 14 Dec 2026 — after this research, before the trip (flag F1).
+
+## Data and build
 
 | Path | Purpose |
 |---|---|
-| `index.html` | Dashboard / overview |
-| `pages/executive-summary.html` | Decision-ready summary |
-| `pages/michelin-restaurants.html` | 72 restaurant rows — star level, opening days, hours, couple prices, social links, sources |
-| `pages/hotels.html` | 16 hotel candidates, 8 with dated 7-night totals, 10 with verified room/bath facts |
-| `pages/activities.html` | 18 activities and date-specific events with opening days, hours, exceptions and social links |
-| `pages/itinerary.html` | How the ≤1-hour travel goal is handled |
-| `pages/research.html` | 25 measured transit legs, 5 price windows, hotel ranking and cross-session findings |
-| `pages/questions.html` | 13 questions: known / missing / how to discover |
-| `pages/suggestions.html` | 14 improvement options, each awaiting review |
-| `pages/flagged.html` | 23 flags: every unverified value, conflict and irregularity |
-| `pages/sources.html` | Primary-source register and verification rules |
-| `pages/repo-audit.html` | Repository audit and the session integration log |
-| `data/*.json` | Restaurants, hotels, activities, decisions and cross-session evidence |
+| `data/restaurants.json` | 72 rows, per-field `provenance`, verification badge |
+| `data/hotels.json` | 16 rows + 5 booking windows + transit objects + ranking |
+| `data/activities.json` | 18 rows with hours, exceptions, costs, socials |
+| `data/decisions.json` | 13 questions, 17 suggestions, 28 flags |
+| `data/verification.json` | Dated verification log and coverage counters |
+| `data/conflicts.json` | Every kit disagreement and out-of-census venue name |
+| `research/canonical/` | Pristine pre-merge datasets (the merge input) |
+| `scripts/build_data.py` | Idempotent merge of the kits into `data/*.json` |
+| `scripts/build_site.py` | Renders `index.html` and `pages/*.html` |
+| `scripts/verify.py` | Links, sources, duplicates, blank-implies-flag, hotel arithmetic |
 | `assets/styles.css` · `assets/app.js` | Styling and table rendering (no dependencies) |
-| `scripts/integrate_final.py` | Reproducible final-integration merge from the read-only session kits |
-| `scripts/verify.py` | Pre-push verification |
-| `COORDINATION.md` | Shared task board and session log |
-| `alt/`, `sessions/**` | Independent parallel kits preserved verbatim for comparison |
-| `LICENSE` | MIT for code, CC BY 4.0 for data and prose |
-
-## Headline findings
-
-- **MICHELIN counts (official filter panel, 25 Nov 2026):** 5 three-star, 14 two-star, 50 one-star,
-  76 Bib Gourmand, 224 guide-listed with no star. The canonical roster has all 69 starred rows
-  plus 3 Guide-listed additions. **19 couple food totals** were verified from official menus,
-  FAQs and booking pages; Per Se remains blank because its Tock page shows deposits only.
-- **Hotels:** 16 candidates; 10 have an official queen/king + private-bath specification and 8
-  have a dated 7-night total for 15–22 Feb 2027. Four totals were captured independently by two
-  sessions and agree: Hyatt Place Chelsea $1,305 · Arlo NoMad $1,428 · 11 Howard $1,774 ·
-  Beekman $5,220 (all-in, aggregator snapshots).
-- **Cheapest qualifying week:** 15–22 Feb 2027, $848 pre-tax / ~$998 all-in at Eurostars Wall
-  Street. The $836 22 Feb–1 Mar result is a twin room and is disqualified. No source forecasts a
-  future date when rates will be lowest, so the site does not assert one (flag F23).
-- **Transit:** 25 measured door-to-door legs (Google Maps transit, 25 Nov 2026, 17:14–17:31 ET)
-  are all ≤37 minutes; the one-hour rule does not separate the tested Manhattan hotels.
-- **Date-critical activities:** Chinatown Lunar New Year parade on Sun 21 Feb 2027 at 13:00;
-  Bryant Park Winter Village closes 28 Feb 2027; Wollman Rink runs to 16 Mar 2027.
-- **Risk:** the MICHELIN Northeast Cities ceremony is on 14 Dec 2026, between research and travel;
-  star levels may change (F1). All Nov-2026 prices need re-confirmation before booking.
-
-## Verify locally
 
 ```bash
-python3 scripts/verify.py     # local links, JSON validity, source-per-row, blank-implies-flag
-node --check assets/app.js    # JS syntax
-python3 -m http.server 8000   # then open http://localhost:8000/
+python3 scripts/build_data.py     # merge kits -> data/*.json
+python3 scripts/build_site.py     # data/*.json -> html
+python3 scripts/verify.py         # 0 errors / 0 warnings required
+node --check assets/app.js
+python3 -m http.server 8000       # then open http://localhost:8000/
 ```
 
-No build step and no third-party dependencies at runtime: the site is HTML, one stylesheet, one
-script and JSON. `.github/workflows/verify.yml` runs the same checks on pushes and pull requests.
+`.github/workflows/verify.yml` repeats the JSON/link/source and JavaScript-syntax checks on every
+push and pull request, so a broken site cannot merge silently.
 
-## Publishing
+There is no build step on the host: GitHub Pages serves the repository root from `main`, and
+`.nojekyll` stops Jekyll processing.
 
-GitHub Pages serves `main` at the repository root; `.nojekyll` is present so Jekyll does not
-process the folder. Merging a verified pull request to `main` deploys the site.
+## What is deliberately blank
 
-## Coordination
+Airfare; theatre tickets; the 3-night hotel total; per-dish à-la-carte totals; six hotels without a
+published bed-and-bathroom line; 45 of 72 restaurant social links that could not be confirmed; every
+transit pair that was never routed. Each gap is on `pages/flagged.html` with its cause and the
+step that would close it.
 
-Many agent sessions worked this repository on separate branches. Their work was merged, not
-overwritten: the canonical tables are the shared output, and `alt/` plus `sessions/**` preserve
-the independent kits as evidence. See `COORDINATION.md` for the task board, source log and
-flagged irregularities, and `pages/repo-audit.html` for the integration history.
+## Sessions and coordination
+
+Several agent sessions worked this repository in parallel. Their kits are preserved verbatim under
+`sessions/` and `alt/`, and the comparison is on `pages/compare.html`. The shared task board
+`COORDINATION.md` records ownership, sources and irregularities.
+
+This build ran as task **T24** on branch `arena/9bc6abed-nyfun2`, after sessions
+`arena/547ee3a3-nyfun2` (T18) and `arena/45972379-nyfun2` (T21–T23) merged PRs #18–#22 to `main`
+mid-task. Rather than overwrite them, the branch merged `main` and adopted **main's datasets as the
+new canonical base**, so their verified findings (Sushi Sho's Tock price, Per Se's deposit-only
+pages, the Wollman/Bryant Park/Lunar New Year rows, the official activity socials, flags F18–F20)
+are all in this build. The merge is recorded on `pages/repo-audit.html` and in `COORDINATION.md`.
 
 ## Licence
 
-Code: MIT. Data and prose: CC BY 4.0. Third-party marks, quotations and source pages remain the
-property of their owners. See `LICENSE`.
+MIT for code; CC BY 4.0 for data and prose. Restaurant and hotel facts belong to their sources.

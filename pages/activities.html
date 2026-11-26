@@ -4,43 +4,48 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Activities — NYC 2027</title>
-<meta name="description" content="Activities: source-checked NYC trip planning for February 2027.">
+<meta name="description" content="Museums, landmarks, parks and two date-critical winter events — each with the operator&#x27;s hours, closures, cost for two and a social/video link.">
+<meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="layout">
-<aside class="sidebar">
-  <a class="brand" href="../index.html"><span class="mark">NY</span><span>NYC 2027<small>Trip dashboard</small></span></a>
-  <nav class="nav" aria-label="Main navigation">
-    <a href="../index.html">Overview</a>
-    <a href="executive-summary.html">Summary</a>
-    <a href="michelin-restaurants.html">Michelin</a>
-    <a href="hotels.html">Hotels</a>
-    <a class="active" href="activities.html">Activities</a>
-    <a href="itinerary.html">Itinerary</a>
-    <a href="questions.html">Questions</a>
-    <a href="suggestions.html">Suggestions</a>
-    <a href="flagged.html">Flagged</a>
-    <a href="sources.html">Sources</a>
-    <a href="research.html">Research</a>
-    <a href="repo-audit.html">Repo audit</a>
-  </nav>
-  <div class="side-note">Verified against official sources · checked <span data-checked>—</span></div>
-</aside>
-<main class="content" id="main">
-  <p class="eyebrow">Things to do · source-checked</p>
-  <h1>Activities & attractions</h1>
-  <p class="lede">Hours, closures and published admission figures come from the venue's own page or an official government page. Couple totals are simple arithmetic on a published adult price; everything else is blank.</p>
-  <section>
-    <div class="toolbar"><input type="search" aria-label="Search activities" placeholder="Search activities…"><span class="count"></span></div>
-    <div data-table="activities"></div>
-  </section>
-  <div class="notice info">Opening hours were checked on 25 Nov 2026 for a February 2027 trip. Seasonal and holiday exceptions are shown where published. Recheck within a week of travel.</div>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="../index.html"><span class="mark">NY</span><span><b>NYC 2027</b><small>2 adults · Feb 2027</small></span></a>
+  <nav class="nav" aria-label="Main navigation"><a href="../index.html">Overview</a><a href="executive-summary.html">Summary</a><a href="michelin-restaurants.html">Michelin</a><a href="hotels.html">Hotels</a><a class="active" href="activities.html">Activities</a><a href="itinerary.html">Itinerary</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged</a><a href="verification.html">Verification</a><a href="sources.html">Sources</a><a href="repo-audit.html">Repo audit</a></nav>
+</div></header>
+<main class="wrap" id="main">
+  <p class="eyebrow">Things to do · official hours</p>
+  <h1>Activities, hours and the February 2027 calendar</h1>
+  <p class="lede">Museums, landmarks, parks and two date-critical winter events — each with the operator's hours, closures, cost for two and a social/video link.</p>
 
-  <p class="footer-note">Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">NYFun2 ↗</a> · <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">Coordination board ↗</a> · Research date <span data-checked>—</span>.</p>
+  <div class="notice warn"><strong>February 2027 dates that change the plan.</strong>
+  Presidents' Day is <strong>Monday 15 Feb</strong> · the 29th Chinatown Lunar New Year Parade is <strong>Sunday 21 Feb at 13:00</strong> ·
+  Bryant Park's rink closes <strong>28 Feb 2027</strong> · Wollman Rink runs to <strong>16 Mar 2027</strong> ·
+  the Met is <strong>closed on Wednesdays</strong> · MoMA stays open until 20:30 on Fridays.</div>
+
+  <div class="card">
+    <p><strong>18 activities</strong> with a source per row. Opening hours and closures are transcribed from each venue's own page; the couple cost is only shown where an official adult price exists (for example $30 × 2 = $60 at the Met and MoMA). Free sites show $0 because the operator publishes free entry.</p>
+    <p>Travel notes appear only where a door-to-door result was captured (10 legs from Eurostars Wall Street on 2026-11-25). Every other row links a live transit route from the hotel you choose.</p>
+  </div>
+
+  <div class="toolbar"><input type="search" aria-label="Search table" placeholder="Search activities by name, type, hours or cost…"><select data-filter="verify" aria-label="Filter by verification status"><option value="">All rows</option><option value="today">Checked today (2026-11-26)</option><option value="carried">Carried capture (2026-11-25)</option></select><span class="count"></span></div>
+  <div data-table="activities"></div>
+
+  <div class="notice info"><strong>Weather and seasonality.</strong> Outdoor items (Statue of Liberty ferry, High Line, Brooklyn Bridge, Central Park, the parade) are February-dependent and have no price risk but real comfort risk. The two rinks close on 28 Feb and 16 Mar respectively, so both are available in the preferred window.</div>
+
+  <footer class="foot">
+    <p><strong>Data as captured:</strong> <span data-checked>2026-11-26</span> ·
+    <strong>Official-source verification:</strong> 2026-11-26 ·
+    <strong>Roster census:</strong> 2026-11-25</p>
+    <p>Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> ·
+    Coordination board: <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a> ·
+    <a href="../pages/flagged.html">Flagged for review</a> ·
+    <a href="../pages/verification.html">Verification log</a> ·
+    <a href="../pages/compare.html">Compare session kits</a></p>
+    <p class="small">Prices are what the linked official page said on the capture date. Nothing here is a booking, a quote, or financial advice. Blank means unverified — never estimated.</p>
+  </footer>
 </main>
-</div>
 <script src="../assets/app.js"></script>
 </body>
 </html>
