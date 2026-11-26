@@ -29,6 +29,21 @@ def add(lst, msg):
     lst.append(msg)
 
 
+# ------------------------------------------------------- unresolved merge markers
+# PR #24 reached main with literal conflict markers in 13 site files; the local
+# verifier did not catch it. Fail any future build that contains them.
+for path in sorted(ROOT.rglob("*")):
+    if not path.is_file() or ".git" in path.parts:
+        continue
+    if path.suffix.lower() not in {".html", ".css", ".js", ".json", ".md", ".yml", ".yaml"}:
+        continue
+    if path.name == "pr24-conflicted-variant.patch":
+        continue
+    text = path.read_text(encoding="utf-8", errors="ignore")
+    for n, line in enumerate(text.splitlines(), 1):
+        if line.startswith(("<<<<<<< ", ">>>>>>> ")) or line == "=======":
+            add(errors, f"{path.relative_to(ROOT)}:{n}: unresolved merge-conflict marker")
+
 # ---------------------------------------------------------------- local links
 for html in sorted(ROOT.glob("*.html")) + sorted((ROOT / "pages").glob("*.html")):
     text = html.read_text(encoding="utf-8")
