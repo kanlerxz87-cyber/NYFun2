@@ -670,7 +670,7 @@ V = [
      "https://www.cotekoreansteakhouse.com/nycdinnermenu", "Read from the official Flatiron dinner menu", "Verified"),
     ("Gramercy Tavern menu prices", "Dining Room Seasonal Menu $178/guest ($356); Tavern three-course $78 ($156)",
      "https://www.gramercytavern.com/dining-room-menu/", "Read from the official menu page", "Verified"),
-    ("The Met admission and hours", "Adults $30 ($60 for two); Sat-Mon/Tue/Thu 10-17, Fri-Sat 10-21, closed Wednesday",
+    ("The Met admission and hours", "Adults $30 ($60 for two); Sun/Mon/Tue/Thu 10-17, Fri-Sat 10-21, closed Wednesday",
      "https://www.metmuseum.org/plan-your-visit",
      "Admission table read on the official page today; the Wednesday closure corroborated by four independent guides because the hours block was not in the page section captured", "Verified (hours corroborated)"),
     ("MoMA admission and hours", "Adults $30 ($60 for two); daily 10:30-17:30, Friday to 20:30; closed Thanksgiving and 25 Dec",

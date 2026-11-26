@@ -88,3 +88,18 @@ python3 scripts/build_data.py   # merge (idempotent)
 python3 scripts/build_site.py   # render
 python3 scripts/verify.py       # 0 errors, 0 warnings
 ```
+
+## Render and deploy checks (2026-11-26, post-merge)
+
+- `python3 scripts/verify.py` → 0 errors, 0 warnings over 13 HTML pages and 150 data rows.
+- `node --check assets/app.js` → pass.
+- **jsdom render test** with `fetch` served from the local files: every page's tables populate from
+  JSON and no console errors are raised — Michelin 101 rows, hotels 21, activities 18, questions 13,
+  suggestions 17, flags 28, verification 16, compare 5, repo-audit 8, itinerary 5, sources 11;
+  landing counters render 72 / 24 / 16 / 8 / 18 / 28.
+- **Deploy:** PR #23 merged to `main` as `a78f15e`; GitHub Pages build for that commit reports
+  `built`, and the live `pages/verification.html` shows this log.
+
+Two wording defects caught in the live page and fixed in the follow-up commit: the Met hours cell
+read "Sat-Mon/Tue/Thu" (now "Sun/Mon/Tue/Thu") and the transit note said "35 stored transit minutes"
+(now "35 stored transit legs: 25 hotel→cluster, 10 hotel→activity").
