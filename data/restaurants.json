@@ -22,18 +22,42 @@
       "hours": "Tue–Sun 17:00–22:00; Monday closed",
       "exceptions": "None published on the Michelin page checked",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "priceNote": "",
-      "priceSourceUrl": "",
+      "priceTwoAdults": "$990 for two — Shorter Omakase, $495/person prepaid including admin fee",
+      "priceNote": "Official Tock experience page, fetched 26 Nov 2026: '$495 per person (including administrative fee)'. Tax, beverages and optional Okonomi extra. The earlier $450 base figure is not printed on the live page; bookings open 1 Dec 2026 at 11:00 ET and currently run through 28 Feb 2027.",
+      "priceSourceUrl": "https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-at-hinoki-counter",
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/sushi-sho-1213976",
-      "social": [],
+      "social": [
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@thesushilegend/video/7350031540425887019",
+          "note": "TikTok (@thesushilegend NYC opening review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@thesushilegend/video/7397525713336798494",
+          "note": "TikTok (@thesushilegend inside look NYC)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/sushishonyc/",
+          "note": "Instagram (@sushishonyc via official Tock)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "Official website not listed by Michelin (phone only)",
         "Couple price unverified: no official menu price published",
         "No verified NYC social/review link found; similar-name YouTube results refer to a different city",
-        "No official social account verified this session; see MICHELIN/official site"
-      ]
+        "No official social account verified this session; see MICHELIN/official site",
+        "Price re-verified by final integration on 26 Nov 2026 against the official page linked in priceSourceUrl."
+      ],
+      "daysOpen": "Tuesday – Sunday (Closed Monday)"
     },
     {
       "name": "Jungsik New York",
@@ -53,10 +77,40 @@
         {
           "platform": "YouTube (third-party review)",
           "url": "https://www.youtube.com/watch?v=-tvjMUPEXGk",
-          "note": "Review video; not an official restaurant post"
+          "note": "Review video; not an official restaurant post",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/place/Jungsik-22535796482554226",
+          "note": "TikTok (Jungsik NYC place hub & reviews)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/jungsik_nyc/",
+          "note": "Instagram (@jungsik_nyc via official Tock)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=_Q56V0ISF5o",
+          "note": "Korean Tasting Review",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/jungsik_inc/",
+          "note": "@jungsik_inc (Official Group / @jungsik_nyc)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
         }
       ],
-      "flags": []
+      "flags": [],
+      "daysOpen": "Tuesday – Sunday (Closed Monday)"
     },
     {
       "name": "Eleven Madison Park",
@@ -81,12 +135,49 @@
         {
           "platform": "YouTube (third-party review)",
           "url": "https://www.youtube.com/watch?v=UOP_zc6VguM",
-          "note": "CNN/Richard Quest tasting-menu segment; not an official restaurant post"
+          "note": "CNN/Richard Quest tasting-menu segment; not an official restaurant post",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@thecarboholic/video/7320274977599589675",
+          "note": "TikTok (@thecarboholic bar tasting)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@eat_figs_not_pigs/video/7425727380456541471",
+          "note": "TikTok (@eat_figs_not_pigs 3★ dining room)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/elevenmadisonpark/",
+          "note": "Instagram (@elevenmadisonpark official)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=aSE3P9REZVc",
+          "note": "3-Star Tasting Menu Review",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@veggiekins/video/7005768732962262278",
+          "note": "@veggiekins Tasting Review",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
         }
       ],
       "flags": [
         "Corrected 2026-11-25: canonical data listed facebook.com/jalexandersrestaurantscollection (a different restaurant group) as EMP's Facebook; removed as unverified. Official Instagram retained (handle printed on the Resy venue page MICHELIN links)."
-      ]
+      ],
+      "daysOpen": "Monday – Sunday (7 days)"
     },
     {
       "name": "Le Bernardin",
@@ -116,17 +207,55 @@
         {
           "platform": "YouTube (third-party review)",
           "url": "https://www.youtube.com/watch?v=rQgmx4GYjvc",
-          "note": "Review video; not an official restaurant post"
+          "note": "Review video; not an official restaurant post",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
         },
         {
           "platform": "YouTube (third-party review)",
           "url": "https://www.youtube.com/watch?v=m_1jgzwF1Jk",
-          "note": "Review video; not an official restaurant post"
+          "note": "Review video; not an official restaurant post",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@beli_eats/video/7207922985192164650",
+          "note": "TikTok (@beli_eats review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@eater/video/7208650857494138158",
+          "note": "TikTok (@eater pastry feature)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/lebernardinny/",
+          "note": "Instagram (@lebernardinny official)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=oFU8s8Nb6UY",
+          "note": "3-Star Seafood Review",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@eater/video/7356398018435861803",
+          "note": "@eater Eric Ripert Halibut Feature",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
         }
       ],
       "flags": [
         "Dress code and cancellation policy recorded from the Resy venue page"
-      ]
+      ],
+      "daysOpen": "Monday – Saturday (Closed Sunday)"
     },
     {
       "name": "Per Se",
@@ -146,12 +275,14 @@
         {
           "platform": "YouTube (third-party review)",
           "url": "https://www.youtube.com/watch?v=OmsC0Thm3Kg",
-          "note": "Dinner review video; not an official restaurant post"
+          "note": "Dinner review video; not an official restaurant post",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
         },
         {
           "platform": "Instagram (official)",
           "url": "https://www.instagram.com/perseny/",
-          "note": "Printed on the restaurant's official Tock booking page"
+          "note": "Printed on the restaurant's official Tock booking page",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
         },
         {
           "platform": "Facebook (official)",
@@ -162,11 +293,37 @@
           "platform": "X/Twitter (official)",
           "url": "https://www.twitter.com/PerSeNY",
           "note": "Printed on the restaurant's official Tock booking page"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@notsowhitepapi/video/7479110522030460206",
+          "note": "TikTok (@notsowhitepapi review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=YOaJo5a-MCw",
+          "note": "9-Course Tasting Review",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@avavescovi/video/7384864392833273118",
+          "note": "@avavescovi Per Se Dinner Review",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
         }
       ],
       "flags": [
-        "Couple price unverified: official pages show only the $200/person deposit, not the menu price; $425 search-snippet figure not used. Confirm by phone or at booking."
-      ]
+        "Couple price unverified: official pages show only the $200/person deposit, not the menu price; $425 search-snippet figure not used. Confirm by phone or at booking.",
+        "F18: final re-check of the live Tock page shows $150/person deposit for the four-course Salon and $200/person deposit for the Main Dining Room; an earlier session's $185/$590 Salon figures are not confirmed. No menu total is asserted.",
+        "F18: final re-check of the live Tock page shows $150/person deposit for the four-course Salon and $200/person deposit for the Main Dining Room; an earlier session's $185/$590 Salon figures are not confirmed. No menu total is asserted.",
+        "F18: final re-check of the live Tock page shows $150/person deposit for the four-course Salon and $200/person deposit for the Main Dining Room; an earlier session's $185/$590 Salon figures are not confirmed. No menu total is asserted.",
+        "F18: final re-check of the live Tock page shows $150/person deposit for the four-course Salon and $200/person deposit for the Main Dining Room; an earlier session's $185/$590 Salon figures are not confirmed. No menu total is asserted."
+      ],
+      "daysOpen": "Monday – Sunday (7 days)"
     },
     {
       "name": "Atera",
@@ -182,12 +339,56 @@
       "priceSourceUrl": "",
       "officialUrl": "https://ateranyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atera",
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=9c973aByL30",
+          "note": "YouTube (2★ lunch tasting review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@beli_eats/video/7227586132257852718",
+          "note": "TikTok (@beli_eats review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@theseandevine/video/7196341225279016234",
+          "note": "TikTok (@theseandevine tasting tour)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/ateranyc/",
+          "note": "Instagram (@ateranyc via official Tock)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/shorts/j_Uhj2yrS_Y",
+          "note": "Atera Tasting Shorts",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@highspeeddining/video/7009668123968179462",
+          "note": "@highspeeddining 15-Course Review",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "Saturday is the only afternoon service",
         "Couple price unverified: official site unreachable; third-party reports conflict ($195/$235/$298) - not used",
         "No official social account verified this session; see MICHELIN/official site"
-      ]
+      ],
+      "daysOpen": "Monday – Sunday (7 days)"
     },
     {
       "name": "Saga",
@@ -198,16 +399,40 @@
       "hours": "Daily 17:00-21:30",
       "exceptions": "",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "priceNote": "",
-      "priceSourceUrl": "",
+      "priceTwoAdults": "$430 (6-course, 2 × $215) · $630 (10-course, 2 × $315) · $730 (Kitchen Table, 2 × $365)",
+      "priceNote": "saga-nyc.com/menus, fetched 26 Nov 2026; food only, pre-tax/pre-tip/pre-beverage.",
+      "priceSourceUrl": "https://www.saga-nyc.com/menus",
       "officialUrl": "https://www.saga-nyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/saga",
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=H4EFAReKGwE",
+          "note": "YouTube (2★ 63rd-floor tasting review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@samusamuu/video/7173705649321299243",
+          "note": "TikTok (@samusamuu 63rd floor review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=xikm34l8lVk",
+          "note": "GQ 63rd Floor Tasting Video",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "Couple price unverified",
-        "No official social account verified this session; see MICHELIN/official site"
-      ]
+        "No official social account verified this session; see MICHELIN/official site",
+        "Price re-verified by final integration on 26 Nov 2026 against the official page linked in priceSourceUrl."
+      ],
+      "daysOpen": "Wednesday – Sunday per saga-nyc.com (MICHELIN lists daily — see exception)"
     },
     {
       "name": "Joo Ok",
@@ -243,7 +468,15 @@
       "priceSourceUrl": "",
       "officialUrl": "https://www.cesar.restaurant/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/cesar",
-      "social": [],
+      "social": [
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/cesar.newyork/",
+          "note": "Instagram (@cesar.newyork via official Tock)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "Couple price unverified: Chef's Tasting offered but no price printed on reachable official page",
         "No official social account verified this session; see MICHELIN/official site"
@@ -263,11 +496,27 @@
       "priceSourceUrl": "https://www.odo.nyc/menu",
       "officialUrl": "https://www.odo.nyc/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/odo",
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=OoEDnvOc9-A",
+          "note": "YouTube (Chef's Counter Kaiseki lunch)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/discover/odo-nyc",
+          "note": "TikTok (Odo NYC 2★ Kaiseki reviews)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "Distinct from 'Odo East Village' below",
         "No official social account verified this session; see MICHELIN/official site"
-      ]
+      ],
+      "daysOpen": "Tuesday – Sunday (Closed Monday)"
     },
     {
       "name": "Chef's Table at Brooklyn Fare",
@@ -302,11 +551,55 @@
       "priceSourceUrl": "",
       "officialUrl": "https://www.atomixnyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/atomix",
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=U74pYh26tH8",
+          "note": "YouTube (Atomix #1 North America review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=ENBmmjRwaWY",
+          "note": "YouTube (couple dinner discussion)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/tag/atomixnyc",
+          "note": "TikTok (#atomixnyc review tag hub)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/atomixnyc/",
+          "note": "Instagram (@atomixnyc via official Tock)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@luiscarloszara/video/7330765189161274670",
+          "note": "@luiscarloszara Atomix 2-Star Review",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@jehrinman/video/7289801502083042606",
+          "note": "@jehrinman Bar Tasting Review",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "Couple price unverified: third-party reports conflict ($295/$375) - not used; official menu page client-rendered",
         "No official social account verified this session; see MICHELIN/official site"
-      ]
+      ],
+      "daysOpen": "Tuesday – Saturday (Closed Sunday & Monday)"
     },
     {
       "name": "Aska",
@@ -317,9 +610,9 @@
       "hours": "Mon closed; Tue-Sun 17:00-23:00",
       "exceptions": "This establishment manages its own bookings; contact the restaurant directly (MICHELIN).",
       "guidePriceBand": "$$$$",
-      "priceTwoAdults": "",
-      "priceNote": "",
-      "priceSourceUrl": "",
+      "priceTwoAdults": "$750 (12–14 course tasting, 2 × $375)",
+      "priceNote": "askanyc.com/dining, fetched 26 Nov 2026; optional wine pairing from $250/person extra.",
+      "priceSourceUrl": "https://www.askanyc.com/dining",
       "officialUrl": "https://askanyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/brooklyn/restaurant/aska",
       "social": [
@@ -337,11 +630,34 @@
           "platform": "X/Twitter (official)",
           "url": "https://twitter.com/askanyc",
           "note": "Printed in the footer of askanyc.com"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=tkWrc5YBf0I",
+          "note": "YouTube (Brooklyn's Only 2★ Restaurant)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=ezmH-Ya_N4s",
+          "note": "YouTube (New Nordic in NY feature)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=TesphyvpSyU",
+          "note": "Aska 2-Star Brooklyn Tasting Review",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
         }
       ],
       "flags": [
-        "Couple price unverified: official menu price not published on reachable page"
-      ]
+        "Couple price unverified: official menu price not published on reachable page",
+        "Price re-verified by final integration on 26 Nov 2026 against the official page linked in priceSourceUrl."
+      ],
+      "daysOpen": "Wednesday – Sunday (Closed Monday & Tuesday)"
     },
     {
       "name": "Aquavit",
@@ -361,10 +677,26 @@
         {
           "platform": "YouTube (third-party review)",
           "url": "https://www.youtube.com/watch?v=hVvV2QTmK_0",
-          "note": "Review video; not an official restaurant post"
+          "note": "Review video; not an official restaurant post",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@highspeeddining/video/7362381305851530542",
+          "note": "TikTok (@highspeeddining review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/aquavitnyc/",
+          "note": "Instagram (@aquavitnyc via official Tock)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
         }
       ],
-      "flags": []
+      "flags": [],
+      "daysOpen": "Monday – Saturday (Closed Sunday)"
     },
     {
       "name": "Jean-Georges",
@@ -380,12 +712,28 @@
       "priceSourceUrl": "",
       "officialUrl": "https://www.jean-georgesrestaurant.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/jean-georges",
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=1sNffK0Z_oU",
+          "note": "YouTube (tasting menu review 1)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=hoVKpFb03Is",
+          "note": "YouTube (flagship dinner review 2)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "Couple price unverified: official menu price not captured",
         "Hours not transcribed this session - open the linked MICHELIN page for the live schedule",
         "No official social account verified this session; see MICHELIN/official site"
-      ]
+      ],
+      "daysOpen": "Tuesday – Saturday (Closed Sunday & Monday)"
     },
     {
       "name": "Gabriel Kreuther",
@@ -401,10 +749,47 @@
       "priceSourceUrl": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf",
       "officialUrl": "https://www.gknyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/gabriel-kreuther",
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=TO4wvlub7ng",
+          "note": "YouTube (2★ kitchen & dish feature)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=FsB2JHuFQag",
+          "note": "YouTube (dining room review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@jacksdiningroom/video/7262835421242035499",
+          "note": "TikTok (@jacksdiningroom 2★ review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/gabrielkreuther/",
+          "note": "Instagram (@gabrielkreuther official)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=LiXa4ujzU8g",
+          "note": "Gabriel Kreuther Kitchen & Dish Short",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "No official social account verified this session; see MICHELIN/official site"
-      ]
+      ],
+      "daysOpen": "Monday – Saturday (Closed Sunday)"
     },
     {
       "name": "Masa",
@@ -420,10 +805,33 @@
       "priceSourceUrl": "https://www.masanyc.com/menus",
       "officialUrl": "https://www.masanyc.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/masa",
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=fnYmB-4xEzk",
+          "note": "YouTube (Masa NYC review 1)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=pIfe-K8TPqE",
+          "note": "YouTube (Masa sushi review 2)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/chefmasanyc/",
+          "note": "Instagram (@chefmasanyc via official Tock)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "No official social account verified this session; see MICHELIN/official site"
-      ]
+      ],
+      "daysOpen": "Tuesday – Saturday (Closed Sunday & Monday)"
     },
     {
       "name": "Sushi Noz",
@@ -439,11 +847,34 @@
       "priceSourceUrl": "",
       "officialUrl": "https://www.sushinoz.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/sushi-noz",
-      "social": [],
+      "social": [
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@highspeeddining/video/7510203950411582766",
+          "note": "TikTok (@highspeeddining 2★ omakase)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@beli_eats/video/7226462456132996394",
+          "note": "TikTok (@beli_eats Beli #8 NYC review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@luiscarloszara/video/7337811491497741610",
+          "note": "TikTok (@luiscarloszara critical review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "Couple price unverified",
         "No official social account verified this session; see MICHELIN/official site"
-      ]
+      ],
+      "daysOpen": "Monday – Saturday (Closed Sunday)"
     },
     {
       "name": "The Modern",
@@ -459,10 +890,54 @@
       "priceSourceUrl": "https://www.themodernnyc.com/the-modern/",
       "officialUrl": "https://www.themodernnyc.com/the-modern/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/the-modern",
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=RTkrEpQ0iqA",
+          "note": "YouTube (2★ lunch & Bar Room review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=IdIIURNscCM",
+          "note": "YouTube (Bar Room signature dishes)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/discover/nyc-michelin-star-worth-it",
+          "note": "TikTok (NYC Michelin Star Worth It — The Modern)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=wM6sGPN4R0g",
+          "note": "Tasting Menu Review at The Modern",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=lq8mihouGlM",
+          "note": "Couple Dinner Review",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/themodernnyc/",
+          "note": "@themodernnyc (Official)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "No official social account verified this session; see MICHELIN/official site"
-      ]
+      ],
+      "daysOpen": "Monday – Sunday (7 days)"
     },
     {
       "name": "Le Coucou",
@@ -482,12 +957,21 @@
         {
           "platform": "YouTube (third-party review)",
           "url": "https://www.youtube.com/watch?v=C_8S5mCOAIk",
-          "note": "Review video; not an official restaurant post"
+          "note": "Review video; not an official restaurant post",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/lecoucou_nyc/",
+          "note": "Instagram (@lecoucou_nyc official)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
         }
       ],
       "flags": [
         "Located inside 11 Howard hotel"
-      ]
+      ],
+      "daysOpen": "Monday – Sunday (7 days)"
     },
     {
       "name": "Muku",
@@ -698,13 +1182,29 @@
       "priceSourceUrl": "",
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/estela",
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=F1h708xLS8o",
+          "note": "YouTube (World's 50 Best / Estela review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=ooJeQOYmkMg",
+          "note": "YouTube (2025 1★ honest review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "Hours not transcribed this session - open the linked MICHELIN page for the live schedule",
         "Address not transcribed this session - see MICHELIN page",
         "Couple price unverified: no official menu price captured this session (a la carte or menu not reachable)",
         "No official social account verified this session; see MICHELIN/official site"
-      ]
+      ],
+      "daysOpen": "Monday – Sunday (7 days)"
     },
     {
       "name": "Sushi Nakazawa New York",
@@ -787,12 +1287,28 @@
         {
           "platform": "YouTube (third-party review)",
           "url": "https://www.youtube.com/watch?v=TDf5NQ6s1DI",
-          "note": "Review video; not an official restaurant post"
+          "note": "Review video; not an official restaurant post",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/discover/semma-review-two-girls-viral",
+          "note": "TikTok Semma NYC Reviews",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/semmanyc/",
+          "note": "@semmanyc (Official)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
         }
       ],
       "flags": [
         "Exact couple price unverified (a la carte); MICHELIN estimates ~$75/person in its least-expensive starred list"
-      ]
+      ],
+      "daysOpen": "Monday – Saturday (Closed Sunday)"
     },
     {
       "name": "Yoshino",
@@ -830,10 +1346,26 @@
       "priceSourceUrl": "https://www.cotekoreansteakhouse.com/nycdinnermenu",
       "officialUrl": "https://www.cotekoreansteakhouse.com/",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/cote",
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=nKCDLN01UOg",
+          "note": "YouTube (Best Steakhouse in NYC? Cote Review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=XzQHA5988Dc",
+          "note": "YouTube (Couple vlog at COTE)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "No official social account verified this session; see MICHELIN/official site"
-      ]
+      ],
+      "daysOpen": "Monday – Sunday (7 days)"
     },
     {
       "name": "Crown Shy",
@@ -849,12 +1381,49 @@
       "priceSourceUrl": "https://guide.michelin.com/en/best-of/least-expensive-one-michelin-star-restaurants-in-new-york",
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/crown-shy",
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=8SHBdN1eyfE",
+          "note": "YouTube (Approachable 1★ review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=jdRpx9jelc4",
+          "note": "YouTube (2026 value review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/crownshynyc/",
+          "note": "Instagram (@crownshynyc official)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@sallyjadelyn/video/7529917778183113997",
+          "note": "@sallyjadelyn Crown Shy Review",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/kenthospitalitygroup/",
+          "note": "@kenthospitalitygroup (@crownshynyc)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "Exact couple price unverified (a la carte); MICHELIN estimates ~$75/person in its least-expensive starred list",
         "Hours not transcribed this session - open the linked MICHELIN page for the live schedule",
         "No official social account verified this session; see MICHELIN/official site"
-      ]
+      ],
+      "daysOpen": "Monday – Sunday (7 days)"
     },
     {
       "name": "Shmoné",
@@ -896,10 +1465,33 @@
         {
           "platform": "YouTube (third-party review)",
           "url": "https://www.youtube.com/watch?v=gLunwbHmtTw",
-          "note": "Review video; not an official restaurant post"
+          "note": "Review video; not an official restaurant post",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@eats.bysid/video/7505420187475266846",
+          "note": "TikTok (@eats.bysid 1★ seasonal menu review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@thecarboholic/video/7445692800466816286",
+          "note": "TikTok (@thecarboholic Tavern dessert/cocoa)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/gramercytavern/",
+          "note": "Instagram (@gramercytavern official)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
         }
       ],
-      "flags": []
+      "flags": [],
+      "daysOpen": "Monday – Sunday (7 days)"
     },
     {
       "name": "Oiji Mi",
@@ -1092,12 +1684,14 @@
         {
           "platform": "YouTube (third-party review)",
           "url": "https://www.youtube.com/watch?v=aEandBHkwt8",
-          "note": "Review video; not an official restaurant post"
+          "note": "Review video; not an official restaurant post",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
         }
       ],
       "flags": [
         "Exact couple price unverified (a la carte); MICHELIN estimates ~$75/person in its least-expensive starred list"
-      ]
+      ],
+      "daysOpen": "Monday – Sunday (7 days)"
     },
     {
       "name": "Kosaka",
@@ -1243,13 +1837,43 @@
       "priceSourceUrl": "",
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/rezdora-osteria-emiliana",
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=U4ObSd44hpQ",
+          "note": "YouTube (Pasta Tasting Menu review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=Jqj1WjLaImM",
+          "note": "YouTube (Rezdôra NYC review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/rezdoranyc/",
+          "note": "Instagram (@rezdoranyc official)",
+          "type": "official",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@newyorkturk/video/7551476000769461535",
+          "note": "@newyorkturk Lunch at Rezdôra",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "Hours not transcribed this session - open the linked MICHELIN page for the live schedule",
         "Address not transcribed this session - see MICHELIN page",
         "Couple price unverified: no official menu price captured this session (a la carte or menu not reachable)",
         "No official social account verified this session; see MICHELIN/official site"
-      ]
+      ],
+      "daysOpen": "Monday – Sunday (7 days)"
     },
     {
       "name": "Francie",
@@ -1477,18 +2101,28 @@
       "hours": "",
       "exceptions": "",
       "guidePriceBand": "",
-      "priceTwoAdults": "",
-      "priceNote": "",
-      "priceSourceUrl": "",
+      "priceTwoAdults": "$390 (3-course, 2 × $195) · $510 (5-course, 2 × $255)",
+      "priceNote": "danielnyc.com/cuisine/prix-fixe, fetched 26 Nov 2026; supplements and wine extra.",
+      "priceSourceUrl": "https://www.danielnyc.com/cuisine/prix-fixe",
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/daniel",
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=thLoDbneJ4E",
+          "note": "Restaurant Daniel Review",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "Hours not transcribed this session - open the linked MICHELIN page for the live schedule",
         "Address not transcribed this session - see MICHELIN page",
         "Couple price unverified: no official menu price captured this session (a la carte or menu not reachable)",
-        "No official social account verified this session; see MICHELIN/official site"
-      ]
+        "No official social account verified this session; see MICHELIN/official site",
+        "Price re-verified by final integration on 26 Nov 2026 against the official page linked in priceSourceUrl."
+      ],
+      "daysOpen": "Tue–Sun (Closed Mon)"
     },
     {
       "name": "Essential by Christophe",
@@ -1565,11 +2199,27 @@
       "priceTwoAdults": "",
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/article/travel/new-restaurants-new-york",
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=OoEDnvOc9-A",
+          "note": "YouTube (Chef's Counter Kaiseki lunch)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/discover/odo-nyc",
+          "note": "TikTok (Odo NYC 2★ Kaiseki reviews)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "Added to Guide July 2026; no star as of 2026-11-25 check",
         "Address/hours/price/social not verified"
-      ]
+      ],
+      "daysOpen": "Tuesday – Sunday (Closed Monday)"
     },
     {
       "name": "Cynthia",
@@ -1587,7 +2237,8 @@
       "flags": [
         "Added to Guide July 2026; no star as of 2026-11-25 check",
         "Address/hours/price/social not verified"
-      ]
+      ],
+      "daysOpen": "Tue–Sat (Closed Sun–Mon)"
     },
     {
       "name": "Len Len",
@@ -1601,7 +2252,15 @@
       "priceTwoAdults": "",
       "officialUrl": "",
       "sourceUrl": "https://guide.michelin.com/en/article/travel/new-restaurants-new-york",
-      "social": [],
+      "social": [
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@imma_eat_this/video/7221307181885312302",
+          "note": "TikTok (@imma_eat_this Len Len NYC review)",
+          "type": "review",
+          "provenance": "cross-confirmed by sessions c1cf7b23 + 657520df"
+        }
+      ],
       "flags": [
         "Added to Guide July 2026; no star as of 2026-11-25 check",
         "Address/hours/price/social not verified"

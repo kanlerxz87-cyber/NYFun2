@@ -1,0 +1,533 @@
+{
+  "meta": {
+    "checkedOn": "2026-11-26 (final integration re-read of the official pages listed in the flags)",
+    "provenance": "Merged read-only from sessions/33cfdba4 (transit + weekly prices) and sessions/c1cf7b23 + sessions/657520df (hotel ranks, room facts, social links). No file inside sessions/ was edited.",
+    "transitMethod": "Google Maps Directions, travelmode=transit, 'Leave now', captured 2026-11-25 between 17:14 and 17:31 America/New_York, origin = hotel name exactly as on Booking.com, destination = representative restaurant/venue name. Each row records the FASTEST itinerary Google returned at capture (not the pre-selected default, which is sometimes slower). Times are door-to-door incl. walking. Live service estimates, not timetables; re-run the linked URL before committing to a reservation.",
+    "fareNote": "Every subway/bus itinerary showed $3.00 (OMNY/MetroCard single ride). NYC Ferry legs showed $4.50. Fares verified only as displayed in the directions panel.",
+    "priceMethod": "Booking.com public search, Manhattan, 2 adults, 1 room, USD, 4–5 star filter, sorted price (lowest first). Each figure is the cheapest qualifying room's displayed stay total for that exact date window, captured on 2026-11-25. Displayed totals exclude taxes/fees unless the line says 'before taxes'. Re-verify before booking.",
+    "bookingCaution": {
+      "status": "unverified",
+      "finding": "Booking.com currently applies a property-declared 'Black Friday Deal' (valid on select stays 2026-11-19 → 2027-12-31) at several hotels. That is a dated promotional discount, not a forecast. No official source states the cheapest future booking date for these specific hotels; therefore no 'best time to book' date is asserted.",
+      "what_we_can_say": "For the preferred window, today's displayed 7-night total (e.g., $943 pre-tax king room at DoubleTree Chelsea) reflects a live 30% promotion. Booking.com's own price-comparison/free-cancellation terms allow holding a cancellable rate now and re-checking later.",
+      "how_to_verify": "Re-run the same saved Booking.com search weekly and log the total; the site's Booking Strategy page lists the exact saved URLs."
+    },
+    "activityTransitCaveat": "Only 4 of the 10 activity legs in the source session carried both minutes and a routing URL. The other 6 were notes without a captured route and are not presented as measured values."
+  },
+  "bookingWindows": [
+    {
+      "id": "W1",
+      "dates": "2027-02-15 → 2027-02-22",
+      "nights": 7,
+      "hotel": "Eurostars Wall Street",
+      "room": "Queen Room",
+      "preTax": "$848",
+      "allIn": "$998",
+      "qualifies": "Yes — queen/king room",
+      "captured": "2026-11-25",
+      "note": "Cheapest qualifying room in that snapshot; aggregator total, pre-tax.",
+      "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
+    },
+    {
+      "id": "W2",
+      "dates": "2027-02-22 → 2027-03-01",
+      "nights": 7,
+      "hotel": "Eurostars Wall Street",
+      "room": "Double Room (twin)",
+      "preTax": "$836",
+      "allIn": "Queen tier unverified for W2",
+      "qualifies": "No — twin beds",
+      "captured": "2026-11-25",
+      "note": "Cheapest room is a twin — fails the queen-bed requirement; next queen room must be re-checked.",
+      "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-22&checkout=2027-03-01&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
+    },
+    {
+      "id": "W3",
+      "dates": "2027-03-01 → 2027-03-08",
+      "nights": 7,
+      "hotel": "DoubleTree by Hilton New York Downtown",
+      "room": "King Room",
+      "preTax": "$1,087",
+      "allIn": "$1,275",
+      "qualifies": "Yes — queen/king room",
+      "captured": "2026-11-25",
+      "note": "Cheapest qualifying room in that snapshot; aggregator total, pre-tax.",
+      "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
+    },
+    {
+      "id": "W4",
+      "dates": "2027-03-08 → 2027-03-15",
+      "nights": 7,
+      "hotel": "Eurostars Wall Street",
+      "room": "Queen Room",
+      "preTax": "$1,106",
+      "allIn": "$1,297",
+      "qualifies": "Yes — queen/king room",
+      "captured": "2026-11-25",
+      "note": "Cheapest qualifying room in that snapshot; aggregator total, pre-tax.",
+      "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-03-08&checkout=2027-03-15&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
+    },
+    {
+      "id": "W5",
+      "dates": "2027-03-15 → 2027-03-22",
+      "nights": 7,
+      "hotel": "Eurostars Wall Street",
+      "room": "Queen Room",
+      "preTax": "$1,260",
+      "allIn": "$1,474",
+      "qualifies": "Yes — queen/king room",
+      "captured": "2026-11-25",
+      "note": "Cheapest qualifying room in that snapshot; aggregator total, pre-tax.",
+      "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-03-15&checkout=2027-03-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
+    }
+  ],
+  "transit": [
+    {
+      "id": "T01",
+      "hotel": "Eurostars Wall Street New York",
+      "cluster": "Midtown 51st St cluster",
+      "destination": "Le Bernardin New York",
+      "minutes": "26",
+      "route": "2/3 from Wall St → 1",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Le+Bernardin+New+York&travelmode=transit"
+    },
+    {
+      "id": "T02",
+      "hotel": "Eurostars Wall Street New York",
+      "cluster": "Tribeca / Lower Manhattan cluster",
+      "destination": "Jungsik New York",
+      "minutes": "17",
+      "route": "2/3 from Wall St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Jungsik+New+York&travelmode=transit"
+    },
+    {
+      "id": "T03",
+      "hotel": "Eurostars Wall Street New York",
+      "cluster": "Flatiron / Madison Square cluster",
+      "destination": "Eleven Madison Park New York",
+      "minutes": "29",
+      "route": "4/5/6 from Wall St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Eleven+Madison+Park+New+York&travelmode=transit"
+    },
+    {
+      "id": "T04",
+      "hotel": "Eurostars Wall Street New York",
+      "cluster": "Financial District cluster",
+      "destination": "Crown Shy New York",
+      "minutes": "3",
+      "route": "walk, 0.1 mile via Pine St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Crown+Shy+New+York&travelmode=transit"
+    },
+    {
+      "id": "T05",
+      "hotel": "Eurostars Wall Street New York",
+      "cluster": "Williamsburg, Brooklyn",
+      "destination": "Aska Brooklyn",
+      "minutes": "32",
+      "route": "NYC Ferry ER from Pier 11/Wall St, $4.50",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Aska+Brooklyn&travelmode=transit"
+    },
+    {
+      "id": "T06",
+      "hotel": "DoubleTree by Hilton Hotel New York City Chelsea",
+      "cluster": "Midtown 51st St cluster",
+      "destination": "Le Bernardin New York",
+      "minutes": "14",
+      "route": "1 from 28 St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Le+Bernardin+New+York&travelmode=transit"
+    },
+    {
+      "id": "T07",
+      "hotel": "DoubleTree by Hilton Hotel New York City Chelsea",
+      "cluster": "Tribeca / Lower Manhattan cluster",
+      "destination": "Jungsik New York",
+      "minutes": "19",
+      "route": "1 from 28 St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Jungsik+New+York&travelmode=transit"
+    },
+    {
+      "id": "T08",
+      "hotel": "DoubleTree by Hilton Hotel New York City Chelsea",
+      "cluster": "Flatiron / Madison Square cluster",
+      "destination": "Eleven Madison Park New York",
+      "minutes": "12",
+      "route": "walk, 0.5 mile via W 29th St and Broadway",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Eleven+Madison+Park+New+York&travelmode=transit"
+    },
+    {
+      "id": "T09",
+      "hotel": "DoubleTree by Hilton Hotel New York City Chelsea",
+      "cluster": "Financial District cluster",
+      "destination": "Crown Shy New York",
+      "minutes": "23",
+      "route": "2/3 from 34 St-Penn Station",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Crown+Shy+New+York&travelmode=transit"
+    },
+    {
+      "id": "T10",
+      "hotel": "DoubleTree by Hilton Hotel New York City Chelsea",
+      "cluster": "Williamsburg, Brooklyn",
+      "destination": "Aska Brooklyn",
+      "minutes": "34",
+      "route": "M from 23 St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=DoubleTree+by+Hilton+Hotel+New+York+City+Chelsea&destination=Aska+Brooklyn&travelmode=transit"
+    },
+    {
+      "id": "T11",
+      "hotel": "The Frederick Hotel Tribeca New York",
+      "cluster": "Midtown 51st St cluster",
+      "destination": "Le Bernardin New York",
+      "minutes": "21",
+      "route": "1 from Chambers St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Le+Bernardin+New+York&travelmode=transit"
+    },
+    {
+      "id": "T12",
+      "hotel": "The Frederick Hotel Tribeca New York",
+      "cluster": "Tribeca / Lower Manhattan cluster",
+      "destination": "Jungsik New York",
+      "minutes": "5",
+      "route": "walk, 0.2 mile via Hudson St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Jungsik+New+York&travelmode=transit"
+    },
+    {
+      "id": "T13",
+      "hotel": "The Frederick Hotel Tribeca New York",
+      "cluster": "Flatiron / Madison Square cluster",
+      "destination": "Eleven Madison Park New York",
+      "minutes": "22",
+      "route": "R/W from City Hall",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Eleven+Madison+Park+New+York&travelmode=transit"
+    },
+    {
+      "id": "T14",
+      "hotel": "The Frederick Hotel Tribeca New York",
+      "cluster": "Financial District cluster",
+      "destination": "Crown Shy New York",
+      "minutes": "8",
+      "route": "2/3 from Chambers St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Crown+Shy+New+York&travelmode=transit"
+    },
+    {
+      "id": "T15",
+      "hotel": "The Frederick Hotel Tribeca New York",
+      "cluster": "Williamsburg, Brooklyn",
+      "destination": "Aska Brooklyn",
+      "minutes": "30",
+      "route": "J/Z from Chambers St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Frederick+Hotel+Tribeca+New+York&destination=Aska+Brooklyn&travelmode=transit"
+    },
+    {
+      "id": "T16",
+      "hotel": "The Evelyn NoMad New York",
+      "cluster": "Midtown 51st St cluster",
+      "destination": "Le Bernardin New York",
+      "minutes": "14",
+      "route": "1 from 28 St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Le+Bernardin+New+York&travelmode=transit"
+    },
+    {
+      "id": "T17",
+      "hotel": "The Evelyn NoMad New York",
+      "cluster": "Tribeca / Lower Manhattan cluster",
+      "destination": "Jungsik New York",
+      "minutes": "25",
+      "route": "1 from 28 St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Jungsik+New+York&travelmode=transit"
+    },
+    {
+      "id": "T18",
+      "hotel": "The Evelyn NoMad New York",
+      "cluster": "Flatiron / Madison Square cluster",
+      "destination": "Eleven Madison Park New York",
+      "minutes": "4",
+      "route": "walk, 0.2 mile via E 27th St and Madison Ave",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Eleven+Madison+Park+New+York&travelmode=transit"
+    },
+    {
+      "id": "T19",
+      "hotel": "The Evelyn NoMad New York",
+      "cluster": "Financial District cluster",
+      "destination": "Crown Shy New York",
+      "minutes": "24",
+      "route": "R/W from 28 St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Crown+Shy+New+York&travelmode=transit"
+    },
+    {
+      "id": "T20",
+      "hotel": "The Evelyn NoMad New York",
+      "cluster": "Williamsburg, Brooklyn",
+      "destination": "Aska Brooklyn",
+      "minutes": "34",
+      "route": "R/W → L → B32 bus",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Evelyn+NoMad+New+York&destination=Aska+Brooklyn&travelmode=transit"
+    },
+    {
+      "id": "T21",
+      "hotel": "The Benjamin Royal Sonesta New York",
+      "cluster": "Midtown 51st St cluster",
+      "destination": "Le Bernardin New York",
+      "minutes": "13",
+      "route": "E from Lexington Av/53 St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Benjamin+Royal+Sonesta+New+York&destination=Le+Bernardin+New+York&travelmode=transit"
+    },
+    {
+      "id": "T22",
+      "hotel": "The Benjamin Royal Sonesta New York",
+      "cluster": "Tribeca / Lower Manhattan cluster",
+      "destination": "Jungsik New York",
+      "minutes": "32",
+      "route": "6 from 51 St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Benjamin+Royal+Sonesta+New+York&destination=Jungsik+New+York&travelmode=transit"
+    },
+    {
+      "id": "T23",
+      "hotel": "The Benjamin Royal Sonesta New York",
+      "cluster": "Flatiron / Madison Square cluster",
+      "destination": "Eleven Madison Park New York",
+      "minutes": "12",
+      "route": "6 from 51 St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Benjamin+Royal+Sonesta+New+York&destination=Eleven+Madison+Park+New+York&travelmode=transit"
+    },
+    {
+      "id": "T24",
+      "hotel": "The Benjamin Royal Sonesta New York",
+      "cluster": "Financial District cluster",
+      "destination": "Crown Shy New York",
+      "minutes": "25",
+      "route": "6 → 4/5 from 51 St",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Benjamin+Royal+Sonesta+New+York&destination=Crown+Shy+New+York&travelmode=transit"
+    },
+    {
+      "id": "T25",
+      "hotel": "The Benjamin Royal Sonesta New York",
+      "cluster": "Williamsburg, Brooklyn",
+      "destination": "Aska Brooklyn",
+      "minutes": "37",
+      "route": "6 → L → B32 bus",
+      "verified": "Captured 25 Nov 2026",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=The+Benjamin+Royal+Sonesta+New+York&destination=Aska+Brooklyn&travelmode=transit"
+    }
+  ],
+  "activitiesTransit": [
+    {
+      "id": "A01",
+      "hotel": "Eurostars Wall Street New York",
+      "activity": "The Metropolitan Museum of Art",
+      "minutes": "39",
+      "route": "4/5 from Wall St to 86 St",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=The+Metropolitan+Museum+of+Art&travelmode=transit"
+    },
+    {
+      "id": "A02",
+      "hotel": "Eurostars Wall Street New York",
+      "activity": "Museum of Modern Art",
+      "minutes": "32",
+      "route": "2/3 → 1 from Wall St",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Museum+of+Modern+Art&travelmode=transit"
+    },
+    {
+      "id": "A03",
+      "hotel": "Eurostars Wall Street New York",
+      "activity": "American Museum of Natural History",
+      "minutes": "34",
+      "route": "2/3 → 1 → B/C from Wall St",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=American+Museum+of+Natural+History,+200+Central+Park+West,+New+York,+NY+10024&travelmode=transit"
+    },
+    {
+      "id": "A04",
+      "hotel": "Eurostars Wall Street New York",
+      "activity": "Katz's Delicatessen",
+      "minutes": "22",
+      "route": "M15-SBS from Water St/Wall St",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Katz%27s+Delicatessen,+205+E+Houston+St,+New+York,+NY+10002&travelmode=transit"
+    }
+  ],
+  "hotelRanking": [
+    {
+      "id": "R01",
+      "rank": "1",
+      "hotel": "DoubleTree by Hilton Hotel New York City - Chelsea",
+      "room": "King Room – Non-Smoking (210 sq ft, 1 King bed)",
+      "bath": "Verified — Private bathroom (Hilton & Booking property spec)",
+      "michelinReach": "67 / 67 NYC Starred (100% of 5-borough stars) · 5/5 clusters in 12–34 min (avg 20.4 min)",
+      "breakdown": "Flatiron (EMP): 12 min walk · Midtown 51st (Le Bernardin): 14 min [1] · Tribeca (Jungsik): 19 min [1] · FiDi (Crown Shy): 23 min [2/3] · Williamsburg (Aska): 34 min [M]",
+      "preTax": "$943 ($942.91)",
+      "allIn": "$1,110",
+      "sourceUrl": "https://www.hilton.com/en/hotels/nyccldt-doubletree-new-york-city-chelsea/hotel-info/",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/doubletree-new-york-city-chelsea.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
+    },
+    {
+      "id": "R02",
+      "rank": "2",
+      "hotel": "Hyatt Place New York / Chelsea",
+      "room": "King Room (180 sq ft, 1 King bed)",
+      "bath": "Verified — Attached private bathroom",
+      "michelinReach": "67 / 67 NYC Starred (100% of 5-borough stars) · ~0.4 mi walk to Eleven Madison Park, odo & Cote",
+      "breakdown": "23rd St subways (1, F/M, C/E, R/W) within 2–5 blocks; same Chelsea/Flatiron transit envelope as DoubleTree Chelsea (all NYC clusters ≤35 min)",
+      "preTax": "$1,113",
+      "allIn": "$1,305",
+      "sourceUrl": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/hotel-info",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/hyatt-place-new-york-chelsea.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1"
+    },
+    {
+      "id": "R03",
+      "rank": "3",
+      "hotel": "Eurostars Wall Street",
+      "room": "Queen Room (172 sq ft, 1 Queen bed)",
+      "bath": "Verified — Private bathroom",
+      "michelinReach": "67 / 67 NYC Starred (100% of 5-borough stars) · 5/5 clusters in 3–32 min (avg 21.4 min)",
+      "breakdown": "FiDi (Crown Shy/Saga): 3 min walk · Tribeca (Jungsik): 17 min [2/3] · Midtown 51st (Le Bernardin): 26 min [2/3→1] · Flatiron (EMP): 29 min [4/5/6] · Williamsburg (Aska): 32 min [NYC Ferry ER]",
+      "preTax": "$848 non-ref · $1,025 refundable",
+      "allIn": "$998 non-ref · ~$1,204 refundable",
+      "sourceUrl": "https://www.eurostarshotels.co.uk/eurostars-wall-street.html",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/exchange-manhattan.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
+    },
+    {
+      "id": "R04",
+      "rank": "4",
+      "hotel": "Arlo NoMad",
+      "room": "Queen Room (150 sq ft, 1 Queen bed)",
+      "bath": "Private en-suite shower room (micro-room footprint 150 sq ft)",
+      "michelinReach": "67 / 67 NYC Starred (100% of 5-borough stars) · 1 block from Atomix 2★ (104 E 30th St)",
+      "breakdown": "28th & 33rd St (6, R/W, 1) + Herald Sq hub 3 blocks away; walks to Atomix (2 min), Eleven Madison Park (8 min), Koreatown (4 min)",
+      "preTax": "$1,214 ($1,213.96 incl. $37/nt resort fee)",
+      "allIn": "$1,428",
+      "sourceUrl": "https://arlohotels.com/nomad/faqs/",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/arlo-nomad.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1"
+    },
+    {
+      "id": "R05",
+      "rank": "5",
+      "hotel": "The Evelyn NoMad",
+      "room": "Superior Queen Room (180 sq ft, 1 Queen bed)",
+      "bath": "Verified — Attached bathroom with walk-in shower",
+      "michelinReach": "67 / 67 NYC Starred (100% of 5-borough stars) · 5/5 clusters in 4–34 min (avg 20.2 min — fastest average)",
+      "breakdown": "Flatiron (EMP): 4 min walk · Midtown 51st (Le Bernardin): 14 min [1] · FiDi (Crown Shy): 24 min [R/W] · Tribeca (Jungsik): 25 min [1] · Williamsburg (Aska): 34 min [R/W→L→B32]",
+      "preTax": "$1,653 (incl. $38/nt resort fee)",
+      "allIn": "$1,925",
+      "sourceUrl": "https://www.theevelyn.com/location",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/gershwin.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
+    },
+    {
+      "id": "R06",
+      "rank": "6",
+      "hotel": "11 Howard (MICHELIN Guide Listed · Le Coucou 1★ On-Site)",
+      "room": "Queen Room (1 Queen bed)",
+      "bath": "Verified — Private bathroom",
+      "michelinReach": "67 / 67 NYC Starred (100% of 5-borough stars) · On-site Le Coucou 1★ + same ZIP (10013) as Jungsik 3★, Atera 2★ & César 2★",
+      "breakdown": "Canal St mega-hub (N/Q/R/W/6/J/Z/A/C/E) 1–3 blocks away; walks to Le Coucou (0 min), Atera (7 min), Jungsik (10 min), Thai Diner (6 min)",
+      "preTax": "$1,522 non-ref · $1,948 flexible",
+      "allIn": "$1,774 non-ref · $2,263 flexible",
+      "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/11-howard-8129",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/11-howard.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1"
+    },
+    {
+      "id": "R07",
+      "rank": "7",
+      "hotel": "The Frederick Hotel Tribeca",
+      "room": "Studio 1 Queen Bed (200 sq ft — bypass entry Full-bed room)",
+      "bath": "Verified — Private bathroom",
+      "michelinReach": "67 / 67 NYC Starred (100% of 5-borough stars) · 5/5 clusters in 5–30 min (avg 17.2 min — #1 fastest overall)",
+      "breakdown": "Tribeca (Jungsik/Atera): 5 min walk · FiDi (Crown Shy): 8 min [2/3] · Midtown 51st (Le Bernardin): 21 min [1] · Flatiron (EMP): 22 min [R/W] · Williamsburg (Aska): 30 min [J/Z]",
+      "preTax": "$1,747 (incl. $38/nt resort fee)",
+      "allIn": "$2,033",
+      "sourceUrl": "https://www.frederickhotelnyc.com/location",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/new-york-95-west-broadway.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
+    },
+    {
+      "id": "R08",
+      "rank": "8",
+      "hotel": "citizenM New York Times Square",
+      "room": "citizenM Room — 1 XL King wall-to-wall bed (up to 2 adults)",
+      "bath": "Verified — En-suite power shower pod",
+      "michelinReach": "67 / 67 NYC Starred (100% of 5-borough stars) · 2-min walk to Le Bernardin 3★, 5-min walk to The Modern 2★, 9-min walk to Per Se 3★ & Masa 2★",
+      "breakdown": "50th St (1, C/E) & 49th St (N/R/W) on block; immediate walk to C1 Midtown 3★ cluster",
+      "preTax": "",
+      "allIn": "",
+      "sourceUrl": "https://www.marriott.com/brands/citizenm.mi",
+      "rateSourceUrl": "https://www.marriott.com/brands/citizenm.mi"
+    },
+    {
+      "id": "R09",
+      "rank": "9",
+      "hotel": "The Beekman, a Thompson Hotel (1 MICHELIN Key)",
+      "room": "King Room (300 sq ft, 1 King bed; Queen rooms also sold)",
+      "bath": "Verified — Private marble bathroom with rain shower, robes & slippers",
+      "michelinReach": "67 / 67 NYC Starred (100% of 5-borough stars) · Fulton St 8-line transit super-hub 1 block away",
+      "breakdown": "Fulton St (2/3/4/5/A/C/J/Z) connects non-stop to Midtown East, Midtown West, Flatiron, Tribeca & Brooklyn",
+      "preTax": "$4,488 non-ref · $4,942 flexible",
+      "allIn": "$5,220 non-ref · $5,741 flexible",
+      "sourceUrl": "https://guide.michelin.com/en/article/travel/guide-financial-district-new-york",
+      "rateSourceUrl": "https://www.booking.com/hotel/us/the-beekman-a-thompson-hotel.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1"
+    },
+    {
+      "id": "R10",
+      "rank": "10",
+      "hotel": "The Fifth Avenue Hotel (2 MICHELIN Keys · 20/20 Score)",
+      "room": "",
+      "bath": "",
+      "michelinReach": "67 / 67 NYC Starred (100% of 5-borough stars) · Same NoMad block cluster as The Evelyn (4 min walk to EMP)",
+      "breakdown": "28th St (R/W, 1, 6) within 1–2 blocks; Café Carmellini (MICHELIN Guide) on-site",
+      "preTax": "",
+      "allIn": "",
+      "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-fifth-avenue-hotel-13538",
+      "rateSourceUrl": ""
+    }
+  ],
+  "findings": [
+    {
+      "id": "I1",
+      "topic": "Transit rule",
+      "finding": "All 25 measured hotel→Michelin-cluster legs are ≤37 minutes; the one-hour rule does not separate the tested hotels.",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Crown+Shy+New+York&travelmode=transit"
+    },
+    {
+      "id": "I2",
+      "topic": "Fastest leg",
+      "finding": "Eurostars Wall Street → Crown Shy is a 3-minute walk; The Frederick → Jungsik is 5 minutes.",
+      "sourceUrl": "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Crown+Shy+New+York&travelmode=transit"
+    },
+    {
+      "id": "I3",
+      "topic": "Cheapest qualifying week",
+      "finding": "15–22 Feb 2027: $848 pre-tax / ~$998 all-in for a Queen Room at Eurostars Wall Street. The $836 22 Feb–1 Mar option is a twin room and fails the brief.",
+      "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
+    },
+    {
+      "id": "I4",
+      "topic": "Booking timing",
+      "finding": "No official source names a future date when rates will be lowest. Hold a cancellable rate and re-run saved searches weekly (F23).",
+      "sourceUrl": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-22&checkout=2027-03-01&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
+    },
+    {
+      "id": "I5",
+      "topic": "Cross-session price agreement",
+      "finding": "Four all-in totals were captured independently and agree: Hyatt Place $1,305 · Arlo NoMad $1,428 · 11 Howard $1,774 · Beekman $5,220.",
+      "sourceUrl": "https://www.booking.com/hotel/us/hyatt-place-new-york-chelsea.en-us.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1"
+    }
+  ]
+}

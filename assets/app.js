@@ -21,9 +21,9 @@
         `<span class="pill ${r.distinction.includes('3') ? 'green' : r.distinction.includes('2') ? '' : r.distinction.includes('1') ? '' : 'gray'}">${esc(r.distinction)}</span>`,
         val(r.cuisine),
         `${val(r.address)}${r.area ? `<span class="sub">${esc(r.area)}</span>` : ''}`,
-        val(r.hours),
+        `${r.daysOpen ? `<strong>${esc(r.daysOpen)}</strong>` : ''}${r.hours ? `<div>${esc(r.hours)}</div>` : ''}${!r.daysOpen && !r.hours ? '<span class="blank">blank — unverified</span>' : ''}`,
         val(r.exceptions),
-        val(r.priceTwoAdults),
+        `${val(r.priceTwoAdults)}${r.priceSourceUrl ? `<span class="sub">${link(r.priceSourceUrl, 'Price source')}</span>` : ''}`,
         val(r.guidePriceBand),
         `${link(r.officialUrl, 'Official site')}${r.officialUrl && r.sourceUrl ? '<br>' : ''}${link(r.sourceUrl, 'MICHELIN page')}`,
         socials(r.social),
@@ -37,7 +37,7 @@
         `<strong>${esc(a.name)}</strong><span class="sub">${routeLink(a.address || a.name)}</span>`,
         val(a.category),
         `${val(a.address)}${a.area ? `<span class="sub">${esc(a.area)}</span>` : ''}`,
-        val(a.hours),
+        `${a.daysOpen ? `<strong>${esc(a.daysOpen)}</strong>` : ''}${a.hours ? `<div>${esc(a.hours)}</div>` : ''}${!a.daysOpen && !a.hours ? '<span class="blank">blank — unverified</span>' : ''}`,
         val(a.exceptions),
         val(a.costTwoAdults),
         link(a.officialUrl, 'Official site'),
@@ -79,6 +79,44 @@
     flags: {
       cols: ['ID','Severity','Issue','Detail','Source'],
       row: (f) => [`<strong>${esc(f.id)}</strong>`, `<span class="pill ${f.severity === 'High' ? 'red' : f.severity === 'Medium' ? 'amber' : 'gray'}">${esc(f.severity)}</span>`, `<strong>${esc(f.title)}</strong>`, val(f.detail), `<a href="${esc(f.source)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`]
+    },
+    bookingWindows: {
+      cols: ['Week', 'Dates', 'Nights', 'Cheapest hotel', 'Room', 'Pre-tax 7 nights', 'All-in 7 nights', 'Meets queen+ rule?', 'Captured', 'Note', 'Source'],
+      row: (w) => [
+        `<strong>${esc(w.id)}</strong>`, val(w.dates), val(w.nights), `<strong>${esc(w.hotel)}</strong>`, val(w.room),
+        `<strong>${esc(w.preTax)}</strong>`, val(w.allIn),
+        `<span class="pill ${w.qualifies.startsWith('No') ? 'red' : 'green'}">${esc(w.qualifies)}</span>`,
+        val(w.captured), val(w.note), `<a class="src" href="${esc(w.sourceUrl)}" target="_blank" rel="noopener noreferrer">Rate source ↗</a>`
+      ]
+    },
+    transit: {
+      cols: ['ID', 'Hotel origin', 'Michelin cluster', 'Minutes', 'Subway / bus / walk', 'Evidence', 'Route source'],
+      row: (t) => [
+        `<strong>${esc(t.id)}</strong>`, `<strong>${esc(t.hotel)}</strong>`, `${esc(t.cluster)}<span class="sub">Anchor: ${esc(t.destination)}</span>`,
+        `<strong>${esc(t.minutes)} min</strong>`, val(t.route), val(t.verified),
+        `<a class="src" href="${esc(t.sourceUrl)}" target="_blank" rel="noopener noreferrer">Directions ↗</a>`
+      ]
+    },
+    activitiesTransit: {
+      cols: ['ID', 'Hotel origin', 'Activity', 'Minutes', 'Route', 'Route source'],
+      row: (t) => [
+        `<strong>${esc(t.id)}</strong>`, `<strong>${esc(t.hotel)}</strong>`, `<strong>${esc(t.activity)}</strong>`,
+        `<strong>${esc(t.minutes)} min</strong>`, val(t.route),
+        `<a class="src" href="${esc(t.sourceUrl)}" target="_blank" rel="noopener noreferrer">Directions ↗</a>`
+      ]
+    },
+    hotelRanking: {
+      cols: ['Rank', 'Hotel', 'Qualifying room', 'Private bath', 'Michelin reach (≤1 h)', 'Cluster breakdown', 'Pre-tax 7 nights', 'All-in 7 nights', 'Sources'],
+      row: (h) => [
+        `<strong>${esc(h.rank)}</strong>`, `<strong>${esc(h.hotel)}</strong>`, val(h.room), val(h.bath),
+        `<span class="pill green">${esc(h.michelinReach)}</span>`, val(h.breakdown), val(h.preTax),
+        `<strong>${esc(h.allIn)}</strong>`,
+        `${link(h.sourceUrl, 'Room / property')}${h.rateSourceUrl ? `<br>${link(h.rateSourceUrl, 'Rate')}` : ''}`
+      ]
+    },
+    findings: {
+      cols: ['ID', 'Topic', 'Finding', 'Source'],
+      row: (f) => [`<strong>${esc(f.id)}</strong>`, `<strong>${esc(f.topic)}</strong>`, val(f.finding), `<a class="src" href="${esc(f.sourceUrl)}" target="_blank" rel="noopener noreferrer">Verify ↗</a>`]
     }
   };
 
@@ -133,7 +171,7 @@
       specs.forEach(el => {
         const [kind, key] = el.dataset.table.split(':');
         let rows;
-        if (kind === 'decisions') rows = data.decisions[key] || [];
+        if (kind === 'decisions' || kind === 'integration') rows = (data[kind] && data[kind][key]) || [];
         else rows = (data[kind]?.items) || [];
         renderTable(el, rows, config[kind] || config[key]);
         addSearch(el.parentElement.querySelector('input[type=search]'), el.querySelector('.table-wrap'));

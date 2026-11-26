@@ -151,6 +151,19 @@
       "blocking": false,
       "howToDiscover": "State the requirement, then filter on the MICHELIN 'Services & Facilities' tags already in the records.",
       "sources": []
+    },
+    {
+      "id": "Q13",
+      "question": "Which booking week, and is there a future date on which the rate will be lower?",
+      "whatWeKnow": "Five dated 7-night snapshots (25 Nov 2026) put the preferred 15–22 Feb 2027 week lowest among qualifying queen/king rooms: $848 pre-tax / $998 all-in at Eurostars Wall Street. The 22 Feb–1 Mar snapshot is $12 cheaper but its cheapest room has twin beds and fails the brief.",
+      "whatWeDoNotKnow": "No official source forecasts the lowest future booking date. Rates and the Black Friday promotion can change.",
+      "provisionalAnswer": "Treat 15–22 Feb 2027 as the cheapest verified qualifying week so far; hold a cancellable rate and re-run the saved searches weekly. No 'best future booking date' is asserted (F23).",
+      "blocking": false,
+      "howToDiscover": "Save the five exact Booking.com URLs, re-run weekly, and log date, total, room type and cancellation terms. Compare with the hotel's own booking engine when its 2027 window opens.",
+      "sources": [
+        "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5",
+        "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-22&checkout=2027-03-01&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
+      ]
     }
   ],
   "suggestions": [
@@ -268,6 +281,24 @@
       "effort": "Low",
       "blockedBy": [],
       "status": "Proposed - no changes implemented"
+    },
+    {
+      "id": "S13",
+      "title": "Adopt one canonical dataset and keep the parallel kits as evidence",
+      "detail": "Copy only rows whose source URL was re-read into the canonical tables; leave the other sessions' directories untouched. This drops conflicting duplicates without discarding their evidence.",
+      "effort": "Medium",
+      "blockedBy": [],
+      "status": "Implemented by T18 for prices, room facts, social links and six activities; the rest remains read-only."
+    },
+    {
+      "id": "S14",
+      "title": "Put the six date-critical activities in the day plan",
+      "detail": "The parade is one day only (21 Feb 2027), Bryant Park ends 28 Feb, Wollman runs to 16 Mar and SUMMIT/Top of the Rock have date-specific hours. Rebuild the itinerary around these cutoffs once the trip length is fixed.",
+      "effort": "Low",
+      "blockedBy": [
+        "Q1"
+      ],
+      "status": "Proposed — rows are on the Activities page; itinerary sequencing not yet changed."
     }
   ],
   "flags": [
@@ -389,6 +420,48 @@
       "title": "Menu prices captured Nov 2026 vs Feb-Mar 2027 trip",
       "detail": "All verified restaurant menu prices were captured 2026-11-25 (Nov 2026 menus). The trip is Feb 15-Mar 23 2027, so prices may change. Every couple total must be re-confirmed on the official page at booking; the Michelin 14 Dec 2026 ceremony may also change distinctions.",
       "source": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/"
+    },
+    {
+      "id": "F18",
+      "severity": "Medium",
+      "title": "Per Se Salon price conflict between sessions and live Tock",
+      "detail": "A parallel session recorded $185/person for a four-course Salon tasting ($370/couple) and $590 for a five-course version. Final re-check of the live Tock page on 26 Nov 2026 shows $150/person deposit for the four-course Salon and $200/person deposit for the Main Dining Room; neither is a published menu total. Canonical price remains blank.",
+      "source": "https://www.exploretock.com/perse/experience/7768/salon-lounge-seating-four-course-tasting-menu"
+    },
+    {
+      "id": "F19",
+      "severity": "Low",
+      "title": "Bryant Park Winter Village season-end discrepancy",
+      "detail": "One session wrote 'through late Feb / Mar 1, 2027'; the official page states 28 Feb 2027. The official date is used; March travel misses the rink.",
+      "source": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park"
+    },
+    {
+      "id": "F20",
+      "severity": "Low",
+      "title": "SUMMIT One Vanderbilt opening days changed",
+      "detail": "A session noted historical Tuesday winter closures; the official FAQ footer now lists daily 08:00–24:00 with last entry 22:30. The official listing is used and the older note is not repeated as fact.",
+      "source": "https://info.summitov.com/"
+    },
+    {
+      "id": "F21",
+      "severity": "Low",
+      "title": "Brooklyn Bridge brochure not re-fetchable in final pass",
+      "detail": "The NYC DOT PDF cited by the source session returned a fetch error during final verification. The activity is retained with its original source, but the free/24-hour values are marked unverified by the final pass.",
+      "source": "https://www.nyc.gov/html/dot/downloads/pdf/brooklyn_bridge_brochure.pdf"
+    },
+    {
+      "id": "F22",
+      "severity": "Low",
+      "title": "Sushi Sho base price not visible on live Tock page",
+      "detail": "A session recorded a $450/person base price alongside $495 prepaid. Final fetch showed only '$495 per person (including administrative fee)', so only the $990/couple prepaid total is used.",
+      "source": "https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-at-hinoki-counter"
+    },
+    {
+      "id": "F23",
+      "severity": "Medium",
+      "title": "'Cheapest time to book' is not a forecast",
+      "detail": "Five dated weekly snapshots identify the cheapest qualifying week (15–22 Feb 2027), but no official source names a future booking date on which prices will be lowest. The site says so rather than predicting one.",
+      "source": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price&nflt=class%3D4%3Bclass%3D5"
     }
   ]
 }
