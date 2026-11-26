@@ -4,8 +4,8 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 
 ## Session conventions
 
-- This repository session is bound to branch `arena/4a10e962-nyfun2` (fixed by the platform). Do not switch branches.
-- Session ID for this branch: `arena/4a10e962-nyfun2`.
+- Sessions are bound to the branch the platform gives them; do not switch branches. Historical notes below refer to earlier branches (`arena/4a10e962-nyfun2`, `arena/1a7ae497-nyfun2`, `arena/657520df-nyfun2`, `arena/c1cf7b23-nyfun2`, `arena/fc6d5f66-nyfun2`, `arena/33cfdba4-nyfun2`, `arena/6f217cce-nyfun2`).
+- **Active integration session for this branch (`arena/9bc6abed-nyfun2`): session ID `arena/9bc6abed-nyfun2`, task T18.**
 - Shared outputs (site navigation, index, integrated tables) are edited only during final integration after the research tasks are complete.
 - Every factual table row needs a source URL from an official/primary source. Unconfirmed values stay blank and are listed on the Flagged for Review page.
 - Before each push: `git pull --rebase origin arena/4a10e962-nyfun2`, then push to that same branch. Never discard another session's work on conflict — stop and log it.
@@ -32,6 +32,7 @@ Shared task board for parallel agent sessions. **Read this before starting work.
 | T12 | Re-price the other weeks in the 15 Feb – 23 Mar 2027 window | done in `sessions/33cfdba4` | arena/33cfdba4-nyfun2 | `sessions/33cfdba4/data/pricing_windows.json` | Five windows priced, all pre-tax with tax shown separately. Preferred week (02-15) is the cheapest qualifying one. |
 | T16 | Disjoint namespaced full-spec verified dashboard + multi-platform social audit + official hotel & restaurant verification | done in `sessions/657520df` | arena/657520df-nyfun2 | `sessions/657520df/**`, `COORDINATION.md` | 27 Michelin rows (23 priced), 10 Queen+/private-bath hotels (8 dated 7-night pre-tax + all-in), 16 activities (incl. Feb 21 LNY Parade & Wollman 2026–27), 97 social links, 7-page dashboard + `verify.py` (0 errors). |
 | T17 | Disjoint namespaced 31-venue Michelin + 10-hotel + 18-activity + 155-social-link mobile dashboard (`sessions/c1cf7b23`) | done in `sessions/c1cf7b23` | arena/c1cf7b23-nyfun2 | `sessions/c1cf7b23/**`, `COORDINATION.md` | 31 Michelin rows (24 w/ official 2-adult prices incl. Sushi Sho $900–$990 & Per Se Salon $590), 10 hotels (pre-tax + all-in), 18 activities (incl. Feb 21 LNY Parade & Feb 28 Bryant Park Rink cutoff), 155 YT/TT/IG links, 11 flags & 6 repo-audit findings. |
+| T18 | Final integration + line-by-line verification refresh + mobile dashboard refresh + publish | in progress | arena/9bc6abed-nyfun2 | `index.html`, `pages/**`, `assets/**`, `data/**`, `scripts/**`, `README.md`, `research/verification-2026-11-26.md`, `COORDINATION.md` | Reconciles every namespaced kit into the canonical root site, re-checks facts against official sources on 2026-11-26, publishes a verification matrix, and records unresolved items on the Flagged page. |
 
 ## Log
 
@@ -313,3 +314,10 @@ hotel→restaurant routing for the ≤1-hour ranking; dated 2027 hotel rates; ai
   - **Flagged & Repo Audit (`sessions/c1cf7b23/data/decisions.json`):** 9 prioritized Questions, 8 non-destructive Suggestions, 11 external source flags (Katz's & Saga MICHELIN schedule bugs, Via Carota `/menu-basil` Squarespace Thai demo page rejected, Thai Diner AM/PM subpage typo, Better Chinatown Chinese-line year typo), and 6 Repo Audit findings.
   - **Request for root integration owner:** consider adding a comparison link on root `index.html` and `pages/sources.html` to `sessions/c1cf7b23/index.html` and incorporating the verified Sushi Sho / Per Se Salon Tock prices, Feb 28 Bryant Park cutoff, and 155 multi-platform social links.
 
+
+### 2026-11-26 — session `arena/9bc6abed-nyfun2` (T18 claim)
+
+- Read the board, audited `main` (`19f4d20`) and every namespaced kit (`alt/`, `sessions/215c2a25`, `sessions/33cfdba4`, `sessions/657520df`, `sessions/c1cf7b23`).
+- Claimed **T18** as the final integration session: all other board tasks are `done`, so shared outputs (`index.html`, `pages/**`, `data/**`, `assets/**`, `scripts/**`) now have a single owner and cannot conflict with an active claim.
+- Scope rule kept: no edits inside another session's namespace directory; their files stay verbatim for comparison.
+- Live-verification tool access differs from earlier sessions (this sandbox reaches GitHub plus a proxied fetch/search channel; no direct socket access to external hosts). Every re-check performed today is dated and linked in `research/verification-2026-11-26.md` and on the site's Verification page; anything not re-fetched today is labelled as a carried 2026-11-25 capture, never as re-verified.
