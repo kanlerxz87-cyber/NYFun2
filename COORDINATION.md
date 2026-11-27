@@ -505,6 +505,12 @@ its room, so it was dropped from the published list rather than shown unsourced.
 - **Merge conflict note.** While this session worked, `arena/51fa454c-nyfun2` merged PR #31 to `main` (readiness audit, `research/final-readiness-2026-11-27.md`). This branch merged `origin/main` (`6f53e0a`) and resolved the resulting `COORDINATION.md` append conflict by keeping both sessions' entries verbatim — nothing discarded.
 - **PR and merge result.** PR: https://github.com/kanlerxz87-cyber/NYFun2/pull/33 — CI `verify` passed (run 46042056626); merged to `main` at 2026-11-27T17:28:27Z as merge commit `9e0c0c9`. GitHub Pages workflow `46042112506` completed successfully; Pages API reports `status: built`, source `main` `/`, HTTPS enforced. Live check: `https://kanlerxz87-cyber.github.io/NYFun2/?check=t27` serves the corrected "17 options" tile, confirming the merged build is what Pages serves. T27 complete.
 
+### 2026-11-27 — session `arena/70ce72a8-nyfun2` (T28 publish record)
+
+- **PR:** https://github.com/kanlerxz87-cyber/NYFun2/pull/34 (`arena/70ce72a8-nyfun2` → `main`). CI `verify` passed on the PR (run `46042098408`) and on the post-merge branch push (`46042192392`). The first attempt was blocked because main had moved (PR #33). The conflict was in the COORDINATION.md task table only; both T27 claims were kept and this session's row was renamed to **T28** (the `arena/87fab24c-nyfun2` session took T27 first).
+- **Merge:** `gh pr merge 34 --merge` succeeded; merge commit **`2ef708c`** on `main`.
+- **Pages:** the Pages API reports the `2ef708c` build as `built` (completed 2026-11-27 17:30 UTC, `https_enforced: true`). The live Flagged page at https://kanlerxz87-cyber.github.io/NYFun2/pages/flagged.html reports **33 flags**, including F30–F33.
+- **Tooling limits:** the sandbox can't reach github.io, so the live check was made with the fetch tool, not curl.
 ### 2026-11-27 — session `arena/dbf0d1f0-nyfun2` (T29 done — verification addendum, rebased onto main `f75d04b`, PR #37)
 
 **Label collision logged.** This session first claimed T27 (commit `ec4eba3`). Main already carried a T27 (`arena/87fab24c-nyfun2`) and a T28 (`arena/70ce72a8-nyfun2`), so this work is recorded as **T29**. Nothing was dropped: main's T27/T28 data (Wollman Fri–Sun 09:00 correction, Statue of Liberty split, ESB February flag F32, Bryant Park F33, counts) was kept as the base during the rebase.
