@@ -216,7 +216,7 @@ def build():
   <div class="card">
     <ul>
       <li><strong>Dining.</strong> {len(r_items)} rows: 69 starred ({star_counts["3"]}+{star_counts["2"]}+{star_counts["1"]}) plus 3 guide-listed. {len(priced)} have a verified couple total from an official menu, FAQ or official booking channel — from <strong>$156</strong> (Gramercy Tavern tavern three-course) and <strong>$168</strong> (Cote Butcher's Feast) up to <strong>$1,900</strong> (Masa hinoki counter), including Atomix ($848/$628 November Tock) and Sushi Sho ($990 Tock). Two prices (Atera, Per Se) remain contested/deposit-only and stay blank (flag F24).</li>
-      <li><strong>Hotels.</strong> {len(hotels_priced)} of {len(h_items)} shortlisted properties have a dated 7-night total; {len(qualified)} publish a queen/king bed plus private bathroom. {len(h_items) - len(qualified)} do not and are excluded from the recommendation rather than assumed to comply (F26).</li>
+      <li><strong>Hotels.</strong> {len(hotels_priced)} of {len(h_items)} shortlisted properties have a dated 7-night total; {len(qualified)} publish a queen/king bed plus private bathroom. {len(h_items) - len(qualified)} {'does' if len(h_items) - len(qualified) == 1 else 'do'} not and {'is' if len(h_items) - len(qualified) == 1 else 'are'} excluded from the recommendation rather than assumed to comply (F26).</li>
       <li><strong>The one-hour rule.</strong> 25 measured hotel→cluster legs, all 3–37 minutes, so every published hotel with a measurement reaches all five sampled MICHELIN clusters within an hour. The constraint is satisfied everywhere it can be measured; price and room quality decide.</li>
       <li><strong>Dates that matter.</strong> Presidents' Day Mon 15 Feb; Chinatown Lunar New Year parade Sun 21 Feb 13:00; Bryant Park rink closes Sun 28 Feb; Wollman Rink runs to 16 Mar (cheap off-peak $16); the Met is closed Wednesdays; MoMA is open late Fridays.</li>
       <li><strong>Risk.</strong> Star levels may change on 14 Dec 2026; menus and rates are November 2026 captures; the hotel totals are booking-engine snapshots, not quotes.</li>
@@ -482,7 +482,8 @@ def build():
     <div class="stat"><b>{cov["activities"]["rows"]}</b><span>activity rows · {cov["activities"]["withHours"]} with hours · {cov["activities"]["withCost"]} with a couple cost</span></div>
   </div>
 
-  <h2>Verification records updated {CHECKS_DATE}</h2>
+  <h2>Verification log — {len(V["checks"])} records</h2>
+  <p>The table below holds the 2026-11-26 log followed by a 2026-11-27 addendum (session <code>arena/dbf0d1f0-nyfun2</code>, task T27). The addendum re-read the MICHELIN census, the three date-critical winter activities, MTA fares, MoMA/Met admission, ten priced restaurant menus, five hotel bed/bathroom lines, and Torrisi's hours. It corrected one carried value (Wollman Fri/Sat/Sun opening time, 10:00 → 09:00) and verified five hotels that previously lacked a bed/bathroom line, leaving only The Maritime Hotel unverified (F26).</p>
   <div data-table="verification"></div>
 
   <h2>What this session could not re-read</h2>
@@ -498,7 +499,7 @@ def build():
 """
     pages["verification"] = shell(
         "verification", "Verification log", "Audit · dated checks", "What was checked, and how",
-        "A dated log of every fact re-read on 2026-11-26, every figure only corroborated, and every number still carried from the November 25 capture.",
+        "A dated log of every fact re-read on 2026-11-26, the 2026-11-27 addendum, every figure only corroborated, and every number still carried from the November 25 capture.",
         verification_body, depth=1)
 
     # --------------------------------------------------------------- sources
@@ -559,7 +560,7 @@ node --check assets/app.js</pre>
         <tr><td data-label="Path"><code>sessions/c1cf7b23/</code></td><td data-label="What">31-venue, 10-hotel, 18-activity kit with 155 social links</td><td data-label="Status">Preserved; source of most hours/socials and 4 dated hotel rates</td></tr>
         <tr><td data-label="Path"><code>sessions/657520df/</code></td><td data-label="What">27-venue kit with cross-week window analysis</td><td data-label="Status">Preserved; source of Met/MoMA/Whitney socials and window notes</td></tr>
         <tr><td data-label="Path"><code>sessions/33cfdba4/</code></td><td data-label="What">72-row roster, 25-leg transit matrix, 5 price windows</td><td data-label="Status">Preserved; source of the transit measurements</td></tr>
-        <tr><td data-label="Path"><code>data/verification.json</code>, <code>data/conflicts.json</code>, <code>research/verification-2026-11-26.md</code></td><td data-label="What">Dated verification log, every kit conflict, and the narrative audit</td><td data-label="Status">New 2026-11-26</td></tr>
+        <tr><td data-label="Path"><code>data/verification.json</code>, <code>data/conflicts.json</code>, <code>research/verification-2026-11-26.md</code>, <code>research/verification-2026-11-27.md</code></td><td data-label="What">Dated verification log, every kit conflict, and the narrative audits</td><td data-label="Status">New 2026-11-26; addendum 2026-11-27</td></tr>
         <tr><td data-label="Path"><code>pages/verification.html</code>, <code>pages/compare.html</code></td><td data-label="What">Public verification log and kit comparison</td><td data-label="Status">New 2026-11-26</td></tr>
         <tr><td data-label="Path"><code>sessions/215c2a25/</code>, <code>alt/</code></td><td data-label="What">Two earlier independent dashboards</td><td data-label="Status">Preserved, not linked in the main navigation</td></tr>
       </tbody>
@@ -574,7 +575,7 @@ node --check assets/app.js</pre>
       <li><strong>Duplicate rows in merged kits.</strong> The same hotel appeared as "The Frederick Hotel Tribeca" and "The Frederick Hotel Tribeca, a Small Luxury Hotel"; NYPL, the Met and 9/11 each appeared twice. The merge now keys these and reports rather than duplicates.</li>
       <li><strong>Mis-traced transit risk.</strong> A fuzzy name match initially attached Eurostars Wall Street's transit legs to The Wall Street Hotel. Matching is now key-based, and unmeasured hotels are blank.</li>
       <li><strong>Contested prices stay blank (F24).</strong> Atera and Per Se are not assigned a price; Atomix carries its verified November Tock price ($848/$628) with December ($990/$704+) flagged; Le Bernardin keeps $218 with the $225 alternative shown.</li>
-      <li><strong>Verification is dated, not implied (F21).</strong> The log has 25 records updated on 2026-11-26 (22 verified, 3 carried captures); each row shows its own status and source.</li>
+      <li><strong>Verification is dated, not implied (F21).</strong> The log contains 46 records: 25 baseline records from 2026-11-26 and 21 addendum checks from 2026-11-27 (42 verified, 4 carried overall); each row shows its status and source.</li>
     </ul>
   </div>
 

@@ -745,6 +745,64 @@ V = [
     ("MTA subway and bus fares", "Subway / local / limited / Select Bus Service $3; express bus $7.25",
      "https://www.mta.info/fares-tolls",
      "Read directly from mta.info/fares-tolls on 2026-11-26 (session arena/779506a6-nyfun2)", "Verified"),
+    # ---- 2026-11-27 addendum (session arena/dbf0d1f0-nyfun2, task T27) ----
+    ("MICHELIN NYC starred census (addendum)", "5 three-star / 14 two-star / 50 one-star; 69 starred; 76 Bib Gourmand; 224 Selected",
+     "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
+     "Re-read on the live filter panel on 2026-11-27 (session arena/dbf0d1f0-nyfun2); counts unchanged from 2026-11-26", "Verified"),
+    ("Michelin 2026 ceremony date (addendum)", "14 Dec 2026 (Northeast Cities, The Glasshouse)",
+     "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
+     "Re-read directly from the official michelinmedia.com announcement on 2026-11-27 (session arena/dbf0d1f0-nyfun2)", "Verified"),
+    ("Chinatown Lunar New Year Parade 2027 (addendum)", "29th parade: Sunday 21 February 2027, 13:00, Chinatown; firecracker ceremony 6 Feb 2027",
+     "https://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/",
+     "Re-read directly from the organiser's page on 2026-11-27; English headline/body confirm 21 Feb 2027. The Chinese-language line still prints 2026 (F19)", "Verified (typo flagged)"),
+    ("Bryant Park Winter Village season (addendum)", "Season 28 Oct 2026 - 28 Feb 2027; Rink 8am-10pm; admission free; rentals $18.72-$64.48 incl. admin",
+     "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+     "Re-read directly from bryantpark.org on 2026-11-27 (session arena/dbf0d1f0-nyfun2)", "Verified"),
+    ("Wollman Rink hours correction (addendum)", "Season 28 Oct 2026 - 16 Mar 2027; Mon-Tue 10:00-14:30; Wed-Thu 10:00-21:00; Fri-Sat 09:00-22:00; Sun 09:00-21:00; adults $16/$28/$40; rental $12; 15 Feb Community Day, 16-21 Feb Peak, 22-25 Feb Off-Peak",
+     "https://wollmanrinknyc.com/plan/",
+     "Re-read directly from wollmanrinknyc.com/plan/ on 2026-11-27. CORRECTS the carried hours: Fri/Sat/Sun open at 09:00, not 10:00. Pricing and Feb calendar unchanged", "Verified (corrected)"),
+    ("MTA subway and bus fares (addendum)", "Subway / local / limited / Select Bus Service $3; express bus $7.25",
+     "https://www.mta.info/fares-tolls",
+     "Re-read directly from mta.info/fares-tolls on 2026-11-27 (session arena/dbf0d1f0-nyfun2)", "Verified"),
+    ("MoMA admission and hours (addendum)", "Adults $30 ($60 for two); Mon-Thu/Sat/Sun 10:30-17:30, Fri 10:30-20:30",
+     "https://www.moma.org/visit/",
+     "Re-read directly from the official visit page on 2026-11-27 (session arena/dbf0d1f0-nyfun2)", "Verified"),
+    ("The Met admission (addendum)", "Adults $30 ($60 for two); NY residents pay-what-you-wish",
+     "https://www.metmuseum.org/plan-your-visit",
+     "Admission table re-read on the official page on 2026-11-27. Museum hours were NOT re-read this session and remain as previously recorded; not treated as verified today", "Verified (admission only)"),
+    ("Eleven Madison Park menu prices (addendum)", "Full Tasting $385/guest ($770 for two); Bar Tasting $255/guest ($510)",
+     "https://www.elevenmadisonpark.com/faq",
+     "Re-read directly from the official FAQ on 2026-11-27; the FAQ also states lounge bar-tasting reservations 'begin at $225' ($450), noted here so the $255 headline is not mistaken for the only bar price", "Verified"),
+    ("Atomix Tock pricing (addendum)", "Nov Chef's Counter $424/pp ($848) & Bar Tasting $314/pp ($628); Dec $495/pp & from $352/pp; @atomixnyc",
+     "https://www.exploretock.com/atomixnyc/help",
+     "Re-read directly from Atomix's official Tock page on 2026-11-27 (session arena/dbf0d1f0-nyfun2)", "Verified"),
+    ("Sushi Sho Tock pricing (addendum)", "Shorter Omakase at Hinoki Counter $495/pp ($990 for two); booking through 28 Feb 2027; new release 1 Dec 2026 11:00 AM EST; @sushishonyc",
+     "https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-at-hinoki-counter",
+     "Re-read directly from Sushi Sho's official Tock page on 2026-11-27 (session arena/dbf0d1f0-nyfun2)", "Verified"),
+    ("Per Se Tock deposit-only status (addendum)", "Main Dining Room from $200/pp deposit; Salon Four-Course $150/pp deposit; no full menu price printed",
+     "https://www.exploretock.com/perse/experience/7768/salon-lounge-seating-four-course-tasting-menu",
+     "Re-read directly from Per Se's official Tock page on 2026-11-27; row stays blank (F18/F24)", "Verified"),
+    ("Jungsik menu price (addendum)", "Signature Menu $335/guest -> $670 for two",
+     "https://www.jungsik.com/menu/", "Re-read from the official menu page on 2026-11-27", "Verified"),
+    ("Gramercy Tavern menu prices (addendum)", "Dining Room Seasonal Menu $178/guest ($356); Tavern three-course $78 ($156)",
+     "https://www.gramercytavern.com/dining-room-menu/", "Re-read from the official menu page on 2026-11-27", "Verified"),
+    ("Cote menu prices (addendum)", "Butcher's Feast $84/guest ($168); Steak Omakase $225/guest ($450)",
+     "https://www.cotekoreansteakhouse.com/nycdinnermenu", "Re-read from the official Flatiron dinner menu on 2026-11-27", "Verified"),
+    ("Masa menu prices (addendum)", "Lunch from $495; Table Omakase $750; Hinoki Counter $950 -> $990 / $1,500 / $1,900 for two",
+     "https://www.masanyc.com/menus", "Re-read from the official menus page on 2026-11-27", "Verified"),
+    ("Saga menu prices (addendum)", "6-Course $215; 10-Course $315; Kitchen Table $365 -> $430 / $630 / $730 for two",
+     "https://www.saga-nyc.com/menus", "Re-read from the official menus page on 2026-11-27", "Verified"),
+    ("Kochi menu price (addendum)", "Tasting Menu $145/guest -> $290 for two",
+     "https://www.kochinyc.com/menu/", "Re-read from the official menu page on 2026-11-27", "Verified"),
+    ("Hotel bed/bath verification, 5 hotels (addendum)", "MADE (1 king bed in most rooms, private bathroom, 44 W 29th St); The Marlton (one queen bed per room, private marble bathrooms); Soho Grand (Soho King, king bed, in-room bathroom with walk-in rain shower, 310 W Broadway); Arlo SoHo (City Queen, queen bed, in-room bathroom with glass rain shower); The Wall Street Hotel (Pearl Street King, king bed, in-room bathroom with heated flooring); The Fifth Avenue Hotel (Mansion Double Queen, two queen beds, bath with separate shower)",
+     "https://madehotels.com/rooms/",
+     "Each room/bath line read on the hotel's own official page on 2026-11-27 (session arena/dbf0d1f0-nyfun2): madehotels.com/rooms/ + /faqs/, marltonhotel.com/, sohogrand.com/accommodations/soho-king/, arlohotels.com/soho/rooms/city-queen/, thewallsthotel.com/rooms-and-suites/rooms/pearl-street-king, thefifthavenuehotel.com/accommodations/the-mansion/. F26 falls from 7 to 1 (The Maritime only)", "Verified"),
+    ("Maritime Hotel official site unreadable (addendum)", "No room/bath value published: official site returned empty/error pages to the fetcher",
+     "https://themaritimehotel.com/",
+     "Attempted 2026-11-27 (session arena/dbf0d1f0-nyfun2): homepage returned image-only content; /rooms/ and /accommodations/ failed, and www.themaritimehotel.com/rooms-and-suites/ failed. Aggregator snippets were NOT used as an official source; the row stays blank and flagged", "Carried"),
+    ("Torrisi hours and address (addendum)", "Mon 17:00-23:00; Tue-Wed 11:30-14:00; Thu-Sat 11:30-14:00 and 17:00-23:00; Sun closed; 275 Mulberry St.",
+     "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/torrisi",
+     "Transcribed from the official MICHELIN detail page on 2026-11-27 (session arena/dbf0d1f0-nyfun2); fills the previously blank hours/address", "Verified"),
 ]
 
 
@@ -777,7 +835,7 @@ def build_decisions(rest, hot, act):
                                     "bathroom and can be booked against the requirement; the others must be verified first.")
     q["Q3"]["whatWeKnow"] = (f"{hot['qualified']} of {hot['rows']} properties publish a queen/king bed plus a private bathroom "
                              "on an official property page (or a property page the kits quote directly). "
-                             f"{hot['rows'] - hot['qualified']} do not, and are excluded from the recommendation (flag F26).")
+                             f"{hot['rows'] - hot['qualified']} {'does' if hot['rows'] - hot['qualified'] == 1 else 'do'} not, and {'is' if hot['rows'] - hot['qualified'] == 1 else 'are'} excluded from the recommendation (flag F26).")
     q["Q5"]["whatWeKnow"] = ("25 hotel-to-MICHELIN-cluster legs were measured with Google Maps transit on 2026-11-25 "
                              "(17:14-17:31 ET) across five origin hotels; one of those five was dropped from the "
                              "shortlist for having no official source, leaving four published hotels with measured "
@@ -853,9 +911,11 @@ def build_decisions(rest, hot, act):
          "title": "This session could not re-read every official page",
          "detail": ("The sandbox reaches GitHub directly and external pages through a proxied fetch/search channel. "
                     "The initial integration re-ran 16 checks on 2026-11-26 (MICHELIN filter counters, 15 star levels, 5 menus, Met and MoMA, "
-                    "the Lunar New Year parade, Hyatt room types). The current verification log has 25 records (22 verified, 3 carried), "
-                    "including subsequent official re-reads of Bryant Park and Wollman Rink pages; F27 records that resolution. "
-                    "Booking.com property detail pages still could not be re-quoted, so dated hotel totals remain carried captures. "
+                    "the Lunar New Year parade, Hyatt room types). The current verification log has 46 records (42 verified, 4 carried): "
+                    "25 records from 2026-11-26 and 21 addendum records from 2026-11-27. Subsequent official re-reads resolved "
+                    "the earlier Bryant Park and Wollman Rink limitation (F27); the current hotel bed/bath and activity rereads are "
+                    "linked in the addendum. Booking.com property detail pages still could not be re-quoted, so dated hotel totals "
+                    "remain carried captures. "
                     "Each verification row states its status and source."),
          "source": "data/verification.json"},
         {"id": "F22", "severity": "Medium",
@@ -887,11 +947,14 @@ def build_decisions(rest, hot, act):
                     "expire; the search page for the window did load, confirming the dates remain bookable."),
          "source": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price"},
         {"id": "F26", "severity": "Medium",
-         "title": f"{hot['rows'] - hot['qualified']} shortlisted hotels still lack a verified bed and bathroom line",
-         "detail": ("The Maritime, MADE, The Marlton, Soho Grand, Arlo Soho and The Wall Street Hotel do not have a "
-                    "published queen/king + private-bathroom statement in the sources checked, so they are listed for "
-                    "completeness and excluded from the recommendation rather than assumed to comply. (The Benjamin was "
-                    "measured but dropped entirely: no official source for its room.)"),
+         "title": f"{hot['rows'] - hot['qualified']} shortlisted hotel{'s' if hot['rows'] - hot['qualified'] != 1 else ''} still lack{'s' if hot['rows'] - hot['qualified'] == 1 else ''} a verified bed and bathroom line",
+         "detail": ("On 2026-11-27 (session arena/dbf0d1f0-nyfun2) MADE, The Marlton, Soho Grand, Arlo SoHo and The "
+                    "Wall Street Hotel were verified against each hotel's own official page (queen/king bed plus "
+                    "private/in-room bathroom), so only The Maritime Hotel remains unverified: its official site "
+                    "(themaritimehotel.com) returned empty/error pages to the fetcher, and aggregator snippets were "
+                    "not accepted as an official source. The Maritime is listed for completeness and excluded from "
+                    "the recommendation rather than assumed to comply. (The Benjamin was measured but dropped "
+                    "entirely: no official source for its room.)"),
          "source": "data/hotels.json"},
         {"id": "F27", "severity": "Low",
          "title": "RESOLVED 2026-11-26: two winter-activity official pages re-read successfully",
@@ -938,6 +1001,8 @@ def build_verification(rest, hot, act):
     data = {
         "checkedOn": "2026-11-26",
         "session": "arena/9bc6abed-nyfun2",
+        "addendumCheckedOn": "2026-11-27",
+        "addendumSession": "arena/dbf0d1f0-nyfun2 (task T27)",
         "methodNote": ("This session's sandbox reaches GitHub directly and external sites through a proxied "
                        "fetch/search channel. Pages that block that channel are recorded as unreachable rather "
                        "than assumed. A value is only marked Verified when the official page itself was read today."),

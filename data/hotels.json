@@ -9,7 +9,7 @@
   "hotelCount": 16,
   "pricedCount": 8,
   "measuredCount": 4,
-  "qualifiedCount": 10,
+  "qualifiedCount": 15,
   "droppedWithoutSource": [
    "The Benjamin Royal Sonesta New York"
   ]
@@ -667,21 +667,21 @@
   },
   {
    "name": "The Fifth Avenue Hotel",
-   "area": "NoMad / Fifth Avenue",
+   "area": "NoMad (Fifth Avenue at 28th Street per official page)",
    "address": "1 West 28th Street (250 Fifth Avenue), New York, NY 10001",
-   "room": "City King (285 sq ft) or Corner King (375 sq ft, Duxiana king bed, max 2 guests)",
-   "privateBathroom": "Verified: Private marble bathroom with walk-in shower, Dyson hair dryer & butler service (thefifthavenuehotel.com)",
+   "room": "Mansion Double Queen (two queen beds; 575 sq ft); Mansion Suite (king bed; 575 sq ft); Fifth Avenue Suite (king bed; 795 sq ft)",
+   "privateBathroom": "Private in-suite bathroom (official: bath with separate shower and double vanity; Mansion Suite marble bath)",
    "keyStatus": "2 MICHELIN Keys (icons on Michelin listing)",
    "guestScore": "20 / 20 (Michelin guest score)",
    "publishedRate": "",
    "sevenNightTotal": "",
    "cheapestWindow": "",
-   "officialUrl": "https://www.thefifthavenuehotel.com/",
+   "officialUrl": "https://www.thefifthavenuehotel.com/accommodations/the-mansion/",
    "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-fifth-avenue-hotel-13538",
    "rateSourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-fifth-avenue-hotel-13538",
    "flags": [
-    "Address, room and bath not verified",
-    "7-night total unverified",
+    "Street number not captured from the official page; 7-night total unverified (no dated official rate read)",
+    "Room and bath verified 2026-11-27 on the official Mansion page (arena/dbf0d1f0-nyfun2)",
     "On-site Guide restaurant Café Carmellini",
     "Dated 7-night total, specific room-tier bed/bath line, and video review left blank pending direct 2027 rate check.",
     "Resolves root-site flag on address/room/bath via official thefifthavenuehotel.com/accommodations/; dated 7-night Feb 2027 price remains blank"
@@ -689,12 +689,9 @@
    "provenance": {
     "row": "canonical data/hotels.json",
     "address": "arena/c1cf7b23-nyfun2",
-    "officialUrl": "arena/c1cf7b23-nyfun2",
     "amenities": "arena/c1cf7b23-nyfun2",
     "michelinWithin60": "arena/c1cf7b23-nyfun2",
     "clusterTransit": "arena/c1cf7b23-nyfun2",
-    "room": "arena/657520df-nyfun2",
-    "privateBathroom": "arena/657520df-nyfun2",
     "taxBasis": "arena/657520df-nyfun2",
     "rateSourceUrl": "arena/657520df-nyfun2",
     "cancellation": "arena/657520df-nyfun2"
@@ -715,6 +712,156 @@
    "rank": 10
   },
   {
+   "name": "MADE Hotel",
+   "area": "NoMad",
+   "address": "44 West 29th Street, New York, NY (official FAQ/rooms pages)",
+   "room": "Standard / Studio / Superior / Deluxe / Balcony Deluxe (1 king bed); Double (2 full); Accessible (queen)",
+   "privateBathroom": "Private bathroom (official FAQ: every room features a private bathroom)",
+   "keyStatus": "",
+   "guestScore": "18.9 / 20 (Michelin guest score)",
+   "publishedRate": "",
+   "sevenNightTotal": "",
+   "cheapestWindow": "",
+   "officialUrl": "https://madehotels.com/rooms/",
+   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/made-hotel-8712",
+   "rateSourceUrl": "",
+   "flags": [
+    "7-night rate not verified on an official page; room, bathroom, address and area verified 2026-11-27 (arena/dbf0d1f0-nyfun2)"
+   ],
+   "provenance": {
+    "row": "canonical data/hotels.json"
+   },
+   "transit": {
+    "measured": false,
+    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
+   },
+   "qualifies": true,
+   "pricedTier": "",
+   "verifiedToday": false,
+   "verifyStatus": "carried capture (2026-11-25)",
+   "rank": 11
+  },
+  {
+   "name": "The Marlton Hotel",
+   "area": "Greenwich Village (address not verified)",
+   "address": "",
+   "room": "Queen Deluxe / Petite Queen / Queen (one queen bed each; Queen Deluxe approx. 125-150 sq ft)",
+   "privateBathroom": "Private bathroom (official: private marble bathrooms)",
+   "keyStatus": "",
+   "guestScore": "18.8 / 20 (Michelin guest score)",
+   "publishedRate": "",
+   "sevenNightTotal": "",
+   "cheapestWindow": "",
+   "officialUrl": "https://marltonhotel.com/",
+   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-marlton-hotel-7089",
+   "rateSourceUrl": "",
+   "flags": [
+    "Address and 7-night rate not verified on an official page; room and bathroom verified 2026-11-27 (arena/dbf0d1f0-nyfun2)"
+   ],
+   "provenance": {
+    "row": "canonical data/hotels.json"
+   },
+   "transit": {
+    "measured": false,
+    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
+   },
+   "qualifies": true,
+   "pricedTier": "",
+   "verifiedToday": false,
+   "verifyStatus": "carried capture (2026-11-25)",
+   "rank": 12
+  },
+  {
+   "name": "Soho Grand Hotel",
+   "area": "SoHo",
+   "address": "310 West Broadway, New York, NY 10013",
+   "room": "Soho King (king bed)",
+   "privateBathroom": "Private in-room bathroom with walk-in rain shower",
+   "keyStatus": "",
+   "guestScore": "18.4 / 20 (Michelin guest score)",
+   "publishedRate": "",
+   "sevenNightTotal": "",
+   "cheapestWindow": "",
+   "officialUrl": "https://www.sohogrand.com/accommodations/soho-king/",
+   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/soho-grand-hotel-3461",
+   "rateSourceUrl": "",
+   "flags": [
+    "7-night rate not verified on an official page; room, bathroom and address verified 2026-11-27 (arena/dbf0d1f0-nyfun2)"
+   ],
+   "provenance": {
+    "row": "canonical data/hotels.json"
+   },
+   "transit": {
+    "measured": false,
+    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
+   },
+   "qualifies": true,
+   "pricedTier": "",
+   "verifiedToday": false,
+   "verifyStatus": "carried capture (2026-11-25)",
+   "rank": 13
+  },
+  {
+   "name": "Arlo Soho",
+   "area": "SoHo",
+   "address": "",
+   "room": "City Queen (queen bed, 150 sq ft, sleeps 2)",
+   "privateBathroom": "Private in-room bathroom with glass rain shower",
+   "keyStatus": "",
+   "guestScore": "18.4 / 20 (Michelin guest score)",
+   "publishedRate": "",
+   "sevenNightTotal": "",
+   "cheapestWindow": "",
+   "officialUrl": "https://arlohotels.com/soho/rooms/city-queen/",
+   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/arlo-soho-8260",
+   "rateSourceUrl": "",
+   "flags": [
+    "Address and 7-night rate not verified on an official page; room and bathroom verified 2026-11-27 (arena/dbf0d1f0-nyfun2)"
+   ],
+   "provenance": {
+    "row": "canonical data/hotels.json"
+   },
+   "transit": {
+    "measured": false,
+    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
+   },
+   "qualifies": true,
+   "pricedTier": "",
+   "verifiedToday": false,
+   "verifyStatus": "carried capture (2026-11-25)",
+   "rank": 14
+  },
+  {
+   "name": "The Wall Street Hotel",
+   "area": "Financial District",
+   "address": "",
+   "room": "Pearl Street King (king bed, 290 sq ft, Sealy Posture-Pedic)",
+   "privateBathroom": "Private in-room bathroom with heated bathroom flooring",
+   "keyStatus": "1 MICHELIN Key (Michelin FiDi travel guide)",
+   "guestScore": "",
+   "publishedRate": "",
+   "sevenNightTotal": "",
+   "cheapestWindow": "",
+   "officialUrl": "https://www.thewallsthotel.com/rooms-and-suites/rooms/pearl-street-king",
+   "sourceUrl": "https://guide.michelin.com/en/article/travel/guide-financial-district-new-york",
+   "rateSourceUrl": "",
+   "flags": [
+    "Address and 7-night rate not verified on an official page; room and bathroom verified 2026-11-27 (arena/dbf0d1f0-nyfun2)"
+   ],
+   "provenance": {
+    "row": "canonical data/hotels.json"
+   },
+   "transit": {
+    "measured": false,
+    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
+   },
+   "qualifies": true,
+   "pricedTier": "",
+   "verifiedToday": false,
+   "verifyStatus": "carried capture (2026-11-25)",
+   "rank": 15
+  },
+  {
    "name": "The Maritime Hotel",
    "area": "Chelsea",
    "address": "",
@@ -729,163 +876,7 @@
    "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-maritime-hotel-32",
    "rateSourceUrl": "",
    "flags": [
-    "Address, room, bath and rate not verified"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json"
-   },
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": false,
-   "eligibilityNote": "Queen+/private-bath specification not confirmed on an official property page: excluded from the recommendation until verified (flag F26).",
-   "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 11
-  },
-  {
-   "name": "MADE Hotel",
-   "area": "Flatiron / NoMad (per Michelin listing order; exact address unverified)",
-   "address": "",
-   "room": "",
-   "privateBathroom": "",
-   "keyStatus": "",
-   "guestScore": "18.9 / 20 (Michelin guest score)",
-   "publishedRate": "",
-   "sevenNightTotal": "",
-   "cheapestWindow": "",
-   "officialUrl": "",
-   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/made-hotel-8712",
-   "rateSourceUrl": "",
-   "flags": [
-    "Address, room, bath and rate not verified",
-    "Area label needs official confirmation"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json"
-   },
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": false,
-   "eligibilityNote": "Queen+/private-bath specification not confirmed on an official property page: excluded from the recommendation until verified (flag F26).",
-   "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 12
-  },
-  {
-   "name": "The Marlton Hotel",
-   "area": "Greenwich Village (address not verified)",
-   "address": "",
-   "room": "",
-   "privateBathroom": "",
-   "keyStatus": "",
-   "guestScore": "18.8 / 20 (Michelin guest score)",
-   "publishedRate": "",
-   "sevenNightTotal": "",
-   "cheapestWindow": "",
-   "officialUrl": "",
-   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/the-marlton-hotel-7089",
-   "rateSourceUrl": "",
-   "flags": [
-    "Address, room, bath and rate not verified"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json"
-   },
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": false,
-   "eligibilityNote": "Queen+/private-bath specification not confirmed on an official property page: excluded from the recommendation until verified (flag F26).",
-   "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 13
-  },
-  {
-   "name": "Soho Grand Hotel",
-   "area": "SoHo",
-   "address": "",
-   "room": "",
-   "privateBathroom": "",
-   "keyStatus": "",
-   "guestScore": "18.4 / 20 (Michelin guest score)",
-   "publishedRate": "",
-   "sevenNightTotal": "",
-   "cheapestWindow": "",
-   "officialUrl": "",
-   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/soho-grand-hotel-3461",
-   "rateSourceUrl": "",
-   "flags": [
-    "Address, room, bath and rate not verified"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json"
-   },
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": false,
-   "eligibilityNote": "Queen+/private-bath specification not confirmed on an official property page: excluded from the recommendation until verified (flag F26).",
-   "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 14
-  },
-  {
-   "name": "Arlo Soho",
-   "area": "SoHo",
-   "address": "",
-   "room": "",
-   "privateBathroom": "",
-   "keyStatus": "",
-   "guestScore": "18.4 / 20 (Michelin guest score)",
-   "publishedRate": "",
-   "sevenNightTotal": "",
-   "cheapestWindow": "",
-   "officialUrl": "",
-   "sourceUrl": "https://guide.michelin.com/en/hotels-stays/nyc/arlo-soho-8260",
-   "rateSourceUrl": "",
-   "flags": [
-    "Address, room, bath and rate not verified"
-   ],
-   "provenance": {
-    "row": "canonical data/hotels.json"
-   },
-   "transit": {
-    "measured": false,
-    "note": "No door-to-door measurement stored for this property; left blank, not estimated."
-   },
-   "qualifies": false,
-   "eligibilityNote": "Queen+/private-bath specification not confirmed on an official property page: excluded from the recommendation until verified (flag F26).",
-   "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
-   "rank": 15
-  },
-  {
-   "name": "The Wall Street Hotel",
-   "area": "Financial District",
-   "address": "",
-   "room": "",
-   "privateBathroom": "",
-   "keyStatus": "1 MICHELIN Key (Michelin FiDi travel guide)",
-   "guestScore": "",
-   "publishedRate": "",
-   "sevenNightTotal": "",
-   "cheapestWindow": "",
-   "officialUrl": "",
-   "sourceUrl": "https://guide.michelin.com/en/article/travel/guide-financial-district-new-york",
-   "rateSourceUrl": "",
-   "flags": [
-    "Address, room, bath and rate not verified"
+    "Address, room, bath and rate not verified. Official site: homepage image-only, /rooms/ and /accommodations/ failed to load, www.themaritimehotel.com/rooms-and-suites/ failed (2026-11-27). Aggregator snippets not used as an official source (arena/dbf0d1f0-nyfun2)"
    ],
    "provenance": {
     "row": "canonical data/hotels.json"

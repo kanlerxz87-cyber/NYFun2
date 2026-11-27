@@ -410,6 +410,34 @@
       "title": "Winter 2027 season cutoffs shrink the bookable window",
       "detail": "Three dated rows were added 2026-11-26 (re-verified against the live official pages): (1) 29th Chinatown Lunar New Year Parade — Sun 21 Feb 2027 only; catchable only on the 7-night 15-22 Feb window, not on the preferred 15-18 Feb trip. (2) Bank of America Winter Village at Bryant Park — The Rink/The Lodge close 28 Feb 2027; Holiday Shops already closed 3 Jan 2027. (3) Wollman Rink — open through 16 Mar 2027 only; Feb 15 2027 is a Community Day restricted to NYC public-sector employees and their families; 16-21 Feb prices at Peak ($28/adult); 22 Feb onwards Off-Peak ($16); 17-23 Mar the rink is closed. Preferred window and any March dates are materially affected.",
       "source": "https://wollmanrinknyc.com/plan/"
+    },
+    {
+      "id": "F30",
+      "severity": "Medium",
+      "title": "Wollman Rink Fri–Sun opening times were wrong in the dataset",
+      "detail": "The official 'Hours of Operation' table (read 2026-11-27) lists Fri–Sat 9:00am–10:00pm and Sun 9:00am–9:00pm. The dataset said 10:00 for Fri–Sun; corrected to the official times. Mon–Tue and Wed–Thu hours matched. Prices re-read on the same page (Off-Peak $16, Peak $28, Prime $40 per adult; skate rental $12; all prices include tax) and match the row.",
+      "source": "https://wollmanrinknyc.com/plan/"
+    },
+    {
+      "id": "F31",
+      "severity": "Low",
+      "title": "Statue of Liberty hours merged two official figures; 26 Nov 2026 Thanksgiving closure not on the NPS page",
+      "detail": "The NPS page (read 2026-11-27) lists the park as 9:00 AM–4:30 PM daily and the Liberty Island Information Center as 9:30 AM–4:30 PM daily. The dataset merged these into one 09:00–16:30 line; split and corrected. The NPS holiday table lists Thanksgiving as 'November 25, 2027 — Closed' under 2026–2027; no 26 Nov 2026 entry is printed, so that date is not confirmed by this source (it is also already past). Christmas 25 Dec 2026 Closed is printed on the page.",
+      "source": "https://www.nps.gov/stli/planyourvisit/hours.htm"
+    },
+    {
+      "id": "F32",
+      "severity": "Medium",
+      "title": "Empire State Building February 2027 hours are not confirmed",
+      "detail": "The official hours page (read 2026-11-27) publishes date-specific hours only for late Nov–early Dec 2026 (for example 9 AM–11 PM on 27–30 Nov; doors close 9 PM on the listed dates). No February 2027 hours were captured. The earlier 'typical winter schedule 10:00–22:00' text was not on the official page and has been removed. Feb 2027 hours stay unverified until the page shows them or the venue confirms.",
+      "source": "https://www.esbnyc.com/visit/hours-of-operation"
+    },
+    {
+      "id": "F33",
+      "severity": "Low",
+      "title": "Bryant Park page still carries 2025–26 ticket wording",
+      "detail": "The official Winter Village page (read 2026-11-27) shows 2026–27 dates (28 Oct 2026–28 Feb 2027; The Rink 8am–10pm; 19 Nov–3 Jan until midnight; 31 Jan 8am–8pm) and matches the row. Its skate-session text still says 'Tickets available for the 2025-2026 season'. Treat the rink's live ticket page as the final check before booking.",
+      "source": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park"
     }
   ]
 }
