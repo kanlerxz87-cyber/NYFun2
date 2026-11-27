@@ -41,7 +41,7 @@ Each row also carries a verification badge:
 | `pages/questions.html` | 13 questions: known / missing / provisional answer / how to close |
 | `pages/suggestions.html` | 17 improvement options with status and effort |
 | `pages/flagged.html` | 29 flags: unverified values, conflicts, irregularities |
-| `pages/verification.html` | Dated log of the 16 checks re-run on 2026-11-26 and what could not be re-read |
+| `pages/verification.html` | Dated log of 25 checks recorded on 2026-11-26 (22 verified, 3 carried), plus what could not be re-read |
 | `pages/sources.html` | Rules, primary-source register, reproduce steps |
 | `pages/repo-audit.html` | What each session contributed, what this integration changed |
 | `pages/compare.html` | The five parallel session kits and their disagreements |
@@ -52,9 +52,10 @@ Each row also carries a verification badge:
   76 Bib Gourmand, 224 Selected.
 - **Dining money:** 25 restaurants have a couple total built from an official menu/FAQ/booking
   page — from **$156** (Gramercy Tavern tavern three-course) and **$168** (Cote Butcher's Feast)
-  to **$1,900** (Masa hinoki counter). Atomix has month-specific November Tock prices on its
-  official source; Atera and Per Se remain blank because their available figures conflict or
-  are deposits rather than menu prices (flag F24). Re-check every price for the actual trip dates.
+  to **$1,900** (Masa hinoki counter). Atera and Per Se stay blank because captures
+  disagree or the page only shows a deposit (flag F24); Atomix carries its verified
+  November Tock price ($848/$628) with December ($990/$704+) flagged; re-check for the actual
+  February–March dates.
 - **Hotels:** 16 candidates; 8 carry a dated 7-night total for two adults for 15–22 Feb 2027 —
   from **$998 all-in** (Eurostars Wall Street, non-refundable) to **$5,220** (The Beekman).
   Best value with free cancellation: **DoubleTree Chelsea, $1,110 all-in**.

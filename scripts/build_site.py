@@ -574,7 +574,7 @@ node --check assets/app.js</pre>
       <li><strong>Duplicate rows in merged kits.</strong> The same hotel appeared as "The Frederick Hotel Tribeca" and "The Frederick Hotel Tribeca, a Small Luxury Hotel"; NYPL, the Met and 9/11 each appeared twice. The merge now keys these and reports rather than duplicates.</li>
       <li><strong>Mis-traced transit risk.</strong> A fuzzy name match initially attached Eurostars Wall Street's transit legs to The Wall Street Hotel. Matching is now key-based, and unmeasured hotels are blank.</li>
       <li><strong>Contested prices stay blank (F24).</strong> Atera and Per Se are not assigned a price; Atomix carries its verified November Tock price ($848/$628) with December ($990/$704+) flagged; Le Bernardin keeps $218 with the $225 alternative shown.</li>
-      <li><strong>Verification is dated, not implied (F21).</strong> 16 checks were re-read on 2026-11-26; everything else is labelled a carried capture.</li>
+      <li><strong>Verification is dated, not implied (F21).</strong> 25 checks were run on 2026-11-26 (22 verified, 3 carried captures); everything else is labelled a carried capture.</li>
     </ul>
   </div>
 
