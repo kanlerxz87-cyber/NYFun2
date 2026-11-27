@@ -218,7 +218,7 @@
     },
     {
       "id": "S7",
-      "title": "Make the site filterable by 'confirmed today / needs re-check'",
+      "title": "Make the site filterable by 'confirmed on the dated check / needs re-check'",
       "detail": "Add a client-side toggle that hides rows carrying flags, so a traveler can see only the fully verified subset at a glance.",
       "effort": "Low",
       "blockedBy": [],

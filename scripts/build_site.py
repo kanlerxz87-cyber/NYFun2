@@ -27,8 +27,8 @@ NAV = [
     ("pages/repo-audit.html", "Repo audit", "repo"),
 ]
 
-CHECKS_DATE = "2026-11-26"
-DATA_DATE = "2026-11-25"
+CHECKS_DATE = json.load(open(D("data", "verification.json"), encoding="utf-8")).get("checkedOn", "date not recorded")
+DATA_DATE = json.load(open(D("data", "restaurants.json"), encoding="utf-8")).get("meta", {}).get("checkedOn", "date not recorded")
 
 
 def load(name):
@@ -98,7 +98,7 @@ def toolbar(search_placeholder, extra=""):
 
 VERIFY_SELECT = ('<select data-filter="verify" aria-label="Filter by verification status">'
                  '<option value="">All rows</option>'
-                 f'<option value="today">Checked today ({CHECKS_DATE})</option>'
+                 f'<option value="today">Checked {CHECKS_DATE}</option>'
                  '<option value="carried">Carried capture (2026-11-25)</option></select>')
 
 
@@ -175,7 +175,7 @@ def build():
     <a class="tile" href="pages/activities.html"><span class="tag">Things to do</span><h3>Activities</h3><p>Official hours, closures, couple costs and the date-critical February events.</p></a>
     <a class="tile" href="pages/itinerary.html"><span class="tag">Plan</span><h3>Itinerary</h3><p>A 7-night skeleton built only from verified opening days, plus the 3-night variant.</p></a>
     <a class="tile" href="pages/questions.html"><span class="tag">Decide</span><h3>Questions & answers</h3><p>What is known, what is missing, and what actually blocks a booking decision.</p></a>
-    <a class="tile" href="pages/suggestions.html"><span class="tag">Improve</span><h3>Suggestions</h3><p>16 options to improve the plan or the site, each with effort, blockers and status.</p></a>
+    <a class="tile" href="pages/suggestions.html"><span class="tag">Improve</span><h3>Suggestions</h3><p>{len(Q["suggestions"])} options to improve the plan or the site, each with effort, blockers and status.</p></a>
     <a class="tile" href="pages/flagged.html"><span class="tag">Audit</span><h3>Flagged for review</h3><p>Every unverified value, conflict and irregularity, with its source, in one list.</p></a>
     <a class="tile" href="pages/verification.html"><span class="tag">Audit</span><h3>Verification log</h3><p>What was re-read on {CHECKS_DATE}, what was only corroborated, and what stayed a carried capture.</p></a>
     <a class="tile" href="pages/sources.html"><span class="tag">Method</span><h3>Sources & rules</h3><p>The verification rules, the primary-source register and how to reproduce the build.</p></a>
@@ -185,7 +185,7 @@ def build():
 
   <h2>How to read a row</h2>
   <div class="card">
-    <p><strong>Status badge.</strong> <span class="pill green">checked today</span> means the official page was read again on {CHECKS_DATE}. <span class="pill gray">carried capture</span> means the value comes from the 2026-11-25 capture and the source link is still there for you to open.</p>
+    <p><strong>Status badge.</strong> <span class="pill green">checked {CHECKS_DATE}</span> means the official page was read again on that date. <span class="pill gray">carried capture</span> means the value comes from the 2026-11-25 capture and the source link is still there for you to open.</p>
     <p><strong>Blank</strong> (<span class="blank">blank — unverified</span>) means no official page confirmed the value. It is never filled with an estimate. Each blank is explained on the Flagged page.</p>
     <p><strong>Route</strong> links open live Google Maps transit directions from the hotel you pick on the Hotels page. Stored minutes only appear where a real routing result was captured.</p>
     <p><strong>Social links</strong> are labelled by platform; "review" links are third-party and are not treated as endorsements.</p>
@@ -257,7 +257,7 @@ def build():
 """
     pages["executive-summary"] = shell(
         "summary", "Executive summary", "Decision brief", "Executive summary",
-        "What the verified sources support today, what they do not, and the order in which to decide.",
+        "What the sources verified on the dated checks support, what remains unknown, and the order in which to decide.",
         exec_body, depth=1)
 
     # ------------------------------------------------------------- michelin
@@ -337,7 +337,7 @@ def build():
   <div class="card">
     <p><strong>Now, at a cancellable rate.</strong> Two of the priced hotels were running 30–39% "Black Friday" promotions on 25 Nov 2026 (DoubleTree Chelsea, Arlo NoMad). A free-cancellation, $0-prepayment hold captures that price without risking a non-refundable commitment before the 14 Dec 2026 MICHELIN announcement and before the 3-vs-7-night decision.</p>
     <p><strong>Then re-shop</strong> in early February 2027 (14–30 days out) and around the ceremony. No official source promises a future price drop, so the cancellable hold is the risk cap, not a prediction.</p>
-    <p><strong>Re-quote before paying:</strong> the totals here are third-party booking-engine snapshots captured 2026-11-25, not hotel quotes (flag F25). Booking.com property pages refused this session's fetcher on {CHECKS_DATE}, so they could not be re-quoted today.</p>
+    <p><strong>Re-quote before paying:</strong> the totals here are third-party booking-engine snapshots captured 2026-11-25, not hotel quotes (flag F25). Booking.com property pages refused this session's fetcher during the 2026-11-26 verification pass, so the stored totals remain carried snapshots.</p>
   </div>
 
   <h2>Why the ranking is not just "count of restaurants within an hour"</h2>
@@ -491,9 +491,9 @@ def build():
       <li><strong>Booking.com property pages</strong> returned an error to the fetcher, so the dated hotel totals were not re-quoted. The Manhattan search page for 15–22 Feb 2027 did load, confirming the dates are bookable.</li>
       <li><strong>bryantpark.org</strong> and <strong>wollmanrinknyc.com</strong> could not be fetched; season dates and prices are corroborated by at least three independent 2026–27 listings.</li>
       <li><strong>Google Maps</strong> cannot be queried programmatically here, so the 35 stored transit legs (25 hotel→cluster, 10 hotel→activity) remain the 2026-11-25 capture. Every row links a live directions query.</li>
-      <li><strong>Individual MICHELIN detail pages</strong> were spot-checked (15 star levels plus the filter counters), not all 72 one by one; the census itself was re-read today.</li>
+      <li><strong>Individual MICHELIN detail pages</strong> were spot-checked (15 star levels plus the filter counters), not all 72 one by one; the census itself was re-read on 2026-11-26.</li>
     </ul>
-    <p class="small muted">The full machine-readable log is <a href="../data/verification.json" target="_blank" rel="noopener noreferrer">data/verification.json ↗</a>.</p>
+    <p class="small muted">The full machine-readable log is <a href="../data/verification.json" target="_blank" rel="noopener noreferrer">data/verification.json ↗</a>. The 2026-11-27 local consistency audit (not a fresh source reread) is <a href="../research/verification-2026-11-27.md">here ↗</a>.</p>
   </div>
 """
     pages["verification"] = shell(
@@ -570,7 +570,7 @@ node --check assets/app.js</pre>
   <div class="card">
     <ul>
       <li><strong>Stale headline counts (F22).</strong> The previous front page claimed 20 restaurant rows, 12 activities and 10 hotels while its own data held 72, 12 and 12; README said 21. All counts are now rendered from JSON at load, and the static HTML matches.</li>
-      <li><strong>Kit rosters were not the official census (F23).</strong> 14 kit venues sit outside the 69-star roster, and one kit carried 3 starred names absent from today's live list. None were added; all are in <code>data/conflicts.json</code>.</li>
+      <li><strong>Kit rosters were not the official census (F23).</strong> 14 kit venues sit outside the 69-star roster, and one kit carried 3 starred names absent from the live list checked on 2026-11-25. None were added; all are in <code>data/conflicts.json</code>.</li>
       <li><strong>Duplicate rows in merged kits.</strong> The same hotel appeared as "The Frederick Hotel Tribeca" and "The Frederick Hotel Tribeca, a Small Luxury Hotel"; NYPL, the Met and 9/11 each appeared twice. The merge now keys these and reports rather than duplicates.</li>
       <li><strong>Mis-traced transit risk.</strong> A fuzzy name match initially attached Eurostars Wall Street's transit legs to The Wall Street Hotel. Matching is now key-based, and unmeasured hotels are blank.</li>
       <li><strong>Contested prices stay blank (F24).</strong> Atera and Per Se are not assigned a price; Atomix carries its verified November Tock price ($848/$628) with December ($990/$704+) flagged; Le Bernardin keeps $218 with the $225 alternative shown.</li>
@@ -610,7 +610,7 @@ node --check assets/app.js</pre>
              "Same census gap; Atomix/Atera price captures conflict with the other kit."),
             ("sessions/33cfdba4/", "72-row roster · 25 transit legs · 5 price windows",
              "The only measured transit matrix, which is what makes the hotel ranking evidence-based.",
-             "Carried 3 starred names absent from today's live list."),
+             "Carried 3 starred names absent from the live list checked on 2026-11-25."),
             ("sessions/215c2a25/", "Independent early dashboard",
              "A third independent reading of the same sources for comparison.",
              "Earlier capture; superseded by the roster above."),

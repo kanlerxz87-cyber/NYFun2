@@ -121,6 +121,71 @@ for q in dec["questions"]:
         if not str(s).startswith("http"):
             add(errors, f"questions [{q['id']}]: source is not a URL")
 
+# ----------------------------------------- documentation / coverage consistency
+restaurants = docs["data/restaurants.json"]["items"]
+hotels = docs["data/hotels.json"]["items"]
+activities = docs["data/activities.json"]["items"]
+expected_coverage = {
+    "restaurants": {
+        "rows": len(restaurants),
+        "withOfficialSource": sum(bool(r.get("sourceUrl") or r.get("officialUrl")) for r in restaurants),
+        "withPrice": sum(bool(r.get("priceTwoAdults")) for r in restaurants),
+        "withHours": sum(bool(r.get("hours")) for r in restaurants),
+        "withSocial": sum(bool(r.get("social")) for r in restaurants),
+        "withAddress": sum(bool(r.get("address")) for r in restaurants),
+    },
+    "hotels": {
+        "rows": len(hotels),
+        "priced": sum(bool(h.get("sevenNightPreTax") or h.get("sevenNightAllIn")) for h in hotels),
+        "measuredTransit": sum(bool(h.get("transit", {}).get("measured")) for h in hotels),
+    },
+    "activities": {
+        "rows": len(activities),
+        "withHours": sum(bool(a.get("hours")) for a in activities),
+        "withSocial": sum(bool(a.get("social")) for a in activities),
+        "withCost": sum(bool(a.get("costTwoAdults")) for a in activities),
+    },
+}
+ver_for_coverage = json.loads((ROOT / "data/verification.json").read_text(encoding="utf-8"))
+for category, fields in expected_coverage.items():
+    for field, actual in fields.items():
+        recorded = ver_for_coverage.get("coverage", {}).get(category, {}).get(field)
+        if recorded != actual:
+            add(errors, f"verification.coverage.{category}.{field}: recorded {recorded!r}, data has {actual}")
+
+index_text = (ROOT / "index.html").read_text(encoding="utf-8")
+for key, expected in {
+    "restaurants": len(restaurants),
+    "priced": sum(bool(r.get("priceTwoAdults")) for r in restaurants),
+    "hotels": len(hotels),
+    "hotelPriced": sum(bool(h.get("sevenNightPreTax") or h.get("sevenNightAllIn")) for h in hotels),
+    "activities": len(activities),
+    "flags": len(dec["flags"]),
+}.items():
+    match = re.search(rf'data-count="{re.escape(key)}">(\d+)', index_text)
+    if not match or int(match.group(1)) != expected:
+        add(errors, f"index.html: static data-count {key} does not match canonical data ({expected})")
+
+readme = (ROOT / "README.md").read_text(encoding="utf-8")
+for needle in (
+    f"**Dining money:** {expected_coverage['restaurants']['withPrice']} restaurants have",
+    f"`pages/flagged.html` | {len(dec['flags'])} flags:",
+    f"`data/decisions.json` | {len(dec['questions'])} questions, {len(dec['suggestions'])} suggestions, {len(dec['flags'])} flags",
+):
+    if needle not in readme:
+        add(errors, f"README.md: missing or stale canonical count text: {needle}")
+
+flag_page = (ROOT / "pages/flagged.html").read_text(encoding="utf-8")
+if f"<strong>{len(dec['flags'])} flags</strong>" not in flag_page:
+    add(errors, "pages/flagged.html: headline flag count does not match decisions.json")
+suggestion_page = (ROOT / "pages/suggestions.html").read_text(encoding="utf-8")
+if f"<strong>{len(dec['suggestions'])} suggestions</strong>" not in suggestion_page:
+    add(errors, "pages/suggestions.html: headline suggestion count does not match decisions.json")
+for path in [ROOT / "README.md", ROOT / "index.html", *sorted((ROOT / "pages").glob("*.html")), ROOT / "assets/app.js", ROOT / "scripts/build_data.py", ROOT / "scripts/build_site.py", *sorted((ROOT / "data").glob("*.json"))]:
+    text = path.read_text(encoding="utf-8")
+    if re.search(r"checked today|re-read today|re-quoted today", text, re.I):
+        add(errors, f"{path.relative_to(ROOT)}: relative verification wording becomes stale; use a date")
+
 # ------------------------------------------------------------ verification log
 ver = json.loads((ROOT / "data/verification.json").read_text(encoding="utf-8"))
 for c in ver["checks"]:
