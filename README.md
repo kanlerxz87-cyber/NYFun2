@@ -25,7 +25,7 @@ Each row also carries a verification badge:
 
 | Badge | Meaning |
 |---|---|
-| **checked 2026-11-26** | the official page was re-read on that date; this is a historical verification marker, not a claim of a fresh check today |
+| **checked YYYY-MM-DD** | the row's official source was re-read on the date shown; the latest supplemental activity audit is 2026-11-27 |
 | **carried capture** | the value comes from the 2026-11-25 capture; the source link is on the row |
 
 ## Pages
@@ -40,8 +40,8 @@ Each row also carries a verification badge:
 | `pages/itinerary.html` | 7-night skeleton from verified opening days, plus the 3-night variant |
 | `pages/questions.html` | 13 questions: known / missing / provisional answer / how to close |
 | `pages/suggestions.html` | 17 improvement options with status and effort |
-| `pages/flagged.html` | 29 flags: unverified values, conflicts, irregularities |
-| `pages/verification.html` | 25 dated verification records, distinguishing direct reads, corroboration, and carried captures from 2026-11-26 |
+| `pages/flagged.html` | 33 flags: unverified values, conflicts, irregularities |
+| `pages/verification.html` | 25 broad verification records from 2026-11-26 plus a linked, row-by-row official activity re-check from 2026-11-27 |
 | `pages/sources.html` | Rules, primary-source register, reproduce steps |
 | `pages/repo-audit.html` | What each session contributed, what this integration changed |
 | `pages/compare.html` | The five parallel session kits and their disagreements |
@@ -52,9 +52,9 @@ Each row also carries a verification badge:
   76 Bib Gourmand, 224 Selected.
 - **Dining money:** 25 restaurants have a couple total built from an official menu/FAQ/booking
   page — from **$156** (Gramercy Tavern tavern three-course) and **$168** (Cote Butcher's Feast)
-   to **$1,900** (Masa hinoki counter). Atomix's November rate is included from its official Tock
-   capture; Atera's price remains contested and Per Se publishes deposits rather than a full menu
-   price, so those stay blank (flag F24).
+  to **$1,900** (Masa hinoki counter). Atomix's November rate is included from its official Tock
+  capture ($848/$628; December $990/$704+); Atera's price remains contested and Per Se publishes
+  deposits rather than a full menu price, so those stay blank (flag F24).
 - **Hotels:** 16 candidates; 8 carry a dated 7-night total for two adults for 15–22 Feb 2027 —
   from **$998 all-in** (Eurostars Wall Street, non-refundable) to **$5,220** (The Beekman).
   Best value with free cancellation: **DoubleTree Chelsea, $1,110 all-in**.
@@ -76,7 +76,7 @@ Each row also carries a verification badge:
 | `data/restaurants.json` | 72 rows, per-field `provenance`, verification badge |
 | `data/hotels.json` | 16 rows + 5 booking windows + transit objects + ranking |
 | `data/activities.json` | 18 rows with hours, exceptions, costs, socials |
-| `data/decisions.json` | 13 questions, 17 suggestions, 29 flags |
+| `data/decisions.json` | 13 questions, 17 suggestions, 33 flags |
 | `data/verification.json` | Dated source-verification log and coverage counters |
 | `research/verification-2026-11-27.md` | Local consistency audit for this update; explicitly not a fresh external-source recheck |
 | `data/conflicts.json` | Every kit disagreement and out-of-census venue name |

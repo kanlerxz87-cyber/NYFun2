@@ -74,9 +74,10 @@ def shell(active, title, eyebrow, h1, lede, body, depth=0, description=""):
   <p class="lede">{lede}</p>
 {body}
   <footer class="foot">
-    <p><strong>Data as captured:</strong> <span data-checked>2026-11-26</span> ·
-    <strong>Official-source verification:</strong> {CHECKS_DATE} ·
-    <strong>Roster census:</strong> {DATA_DATE}</p>
+    <p><strong>Broad verification register:</strong> {CHECKS_DATE} ·
+    <strong>Latest row-specific re-check:</strong> 2026-11-27 (activity audit) ·
+    <strong>Roster census:</strong> {DATA_DATE} ·
+    <a href="{prefix}research/review-2026-11-27.md">Activity audit ↗</a></p>
     <p>Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> ·
     Coordination board: <a href="{prefix}COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a> ·
     <a href="{prefix}pages/flagged.html">Flagged for review</a> ·
@@ -98,7 +99,7 @@ def toolbar(search_placeholder, extra=""):
 
 VERIFY_SELECT = ('<select data-filter="verify" aria-label="Filter by verification status">'
                  '<option value="">All rows</option>'
-                 f'<option value="today">Checked {CHECKS_DATE}</option>'
+                 '<option value="today">Verified rows (date shown per row)</option>'
                  '<option value="carried">Carried capture (2026-11-25)</option></select>')
 
 
@@ -185,7 +186,7 @@ def build():
 
   <h2>How to read a row</h2>
   <div class="card">
-    <p><strong>Status badge.</strong> <span class="pill green">checked {CHECKS_DATE}</span> means the official page was read again on that date. <span class="pill gray">carried capture</span> means the value comes from the 2026-11-25 capture and the source link is still there for you to open.</p>
+    <p><strong>Status badge.</strong> <span class="pill green">checked YYYY-MM-DD</span> shows the date on which the row's source was re-read. The wider verification register is dated {CHECKS_DATE}; the activity audit includes later 2026-11-27 row checks. <span class="pill gray">carried capture</span> means the value comes from the 2026-11-25 capture and the source link is still there for you to open.</p>
     <p><strong>Blank</strong> (<span class="blank">blank — unverified</span>) means no official page confirmed the value. It is never filled with an estimate. Each blank is explained on the Flagged page.</p>
     <p><strong>Route</strong> links open live Google Maps transit directions from the hotel you pick on the Hotels page. Stored minutes only appear where a real routing result was captured.</p>
     <p><strong>Social links</strong> are labelled by platform; "review" links are third-party and are not treated as endorsements.</p>
@@ -485,11 +486,14 @@ def build():
   <h2>Checks re-run on {CHECKS_DATE}</h2>
   <div data-table="verification"></div>
 
-  <h2>What this session could not re-read</h2>
+  <h2>Supplemental official-source activity re-check · 2026-11-27</h2>
+  <div class="notice info"><strong>12 activity-related rows were re-read by a separate session.</strong> Eight matched fully or partly; four discrepancies were corrected or flagged (Wollman hours F30, Statue of Liberty hours/date F31, Empire State Building Feb 2027 hours F32, Bryant Park stale ticket wording F33). See the <a href="../research/review-2026-11-27.md">row-by-row source review ↗</a>. A row badge shows its own check date.</div>
+
+  <h2>Limits in the broader 2026-11-26 verification pass</h2>
   <div class="card">
     <ul>
-      <li><strong>Booking.com property pages</strong> returned an error to the fetcher, so the dated hotel totals were not re-quoted. The Manhattan search page for 15–22 Feb 2027 did load, confirming the dates are bookable.</li>
-      <li><strong>bryantpark.org</strong> and <strong>wollmanrinknyc.com</strong> could not be fetched; season dates and prices are corroborated by at least three independent 2026–27 listings.</li>
+      <li><strong>Booking.com property pages</strong> returned an error to that fetcher, so the dated hotel totals were not re-quoted. The Manhattan search page for 15–22 Feb 2027 did load, confirming the dates were bookable at that capture.</li>
+      <li><strong>bryantpark.org</strong> and <strong>wollmanrinknyc.com</strong> were unreadable in the 2026-11-26 broad pass, but were subsequently re-read on their official pages by later sessions; 2026-27 schedule corrections and source notes are in the activity review above.</li>
       <li><strong>Google Maps</strong> cannot be queried programmatically here, so the 35 stored transit legs (25 hotel→cluster, 10 hotel→activity) remain the 2026-11-25 capture. Every row links a live directions query.</li>
       <li><strong>Individual MICHELIN detail pages</strong> were spot-checked (15 star levels plus the filter counters), not all 72 one by one; the census itself was re-read on 2026-11-26.</li>
     </ul>
@@ -574,7 +578,7 @@ node --check assets/app.js</pre>
       <li><strong>Duplicate rows in merged kits.</strong> The same hotel appeared as "The Frederick Hotel Tribeca" and "The Frederick Hotel Tribeca, a Small Luxury Hotel"; NYPL, the Met and 9/11 each appeared twice. The merge now keys these and reports rather than duplicates.</li>
       <li><strong>Mis-traced transit risk.</strong> A fuzzy name match initially attached Eurostars Wall Street's transit legs to The Wall Street Hotel. Matching is now key-based, and unmeasured hotels are blank.</li>
       <li><strong>Contested prices stay blank (F24).</strong> Atera and Per Se are not assigned a price; Atomix carries its verified November Tock price ($848/$628) with December ($990/$704+) flagged; Le Bernardin keeps $218 with the $225 alternative shown.</li>
-      <li><strong>Verification is dated, not implied (F21).</strong> 16 checks were re-read on 2026-11-26; everything else is labelled a carried capture.</li>
+      <li><strong>Verification is dated, not implied (F21).</strong> 25 checks were run on 2026-11-26 (22 verified, 3 carried captures); everything else is labelled a carried capture.</li>
     </ul>
   </div>
 

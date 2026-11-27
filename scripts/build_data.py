@@ -107,6 +107,14 @@ VERIFIED_TODAY_ACTIVITIES = {
     "29th Chinatown Lunar New Year Parade & Festival (2027)",
 }
 VERIFIED_TODAY_HOTELS = {"Hyatt Place New York / Chelsea"}
+# Later row-specific source rereads supersede the broader 2026-11-26 capture date.
+VERIFIED_ON_RESTAURANTS = {"Sushi Sho": "2026-11-27"}
+VERIFIED_ON_ACTIVITIES = {
+    "Statue of Liberty National Monument + Ellis Island": "2026-11-27",
+    "Wollman Rink in Central Park": "2026-11-27",
+    "Empire State Building Observatory": "2026-11-27",
+    "Bank of America Winter Village at Bryant Park (The Rink & The Lodge)": "2026-11-27",
+}
 
 
 def build_restaurants():
@@ -223,8 +231,10 @@ def build_restaurants():
         # verification status label used by the site filter
         if row["name"] in VERIFIED_TODAY_RESTAURANTS:
             row["verifiedToday"] = True
-        if row.get("verifiedToday"):
-            row["verifyStatus"] = "checked 2026-11-26"
+        checked_on = VERIFIED_ON_RESTAURANTS.get(row["name"], "2026-11-26" if row.get("verifiedToday") else None)
+        if checked_on:
+            row["verifiedToday"] = True
+            row["verifyStatus"] = f"checked {checked_on}"
         else:
             row["verifyStatus"] = "carried capture (2026-11-25)"
 
@@ -611,7 +621,10 @@ def build_activities():
             row["social"] = merged_social
         if row["name"] in VERIFIED_TODAY_ACTIVITIES:
             row["verifiedToday"] = True
-        row["verifyStatus"] = "checked 2026-11-26" if row.get("verifiedToday") else "carried capture (2026-11-25)"
+        checked_on = VERIFIED_ON_ACTIVITIES.get(row["name"], "2026-11-26" if row.get("verifiedToday") else None)
+        if checked_on:
+            row["verifiedToday"] = True
+        row["verifyStatus"] = f"checked {checked_on}" if checked_on else "carried capture (2026-11-25)"
         out.append(row)
 
     # add kit-only activities that materially expand the plan
