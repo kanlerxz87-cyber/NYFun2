@@ -41,7 +41,7 @@ Each row also carries a dated verification badge:
 | `pages/questions.html` | 13 questions: known / missing / provisional answer / how to close |
 | `pages/suggestions.html` | 17 improvement options with status and effort |
 | `pages/flagged.html` | 33 flags: unverified values, conflicts, irregularities |
-| `pages/verification.html` | Dated log of the 25 checks re-run on 2026-11-26, plus 21 addendum checks on 2026-11-27, and what could not be re-read |
+| `pages/verification.html` | Dated log of 25 baseline records from 2026-11-26 plus 21 addendum checks from 2026-11-27; per-row status shows verified vs carried |
 | `pages/sources.html` | Rules, primary-source register, reproduce steps |
 | `pages/repo-audit.html` | What each session contributed, what this integration changed |
 | `pages/compare.html` | The five parallel session kits and their disagreements |
