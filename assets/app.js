@@ -16,9 +16,17 @@
   const socialLinks = (arr) => (arr && arr.length)
     ? `<div class="socials">${arr.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" title="${esc(s.note || '')}">${esc(s.platform)}</a>`).join('')}</div>`
     : '<span class="blank">none found</span>';
-  const badge = (row) => row.verifiedToday
-    ? '<span class="pill green">checked today</span>'
-    : '<span class="pill gray">carried capture</span>';
+  const badge = (row) => {
+    const status = String(row.verifyStatus || '');
+    const date = status.match(/20\d{2}-\d{2}-\d{2}/);
+    const scope = row.verificationNote || '';
+    if (row.verifiedToday) {
+      const label = date ? `checked ${date[0]}` : 'checked (date not stated)';
+      return `<span class="pill green"${scope ? ` title="${esc(scope)}"` : ''}>${label}</span>`;
+    }
+    const capture = date ? `carried ${date[0]}` : 'carried capture';
+    return `<span class="pill gray">${capture}</span>`;
+  };
   const origin = () => { try { return localStorage.getItem(storeKey) || DEFAULT_ORIGIN; } catch (e) { return DEFAULT_ORIGIN; } };
   const route = (dest) => `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(dest)}&travelmode=transit`;
   const routeLink = (dest, label) => `<a href="${esc(route(dest))}" target="_blank" rel="noopener noreferrer">${esc(label || 'Route')} ↗</a>`;
