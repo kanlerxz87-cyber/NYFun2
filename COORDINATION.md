@@ -462,6 +462,16 @@ its room, so it was dropped from the published list rather than shown unsourced.
   activities 18, questions 13, suggestions 17, flags 28, verification 16, compare 5, repo-audit 8,
   itinerary 5, sources 11; landing counters 72/24/16/8/18/28).
 
+| T26 | Current-branch final readiness audit: run canonical verifiers, inspect current deployment workflow/PR status, and publish an audit note with reproducible results | done | arena/51fa454c-nyfun2 | `COORDINATION.md`, `research/final-readiness-2026-11-27.md` | 2026-11-27: canonical verifier 0 errors/0 warnings (13 pages, 185 rows); site builder, JS syntax and diff checks pass. Pages API reports built; latest observed successful Pages run 45834063858 (main). This is a structural/current-publication audit, not a fresh validation of live booking prices, schedules, or external URL availability. Details and links in the audit note. |
+
+
+### 2026-11-27 — session `arena/51fa454c-nyfun2` (T26 current-branch readiness audit)
+- Read this coordination board before work. Claimed the distinct audit scope and pushed the claim on the required current branch. The attempted `git pull --rebase origin arena/51fa454c-nyfun2` failed because no remote branch existed yet; immediately published the current branch with upstream tracking.
+- No canonical data values changed. Added `research/final-readiness-2026-11-27.md` with reproducible checks, scope limits, current deployment evidence, and manual-review links.
+- Checks: `python3 scripts/verify.py` → 0 errors/0 warnings over 13 HTML pages and 185 data rows; `python3 scripts/build_site.py` completed with no working-tree changes; `node --check assets/app.js` and `git diff --check` passed.
+- GitHub Pages API reports `built`, public, HTTPS enforced, source `main` `/`; latest successful Pages run observed was 45834063858. Branch-specific CI run 46041857073 was queued/running at audit time.
+- Important limit: structural verification does not independently prove current external URL availability, live schedule validity, or bookable hotel prices. No claim of fresh pricing was made.
+
 ### 2026-11-27 — session `arena/87fab24c-nyfun2` (T27: independent verification audit on `a4f205d`)
 
 - **Scope.** All T0–T26 were already done and merged to `main` (tip `a4f205d`, PR #30). This session claimed T27 for an independent audit of the published build: reconcile every headline count against `data/*.json`, spot-check live official sources, fix drift, re-verify, and publish via PR. No `data/**`, `assets/**`, `sessions/**` or `alt/**` files were touched; the single `scripts/build_site.py` edit was the generator line behind the stale `index.html` tile, so the fix survives rebuilds.
@@ -479,4 +489,5 @@ its room, so it was dropped from the published list rather than shown unsourced.
   - `pages/repo-audit.html` / `scripts/build_site.py`: "16 checks were re-read" — fixed to "25 checks (22 verified, 3 carried captures)".
 - **Verification performed.** `python3 scripts/verify.py` → 0 errors, 0 warnings (13 pages, 185 rows: 72 restaurants, 16 hotels, 18 activities, 13 questions, 17 suggestions, 29 flags, 25 checks, 25 transit legs); `node --check assets/app.js` passes; `git diff --check` passes; local HTTP smoke test returned 200 for all 13 pages plus `data/restaurants.json`, `data/hotels.json`, `assets/app.js`, `assets/styles.css`. Rebuild via `scripts/build_site.py` is idempotent — the only diff is the intended count fixes.
 - **Irregularities.** None new. The five stale counts above were the only drift; all are now reconciled to the JSON. Unverified values remain blank and flagged (29 flags) as designed — they do not block this merge.
+- **Merge conflict note.** While this session worked, `arena/51fa454c-nyfun2` merged PR #31 to `main` (readiness audit, `research/final-readiness-2026-11-27.md`). This branch merged `origin/main` (`6f53e0a`) and resolved the resulting `COORDINATION.md` append conflict by keeping both sessions' entries verbatim — nothing discarded.
 - **PR and merge result.** (Filled in after merge below.)
