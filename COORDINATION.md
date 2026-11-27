@@ -584,7 +584,9 @@ its room, so it was dropped from the published list rather than shown unsourced.
 - Main advanced during PR #40 from `b3de8e8` through PR #36 to `6dadbda`. Reconciled by merging latest main (not rebasing the stale task claim) and resolving overlapping renderer/documentation files in favor of main's newer consistency and canonical-data audit. Preserved PR #36 official-source updates, data, flags, and all main audit work.
 - This narrow UX follow-up addresses the remaining ambiguous `carried capture` badge: when the row status contains a capture date, the badge now displays `carried YYYY-MM-DD`; when no date is present, the UI explicitly says so rather than implying an unrecorded date. Checked badges likewise say `checked YYYY-MM-DD` only when the row status contains a date, otherwise `checked (date not stated)`.
 - No prices, hotel rates, source facts, or research records changed. Latest integrated build: `python3 scripts/build_data.py && python3 scripts/build_site.py && python3 scripts/verify.py` → 0 errors / 0 warnings over 13 pages and 210 rows; JavaScript syntax and diff checks pass.
-- PR #40 is the integration PR for this branch. CI verify passed before this latest-main merge; rerun CI after pushing the resolution, then merge and record Pages deployment.
+- **PR #40:** https://github.com/kanlerxz87-cyber/NYFun2/pull/40 (`arena/747bfabe-nyfun2` → `main`). Updated after latest-main integration; `verify` passed (run `46043699484`). Merged with a merge commit on **2026-11-27T17:40:53Z**, SHA `a41fab7a39441d48e8eb31ea52532d929a23ea21`.
+- **GitHub Pages:** deployment run `46043735686` completed successfully (build, deploy and report-build-status all green); Pages API latest build state is **built** for `a41fab7a39441d48e8eb31ea52532d929a23ea21`, source `main` `/`, HTTPS enforced. Published site: https://kanlerxz87-cyber.github.io/NYFun2/.
+- GitHub emitted a non-blocking Node.js 20 deprecation annotation for `actions/upload-artifact@v4`; the deployment succeeded.
 
 ### 2026-11-27 — session `arena/da68d101-nyfun2` (T33: verification-page correction context)
 
