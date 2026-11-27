@@ -18,9 +18,12 @@
     ? `<div class="socials">${arr.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" title="${esc(s.note || '')}">${esc(s.platform)}</a>`).join('')}</div>`
     : '<span class="blank">none found</span>';
   const badge = (row) => {
-    if (!row.verifiedToday) return '<span class="pill gray">carried capture</span>';
-    const rowDate = String(row.verifyStatus || '').match(/\b\d{4}-\d{2}-\d{2}\b/);
-    return `<span class="pill green">checked ${esc(rowDate ? rowDate[0] : verifiedDate)}</span>`;
+    const status = String(row.verifyStatus || '');
+    const rowDate = status.match(/\b20\d{2}-\d{2}-\d{2}\b/);
+    if (!row.verifiedToday) {
+      return `<span class="pill gray">${rowDate ? `carried ${esc(rowDate[0])}` : 'carried capture (date not stated)'}</span>`;
+    }
+    return `<span class="pill green">${rowDate ? `checked ${esc(rowDate[0])}` : 'checked (date not stated)'}</span>`;
   };
   const origin = () => { try { return localStorage.getItem(storeKey) || DEFAULT_ORIGIN; } catch (e) { return DEFAULT_ORIGIN; } };
   const route = (dest) => `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(dest)}&travelmode=transit`;
