@@ -5,6 +5,7 @@
   const ROOT = location.pathname.includes('/pages/') ? '../' : './';
   const DEFAULT_ORIGIN = 'DoubleTree by Hilton Hotel New York City - Chelsea, 128 West 29th Street, New York, NY 10001';
   const storeKey = 'nyfun2_origin';
+  let verifiedDate = 'date not recorded';
 
   const esc = (v) => String(v == null ? '' : v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const val = (v) => (v !== undefined && v !== null && String(v).trim() !== '') ? esc(v) : '<span class="blank">blank — unverified</span>';
@@ -16,9 +17,11 @@
   const socialLinks = (arr) => (arr && arr.length)
     ? `<div class="socials">${arr.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" title="${esc(s.note || '')}">${esc(s.platform)}</a>`).join('')}</div>`
     : '<span class="blank">none found</span>';
-  const badge = (row) => row.verifiedToday
-    ? '<span class="pill green">checked today</span>'
-    : '<span class="pill gray">carried capture</span>';
+  const badge = (row) => {
+    if (!row.verifiedToday) return '<span class="pill gray">carried capture</span>';
+    const rowDate = String(row.verifyStatus || '').match(/\b\d{4}-\d{2}-\d{2}\b/);
+    return `<span class="pill green">checked ${esc(rowDate ? rowDate[0] : verifiedDate)}</span>`;
+  };
   const origin = () => { try { return localStorage.getItem(storeKey) || DEFAULT_ORIGIN; } catch (e) { return DEFAULT_ORIGIN; } };
   const route = (dest) => `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(dest)}&travelmode=transit`;
   const routeLink = (dest, label) => `<a href="${esc(route(dest))}" target="_blank" rel="noopener noreferrer">${esc(label || 'Route')} ↗</a>`;
@@ -200,6 +203,7 @@
   }
 
   function setCounts(data) {
+    verifiedDate = data.verification?.checkedOn || data.restaurants?.meta?.integrationCheckedOn || 'date not recorded';
     const map = {
       restaurants: (data.restaurants?.items || []).length,
       activities: (data.activities?.items || []).length,

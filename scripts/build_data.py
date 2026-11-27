@@ -107,6 +107,27 @@ VERIFIED_TODAY_ACTIVITIES = {
     "29th Chinatown Lunar New Year Parade & Festival (2027)",
 }
 VERIFIED_TODAY_HOTELS = {"Hyatt Place New York / Chelsea"}
+# Later row-specific source rereads supersede the broader 2026-11-26 capture date.
+VERIFIED_ON_RESTAURANTS = {
+    "Eleven Madison Park": "2026-11-27", "Atomix": "2026-11-27", "Sushi Sho": "2026-11-27",
+    "Per Se": "2026-11-27", "Jungsik New York": "2026-11-27", "Gramercy Tavern": "2026-11-27",
+    "Cote": "2026-11-27", "Masa": "2026-11-27", "Saga": "2026-11-27", "Kochi": "2026-11-27",
+    "Torrisi": "2026-11-27",
+}
+VERIFIED_ON_HOTELS = {
+    "The Marlton Hotel": "2026-11-27", "MADE Hotel": "2026-11-27",
+    "Soho Grand Hotel": "2026-11-27", "Arlo Soho": "2026-11-27",
+    "The Wall Street Hotel": "2026-11-27", "The Fifth Avenue Hotel": "2026-11-27",
+}
+VERIFIED_ON_ACTIVITIES = {
+    "Statue of Liberty National Monument + Ellis Island": "2026-11-27",
+    "Wollman Rink in Central Park": "2026-11-27",
+    "Empire State Building Observatory": "2026-11-27",
+    "Bank of America Winter Village at Bryant Park (The Rink & The Lodge)": "2026-11-27",
+    "The Met Fifth Avenue": "2026-11-27",
+    "MoMA (Museum of Modern Art)": "2026-11-27",
+    "29th Chinatown Lunar New Year Parade & Festival (2027)": "2026-11-27",
+}
 
 
 def build_restaurants():
@@ -223,8 +244,10 @@ def build_restaurants():
         # verification status label used by the site filter
         if row["name"] in VERIFIED_TODAY_RESTAURANTS:
             row["verifiedToday"] = True
-        if row.get("verifiedToday"):
-            row["verifyStatus"] = "checked today (2026-11-26)"
+        checked_on = VERIFIED_ON_RESTAURANTS.get(row["name"], "2026-11-26" if row.get("verifiedToday") else None)
+        if checked_on:
+            row["verifiedToday"] = True
+            row["verifyStatus"] = f"checked {checked_on}"
         else:
             row["verifyStatus"] = "carried capture (2026-11-25)"
 
@@ -432,8 +455,9 @@ def build_hotels():
             h["eligibilityNote"] = ("Queen+/private-bath specification not confirmed on an official property page: "
                                     "excluded from the recommendation until verified (flag F26).")
         h["pricedTier"] = "dated 7-night total" if (h.get("sevenNightPreTax") or h.get("sevenNightAllIn")) else ""
-        h["verifiedToday"] = h["name"] in VERIFIED_TODAY_HOTELS
-        h["verifyStatus"] = "checked today (2026-11-26)" if h["verifiedToday"] else "carried capture (2026-11-25)"
+        h["verifiedToday"] = h["name"] in VERIFIED_TODAY_HOTELS or h["name"] in VERIFIED_ON_HOTELS
+        checked_on = VERIFIED_ON_HOTELS.get(h["name"], "2026-11-26" if h["verifiedToday"] else None)
+        h["verifyStatus"] = f"checked {checked_on}" if checked_on else "carried capture (2026-11-25)"
 
     qual = [h for h in rows if h.get("qualifies")]
     qual_measured = sorted([h for h in qual if h.get("transit", {}).get("measured")],
@@ -611,7 +635,10 @@ def build_activities():
             row["social"] = merged_social
         if row["name"] in VERIFIED_TODAY_ACTIVITIES:
             row["verifiedToday"] = True
-        row["verifyStatus"] = "checked today (2026-11-26)" if row.get("verifiedToday") else "carried capture (2026-11-25)"
+        checked_on = VERIFIED_ON_ACTIVITIES.get(row["name"], "2026-11-26" if row.get("verifiedToday") else None)
+        if checked_on:
+            row["verifiedToday"] = True
+        row["verifyStatus"] = f"checked {checked_on}" if checked_on else "carried capture (2026-11-25)"
         out.append(row)
 
     # add kit-only activities that materially expand the plan
@@ -651,7 +678,7 @@ def build_activities():
                 "F29: the opening-days line was corrected from the kit's 'historically closed Tuesdays' after the official FAQ footer was re-read on 26 Nov 2026.",
             ]
             item["provenance"]["hoursAndDays"] = "Re-verified 2026-11-26 by arena/4a8e5aa4-nyfun2 against https://info.summitov.com/"
-            item["verifyStatus"] = "checked today (2026-11-26)"
+            item["verifyStatus"] = "checked 2026-11-26"
         out.append(item)
 
     data_canon["items"] = out
@@ -694,7 +721,7 @@ V = [
      "https://www.gramercytavern.com/dining-room-menu/", "Read from the official menu page", "Verified"),
     ("The Met admission and hours", "Adults $30 ($60 for two); Sun/Mon/Tue/Thu 10-17, Fri-Sat 10-21, closed Wednesday",
      "https://www.metmuseum.org/plan-your-visit",
-     "Admission table read on the official page today; the Wednesday closure corroborated by four independent guides because the hours block was not in the page section captured", "Verified (hours corroborated)"),
+     "Admission table read on the official page on 2026-11-26; the Wednesday closure corroborated by four independent guides because the hours block was not in the page section captured", "Verified (hours corroborated)"),
     ("MoMA admission and hours", "Adults $30 ($60 for two); daily 10:30-17:30, Friday to 20:30; closed Thanksgiving and 25 Dec",
      "https://www.moma.org/visit/", "Read directly from the official visit page", "Verified"),
     ("Chinatown Lunar New Year Parade 2027", "29th parade: Sunday 21 February 2027, 13:00, Chinatown; firecracker ceremony Sat 6 Feb 2027",
@@ -708,16 +735,16 @@ V = [
      "Re-read directly from wollmanrinknyc.com/plan/ on 2026-11-26 (sessions 45972379 and 4a8e5aa4)", "Verified"),
     ("Hyatt Place NY/Chelsea room specification", "King-bed rooms with a bathroom with shower; 180 sq ft; address 140 West 24th Street",
      "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms",
-     "Read from the official rooms page today", "Verified"),
+     "Read from the official rooms page on 2026-11-26", "Verified"),
     ("Dated hotel rates for 15-22 Feb 2027", "$1,113 pre-tax Hyatt Place, $1,214 Arlo NoMad, $1,522 11 Howard, $848 Eurostars, $943 DoubleTree",
      "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price",
-     "Booking.com property detail pages returned an error to this session's fetcher, so the dated totals could not be re-quoted today. The search page for the window did load, confirming availability for 15-22 Feb 2027. Treat the totals as 2026-11-25 snapshots (F10)", "NOT re-quoted today - carried"),
+     "Booking.com property detail pages returned an error to this session's fetcher, so the dated totals could not be re-quoted on 2026-11-26. The search page for the window did load, confirming availability for 15-22 Feb 2027. Treat the totals as 2026-11-25 snapshots (F10)", "Not re-quoted on 2026-11-26 - carried"),
     ("Transit times", "25 hotel->cluster legs, 3-37 minutes; 10 hotel->activity legs",
      "https://www.google.com/maps/dir/?api=1&origin=Eurostars+Wall+Street+New+York&destination=Le+Bernardin+New+York&travelmode=transit",
      "Captured 2026-11-25 17:14-17:31 ET. Google Maps cannot be queried programmatically from this session, so the stored minutes are snapshots; each leg links a live directions query", "Carried snapshot"),
     ("Michelin 2026 ceremony date", "14 Dec 2026 (Northeast Cities)",
      "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
-     "Not re-fetched today; carried from the 2026-11-25 capture and still the basis of flag F1", "Carried"),
+     "Not re-fetched on 2026-11-26; carried from the 2026-11-25 capture and still the basis of flag F1", "Carried"),
     ("Atomix Tock pricing & socials", "Nov Chef's Counter $424/pp ($848) & Bar Tasting $314/pp ($628) incl. admin fee; Dec $495/pp & from $352/pp; @atomixnyc",
      "https://www.exploretock.com/atomixnyc/help",
      "Read directly from Atomix's official Tock help page on 2026-11-26 (session arena/779506a6-nyfun2); explains why earlier sessions saw $424 vs $495", "Verified"),
@@ -875,10 +902,10 @@ def build_decisions(rest, hot, act):
         "S2": "Partially implemented 2026-11-26 - 25 hotel-to-cluster and 10 hotel-to-activity legs stored with live directions links; the remaining pairs are still unrouted.",
         "S3": f"Implemented 2026-11-26 - {rest['coverage']['priceTwoAdults']} official-menu couple totals, each with its source URL and capture date.",
         "S5": "Partially implemented 2026-11-26 - 7-night totals for 8 hotels; a 3-night quote exists in no verified source yet.",
-        "S7": "Implemented 2026-11-26 - every restaurant and activity row now carries a 'checked today / carried capture' badge and filter.",
+        "S7": "Implemented 2026-11-26 - every restaurant and activity row now carries a 'checked 2026-11-26 / carried capture' badge and filter.",
         "S10": "Implemented 2026-11-25 - full live roster of 69 starred + 3 Guide-listed rows.",
         "S11": "Partially implemented 2026-11-26 - data age is displayed on every page; scheduled re-capture is still manual.",
-        "S12": "Partially implemented 2026-11-26 - Met and MoMA hours re-read; 13 other activity pages not re-read today.",
+        "S12": "Partially implemented 2026-11-26 - Met and MoMA hours re-read; 13 other activity pages not re-read during the 2026-11-26 check.",
     }
     for k, v in status_updates.items():
         if k in sg:
@@ -928,7 +955,7 @@ def build_decisions(rest, hot, act):
          "title": "Kit rosters are not the same census as the live MICHELIN list",
          "detail": ("The parallel kits contained 14 venue names outside the 69-star census (Katz's, Thai Diner, Via Carota, "
                     "Dhamaka, Manhatta, Cafe Carmellini and others - Bib Gourmand/Selected or non-Guide), and one kit carried "
-                    "three starred names that are not in today's live all-starred list (Blue Hill at Stone Barns, Shion 69 "
+                    "three starred names that are not in the live all-starred list checked on 2026-11-25 (Blue Hill at Stone Barns, Shion 69 "
                     "Leonard Street, La Bastide by Andrea Calstier). None were added to the census; all are listed in "
                     "data/conflicts.json for review."),
          "source": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred"},
@@ -941,7 +968,7 @@ def build_decisions(rest, hot, act):
                     "with the $225 later-PDF figure also noted."),
          "source": "data/conflicts.json"},
         {"id": "F25", "severity": "Medium",
-         "title": "Dated hotel totals could not be re-quoted today",
+         "title": "Dated hotel totals could not be re-quoted on 2026-11-26",
          "detail": ("Booking.com property pages refused this session's fetcher, so the 15-22 Feb 2027 totals are the "
                     "2026-11-25 snapshots. Two of them (DoubleTree, Arlo NoMad) were Black Friday promotions whose terms "
                     "expire; the search page for the window did load, confirming the dates remain bookable."),
@@ -1002,10 +1029,10 @@ def build_verification(rest, hot, act):
         "checkedOn": "2026-11-26",
         "session": "arena/9bc6abed-nyfun2",
         "addendumCheckedOn": "2026-11-27",
-        "addendumSession": "arena/dbf0d1f0-nyfun2 (task T27)",
+        "addendumSession": "arena/dbf0d1f0-nyfun2 (task T29; initially claimed as T27)",
         "methodNote": ("This session's sandbox reaches GitHub directly and external sites through a proxied "
                        "fetch/search channel. Pages that block that channel are recorded as unreachable rather "
-                       "than assumed. A value is only marked Verified when the official page itself was read today."),
+                       "than assumed. A value is only marked Verified when the official page itself was read on 2026-11-26."),
         "checks": checks,
         "resultCounts": dict(counts),
         "coverage": {
