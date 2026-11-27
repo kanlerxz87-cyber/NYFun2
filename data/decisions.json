@@ -413,7 +413,7 @@
    "id": "F13",
    "severity": "High",
    "title": "Airfare and theatre remain unpriced; restaurant menu prices PARTIALLY resolved",
-   "detail": "12 restaurants now have verified couple totals from official pages (see Q6 / Michelin page), so the largest dining line items are no longer wholly unpriced. Still unpriced: flights, theatre tickets, and exact menu prices for Per Se, Sushi Sho, Aquavit, Atera, Atomix, Jean-Georges and most a-la-carte one-stars. Menus were captured Nov 2026 and must be re-confirmed for Feb-Mar 2027. No grand total is claimed.",
+   "detail": "25 restaurants now have a couple total from an official menu, FAQ or booking channel (see the Michelin page and per-row sources). Still unpriced: airfare, theatre tickets, and menu totals where no suitable official price was confirmed. Atera and Per Se remain unresolved as described in F24; Atomix's November 2026 Tock prices are documented but are month-variable and do not establish February–March 2027 prices. All captured menus and rates must be re-confirmed for the travel dates. No trip grand total is claimed.",
    "source": "https://guide.michelin.com/en/new-york-state/new-york/restaurants/3-stars-michelin"
   },
   {
