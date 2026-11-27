@@ -73,7 +73,7 @@ The Fifth Avenue Hotel, so their price cells stay blank. The 2026-11-25 dated to
 
 ---
 
-## Local consistency audit — session `arena/7095f8e7-nyfun2` (task T30)
+## Local consistency audit — session `arena/7095f8e7-nyfun2` (task T31)
 
 ## Scope and important limit
 
@@ -96,7 +96,7 @@ The existing dated source register remains [`../data/verification.json`](../data
 
 ## Irregularities found and corrected
 
-The public documentation had drifted from the merged canonical data: README stated 24 priced restaurants and 28 flags, while the data contains 25 priced restaurants and 29 flags; the overview tile said 16 suggestions while the list has 17; verification badges used “checked today” even when the last source reads were on the prior date; and README incorrectly said Atomix was blank despite its November Tock price being included. These labels, counts and claims were corrected, and automated checks now fail if the README, overview fallback counters, verification coverage counters, or review-page headlines drift from the data.
+At the start of this maintenance pass, public docs were stale against canonical data: README said 24 priced restaurants and 28 flags, the overview showed 16 suggestions rather than 17, badges said “checked today” for prior-day reads, and README described Atomix as blank despite its November Tock price. Those discrepancies were corrected. The current merged build has 25 priced restaurants, 33 flags, 17 suggestions, and 46 verification records (including 21 T29 addendum checks); automated consistency gates check counts against the canonical datasets.
 
 ## Not re-verified in this audit
 

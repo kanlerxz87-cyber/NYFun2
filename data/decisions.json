@@ -413,7 +413,7 @@
    "id": "F13",
    "severity": "High",
    "title": "Airfare and theatre remain unpriced; restaurant menu prices PARTIALLY resolved",
-   "detail": "12 restaurants now have verified couple totals from official pages (see Q6 / Michelin page), so the largest dining line items are no longer wholly unpriced. Still unpriced: flights, theatre tickets, and exact menu prices for Per Se, Sushi Sho, Aquavit, Atera, Atomix, Jean-Georges and most a-la-carte one-stars. Menus were captured Nov 2026 and must be re-confirmed for Feb-Mar 2027. No grand total is claimed.",
+   "detail": "25 restaurants now have a couple total from an official menu, FAQ or booking channel (see the Michelin page and per-row sources). Still unpriced: airfare, theatre tickets, and menu totals where no suitable official price was confirmed. Atera and Per Se remain unresolved as described in F24; Atomix's November 2026 Tock prices are documented but are month-variable and do not establish February–March 2027 prices. All captured menus and rates must be re-confirmed for the travel dates. No trip grand total is claimed.",
    "source": "https://guide.michelin.com/en/new-york-state/new-york/restaurants/3-stars-michelin"
   },
   {
@@ -497,7 +497,7 @@
    "id": "F21",
    "severity": "High",
    "title": "This session could not re-read every official page",
-   "detail": "The sandbox reaches GitHub directly and external pages through a proxied fetch/search channel. 16 checks were re-run on 2026-11-26 (MICHELIN filter counters, 15 star levels, 5 menus, Met and MoMA, the Lunar New Year parade, Hyatt room types). Booking.com property pages returned an error, and bryantpark.org and wollmanrinknyc.com could not be fetched, so those figures are carried captures or secondary corroboration. Every row states which it is.",
+   "detail": "The sandbox reaches GitHub directly and external pages through a proxied fetch/search channel. The initial integration re-ran 16 checks on 2026-11-26 (MICHELIN filter counters, 15 star levels, 5 menus, Met and MoMA, the Lunar New Year parade, Hyatt room types). The current verification log has 46 records (42 verified, 4 carried): 25 records from 2026-11-26 and 21 addendum records from 2026-11-27. Subsequent official re-reads resolved the earlier Bryant Park and Wollman Rink limitation (F27); the current hotel bed/bath and activity rereads are linked in the addendum. Booking.com property detail pages still could not be re-quoted, so dated hotel totals remain carried captures. Each verification row states its status and source.",
    "source": "data/verification.json"
   },
   {
