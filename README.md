@@ -40,8 +40,8 @@ Each row also carries a verification badge:
 | `pages/itinerary.html` | 7-night skeleton from verified opening days, plus the 3-night variant |
 | `pages/questions.html` | 13 questions: known / missing / provisional answer / how to close |
 | `pages/suggestions.html` | 17 improvement options with status and effort |
-| `pages/flagged.html` | 29 flags: unverified values, conflicts, irregularities |
-| `pages/verification.html` | Dated log of the 25 checks re-run on 2026-11-26 and what could not be re-read |
+| `pages/flagged.html` | 33 flags: unverified values, conflicts, irregularities |
+| `pages/verification.html` | Dated log of the 25 checks re-run on 2026-11-26, plus 21 addendum checks on 2026-11-27, and what could not be re-read |
 | `pages/sources.html` | Rules, primary-source register, reproduce steps |
 | `pages/repo-audit.html` | What each session contributed, what this integration changed |
 | `pages/compare.html` | The five parallel session kits and their disagreements |
@@ -76,7 +76,7 @@ Each row also carries a verification badge:
 | `data/restaurants.json` | 72 rows, per-field `provenance`, verification badge |
 | `data/hotels.json` | 16 rows + 5 booking windows + transit objects + ranking |
 | `data/activities.json` | 18 rows with hours, exceptions, costs, socials |
-| `data/decisions.json` | 13 questions, 17 suggestions, 29 flags |
+| `data/decisions.json` | 13 questions, 17 suggestions, 33 flags |
 | `data/verification.json` | Dated verification log and coverage counters |
 | `data/conflicts.json` | Every kit disagreement and out-of-census venue name |
 | `research/canonical/` | Pristine pre-merge datasets (the merge input) |
@@ -101,8 +101,8 @@ There is no build step on the host: GitHub Pages serves the repository root from
 
 ## What is deliberately blank
 
-Airfare; theatre tickets; the 3-night hotel total; per-dish à-la-carte totals; six hotels without a
-published bed-and-bathroom line; 45 of 72 restaurant social links that could not be confirmed; every
+Airfare; theatre tickets; the 3-night hotel total; per-dish à-la-carte totals; one hotel (The Maritime)
+without a published bed-and-bathroom line; 45 of 72 restaurant social links that could not be confirmed; every
 transit pair that was never routed. Each gap is on `pages/flagged.html` with its cause and the
 step that would close it.
 
