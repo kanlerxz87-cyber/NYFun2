@@ -910,10 +910,13 @@ def build_decisions(rest, hot, act):
         {"id": "F21", "severity": "High",
          "title": "This session could not re-read every official page",
          "detail": ("The sandbox reaches GitHub directly and external pages through a proxied fetch/search channel. "
-                    "16 checks were re-run on 2026-11-26 (MICHELIN filter counters, 15 star levels, 5 menus, Met and MoMA, "
-                    "the Lunar New Year parade, Hyatt room types). Booking.com property pages returned an error, and "
-                    "bryantpark.org and wollmanrinknyc.com could not be fetched, so those figures are carried captures or "
-                    "secondary corroboration. Every row states which it is."),
+                    "The initial integration re-ran 16 checks on 2026-11-26 (MICHELIN filter counters, 15 star levels, 5 menus, Met and MoMA, "
+                    "the Lunar New Year parade, Hyatt room types). The current verification log has 46 records (42 verified, 4 carried): "
+                    "25 records from 2026-11-26 and 21 addendum records from 2026-11-27. Subsequent official re-reads resolved "
+                    "the earlier Bryant Park and Wollman Rink limitation (F27); the current hotel bed/bath and activity rereads are "
+                    "linked in the addendum. Booking.com property detail pages still could not be re-quoted, so dated hotel totals "
+                    "remain carried captures. "
+                    "Each verification row states its status and source."),
          "source": "data/verification.json"},
         {"id": "F22", "severity": "Medium",
          "title": "The previous front page understated its own data (fixed in this build)",

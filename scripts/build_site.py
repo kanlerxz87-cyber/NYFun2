@@ -175,7 +175,7 @@ def build():
     <a class="tile" href="pages/activities.html"><span class="tag">Things to do</span><h3>Activities</h3><p>Official hours, closures, couple costs and the date-critical February events.</p></a>
     <a class="tile" href="pages/itinerary.html"><span class="tag">Plan</span><h3>Itinerary</h3><p>A 7-night skeleton built only from verified opening days, plus the 3-night variant.</p></a>
     <a class="tile" href="pages/questions.html"><span class="tag">Decide</span><h3>Questions & answers</h3><p>What is known, what is missing, and what actually blocks a booking decision.</p></a>
-    <a class="tile" href="pages/suggestions.html"><span class="tag">Improve</span><h3>Suggestions</h3><p>17 options to improve the plan or the site, each with effort, blockers and status.</p></a>
+    <a class="tile" href="pages/suggestions.html"><span class="tag">Improve</span><h3>Suggestions</h3><p>{len(Q["suggestions"])} options to improve the plan or the site, each with effort, blockers and status.</p></a>
     <a class="tile" href="pages/flagged.html"><span class="tag">Audit</span><h3>Flagged for review</h3><p>Every unverified value, conflict and irregularity, with its source, in one list.</p></a>
     <a class="tile" href="pages/verification.html"><span class="tag">Audit</span><h3>Verification log</h3><p>What was re-read on {CHECKS_DATE}, what was only corroborated, and what stayed a carried capture.</p></a>
     <a class="tile" href="pages/sources.html"><span class="tag">Method</span><h3>Sources & rules</h3><p>The verification rules, the primary-source register and how to reproduce the build.</p></a>
@@ -482,7 +482,7 @@ def build():
     <div class="stat"><b>{cov["activities"]["rows"]}</b><span>activity rows · {cov["activities"]["withHours"]} with hours · {cov["activities"]["withCost"]} with a couple cost</span></div>
   </div>
 
-  <h2>Checks re-run on {CHECKS_DATE}, plus a 2026-11-27 addendum</h2>
+  <h2>Verification log — {len(V["checks"])} records</h2>
   <p>The table below holds the 2026-11-26 log followed by a 2026-11-27 addendum (session <code>arena/dbf0d1f0-nyfun2</code>, task T27). The addendum re-read the MICHELIN census, the three date-critical winter activities, MTA fares, MoMA/Met admission, ten priced restaurant menus, five hotel bed/bathroom lines, and Torrisi's hours. It corrected one carried value (Wollman Fri/Sat/Sun opening time, 10:00 → 09:00) and verified five hotels that previously lacked a bed/bathroom line, leaving only The Maritime Hotel unverified (F26).</p>
   <div data-table="verification"></div>
 
@@ -575,7 +575,7 @@ node --check assets/app.js</pre>
       <li><strong>Duplicate rows in merged kits.</strong> The same hotel appeared as "The Frederick Hotel Tribeca" and "The Frederick Hotel Tribeca, a Small Luxury Hotel"; NYPL, the Met and 9/11 each appeared twice. The merge now keys these and reports rather than duplicates.</li>
       <li><strong>Mis-traced transit risk.</strong> A fuzzy name match initially attached Eurostars Wall Street's transit legs to The Wall Street Hotel. Matching is now key-based, and unmeasured hotels are blank.</li>
       <li><strong>Contested prices stay blank (F24).</strong> Atera and Per Se are not assigned a price; Atomix carries its verified November Tock price ($848/$628) with December ($990/$704+) flagged; Le Bernardin keeps $218 with the $225 alternative shown.</li>
-      <li><strong>Verification is dated, not implied (F21).</strong> 25 checks were run on 2026-11-26 (22 verified, 3 carried captures); everything else is labelled a carried capture.</li>
+      <li><strong>Verification is dated, not implied (F21).</strong> The log contains 46 records: 25 baseline records from 2026-11-26 and 21 addendum checks from 2026-11-27 (42 verified, 4 carried overall); each row shows its status and source.</li>
     </ul>
   </div>
 
