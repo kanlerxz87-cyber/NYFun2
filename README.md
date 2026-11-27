@@ -21,12 +21,12 @@ Where the site does arithmetic (2 × a published per-person menu price, or a pub
 hotel total plus the stated 14.75% NYC occupancy/sales tax), the formula is printed next to the
 result. Review videos are labelled third-party; they are never presented as official.
 
-Each row also carries a verification badge:
+Each row also carries a dated verification badge:
 
 | Badge | Meaning |
 |---|---|
-| **checked today** | the official page was re-read on 2026-11-26 |
-| **carried capture** | the value comes from the 2026-11-25 capture; the source link is on the row |
+| **checked YYYY-MM-DD** | The official source was read on the date shown; this does not imply it was rechecked today. A row's notes and the verification log describe any field-specific scope. |
+| **carried YYYY-MM-DD** | The value comes from the dated capture shown; the source link is on the row |
 
 ## Pages
 
