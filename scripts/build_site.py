@@ -486,11 +486,11 @@ def build():
   <p>The table below holds the 2026-11-26 log followed by a 2026-11-27 addendum (session <code>arena/dbf0d1f0-nyfun2</code>, task T27). The addendum re-read the MICHELIN census, the three date-critical winter activities, MTA fares, MoMA/Met admission, ten priced restaurant menus, five hotel bed/bathroom lines, and Torrisi's hours. It corrected one carried value (Wollman Fri/Sat/Sun opening time, 10:00 → 09:00) and verified five hotels that previously lacked a bed/bathroom line, leaving only The Maritime Hotel unverified (F26).</p>
   <div data-table="verification"></div>
 
-  <h2>What this session could not re-read</h2>
+  <h2>Remaining limitations after the addendum</h2>
   <div class="card">
     <ul>
       <li><strong>Booking.com property pages</strong> returned an error to the fetcher, so the dated hotel totals were not re-quoted. The Manhattan search page for 15–22 Feb 2027 did load, confirming the dates are bookable.</li>
-      <li><strong>bryantpark.org</strong> and <strong>wollmanrinknyc.com</strong> could not be fetched; season dates and prices are corroborated by at least three independent 2026–27 listings.</li>
+      <li><strong>Bryant Park and Wollman Rink.</strong> Earlier fetch attempts failed, but official pages were subsequently re-read on 2026-11-26 and 2026-11-27. Their season dates and prices are now marked verified in the table above; the addendum also corrected Wollman's Fri/Sat/Sun opening time to 09:00.</li>
       <li><strong>Google Maps</strong> cannot be queried programmatically here, so the 35 stored transit legs (25 hotel→cluster, 10 hotel→activity) remain the 2026-11-25 capture. Every row links a live directions query.</li>
       <li><strong>Individual MICHELIN detail pages</strong> were spot-checked (15 star levels plus the filter counters), not all 72 one by one; the census itself was re-read today.</li>
     </ul>
