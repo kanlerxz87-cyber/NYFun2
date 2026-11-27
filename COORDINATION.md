@@ -461,4 +461,12 @@ its room, so it was dropped from the published list rather than shown unsourced.
   activities 18, questions 13, suggestions 17, flags 28, verification 16, compare 5, repo-audit 8,
   itinerary 5, sources 11; landing counters 72/24/16/8/18/28).
 
-| T26 | Current-branch final readiness audit: run canonical verifiers, inspect current deployment workflow/PR status, and publish an audit note with reproducible results | in progress | arena/51fa454c-nyfun2 | `COORDINATION.md`, `research/final-readiness-2026-11-27.md` | Auditing existing integrated site only; do not alter verified data absent official-source revalidation. |
+| T26 | Current-branch final readiness audit: run canonical verifiers, inspect current deployment workflow/PR status, and publish an audit note with reproducible results | done | arena/51fa454c-nyfun2 | `COORDINATION.md`, `research/final-readiness-2026-11-27.md` | 2026-11-27: canonical verifier 0 errors/0 warnings (13 pages, 185 rows); site builder, JS syntax and diff checks pass. Pages API reports built; latest observed successful Pages run 45834063858 (main). This is a structural/current-publication audit, not a fresh validation of live booking prices, schedules, or external URL availability. Details and links in the audit note. |
+
+
+### 2026-11-27 — session `arena/51fa454c-nyfun2` (T26 current-branch readiness audit)
+- Read this coordination board before work. Claimed the distinct audit scope and pushed the claim on the required current branch. The attempted `git pull --rebase origin arena/51fa454c-nyfun2` failed because no remote branch existed yet; immediately published the current branch with upstream tracking.
+- No canonical data values changed. Added `research/final-readiness-2026-11-27.md` with reproducible checks, scope limits, current deployment evidence, and manual-review links.
+- Checks: `python3 scripts/verify.py` → 0 errors/0 warnings over 13 HTML pages and 185 data rows; `python3 scripts/build_site.py` completed with no working-tree changes; `node --check assets/app.js` and `git diff --check` passed.
+- GitHub Pages API reports `built`, public, HTTPS enforced, source `main` `/`; latest successful Pages run observed was 45834063858. Branch-specific CI run 46041857073 was queued/running at audit time.
+- Important limit: structural verification does not independently prove current external URL availability, live schedule validity, or bookable hotel prices. No claim of fresh pricing was made.
