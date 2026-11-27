@@ -75,9 +75,10 @@ def shell(active, title, eyebrow, h1, lede, body, depth=0, description=""):
 {body}
   <footer class="foot">
     <p><strong>Broad verification register:</strong> {CHECKS_DATE} ·
-    <strong>Latest row-specific re-check:</strong> 2026-11-27 (activity audit) ·
+    <strong>Latest row-specific re-check:</strong> 2026-11-27 (restaurant, hotel and activity addenda) ·
     <strong>Roster census:</strong> {DATA_DATE} ·
-    <a href="{prefix}research/review-2026-11-27.md">Activity audit ↗</a></p>
+    <a href="{prefix}research/verification-2026-11-27.md">2026-11-27 source review ↗</a> ·
+    <a href="{prefix}research/review-2026-11-27.md">Activity corrections ↗</a></p>
     <p>Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> ·
     Coordination board: <a href="{prefix}COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a> ·
     <a href="{prefix}pages/flagged.html">Flagged for review</a> ·
@@ -217,7 +218,7 @@ def build():
   <div class="card">
     <ul>
       <li><strong>Dining.</strong> {len(r_items)} rows: 69 starred ({star_counts["3"]}+{star_counts["2"]}+{star_counts["1"]}) plus 3 guide-listed. {len(priced)} have a verified couple total from an official menu, FAQ or official booking channel — from <strong>$156</strong> (Gramercy Tavern tavern three-course) and <strong>$168</strong> (Cote Butcher's Feast) up to <strong>$1,900</strong> (Masa hinoki counter), including Atomix ($848/$628 November Tock) and Sushi Sho ($990 Tock). Two prices (Atera, Per Se) remain contested/deposit-only and stay blank (flag F24).</li>
-      <li><strong>Hotels.</strong> {len(hotels_priced)} of {len(h_items)} shortlisted properties have a dated 7-night total; {len(qualified)} publish a queen/king bed plus private bathroom. {len(h_items) - len(qualified)} do not and are excluded from the recommendation rather than assumed to comply (F26).</li>
+      <li><strong>Hotels.</strong> {len(hotels_priced)} of {len(h_items)} shortlisted properties have a dated 7-night total; {len(qualified)} publish a queen/king bed plus private bathroom. {len(h_items) - len(qualified)} {'does' if len(h_items) - len(qualified) == 1 else 'do'} not and {'is' if len(h_items) - len(qualified) == 1 else 'are'} excluded from the recommendation rather than assumed to comply (F26).</li>
       <li><strong>The one-hour rule.</strong> 25 measured hotel→cluster legs, all 3–37 minutes, so every published hotel with a measurement reaches all five sampled MICHELIN clusters within an hour. The constraint is satisfied everywhere it can be measured; price and room quality decide.</li>
       <li><strong>Dates that matter.</strong> Presidents' Day Mon 15 Feb; Chinatown Lunar New Year parade Sun 21 Feb 13:00; Bryant Park rink closes Sun 28 Feb; Wollman Rink runs to 16 Mar (cheap off-peak $16); the Met is closed Wednesdays; MoMA is open late Fridays.</li>
       <li><strong>Risk.</strong> Star levels may change on 14 Dec 2026; menus and rates are November 2026 captures; the hotel totals are booking-engine snapshots, not quotes.</li>
@@ -483,7 +484,8 @@ def build():
     <div class="stat"><b>{cov["activities"]["rows"]}</b><span>activity rows · {cov["activities"]["withHours"]} with hours · {cov["activities"]["withCost"]} with a couple cost</span></div>
   </div>
 
-  <h2>Checks re-run on {CHECKS_DATE}</h2>
+  <h2>Checks re-run on {CHECKS_DATE}, plus a 2026-11-27 addendum</h2>
+  <p>The table below holds the 25-entry 2026-11-26 log followed by 21 2026-11-27 addendum checks (session <code>arena/dbf0d1f0-nyfun2</code>, task T29; originally claimed as T27). The addendum re-read the MICHELIN census, the three date-critical winter activities, MTA fares, MoMA/Met admission, ten priced restaurant menus, five hotel bed/bathroom lines, and Torrisi's hours. It corrected one carried value (Wollman Fri/Sat/Sun opening time, 10:00 → 09:00) and verified five hotels that previously lacked a bed/bathroom line, leaving only The Maritime Hotel unverified (F26).</p>
   <div data-table="verification"></div>
 
   <h2>Supplemental official-source activity re-check · 2026-11-27</h2>
@@ -502,7 +504,7 @@ def build():
 """
     pages["verification"] = shell(
         "verification", "Verification log", "Audit · dated checks", "What was checked, and how",
-        "A dated log of every fact re-read on 2026-11-26, every figure only corroborated, and every number still carried from the November 25 capture.",
+        "A dated log of every fact re-read on 2026-11-26, the 2026-11-27 addendum, every figure only corroborated, and every number still carried from the November 25 capture.",
         verification_body, depth=1)
 
     # --------------------------------------------------------------- sources
@@ -563,7 +565,7 @@ node --check assets/app.js</pre>
         <tr><td data-label="Path"><code>sessions/c1cf7b23/</code></td><td data-label="What">31-venue, 10-hotel, 18-activity kit with 155 social links</td><td data-label="Status">Preserved; source of most hours/socials and 4 dated hotel rates</td></tr>
         <tr><td data-label="Path"><code>sessions/657520df/</code></td><td data-label="What">27-venue kit with cross-week window analysis</td><td data-label="Status">Preserved; source of Met/MoMA/Whitney socials and window notes</td></tr>
         <tr><td data-label="Path"><code>sessions/33cfdba4/</code></td><td data-label="What">72-row roster, 25-leg transit matrix, 5 price windows</td><td data-label="Status">Preserved; source of the transit measurements</td></tr>
-        <tr><td data-label="Path"><code>data/verification.json</code>, <code>data/conflicts.json</code>, <code>research/verification-2026-11-26.md</code></td><td data-label="What">Dated verification log, every kit conflict, and the narrative audit</td><td data-label="Status">New 2026-11-26</td></tr>
+        <tr><td data-label="Path"><code>data/verification.json</code>, <code>data/conflicts.json</code>, <code>research/verification-2026-11-26.md</code>, <code>research/verification-2026-11-27.md</code></td><td data-label="What">Dated verification log, every kit conflict, and the narrative audits</td><td data-label="Status">New 2026-11-26; addendum 2026-11-27</td></tr>
         <tr><td data-label="Path"><code>pages/verification.html</code>, <code>pages/compare.html</code></td><td data-label="What">Public verification log and kit comparison</td><td data-label="Status">New 2026-11-26</td></tr>
         <tr><td data-label="Path"><code>sessions/215c2a25/</code>, <code>alt/</code></td><td data-label="What">Two earlier independent dashboards</td><td data-label="Status">Preserved, not linked in the main navigation</td></tr>
       </tbody>

@@ -29,9 +29,9 @@
   {
    "id": "Q3",
    "question": "Which shortlisted hotels actually have a private bathroom and a queen-size bed or larger for two adults on the chosen dates?",
-   "whatWeKnow": "10 of 16 properties publish a queen/king bed plus a private bathroom on an official property page (or a property page the kits quote directly). 6 do not, and are excluded from the recommendation (flag F26).",
+   "whatWeKnow": "15 of 16 properties publish a queen/king bed plus a private bathroom on an official property page (or a property page the kits quote directly). 1 does not, and is excluded from the recommendation (flag F26).",
    "whatWeDoNotKnow": "Room-type availability and bed/bath details for the remaining hotels.",
-   "provisionalAnswer": "10 of 16 properties have a published queen/king bed and private bathroom and can be booked against the requirement; the others must be verified first.",
+   "provisionalAnswer": "15 of 16 properties have a published queen/king bed and private bathroom and can be booked against the requirement; the others must be verified first.",
    "blocking": true,
    "howToDiscover": "Fetch each hotel's official rooms page and the exact room type shown for the booking dates.",
    "sources": [
@@ -531,8 +531,8 @@
   {
    "id": "F26",
    "severity": "Medium",
-   "title": "6 shortlisted hotels still lack a verified bed and bathroom line",
-   "detail": "The Maritime, MADE, The Marlton, Soho Grand, Arlo Soho and The Wall Street Hotel do not have a published queen/king + private-bathroom statement in the sources checked, so they are listed for completeness and excluded from the recommendation rather than assumed to comply. (The Benjamin was measured but dropped entirely: no official source for its room.)",
+   "title": "1 shortlisted hotel still lacks a verified bed and bathroom line",
+   "detail": "On 2026-11-27 (session arena/dbf0d1f0-nyfun2) MADE, The Marlton, Soho Grand, Arlo SoHo and The Wall Street Hotel were verified against each hotel's own official page (queen/king bed plus private/in-room bathroom), so only The Maritime Hotel remains unverified: its official site (themaritimehotel.com) returned empty/error pages to the fetcher, and aggregator snippets were not accepted as an official source. The Maritime is listed for completeness and excluded from the recommendation rather than assumed to comply. (The Benjamin was measured but dropped entirely: no official source for its room.)",
    "source": "data/hotels.json"
   },
   {

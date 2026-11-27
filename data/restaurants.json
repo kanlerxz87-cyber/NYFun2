@@ -116,7 +116,7 @@
    },
    "daysOpen": "Tuesday – Sunday (Closed Monday)",
    "verifiedToday": true,
-   "verifyStatus": "checked 2026-11-26"
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "Eleven Madison Park",
@@ -179,7 +179,7 @@
    },
    "daysOpen": "Monday – Sunday (7 days)",
    "verifiedToday": true,
-   "verifyStatus": "checked 2026-11-26"
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "Le Bernardin",
@@ -314,7 +314,7 @@
    },
    "daysOpen": "Monday – Sunday (7 days)",
    "verifiedToday": true,
-   "verifyStatus": "checked 2026-11-26"
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "Atera",
@@ -420,7 +420,7 @@
    },
    "daysOpen": "Wednesday – Sunday per saga-nyc.com (MICHELIN lists daily — see exception)",
    "verifiedToday": true,
-   "verifyStatus": "checked 2026-11-26"
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "Joo Ok",
@@ -607,7 +607,7 @@
    },
    "daysOpen": "Tuesday – Saturday (Closed Sunday & Monday)",
    "verifiedToday": true,
-   "verifyStatus": "checked 2026-11-26"
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "Aska",
@@ -843,7 +843,7 @@
    },
    "daysOpen": "Tuesday – Saturday (Closed Sunday & Monday)",
    "verifiedToday": true,
-   "verifyStatus": "checked 2026-11-26"
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "Sushi Noz",
@@ -1446,7 +1446,7 @@
    },
    "daysOpen": "Monday – Sunday (7 days)",
    "verifiedToday": true,
-   "verifyStatus": "checked 2026-11-26"
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "Crown Shy",
@@ -1579,7 +1579,7 @@
    },
    "daysOpen": "Monday – Sunday (7 days)",
    "verifiedToday": true,
-   "verifyStatus": "checked 2026-11-26"
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "Oiji Mi",
@@ -1764,9 +1764,9 @@
    "name": "Torrisi",
    "distinction": "1 MICHELIN Star",
    "cuisine": "Contemporary",
-   "address": "",
+   "address": "275 Mulberry St., New York, NY 10012, USA",
    "area": "Nolita (address-based grouping)",
-   "hours": "",
+   "hours": "Mon 17:00–23:00; Tue–Wed 11:30–14:00; Thu–Sat 11:30–14:00 and 17:00–23:00; Sun closed (MICHELIN detail page, read 2026-11-27)",
    "exceptions": "",
    "guidePriceBand": "",
    "priceTwoAdults": "",
@@ -1776,15 +1776,14 @@
    "sourceUrl": "https://guide.michelin.com/en/new-york-state/new-york/restaurant/torrisi",
    "social": [],
    "flags": [
-    "Hours not transcribed this session - open the linked MICHELIN page for the live schedule",
-    "Address not transcribed this session - see MICHELIN page",
     "Couple price unverified: no official menu price captured this session (a la carte or menu not reachable)",
     "No official social account verified this session; see MICHELIN/official site"
    ],
    "provenance": {
     "roster": "official MICHELIN all-starred census, 2026-11-25 (re-checked 2026-11-26)"
    },
-   "verifyStatus": "carried capture (2026-11-25)"
+   "verifiedToday": true,
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "Casa Mono",
@@ -2205,7 +2204,8 @@
    "provenance": {
     "roster": "official MICHELIN all-starred census, 2026-11-25 (re-checked 2026-11-26)"
    },
-   "verifyStatus": "carried capture (2026-11-25)"
+   "verifiedToday": true,
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "Café Boulud at Maison Barnes",
