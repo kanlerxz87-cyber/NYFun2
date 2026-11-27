@@ -41,7 +41,7 @@
   <div class="card">
     <ul>
       <li><strong>Stale headline counts (F22).</strong> The previous front page claimed 20 restaurant rows, 12 activities and 10 hotels while its own data held 72, 12 and 12; README said 21. All counts are now rendered from JSON at load, and the static HTML matches.</li>
-      <li><strong>Kit rosters were not the official census (F23).</strong> 14 kit venues sit outside the 69-star roster, and one kit carried 3 starred names absent from today's live list. None were added; all are in <code>data/conflicts.json</code>.</li>
+      <li><strong>Kit rosters were not the official census (F23).</strong> 14 kit venues sit outside the 69-star roster, and one kit carried 3 starred names absent from the live list checked on 2026-11-25. None were added; all are in <code>data/conflicts.json</code>.</li>
       <li><strong>Duplicate rows in merged kits.</strong> The same hotel appeared as "The Frederick Hotel Tribeca" and "The Frederick Hotel Tribeca, a Small Luxury Hotel"; NYPL, the Met and 9/11 each appeared twice. The merge now keys these and reports rather than duplicates.</li>
       <li><strong>Mis-traced transit risk.</strong> A fuzzy name match initially attached Eurostars Wall Street's transit legs to The Wall Street Hotel. Matching is now key-based, and unmeasured hotels are blank.</li>
       <li><strong>Contested prices stay blank (F24).</strong> Atera and Per Se are not assigned a price; Atomix carries its verified November Tock price ($848/$628) with December ($990/$704+) flagged; Le Bernardin keeps $218 with the $225 alternative shown.</li>
@@ -66,9 +66,11 @@
   </div>
 
   <footer class="foot">
-    <p><strong>Data as captured:</strong> <span data-checked>2026-11-26</span> ·
-    <strong>Official-source verification:</strong> 2026-11-26 ·
-    <strong>Roster census:</strong> 2026-11-25</p>
+    <p><strong>Broad verification register:</strong> 2026-11-26 ·
+    <strong>Latest row-specific re-check:</strong> 2026-11-27 (restaurant, hotel and activity addenda) ·
+    <strong>Roster census:</strong> 2026-11-25 ·
+    <a href="../research/verification-2026-11-27.md">2026-11-27 source review ↗</a> ·
+    <a href="../research/review-2026-11-27.md">Activity corrections ↗</a></p>
     <p>Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> ·
     Coordination board: <a href="../COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a> ·
     <a href="../pages/flagged.html">Flagged for review</a> ·
