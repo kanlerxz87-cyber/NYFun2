@@ -482,7 +482,7 @@ def build():
     <div class="stat"><b>{cov["activities"]["rows"]}</b><span>activity rows · {cov["activities"]["withHours"]} with hours · {cov["activities"]["withCost"]} with a couple cost</span></div>
   </div>
 
-  <h2>Checks re-run on {CHECKS_DATE}</h2>
+  <h2>Verification records updated {CHECKS_DATE}</h2>
   <div data-table="verification"></div>
 
   <h2>What this session could not re-read</h2>
@@ -574,7 +574,7 @@ node --check assets/app.js</pre>
       <li><strong>Duplicate rows in merged kits.</strong> The same hotel appeared as "The Frederick Hotel Tribeca" and "The Frederick Hotel Tribeca, a Small Luxury Hotel"; NYPL, the Met and 9/11 each appeared twice. The merge now keys these and reports rather than duplicates.</li>
       <li><strong>Mis-traced transit risk.</strong> A fuzzy name match initially attached Eurostars Wall Street's transit legs to The Wall Street Hotel. Matching is now key-based, and unmeasured hotels are blank.</li>
       <li><strong>Contested prices stay blank (F24).</strong> Atera and Per Se are not assigned a price; Atomix carries its verified November Tock price ($848/$628) with December ($990/$704+) flagged; Le Bernardin keeps $218 with the $225 alternative shown.</li>
-      <li><strong>Verification is dated, not implied (F21).</strong> 25 checks were run on 2026-11-26 (22 verified, 3 carried captures); everything else is labelled a carried capture.</li>
+      <li><strong>Verification is dated, not implied (F21).</strong> The log has 25 records updated on 2026-11-26 (22 verified, 3 carried captures); each row shows its own status and source.</li>
     </ul>
   </div>
 
