@@ -40,7 +40,7 @@ Each row also carries a verification badge:
 | `pages/itinerary.html` | 7-night skeleton from verified opening days, plus the 3-night variant |
 | `pages/questions.html` | 13 questions: known / missing / provisional answer / how to close |
 | `pages/suggestions.html` | 17 improvement options with status and effort |
-| `pages/flagged.html` | 29 flags: unverified values, conflicts, irregularities |
+| `pages/flagged.html` | 33 flags: unverified values, conflicts, irregularities |
 | `pages/verification.html` | Dated log of the 25 checks re-run on 2026-11-26, plus 21 addendum checks on 2026-11-27, and what could not be re-read |
 | `pages/sources.html` | Rules, primary-source register, reproduce steps |
 | `pages/repo-audit.html` | What each session contributed, what this integration changed |
@@ -76,7 +76,7 @@ Each row also carries a verification badge:
 | `data/restaurants.json` | 72 rows, per-field `provenance`, verification badge |
 | `data/hotels.json` | 16 rows + 5 booking windows + transit objects + ranking |
 | `data/activities.json` | 18 rows with hours, exceptions, costs, socials |
-| `data/decisions.json` | 13 questions, 17 suggestions, 29 flags |
+| `data/decisions.json` | 13 questions, 17 suggestions, 33 flags |
 | `data/verification.json` | Dated verification log and coverage counters |
 | `data/conflicts.json` | Every kit disagreement and out-of-census venue name |
 | `research/canonical/` | Pristine pre-merge datasets (the merge input) |
