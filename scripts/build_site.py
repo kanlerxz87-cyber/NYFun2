@@ -98,7 +98,7 @@ def toolbar(search_placeholder, extra=""):
 
 VERIFY_SELECT = ('<select data-filter="verify" aria-label="Filter by verification status">'
                  '<option value="">All rows</option>'
-                 f'<option value="today">Checked today ({CHECKS_DATE})</option>'
+                 f'<option value="today">Official source checked (date shown)</option>'
                  '<option value="carried">Carried capture (2026-11-25)</option></select>')
 
 
@@ -185,7 +185,7 @@ def build():
 
   <h2>How to read a row</h2>
   <div class="card">
-    <p><strong>Status badge.</strong> <span class="pill green">checked today</span> means the official page was read again on {CHECKS_DATE}. <span class="pill gray">carried capture</span> means the value comes from the 2026-11-25 capture and the source link is still there for you to open.</p>
+    <p><strong>Status badge.</strong> <span class="pill green">checked YYYY-MM-DD</span> shows the source-capture date, not a promise that the value is current today. <span class="pill gray">carried YYYY-MM-DD</span> identifies the older capture date. Where a row's fields were checked on different dates, use its verification note and the Verification page for scope.</p>
     <p><strong>Blank</strong> (<span class="blank">blank — unverified</span>) means no official page confirmed the value. It is never filled with an estimate. Each blank is explained on the Flagged page.</p>
     <p><strong>Route</strong> links open live Google Maps transit directions from the hotel you pick on the Hotels page. Stored minutes only appear where a real routing result was captured.</p>
     <p><strong>Social links</strong> are labelled by platform; "review" links are third-party and are not treated as endorsements.</p>
@@ -337,7 +337,7 @@ def build():
   <div class="card">
     <p><strong>Now, at a cancellable rate.</strong> Two of the priced hotels were running 30–39% "Black Friday" promotions on 25 Nov 2026 (DoubleTree Chelsea, Arlo NoMad). A free-cancellation, $0-prepayment hold captures that price without risking a non-refundable commitment before the 14 Dec 2026 MICHELIN announcement and before the 3-vs-7-night decision.</p>
     <p><strong>Then re-shop</strong> in early February 2027 (14–30 days out) and around the ceremony. No official source promises a future price drop, so the cancellable hold is the risk cap, not a prediction.</p>
-    <p><strong>Re-quote before paying:</strong> the totals here are third-party booking-engine snapshots captured 2026-11-25, not hotel quotes (flag F25). Booking.com property pages refused this session's fetcher on {CHECKS_DATE}, so they could not be re-quoted today.</p>
+    <p><strong>Re-quote before paying:</strong> the totals here are third-party booking-engine snapshots captured 2026-11-25, not hotel quotes (flag F25). Booking.com property pages returned errors during the 2026-11-26 source check, so the totals remain dated aggregator snapshots rather than current hotel quotes.</p>
   </div>
 
   <h2>Why the ranking is not just "count of restaurants within an hour"</h2>
@@ -474,7 +474,7 @@ def build():
         f"<tr><td data-label=\"Result\"><strong>{e(k)}</strong></td><td data-label=\"Checks\">{v}</td></tr>"
         for k, v in result_counts.items())
     verification_body = f"""
-  <div class="notice info"><strong>What "verified" means on this site.</strong> A value is marked <em>Verified</em> only when the official page itself was read again on {CHECKS_DATE}. Where the official page blocked the fetcher and independent sources agreed, the result says <em>Corroborated</em>. Where nothing could be re-read, the row says <em>Carried</em> and keeps its source link so you can check it yourself in one click.</div>
+  <div class="notice info"><strong>What "verified" means on this site.</strong> A dated badge records when the linked source was read; it does not mean the value was rechecked today. The main verification batch was read on {CHECKS_DATE}; activity-row corrections and flags F30–F33 are documented in the 2026-11-27 repo review. Where independent sources only agreed, the result says <em>Corroborated</em>; carried values retain their capture date and source link.</div>
 
   <div class="stats">
     <div class="stat"><b>{cov["restaurants"]["rows"]}</b><span>restaurant rows · {cov["restaurants"]["withPrice"]} priced · {cov["restaurants"]["withHours"]} with hours · {cov["restaurants"]["withSocial"]} with social links</span></div>
@@ -486,13 +486,13 @@ def build():
   <p>The table below holds the 2026-11-26 log followed by a 2026-11-27 addendum (session <code>arena/dbf0d1f0-nyfun2</code>, task T27). The addendum re-read the MICHELIN census, the three date-critical winter activities, MTA fares, MoMA/Met admission, ten priced restaurant menus, five hotel bed/bathroom lines, and Torrisi's hours. It corrected one carried value (Wollman Fri/Sat/Sun opening time, 10:00 → 09:00) and verified five hotels that previously lacked a bed/bathroom line, leaving only The Maritime Hotel unverified (F26).</p>
   <div data-table="verification"></div>
 
-  <h2>What this session could not re-read</h2>
+  <h2>Remaining limits in the dated checks</h2>
   <div class="card">
     <ul>
       <li><strong>Booking.com property pages</strong> returned an error to the fetcher, so the dated hotel totals were not re-quoted. The Manhattan search page for 15–22 Feb 2027 did load, confirming the dates are bookable.</li>
-      <li><strong>bryantpark.org</strong> and <strong>wollmanrinknyc.com</strong> could not be fetched; season dates and prices are corroborated by at least three independent 2026–27 listings.</li>
+      <li><strong>2026-11-27 activity review:</strong> the official Bryant Park and Wollman pages were fetched directly; Wollman's Fri–Sun opening times were corrected, Statue of Liberty hours were split by facility, ESB February hours were left unverified, and the Bryant Park ticket-copy conflict was flagged. See the <a href="../research/review-2026-11-27.md">2026-11-27 official-source review</a> and flags F30–F33.</li>
       <li><strong>Google Maps</strong> cannot be queried programmatically here, so the 35 stored transit legs (25 hotel→cluster, 10 hotel→activity) remain the 2026-11-25 capture. Every row links a live directions query.</li>
-      <li><strong>Individual MICHELIN detail pages</strong> were spot-checked (15 star levels plus the filter counters), not all 72 one by one; the census itself was re-read today.</li>
+      <li><strong>Individual MICHELIN detail pages</strong> were spot-checked (15 star levels plus the filter counters), not all 72 one by one; the census itself was re-read on 2026-11-26.</li>
     </ul>
     <p class="small muted">The full machine-readable log is <a href="../data/verification.json" target="_blank" rel="noopener noreferrer">data/verification.json ↗</a>.</p>
   </div>
