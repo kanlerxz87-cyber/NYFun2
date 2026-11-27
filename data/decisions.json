@@ -230,11 +230,11 @@
   },
   {
    "id": "S7",
-   "title": "Make the site filterable by 'confirmed today / needs re-check'",
+   "title": "Make the site filterable by 'confirmed on the dated check / needs re-check'",
    "detail": "Add a client-side toggle that hides rows carrying flags, so a traveler can see only the fully verified subset at a glance.",
    "effort": "Low",
    "blockedBy": [],
-   "status": "Implemented 2026-11-26 - every restaurant and activity row now carries a 'checked today / carried capture' badge and filter."
+   "status": "Implemented 2026-11-26 - every restaurant and activity row now carries a 'checked 2026-11-26 / carried capture' badge and filter."
   },
   {
    "id": "S8",
@@ -279,7 +279,7 @@
    "detail": "Several official pages are client-rendered: le-bernardin.com/menus returned one image, elevenmadisonpark.com returned a slide carousel, moma.org failed to load twice. Those blanks close immediately with a JavaScript-enabled session, and each capture should store the exact quoted text.",
    "effort": "Low",
    "blockedBy": [],
-   "status": "Partially implemented 2026-11-26 - Met and MoMA hours re-read; 13 other activity pages not re-read today."
+   "status": "Partially implemented 2026-11-26 - Met and MoMA hours re-read; 13 other activity pages not re-read during the 2026-11-26 check."
   },
   {
    "id": "S13",
@@ -511,7 +511,7 @@
    "id": "F23",
    "severity": "Medium",
    "title": "Kit rosters are not the same census as the live MICHELIN list",
-   "detail": "The parallel kits contained 14 venue names outside the 69-star census (Katz's, Thai Diner, Via Carota, Dhamaka, Manhatta, Cafe Carmellini and others - Bib Gourmand/Selected or non-Guide), and one kit carried three starred names that are not in today's live all-starred list (Blue Hill at Stone Barns, Shion 69 Leonard Street, La Bastide by Andrea Calstier). None were added to the census; all are listed in data/conflicts.json for review.",
+   "detail": "The parallel kits contained 14 venue names outside the 69-star census (Katz's, Thai Diner, Via Carota, Dhamaka, Manhatta, Cafe Carmellini and others - Bib Gourmand/Selected or non-Guide), and one kit carried three starred names that are not in the live all-starred list checked on 2026-11-25 (Blue Hill at Stone Barns, Shion 69 Leonard Street, La Bastide by Andrea Calstier). None were added to the census; all are listed in data/conflicts.json for review.",
    "source": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred"
   },
   {
@@ -524,7 +524,7 @@
   {
    "id": "F25",
    "severity": "Medium",
-   "title": "Dated hotel totals could not be re-quoted today",
+   "title": "Dated hotel totals could not be re-quoted on 2026-11-26",
    "detail": "Booking.com property pages refused this session's fetcher, so the 15-22 Feb 2027 totals are the 2026-11-25 snapshots. Two of them (DoubleTree, Arlo NoMad) were Black Friday promotions whose terms expire; the search page for the window did load, confirming the dates remain bookable.",
    "source": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price"
   },

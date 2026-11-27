@@ -2,8 +2,8 @@
  "checkedOn": "2026-11-26",
  "session": "arena/9bc6abed-nyfun2",
  "addendumCheckedOn": "2026-11-27",
- "addendumSession": "arena/dbf0d1f0-nyfun2 (task T27)",
- "methodNote": "This session's sandbox reaches GitHub directly and external sites through a proxied fetch/search channel. Pages that block that channel are recorded as unreachable rather than assumed. A value is only marked Verified when the official page itself was read today.",
+ "addendumSession": "arena/dbf0d1f0-nyfun2 (task T29; initially claimed as T27)",
+ "methodNote": "This session's sandbox reaches GitHub directly and external sites through a proxied fetch/search channel. Pages that block that channel are recorded as unreachable rather than assumed. A value is only marked Verified when the official page itself was read on 2026-11-26.",
  "checks": [
   {
    "fact": "Michelin NYC starred census",
@@ -58,7 +58,7 @@
    "fact": "The Met admission and hours",
    "value": "Adults $30 ($60 for two); Sun/Mon/Tue/Thu 10-17, Fri-Sat 10-21, closed Wednesday",
    "source": "https://www.metmuseum.org/plan-your-visit",
-   "note": "Admission table read on the official page today; the Wednesday closure corroborated by four independent guides because the hours block was not in the page section captured",
+   "note": "Admission table read on the official page on 2026-11-26; the Wednesday closure corroborated by four independent guides because the hours block was not in the page section captured",
    "result": "Verified (hours corroborated)"
   },
   {
@@ -93,15 +93,15 @@
    "fact": "Hyatt Place NY/Chelsea room specification",
    "value": "King-bed rooms with a bathroom with shower; 180 sq ft; address 140 West 24th Street",
    "source": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms",
-   "note": "Read from the official rooms page today",
+   "note": "Read from the official rooms page on 2026-11-26",
    "result": "Verified"
   },
   {
    "fact": "Dated hotel rates for 15-22 Feb 2027",
    "value": "$1,113 pre-tax Hyatt Place, $1,214 Arlo NoMad, $1,522 11 Howard, $848 Eurostars, $943 DoubleTree",
    "source": "https://www.booking.com/searchresults.html?ss=Manhattan%2C+New+York&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&order=price",
-   "note": "Booking.com property detail pages returned an error to this session's fetcher, so the dated totals could not be re-quoted today. The search page for the window did load, confirming availability for 15-22 Feb 2027. Treat the totals as 2026-11-25 snapshots (F10)",
-   "result": "NOT re-quoted today - carried"
+   "note": "Booking.com property detail pages returned an error to this session's fetcher, so the dated totals could not be re-quoted on 2026-11-26. The search page for the window did load, confirming availability for 15-22 Feb 2027. Treat the totals as 2026-11-25 snapshots (F10)",
+   "result": "Not re-quoted on 2026-11-26 - carried"
   },
   {
    "fact": "Transit times",
@@ -114,7 +114,7 @@
    "fact": "Michelin 2026 ceremony date",
    "value": "14 Dec 2026 (Northeast Cities)",
    "source": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
-   "note": "Not re-fetched today; carried from the 2026-11-25 capture and still the basis of flag F1",
+   "note": "Not re-fetched on 2026-11-26; carried from the 2026-11-25 capture and still the basis of flag F1",
    "result": "Carried"
   },
   {
@@ -332,7 +332,7 @@
   "Verified": 37,
   "Verified (hours corroborated)": 1,
   "Verified (typo flagged)": 2,
-  "NOT re-quoted today - carried": 1,
+  "Not re-quoted on 2026-11-26 - carried": 1,
   "Carried snapshot": 1,
   "Carried": 2,
   "Verified (corrected)": 1,

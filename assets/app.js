@@ -5,6 +5,7 @@
   const ROOT = location.pathname.includes('/pages/') ? '../' : './';
   const DEFAULT_ORIGIN = 'DoubleTree by Hilton Hotel New York City - Chelsea, 128 West 29th Street, New York, NY 10001';
   const storeKey = 'nyfun2_origin';
+  let verifiedDate = 'date not recorded';
 
   const esc = (v) => String(v == null ? '' : v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const val = (v) => (v !== undefined && v !== null && String(v).trim() !== '') ? esc(v) : '<span class="blank">blank — unverified</span>';
@@ -18,14 +19,11 @@
     : '<span class="blank">none found</span>';
   const badge = (row) => {
     const status = String(row.verifyStatus || '');
-    const date = status.match(/20\d{2}-\d{2}-\d{2}/);
-    const scope = row.verificationNote || '';
-    if (row.verifiedToday) {
-      const label = date ? `checked ${date[0]}` : 'checked (date not stated)';
-      return `<span class="pill green"${scope ? ` title="${esc(scope)}"` : ''}>${label}</span>`;
+    const rowDate = status.match(/\b20\d{2}-\d{2}-\d{2}\b/);
+    if (!row.verifiedToday) {
+      return `<span class="pill gray">${rowDate ? `carried ${esc(rowDate[0])}` : 'carried capture (date not stated)'}</span>`;
     }
-    const capture = date ? `carried ${date[0]}` : 'carried capture';
-    return `<span class="pill gray">${capture}</span>`;
+    return `<span class="pill green">${rowDate ? `checked ${esc(rowDate[0])}` : 'checked (date not stated)'}</span>`;
   };
   const origin = () => { try { return localStorage.getItem(storeKey) || DEFAULT_ORIGIN; } catch (e) { return DEFAULT_ORIGIN; } };
   const route = (dest) => `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin())}&destination=${encodeURIComponent(dest)}&travelmode=transit`;
@@ -208,6 +206,7 @@
   }
 
   function setCounts(data) {
+    verifiedDate = data.verification?.checkedOn || data.restaurants?.meta?.integrationCheckedOn || 'date not recorded';
     const map = {
       restaurants: (data.restaurants?.items || []).length,
       activities: (data.activities?.items || []).length,

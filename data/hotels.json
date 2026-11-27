@@ -462,7 +462,7 @@
    "qualifies": true,
    "pricedTier": "dated 7-night total",
    "verifiedToday": true,
-   "verifyStatus": "checked today (2026-11-26)",
+   "verifyStatus": "checked 2026-11-26",
    "rank": 5
   },
   {
@@ -707,8 +707,8 @@
    },
    "qualifies": true,
    "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
+   "verifiedToday": true,
+   "verifyStatus": "checked 2026-11-27",
    "rank": 10
   },
   {
@@ -737,8 +737,8 @@
    },
    "qualifies": true,
    "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
+   "verifiedToday": true,
+   "verifyStatus": "checked 2026-11-27",
    "rank": 11
   },
   {
@@ -767,8 +767,8 @@
    },
    "qualifies": true,
    "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
+   "verifiedToday": true,
+   "verifyStatus": "checked 2026-11-27",
    "rank": 12
   },
   {
@@ -797,8 +797,8 @@
    },
    "qualifies": true,
    "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
+   "verifiedToday": true,
+   "verifyStatus": "checked 2026-11-27",
    "rank": 13
   },
   {
@@ -827,8 +827,8 @@
    },
    "qualifies": true,
    "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
+   "verifiedToday": true,
+   "verifyStatus": "checked 2026-11-27",
    "rank": 14
   },
   {
@@ -857,8 +857,8 @@
    },
    "qualifies": true,
    "pricedTier": "",
-   "verifiedToday": false,
-   "verifyStatus": "carried capture (2026-11-25)",
+   "verifiedToday": true,
+   "verifyStatus": "checked 2026-11-27",
    "rank": 15
   },
   {

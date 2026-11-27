@@ -61,7 +61,8 @@
    },
    "daysOpen": "Daily (7 days/week)",
    "transitNote": "≤25 min subway [1 or 4/5] from Chelsea/NoMad to South Ferry / Bowling Green; ~10 min walk from FiDi hotels",
-   "verifyStatus": "carried capture (2026-11-25)"
+   "verifiedToday": true,
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "Central Park",
@@ -193,7 +194,7 @@
    "daysOpen": "Thursday – Tuesday (Closed Wednesday)",
    "transitNote": "25–39 min via [4/5/6] to 86th St (measured 39 min from Eurostars Wall St; ~22 min from NoMad)",
    "verifiedToday": true,
-   "verifyStatus": "checked today (2026-11-26)"
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "MoMA (Museum of Modern Art)",
@@ -261,7 +262,7 @@
    "daysOpen": "Daily (7 days/week)",
    "transitNote": "14–32 min via [E/M] to 5 Av/53 St or [B/D/F/M] to Rockefeller Ctr (measured 32 min from Wall St; ~15 min from Chelsea)",
    "verifiedToday": true,
-   "verifyStatus": "checked today (2026-11-26)"
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "American Museum of Natural History",
@@ -319,7 +320,7 @@
    "daysOpen": "Daily (7 days/week)",
    "transitNote": "20–34 min via [B/C] to 81st St–Museum of Natural History or [1] to 79th St (measured 34 min from Wall St)",
    "verifiedToday": true,
-   "verifyStatus": "checked today (2026-11-26)"
+   "verifyStatus": "checked 2026-11-26"
   },
   {
    "name": "9/11 Memorial (outdoor) and Museum",
@@ -385,7 +386,7 @@
    "daysOpen": "Memorial: Daily · Museum: Wed–Mon (Closed most Tuesdays)",
    "transitNote": "5–10 min walk from Tribeca/FiDi hotels; ~18 min via [1] or [E] from Chelsea/NoMad",
    "verifiedToday": true,
-   "verifyStatus": "checked today (2026-11-26)"
+   "verifyStatus": "checked 2026-11-26"
   },
   {
    "name": "The High Line",
@@ -575,7 +576,7 @@
    "daysOpen": "Daily (7 days/week)",
    "transitNote": "25–40 min via [4/5/6] to 86th St (6 blocks north of The Met)",
    "verifiedToday": true,
-   "verifyStatus": "checked today (2026-11-26)"
+   "verifyStatus": "checked 2026-11-26"
   },
   {
    "name": "Empire State Building Observatory",
@@ -648,7 +649,7 @@
    "daysOpen": "Daily (365 days/year)",
    "transitNote": "5–8 min walk from DoubleTree Chelsea, Arlo NoMad, and The Evelyn; ~18 min [4/5] or [2/3] from Downtown",
    "verifiedToday": true,
-   "verifyStatus": "checked today (2026-11-26)"
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "Staten Island Ferry",
@@ -820,7 +821,7 @@
    "daysOpen": "Daily during winter skating season",
    "transitNote": "15–28 min via [N/R/W] to 5th Ave/59th St or [F] to 57th St",
    "verifiedToday": true,
-   "verifyStatus": "checked today (2026-11-26)"
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "Bank of America Winter Village at Bryant Park (The Rink & The Lodge)",
@@ -874,7 +875,7 @@
    "daysOpen": "Daily through Sunday 28 February 2027 ONLY",
    "transitNote": "10–18 min via [B/D/F/M] or [7] to 42 St–Bryant Park (directly across from 2★ Gabriel Kreuther & NYPL)",
    "verifiedToday": true,
-   "verifyStatus": "checked today (2026-11-26)"
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "29th Chinatown Lunar New Year Parade & Festival (2027)",
@@ -923,7 +924,7 @@
    "daysOpen": "Single Date: Sunday, 21 February 2027",
    "transitNote": "5-min walk from 11 Howard; ~15 min via [N/Q/R/W] or [6] to Canal St from Chelsea/NoMad",
    "verifiedToday": true,
-   "verifyStatus": "checked today (2026-11-26)"
+   "verifyStatus": "checked 2026-11-27"
   },
   {
    "name": "Top of the Rock Observation Deck (Rockefeller Center)",
@@ -999,7 +1000,7 @@
     "row": "added from arena/c1cf7b23-nyfun2 (activity not in the first canonical set)",
     "hoursAndDays": "Re-verified 2026-11-26 by arena/4a8e5aa4-nyfun2 against https://info.summitov.com/"
    },
-   "verifyStatus": "checked today (2026-11-26)"
+   "verifyStatus": "checked 2026-11-26"
   },
   {
    "name": "Brooklyn Bridge Pedestrian Promenade & DUMBO Waterfront",

@@ -27,8 +27,8 @@ NAV = [
     ("pages/repo-audit.html", "Repo audit", "repo"),
 ]
 
-CHECKS_DATE = "2026-11-26"
-DATA_DATE = "2026-11-25"
+CHECKS_DATE = json.load(open(D("data", "verification.json"), encoding="utf-8")).get("checkedOn", "date not recorded")
+DATA_DATE = json.load(open(D("data", "restaurants.json"), encoding="utf-8")).get("meta", {}).get("checkedOn", "date not recorded")
 
 
 def load(name):
@@ -74,9 +74,11 @@ def shell(active, title, eyebrow, h1, lede, body, depth=0, description=""):
   <p class="lede">{lede}</p>
 {body}
   <footer class="foot">
-    <p><strong>Data as captured:</strong> <span data-checked>2026-11-26</span> ·
-    <strong>Official-source verification:</strong> {CHECKS_DATE} ·
-    <strong>Roster census:</strong> {DATA_DATE}</p>
+    <p><strong>Broad verification register:</strong> {CHECKS_DATE} ·
+    <strong>Latest row-specific re-check:</strong> 2026-11-27 (restaurant, hotel and activity addenda) ·
+    <strong>Roster census:</strong> {DATA_DATE} ·
+    <a href="{prefix}research/verification-2026-11-27.md">2026-11-27 source review ↗</a> ·
+    <a href="{prefix}research/review-2026-11-27.md">Activity corrections ↗</a></p>
     <p>Repository: <a href="https://github.com/kanlerxz87-cyber/NYFun2" target="_blank" rel="noopener noreferrer">kanlerxz87-cyber/NYFun2 ↗</a> ·
     Coordination board: <a href="{prefix}COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md ↗</a> ·
     <a href="{prefix}pages/flagged.html">Flagged for review</a> ·
@@ -98,7 +100,7 @@ def toolbar(search_placeholder, extra=""):
 
 VERIFY_SELECT = ('<select data-filter="verify" aria-label="Filter by verification status">'
                  '<option value="">All rows</option>'
-                 f'<option value="today">Official source checked (date shown)</option>'
+                 '<option value="today">Verified rows (date shown per row)</option>'
                  '<option value="carried">Carried capture (2026-11-25)</option></select>')
 
 
@@ -185,7 +187,7 @@ def build():
 
   <h2>How to read a row</h2>
   <div class="card">
-    <p><strong>Status badge.</strong> <span class="pill green">checked YYYY-MM-DD</span> shows the source-capture date, not a promise that the value is current today. <span class="pill gray">carried YYYY-MM-DD</span> identifies the older capture date. Where a row's fields were checked on different dates, use its verification note and the Verification page for scope.</p>
+    <p><strong>Status badge.</strong> <span class="pill green">checked YYYY-MM-DD</span> shows the date on which the row's source was re-read. The wider verification register is dated {CHECKS_DATE}; the activity audit includes later 2026-11-27 row checks. <span class="pill gray">carried capture</span> means the value comes from the 2026-11-25 capture and the source link is still there for you to open.</p>
     <p><strong>Blank</strong> (<span class="blank">blank — unverified</span>) means no official page confirmed the value. It is never filled with an estimate. Each blank is explained on the Flagged page.</p>
     <p><strong>Route</strong> links open live Google Maps transit directions from the hotel you pick on the Hotels page. Stored minutes only appear where a real routing result was captured.</p>
     <p><strong>Social links</strong> are labelled by platform; "review" links are third-party and are not treated as endorsements.</p>
@@ -257,7 +259,7 @@ def build():
 """
     pages["executive-summary"] = shell(
         "summary", "Executive summary", "Decision brief", "Executive summary",
-        "What the verified sources support today, what they do not, and the order in which to decide.",
+        "What the sources verified on the dated checks support, what remains unknown, and the order in which to decide.",
         exec_body, depth=1)
 
     # ------------------------------------------------------------- michelin
@@ -337,7 +339,7 @@ def build():
   <div class="card">
     <p><strong>Now, at a cancellable rate.</strong> Two of the priced hotels were running 30–39% "Black Friday" promotions on 25 Nov 2026 (DoubleTree Chelsea, Arlo NoMad). A free-cancellation, $0-prepayment hold captures that price without risking a non-refundable commitment before the 14 Dec 2026 MICHELIN announcement and before the 3-vs-7-night decision.</p>
     <p><strong>Then re-shop</strong> in early February 2027 (14–30 days out) and around the ceremony. No official source promises a future price drop, so the cancellable hold is the risk cap, not a prediction.</p>
-    <p><strong>Re-quote before paying:</strong> the totals here are third-party booking-engine snapshots captured 2026-11-25, not hotel quotes (flag F25). Booking.com property pages returned errors during the 2026-11-26 source check, so the totals remain dated aggregator snapshots rather than current hotel quotes.</p>
+    <p><strong>Re-quote before paying:</strong> the totals here are third-party booking-engine snapshots captured 2026-11-25, not hotel quotes (flag F25). Booking.com property pages refused this session's fetcher during the 2026-11-26 verification pass, so the stored totals remain carried snapshots.</p>
   </div>
 
   <h2>Why the ranking is not just "count of restaurants within an hour"</h2>
@@ -474,7 +476,7 @@ def build():
         f"<tr><td data-label=\"Result\"><strong>{e(k)}</strong></td><td data-label=\"Checks\">{v}</td></tr>"
         for k, v in result_counts.items())
     verification_body = f"""
-  <div class="notice info"><strong>What "verified" means on this site.</strong> A dated badge records when the linked source was read; it does not mean the value was rechecked today. The main verification batch was read on {CHECKS_DATE}; activity-row corrections and flags F30–F33 are documented in the 2026-11-27 repo review. Where independent sources only agreed, the result says <em>Corroborated</em>; carried values retain their capture date and source link.</div>
+  <div class="notice info"><strong>What "verified" means on this site.</strong> A value is marked <em>Verified</em> only when the official page itself was read again on {CHECKS_DATE}. Where the official page blocked the fetcher and independent sources agreed, the result says <em>Corroborated</em>. Where nothing could be re-read, the row says <em>Carried</em> and keeps its source link so you can check it yourself in one click.</div>
 
   <div class="stats">
     <div class="stat"><b>{cov["restaurants"]["rows"]}</b><span>restaurant rows · {cov["restaurants"]["withPrice"]} priced · {cov["restaurants"]["withHours"]} with hours · {cov["restaurants"]["withSocial"]} with social links</span></div>
@@ -483,18 +485,21 @@ def build():
   </div>
 
   <h2>Verification log — {len(V["checks"])} records</h2>
-  <p>The table below holds the 2026-11-26 log followed by a 2026-11-27 addendum (session <code>arena/dbf0d1f0-nyfun2</code>, task T27). The addendum re-read the MICHELIN census, the three date-critical winter activities, MTA fares, MoMA/Met admission, ten priced restaurant menus, five hotel bed/bathroom lines, and Torrisi's hours. It corrected one carried value (Wollman Fri/Sat/Sun opening time, 10:00 → 09:00) and verified five hotels that previously lacked a bed/bathroom line, leaving only The Maritime Hotel unverified (F26).</p>
+  <p>The table combines the 25-entry 2026-11-26 base log and 21 2026-11-27 addendum checks (session <code>arena/dbf0d1f0-nyfun2</code>, task T29; originally claimed as T27). The addendum re-read the MICHELIN census, seasonal activities, MTA fares, MoMA/Met admission, ten priced restaurant menus, hotel bed/bathroom lines, and Torrisi's hours. It corrected one carried value (Wollman Fri/Sat/Sun opening time, 10:00 → 09:00), verified five hotels that previously lacked a bed/bathroom line, and left The Maritime Hotel unverified (F26).</p>
   <div data-table="verification"></div>
 
-  <h2>Remaining limits in the dated checks</h2>
+  <h2>Supplemental official-source activity re-check · 2026-11-27</h2>
+  <div class="notice info"><strong>12 activity-related rows were re-read by a separate session.</strong> Eight matched fully or partly; four discrepancies were corrected or flagged (Wollman hours F30, Statue of Liberty hours/date F31, Empire State Building Feb 2027 hours F32, Bryant Park stale ticket wording F33). See the <a href="../research/review-2026-11-27.md">row-by-row source review ↗</a>. A row badge shows its own check date.</div>
+
+  <h2>Limits in the broader 2026-11-26 verification pass</h2>
   <div class="card">
     <ul>
-      <li><strong>Booking.com property pages</strong> returned an error to the fetcher, so the dated hotel totals were not re-quoted. The Manhattan search page for 15–22 Feb 2027 did load, confirming the dates are bookable.</li>
-      <li><strong>2026-11-27 activity review:</strong> the official Bryant Park and Wollman pages were fetched directly; Wollman's Fri–Sun opening times were corrected, Statue of Liberty hours were split by facility, ESB February hours were left unverified, and the Bryant Park ticket-copy conflict was flagged. See the <a href="../research/review-2026-11-27.md">2026-11-27 official-source review</a> and flags F30–F33.</li>
+      <li><strong>Booking.com property pages</strong> returned an error to that fetcher, so the dated hotel totals were not re-quoted. The Manhattan search page for 15–22 Feb 2027 did load, confirming the dates were bookable at that capture.</li>
+      <li><strong>bryantpark.org</strong> and <strong>wollmanrinknyc.com</strong> were unreadable in the 2026-11-26 broad pass, but were subsequently re-read on their official pages by later sessions; 2026-27 schedule corrections and source notes are in the activity review above.</li>
       <li><strong>Google Maps</strong> cannot be queried programmatically here, so the 35 stored transit legs (25 hotel→cluster, 10 hotel→activity) remain the 2026-11-25 capture. Every row links a live directions query.</li>
       <li><strong>Individual MICHELIN detail pages</strong> were spot-checked (15 star levels plus the filter counters), not all 72 one by one; the census itself was re-read on 2026-11-26.</li>
     </ul>
-    <p class="small muted">The full machine-readable log is <a href="../data/verification.json" target="_blank" rel="noopener noreferrer">data/verification.json ↗</a>.</p>
+    <p class="small muted">The full machine-readable log is <a href="../data/verification.json" target="_blank" rel="noopener noreferrer">data/verification.json ↗</a>. The 2026-11-27 local consistency audit (not a fresh source reread) is <a href="../research/verification-2026-11-27.md">here ↗</a>.</p>
   </div>
 """
     pages["verification"] = shell(
@@ -571,7 +576,7 @@ node --check assets/app.js</pre>
   <div class="card">
     <ul>
       <li><strong>Stale headline counts (F22).</strong> The previous front page claimed 20 restaurant rows, 12 activities and 10 hotels while its own data held 72, 12 and 12; README said 21. All counts are now rendered from JSON at load, and the static HTML matches.</li>
-      <li><strong>Kit rosters were not the official census (F23).</strong> 14 kit venues sit outside the 69-star roster, and one kit carried 3 starred names absent from today's live list. None were added; all are in <code>data/conflicts.json</code>.</li>
+      <li><strong>Kit rosters were not the official census (F23).</strong> 14 kit venues sit outside the 69-star roster, and one kit carried 3 starred names absent from the live list checked on 2026-11-25. None were added; all are in <code>data/conflicts.json</code>.</li>
       <li><strong>Duplicate rows in merged kits.</strong> The same hotel appeared as "The Frederick Hotel Tribeca" and "The Frederick Hotel Tribeca, a Small Luxury Hotel"; NYPL, the Met and 9/11 each appeared twice. The merge now keys these and reports rather than duplicates.</li>
       <li><strong>Mis-traced transit risk.</strong> A fuzzy name match initially attached Eurostars Wall Street's transit legs to The Wall Street Hotel. Matching is now key-based, and unmeasured hotels are blank.</li>
       <li><strong>Contested prices stay blank (F24).</strong> Atera and Per Se are not assigned a price; Atomix carries its verified November Tock price ($848/$628) with December ($990/$704+) flagged; Le Bernardin keeps $218 with the $225 alternative shown.</li>
@@ -611,7 +616,7 @@ node --check assets/app.js</pre>
              "Same census gap; Atomix/Atera price captures conflict with the other kit."),
             ("sessions/33cfdba4/", "72-row roster · 25 transit legs · 5 price windows",
              "The only measured transit matrix, which is what makes the hotel ranking evidence-based.",
-             "Carried 3 starred names absent from today's live list."),
+             "Carried 3 starred names absent from the live list checked on 2026-11-25."),
             ("sessions/215c2a25/", "Independent early dashboard",
              "A third independent reading of the same sources for comparison.",
              "Earlier capture; superseded by the roster above."),
