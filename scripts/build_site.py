@@ -482,7 +482,8 @@ def build():
     <div class="stat"><b>{cov["activities"]["rows"]}</b><span>activity rows · {cov["activities"]["withHours"]} with hours · {cov["activities"]["withCost"]} with a couple cost</span></div>
   </div>
 
-  <h2>Checks re-run on {CHECKS_DATE}</h2>
+  <h2>Checks re-run on {CHECKS_DATE}, plus a 2026-11-27 addendum</h2>
+  <p>The table below holds the 2026-11-26 log followed by a 2026-11-27 addendum (session <code>arena/dbf0d1f0-nyfun2</code>, task T27). The addendum re-read the MICHELIN census, the three date-critical winter activities, MTA fares, MoMA/Met admission, ten priced restaurant menus, five hotel bed/bathroom lines, and Torrisi's hours. It corrected one carried value (Wollman Fri/Sat/Sun opening time, 10:00 → 09:00) and verified five hotels that previously lacked a bed/bathroom line, leaving only The Maritime Hotel unverified (F26).</p>
   <div data-table="verification"></div>
 
   <h2>What this session could not re-read</h2>
@@ -498,7 +499,7 @@ def build():
 """
     pages["verification"] = shell(
         "verification", "Verification log", "Audit · dated checks", "What was checked, and how",
-        "A dated log of every fact re-read on 2026-11-26, every figure only corroborated, and every number still carried from the November 25 capture.",
+        "A dated log of every fact re-read on 2026-11-26, the 2026-11-27 addendum, every figure only corroborated, and every number still carried from the November 25 capture.",
         verification_body, depth=1)
 
     # --------------------------------------------------------------- sources
@@ -559,7 +560,7 @@ node --check assets/app.js</pre>
         <tr><td data-label="Path"><code>sessions/c1cf7b23/</code></td><td data-label="What">31-venue, 10-hotel, 18-activity kit with 155 social links</td><td data-label="Status">Preserved; source of most hours/socials and 4 dated hotel rates</td></tr>
         <tr><td data-label="Path"><code>sessions/657520df/</code></td><td data-label="What">27-venue kit with cross-week window analysis</td><td data-label="Status">Preserved; source of Met/MoMA/Whitney socials and window notes</td></tr>
         <tr><td data-label="Path"><code>sessions/33cfdba4/</code></td><td data-label="What">72-row roster, 25-leg transit matrix, 5 price windows</td><td data-label="Status">Preserved; source of the transit measurements</td></tr>
-        <tr><td data-label="Path"><code>data/verification.json</code>, <code>data/conflicts.json</code>, <code>research/verification-2026-11-26.md</code></td><td data-label="What">Dated verification log, every kit conflict, and the narrative audit</td><td data-label="Status">New 2026-11-26</td></tr>
+        <tr><td data-label="Path"><code>data/verification.json</code>, <code>data/conflicts.json</code>, <code>research/verification-2026-11-26.md</code>, <code>research/verification-2026-11-27.md</code></td><td data-label="What">Dated verification log, every kit conflict, and the narrative audits</td><td data-label="Status">New 2026-11-26; addendum 2026-11-27</td></tr>
         <tr><td data-label="Path"><code>pages/verification.html</code>, <code>pages/compare.html</code></td><td data-label="What">Public verification log and kit comparison</td><td data-label="Status">New 2026-11-26</td></tr>
         <tr><td data-label="Path"><code>sessions/215c2a25/</code>, <code>alt/</code></td><td data-label="What">Two earlier independent dashboards</td><td data-label="Status">Preserved, not linked in the main navigation</td></tr>
       </tbody>

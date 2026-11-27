@@ -1,6 +1,8 @@
 {
  "checkedOn": "2026-11-26",
  "session": "arena/9bc6abed-nyfun2",
+ "addendumCheckedOn": "2026-11-27",
+ "addendumSession": "arena/dbf0d1f0-nyfun2 (task T27)",
  "methodNote": "This session's sandbox reaches GitHub directly and external sites through a proxied fetch/search channel. Pages that block that channel are recorded as unreachable rather than assumed. A value is only marked Verified when the official page itself was read today.",
  "checks": [
   {
@@ -177,24 +179,173 @@
    "source": "https://www.mta.info/fares-tolls",
    "note": "Read directly from mta.info/fares-tolls on 2026-11-26 (session arena/779506a6-nyfun2)",
    "result": "Verified"
+  },
+  {
+   "fact": "MICHELIN NYC starred census (addendum)",
+   "value": "5 three-star / 14 two-star / 50 one-star; 69 starred; 76 Bib Gourmand; 224 Selected",
+   "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
+   "note": "Re-read on the live filter panel on 2026-11-27 (session arena/dbf0d1f0-nyfun2); counts unchanged from 2026-11-26",
+   "result": "Verified"
+  },
+  {
+   "fact": "Michelin 2026 ceremony date (addendum)",
+   "value": "14 Dec 2026 (Northeast Cities, The Glasshouse)",
+   "source": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
+   "note": "Re-read directly from the official michelinmedia.com announcement on 2026-11-27 (session arena/dbf0d1f0-nyfun2)",
+   "result": "Verified"
+  },
+  {
+   "fact": "Chinatown Lunar New Year Parade 2027 (addendum)",
+   "value": "29th parade: Sunday 21 February 2027, 13:00, Chinatown; firecracker ceremony 6 Feb 2027",
+   "source": "https://betterchinatown.com/new-york-city-2027-lunar-new-year-parade-dates-announced/",
+   "note": "Re-read directly from the organiser's page on 2026-11-27; English headline/body confirm 21 Feb 2027. The Chinese-language line still prints 2026 (F19)",
+   "result": "Verified (typo flagged)"
+  },
+  {
+   "fact": "Bryant Park Winter Village season (addendum)",
+   "value": "Season 28 Oct 2026 - 28 Feb 2027; Rink 8am-10pm; admission free; rentals $18.72-$64.48 incl. admin",
+   "source": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+   "note": "Re-read directly from bryantpark.org on 2026-11-27 (session arena/dbf0d1f0-nyfun2)",
+   "result": "Verified"
+  },
+  {
+   "fact": "Wollman Rink hours correction (addendum)",
+   "value": "Season 28 Oct 2026 - 16 Mar 2027; Mon-Tue 10:00-14:30; Wed-Thu 10:00-21:00; Fri-Sat 09:00-22:00; Sun 09:00-21:00; adults $16/$28/$40; rental $12; 15 Feb Community Day, 16-21 Feb Peak, 22-25 Feb Off-Peak",
+   "source": "https://wollmanrinknyc.com/plan/",
+   "note": "Re-read directly from wollmanrinknyc.com/plan/ on 2026-11-27. CORRECTS the carried hours: Fri/Sat/Sun open at 09:00, not 10:00. Pricing and Feb calendar unchanged",
+   "result": "Verified (corrected)"
+  },
+  {
+   "fact": "MTA subway and bus fares (addendum)",
+   "value": "Subway / local / limited / Select Bus Service $3; express bus $7.25",
+   "source": "https://www.mta.info/fares-tolls",
+   "note": "Re-read directly from mta.info/fares-tolls on 2026-11-27 (session arena/dbf0d1f0-nyfun2)",
+   "result": "Verified"
+  },
+  {
+   "fact": "MoMA admission and hours (addendum)",
+   "value": "Adults $30 ($60 for two); Mon-Thu/Sat/Sun 10:30-17:30, Fri 10:30-20:30",
+   "source": "https://www.moma.org/visit/",
+   "note": "Re-read directly from the official visit page on 2026-11-27 (session arena/dbf0d1f0-nyfun2)",
+   "result": "Verified"
+  },
+  {
+   "fact": "The Met admission (addendum)",
+   "value": "Adults $30 ($60 for two); NY residents pay-what-you-wish",
+   "source": "https://www.metmuseum.org/plan-your-visit",
+   "note": "Admission table re-read on the official page on 2026-11-27. Museum hours were NOT re-read this session and remain as previously recorded; not treated as verified today",
+   "result": "Verified (admission only)"
+  },
+  {
+   "fact": "Eleven Madison Park menu prices (addendum)",
+   "value": "Full Tasting $385/guest ($770 for two); Bar Tasting $255/guest ($510)",
+   "source": "https://www.elevenmadisonpark.com/faq",
+   "note": "Re-read directly from the official FAQ on 2026-11-27; the FAQ also states lounge bar-tasting reservations 'begin at $225' ($450), noted here so the $255 headline is not mistaken for the only bar price",
+   "result": "Verified"
+  },
+  {
+   "fact": "Atomix Tock pricing (addendum)",
+   "value": "Nov Chef's Counter $424/pp ($848) & Bar Tasting $314/pp ($628); Dec $495/pp & from $352/pp; @atomixnyc",
+   "source": "https://www.exploretock.com/atomixnyc/help",
+   "note": "Re-read directly from Atomix's official Tock page on 2026-11-27 (session arena/dbf0d1f0-nyfun2)",
+   "result": "Verified"
+  },
+  {
+   "fact": "Sushi Sho Tock pricing (addendum)",
+   "value": "Shorter Omakase at Hinoki Counter $495/pp ($990 for two); booking through 28 Feb 2027; new release 1 Dec 2026 11:00 AM EST; @sushishonyc",
+   "source": "https://www.exploretock.com/sushi-sho-nyc/experience/474458/shorter-omakase-at-hinoki-counter",
+   "note": "Re-read directly from Sushi Sho's official Tock page on 2026-11-27 (session arena/dbf0d1f0-nyfun2)",
+   "result": "Verified"
+  },
+  {
+   "fact": "Per Se Tock deposit-only status (addendum)",
+   "value": "Main Dining Room from $200/pp deposit; Salon Four-Course $150/pp deposit; no full menu price printed",
+   "source": "https://www.exploretock.com/perse/experience/7768/salon-lounge-seating-four-course-tasting-menu",
+   "note": "Re-read directly from Per Se's official Tock page on 2026-11-27; row stays blank (F18/F24)",
+   "result": "Verified"
+  },
+  {
+   "fact": "Jungsik menu price (addendum)",
+   "value": "Signature Menu $335/guest -> $670 for two",
+   "source": "https://www.jungsik.com/menu/",
+   "note": "Re-read from the official menu page on 2026-11-27",
+   "result": "Verified"
+  },
+  {
+   "fact": "Gramercy Tavern menu prices (addendum)",
+   "value": "Dining Room Seasonal Menu $178/guest ($356); Tavern three-course $78 ($156)",
+   "source": "https://www.gramercytavern.com/dining-room-menu/",
+   "note": "Re-read from the official menu page on 2026-11-27",
+   "result": "Verified"
+  },
+  {
+   "fact": "Cote menu prices (addendum)",
+   "value": "Butcher's Feast $84/guest ($168); Steak Omakase $225/guest ($450)",
+   "source": "https://www.cotekoreansteakhouse.com/nycdinnermenu",
+   "note": "Re-read from the official Flatiron dinner menu on 2026-11-27",
+   "result": "Verified"
+  },
+  {
+   "fact": "Masa menu prices (addendum)",
+   "value": "Lunch from $495; Table Omakase $750; Hinoki Counter $950 -> $990 / $1,500 / $1,900 for two",
+   "source": "https://www.masanyc.com/menus",
+   "note": "Re-read from the official menus page on 2026-11-27",
+   "result": "Verified"
+  },
+  {
+   "fact": "Saga menu prices (addendum)",
+   "value": "6-Course $215; 10-Course $315; Kitchen Table $365 -> $430 / $630 / $730 for two",
+   "source": "https://www.saga-nyc.com/menus",
+   "note": "Re-read from the official menus page on 2026-11-27",
+   "result": "Verified"
+  },
+  {
+   "fact": "Kochi menu price (addendum)",
+   "value": "Tasting Menu $145/guest -> $290 for two",
+   "source": "https://www.kochinyc.com/menu/",
+   "note": "Re-read from the official menu page on 2026-11-27",
+   "result": "Verified"
+  },
+  {
+   "fact": "Hotel bed/bath verification, 5 hotels (addendum)",
+   "value": "MADE (1 king bed in most rooms, private bathroom, 44 W 29th St); The Marlton (one queen bed per room, private marble bathrooms); Soho Grand (Soho King, king bed, in-room bathroom with walk-in rain shower, 310 W Broadway); Arlo SoHo (City Queen, queen bed, in-room bathroom with glass rain shower); The Wall Street Hotel (Pearl Street King, king bed, in-room bathroom with heated flooring); The Fifth Avenue Hotel (Mansion Double Queen, two queen beds, bath with separate shower)",
+   "source": "https://madehotels.com/rooms/",
+   "note": "Each room/bath line read on the hotel's own official page on 2026-11-27 (session arena/dbf0d1f0-nyfun2): madehotels.com/rooms/ + /faqs/, marltonhotel.com/, sohogrand.com/accommodations/soho-king/, arlohotels.com/soho/rooms/city-queen/, thewallsthotel.com/rooms-and-suites/rooms/pearl-street-king, thefifthavenuehotel.com/accommodations/the-mansion/. F26 falls from 7 to 1 (The Maritime only)",
+   "result": "Verified"
+  },
+  {
+   "fact": "Maritime Hotel official site unreadable (addendum)",
+   "value": "No room/bath value published: official site returned empty/error pages to the fetcher",
+   "source": "https://themaritimehotel.com/",
+   "note": "Attempted 2026-11-27 (session arena/dbf0d1f0-nyfun2): homepage returned image-only content; /rooms/ and /accommodations/ failed, and www.themaritimehotel.com/rooms-and-suites/ failed. Aggregator snippets were NOT used as an official source; the row stays blank and flagged",
+   "result": "Carried"
+  },
+  {
+   "fact": "Torrisi hours and address (addendum)",
+   "value": "Mon 17:00-23:00; Tue-Wed 11:30-14:00; Thu-Sat 11:30-14:00 and 17:00-23:00; Sun closed; 275 Mulberry St.",
+   "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/torrisi",
+   "note": "Transcribed from the official MICHELIN detail page on 2026-11-27 (session arena/dbf0d1f0-nyfun2); fills the previously blank hours/address",
+   "result": "Verified"
   }
  ],
  "resultCounts": {
-  "Verified": 20,
+  "Verified": 37,
   "Verified (hours corroborated)": 1,
-  "Verified (typo flagged)": 1,
+  "Verified (typo flagged)": 2,
   "NOT re-quoted today - carried": 1,
   "Carried snapshot": 1,
-  "Carried": 1
+  "Carried": 2,
+  "Verified (corrected)": 1,
+  "Verified (admission only)": 1
  },
  "coverage": {
   "restaurants": {
    "rows": 72,
    "withOfficialSource": 72,
    "withPrice": 25,
-   "withHours": 35,
+   "withHours": 36,
    "withSocial": 27,
-   "withAddress": 39
+   "withAddress": 40
   },
   "hotels": {
    "rows": 16,
