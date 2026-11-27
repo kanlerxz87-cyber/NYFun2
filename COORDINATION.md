@@ -542,3 +542,11 @@ its room, so it was dropped from the published list rather than shown unsourced.
 
 
 **Branch history note (T29).** The session branch `arena/dbf0d1f0-nyfun2` was first pushed as `ec4eba3` (claim) and `efa8c22` (addendum) on a4f205d. Main then advanced to `f75d04b`, so those two commits were rebased onto `f75d04b` (new commit `c30eead`, content identical to `efa8c22` plus the T29 rebuild). The branch is updated with a force-with-lease on this session's own branch only; no other branch was touched. PR #37 is the integration PR for this branch.
+
+**PR and merge result (T29, session `arena/dbf0d1f0-nyfun2`).**
+
+- Integration PR: https://github.com/kanlerxz87-cyber/NYFun2/pull/37 — branch head `5c0a3e6`, base `main` `f75d04b`. Checks: `verify` pass (CI). Merge state CLEAN / MERGEABLE.
+- Merged into `main` with a merge commit at **2026-11-27T17:33:11Z**: `69f0577`.
+- Pages: build for `69f0577` completed with status **built** (`GET /repos/…/pages/builds/latest`); source `main` `/`, https enforced, `https://kanlerxz87-cyber.github.io/NYFun2/`.
+- Pre-merge gate: `scripts/verify.py` 0 errors / 0 warnings over 13 pages and 210 data rows; 46 checks; 33 flags; `node --check assets/app.js` OK.
+- Flagged for review on the Flagged page (not blocking): Maritime bed/bath/address/rate, Met museum hours, Per Se and Atera full prices, Torrisi couple price, 7-night rates for the six newly bed/bath-verified hotels, LNY Chinese-language 2026 line (F19), EMP $255 vs "from $225" lounge wording.
