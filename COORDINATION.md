@@ -460,3 +460,5 @@ its room, so it was dropped from the published list rather than shown unsourced.
   page's tables populate from JSON with no console errors (restaurants 101 rows, hotels 21,
   activities 18, questions 13, suggestions 17, flags 28, verification 16, compare 5, repo-audit 8,
   itinerary 5, sources 11; landing counters 72/24/16/8/18/28).
+
+| T26 | Current-branch final readiness audit: run canonical verifiers, inspect current deployment workflow/PR status, and publish an audit note with reproducible results | in progress | arena/51fa454c-nyfun2 | `COORDINATION.md`, `research/final-readiness-2026-11-27.md` | Auditing existing integrated site only; do not alter verified data absent official-source revalidation. |
